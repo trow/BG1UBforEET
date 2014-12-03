@@ -1,0 +1,32 @@
+@0    = ~You have to pass a big test to get into the Merchants' League around here so I've been studying and studying but it just doesn't seem to sink in. Being merchants, I don't think they're too concerned about honesty and integrity, though. If you've got a potion or something that would bump up my intelligence or wisdom for the next little bit, I'd greatly appreciate it.~
+@1    = ~Sure, why not?  I was never fond of tests, myself.  I'll see what I can do to help.~
+@2    = ~The young Edie has asked for my assistance in cheating on Baldur's Gate's Merchants' League's dreaded entrance examination. It would admittedly be less than honorable but perhaps a little bit of intelligence- or wisdom-influencing potion might do the trick...~
+@3    = ~I'm not going to help you cheat on a test!~
+@4    = ~Here, I have a Potion of Genius.  Would that help?~
+@5    = ~Here, I have a Potion of Mind Focusing.  Would that help?~
+@6    = ~Here, I have a Potion of Insight.  Would that help?~
+@7    = ~No, I won't help you.  I hope you fail your test.~
+@8    = ~Well, hello again.  I hope that you have returned with something special for me...~
+@9    = ~Actually, I've decided that I am not comfortable helping you cheat on a test.  My apologies.~
+@10   = ~Forget it.  I won't help you, and I hope you fail.~
+@11   = ~No, not yet.  I will keep looking, though.~
+@12   = ~Yes, I think it just might!  Thanks so much!  Here's 50 gp.  I'll let you know how it turns out.~
+@13   = ~Yes, I think it just might!  Thanks so much!  Here's 50 gp.  I'll let you know how it turns out.  The test is in one day.~
+@14   = ~What a weird test... The entire point of it was to get people to cheat like that.  "Seize every possible advantage," the instructors said afterwards.  When I told them you gave that to me for only 50 gp, they passed me with flying colors!  Capitalism is so strange.  Oh, well.  I really should be getting home now.  Thank you again for your help.~
+@15   = ~There's no need for that kind of attitude.  I will just go study somewhere else.~
+@16   = ~Well, thanks for nothing, I suppose.  Now, if you'll excuse, I have more studying to do, and less time in which to do it, thanks to you.~
+
+
+// @2 with header:
+@17 = ~Cheating on the entrance examination.
+
+The young Edie has asked for my assistance in cheating on Baldur's Gate's Merchants' League's dreaded entrance examination. It would admittedly be less than honorable but perhaps a little bit of intelligence- or wisdom-influencing potion might do the trick...~
+
+@18 = ~Cheating on the entrance examination.
+
+I changed my mind and will not help Edie to cheat on her Baldur's Gate's Merchants' League's entrance examination.~
+
+@19 = ~Cheating on the entrance examination.
+
+I could help young Edie with a magical potion. It might count as cheating, but considering she joined the Merchants' League some might say that's part of the job...~
+

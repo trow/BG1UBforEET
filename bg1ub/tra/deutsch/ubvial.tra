@@ -1,0 +1,44 @@
+@0  = ~Ihr seid zurückgekehrt! Es sieht so aus, als hätte ich recht daran getan, Euch zu vertrauen. Was könnt Ihr mir über die Ereignisse, die sich in den Minen abgespielt haben, berichten?~
+@1  = ~Ich würde die Geschäftsgeheimnisse lieber nicht preisgeben, wenn es für Euch nicht von Belang ist.~
+@2  = ~Da gibt es wirklich nicht viel zu erzählen. Einige Kobolde hatten ihren Weg in die Minen gefunden und Chaos verursacht. Ihr braucht Euch wegen ihnen keine Sorgen mehr zu machen.~
+@3  = ~Ein Halbork namens Mulahey hat auf irgendeine Weise das Eisenerz verdorben, aber jetzt ist er tot.~
+@4  = ~Ein Halbork namens Mulahey hat das Eisenerz mit einem mineralischen Gift verdorben. Hier ist ein Fläschchen davon.~
+@5  = ~Ein Halbork namens Mulahey hat das Eisenerz mit einem mineralischen Gift verdorben. Hier ist ein Stück von dem verdorbenen Erz.~
+@6  = ~Ein Halbork namens Mulahey hat das Eisenerz mit einem mineralischen Gift verdorben. Ich untersuche das Problem.~
+@7  = ~Wie Ihr wünscht. Die Stadt dankt Euch von ganzem Herzen und ist erfreut, Euch die angemessene Belohnung zu überreichen. Bitte nehmt diese 900 Goldmünzen für Eure Bemühungen. Es ist ein kleines Vermögen, nach unseren Maßstäben. Nochmals vielen Dank.~
+@8  = ~Ich verstehe. Seltsam, dass eine derart organisierte Bande hier Fuß fassen konnte, ohne weiter aufzufallen. Dennoch, die Stadt dankt Euch von ganzem Herzen und ist erfreut, Euch die angemessene Belohnung zu überreichen. Bitte nehmt diese 900 Goldmünzen für Eure Bemühungen. Es ist ein kleines Vermögen, nach unseren Maßstäben. Nochmals vielen Dank.~
+@9  = ~Ich frage mich, was seine Motive gewesen sein könnten und wie er in der Lage war, das Eisen derart effektiv zu verderben. Dennoch, die Stadt dankt Euch von ganzem Herzen und ist erfreut, Euch die angemessene Belohnung zu überreichen. Bitte nehmt diese 900 Goldmünzen für Eure Bemühungen. Es ist ein kleines Vermögen, nach unseren Maßstäben. Nochmals vielen Dank.~
+@10 = ~Was sagt Ihr da? Es war weise von Euch, eine Probe mitzubringen. Ich fürchte jedoch, dass wir wegen unseres Misstrauens gegenüber der Magie nicht die Mittel dazu haben, das Gift selber zu analysieren. Unsere Isolation verschärft das Problem. Es ginge schneller, das Fläschchen zu Thalantyr in der Nähe von Beregost zu bringen, als nach Süden zu reisen und einen amnischen Erzmagier zu suchen.~
+@11 = ~Wenn Ihr etwas von dem verdorbenen Erz bei Euch habt, solltet Ihr es zu Taerom Fuiruim bringen, wenn Ihr in Beregost seid. Ich zweifle nicht an seiner Fähigkeit, einen Weg zu finden, um die brüchige Eigenart zu ergründen.~
+@12 = ~Es wäre jedoch am besten, wenn Ihr es niemandem gegenüber erwähnt. Die Beziehungen zwischen Baldurs Tor und Amn sind, gelinde gesagt, angespannt, und ich sollte etwas so Kostbares vielleicht nicht aus amnischen Händen geben.~
+@13 = ~Gleichwohl dankt Euch die Stadt von ganzem Herzen und ist erfreut, Euch die angemessene Belohnung zu überreichen. Bitte nehmt diese 900 Goldmünzen für Eure Bemühungen. Es ist ein kleines Vermögen, nach unseren Maßstäben. Nochmals vielen Dank.~
+@14 = ~Was sagt Ihr da? Es war weise von Euch, eine Probe mitzubringen. Ihr solltet sie zu Taerom Fuiruim in Beregost bringen. Ich zweifle nicht an seiner Fähigkeit, einen Weg zu finden, um die brüchige Eigenart zu ergründen. Zudem wohnt er viel näher als irgendein amnischer Schmied von ähnlichem Ruf.~
+@15 = ~Schön, das zu hören. Ich frage mich nur, was seine Motive gewesen sein könnten. Dennoch, die Stadt dankt Euch von ganzem Herzen und ist erfreut, Euch die angemessene Belohnung zu überreichen. Bitte nehmt diese 900 Goldmünzen für Eure Bemühungen. Es ist ein kleines Vermögen, nach unseren Maßstäben. Nochmals vielen Dank.~
+@16 = ~Darum geht es mir im Moment nicht. Ich habe hier dieses Stück Eisenerz, von dem ich glaube, dass es verdorben ist. Das ist die Ursache für die Eisenkrise entlang der Schwertküste.~
+@17 = ~Ich habe hier dieses Stück Eisenerz, von dem ich glaube, dass es verdorben ist. Das ist die Ursache für die Eisenkrise entlang der Schwertküste.~
+@18 = ~Ich freue mich schon auf das Ergebnis.~
+@19 = ~Gebt mal her. Hmm. Wirklich eigenartig. Das Eisen wurde sicherlich mit irgendeinem Präparat verdorben. Ich schätze, Ihr habt wohl keinen Hinweis darauf, was das vielleicht war?~
+@20 = ~Doch, in der Tat. Ich habe dieses Fläschchen hier, welches ich in derselben Mine wie das Erz gefunden habe.~
+@21 = ~Nein, aber ich könnte versuchen, es herauszufinden, falls das hilft.~
+@22 = ~Bedauerlicherweise nicht. Könnt Ihr denn nichts mit dem Erz alleine anfangen?~
+@23 = ~Ah, ausgezeichnet. Es zu analysieren übersteigt jedoch meine Fähigkeiten. Bringt es zu Thalantyr. Er dürfte keine Schwierigkeiten haben, die Eigenschaften davon zu bestimmen. In der Zwischenzeit werde ich sehen, wie ich die Brüchigkeit dieses Erzes behandeln kann. Es sollte mir möglich sein, den Auswirkungen des Präparates entgegenzuwirken.~
+@24 = ~Ich habe Thalantyr bereits eine Probe gebracht und er hat zugestimmt, diese zu untersuchen.~
+@25 = ~Taerom Fuiruim untersucht das verdorbene Erz, das ich aus der Mine von Nashkell geborgen habe. Er glaubt, dass er nun in der Lage sein wird, weniger brüchiges Eisen herzustellen.~
+@26 = ~Da kann ich nicht viel tun. Wenn es Euch gelingt, eine Probe des Giftes zu finden, dann bringt sie zu Thalantyr. Er dürfte keine Schwierigkeiten haben, die Eigenschaften davon zu bestimmen. In der Zwischenzeit werde ich sehen, wie ich die Brüchigkeit dieses Erzes behandeln kann. Es sollte mir möglich sein, den Auswirkungen des Präparates entgegenzuwirken.~
+@27 = ~Dann werde ich ihn kontaktieren und schauen, was er herausgefunden hat. Ich danke Euch, dass Ihr mich hierauf aufmerksam gemacht habt.~
+@28 = ~Berrun Ghastkill meinte, dass Ihr vielleicht daran interessiert wärt, dieses Fläschchen zu untersuchen. Es ist ein Gift, welches dazu benutzt wurde, das Erz aus den Nashkell-Minen zu verderben und dadurch Probleme mit dem Eisen an der Schwertküste zu verursachen.~
+@29 = ~Taerom Fuiruim meinte, dass Ihr vielleicht daran interessiert wärt, dieses Fläschchen zu untersuchen. Es ist ein Gift, welches dazu benutzt wurde, das Erz aus den Nashkell-Minen zu verderben und dadurch Probleme mit dem Eisen an der Schwertküste zu verursachen.~
+@30 = ~Ein bemerkenswertes Präparat. Es muss von einem erfahrenen Alchemisten zusammengebraut worden sein. Ich kann vielleicht ein Gegengift entwickeln, um etwas von dem betroffenen Eisenbestand zu retten, obwohl ich bezweifle, dass es ausreichen wird, um die Krise zu beenden. Lasst es bei mir, dann werde ich Taerom kontaktieren, falls ich Erfolg habe.~
+@31 = ~Ich gab Thalantyr ein Fläschchen des mineralischen Giftes aus den Nashkell-Minen. Er erklärte sich bereit, es zu analysieren und zu versuchen, ein Gegengift herzustellen. Hoffentlich wird das die Eisenkrise ein wenig eindämmen, auch wenn wir uns nicht zu viel versprechen sollten.~
+@32 = ~Das verseuchte Eisenerz
+
+Berrun Ghastkill bat mich, die Probe der geheimnisvollen Flüssigkeit, die wir in den Minen von Nashkell fanden, zu Thalantyr in der Hohen Hecke zu bringen. Der berühmte Magier ist vielleicht in der Lage, sie zu analysieren. Und sofern ich noch etwas von dem verseuchten Erz auftreiben kann, soll ich mich damit an Taerom Fuiruim wenden.~
+@33 = ~Das verseuchte Eisenerz
+
+Berrun Ghastkill bat mich, die Probe des verseuchten Erzes, das wir in den Minen von Nashkell fanden, zu Taerom Fuiruim in Beregost zu bringen. Vielleicht kann uns der Meisterschmied damit weiterhelfen.~
+@34 = ~Das verseuchte Eisenerz
+
+Taerom Fuiruim untersucht das verdorbene Erz, das ich aus der Mine von Nashkell geborgen habe. Er glaubt, dass er nun in der Lage sein wird, weniger brüchiges Eisen herzustellen.~
+@35 = ~Das verseuchte Eisenerz
+
+Ich gab Thalantyr ein Fläschchen des mineralischen Giftes aus den Nashkell-Minen. Er erklärte sich bereit, es zu analysieren und zu versuchen, ein Gegengift herzustellen. Hoffentlich wird das die Eisenkrise ein wenig eindämmen, auch wenn wir uns nicht zu viel versprechen sollten.~

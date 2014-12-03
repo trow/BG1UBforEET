@@ -1,0 +1,35 @@
+BEGIN ~_MTOB5~
+
+IF ~NumTimesTalkedTo(0)
+~ THEN BEGIN 0
+  SAY @40104
+  IF ~~ THEN EXIT
+END
+
+IF ~NumTimesTalkedTo(1)
+~ THEN BEGIN 1
+  SAY @40105
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 2
+  SAY @40106
+  IF ~~ THEN EXIT
+END
+
+IF ~NumTimesTalkedTo(2)
+~ THEN BEGIN 3
+  SAY @40107
+  IF ~~ THEN EXIT
+END
+
+IF ~StateCheck(Myself,STATE_CHARMED)
+~ THEN BEGIN 4
+  SAY @40108
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 5
+  SAY @40103
+  IF ~~ THEN EXIT
+END

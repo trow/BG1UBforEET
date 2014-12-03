@@ -1,0 +1,51 @@
+@0    = ~You have returned!  It would seem I was right to trust you. What can you tell of the events that took place in the mines?~
+@1    = ~I'd sooner not share the tricks of the trade, if it's all the same to you.~
+@2    = ~There isn't much to tell really. Some kobolds found their way into the mines and wreaked havoc. You needn't worry about them any more though.~
+@3    = ~A half-orc named Mulahey was corrupting the iron ore somehow, but he is dead now.~
+@4    = ~A half-orc named Mulahey was corrupting the iron ore with a mineral poison. I have a sample of it here.~
+@5    = ~A half-orc named Mulahey was corrupting the iron ore with a mineral poison. I have a sample of the corrupted ore here.~
+@6    = ~A half-orc named Mulahey was corrupting the iron ore with a mineral poison. I am investigating the problem.~
+@7    = ~As you wish. The town thanks you wholeheartedly, and is pleased to give you the proper reward. Please take this 900 gold for your efforts. It is a small fortune by anyone's standards. Thank you again.~
+@8    = ~I see. Curious how such an organised band could emerge without notice. Still, the town thanks you wholeheartedly, and is pleased to give you the proper reward. Please take this 900 gold for your efforts. It is a small fortune by anyone's standards. Thank you again.~
+@9    = ~I wonder what his motive could have been, and how he was able to taint the iron so effectively. Still, the town thanks you wholeheartedly, and is pleased to give you the proper reward. Please take this 900 gold for your efforts. It is a small fortune by anyone's standards. Thank you again.~
+@10   = ~What is this you say? You were wise in bringing back a sample. I fear that distrust of magic means we are ill-equipped to analyse the poison, however. Our isolation compounds the problem. It would be quicker to take the vial north to Thalantyr of Beregost than to journey south in search of an Amnish archmage.~
+@11   = ~If you have any of the tainted ore you might consider taking it to Taerom Fuiruim while you are there. I don't doubt his ability to devise some way to work around its brittle properties.~
+@12   = ~Best if you not mention this to anyone, however. Relations between Baldur's Gate and Amn are tense, to say the least, and I should perhaps not be sending something so valuable out of Amnish hands.~
+@13   = ~Regardless, the town thanks you wholeheartedly, and is pleased to give you the proper reward. Please take this 900 gold for your efforts. It is a small fortune by anyone's standards. Thank you again.~
+@14   = ~What is this you say? You were wise in bringing back a sample. You might consider taking it to Taerom Fuiruim in Beregost. I don't doubt his ability to devise some way to work around its brittle properties, and he is much closer than any such renowned Amnish smithy.~
+@15   = ~Glad to hear it. I wonder what his motive could have been. Still, the town thanks you wholeheartedly, and is pleased to give you the proper reward. Please take this 900 gold for your efforts. It is a small fortune by anyone's standards. Thank you again.~
+@16   = ~Never mind about that just now. I have this piece of iron ore, which I believe is tainted. It is the cause of the iron crisis along the Sword Coast.~
+@17   = ~I have this piece of iron ore, which I believe is tainted. It is the cause of the iron crisis along the Sword Coast.~
+@18   = ~I look forward to seeing the result.~
+@19   = ~Pass it here. Hmm. Strange indeed. The iron has certainly been tainted with some compound. I don't suppose you have any clue what that might have been?~
+@20   = ~As a matter of fact, yes. I have this vial here which I found in the same mine as the ore.~
+@21   = ~No, but I could try to find out if that would help.~
+@22   = ~Unfortunately not. Is there nothing you can do with the ore alone?~
+@23   = ~Ah, excellent. But it is beyond my abilities to examine this. Take it to Thalantyr; he should have no trouble in discerning its properties. In the meantime, I will see what I can do to counteract the properties of this ore. I should be able to reduce the effects of the compound.~
+@24   = ~I have already taken a sample to Thalantyr, and he agreed to examine it.~
+@25   = ~Taerom Fuiruim is examining the tainted ore I recovered from the Nashkel mines. He believes he should now be able to produce less brittle iron as a result.~
+@26   = ~There is only so much I can do. If you are able to find a sample of the poison, take it to Thalantyr; he should have no trouble in discerning its properties. In the meantime, I will see what I can do to counteract the properties of this ore. I should be able to reduce the effects of the compound.~
+@27   = ~Then I will contact him and discover what he has found. You have my thanks for bringing this to my attention.~
+@28   = ~Berrun Ghastkill suggested you might be interested in examining this vial. It is a poison that was used to taint ore from the Nashkel mines, causing problems with the iron along the Sword Coast.~
+@29   = ~Taerom Fuiruim suggested you might be interested in examining this vial. It is a poison that was used to taint ore from the Nashkel mines, causing problems with the iron along the Sword Coast.~
+@30   = ~A remarkable compound. It must have taken a skilled alchemist to concoct this. I may be able to formulate an antidote to salvage some of the current iron stocks, although I doubt it will be sufficient to resolve the crisis. Leave it with me, and I will contact Taerom if I have any success.~
+@31   = ~I showed a vial of mineral poison from the Nashkel mines to Thalantyr. He agreed to examine it and try to create an antidote. Hopefully this will have some effect on the iron crisis, although we cannot hope for much.~
+
+@32 = ~The tainted ore.
+
+Berrun Ghastkill wants me to bring the vial of mysterious mineral poison I recovered from the Nashkel mines to Thalantyr in High Hedge. The powerful mage might be able to analyse it. And in case I'll find another piece of tainted ore I should go to Taerom Fuiruim.~
+
+@33 = ~The tainted ore.
+
+Berrun Ghastkill wants me to bring the tainted ore I recovered from the Nashkel mines to Taerom Fuiruim in Beregost. Maybe the well-trained smithy can help us with that.~
+
+//@25 with header:
+@34 = ~The tainted ore.
+
+Taerom Fuiruim is examining the tainted ore I recovered from the Nashkel mines. He believes he should now be able to produce less brittle iron as a result.~
+
+//@31 with header:
+@35 = ~The tainted ore.
+
+I showed a vial of mineral poison from the Nashkel mines to Thalantyr. He agreed to examine it and try to create an antidote. Hopefully this will have some effect on the iron crisis, although we cannot hope for much.~
+

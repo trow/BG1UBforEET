@@ -1,0 +1,28 @@
+@0  = ~Wenn man hier in die Händlerliga eintreten will, muss man eine umfassende Prüfung ablegen. Also habe ich gelernt und gelernt, aber irgendwie kann ich mir nichts merken. Da es sich allerdings um Kaufleute handelt, denke ich nicht, dass sie zu sehr auf Ehrlichkeit und Rechtschaffenheit Wert legen. Wenn Ihr mir also einen Trank oder etwas anderes verschafft, was meine Intelligenz oder Weisheit für kurze Zeit erhöhen kann, so würde ich das sehr zu schätzen wissen.~
+@1  = ~Sicher, wieso nicht? Ich habe Prüfungen auch noch nie gemocht. Ich werde sehe, was ich tun kann, um zu helfen.~
+@2  = ~Die junge Edie hat um meine Hilfe gebeten, denn sie will bei der gefürchteten Aufnahmeprüfung für die Händlerliga von Baldurs Tor schummeln. Das ist natürlich nicht gerade ehrenvoll, aber vielleicht könnte es mit einem kleinen Trank zur Beeinflussung der Intelligenz oder der Weisheit klappen...~
+@3  = ~Ich werde Euch nicht helfen, bei einer Prüfung zu betrügen!~
+@4  = ~Ich habe hier einen Intelligenztrank. Würde der helfen?~
+@5  = ~Ich habe hier einen Konzentrationstrank. Würde der helfen?~
+@6  = ~Ich habe hier einen Trank der Einsicht. Würde der helfen?~
+@7  = ~Nein, ich werde Euch nicht helfen. Ich hoffe, Ihr versagt bei Eurer Prüfung.~
+@8  = ~Nun, hallo noch mal. Ich hoffe, Ihr seid mit etwas Besonderem für mich zurückgekehrt...~
+@9  = ~Eigentlich habe ich mich entschieden, dass es mir nicht recht behagt, Euch dabei zu helfen, bei einer Prüfung zu betrügen. Entschuldigt.~
+@10 = ~Vergesst es. Ich werde Euch nicht helfen, und ich hoffe Ihr versagt.~
+@11 = ~Nein, noch nicht. Ich werde jedoch weitersuchen.~
+@12 = ~Ja, ich denke, das könnte er! Tausend Dank! Hier habt Ihr 50 Goldmünzen. Ich sage Euch dann, wie es ausgegangen ist.~
+@13 = ~Ja, ich denke, das könnte er! Tausend Dank! Hier habt Ihr 50 Goldmünzen. Ich sage Euch dann, wie es ausgegangen ist. Die Prüfung ist morgen.~
+@14 = ~Was für eine seltsame Prüfung... Der ganze Sinn bestand darin, die Leute gerade zum Betrügen anzuhalten. "Nutzt jede mögliche Gelegenheit", haben die Lehrer hinterher gesagt. Als ich ihnen erzählte, dass Ihr mir den Trank für nur 50 Goldmünzen gegeben habt, haben sie mich mit Bestnote bestehen lassen! Kapitalismus ist ziemlich merkwürdig. Naja, ich sollte jetzt nach Hause gehen. Danke noch mal für Eure Hilfe.~
+@15 = ~So ein Verhalten ist nicht nötig. Ich werde einfach woanders lernen gehen.~
+@16 = ~Tja, danke trotzdem, nehme ich an. Wenn Ihr mich jetzt entschuldigen würdet, ich habe noch einiges zu lernen und dank Euch sogar noch weniger Zeit dafür übrig.~
+
+//@2 with header
+@17 = ~Mogelei bei der Aufnahmeprüfung
+
+Die junge Edie hat um meine Hilfe gebeten, denn sie will bei der gefürchteten Aufnahmeprüfung für die Händlerliga von Baldurs Tor schummeln. Das ist natürlich nicht gerade ehrenvoll, aber vielleicht könnte es mit einem kleinen Trank zur Beeinflussung der Intelligenz oder der Weisheit klappen...~
+@18 = ~Mogelei bei der Aufnahmeprüfung
+
+Ich habe es mir anders überlegt und werde Edie in der Händlerliga von Baldurs Tor nicht bei ihrem Betrugsversuch für die Aufnahmeprüfung helfen.~
+@19 = ~Mogelei bei der Aufnahmeprüfung
+
+Mit einem magischen Trank konnte ich der jungen Edie bei ihrer Aufnahmeprüfung ein wenig unter die Arme greifen. Manche mögen dies als Betrug bezeichnen, aber immerhin schließt sie sich einer Organisation von Kaufleuten an. Da gehört das doch gewissermaßen zum Beruf...~

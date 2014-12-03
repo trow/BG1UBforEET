@@ -1,0 +1,1540 @@
+//Imported dialogue text for BGT/Tutu
+//#17578
+@10000 = ~Edie~
+
+//#11166
+@10001 = ~Sentiréis la punta de mi bota si me molestáis más.~ [%tutu_var%WOMLC02]
+@10002 = ~~ [%tutu_var%FTOWN05]
+@10003 = ~~ [%tutu_var%WOMLC03]
+
+//#19704
+@10004 = ~Enna Hendrik~
+
+//#4902
+@10005 = ~Mi padre no quiere que hable con extraños.~ [%tutu_var%FTOWN02]
+
+//#13309
+@10006 = ~¡No sois bienvenidos!~
+
+//#19706
+@10007 = ~Erlin Hendrik~
+
+//#4908
+@10008 = ~No tengo tiempo para hablar con vosotros ahora.~ [%tutu_var%FARME01]
+@10009 = ~~ [%tutu_var%FARME05]
+@10010 = ~~ [%tutu_var%FARME06]
+
+
+//#8959
+@10011 = ~¡Fuera de mi vista! ¡No haré nada por vosotros!~
+
+//#20245
+@10012 = ~Feldane~
+
+//#4983
+@10013 = ~Nuestra biblioteca es el harem del conocimiento del hombre.~ [%tutu_var%READR01]
+@10014 = ~~ [%tutu_var%READR05]
+@10015 = ~~ [%tutu_var%READR06]
+
+//#4984
+@10016 = ~Lo siento pero llego tarde a mis clases.~ [%tutu_var%READR02]
+
+//#12238
+@10017 = ~Galkin~
+
+//#4762
+@10018 = ~¿Es que nadie aceptará mi oferta? ¡Bah! ¡No sois hombres!~ [%tutu_var%GALKN01]
+@10019 = ~~ [%tutu_var%GALKN03]
+@10020 = ~~ [%tutu_var%GALKN04]
+
+//#4763
+@10021 = ~Uh... ¡La gota me tiene agarrada la pierna izquierda, y... y tengo que pagar al mesonero o me agarrará la derecha!~ [%tutu_var%GALKN02]
+
+//#9406
+@10022 = ~Chica~
+
+//#4861
+@10023 = ~He perdido mi muñeca.~ [%tutu_var%FCHIL01]
+@10024 = ~~ [%tutu_var%FCHIL05]
+@10025 = ~~ [%tutu_var%FCHIL06]
+
+//#8944
+@10026 = ~¡Dejádme! ¡Sois malo!~
+
+//#13840
+@10027 = ~Mujer Mediana~
+
+//#11238
+@10028 = ~Oooh, es un buen día para conocer amigos nuevos.~ [%tutu_var%HALFF01]
+@10029 = ~~ [%tutu_var%HALFF05]
+@10030 = ~~ [%tutu_var%HALFF06]
+
+//#13343
+@10031 = ~¡Has aguantado más que tu acogida!~
+
+//#13344
+@10032 = ~Hola de nuevo. Habría pensado que habías continuado por ahora. Sin embargo, es un placer que no tenéis.~
+
+//#13345
+@10033 = ~Estoy sorprendido de veros de nuevo. ¿No se apoderó de vuestra lógica la llamada del viajero una vez más? Por Dallillia, espero que ninguno de los chicos os siga cuando os marchéis.~
+
+//#13839
+@10034 = ~Mediano~
+
+//#4926
+@10035 = ~Extraños sucesos han acaecido últimamente.~ [%tutu_var%HALFL03]
+@10036 = ~~ [%tutu_var%HALFL05]
+@10037 = ~~ [%tutu_var%HALFL06]
+
+//#8954
+@10038 = ~No quiero ser brusco, pero preferiría que os marchárais inmediatamente.~
+
+//#13347
+@10039 = ~Hola de nuevo. Un placer como si fuera antes.~
+
+//#13348
+@10040 = ~Veo que has vuelto. ¿Confío en que no estarás tanto como la última vez que nos encontramos?~
+
+//#12310
+@10041 = ~Elminster~
+
+//#9431
+@10042 = ~Plebeyo~
+
+//#11093
+@10043 = ~Hola tío.~ [%tutu_var%GENMG13]
+@10044 = ~~ [%tutu_var%VILLM05]
+@10045 = ~~ [%tutu_var%MTOWN06]
+
+//#8950
+@10046 = ~¡No diré una palabra después de lo que habéis hecho!~
+
+//#20602
+@10047 = ~Hola.~ [%tutu_var%GENMG15]
+
+//#9359
+@10048 = ~Ogrillón~
+
+//#5163
+@10049 = ~¡Es hora de hacer una matanza!~ [%tutu_var%OGRIL03]
+
+//#5164
+@10050 = ~¡Morid, mequetrefes!~ [%tutu_var%OGRIL04]
+@10051 = ~~ [%tutu_var%OGRIL05] //non-existent
+@10052 = ~~ [%tutu_var%OGRIL06] //non-existent
+@10053 = ~~ [%tutu_var%OGRIL08]
+@10054 = ~~ [%tutu_var%OGRIL09]
+
+//#5161
+@10055 = ~¡Meteos conmigo, meteos con vosotros!~ [%tutu_var%OGRIL01]
+
+//#5162
+@10056 = ~Todos los tíos me critican porque solo mido 2 metros...~ [%tutu_var%OGRIL02]
+
+//#9356
+@10057 = ~Semiogro~
+
+//#5158
+@10058 = ~¡Yo furioso!~ [%tutu_var%HOGRE03]
+
+//#5159
+@10059 = ~¡Yo matar a hombres que me ponen furioso!~ [%tutu_var%HOGRE04]
+@10060 = ~~ [%tutu_var%HOGRE08]
+@10061 = ~~ [%tutu_var%HOGRE09]
+
+//#5155
+@10062 = ~Yo estar hambriento.~ [%tutu_var%HOGRE01]
+
+//#5156
+@10063 = ~Buuuurp. Har har -peo-~ [%tutu_var%HOGRE02]
+
+//#9412
+@10064 = ~Lector~
+
+//#8753
+@10065 = ~Tasloi~
+@10066 = ~~ [%tutu_var%TASLO03]
+@10067 = ~~ [%tutu_var%TASLO04]
+@10068 = ~~ [%tutu_var%TASLO05]
+@10069 = ~~ [%tutu_var%TASLO06]
+@10070 = ~~ [%tutu_var%TASLO08]
+@10071 = ~~ [%tutu_var%TASLO09]
+@10072 = ~~ [%tutu_var%TASLO00] //non-existent
+@10073 = ~~ [%tutu_var%TASLO01]
+@10074 = ~~ [%tutu_var%TASLO02]
+
+//#9495
+@10075 = ~Viajero~
+
+//#12884
+@10076 = ~Chica servicial~
+
+//#4786
+@10077 = ~Si queréis, ¿la cuenta? El señor Volo estuvo aquí durante un tiempo.~ [%tutu_var%WENCH01]
+@10078 = ~~ [%tutu_var%WENCH03]
+@10079 = ~~ [%tutu_var%WENCH04]
+
+//#4787
+@10080 = ~Por supuesto que soy actualmente una escritora. Solo espero a las mesas para pagar las cuentas.~ [%tutu_var%WENCH02]
+
+//#12761
+@10081 = ~Wilton~
+
+//#4821
+@10082 = ~Deteneos un segundo joven, porque escuché lo que hicísteis por el viejo Brun.~ [%tutu_var%WILTN01]
+@10083 = ~~ [%tutu_var%WILTN03]
+@10084 = ~~ [%tutu_var%WILTN04]
+
+//#4822
+@10085 = ~Es tan dificil encontrar gente decente hoy en día.~ [%tutu_var%WILTN02]
+
+//#9036
+@10086 = ~Dejadme estar. No tengo nada para vosotros.~
+
+//#13679
+@10087 = ~Perdonad joven, pero tengo mucho que cultivar.~
+
+//#23935
+@10088 = ~Oooh, un nuevo rostro en la ciudad, ¿eh?~ [%tutu_var%TSCFT01]
+
+//#13649
+@10089 = ~¡No obtendréis nada de mí!~
+
+//#23936
+@10090 = ~¿Queréis hablar? Hacedlo, entonces.~ [%tutu_var%TSCFT02]
+@10091 = ~~ [%tutu_var%WOMCO03]
+@10092 = ~~ [%tutu_var%WOMCO04]
+
+//#21974
+@10093 = ~Meym~
+
+//#11081
+@10094 = ~¿Necesitáis algo, extranjero?~ [%tutu_var%GENMG04]
+@10095 = ~~ [%tutu_var%MINER05]
+@10096 = ~~ [%tutu_var%MINER06]
+
+//#23929
+@10097 = ~Bueno, hola, joven.~ [%tutu_var%TSCMT02]
+@10098 = ~~ [%tutu_var%VILLM06]
+
+//#23930
+@10099 = ~No parecéis de por aquí.~ [%tutu_var%TSCMT03]
+
+//#15975
+@10100 = ~Ogro~
+
+//#5148
+@10101 = ~¡Yo romperos, os aplastaré hasta morir!~ [%tutu_var%OGREE03]
+
+//#5149
+@10102 = ~¡Yo romperos la cara!~ [%tutu_var%OGREE04]
+@10103 = ~~ [%tutu_var%OGREE08]
+@10104 = ~~ [%tutu_var%OGREE09]
+
+//#5147
+@10105 = ~Os aplastaré.~ [%tutu_var%OGREE01]
+@10106 = ~~ [%tutu_var%OGREE02]
+
+//#10006
+@10107 = ~Mago Encapuchado~
+
+//#11079
+@10108 = ~¿Hmm?~ [%tutu_var%GENMG03]
+@10109 = ~~ [%tutu_var%RAMAZ03]
+@10110 = ~~ [%tutu_var%RAMAZ04]
+
+//#6315
+@10111 = ~Necrófago~
+@10112 = ~~ [%tutu_var%GHOUL03]
+@10113 = ~~ [%tutu_var%GHOUL04]
+@10114 = ~~ [%tutu_var%GHOUL05]
+@10115 = ~~ [%tutu_var%GHOUL06]
+@10116 = ~~ [%tutu_var%GHOUL08]
+@10117 = ~~ [%tutu_var%GHOUL09]
+@10118 = ~~ [%tutu_var%GHOUL01]
+
+//#5142
+@10119 = ~Mmmmm, a mí gustar la carne, heh heh.~ [%tutu_var%GHOUL02]
+
+//#13712
+@10120 = ~Pájaro~
+@10121 = ~~ [%tutu_scripta%MB_E05D]
+@10122 = ~~ [%tutu_scripta%MB_E05E]
+@10123 = ~~ [%tutu_scripta%MB_E05F]
+@10124 = ~~ [%tutu_scripta%MB_E05G]
+@10125 = ~~ [%tutu_scripta%MB_E05H]
+
+//#13841
+@10126 = ~Refuerzo Mediano~
+
+//#4925
+@10127 = ~Sois un poco raro como para vagar por aquí.~ [%tutu_var%HALFL02]
+@10128 = ~~ [%tutu_var%FTOWN06]
+
+//#12245
+@10129 = ~Entar Escudo de Plata~
+
+//#4705
+@10130 = ~¿Qué hacen instrusos en mi casa?~ [%tutu_var%ENTAR01]
+
+//#12421
+@10131 = ~¡Mon Dieu!~ [%tutu_var%ENTAR03]
+@10132 = ~~ [%tutu_var%ENTAR04]
+
+//#4706
+@10133 = ~Espero que no le haya pasado nada a mi hijita, Skie.~ [%tutu_var%ENTAR02]
+
+//#8983
+@10134 = ~¡Mis puertas no están abiertas para gente como vos!~
+
+//#9857
+@10135 = ~Herschel~
+
+//#4874
+@10136 = ~No hay tiempo para parloteo.~ [%tutu_var%NOBLE02]
+@10137 = ~~ [%tutu_var%NOBLE05]
+@10138 = ~~ [%tutu_var%NOBLE06]
+
+//#4875
+@10139 = ~Fuera, pedigüeño.~ [%tutu_var%NOBLE03]
+
+//#4874
+@10140 = ~No hay tiempo para parloteo.~ [%tutu_var%NOBLE02]
+
+//#4873
+@10141 = ~Un hombre no debería hablar a su superior a menos que este se dirija a él.~ [%tutu_var%NOBLE01]
+
+//#4876
+@10142 = ~¡No me toquéis! No sea que me contagiéis algo.~ [%tutu_var%NOBLE04]
+
+//#8909
+@10143 = ~¡No os acerquéis! ¡Me irritaré, lo haré!~
+
+//#9432
+@10144 = ~Mercader~
+
+//#4959
+@10145 = ~Tengo los mejores precios a este lado de Cormyr.~ [%tutu_var%MERCH01]
+@10146 = ~~ [%tutu_var%MERCH05]
+@10147 = ~~ [%tutu_var%MERCH06]
+
+//#4959
+@10148 = ~Tengo los mejores precios a este lado de Cormyr.~ [%tutu_var%MERCH01]
+
+//#4960
+@10149 = ~Toda mi mercancía es auténtica, en verdad lo es.~ [%tutu_var%MERCH02]
+
+//#4961
+@10150 = ~Esos bandidos detestables han causado grandes daños al comercio.~ [%tutu_var%MERCH03]
+
+//#4962
+@10151 = ~¡Adoro el dinero, sí lo adoro!~ [%tutu_var%MERCH04]
+
+//#8930
+@10152 = ~¡No confiaría en vos tanto como puedo escupir!~
+
+//#12884
+@10153 = ~Chica servicial~
+
+//#4866
+@10154 = ~Uhm, sois unos hombres tan grandes.~ [%tutu_var%SWENC02]
+@10155 = ~~ [%tutu_var%SWENC05]
+@10156 = ~~ [%tutu_var%SWENC06]
+
+//#4865
+@10157 = ~Siempre está bien dejar propina.~ [%tutu_var%SWENC01]
+
+//#9086
+@10158 = ~¡Quitaos de enmedio, tonto arrogante!~
+
+//#13607
+@10159 = ~¡Dejad caer otra mano descuidada sobre mí y os juro que la perderéis! Pedíd en la barra.~
+@10160 = ~~ [%tutu_var%SWENC04]
+
+//#12894
+@10161 = ~Cantinero~
+
+//#4944
+@10162 = ~¿Deseáis tomar un whisky?~ [%tutu_var%BARTN01]
+@10163 = ~~ [%tutu_var%BARTN05]
+@10164 = ~~ [%tutu_var%BARTN06]
+
+//#4945
+@10165 = ~Conseguí cerveza barata para vos.~ [%tutu_var%BARTN02]
+
+//#4946
+@10166 = ~No puedo dejar de remojarme en mi cerveza.~ [%tutu_var%BARTN03]
+
+//#4947
+@10167 = ~¿A que tengo unas camareras guapas?~ [%tutu_var%BARTN04]
+
+//#4862
+@10168 = ~¡Waaaaaaaaaa!~ [%tutu_var%FCHIL02]
+@10169 = ~~ [%tutu_scripta%MB_M34A]
+
+//#22786
+@10170 = ~Clava +1 (+3 contra criaturas sobrenaturales): 'La esencia del problema':
+De esta clava encantada se dice que ha existido desde los tiempo de la caída de Netheril y el nacimiento del gran Desierto de Anauroch. Mientras que las bajas en la civilización fueron grandes, las verdaderas víctimas de esta edad fueron las criaturas de la naturaleza, condenadas a permanecer y contemplar como sus hogares decaen y mueren. Como el hábitat retrocedió, aquellos que quedaron fueron invadidos por una desplazada horda de criaturas, los más impacientes de aquellos marcharon sobre la tierra impoluta tomando aquello que deseaban. De este arma en particular se dice que viene de un árbol de una dríada, un último regalo a la causa de la naturaleza de un espíritu del bosque que no pudo hacer retroceder a los invasores de su tierra. De ella fue un dolor amargo, como su madera pudo no haber sufrido si no hubiera sido tan fuerte y exuberante. Con menos respeto los eruditos le han otorgado desde entonces al objeto su irónico nombre, aunque el humor no es apreciado entre los más devotos seguidores de la naturaleza.
+
+CARACTERÍSTICAS:
+
+Daño: 1D6 +1 (+3 contra criaturas sobrenaturales)
+GACO: Bonificador +1 (+3 contra criaturas sobrenaturales)
+Tipo de daño: contundente
+Peso: 3 lbs
+Factor de velocidad: 3
+Talento marcial: Clava
+Tipo: A una mano
+No permitido a:
+ Mago~
+
+//#7149
+@10171 = ~Libro~
+
+//#7414
+@10172 = ~La gente de Gullykin no aprecia a los que roban las posesiones que tanto nos costaron conseguir. ¡Rendíos, ladrones!~
+
+//#7416
+@10173 = ~Venga pequeño, dadnos otra oportunidad. ¿Qué os parece si os doy estas 100 piezas de oro?~
+
+//#7417
+@10174 = ~¿Os harían estas 200 piezas de oro cambiar de opinión sobre todo este asunto?~
+
+//#7418
+@10175 = ~Como si nos pudierais atrapar, pequeño renacuajo. Venid e intentadlo.~
+
+//#7415
+@10176 = ~Lo siento, no aceptamos sobornos.~
+
+//#7419
+@10177 = ~Siendo aventureros, lo único en lo que probablemente estéis interesados es en oír hablar de las ruinas del puente de Vinoardiente. Se supone que hay un tesoro allí, pero una tribu de kóbolds lo protege. Eh, amigo, nos haríais un gran servicio si acabarais con esos kóbolds. Últimamente han estado causando muchos problemas.~
+
+//#4924
+@10178 = ~Están llegando los malos tiempos.~ [%tutu_var%HALFL01]
+
+/* Store fixes */
+//#9408
+@10179 = ~Tendero~
+
+//#4881
+@10180 = ~Bienvenidos a mi humilde establecimiento.~ [%tutu_var%STORE01]
+
+//#12558
+@10181 = ~~ [%tutu_var%STORE05]
+
+//#12559
+@10182 = ~~ [%tutu_var%STORE06]
+
+//#4882
+@10183 = ~El negocio ha sido lento, con eso de la escasez de hierro.~ [%tutu_var%STORE02]
+
+//#4883
+@10184 = ~El cliente siempre tiene la razón.~ [%tutu_var%STORE03]
+
+//#4884
+@10185 = ~Mis precios son los más razonables al sur de Aguas Profundas.~ [%tutu_var%STORE04]
+
+
+//vial/ubvial.d
+//#19438
+@20000 = ~Limpié de forma satisfactoria las minas de Nashkel, y elegantemente fuí recompensado por mis esfuerzos. 900 piezas de oro de parte de Berrun Muertenecrario, y las gracias de todo el pueblo. El hierro irá lentamente filtrándose por la costa ahora, aunque el transporte seguirá siendo un negocio traicionero. Los bandidos en la carretera tendrán que estar ocupados con eso.~ ~Limpié de forma satisfactoria las minas de Nashkel, y elegantemente fuí recompensada por mis esfuerzos. 900 piezas de oro de parte de Berrun Muertenecrario, y las gracias de todo el pueblo. El hierro irá lentamente filtrándose por la costa ahora, aunque el transporte seguirá siendo un negocio traicionero. Los bandidos en la carretera tendrán que estar ocupados con eso.~
+
+//#5837
+@20001 = ~Taerom está haciendo un conjunto de placas con mi caparazón de ankheg. Estará listo en diez días.~
+
+//#187
+@20165 = ~Todavía no está listo. Tal vez en un día o dos. Sed paciente; la calidad lleva su tiempo.~ //#187
+
+//#15267
+@20166 = ~¿Podríais mostrarnos lo que tenéis a la venta?~
+
+//kagain/rKAGAIJ.d
+//#16782
+@20002 = ~Bueno, mirad lo que encontré; es el cuerpo del hijo de Escudo de Plata. Supongo que ahora estoy metido en problemas. Con él muerto, seré un enano buscado. Por lo que he deducido hasta ahora, todos vosotros vais tras esos malditos bandidos. Bueno, ya que mi reputación está por los suelos como podría ayudaros para obtener mi venganza contra todos estos sacos de mierda.~
+
+//#16783
+@20003 = ~No os queremos cerca nuestra nunca más, asi que largaos.~
+
+//#7045
+@20004 = ~El hijo de Entar Escudo de Plata fue asesinado.~
+
+//#16784
+@20005 = ~Seguro, podríamos usar vuestras habilidades.~
+
+//albert/_ALBERT.d
+//#6500
+@20006 = ~¡¡RUFIE!! ¿Quién es un peludo Rufie? ¿Quiéeeeeen es un peluchín? ¡Muchísimas gracias! Mejor me llevo este cachorrito perdido de vuelta a casa. Tomad esto. Es otra de sus cosas masticadas, pero podemos conseguir más donde vamos. Gracias de nuevo.~
+
+//#6509
+@20007 = ~Yo um... rescaté al "pequeño" Rufie y lo devolví al... chico... llamado Albert. No quiero saber dónde fueron. Con suerte nunca lo averigüe.~
+
+//scar/ubscar.d
+//#10649
+@20008 = ~Scar está esperando fuera de los barracones del Puño Llameante. Quiere hablar sobre las sospechas que tiene sobre el Trono de Hierro.~
+
+//quoningar/ubquon.d
+//#15528
+@20009 = ~No molestéis las meditaciones de lo sagrado.~
+
+//#15532
+@20010 = ~Es difícil para mí centrarme en mi meditación con el bullicio de esta ciudad. ¿Podría pediros vuestra ayuda para obtener una poción de concentración mental?~
+
+//#15809
+@20011 = ~El sacerdote Quoningar, aparentemente no acostumbrado al bullicio sin fin como yo, está buscando una poción de concentración mental. Sin eso, dudo que pueda finalizar sus meditaciones...~
+
+//#15538
+@20012 = ~Por favor, a menos que tengáis una poción de concentración mental, debo volver a mi casi inútiles motivaciones.~
+
+//#15539
+@20013 = ~Por todas esas crueldades, estoy agradecido de haber encontrado gente como vos para reblandecer el filo aspero de esta ciudad. Podéis llamarme Quoningar, si lo deseáis. Por favor, tomad este martillo mío para recordarme la próxima vez que os aventuréis a un combate.~
+
+//#15540
+@20014 = ~Por todas esas crueldades, estoy agradecido de haber encontrado gente como vos para reblandecer el filo aspero de esta ciudad. Podéis llamarme Quoningar, si lo deseáis. Por favor, tomad esta poción de bloqueo mágico. Tengo la sensación de que alguien podría necesitarla en estas calles.~
+
+//#15541
+@20015 = ~Esta ciudad me asusta, amigo. Cada día que permanezco aquí, me pongo más ansioso.~
+
+//#15542
+@20016 = ~¡No puedo soportar esta ciudad pero tal vez podría ser más agradable sin vosotros cerca!~
+
+//shilchen/ubshilo.d
+//#15182
+@20017 = ~Puedo oler la ciudad en vos.~
+
+//#15772
+@20018 = ~Shilo Chen, un explorador del Bosque de los Cedros, está buscando actualmente ayuda en Puerta de Baldur. Un grupo de ogros mago está exterminando la fauna salvaje en la zona suroeste del bosque. Me ha pedido que vaya allí y vea lo que puedo hacer. Si él puede encontrar algun otro aventurero voluntarioso, lo enviará como refuerzo.~
+
+//#15184
+@20019 = ~¿Cómo puedo permanecer en esta ciudad de locos cuando el bosque está en peligro?~
+
+//#15185
+@20020 = ~Los halcones me contaron que limpiasteis de ogros mago vosotros mismos. Estoy impresionado con vuestro valor. Tomad, dejadme daros estos finos guantes como símbolo de mi agradecimiento. Son tan flexibles que podéis sentir incluso como si una suave pluma rozara vuestra palma.~
+
+//#15186
+@20021 = ~¡Vosotros los habitantes de la ciudad sois todos iguales!~
+
+//edie/ubedie.d
+//#15175
+@20022 = ~Por favor estad en silencio. Estoy intentando estudiar.~
+
+//#15178
+@20023 = ~Odio los exámenes...~
+
+//creature/ubcre.d
+//#19945
+@20024 = ~Oh, hola <CHARNAME>. No os he visto desde hace bastante tiempo. Ciertamente habéis escogido un momento atareado para visitarnos. Me gustaría poder hablar de los viejos tiempos, pero debo preparar las salas de reuniones para nuestros... invitados.~
+
+//#19946
+@20025 = ~Era extraño que los invitados hicieran uso de aquellas habitaciones. ¿Quién está ahí?~
+
+//#19947
+@20026 = ~Parecéis reacio, Feldane. ¿Es que esa gente no es de confianza?~
+
+//#19948
+@20027 = ~Oh, debería decir poco. Hicieron una gran y generosa donación a la fortaleza; varios textos raros cuyo valor superan en exceso la cuota de entrada normal. Sin embargo, no veo que daño puede haber si os lo cuento. Después de todo, una vez llamásteis a este lugar un hogar. Afirman ser mercaderes, aunque sus organizaciones se interesan en muchas más cosas, estoy seguro. Los tres líderes del Trono de Hierro se están reuniendo con los representantes de los Caballeros del Escudo.~
+
+//#19950
+@20028 = ~¿Qué sabéis de esos dos grupos?~
+
+//#19952
+@20029 = ~Interesante, pero nada me concierne. Gracias por vuestro tiempo.~
+
+//#19957
+@20030 = ~No debería decir esto, pero mantendría los ojos abiertos en vuestros presupuestos mientras están aquí. Tres son del Trono de Hierro, supuestamente los propios líderes. Los otros son de Amn. Creo que son representantes de los Caballeros del Escudo. Afirman que este viaje es para abordar futuras relaciones comerciales, porque el Trono de Hierro ha crecido mucho ultimamente. Conozco muy poco de la economía de Puerta de Baldur, pero me arriesgaría a adivinar que ambos son más que meros hombres de negocios.~
+
+//#19962
+@20031 = ~¿Qué queréis decir con eso? He tenido "tratos" con el Trono de Hierro, asi que me gustaría saber que están tramando.~
+
+//#19963
+@20032 = ~Bueno, gracias por el aviso. Estaré atento.~
+
+//#19964
+@20033 = ~No mucho, pero los rumores nunca son escasos. Oí que esa reunión es más que una negociación, porque el Trono de Hierro amenaza con desplazarse al territorio de los Caballeros del Escudo. Oí a uno de ellos, accidentalmente por supuesto, y pensé que el Trono de Hierro ha obtenido una gran cantidad de poder debido a la escasez de hierro. ¿Apropiado, no creéis? Se están reuniendo aquí porque consideran esto tierra neutral y un lugar relativamente seguro. Dudo que el Guardián de los Tomos Ulraunt hubiese permitido que entraran si no supiera quienes son, aunque no han hecho nada malo aquí.~
+
+//#19967
+@20034 = ~Gracias por la información. Debería marcharme.~
+
+//#19968
+@20035 = ~Hmm. ¿Supongo que no sabréis en qué habitaciones están hospedados?~
+
+//#19965
+@20036 = ~Ningún problema. Debemos reunirnos alguna vez mientras estéis aquí.~
+
+//#19966
+@20037 = ~Oh, espero que no hayáis arrojado vuestra suerte con ellos. Escuché que son tipos desagradables. Más de poder que de comercio. Los escuché cuando hablaban, ¡y se han beneficiado de la crisis del hierro! Esa es la razón por la que los Caballeros del Escudo están aquí; el Trono de Hierro ha obtenido mucha influencia últimamente y amenaza con encargarse de los intereses amnianos. Me sorprende que el Guardián de los Tomos Ulraunt les permitiera entrar, pero no han hecho nada malo que pueda ser demostrado.~
+
+//#19970
+@20038 = ~Gracias por la información. Estaré en mi habitación ahora.~
+
+//#19971
+@20039 = ~¿Supongo que no sabréis qué habitaciones van a usar?~
+
+//#19969
+@20040 = ~He dicho demasiado. Ciertamente no quiero parecer un chismoso. Debería irme. Por favor; deberíamos hablar un poco más antes de que os marchéis.~
+
+//#15543
+@20041 = ~¡Malditos basiliscos! Creo que se dirigía al este pero he tenido bastante para un día, muchísimas gracias. Sin embargo, si estáis intentando cazar a esta estúpida criatura, no dejéis que os detenga.~
+
+//#15810
+@20042 = ~He rescatado a la exploradora Corianna de dónde ellá permanecía, petrificada por la mirada de un basilisco. Aunque Corianna no tiene deseos de encontrarse una segunda vez con la criatura, ha sido lo bastante amable para informarme que la criatura se dirigía al este...~
+
+//#15544
+@20043 = ~Estoy muy agradecida de que me hayáis encontrado. Los basiliscos no son algo a lo que enfrentarse solos. Me voy a casa pero si queréis cazarlo, aseguráos de llevar esta poción de ojos reflejados con vos. Su dominio no puede estar muy lejos de aquí.~
+
+//#15811
+@20044 = ~He rescatado a la exploradora Corianna de dónde ella permanecía, petrificada por la mirada de un basilisco. Aunque ella no tiene deseos de encontrarse una segunda vez con la criatura, Corianna ha sidolo bastante amable como para darme una poción de ojos reflejados e informarme de que la criatura se dirigía al este...~
+
+//#15545
+@20045 = ~Oh no, no deberíais... Si queréis enfrentaros al basilisco, es asunto vuestro. Me marcho a casa.~
+
+//#15546
+@20046 = ~¿Debéis? Mira, es un día largo para mí... ¡Oh, maldito seáis todos!~
+
+//#6145
+@20047 = ~Sólo soy un simple granjero, no se apenas nada.~
+
+//#3991
+@20048 = ~¡Hey! ¿Quiénes sois vosotros?~
+
+//#3993
+@20049 = ~Somos mercenarios.~
+
+//#3994
+@20050 = ~Somos aventureros.~
+
+//#3995
+@20051 = ~Sólo somos simples viajeros.~
+
+//#6601
+@20052 = ~Un granjero que encontramos en el Bosque de los Cedros nos ha contado que alguien ha estado arrojando basura en el bosque.~
+
+//#4004
+@20053 = ~Sí, y si sois un puñado de viajeros normales, entonces yo soy el propio Elminster. Bastardos satíricos.~
+
+//#9036
+@20054 = ~Dejadme. No tengo nada para vos.~
+
+//#106
+@20055 = ~Detenéos un segundo joven, porque oí lo que hicísteis por el viejo Brun. Me hace avergonzarme de que no intentara ayudarle por mí mismo. Es bueno saber que hay gente que gustosamente da más de si mismo, incluso para un extraño. Quiero daros esta reliquia de mi familia, por lo que hicísteis. Ahora mis herederos no asoman tan grandes, pero vos podéis sacarle más uso que mi manto. Gente como vos hacen que un fatigoso anciano siga pensando que hay personas decentes ahí fuera.~
+
+//#5833
+@20056 = ~Un hombre llamado Wilton me entregó una recompensa por ayudar a ese viejo granjero, Brun. Lo que entregas, viene a tí supongo.~
+
+//#6432
+@20057 = ~Sólo algo tan excitante ocurre por estos lugares aparte de los asaltos de los bandidos. Os aviso ahora amigos: yo no intentaría meterme en líos con esos bandidos; oí que son un grupo realmente vil.~
+
+//dialogues/u!minor1.d
+//#5096
+@20058 = ~¡Eh vosotros! Necesito algo de dinero y curación; ¡si sabéis lo que es bueno para vosotros, me lo entregaréis!~
+
+//#5097
+@20059 = ~¡¿Estáis bromeando?! Sois un sólo gran trasgo, ¿porqué no deberíamos sino mataros?~
+
+//#5098
+@20060 = ~Tomad, coged 25 piezas de oro.~
+
+//#5099
+@20061 = ~¿Porqué deberíamos ayudaros?~
+
+//#5100
+@20062 = ~Buen trabajo, vuestras debiluchas excusas para vivir.~
+
+//#5101
+@20063 = ~Soy un miembro del Escalofrío, el grupo mercenario. Si quieres que todos mis amigos resoplen en vuestro gaznate, entonces seguid insultándome.~
+
+//#5102
+@20064 = ~¡Está bien! Está bien. Tomad 25 piezas de oro, ahora dejadnos.~
+
+//#5103
+@20065 = ~Bueno... ahora mismo, sólo hay uno de vosotros, así que creo que tendremos nuestra oportunidad.~
+
+//#5104
+@20066 = ~¡¿Nos estáis amenazando!? Creo que estáis confundido, degenerada y apestosa bestia. Antes de que acabemos con vuestra miserable vida deberíais suplicar algo, y tal vez darnos algo de información de esos Garras Negras.~
+
+//#5105
+@20067 = ~Os arrepentiréis de vuestra decisión.~
+
+//#5106
+@20068 = ~¡Esperad! Eh, lo siento, no me matéis... por favor. Os hablaré sobre los Garras Negra.~
+
+//#5107
+@20069 = ~Venga.~
+
+//#5108
+@20070 = ~Podéis callaros y marcháos de aquí.~
+
+//#5109
+@20071 = ~Los Garras Negra son un grupo de mercenarios, que forman parte del grupo que está asaltando las caravanes de mercaderes. Me perdí durante un asalto hará varios días, y algunos del Puño Llameante me han estado pisando los talones. Ya está, os he contado lo que queríais escuchar.~
+
+//#7013
+@20072 = ~Un gran trasgo nos contó que trabajaba para un grupo mercenario conocido como el Escalofrío. El Escalofrío ha estado asaltando las carreteras del Camino de la Costa.~
+
+//#6529
+@20073 = ~Hola de nuevo, mis jóvenes aventureros. Veo que tenéis el componente necesario. Bueno, ¿podríamos ver si nuestro joven sigue con vida, o si será el festín de alguien?~
+
+//#7012
+@20074 = ~Un gran trasgo al que engatusamos nos contó que trabajaba para un grupo de mercenarios conocidos el Escalofrío. Según él el Escalofrío trabaja para los Zhents.~
+
+//#6260
+@20075 = ~¡Dejadme!~
+
+//#208
+@20076 = ~¡Vuestro corazón es valiente! ¡Os lo extraeremos y os lo mostraremos! ¡Escalofrío, atacad!~
+
+//#6426
+@20077 = ~¡He encontrado a un grupo semihumano de bandidos! Hierro y oro era lo que querían.~
+
+//#1761
+@20078 = ~Así que... ¿tenéis alguna otra pregunta?~
+
+//#1762
+@20079 = ~¿Quiénes son los Ladrones de las Sombras?~
+
+//#1763
+@20080 = ~¿Qué pruebas incriminan a los Ladrones de las Sombras?~
+
+//#1764
+@20081 = ~¿Qué enfermedad tiene a Eltan derrumbado?~
+
+//#1765
+@20082 = ~Ya son suficientes preguntas por ahora.~
+
+//#11885
+@20083 = ~¡IthNal cOR dan osa KOZAH! ¡Rrrackne dall'a osa KOZAH! El ídolo.......encontraré el idolo.........~
+
+//#14375
+@20084 = ~Si vos dejáis de desear mi compañía, entoces así será. No me obligaré a estar dónde no soy querida.~
+
+//#16741
+@20085 = ~(A sus deseos les falta visión y originalidad.) Si todo lo que deseáis son monedas, quizás viaje entonces con aventureros más "aventurados". Tomad lo que tengo y recordad esta oportunidad cuando os lo hayáis gastado.~
+
+//#16172
+@20086 = ~¿En serio? Que así sea. Estoy seguro de que andaré por aquí cerca si deseáis mi compañía. Procuraré que no tengáis que fijaros mucho.~
+
+//#6135
+@20087 = ~Como buen amigo vuestro y todo eso, os puedo decir una cosa: hay un puñado de malvadas criaturas con forma de perro matando a los hombres en la mina. ¡Tenéis que detenerlos!~
+
+//#16558
+@20088 = ~Encanté al capataz de la mina de Nashkell. Dijo que había criaturas "con forma de perro" causando problemas allá abajo.~
+
+//#14736
+@20089 = ~Ah, bueno, supongo que tendré la oportunidad de trabajar en esta nueva balada en la que he estado pensando... ¡Me apuesto algo a que no sabéis quiénes son los protagonistas!~
+
+//#7592
+@20090 = ~Bien, aunque eso sea cierto, no debéis estar en los sótanos. Salid de aquí.~
+
+//#16688
+@20091 = ~Pongo en duda vuestro criterio, pero se trata de vuestra decisión. Tenéis cierta madera de liderazgo y me gustaría ayudaros en el futuro. Vamos Khalid, ahora debemos partir~
+
+//#15351
+@20092 = ~Ah, muy bien. Voy de camino, pues... Mm... Seguid vosotros...~
+
+//#15352
+@20093 = ~Vale, no es mucho. De cualquier forma, tomad 50 piezas de oro. Mm... ¿Es suficiente?~
+
+//#15353
+@20094 = ~Gracias, amigo. Ese torpe y bruto viejo me podría haber tenido a mí si no fuera por jóvenes y torpes brutos como vos. Tomad; si vais a estar caminando por estas montañas durante un tiempo, quizás necesitéis unas botas mejores. En cuanto a mí, no me quedaría aquí ni aunque me pagarais.~
+~Gracias, amiga. Ese torpe y bruto viejo me podría haber tenido a mí si no fuera por jóvenes y torpes brutos como vos. Tomad; si vais a estar caminando por estas montañas durante un tiempo, quizás necesitéis unas botas mejores. En cuanto a mí, no me quedaría aquí ni aunque me pagarais.~
+
+//#5710
+@20095 = ~¡Gracias! Está justo al oeste de Beregost. Thalantyr vive en una gran casa que está allí. Me acurrucaré en vuestro fardo hasta que lleguemos allí.~
+
+//#5728
+@20096 = ~Me he encontrado con un desafortunado mago con forma de pollo. Lo voy a llevar a que vea a Thalantyr, justo al oeste de Beregost.~
+
+//#8468
+@20097 = ~Aquí tenéis las 500 piezas de oro que os debo. Siento que quedo en deuda con vos por vuestras galantes hazañas. Tomad esta gema, espero que os satisfaga.~
+
+//#8469
+@20098 = ~Ojalá tuviese el dinero que os prometí, pero no tengo más que estas 500 piezas de oro. Tomad esta gema. Espero que compense la injusticia.~
+
+//#15113
+@20099 = ~¿Qué os parece mi nuevo manto?~
+
+//#1161
+@20100 = ~¡Vosotros decidís qué golpea el suelo antes, vuestras espadas o vuestras cabezas! ¡Sed listos ahora y viviréis para contarlo!~
+
+//#1162
+@20101 = ~¡No nos atraparéis vivos!~
+
+//#1163
+@20102 = ~No lucharemos contra vos. En realidad, deseamos unirnos a vos.~
+
+//#1164
+@20103 = ~No queremos problemas. Tomad lo que deseéis y dejadnos en paz~
+
+//#14740
+@20104 = ~¿No me puedo quedar con vos ni siquiera un poco más? El tiempo que hemos pasado juntos ha sido... bastante agradable. Sí, bien, tal vez nos encontremos de nuevo.~
+
+//#505
+@20105 = ~No lo puedo creer, me ha vencido nada menos que un hombre. Creo que debo mantener mi palabra. Uniré mi espada a vuestra causa, por muy estúpida que sea.~
+
+//#517
+@20106 = ~En realidad, no necesitamos vuestra ayuda.~
+
+//#518
+@20107 = ~Bien, será mejor que demostréis lo que valéis.~
+
+//#1994
+@20108 = ~Oh. Eso podría ser interesante. Sí, hacedlo.~
+
+//#1995
+@20109 = ~Deberíais marcharos ya, pues Droth está cerca y esto se haría difícil para los dos.~
+
+//#1134
+@20110 = ~Creo que teníais razón, Jeb. ¡No hay viento en sus velas! Dejadnos. Solucionaremos nuestros propios problemas.~
+
+//#11215
+@20111 = ~¡Debéis! Aquí estoy para impediros el paso. Soy el obstáculo que os detendrá. Tendréis que apartarme... tendréis que luchar conmigo.~
+
+//#11216
+@20112 = ~Si he de mataros para pasar, que así sea. Así os perdono las transgresiones que habéis perpetrado contra mí.~
+
+//#11217
+@20113 = ~Si queréis desperdiciar vuestra vida, entonces ya estáis muerto. Si ésa es vuestra elección, entonces no me necesitáis.~
+
+//#13756
+@20114 = ~Os habéis mostrado muy amable conmigo en este extraño mundo iluminado. Mas quizá tengáis razón. Los elfos oscuros quieren ser una raza aparte... Cuidaos, ¿de acuerdo?~
+
+//#6258
+@20115 = ~Como sois tan buenos amigos, debería obsequiaros con un presente. Tomad este poco de oro, no lo necesitaré para nada.~
+
+//#8146
+@20116 = ~Ojalá pudiera huir con vos, querido, pero mi marido es un hombre muy celoso. No me gustaría provocar su ira. Tomad este anillo, por el que siempre me podéis recordar.~
+
+//#7926
+@20117 = ~Ojalá la yaya me dejara marchar con vos. Ojalá, ojalá... ¡Ay! Nunca me dejará. Antes de que os vayáis, ¿qué tal si os doy algo para que os ayude? Sé que tiene valor, porque la yaya lo guarda bajo llave. Es como si lo tomara prestado un tiempo, pero ahora quiero que lo tengáis. Aquí tenéis. Volved pronto y contadme vuestras aventuras.~
+
+//#7912
+@20118 = ~Creo que sería poco hospitalario por mi parte no ayudaros en vuestras futuras aventuras. Tengo un adornito de los viejos tiempos, algo a lo que encontraréis utilidad. Tomad esta honda; no parece mucho, pero confiad en mí, me ha servido más de una vez.~
+
+//#8855
+@20119 = ~Si sois mi amigo me dejaréis marchar. Hay una criatura necrófaga que me persigue en mi cabeza. No puedo dormir nada. Yo no quería robar su tumba. A... a lo mejor lo hice, pero lo siento mucho. Por favor, llevad esto a su solitaria tumba, amigo. ¿Lo haréis?~
+~Si sois mi amiga me dejaréis marchar. Hay una criatura necrófaga que me persigue en mi cabeza. No puedo dormir nada. Yo no quería robar su tumba. A... a lo mejor lo hice, pero lo siento mucho. Por favor, llevad esto a su solitaria tumba, amigo. ¿Lo haréis?~
+
+//#7661
+@20120 = ~Buen hombre, ¿por qué no tomáis estas 25 piezas de oro y os vais? Divertíos.~
+
+//#8420
+@20121 = ~Podéis llamarme Ithtyl, buen amigo. Me alegra conocer a alguien tan alegre y simpático como vos. ¿Por qué no vais abajo a divertiros? Tomad estas 20 piezas de oro, para que podáis pagar lo que se os antoje.~
+~Podéis llamarme Ithtyl, buena amiga. Me alegra conocer a alguien tan alegre y simpática como vos. ¿Por qué no vais abajo a divertiros? Tomad estas 20 piezas de oro, para que podáis pagar lo que se os antoje.~
+
+//#6296
+@20122 = ~Bueno amigos, aquí tenéis el antídoto. No lo quería de todos modos.~
+
+//#7511
+@20123 = ~Me ha ido bastante mal en el juego, ¿qué os parece si os doy esta pieza de oro para que empecéis la noche? Espero que la suerte de Tymora esté con vos.~
+
+//#8802
+@20124 = ~Apenas salgo de casa, así que no estoy muy enterado de lo que pasa en la ciudad. ¿Por qué no os lleváis esta pieza de oro y os divertís en la plaza del mercado? Allí se puede hacer de todo.~
+
+//#8115
+@20125 = ~He tenido el repentino impulso de haceros un regalo, amigo. Tomad esta chuchería, es un recuerdo de la infancia. Creo que es adecuado que vos, mi compañero más íntimo, lo guardéis.~
+
+//#7491
+@20126 = ~Aquí, amigo; si no tenéis dinero, tomad estas 10 piezas de oro.~
+~Aquí, amiga; si no tenéis dinero, tomad estas 10 piezas de oro.~
+
+//#7780
+@20127 = ~Es obvio lo que necesitáis, mi buen amigo. Vivir en esta fortaleza de la biblioteca os debe dejar con pocos fondos monetarios. Tomad estas 20 piezas de oro, para mí son una nimiedad, pero estoy seguro de que os pondrán en el buen camino.~
+
+//#7994
+@20128 = ~Siendo un buen amigo, me gustaría confiaros este valioso anillo. Es una reliquia y tengo miedo de que me la roben. Con todos los ladrones y forajidos merodeando en el bosque, no es difícil suponer que habrá muchos aquí en el mesón.~
+
+//#8034
+@20129 = ~Amigo, me gustaría que os llevarais esta armadura cuando os marchéis. Me disgustaría mucho que vinierais herido tras vuestra aventura.~
+~Amiga, me gustaría que os llevarais esta armadura cuando os marchéis. Me disgustaría mucho que vinierais herida tras vuestra aventura.~
+
+//dialogues/u!totscminor.d
+//#21708
+@20130 = ~¡Acercaos! ¡Acercaos todos y ESCUCHAD una historia de terror nunca antes contada! Uníos a mí, almas valientes, uníos al aventurero Ike Cascadion Vendar y os guiaré a través de uno de los mayores peligros de los Reinos: la Torre de Durlag, donde daremos testimonio de los terribles acontecimientos que arrancaron la vida a centenares de valerosos hombres y mujeres. ¡CONTEMPLARÉIS el horror de sus traicioneras trampas!, ¡SENTIRÉIS la presencia de los muertos vivientes languideciendo eternamente!, ¡os MARAVILLARÉIS ante la increíble riqueza enterrada en sus más recónditas salas! ¡No apto para débiles de espíritu! ¡No me haré responsable de cualquier ataque cardíaco que podáis sufrir durante la expedición! ¡Acercaos, acercaos! ¡Ahora es el momento!~
+
+//#21709
+@20131 = ~¡Ajá, veo a un noble líder dispuesto a no desaprovechar tal oportunidad! Venid a contemplar las maravillas que os relato. Tengo una oferta especial para vuesa merced: por solo 60 piezas de oro veréis cosas que jamás habríais imaginado. No es que crea que necesitéis un descuento, pero sinceramente os lo merecéis.~
+
+//#21715
+@20132 = ~¡Trato hecho! ¿Cuándo partimos?~
+
+//#21716
+@20133 = ~No tengo tanto oro.~
+
+//#21717
+@20134 = ~Vuestra "excursión" no me interesa para nada, charlatán.~
+
+//#21710
+@20135 = ~¡Saludos a todos, amigos míos! Venid a ver lo que os ofrezco; venid a vivir una aventura sin par. Por solo 80 piezas de oro veréis maravillas que jamás habríais imaginado. Sabed que normalmente no hago esto con todo el mundo.~
+
+//#21711
+@20136 = ~¡Eh, patanes, acercaos a mí! A vosotros os costará 100 monedas de oro, y además os vigilaré muy de cerca. Rezad para que no os pille birlando ni una sola moneda, ¿entendido? Vamos a ir a un lugar muy peligroso, y no sería la primera vez que "pierdo de vista" a algunos clientes.~
+
+//#21712
+@20137 = ~No puedo ofreceros nada mejor, así que o lo tomáis o lo dejáis.~
+
+//#21726
+@20138 = ~¡Me parece perfecto, condenado estafador! ¡Pudríos junto a vuestro patético viaje!~
+
+//#21713
+@20139 = ~¿Estáis seguro de no haber perdido más nervios que piezas de oro de vuestro portamonedas? Bien, me pasearé por aquí el tiempo que haga falta hasta que podáis pagarme, como hacen todos mis clientes.~
+~¿Estáis segura de no haber perdido más nervios que piezas de oro de vuestro portamonedas? Bien, me pasearé por aquí el tiempo que haga falta hasta que podáis pagarme, como hacen todos mis clientes.~
+
+//#23531
+@20140 = ~Me he topado con un bergante que dice ofrecer visitas guiadas a la Torre de Durlag. Parece que quiere convertir esa trampa mortal en una atracción turística. He decidido declinar su oferta, aunque seguirá estando disponible si cambio de idea.~
+
+//#21714
+@20141 = ~Lo comprendo. Mencionar su solo nombre asustaría al más pintado. Cuando reunáis el valor suficiente para el viaje, venid a verme de nuevo.~
+
+//#21727
+@20142 = ~Y con esto completo mi cuota para esta expedición. ¡Marcharemos inmediatamente! Acordaos de dar besitos y fuertes abrazos a vuestros seres queridos, porque puede que NUNCA los volváis a ver. Me encontraréis a los pies de la vieja torre. MORIRÍAIS en ese truculento lugar si no fuera por mí. ¡Pero no os preocupéis, solamente yo puedo entrar donde otros TEMEN PISAR!~
+
+//#23532
+@20143 = ~He conocido a un buhonero llamado Ike que ofrece visitas guiadas a la Torre de Durlag. Parece que quiere convertir esa trampa mortal en una atracción turística. Accedí a visitarla, así que debo encontrarme con él a los pies de la vieja torre lo antes posible. No creo que ocurra nada. ¡No llevarían a nadie si fuera peligroso!~
+
+//#22049
+@20144 = ~¿Aún más? ¡Bah, tengo a mis órdenes más grumetes que días tiene el año y me apuesto los pelos del sobaco a que todavía vendrán más! ¡Chicos, adelante! Parece que han aparecido unas manchas muy feas que debemos limpiar. ¡Jajaja!~
+
+//#23519
+@20145 = ~Intenté obtener las dichosas cartas náuticas sin que el capitán Tollar Kieres se enterara, pero no lo he conseguido. Bah, ¿para qué me tomo tantas molestias? De todas formas no pretendía dejar testigos.~
+
+//#22050
+@20146 = ~¿Que os enseñe qué? ¡Jojo! Lo dudo mucho, chaval. Deberíais saber que da muy mala suerte hacer eso; además va en contra de la política de la Liga, ¿lo sabíais? ¡Rápido muchachos, encarguémonos de estos polizones! Quizá sus cadáveres puedan aplacar la ira de Umberlee cuando nos encontremos en alta mar...~
+
+//#21498
+@20147 = ~¡No le hagáis caso! ¡No es uno de los nuestros! Está tan chiflado como las criaturas y es tan peligroso como ellas.~
+
+//#21499
+@20148 = ~Me contó que no fue un arrecife lo que hundió el barco, sino las bestias que se encontraban a bordo.~
+
+//#21500
+@20149 = ~Cierto es que estaba claramente trastornado. De acuerdo, no lo mencionaré más.~
+
+//#21501
+@20150 = ~Olvidémonos de él. Todos esos monstruos están muertos, tal como pedisteis.~
+
+//#21502
+@20151 = ~Aún no los he matado a todos, pero sigo en ello.~
+
+//#21514
+@20152 = ~La muerte era lo único que existía cuando llegamos a este lugar, pero os podemos asegurar que solo aquellos que viven en paz pueden llegar a prosperar. Huimos de la zona del naufragio y comenzamos una nueva vida. Algunos no nos siguieron, e incluso amenazaron con eliminarnos.~
+
+//#21517
+@20153 = ~Al final todo acabó relativamente bien. Habéis sobrevivido y construido una aldea muy bonita. Continuaré ayudándoos.~
+
+//#21519
+@20154 = ~¿Qué queréis decir con que no quisieron acompañaros?~
+
+//stores/ubstores.d
+//#15365
+@20155 = ~No rechazaré nuevas caras cuando el trabaja ha sido tan bajo ultimamente. Si tenéis necesidad de algo, no vaciléis en preguntar.~
+
+//#15366
+@20156 = ~Ha sido un viaje duro hasta llegar aquí. ¿Qué tenéis para aliviar nuestros espíritus?~
+
+//#15367
+@20157 = ~No necesito nada por el momento, aunque vuestra oferta es apreciada.~
+
+//#3629
+@20158 = ~Oídme, parecéis del tipo aventurero. ¿Así que necesitáis algo de equipo nuevo? Mis precios son un poco elevados, pero con la escasez de hierro y todo eso no puedo hacer nada al respecto.~
+
+//#15290
+@20159 = ~Mostradnos vuestras mercancías.~
+
+//#15291
+@20160 = ~No necesitamos nada hoy.~
+
+//#6298
+@20161 = ~He oído muchas cosas últimamente. Parece que el hierro apenas llega, con esos bandidos y el mineral defectuoso de las minas de Nashkell. Parece que se están cociendo conflictos entre Puerta de Baldur y Amn. No me sorprendería si estallara una guerra entre estos dos.~
+
+//#7082
+@20162 = ~Cuando engatusamos a un mercader, dijo algunos rumores sobre escasez del hierro, bandidos y guerra.~
+
+//#9165
+@20163 = ~¡No me fiaría de vos ni muerto!~
+
+//area/ubarea.d
+//#7415
+@20164 = ~Lo sentimos, no aceptamos sobornos.~
+
+//coran/coran.d
+//#899
+@20167 = ~No hay ningún problema, aunque os estáis perdiendo una pequeña aventura.~
+
+//#902
+@20168 = ~No sois lo suficientemente duros de corazón. Lo entiendo, no todos lo somos.~
+
+//dialogues/u!ch7.d
+//#1754
+@20169 = ~¿Quién mató a Scar?~
+
+//#1755
+@20170 = ~¿Qué enfermedad ha contraído Eltan?~
+
+//#11196
+@20171 = ~Hay... algo más. En la cúspide del Trono de Hierro hay una mujer cuya... cuya influencia envenena el corazón de Sarevok. Si ella desapareciese, sé que él atendería a razones, a mis ruegos. Cythandria es su nombre y grande es su poder en este asunto. Ella también busca el favor de Sarevok, aunque estaría igualmente contenta si él se autodestruyera, siempre que ella sacase provecho de ello. Ahora... debo marcharme. Él no debe saber que os he ayudado.~
+
+//#1780
+@20172 = ~¿Sabéis quién mató a Scar?~
+
+//#20666
+@20173 = ~Tenemos que dirigirnos a Bajosótano y encontrar a Slythe y Krystin, dos de los asesinos de Sarevok. Eltan piensa que Sarevok quiere asesinar a los Grandes Duques Belt y Liia. Tenemos que asegurarnos de que esto no ocurra. También tenemos que llevar a Eltan al edificio del Capitán del Puerto, que se encuentra en la parte este del puerto.~
+
+//sharteel/rangelo.d
+//#2144
+@20174 = ~No sois el comandante del Puño Llameante; este título pertenece al Duque Eltan, alguien que sí lo merece. Sois un pretendiente y una persona bastante sucia y apestosa. Un farfullero lobotomizado sería mejor líder que vos.~
+
+//#6537 (add 'Afoul of the law')
+@20175 = ~Fuera de la ley
+
+Por alguna razón, el Duque Eltan ya no es el comandante del Puño Llameante. Un hombre llamado Angelo reclama ahora este puesto.~
+
+
+//#6537 (add 'Afoul of the law')
+@20175 = ~Afoul of the law
+
+For some reason Duke Eltan is no longer the commander of the Flaming Fist.  A man named Angelo now claims that position.~
+
+//BGT/Tutu SOLVED/UNSOLVED + Headers - DiaryEntries for Quoningar, added by Jarl
+
+@20176 = ~Sosiego en una ciudad bulliciosa
+
+El sacerdote Quoningar, aparentemente no acostumbrado al bullicio sin fin como yo, está buscando una poción de concentración mental. Sin eso, dudo que pueda finalizar sus meditaciones...~
+
+
+@20177 = ~Sosiego en una ciudad bulliciosa
+
+Por llevarle la poción a Quoningar para sus meditaciones, nos ha dado una recompensa. Al menos alguien en esta ruidosa ciudad puede encontrar paz interior.~
+
+
+//BGT/Tutu SOLVED/UNSOLVED + Headers - DiaryEntries for Shilo Chen, added by Jarl
+
+@20178 = ~Shilo Chen y el ogro mago
+
+Shilo Chen, un explorador del Bosque de los Cedros, está buscando actualmente ayuda en Puerta de Baldur. Un grupo de ogros mago está exterminando la fauna salvaje en la zona suroeste del bosque. Me ha pedido que vaya allí y vea lo que puedo hacer. Si él puede encontrar algun otro aventurero voluntarioso, lo enviará como refuerzo.~
+
+@20179 = ~Shilo Chen y el ogro mago
+
+Habiendo vencido a los ogros magos en el Bosque de Dientes Afilados, Shilo Chen os da una jugosa recompensa.~
+
+
+
+
+
+
+//setup-bg1ub.tp2
+//#7810
+@30000 = ~Hola hola hola. ¡Es el hogar de los Bunsen dónde habéis entrado, y bienvenidos sois! Por favor, descansad vuestros doloridos pies.~
+
+//#7819
+@30001 = ~¿Sois siempre tan cortés con los extraños que entran en vuestra casa? Dificilmente me parece seguro.~
+
+//#7821
+@30002 = ~Ahorradme vuestras sonrisas, pequeñajo. Simplemente entré para ver si teníais algo que pudiese llevarme. Sois idiota por dejar vuestra cabaña abierta.~
+
+//#7823
+@30003 = ~Mis disculpas, pero la puerta estaba abierta y pensé que vuestra cabaña estaba desierta. No pensé en meterme en vuestro hogar.~
+
+
+//Tutu/D -- all files
+//#8330
+@40000 = ~Bienvenidos viajeros. Confío en que mantendréis vuestras armas en sus vainas y no provoquéis problemas mientras estéis aquí. Es lo mejor para todos. Encontraréis que la mayoría de nuestros clientes están bien equipados para defenderse por ellos mismos y, si es necesario, el bar también. ¿Hay algo que pueda hacer por vos?~
+
+//#15072
+@40001 = ~Sí.~
+
+//#15073
+@40002 = ~No.~
+
+//#8331
+@40003 = ~Sed bienvenido, al menos si podéis pagar lo que toméis. Tened cuidado con los rincones oscuros de la "del Elfo", porque la guardia no atiende mucho a lo que pasa por aquí. ¿En qué puedo atenderos?~
+~Sed bienvenida, al menos si podéis pagar lo que toméis. Tened cuidado con los rincones oscuros de la "del Elfo", porque la guardia no atiende mucho a lo que pasa por aquí. ¿En qué puedo atenderos?~
+
+//#8332
+@40004 = ~Bien, bien, mirad lo que ha traído la marea. Os aviso, haced lo que deseéis, pero si llamáis la atención de la guardia de la ciudad, estaréis flotando en el mar sin barco, y ni que decir tiene que sin vela.~
+
+//#8380
+@40005 = ~Buenas noches. El Yelmo y la Capa está preparado para atenderos de una forma rápida y relajada. Confío en que no ignoraréis que nuestras provisiones son ligeramente más costosas que las de los mesones "de menor consideración" que hay por la ciudad. Es cierto, pero siempre he dicho que se obtiene lo que se paga. ¿En qué puedo atenderos?~
+
+//#8381
+@40006 = ~Mmm. Hola. Bienvenido al Yelmo y la Capa. Mientras estéis aquí, podéis esperar un servicio superior y una calidad excelente... eh... podéis PAGAR, ¿verdad? Siempre que sea así nos llevaremos estupendamente. Sed tan amable de evitar causar problemas mientras estéis aquí. Y armar jaleo no serviría más que para molestar a los demás clientes. ¿En qué puedo atenderos?~
+~Mmm. Hola. Bienvenida al Yelmo y la Capa. Mientras estéis aquí, podéis esperar un servicio superior y una calidad excelente... eh... podéis PAGAR, ¿verdad? Siempre que sea así nos llevaremos estupendamente. Sed tan amable de evitar causar problemas mientras estéis aquí. Y armar jaleo no serviría más que para molestar a los demás clientes. ¿En qué puedo atenderos?~
+
+//#8382
+@40007 = ~Oh, no, no, no. Me atrevería a pensar que alguien de vuestro... nivel no se sentirá a gusto en el Yelmo y la Capa. Nos jactamos de ofrecer una tarifa algo cara, pero relajada, mientras que vos parecéis disfrutar más del ambiente de... digamos... la Sirena Ruborizada. Siento decirlo, pero no lo he dicho como cumplido. Será mejor que os marchéis ahora, porque quedaros no provocará más que problemas. ¿En qué puedo atenderos?~
+
+//#14220
+@40008 = ~¡Cielos! ¡No están vuestros pollos! ¡Erlin! ¡Erlin, alguien va tras los pollos!~
+
+//#14360
+@40009 = ~Conozco vuestros secretos, vieja bruja. ¡Puede que también os baje algo por el gaznate!~
+
+//#14361
+@40010 = ~Esto es entre nosotros y los pollos, señora, y le voy a pedir amablemente que se mantenga al margen.~
+
+//#14223
+@40011 = ~¿Qué queréis?~
+
+//#14224
+@40012 = ~¿Podéis decirme cómo llegar a Beregost?~
+
+//#14225
+@40013 = ~¿Cuánto pedís por esos pollos?~
+
+//#14226
+@40014 = ~¿De quién es la granja que está justo al este de aquí?~
+
+//#14227
+@40015 = ~Nunca he estado allí.~
+
+//#14228
+@40016 = ~No están en venta.~
+
+//#14229
+@40017 = ~Eh, ésa es la casa de Jeb. Jamás ha traído nada bueno ese canalla. De ningún modo, no desde que su esposa murió.~
+
+//#14230
+@40018 = ~Por favor, dejadnos en paz. Aquí ya han habido demasiadas muertes.~
+
+//#14231
+@40019 = ~No sé en qué podríais estar interesado, amigo. Hablad mejor con Erlin.~
+
+//#14376
+@40020 = ~¡Fuera de mi granja, gamberros!~
+
+//#1517
+@40021 = ~¿Quiénes sois? ¿Qué hacéis en mis propiedades? ¡Guardias! ¡A los intrusos!~
+
+//#6136
+@40022 = ~Soy Entar Escudodeplata, uno de los Grandes Duques de Puerta de Baldur. Os puedo decir muchas cosas, amigo mío. Quizás os gustaría oír algo sobre el Trono de Hierro. Son una nueva organización mercantil que se ha establecido en Puerta de Baldur. La mayoría de nosotros estamos bastante preocupados con algunas de sus acciones, pero han prometido proporcionarnos hierro, un material que se ha convertido en un bien muy escaso últimamente. Sospechamos de Amn, nuestros vecinos del sur. Creemos que los de Amn se han aliado con el Zhentarim en un intento por anexionarse nuestra gloriosa ciudad. Sin embargo, Scar piensa que las pruebas contra Amn fueron demasiado fáciles de encontrar, casi como si alguien estuviera intentando inculparlos y así crear fricción entre nuestras naciones. Ya que sois mi mejor amigo, os diré que tengo una hija muy hermosa. Se llama Skie y está en edad casadera.~
+
+//#6598
+@40023 = ~Cuando hechizamos a Entar Escudodeplata nos contó bastantes cosas. Dijo que el Trono de Hierro se había establecido recientemente en Puerta de Baldur y que se estaba ofreciendo para vender hierro a la ciudad. Los Grandes Duques están preocupados por una invasión de Amn y por tanto se están tomando la oferta del Trono de Hierro bastante en serio, a pesar de tener ciertas reservas sobre sus intenciones.~
+
+//#8983
+@40024 = ~¡Mis puertas ya no están abiertas a los que son como vos!~
+
+//#14221
+@40025 = ~Tranquila, Enna. Saben lo que están buscando y además en esta granja no hay lugar para secretos.~
+
+//#14222
+@40026 = ~¡Por la maldición de Beshaba! ¡Qué le habéis hecho a mi Enna!~
+
+//#14232
+@40027 = ~Esto es una propiedad privada. No os animamos a fisgonear.~
+
+//#14233
+@40028 = ~Si estáis buscando problemas, los encontraréis, forastero. ¡Talos! ¡Myrkul! ¡Malar! ¡A por ellos, muchachos!~
+
+//#14234
+@40029 = ~Tenéis aspecto de saber qué hacer con un pollo. Oíd, amigo, éste está en la casa.~
+
+//#14235
+@40030 = ~Creo que no habéis oído bien... He dicho que esto es propiedad privada.~
+
+//#1464
+@40031 = ~Jaheira y Khalid son los únicos clientes decentes que hemos tenido en mucho tiempo.~
+
+//#1465
+@40032 = ~Los consejos son bastante raros sin vos entorpeciéndome.~
+
+//#1466
+@40033 = ~Largaos, tengo trabajo.~
+
+//#6940
+@40034 = ~No voy a husmear en los asuntos de los clientes. No es bueno para las propinas.~
+
+//#9020
+@40035 = ~¡Largo de aquí!~
+
+//#8179
+@40036 = ~¿Quién podéis ser? No, no respondáis, porque realmente no me importa. Habéis entrado a mi cocina sin invitación y la puerta ni siquiera estaba abierta. Mejor que os vayáis o lo único peor que que la guardia venga a echaros será que no lleguen a tiempo de salvaros de mí. ¡Fuera!~
+
+//#8180
+@40037 = ~¡Fuera!~
+
+//#8181
+@40038 = ~¡No me hagáis echaros de una patada en vuestras partes! ¡Fuera!~
+
+//#8182
+@40039 = ~Si queréis os puedo dar un curso completo sobre cocina. Pero, conociendo a los aventureros como vos, no estaréis aquí suficiente tiempo.~
+
+//#9061
+@40040 = ~¡Aquí no sois bien recibido!~
+
+//#8192
+@40041 = ~Estoy esperando que papá venga a casa y me arrope. Seguro que viene pronto. No puede quedarse siempre en las minas, ¿verdad?~
+
+//#8193
+@40042 = ~La razón por la que no vuelve a casa es porque está muerto, muchacha. Ha fallecido, la ha palmado, espichado, ha estirado la pata, está criando malvas.~
+
+//#8194
+@40043 = ~Vuestro padre probablemente volverá pronto. No os preocupéis.~
+
+//#8195
+@40044 = ~Realmente lo espero. ¡Le echo tanto de menos!~
+
+//#8196
+@40045 = ~¡¡¡Buaaaa!!! ¡Mi papá está muerto!~
+
+//#8197
+@40046 = ~Soy vuestra mejor amiga.~
+
+//#9027
+@40047 = ~¡Dejadme en paz, miserable!~
+
+//#7843
+@40048 = ~Oh, bienvenido. Es una pena que mi hijo no esté aquí para conoceros. Le haría muchísima ilusión.~
+~Oh, bienvenida. Es una pena que mi hijo no esté aquí para conoceros. Le haría muchísima ilusión.~
+
+//#7853
+@40049 = ~¿Por qué habría de interesarse por nosotros, madrecita?~
+
+//#7855
+@40050 = ~Mantened a vuestro cachorro lejos de mí. No tengo ninguna intención de pasar el resto de mi vida cuidando de vuestro pequeño pilluelo.~
+
+//#7857
+@40051 = ~Es mejor que no esté aquí mientras le desvalijo la casa.~
+
+//#7858
+@40052 = ~Me temo que tendré poco tiempo para pasarlo en su compañía. Solamente tenía la intención de detenerme aquí un momento.~
+
+//#7844
+@40053 = ~Es de lo más emocionante para cualquier mediano encontrarse con gente con el espíritu del Pequeño hombre. Puede que seáis un... excéntrico por dejar la comodidad de un hogar bien provisto, pero estoy seguro de que vuestras escapadas son estimulantes... si os interesa este tipo de cosas. Por favor, volved cuando queráis.~
+~Es de lo más emocionante para cualquier mediano encontrarse con gente con el espíritu del Pequeño hombre. Puede que seáis una... excéntrica por dejar la comodidad de un hogar bien provisto, pero estoy seguro de que vuestras escapadas son estimulantes... si os interesa este tipo de cosas. Por favor, volved cuando queráis.~
+
+//#7845
+@40054 = ~Es una rareza entre muchos de nuestros jóvenes que vean la esencia del gran Pequeño hombre trotamundos en los hechos de gente como vos. Personalmente veo poco atrayente dejar el hogar. Quedaos el tiempo que queráis, pero no animéis demasiado a los niños.~
+
+//#7846
+@40055 = ~¡Mmmf! ¡Y no me gustará verlo expuesto a tal comportamiento! Es cierto que no pasáis mucho tiempo entre la gente pequeña. Nadie que conozca nuestro comportamiento sería tan rudo. Os invito a que volváis cuando aprendáis un poco de civismo.~
+
+//#7847
+@40056 = ~Una vergüenza, realmente. Sería bueno ver cómo una vida durmiendo en el frío suelo de una mazmorra hace a la gente irritable y poco sociable. Os compadezco por varios motivos. Quedaos el tiempo que queráis, pero al menos tratad de ser simpático.~
+~Una vergüenza, realmente. Sería bueno ver cómo una vida durmiendo en el frío suelo de una mazmorra hace a la gente irritable y poco sociable. Os compadezco por varios motivos. Quedaos el tiempo que queráis, pero al menos tratad de ser simpática.~
+
+//#7848
+@40057 = ~¡Dios mío! ¿Cómo podéis ser un ladrón tan descarado? Una intrusión como ésta no se conoce en la compañía que los medianos desean mantener. El hurto por sí mismo no es más que un mero inconveniente, pero vuestra actitud desconsiderada... ¡Es casi más de lo que una mujer cortés puede soportar! Por favor, dejadme.~
+~¡Dios mío! ¿Cómo podéis ser una ladrona tan descarada? Una intrusión como ésta no se conoce en la compañía que los medianos desean mantener. El hurto por sí mismo no es más que un mero inconveniente, pero vuestra actitud desconsiderada... ¡Es casi más de lo que una mujer cortés puede soportar! Por favor, dejadme.~
+
+//#7849
+@40058 = ~Tal es la fuerza del camino errante. Es un deseo del que todos hemos oído hablar a través de los cuentos del Pequeño hombre, aunque debo confesar que no lo comprendo bien. Es mucho más cómodo pasar las noches con la familia junto al hogar. Que os vaya bien en vuestros viajes.~
+
+//#7850
+@40059 = ~Así es la locura del Pequeño hombre. Lo que hace que la gente cuerda vague por el bosque lejos de la familia es algo que no puedo entender. Buena suerte de todas formas.~
+
+//#7851
+@40060 = ~Bienvenido de nuevo. Pensé que ya os habíais marchado. Me agrada ver que no es así.~
+
+//#7852
+@40061 = ~Qué sorpresa veros otra vez. ¿No os habrá vuelto a arrebatar el sentido común la llamada de los errantes, verdad? Por Dallillia, espero que ninguno de los niños os siga cuando os vayáis.~
+
+//#7860
+@40062 = ~Quizás no os importe quedaros un poco y contar algunas historias. Siempre me han gustado mucho las historias de héroes, aunque no me gustaría vivir ninguna.~
+
+//#9293
+@40063 = ~¡Habéis abusado de nuestra hospitalidad!~
+
+//#7810
+@40064 = ~Hola, hola, hola. Es la casa de Bunsen en la que habéis entrado, ¡sed bienvenido! Por favor, descansad vuestros menos que peludos pies en mi hogar.~
+
+//#7819
+@40065 = ~¿Sois siempre así de amable con todo extraño que entra en vuestra casa? Me parece un poco peligroso.~
+
+//#7821
+@40066 = ~Ahorraos vuestras sonrisas, pequeñajo. Tan sólo he venido a ver si tenéis algo que merezca la pena llevarse. Sois un estúpido al dejar vuestra madriguera abierta.~
+
+//#7823
+@40067 = ~Mis disculpas, pero la puerta estaba abierta y pensé que vuestra madriguera estaría deshabitada. No era mi intención irrumpir en vuestro hogar.~
+
+//#7811
+@40068 = ~Si hacéis esta pregunta es que lleváis un tiempo alejados de la gente pequeña. Es la mayor de las virtudes dar los placeres familiares a amigos a los que aún no hemos conocido. Podéis quedaros el tiempo que deseéis, en el espíritu de Cyrrolali y todo lo que ella representa.~
+
+//#7812
+@40069 = ~¡Qué modales! ¡Nadie en la historia de este pueblo me ha insultado de esta forma! Así como Cyrrolali exige hospitalidad, al menos se espera en correspondencia una pequeña muestra de agradecimiento. No sois bienvenido a mi madriguera y creo que os pasará lo mismo con mis vecinos si seguís comportándoos de esta forma.~
+~¡Qué modales! ¡Nadie en la historia de este pueblo me ha insultado de esta forma! Así como Cyrrolali exige hospitalidad, al menos se espera en correspondencia una pequeña muestra de agradecimiento. No sois bienvenida a mi madriguera y creo que os pasará lo mismo con mis vecinos si seguís comportándoos de esta forma.~
+
+//#7813
+@40070 = ~¿Abandonado? Creo que encontraréis que incluso si un propietario se alejara de su hogar durante años, amigos y vecinos mantendrían su casa caliente y preparada para su vuelta. Si un extraño sintiera la necesidad de usarla en ese tiempo, nadie protestaría. No es necesario que os disculpéis. Si mi casa parecía desierta, eso significa simplemente que debo esforzarme al máximo para presentar una cara amistosa de bienvenida. Cyrrolali no se conformaría con menos.~
+
+//#7814
+@40071 = ~Apuesto a que no encontraréis a ningún miembro de la gente pequeña que cierre las puertas a los visitantes, sean conocidos o no. Es una cortesía habitual dar la bienvenida al que llame, independientemente de su... comportamiento. Sois bienvenido para quedaros un rato si queréis... Pero es muy tarde.~
+~Apuesto a que no encontraréis a ningún miembro de la gente pequeña que cierre las puertas a los visitantes, sean conocidos o no. Es una cortesía habitual dar la bienvenida al que llame, independientemente de su... comportamiento. Sois bienvenida para quedaros un rato si queréis... Pero es muy tarde.~
+
+//#7815
+@40072 = ~Si tengo algo que necesitéis, no tenéis más que pedirlo. Los bienes materiales tienen poca importancia si se comparan con el valor de un hogar seguro. Sin embargo, con una presentación tan brusca lo único que conseguiréis son miradas hostiles. No os entretengáis mucho en mi casa. No sois bienvenidos.~
+
+//#7816
+@40073 = ~Cualquier insulto desde vuestra entrada lo perdona vuestra cortesía. La puerta siempre está abierta a gente amistosa, independientemente de su... parentela. Quedaos un rato si así lo deseáis.~
+
+//#7817
+@40074 = ~Hola de nuevo. Es un placer, lo mismo que antes.~
+
+//#7818
+@40075 = ~Ah, ¿conque habéis vuelto? Espero que no os quedéis más tiempo que la vez anterior.~
+
+//#7826
+@40076 = ~Bien amigo, ¿por qué no me acompañáis junto al hogar? Tengo otra pipa que podéis usar. Aunque tengo el presentimiento de que los aventureros como vos nunca tienen tiempo para relajarse.~
+~Bien amiga, ¿por qué no me acompañáis junto al hogar? Tengo otra pipa que podéis usar. Aunque tengo el presentimiento de que los aventureros como vos nunca tienen tiempo para relajarse.~
+
+//#9294
+@40077 = ~Sin ánimo de ser grosero, preferiría que me dejaseis inmediatamente.~
+
+//#15107
+@40078 = ~Hmm, prefiero no trabajar con aficionados.~
+
+//#15108
+@40079 = ~Hay un hombre gordo que se hace llamar Algernon hospedado en el mesón de Feldepost en Beregost. Lleva puesto un manto y está en su habitación; necesito que se lo robéis y me lo traigáis. Os aseguro que recibiréis una jugosa recompensa. Intentad no matarlo, sólo quitádselo de su cuerpo.~
+
+//#15742
+@40080 = ~Pheirkas, un luchador enano de Puerta de Baldur, me ha pedido que lleve a cabo lo que no puedo llamar sino una misión secreta. En el mesón de Feldepost en Beregost se hospeda, al parecer, el obeso Algernon. Lleva puesta una capa que Pheirkas está interesado en, digamos, adquirir... El riesgo no es pequeño, pero la recompensa estoy seguro de que será hermosa. Pheirkas se encuentra al noroeste de la ciudad.~
+
+//#15109
+@40081 = ~¿Traéis el manto de Algernon?~
+
+//#15110
+@40082 = ~Ah, muchas gracias. Tomad 150 piezas de oro por vuestro esfuerzo.~
+
+//#15111
+@40083 = ~Oh, me encanta el trabajo que habéis hecho. Tomad 200 piezas de oro por las molestias.~
+
+//#15112
+@40084 = ~¡Maldita sea! Esperaba que fuerais más del tipo pasivo-agresivo.~
+
+//#15113
+@40085 = ~¿Qué os parece mi nuevo manto?~
+
+//#9765
+@40086 = ~Hola, hola. Supongo que no os interesarán unas baratijas, ¿verdad? Un par de monedas por mercancías artesanales... No, supongo que no. La escasez de hierro está remitiendo, pero aun así los clientes todavía no vuelven, y no les culpo por ello. Están asustados porque ven que los mercaderes siguen sin mercancías. ¿Quién va a creer que la escasez ha terminado si aún no es posible encontrar espadas nuevas? Yo, como muchos otros, culpo al Trono de Hierro.~
+
+//#9766
+@40087 = ~¿De qué los culpáis? ¿Qué han hecho?~
+
+//#9768
+@40088 = ~No estoy sorprendido. Su parte en la escasez del hierro fue por pura villanía.~
+~No estoy sorprendida. Su parte en la escasez del hierro fue por pura villanía.~
+
+//#9769
+@40089 = ~¿Perdón? ¿Dónde habéis escuchado esas historias? Por lo que respecta a esta ciudad, el Trono de Hierro es un grupo mercantil respetable. Si decís cosas sin pruebas no llegaréis a ninguna parte.~
+
+//#9775
+@40090 = ~¿Qué queréis decir?~
+
+//#9776
+@40091 = ~He estado hablando de las acciones del Trono de Hierro desde que Sarevok tomó el control. No está interesado y parece dispuesto a sacrificarlo para volver a equipar con armas Puerta de Baldur. Por eso ha intentado convertirse en Gran Duque. La inestabilidad del Trono de Hierro ha prolongado la lucha en la ciudad y por eso los otros comerciantes le culpan. Ellos se dedicaban a la importación a gran escala y sin su ayuda llevará tiempo convencer a la gente de que las cosas van bien. Desde un punto de vista comercial, no tiene sentido que se comporten así, por eso creo que algo va mal en su cuartel general.~
+
+//#10104
+@40092 = ~La escasez de hierro disminuye, pero los mercaderes aún no tienen existencias. Es la inestabilidad del Trono de Hierro la que ha prolongado el conflicto en la ciudad y por eso les culpan otros mercaderes. Ellos eran los principales importadores, y sin su ayuda llevará mucho más tiempo convencer a la gente de que todo va bien. Desde que Sarevok ha asumido el control, han cesado la mayoría de sus transacciones comerciales y se han congelado la mayoría de sus activos. No parece importarle el hecho de que esté paralizando una gran casa comercial. Está desinteresado y parece dispuesto a sacrificarla para contribuir al rearme de Puerta de Baldur y, por ende, a su pugna por ser un Gran Duque. No puedo imaginar que hombres de negocio en su sano juicio sigan esas directivas. Ciertamente, hay algo muy extraño en el edificio del Trono de Hierro.~
+
+//#9779
+@40093 = ~Supongo que nada directo, aunque el impacto sigue siendo importante. Debido a que Sarevok ha tomado el poder, la mayoría de las transacciones comerciales han cesado y se han congelado los activos. Eran importadores a gran escala y sin su ayuda llevará más tiempo convencer a los ciudadanos de que la crisis ha terminado. Parece que Sarevok va a utilizar el Trono de Hierro para alimentar su postura beligerante contra Amn, lo que explica su intento de convertirse en Gran Duque. No parece importarle el hecho de estar paralizando uno de los grupos de mercaderes. No entiendo cómo cualquier comerciante en su sano juicio podría acatar ese tipo de órdenes. Sucede algo muy extraño en el edificio del Trono de Hierro.~
+
+//#3661
+@40094 = ~El comercio ha ido realmente mal, con todos esos conflictos con los bandidos a lo largo del Camino de la Costa.~
+
+//#15288
+@40095 = ~Mostradnos lo que tenéis para vender.~
+
+//#15289
+@40096 = ~No estamos interesados en comprar nada ahora.~
+
+//#3691
+@40097 = ~Soy un comerciante cabezota. Más vale que no os confundáis conmigo. ¡¡LO DIGO EN SERIO!! Cuando os digo un precio vos lo pagáis, nada de malditos regateos. ¡¡¡¿ME ENTENDÉIS?!!!~
+
+//#6297
+@40098 = ~He oído muchas cosas últimamente. Parece que el hierro apenas llega, con esos bandidos y el mineral defectuoso de las minas de Nashkel. Parece que se están cociendo conflictos entre Puerta de Baldur y Amn. No me sorprendería si estallara una guerra entre estos dos.~
+
+//#7082
+@40099 = ~Cuando hechizamos a un mercader, dijo vaguedades sobre la escasez de hierro, sobre bandidos y sobre la guerra.~
+
+//#9166
+@40100 = ~¡No me fiaría de vos ni muerto!~
+
+//#8323
+@40101 = ~Sabía que el Esturión era más barato que el Yelmo y la Capa, pero no pensaba que tuviese que compartir la habitación. Largaos, yo llegué primero.~
+
+//#8324
+@40102 = ~Compartiré la habitación con vos encantado. Adoro tener compañía.~
+
+//#9178
+@40103 = ~¡Os arrancaré las orejas si dais un paso más!~
+
+//#8348
+@40104 = ~¡Alejaos de mí, idiota! No me hace falta que metáis la nariz en mis asuntos.~
+
+//#8349
+@40105 = ~Dudo que consigáis nada de nadie con la conversación, mientras no cante la Señora. Si no vuelve esa voz va a haber algunos hombres de Aguas Profundas que no volverán a ser los mismos.~
+
+//#8350
+@40106 = ~¡Que hagan callar a ese condenado bardo antes de que le aplaste la nariz de una patada!~
+
+//#8351
+@40107 = ~Prefiero escuchar este condenado silencio que ha dejado la Señora que vuestros aullidos. No me hagáis volver a repetirlo.~
+
+//#8373
+@40108 = ~Eh, amigo, ¿por qué no nos pasamos por el Bajosótano y nos agenciamos un buen par de hembras? ¿Qué os parece?~
+~Eh, amiga, ¿por qué no nos pasamos por el Bajosótano y montamos una buena orgía? ¿Qué os parece?~
+
+//#8799
+@40109 = ~Aquí no hay nada de valor. Por favor, dejad mi casa como está.~
+
+//#8800
+@40110 = ~Los guardias harán que os vayáis. ¿Los llamo u os marcháis ya?~
+
+//#8801
+@40111 = ~¡Guardias! ¡Ladrones! ¡Asesinos!~
+
+//#8802
+@40112 = ~Apenas salgo de casa, así que no estoy muy enterado de lo que pasa en la ciudad. ¿Por qué no os lleváis esta pieza de oro y os divertís en la plaza del mercado? Allí se puede hacer de todo.~
+
+//#9173
+@40113 = ~¡Largaos! ¡Habéis abusado de nuestra hospitalidad!~
+
+//#8228
+@40114 = ~¡Ay, ay, sinvergonzón! Por mirar tendréis que pagar un poco más.~
+~¡Ay, ay, sinvergonzona! Por mirar tendréis que pagar un poco más.~
+
+//#9105
+@40115 = ~Insiste en llamarme "Britannia". Cualquier cosa vale para pasar la noche, supongo.~
+
+//#3520
+@40116 = ~Buenas. Lo siento pero no puedo ayudaros en este momento, tengo que acabar mis estudios.~
+
+//#3524
+@40117 = ~Quizás no me oísteis la primera vez, pero por favor, necesito privacidad. ¿Podríais marcharos, POR FAVOR?~
+
+//#6370
+@40118 = ~Tan sólo soy un humilde lector, hay poco que pueda deciros sobre el mundo a las afueras de Candelero.~
+
+//#9095
+@40119 = ~¡No diré ni una palabra después de lo que hicisteis!~
+
+//#14135
+@40120 = ~¡Idos con vuestros asuntos a otra parte! ¡No necesito nada de gente como vos!~
+
+//#14138
+@40121 = ~Los asuntos han ido un poco lentos en la "Puerta" últimamente. Qué bien ver caras nuevas en la ciudad.~
+
+//#14139
+@40122 = ~¿Pensáis que la "Puerta" está animada ahora? Es una ciudad fantasma comparada con lo que era antes de la escasez de hierro.~
+
+//#14140
+@40123 = ~Cualquier cosa que necesitéis, la encontraréis en Puerta de Baldur.~
+
+//#14141
+@40124 = ~¿Os había visto antes por aquí? Con los problemas que hay últimamente, no se ven demasiadas caras nuevas.~
+
+//#14142
+@40125 = ~Es una lástima que no hayáis podido ver Puerta de Baldur antes de que surgieran estos problemas. La actividad comercial era asombrosa.~
+
+//#7927
+@40126 = ~¡Por los dioses de la salud y del hogar, me alegro de volver a ver el Brazo Amigo! ¿Puede alguien imaginar una mejor visión que estas salas sagradas que aparecen ante uno, cuando se han tenido bandidos a las espaldas todo el camino desde Puerta de Baldur?~
+
+//#7936
+@40127 = ~Parecéis muy aliviado de haber llegado hasta aquí. ¿Cómo de traicionero fue vuestro viaje?~
+
+//#7938
+@40128 = ~¡Callad de una vez, desgraciado bravucón! ¡Me importa un comino el relato de vuestro viaje!~
+
+//#7940
+@40129 = ~¡Una cerveza para este fatigado viajero! Más vale que le pongamos algo en la boca si queremos que se calle algún día.~
+
+//#7928
+@40130 = ~¿Traicionero? ¿Traicionero, amigo mío? No habría sido más traicionero si se hubiera abierto la tierra bajo mis pies y vomitara todas las alimañas que infectan los Nueve Infiernos. Bandidos por todas partes y sin tener más que los pies, y qué rápido se movían, para protegerme. ¿El singular pensamiento que me mantuvo en el camino? Este faro brillando; este plano de alegría; esta sala sin precio... Llamadlo como queráis, pero el Brazo Amigo es como un hogar para mí. ¡Bentley! ¡Aguamiel en la casa para la buena noticia que traigo, amigo mío!~
+~¿Traicionero? ¿Traicionero, amiga mía? No habría sido más traicionero si se hubiera abierto la tierra bajo mis pies y vomitara todas las alimañas que infectan los Nueve Infiernos. Bandidos por todas partes y sin tener más que los pies, y qué rápido se movían, para protegerme. ¿El singular pensamiento que me mantuvo en el camino? Este faro brillando; este plano de alegría; esta sala sin precio... Llamadlo como queráis, pero el Brazo Amigo es como un hogar para mí. ¡Bentley! ¡Aguamiel en la casa para la buena noticia que traigo, amigo mío!~
+
+//#7944
+@40131 = ~En la misma Puerta de Baldur, un viajero fatigado nos ha dicho que es peligroso transitar por el Camino de la Costa. Los bandidos asaltan a todos los viajeros que caminen por ahí.~
+
+//#7929
+@40132 = ~¿Eh? ¿Cómo de traicionero? Tan traicionero que debo renunciar a mi habitual batallita sobre el viaje y hacer caso omiso de vos, amigo, o moriré de sed antes de llegar a la barra. ¡Cuidado con el norte si sois alérgicos a los bandidos! ¡Bentley! ¡Una botella del segundo vino más barato!~
+~¿Eh? ¿Cómo de traicionero? Tan traicionero que debo renunciar a mi habitual batallita sobre el viaje y hacer caso omiso de vos, amiga, o moriré de sed antes de llegar a la barra. ¡Cuidado con el norte si sois alérgicos a los bandidos! ¡Bentley! ¡Una botella del segundo vino más barato!~
+
+//#7930
+@40133 = ~Y tampoco, amigo mío, me importa vuestra opinión. Si no podéis compartir mi júbilo y regocijo, sentaos a un lado y os lo contaré. No os ofenderé, pero aseguraos de no ofenderme a mí.~
+~Y tampoco, amiga mía, me importa vuestra opinión. Si no podéis compartir mi júbilo y regocijo, sentaos a un lado y os lo contaré. No os ofenderé, pero aseguraos de no ofenderme a mí.~
+
+//#7931
+@40134 = ~¡Qué vergüenza! Un compañero viajero por el aspecto, pero por el sonido que hacéis haríais irritable el viaje. Mientras celebro que haya terminado, os preocupa lo que ocurrió. Quitaos el peso de encima y dormiréis mejor por la noche.~
+~¡Qué vergüenza! Una compañera viajera por el aspecto, pero por el sonido que hacéis haríais irritable el viaje. Mientras celebro que haya terminado, os preocupa lo que ocurrió. Quitaos el peso de encima y dormiréis mejor por la noche.~
+
+//#7932
+@40135 = ~Podría haber sido divertido si lo entregara alguien con mejor persuasión. Como se supone, estoy enfadado como si me hubieran insultado. Uno nunca debe pensar demasiado en estas cosas. Dejaré de pensar en vos, aunque dudo si podría pensar MÁS en cualquier caso. Que os vaya bien... en otro sitio.~
+
+//#7933
+@40136 = ~¡JA! Me conocéis bien y nunca nos hemos conocido. ¡No importa, porque somos amigos hasta la muerte! Eso jura Wade sin grandes distinciones. Lo mejor es que os mantengáis alejado de la ruta norte, a menos que una condición que termine con la amistad ocurra tarde o temprano.~
+
+//#7934
+@40137 = ~Y entonces le dije al tipo ¡hip! "pero si ésta es vuestra hermana, ¡hip! ¿dónde está mi MUJER?" ¡Agg! Oh, lo siento, ¿Os escupí? Ah... ¡Si ha vuelto mi amigo! Ya veis, aquí emborrachándome para armarme de valor y volver a la polvorienta senda. Puede que me quede un poco más, no lo sé; el cielo está despejado, pero mi cabeza está bastante "nublada".~
+~Y entonces le dije al tipo ¡hip! "pero si ésta es vuestra hermana, ¡hip! ¿dónde está mi MUJER?" ¡Agg! Oh, lo siento, ¿Os escupí? Ah... ¡Si ha vuelto mi amiga! Ya veis, aquí emborrachándome para armarme de valor y volver a la polvorienta senda. Puede que me quede un poco más, no lo sé; el cielo está despejado, pero mi cabeza está bastante "nublada".~
+
+//#7935
+@40138 = ~Vaya, vaya, que me aspen si no es el antipático, que ha regresado al país de los juerguistas. Espero que esta vez seáis más afable.~
+~Vaya, vaya, que me aspen si no es la antipática, que ha regresado al país de los juerguistas. Espero que esta vez seáis más afable.~
+
+//#7942
+@40139 = ~¡Buenos amigos! ¡Tomad una ronda a mi salud!~
+
+
+//#5096
+@40140 = ~¡Alto ahí! Necesito dinero y curación, así que si sabéis lo que os conviene, ¡más vale que me los deis!~
+
+//#5097
+@40141 = ~¡Debéis estar bromeando! Sois un gran trasgo, ¿por qué no habríamos de mataros?~
+
+//#5098
+@40142 = ~Tomad estas 25 piezas de oro.~
+
+//#5099 
+@40143 = ~¿Por qué habríamos de ayudaros?~
+
+//#5100
+@40144 = ~Buen trabajo, pero son pobres excusas para conservar la vida.~
+
+//#5101
+@40145 = ~Soy un miembro del Escalofrío, la banda de mercenarios. Si queréis tener a todos mis amigos encima, continuad haciendo que me enfade.~
+
+//#5102
+@40146 = ~¡De acuerdo, de acuerdo! Aquí tenéis las 25 piezas de oro, ahora dejadnos en paz.~
+
+//#5103
+@40147 = ~Bien... ahora mismo sólo hay uno de vosotros, así que aprovecharemos la oportunidad.~
+
+//#5104
+@40148 = ~¿Nos estáis amenazando? Creo que estáis confundido, bestia pestosa y degenerada. Antes de que acabemos con vuestra miserable vida deberíais de suplicar un poco y quizás darnos alguna información sobre los Garras Negras.~
+
+//#5105
+@40149 = ~Lamentaréis vuestra decisión.~
+
+//#5106
+@40150 = ~¡Esperad! Lo siento, no me matéis... Por favor. Os diré lo que sé sobre los Garras Negras.~
+
+//#5107
+@40151 = ~Adelante.~
+
+//#5108
+@40152 = ~Podéis callaros y largaros de aquí.~
+
+//#5109
+@40153 = ~Los Garras Negras son un grupo de mercenarios, parte de un grupo que ha estado asaltando las caravanas de mercancías. Me perdí en un asalto hace un par de días y algunos hombres de los Garras Negras me han estado siguiendo los pasos. Ahí tenéis, os he contado todo lo que queríais oír.~
+
+//#7013
+@40154 = ~Un gran trasgo nos dijo que trabajaba para una horda de mercenarios conocida como el Escalofrío, que ha estado asaltando el Camino de la Costa.~
+
+//#6259
+@40155 = ~Soy simplemente un miembro sin importancia del Escalofrío. El Escalofrío es un grupo de mercenarios que el Zhentarim ha contratado para interceptar el hierro que se transporta a través de la región.~
+
+//#7012
+@40156 = ~Un gran trasgo que hechizamos nos dijo que trabajaba para una banda de mercenarios conocida como el Escalofrío. Según él, el Escalofrío trabaja para los Zhents.~
+
+//#6260
+@40157 = ~¡Dejadme en paz!~
+
+
+/* Store fixes */
+
+//#15383
+@40158 = ~Bienvenido a mi tienda. Podéis mirar cuanto deseéis, pero intentad no romper nada.~
+
+//#15384
+@40159 = ~Procederé con el debido cuidado y atención. ¿Qué tenéis para ofrecerme?~
+
+//#15385
+@40160 = ~No tenéis por qué preocuparos por vuestra mercancía, ya me voy.~

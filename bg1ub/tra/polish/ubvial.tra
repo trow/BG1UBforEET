@@ -1,0 +1,56 @@
+/*BG2engine*/
+
+@0  = ~Wróci³eœ! Wygl¹da na to, ¿e nie pomyli³em siê co do twojej osoby. Co mo¿esz mi powiedzieæ o wydarzeniach, które mia³y miejsce w kopalni?~ 
+@1  = ~Wola³bym ci tego nie ujawniaæ.~
+@2  = ~Doprawdy, nie ma co mówiæ za wiele. Koboldy odnalaza³y drogê do kopalni i spowodowa³y spore zamieszanie. Nie musisz siê nimi wiêcej przejmowaæ.~ 
+@3  = ~Pó³-ork imieniem Mulahey zanieczyszcza³ jakimœ sposobem rudê ¿elaza, ale ju¿ jest trupem. ~
+@4  = ~Pó³-ork imieniem Mulahey zanieczyszcza³ rudê ¿elaza przy pomocy mineralnej trucizny. Mam tu próbkê.~ 
+@5  = ~Pó³-ork imieniem Mulahey zanieczyszcza³ rudê ¿elaza przy pomocy mineralnej trucizny. Mam tu próbkê ska¿onej rudy. ~
+@6  = ~Pó³-ork imieniem Mulahey zanieczyszcza³ rudê ¿elaza przy pomocy mineralnej trucizny. Badam tê sprawê.~
+@7  = ~Jak chcesz. Miasto dziêkuje ci z ca³ego serca. Jesteœmy zaszczyceni, ¿e mo¿emy wrêczyæ ci stosown¹ nagrodê. Proszê, weŸ te 900 sztuk z³ota za swe wysi³ki. Takie krocie powinny zadowoliæ ka¿dego. Raz jeszcze przyjmij nasze podziêkowania.~ 
+@8  = ~Rozumiem. Ciekawe, jak taka zorganizowana zgraja mog³a wy³oniæ siê niepostrze¿enie. Niemniej jednak, miasto dziêkuje ci z ca³ego serca. Jesteœmy zaszczyceni, ¿e mo¿emy wrêczyæ ci stosown¹ nagrodê. Proszê, weŸ te 900 sztuk z³ota za swe wysi³ki. Takie krocie powinny zadowoliæ ka¿dego. Raz jeszcze przyjmij nasze podziêkowania.~
+@9  = ~Zastanawiam siê, jakie motywy nim kierowa³y i w jaki sposób uda³o mu siê tak skutecznie skaziæ ¿elazo. Niemniej jednak, miasto dziêkuje ci z ca³ego serca. Jesteœmy zaszczyceni, ¿e mo¿emy wrêczyæ ci stosown¹ nagrodê. Proszê, weŸ te 900 sztuk z³ota za swe wysi³ki. Takie krocie powinny zadowoliæ ka¿dego. Raz jeszcze przyjmij nasze podziêkowania.~ 
+@10 = ~Co ty mówisz? M¹drze uczyni³eœ przynosz¹c próbkê. Obawiam siê jednak, ¿e nieufnoœæ wobec magii oznacza tylko jedno, ¿e nie posiadamy takich narzêdzi, aby zbadaæ tê truciznê, a nasza izolacja pogarsza tê sytuacjê. By³oby rozs¹dniej, jakbyœ zabra³ ten flakonik na pó³noc do Thalantyra z Beregostu, ni¿ zapuszcza³ siê na po³udnie w poszukiwaniu amnijskiego arcymaga.~
+@11 = ~Jeœli masz trochê tej ska¿onej rudy i skoro tu ju¿ jesteœ, mo¿e zabra³byœ j¹ do Taeroma Fuiruima. Nie w¹tpiê, ¿e wymyœli jakiœ sposób na obejœcie jej nietrwa³ych w³aœciwoœci.~
+@12 = ~Najlepiej, jak nie wspomnisz o tym nikomu. Stosunki miêdzy Wrotami Baldura i Amn, s¹ mówi¹c delikatnie napiête. Byæ mo¿e, ¿e nie powinienem wysy³aæ czegoœ tak cennego poza Amn.~ 
+@13 = ~Bez wzglêdu na wszystko, miasto dziêkuje ci z ca³ego serca. Jesteœmy zaszczyceni, ¿e mo¿emy wrêczyæ ci stosown¹ nagrodê. Proszê, weŸ te 900 sztuk z³ota za swe wysi³ki. Takie krocie powinny zadowoliæ ka¿dego. Raz jeszcze przyjmij nasze podziêkowania.~
+@14 = ~Co ty mówisz? M¹drze uczyni³eœ przynosz¹c próbkê. Mo¿e zabra³byœ j¹ do Taeroma Fuiruima z Beregostu. Nie w¹tpiê, ¿e wymyœli jakiœ sposób na obejœcie jej nietrwa³ych w³aœciwoœci. Poza tym znacznie bli¿ej ci do niego, ni¿ do któregoœ ze s³awnych amnijskich kowali.~ 
+@15 = ~Cieszê siê s³ysz¹c to. Zastanawiam siê, jakie motywy nim kierowa³y. Niemniej jednak, miasto dziêkuje ci z ca³ego serca. Jesteœmy zaszczyceni, ¿e mo¿emy wrêczyæ ci stosown¹ nagrodê. Proszê, weŸ te 900 sztuk z³ota za swe wysi³ki. Takie krocie powinny zadowoliæ ka¿dego. Raz jeszcze przyjmij nasze podziêkowania.~
+@16 = ~Mniejsza o to. Mam tu kawa³ek rudy ¿elaza, która jak podejrzewam jest ska¿ona. To ona jest przyczyn¹ kryzysu z ¿elazem wzd³u¿ Wybrze¿a Mieczy. ~
+@17 = ~Mam tu kawa³ek rudy ¿elaza, która jak podejrzewam jest ska¿ona. To ona jest przyczyn¹ kryzysu z ¿elazem wzd³u¿ Wybrze¿a Mieczy.~
+@18 = ~Czekam na widoczne efekty.~ 
+@19 = ~Podaj j¹. Hmm. Zaiste dziwne. ¯elazo najpewniej zosta³o ska¿one jak¹œ mikstur¹. Przypuszczam, ¿e nie wpad³eœ na jej trop, pewnie nie wiesz te¿, co zawiera?~
+@20 = ~W³aœciwie to tak. Mam tu flakonik, który znalaz³em w tej samej kopalni co i rudê.~ 
+@21 = ~Nie, ale jeœli to pomo¿e, to postaram siê j¹ znaleŸæ.~ 
+@22 = ~Niestety, nie. A samemu nie dasz rady coœ wymyœliæ z t¹ rud¹?~
+@23 = ~Ach, wybornie. Zbadanie jej wykracza poza moje zdolnoœci. Zabierz j¹ do Thalantyra; nie powinien mieæ on k³opotów z rozpoznaniem sk³adu. W miêdzyczasie zobaczê, czy uda mi siê zneutralizowaæ w³aœciwoœci rudy. Mo¿e zdo³am ograniczyæ skutki mikstury.~ 
+@24 = ~Da³em ju¿ próbkê Thalantyrowi. Zgodzi³ siê j¹ zbadaæ.~
+@25 = ~Taerom Fuiruim bada ska¿on¹ rudê, któr¹ wydoby³em z kopalni Nashkel. Wierzy, ¿e w wyniku tego zdo³a wytworzyæ bardziej trwa³e ¿elazo.~
+@26 = ~Tylko tyle mogê zrobiæ. Je¿eli uda ci siê znaleŸæ próbkê trucizny, zabierz j¹ do Thalantyra; nie powinien mieæ on k³opotów z rozpoznaniem sk³adu. W miêdzyczasie zobaczê, czy uda mi siê zneutralizowaæ w³aœciowœci rudy. Mo¿e zdo³am ograniczyæ skutki mikstury.~
+@27 = ~Potem skontaktujê siê z nim i zobaczê, co odkry³. Masz moje podziêkowania za to, ¿e zwróci³eœ siê z tym do mnie .~
+@28 = ~Berrun Ghastkill podsuna³ myœl, ¿e mo¿e zainteresuje ciê zbadanie tego flakoniku. Tê oto truciznê wykorzystano do ska¿enia rudy z kopalni Nashkel, wywo³uj¹c problemy z ¿elazem wzd³u¿ Wybrze¿a Mieczy.~
+@29 = ~Taerom Fuiruim podsun¹³ myœl, ¿e mo¿e zainteresuje ciê zbadanie tego flakoniku. Tê oto truciznê wykorzystano do ska¿enia rudy z kopalni Nashkel, wywo³uj¹c problemy z ¿elazem wzd³u¿ Wybrze¿a Mieczy.~
+@30 = ~Niezwyk³a mikstura. Tylko wprawny alchemik móg³ j¹ sporz¹dziæ. Mo¿e uda mi siê opracowaæ antidotum i uratowaæ obecne zapasy ¿elaza, choæ w¹tpiê by wysztarczy³o to do za¿egnania kryzysu. Zostaw mi j¹, a jeœli mi siê powiedzie skontaktujê siê z Taeromem. ~
+@31 = ~Pokaza³em Thalantyrowi flakonik mineralnej trucizny z kopalni Nashkel. Zgodzi³ siê j¹ zbadaæ, spróbuje te¿ stworzyæ antidotum. Mam nadziejê, ¿e wp³ynie to pozytywnie na kryzys z ¿elazem, choæ nie mo¿emy te¿ zbyt wiele oczekiwaæ.~
+
+@32 = ~Ska¿ona ruda
+
+Berrun Ghastkill chce bym przyniós³ fiolkê dziwnej mikstury, któr¹ zdoby³em w Kopalniach Nashkel do Thalantyra w Wysokim ¯ywop³ocie. Ten potê¿ny czarodziej mo¿e bêdzie w stanie j¹ przeanalizowaæ. Równie¿ w przypadku znalezienia kolejnych kawa³ków ska¿onej rudy powinienem zanieœæ je do Taeroma Fuiruima.~ ~Ska¿ona ruda
+
+Berrun Ghastkill chce bym przynios³a fiolkê dziwnej mikstury, któr¹ zdoby³am w Kopalniach Nashkel do Thalantyra w Wysokim ¯ywop³ocie. Ten potê¿ny czarodziej mo¿e bêdzie w stanie j¹ przeanalizowaæ. Równie¿ w przypadku znalezienia kolejnych kawa³ków ska¿onej rudy powinnam zanieœæ je do Taeroma Fuiruima.~
+
+@33 = ~Ska¿ona ruda
+
+Berrun Ghastkill chce bym przyniósl ska¿on¹ rudê, któr¹ zdoby³em w Kopalniach Nashkel do Taeroma Fuiruima w Beregoœcie. Mo¿liwe, ¿e dobrze wyszkolony kowal mo¿e pomóc z tym problemem.~ ~Ska¿ona ruda
+
+Berrun Ghastkill chce bym przynios³a ska¿on¹ rudê, któr¹ zdoby³am w Kopalniach Nashkel do Taeroma Fuiruima w Beregoœcie. Mo¿liwe, ¿e dobrze wyszkolony kowal mo¿e pomóc z tym problemem.~
+
+//@25 with header:
+@34 = ~Ska¿ona ruda
+
+Taerom Fuiruim bada ska¿on¹ rudê, któr¹ wydoby³em z kopalni Nashkel. Wierzy, ¿e w wyniku tego zdo³a wytworzyæ bardziej trwa³e ¿elazo.~
+
+//@31 with header:
+@35 = ~Ska¿ona ruda
+
+Pokaza³em Thalantyrowi flakonik mineralnej trucizny z kopalni Nashkel. Zgodzi³ siê j¹ zbadaæ, spróbuje te¿ stworzyæ antidotum. Mam nadziejê, ¿e wp³ynie to pozytywnie na kryzys z ¿elazem, choæ nie mo¿emy te¿ zbyt wiele oczekiwaæ.~

@@ -1,0 +1,1510 @@
+/*BG2engine*/
+
+
+//Imported dialogue text for BGT/Tutu
+//#17578
+@10000 = ~Edie~ 
+
+//#11166
+@10001 = ~Jak siê nie odczepisz, mój but wyl¹duje na twoim zadku!~ [%tutu_var%WOMLC02]
+@10002 = ~~ [%tutu_var%FTOWN05] 
+@10003 = ~~ [%tutu_var%WOMLC03]
+
+//#19704
+@10004 = ~Enna Hendrik~ 
+
+//#4902
+@10005 = ~Mój kochaœ nie lubi, jak gadam z obcymi.~ [%tutu_var%FTOWN02]
+
+//#13309
+@10006 = ~Nie jesteœcie tu mile widziani!~
+
+//#19706
+@10007 = ~Erlin Hendrik~ 
+
+//#4908
+@10008 = ~Ino ni mom czasu, by z tobom gadoæ.~ [%tutu_var%FARME01]
+@10009 = ~~ [%tutu_var%FARME05] 
+@10010 = ~~ [%tutu_var%FARME06]
+
+//#8959
+@10011 = ~Precz mi z oczu! Nie macie tu czego szukaæ!~
+
+//#20245
+@10012 = ~Feldane~ 
+
+//#4983
+@10013 = ~Nasz ksiêgozbiór to dla mêdrca ocean wiedzy.~ [%tutu_var%READR01]
+@10014 = ~~ [%tutu_var%READR05] 
+@10015 = ~~ [%tutu_var%READR06]
+
+
+//#4984
+@10016 = ~Zechciejcie wybaczyæ, ale spóŸniê siê na zajêcia.~ [%tutu_var%READR02]
+
+//#12238
+@10017 = ~Galkin~
+
+//#4762
+@10018 = ~Czy nikt nie przyjmie mojej oferty? Ba! Co z was za mê¿czyŸni?~ [%tutu_var%GALKN01] 
+@10019 = ~~ [%tutu_var%GALKN03]
+@10020 = ~~ [%tutu_var%GALKN04]
+
+//#4763 
+@10021 = ~Uch... Czyrak na lewej nodze okropnie mi dolega... i... muszê zap³aciæ ober¿yœcie, bo z miejsca mnie skwituje!~ [%tutu_var%GALKN02]
+
+//#9406 
+@10022 = ~Dziewczynka~
+
+//#4861
+@10023 = ~Zgubi³am lalkê.~ [%tutu_var%FCHIL01] 
+@10024 = ~~ [%tutu_var%FCHIL05]
+@10025 = ~~ [%tutu_var%FCHIL06]
+
+//#8944
+@10026 = ~Zostawcie mnie sam¹! Jesteœcie podli!~
+
+//#13840
+@10027 = ~Nizio³ek kobieta~
+
+//#11238
+@10028 = ~Ooo, piêkny to dzionek na poznanie nowych przyjació³.~ [%tutu_var%HALFF01]
+@10029 = ~~ [%tutu_var%HALFF05]
+@10030 = ~~ [%tutu_var%HALFF06]
+
+//#13343
+@10031 = ~Nadu¿y³eœ naszej goœcinnoœci!~
+
+//#13344
+@10032 = ~Witajcie ponownie. Myœla³am, ¿e jesteœcie daleko st¹d. Mi³o jednak, ¿e tak nie jest.~
+
+//#13345
+@10033 = ~Dziwie siê, ¿e was znowu tu widzê. Czy znowu zew przygody odebra³ wam rozum? Na Dallilliê, mam nadziejê, ¿e ¿adne z dzieci nie pójdzie z wami.~
+
+//#13839
+@10034 = ~Nizio³ek mê¿czyzna~
+
+//#4926
+@10035 = ~Pokazuj¹ siê tu ró¿niste niesamowitoœci.~ [%tutu_var%HALFL03]
+@10036 = ~~ [%tutu_var%HALFL05]
+@10037 = ~~ [%tutu_var%HALFL06]
+
+//#8954
+@10038 = ~Nie chcia³bym byæ nieuprzejmy, ale wola³bym, byœcie natychmiast sobie poszli.~
+
+//#13347
+@10039 = ~Witajcie ponownie. Cieszê siê, ¿e was znowu widzê.~
+
+//#13348
+@10040 = ~Widzê, ¿e wróciliœcie. Ufam, ¿e nie zostaniecie tu d³u¿ej ni¿ poprzednim razem?~
+
+//#12310
+@10041 = ~Elminster~
+
+//#9431
+@10042 = ~Napotkana osoba~
+
+//#11093
+@10043 = ~Ej, stary!~ [%tutu_var%GENMG13]
+@10044 = ~~ [%tutu_var%VILLM05]
+@10045 = ~~ [%tutu_var%MTOWN06]
+
+//#8950
+@10046 = ~Po tym, co zrobiliœcie, nie powiem ani s³owa!~
+
+//#20602
+@10047 = ~Czo³em.~ [%tutu_var%GENMG15]
+
+//#9359
+@10048 = ~Ogrillon~
+
+//#5163
+@10049 = ~Czas na ma³¹ rzeŸ!~ [%tutu_var%OGRIL03]
+
+//#5164
+@10050 = ~Zdychajcie, kwiczo³ki!~ [%tutu_var%OGRIL04]
+@10051 = ~~ [%tutu_var%OGRIL05]
+@10052 = ~~ [%tutu_var%OGRIL06]
+@10053 = ~~ [%tutu_var%OGRIL08]
+@10054 = ~~ [%tutu_var%OGRIL09]
+
+//#5161
+@10055 = ~Przeszkadzacie mnie, przeszkadzacie sobie.~ [%tutu_var%OGRIL01]
+
+//#5162
+@10056 = ~Wszystkie chopy wybieraj¹ mnie, bo mam 2 metry wzrostu!~ [%tutu_var%OGRIL02]
+
+//#9356
+@10057 = ~Pó³ogr~
+
+//#5158
+@10058 = ~Ja wœciek³y!~ [%tutu_var%HOGRE03]
+
+//#5159
+@10059 = ~Ja zabiæ tych, co mnie wœciekaæ!~ [%tutu_var%HOGRE04]
+@10060 = ~~ [%tutu_var%HOGRE08]
+@10061 = ~~ [%tutu_var%HOGRE09]
+
+//#5155
+@10062 = ~Ja g³odny.~ [%tutu_var%HOGRE01]
+
+//#5156
+@10063 = ~Buuuurp. Ha, ha...~ [%tutu_var%HOGRE02]
+
+//#9412
+@10064 = ~Czytacz~
+
+//#8753
+@10065 = ~Tasloi~
+@10066 = ~~ [%tutu_var%TASLO03]
+@10067 = ~~ [%tutu_var%TASLO04]
+@10068 = ~~ [%tutu_var%TASLO05]
+@10069 = ~~ [%tutu_var%TASLO06]
+@10070 = ~~ [%tutu_var%TASLO08]
+@10071 = ~~ [%tutu_var%TASLO09]
+@10072 = ~~ [%tutu_var%TASLO00] //non-existent
+@10073 = ~~ [%tutu_var%TASLO01]
+@10074 = ~~ [%tutu_var%TASLO02]
+
+//#9495
+@10075 = ~Podró¿ny~
+
+//#12884
+@10076 = ~Dziewka z³u¿ebna~
+
+//#4786
+@10077 = ~Czy coœ podaæ? Imæ Volo by³ tu niedawno.~ [%tutu_var%WENCH01]
+@10078 = ~~ [%tutu_var%WENCH03]
+@10079 = ~~ [%tutu_var%WENCH04]
+
+//#4787
+@10080 = ~W³aœciwie jestem pisark¹. Obs³ugujê goœci, by op³aciæ rachunki.~ [%tutu_var%WENCH02]
+
+//#12761
+@10081 = ~Wilton~
+
+//#4821
+@10082 = ~Zatrzymajcie siê chwilkê, paniczu, bom s³ysza³, coœcie zrobili dla starego Bruna.~ [%tutu_var%WILTN01]
+@10083 = ~~ [%tutu_var%WILTN03]
+@10084 = ~~ [%tutu_var%WILTN04]
+
+//#4822
+@10085 = ~Nie³atwo dziœ o przyzwoitych ludzi.~ [%tutu_var%WILTN02]
+
+//#9036
+@10086 = ~Zostaw mnie. Nie mam nic dla was.~
+
+//#13679
+@10087 = ~Przepraszam, ale mam mnóstwo pracy do zrobienia!~
+
+//#23935
+@10088 = ~Ooo, nowa twarz w mieœcie, co?~ [%tutu_var%TSCFT01]
+
+//#13649
+@10089 = ~Nic ode mnie nie dostaniesz!~
+
+//#23936
+@10090 = ~Chcesz coœ powiedzieæ? W takim razie mów.~ [%tutu_var%TSCFT02]
+@10091 = ~~ [%tutu_var%WOMCO03]
+@10092 = ~~ [%tutu_var%WOMCO04]
+
+//#21974
+@10093 = ~Meym~
+
+//#11081
+@10094 = ~Chcesz czegoœ, przybyszu?~ [%tutu_var%GENMG04]
+@10095 = ~~ [%tutu_var%MINER05]
+@10096 = ~~ [%tutu_var%MINER06]
+
+//#23929
+@10097 = ~No no, witajcie m³odzi.~ [%tutu_var%TSCMT02]
+@10098 = ~~ [%tutu_var%VILLM06]
+
+//#23930
+@10099 = ~Nie wygl¹dacie na tutejszych.~ [%tutu_var%TSCMT03]
+
+//#15975
+@10100 = ~Ogr~
+
+//#5148
+@10101 = ~Ja zgnieœæ, zgnieœæ na miazga!~ [%tutu_var%OGREE03]
+
+//#5149
+@10102 = ~Ja zmia¿d¿yæ twoja pysk!~ [%tutu_var%OGREE04]
+@10103 = ~~ [%tutu_var%OGREE08]
+@10104 = ~~ [%tutu_var%OGREE09]
+
+//#5147
+@10105 = ~Ja zgnieœæ.~ [%tutu_var%OGREE01]
+@10106 = ~~ [%tutu_var%OGREE02]
+
+//#10006
+@10107 = ~Zakapturzony czarodziej~
+
+//#11079
+@10108 = ~Hmm?~ [%tutu_var%GENMG03]
+@10109 = ~~ [%tutu_var%RAMAZ03]
+@10110 = ~~ [%tutu_var%RAMAZ04]
+
+//#6315
+@10111 = ~Ghul~
+@10112 = ~~ [%tutu_var%GHOUL03]
+@10113 = ~~ [%tutu_var%GHOUL04]
+@10114 = ~~ [%tutu_var%GHOUL05]
+@10115 = ~~ [%tutu_var%GHOUL06]
+@10116 = ~~ [%tutu_var%GHOUL08]
+@10117 = ~~ [%tutu_var%GHOUL09]
+@10118 = ~~ [%tutu_var%GHOUL01]
+
+//#5142
+@10119 = ~Mmmmm, moja lubi cia³ko, hi hi...~ [%tutu_var%GHOUL02]
+
+//#13712
+@10120 = ~Ptak~
+@10121 = ~~ [%tutu_scripta%MB_E05D]
+@10122 = ~~ [%tutu_scripta%MB_E05E]
+@10123 = ~~ [%tutu_scripta%MB_E05F]
+@10124 = ~~ [%tutu_scripta%MB_E05G]
+@10125 = ~~ [%tutu_scripta%MB_E05H]
+
+//#13841
+@10126 = ~Przywódca nizio³ków~
+
+//#4925
+@10127 = ~Obcy jesteœ - nie powinieneœ ³aziæ, gdzie ciê nie prosz¹.~ [%tutu_var%HALFL02]
+@10128 = ~~ [%tutu_var%FTOWN06]
+
+//#12245
+@10129 = ~Entar Srebrna Tarcza~
+
+//#4705
+@10130 = ~Kim¿e s¹ intruzi w moim domu?~ [%tutu_var%ENTAR01]
+
+//#12421
+@10131 = ~Mon Dieu!~ [%tutu_var%ENTAR03]
+@10132 = ~~ [%tutu_var%ENTAR04]
+
+//#4706
+@10133 = ~Mam nadziejê, ¿e mojej córce, Skie, nic siê nie sta³o.~ [%tutu_var%ENTAR02]
+
+//#8983
+@10134 = ~Moje drzwi nie stoj¹ ju¿ otworem dla takich jak wy!~
+
+//#9857
+@10135 = ~Herschel~
+
+//#4874
+@10136 = ~Nie ma czasu na pogaduszki.~ [%tutu_var%NOBLE02]
+@10137 = ~~ [%tutu_var%NOBLE05]
+@10138 = ~~ [%tutu_var%NOBLE06]
+
+//#4875
+@10139 = ~Precz st¹d, ¿ebraku.~ [%tutu_var%NOBLE03]
+
+//#4874
+@10140 = ~Nie ma czasu na pogaduszki.~ [%tutu_var%NOBLE02]
+
+//#4873
+@10141 = ~W obecnoœci lepszych od siebie trzeba milczeæ i odpowiadaæ jedynie wtedy, gdy poprosz¹.~ [%tutu_var%NOBLE01]
+
+//#4876
+@10142 = ~Nie dotykaj mnie! Jeszcze siê czymœ zara¿ê!~ [%tutu_var%NOBLE04]
+
+//#8909
+@10143 = ~Nie zbli¿ajcie siê! Za³atwiê was, s³owo dajê!~
+
+//#9432
+@10144 = ~Kupiec~
+
+//#4959
+@10145 = ~Mam najlepsze ceny po tej stronie Cormyru.~ [%tutu_var%MERCH01]
+@10146 = ~~ [%tutu_var%MERCH05]
+@10147 = ~~ [%tutu_var%MERCH06]
+
+//#4959
+@10148 = ~Mam najlepsze ceny po tej stronie Cormyru.~ [%tutu_var%MERCH01]
+
+//#4960
+@10149 = ~Wszystko, co mam jest autentyczne... Naprawdê autentyczne.~ [%tutu_var%MERCH02]
+
+//#4961
+@10150 = ~Ci przeklêci bandyci paskudnie wp³ywaj¹ na interes.~ [%tutu_var%MERCH03]
+
+//#4962
+@10151 = ~Kocham pieni¹¿ki, o tak, kocham!~ [%tutu_var%MERCH04]
+
+//#8930
+@10152 = ~Nie mam do was ani krzty zaufania!~
+
+//#12884
+@10153 = ~Dziewka s³u¿ebna~
+
+//#4866
+@10154 = ~No... taki ROS£Y z ciebie ch³op.~ [%tutu_var%SWENC02]
+@10155 = ~~ [%tutu_var%SWENC05]
+@10156 = ~~ [%tutu_var%SWENC06]
+
+//#4865
+@10157 = ~Ma³y napiwek zawsze jest mile widziany.~ [%tutu_var%SWENC01]
+
+//#9086
+@10158 = ~Wynoœcie siê st¹d! Szlacheckie nasienie!~
+
+//#13607
+@10159 = ~Dotknij mnie tylko swoj¹ ³ap¹, a przysiêgam, ¿e j¹ stracisz. Zamawia siê przy barze.~
+@10160 = ~~ [%tutu_var%SWENC04]
+
+//#12894
+@10161 = ~Szynkarz~
+
+//#4944
+@10162 = ~Chcecie whisky?~ [%tutu_var%BARTN01]
+@10163 = ~~ [%tutu_var%BARTN05]
+@10164 = ~~ [%tutu_var%BARTN06]
+
+//#4945
+@10165 = ~Mam tanie piwo.~ [%tutu_var%BARTN02]
+
+//#4946
+@10166 = ~Muszê przestaæ ¿³opaæ w³asne trunki...~ [%tutu_var%BARTN03]
+
+//#4947
+@10167 = ~Wiecie... Mam kilka mi³ych dziewek s³u¿ebnych...~ [%tutu_var%BARTN04]
+
+//#4862
+@10168 = ~£aaaaaaaaaa!~ [%tutu_var%FCHIL02]
+@10169 = ~~ [%tutu_scripta%MB_M34A]
+
+//#22786
+@10170 = ~'Korzeñ cierpienia'
+Wieœæ niesie, i¿ ta magiczna maczuga istnieje od czasów upadku Netherilu i narodzin wielkiej pustyni Anauroch. Jakkolwiek cywilizacja zap³aci³a wtedy wielk¹ cenê, prawdziwymi ofiarami kataklizmu by³y istoty, ¿yj¹ce w zgodzie z natur¹, skazane na bezsilne przygl¹danie siê jak ich domy niszcza³y i umiera³y. Te z nich, które pozosta³y, czepiaj¹c siê resztek swego naturalnego œrodowiska, pada³y ofiar¹ hord innych, pozbawionych domu stworów, z których najbardziej okrutne wkracza³y na nieska¿one jeszcze obszary, zabieraj¹c wszystko, co im wpad³o w ³apy. Powiada siê, ¿e ta broñ zosta³a wykonana z drzewa driady i by³a ostatnim podarunkiem dla sprawy Natury od leœnej tancerki, która nie potrafi³a powstrzymaæ najeŸdŸców na swój dom. Cierpia³a i radowa³a siê jednoczeœnie, gdy¿ jej las nie cierpia³ by tak bardzo, gdyby nie by³ silny i bujny. W póŸniejszych czasach jacyœ niezbyt delikatni badacze nadali tej broñ nieco dwuznaczn¹ nazwê, jednak zawarta w niej ironia nie jest doceniana przez zaprzysiêg³ych wyznawców praw Natury.
+
+PARAMETRY:
+
+Obra¿enia: 1K6 +1, +3 przeciw istotom nienaturalnym, +1 pkt. obra¿eñ od kwasu
+TraK0: +1, +3 przeciw istotom nienaturalnym
+Typ obra¿eñ: obuchowe
+Waga: 3
+OpóŸnienie: 3
+Rodzaj bieg³oœci: maczuga
+Typ broni: 1-rêczna
+Wymagana si³a: 5
+Nie mo¿e u¿ywaæ:
+ Mag~
+
+//#7149
+@10171 = ~Ksiêga~
+
+//#7414
+@10172 = ~Mieszkañcy Gullykin nie lubi¹, gdy ktoœ kradnie rzeczy, na które pracowali w pocie czo³a. Poddajcie siê, z³odzieje!~
+
+//#7416
+@10173 = ~Daj¿e pokój, ma³y, pozwól nam spróbowaæ raz jeszcze. A gdybym da³ ci te 100 sztuk z³ota?~
+
+//#7417
+@10174 = ~Czy 200 sztuk z³ota zmieni³oby twoje spojrzenie na sytuacjê?~
+
+//#7418
+@10175 = ~Jak gdybyœcie mogli nas pokonaæ, kurduple. ChodŸcie i poka¿cie, co jesteœcie warci!~
+
+//#7415
+@10176 = ~Macie pecha, nie przyjmujemy ³apówek.~
+
+//#7419
+@10177 = ~Szukacie przygód, wiêc na pewno zainteresujecie siê ruinami mostu Firewine. Mówi¹, ¿e ukryto tam skarb, ale teraz strze¿e go plemiê koboldów. By³oby dobrze, gdyby ruiny da³o siê oczyœciæ z tych stworów. Ostatnio zaczê³y sprawiaæ masê k³opotów.~
+
+//#4924
+@10178 = ~Paskudne czasy id¹.~ [%tutu_var%HALFL01]
+
+//#9408
+@10179 = ~Sklepikarz~
+
+//#4881 
+@10180 = ~Witajcie w moim sklepiku~ [%tutu_var%STORE01]
+
+//#12558
+@10181 = ~~ [%tutu_var%STORE05]
+
+//#12559
+@10182 = ~~ [%tutu_var%STORE06]
+
+//#4882
+@10183 = ~Sprawy id¹ doœæ kiepsko, a jeszcze te problemy z ¿elazem... I w ogóle...~ [%tutu_var%STORE02]
+
+//#4883
+@10184 = ~Klient ma zawsze racjê.~ [%tutu_var%STORE03]
+
+//#4884
+@10185 = ~Moje ceny s¹ najni¿sze na po³udnie od Waterdeep.~ [%tutu_var%STORE04]
+
+//vial/ubvial.d
+//#19438
+@20000 = ~Oczyœciliœmy kopalnie Nashkel i zostaliœmy za to sowicie wynagrodzeni. Otrzymaliœmy 900 sztuk z³ota od Berruna Ghastkilla oraz podziêkê za pomoc w imieniu wszystkich mieszkañców. ¯elazo bêdzie teraz powoli dostarczane wszystkim potrzebuj¹cym, chocia¿ transport nadal nie jest ³atw¹ spraw¹. Bandyci na pewno nie przepuszcz¹ takiej okazji.~
+
+//#5837
+@20001 = ~Taerom robi dla mnie zbrojê p³ytow¹ z pancerza anghkega. Bêdzie gotowa za 10 dni.~
+
+//#187
+@20165 = ~Jeszcze nie skoñczy³em. Mo¿e za dzieñ lub dwa. B¹dŸcie cierpliwi. Jakoœæ nie cierpi poœpiechu.~
+
+//#15267
+@20166 = ~Móg³byœ pokazaæ nam co masz na sprzeda¿?~
+
+//kagain/rKAGAIJ.d
+//#16782
+@20002 = ~Hmm, patrzcie co znalaz³em. To cia³o syna Srebrnej Tarczy. Obawiam siê, ¿e bêdê mia³ k³opoty. On nie ¿yje, wiêc to mnie bêd¹ chcieli skróciæ o g³owê. Z tego co widzê, wszyscy tropicie tych parszywych bandytów. Poniewa¿ i tak jestem skoñczony, mo¿e pomogê wam zemœciæ siê na tej bandzie ³otrów.~
+
+//#16783
+@20003 = ~Ju¿ ciê nie chcemy... idŸ swoj¹ drog¹!~
+
+//#7045
+@20004 = ~Syn Entara Srebrnej Tarczy zosta³ zabity.~
+
+//#16784
+@20005 = ~Pewnie, przydadz¹ nam siê twoje umiejêtnoœci.~
+
+//albert/_ALBERT.d
+//#6500
+@20006 = ~RUFIE!! Co siê sta³o, Rufie? Ciiiicho, mój kochany piesku! Serdeczne dziêki! Chyba lepiej bêdzie, je¿eli zabiorê go do domu. Macie, weŸcie to. To nastêpna zabawka do gryzienia, ale nam nie s¹ potrzebne - tam, gdzie idziemy, dostaniemy inne. Jeszcze raz dziêki.~
+
+//#6509
+@20007 = ~Uda³o mi siê... hmm... ocaliæ "malutkiego" Rufie i zwróciæ go... ch³opcu... o imieniu Albert. Nie mam ochoty dowiadywaæ siê, gdzie oni póŸniej odeszli. Przy odrobinie szczêœcia nigdy siê nie dowiem.~
+
+//scar/ubscar.d
+//#10649
+@20008 = ~Scar czeka niedaleko baraków P³omiennej Piêœci. Chce porozmawiaæ o podejrzeniach, jakie ¿ywi wzglêdem ¯elaznego Tronu.~
+
+//quoningar/ubquon.d
+//#15528
+@20009 = ~Nie przeszkadzaj œwiêtym w rozmyœlaniach.~
+
+//#15532
+@20010 = ~To trudne dla mnie prowadziæ rozmyœlania w zgie³ku tego miasta. Czy móg³bym zyskaæ wasz¹ pomoc w pozyskaniu mikstury skupienia?~
+
+//#15809
+@20011 = ~Kap³an Quoningar, najwyraŸniej równie nieprzyzwyczajony do miejskiego gwaru co ja, poszukuje mikstury skupienia. Bez niej, chyba nigdy nie skoñczy swoich medytacji...~
+
+//#15538
+@20012 = ~Dopóki nie macie mikstury skupienia, muszê wracaæ do mych rozmyœlañ.~
+
+//#15539
+@20013 = ~Cieszê siê, ¿e znaj¹c brutalne oblicze tego miasta, mogê znaleŸæ ludzi takich jak wy, którzy przywracaj¹ mi wiarê w dobro. Mo¿ecie mówiæ do mnie Quoningar, je¿li tylko chcecie. WeŸcie ten m³ot i pamiêtajcie o mnie w czasie nastêpnej bitwy.~
+
+//#15540
+@20014 = ~Cieszê siê, ¿e znaj¹c brutalne oblicze tego miasta, mogê znaleŸæ ludzi takich jak wy, którzy przywracaj¹ mi wiarê w dobro. Mo¿ecie mówiæ do mnie Quoningar, jeœli tylko chcecie. Proszê, weŸcie miksturê t³umienia magii. Wyczuwam, ¿e przyda ci siê na ulicach tego miasta.~
+
+//#15541
+@20015 = ~To miasto mnie przera¿a, przyjaciele. Z ka¿dym dniem, który tu spêdzam, stajê siê coraz bardziej zaniepokojony.~
+
+//#15542
+@20016 = ~Nie mogê znieœæ tego miasta, ale byæ mo¿e bêdzie ono bardziej nadawa³o siê do ¿ycia, kiedy je opuœcicie!~
+
+//shilchen/ubshilo.d
+//#15182
+@20017 = ~Wyczuwam na was zapach miasta.~
+
+//#15772
+@20018 = ~Shilo Chen, ³owca z Lasu Ostrych K³ów, przyby³ do Wrót Baldura szukaæ pomocy. Banda ogrów-magów trzebi zwierzynê w po³udniowo-zachodniej czêœci lasu. Poprosi³ nas, byœmy tam poszli i postarali siê jakoœ temu zaradziæ. Doda³, ¿e jeœli uda mu siê znale¿æ jakichœ innych œmia³ków, przyœle ich, aby nam pomogli.~
+
+//#15184
+@20019 = ~Jak mo¿esz przebywaæ w tym okropnym mieœcie, kiedy las jest w niebezpieczeñstwie?~
+
+//#15185
+@20020 = ~Jastrzêbie mówi¹ mi, ¿e poradziliœcie sobie z ogrem-magiem. Jestem pod g³êbokim wra¿eniem waszej odwagi. Pozwól wrêczyæ sobie te rêkawice, jako wyraz mojej wdziêcznoœci. S¹ tak delikatne, ¿e poczujesz nawet piórko spadaj¹ce na d³oñ.~
+
+//#15186
+@20021 = ~Wy mieszkañcy miasta, zawsze jesteœcie tacy sami!~
+
+//edie/ubedie.d
+//#15175
+@20022 = ~Proszê, b¹dŸcie cicho. Próbujê siê uczyæ.~
+
+//#15178
+@20023 = ~Nienawidzê egzaminów...~
+
+//creature/ubcre.d
+//#19945
+@20024 = ~O, <CHARNAME>! Witaj, dawno ciê nie widzia³em. Ruchliw¹ porê wybra³eœ na wizytê. Chêtnie bym pogada³ o starych czasach, ale muszê przygotowaæ komnaty na spotkanie naszych... goœci.~
+
+//#19946
+@20025 = ~Nieczêsto siê zdarza, ¿e goœcie korzystaj¹ z tych komnat. Kto tam jest?~
+
+//#19947
+@20026 = ~Wahasz siê, Feldane. Czy tym ludziom nie mo¿na ufaæ?~
+
+//#19948
+@20027 = ~Och... niewiele mam do powiedzenia. Z³o¿yli twierdzy hojny datek... ofiarowali rzadkie teksty o wartoœci znacznie przekraczaj¹cej zwyczajow¹ op³atê. Nie widzê jednak przeszkód, by ci o tym opowiedzieæ. W koñcu to miejsce by³o kiedyœ twoim domem. Twierdz¹, ¿e s¹ kupcami, choæ ich organizacja zajmuje siê, jestem pewien, nie tylko handlem. Trzej przywódcy ¯elaznego Tronu spotykaj¹ siê z przedstawicielami Rycerzy Tarczy.~
+
+//#19950
+@20028 = ~Co wiesz o tych dwóch grupach?~
+
+//#19952
+@20029 = ~Ciekawe... ale nie moja to sprawa. Dziêki za fatygê.~
+
+//#19957
+@20030 = ~Nie mnie ciê ostrzegaæ, ale powinieneœ baczyæ na swoja sakiewkê. Trzej z nich to przedstawiciele ¯elaznego Tronu... pewnie przywódcy. Tamci s¹ z Amnu. Przypuszczam, ¿e przybyli tu z ramienia Rycerzy Tarczy. Jedni i drudzy twierdz¹, ¿e przybyli tu obgadaæ przysz³e porozumienie handlowe, bo Tron bardzo ostatnio zyska³ na wp³ywach. Niewiele wiem o ekonomice Wrót Baldura, ale zaryzykowa³bym przypuszczenie, ¿e jedni i drudzy s¹ kimœ wiêcej, ni¿ tylko kupcami.~
+
+//#19962
+@20031 = ~Co chcesz przez to rzec? Ja mia³em "sprawy" z ¯elaznym Tronem, wiêc trzeba mi wiedzieæ co oni zamierzaj¹.~
+
+//#19963
+@20032 = ~Có¿, dziêki za ostrze¿enie. Bêdê uwa¿a³.~
+
+//#19964
+@20033 = ~Niewiele mogê rzec, ale plotek nigdy nie brakuje. S³ysza³em, ¿e to spotkanie to rodzaj negocjacji, poniewa¿ ¯elazny Tron wdziera siê na terytoria Rycerzy Tarczy. Pods³ucha³em jednego z nich - przypadkiem, upewniam was, przypadkiem - i sadzê, ¿e na tych brakach w dostawach ¿elaza Tron zyska³ spore wp³ywy. W¹tpiê, ¿eby Ulraunt Stra¿nik Ksi¹g pozwoli³ by tu weszli gdyby wiedzia³ kim s¹, ale jak do tej pory nie zrobili niczego z³ego.~
+
+//#19967
+@20034 = ~Dziêki za informacjê. Ju¿ sobie pójdê.~
+
+//#19968
+@20035 = ~Hm... Nie s¹dzê, ¿ebyœ wiedzia³ w których pokojach siê zatrzymali, prawda?~
+
+//#19965
+@20036 = ~Bez dwóch zdañ. Trzeba nam siê spotkaæ, skoro ju¿ siê tu jest.~
+
+//#19966
+@20037 = ~Och, mam nadziejê, ¿e siê z nimi nie zwi¹zaliœcie. S³ysza³em, ¿e to ma³o sympatyczni ludzie. Bardziej zajmuje ich w³adza ni¿ handel. Pods³ucha³em, o czym mówi¹ - imaginujcie sobie, skorzystali na ¿elaznym kryzysie! Dlatego w³aœnie przybyli tu przedstawiciele Rycerzy Tarczy. ¯elazny Tron zyska³ ostatnio zbyt wiele wp³ywów i zagra¿a pewnym amnijskim interesom. Dziwi mnie, ¿e Ulraunt Stra¿nik pozwoli³ im wejœæ... ale nie mo¿na im udowodniæ ¿adnego z³ego czynu.~
+
+//#19970
+@20038 = ~Dziêki za informacjê. Pójdê ju¿ do swej kwatery.~
+
+//#19971
+@20039 = ~Hm... Nie s¹dzê, ¿ebyœ wiedzia³ w których pokojach siê zatrzymali, prawda?~
+
+//#19969
+@20040 = ~I tak powiedzia³em ju¿ zbyt wiele. Nie chcia³bym, byœcie wziêli mnie za plotkarza. Ale powinniœmy jeszcze pomówiæ, zanim stad odejdziesz.~
+
+//#15543
+@20041 = ~Przeklête bazyliszki! By³am pewna, ¿e kieruj¹ siê na wschód, ale mia³am ich dosyæ jak na jeden dzieñ, dziêkujê bardzo. Je¿eli polujecie na te g³upie stworzenia, to nie pozwólcie siê zatrzymywaæ!~
+
+//#15810
+@20042 = ~Uratowaliœmy ³owczyniê Coriannê, która zosta³a zmieniona w kamieñ przez bazyliszka. Choæ nie mia³a ochoty jeszcze raz spotkaæ siê z tym stworem, by³a na tyle mi³a, ¿e powiedzia³a nam, ¿e kierowa³ siê on na wschód.~
+
+//#15544
+@20043 = ~Jestem bardzo zadowolona, ¿e znaleŸliœcie mnie tutaj. Bazyliszki nie s¹ stworzeniami, z którymi mo¿na siê mierzyæ samotnie. Muszê wracaæ do domu, ale je¿eli chcecie na nie zapolowaæ, to b¹dŸcie pewni, ¿e macie ze sob¹ tê miksturê lustrzanych oczu. Legowisko bazyliszków nie mo¿e byæ daleko st¹d.~
+
+//#15811
+@20044 = ~Uratowaliœmy ³owczyniê Coriannê, która zosta³a zmieniona w kamieñ przez bazyliszka. Choæ nie mia³a ochoty jeszcze raz spotkaæ siê z tym stworem, by³a na tyle mi³a, ¿e da³a mi miksturê lustrzanych oczu i powiedzia³a, ¿e bazyliszek kierowa³ siê on na wschód.~
+
+//#15545
+@20045 = ~Och nie, nie mo¿ecie. Je¿eli chcecie zmierzyæ siê z bazyliszkiem, to wasza sprawa. Ja idê do domu.~
+
+//#15546
+@20046 = ~Czy musicie? Hej, to by³ dla mnie d³ugi dzieñ... A niech was diabli!~
+
+//#6145
+@20047 = ~Niewiele wiem, jestem tylko zwyk³ym wieœniakiem.~
+
+//#3991
+@20048 = ~Hej! Kim jesteœcie?~
+
+//#3993
+@20049 = ~Jesteœmy najemnikami.~
+
+//#3994
+@20050 = ~Jesteœmy poszukiwaczami przygód.~
+
+//#3995
+@20051 = ~Jesteœmy zwyk³ymi podró¿nymi.~
+
+//#6601
+@20052 = ~Farmer, którego spotkaliœmy w Lesie Ostrych K³ów powiedzia³ nam, ¿e ktoœ wyrzuca w tym lesie swoje œmiecie.~
+
+//#4004
+@20053 = ~Jeœli wy jesteœcie zwyk³ymi podró¿nymi, to ja jestem samym Elminsterem. Parszywe dranie.~
+
+//#9036
+@20054 = ~Zostaw mnie. Nie mam nic dla was.~
+
+//#106
+@20055 = ~Zatrzymajcie siê chwilkê, paniczu, bom s³ysza³ coœcie zrobili dla starego Bruna. G³upio mi, ¿e sam nie zdoby³em siê na to, aby mu pomóc. Dobrze, ¿e jest jeszcze ktoœ, komu nie ¿al poœwiêciæ czasu i si³ dla obcego. Chcia³bym, abyœcie przyjêli ten podarek, który by³ przekazywany w naszej rodzinie z dziada pradziada. Na pewno wam bardziej siê przyda. Dobrze, ¿e istniej¹ jeszcze tacy ludzie jak wy.~
+
+//#5833
+@20056 = ~Cz³owiek o imieniu Wilton wrêczy³ mi nagrodê za pomoc temu staremu farmerowi, Brunowi. Jak ty innym, tak oni tobie, jak sadzê.~
+
+//#6432
+@20057 = ~Jedyne, co ostatnio jest ciekawe, to ci bandyci i ich ci¹g³e napady. Ostrzegam was, przyjaciele: nie zadzierajcie z nimi, bo s¹ naprawdê niebezpieczni.~
+
+//dialogues/u!minor1.d
+//#5096
+@20058 = ~Hej, wy tam! Potrzebujê pieniêdzy i leczenia. Je¿eli wiecie, co dla was dobre, to zaraz mi to dacie!~
+
+//#5097
+@20059 = ~Kpisz, czy co? Jesteœ zwyk³ym hobgoblinem, wiêc dlaczego nie mielibyœmy ciê po prostu zabiæ?~
+
+//#5098
+@20060 = ~WeŸ te 25 sztuk z³ota.~
+
+//#5099
+@20061 = ~Dlaczego mielibyœmy ci pomagaæ?~
+
+//#5100
+@20062 = ~Dobra robota, wy s³abeusze przepraszaj¹cy, ¿e ¿yj¹!~
+
+//#5101
+@20063 = ~Nale¿ê do Ch³odu, bandy najemników. Jeœli chcesz, ¿eby moi kumple siê tob¹ zajêli, to wkurzaj mnie jeszcze bardziej.~
+
+//#5102
+@20064 = ~Dobra, dobra... Masz swoje 25 sztuk z³ota i zostaw nas w spokoju!~
+
+//#5103
+@20065 = ~Hmm... Na razie jesteœ sam, wiêc chyba zaryzykujemy.~
+
+//#5104
+@20066 = ~Grozisz nam? Chyba ci siê coœ popl¹ta³o, zdegenerowana, smrodliwy bestio. Zanim zakoñczymy twoje nêdzne ¿ycie, powinieneœ nas o nie b³agaæ... i mo¿e podaæ nieco informacji o tych Czarnych Szponach.~
+
+//#5105
+@20067 = ~Po¿a³ujecie tej decyzji.~
+
+//#5106
+@20068 = ~Czekajcie! Strasznie mi przykro, tylko mnie nie zabijajcie... b³agam. Opowiem wam o Czarnych Szponach.~
+
+//#5107
+@20069 = ~Dalej.~
+
+//#5108
+@20070 = ~Mo¿esz siê zamkn¹æ i zwiewaæ.~
+
+//#5109
+@20071 = ~Czarne Szpony to banda najemników, nale¿¹ca do grupy, która napada na kupieckie karawany. Ja zgubi³em siê parê dni temu, w trakcie napadu, gdy kilku z P³omiennej Piêœci zaczê³o mnie goniæ. Powiedzia³em wam wszystko co wiem.~
+
+//#7013
+@20072 = ~Hobgoblin powiedzia³ nam, ¿e pracuje dla kompanii najemników, znanej jako Ch³ód. Ch³ód grasuje na Nabrze¿nym Trakcie.~
+
+//#6529
+@20073 = ~Witam znowu, m³odzi œmia³kowie. Widzê, ¿e macie potrzebny komponent. Hmm, zobaczymy, czy nasz m³odzieniec odzyska ¿ycie, czy skoñczy jako obiad na stole jakiegoœ szlachcica?~
+
+//#7012
+@20074 = ~Hobgoblin, którego zauroczyliœmy powiedzia³ nam, ¿e dzia³a na zlecenie bandy najemników, znanej jako Ch³ód. Wed³ug niego Ch³ód pracuje dla Zhentarimów.~
+
+//#6260
+@20075 = ~Zostawcie mnie w spokoju!~
+
+//#208
+@20076 = ~Serca mê¿ne! My zaraz wyrwaæ i pokazaæ! Ch³ód, atakowaæ!~
+
+//#6426
+@20077 = ~Natknêliœmy siê na grupê pó³ludzkich bandytów! ¯¹dali od nas z³ota i ¿elaza.~
+
+//#1761
+@20078 = ~Jeszcze jakieœ pytania?~
+
+//#1762
+@20079 = ~Kim s¹ Z³odzieje Cienia?~
+
+//#1763
+@20080 = ~Jakie œlady wskazywa³y na Z³odziei Cienia?~
+
+//#1764
+@20081 = ~Jaka choroba powali³a Eltana?~
+
+//#1765
+@20082 = ~Na razie doœæ pytañ.~
+
+//#11885
+@20083 = ~IthNal cOR dan osa KOZAH! Rrrackne dall'a osa KOZAH! Posss¹¿¿¿ek...odnaleŸŸŸæ posss¹¿¿¿ek..........~
+
+//#14375
+@20084 = ~Je¿eli nie uwa¿acie mojego towarzystwa za po¿¹dane, niech i tak bêdzie. Nie zwyk³am siê nikomu narzucaæ.~
+
+//#16741
+@20085 = ~(Ich pragnieniom brakuje polotu). Je¿eli zale¿y wam tylko na monetach, to przy³¹czê siê do bardziej interesuj¹cych poszukiwaczy przygód. Zabierzcie to co posiadam, ale pomnicie swój wybór, gdy wydacie ostatni¹ monetê.~
+
+//#16172
+@20086 = ~Naprawdê? Niech tak bêdzie. Na pewno bêdê gdzieœ w pobli¿u, jeœli zatêsknicie za moim towarzystwem. Postaram siê, ¿ebyœcie nie musieli d³ugo mnie szukaæ.~
+
+//#6135
+@20087 = ~Jestem waszym przyjacielem, ale mogê powiedzieæ tylko tyle, ¿e w kopalni s¹ jakieœ stworzenia podobne do psów, które zabijaj¹ moich ludzi. Musicie je powstrzymaæ!~
+
+//#16558
+@20088 = ~Zauroczyliœmy nadzorcê kopalni Nashkel. Powiedzia³ mi, ¿e psopodobne stwory atakuj¹ górników.~
+
+//#14736
+@20089 = ~Hm, dobrze. To da mi okazjê popracowaæ nad now¹ ballad¹... taaak, chyba mam ju¿ temat! Mogê siê za³o¿yæ, ¿e nigdy nie zgadniecie, kto bêdzie jej bohaterem!~
+
+//#7592
+@20090 = ~Nawet je¿eli to prawda, to i tak nie macie tu nic do roboty. Wynocha.~
+
+//#16688
+@20091 = ~Otwarcie zg³aszam swoje w¹tpliwoœci, ale to ty musisz podj¹æ decyzjê. Wyczuwam w tobie zal¹¿ki cech przywódczych i bêdê szczêœliwa mog¹c pomagaæ ci w przysz³oœci. ChodŸ Khalidzie, na razie musimy odejœæ.~
+
+//#15351
+@20092 = ~No, dobrze. Pójdê wobec tego swoj¹ drog¹. Eee... powodzenia.~
+
+//#15352
+@20093 = ~W porz¹dku. Oto 50 sztuk z³ota. Czy to jest... w porz¹dku?~
+
+//#15353
+@20094 = ~Dobra, dziêki. Ten ociê¿a³y gbur móg³by mnie z³apaæ, gdyby nie pogna³ za wami. Proszê, w górach bêdziecie potrzebowaæ naprawdê dobrych butów. Co do mnie, to nawet gdybyœcie mi zap³acili, to tu nie zostanê.~
+
+//#5710
+@20095 = ~Stokrotne dziêki! Wie¿a znajduje siê na zachód od Beregostu. Thalantyr mieszka tam w wielkiej posiad³oœci. Usadowiê siê w waszym baga¿u, a¿ tam zajdziemy.~
+
+//#5728
+@20096 = ~Spotkaliœmy nieszczêsnego czarodzieja, zamienionego w kurczaka. Chce, aby zabraæ go do Thalantyra, nieco na zachód od Beregostu.~
+
+//#8468
+@20097 = ~Oto 500 sztuk z³ota, które jestem wam d³u¿na. Ale czujê, ¿e jestem winna wiêcej za wasze us³ugi. Proszê, weŸcie ten klejnot, to chyba bêdzie satysfakcjonuj¹ca zap³ata.~
+
+//#8469
+@20098 = ~Naprawdê chcia³abym mieæ pieni¹dze, które ci obieca³am, ale mam tylko 500 sztuk z³ota. WeŸcie ten klejnot, to chyba bêdzie wystarczaj¹ca zap³ata.~
+
+//#15113
+@20099 = ~Jak wam siê podoba moja nowa szata?~
+
+//#1161
+@20100 = ~Wybieraj, co pierwsze spadnie na ziemiê - twój miecz, czy g³owa! B¹dŸcie rozs¹dni, a do¿yjecie dni, gdy bêdziecie siê cieszyli m¹droœci¹!~
+
+//#1162
+@20101 = ~¯ywcem nas nie weŸmiecie!~
+
+//#1163
+@20102 = ~Nie bêdziemy z wami walczyli. W rzeczy samej chcemy siê do was przy³¹czyæ.~
+
+//#1164
+@20103 = ~Nie chcemy ¿adnych k³opotów. Bierzcie co chcecie i zostawcie nas.~
+
+//#14740
+@20104 = ~Czy nie mog³abym zostaæ choæ troszkê d³u¿ej? Czas, który spêdziliœmy razem by³ ca³kiem przyjemny. Có¿, mo¿e spotkamy siê ponownie.~
+
+//#505
+@20105 = ~Nie mogê w to uwierzyæ. Pokona³ mnie zwyk³y mê¿czyzna. No có¿, muszê dotrzymaæ danego s³owa. Pomogê wam w waszej misji, jakkolwiek g³upia by nie by³a.~
+
+//#517
+@20106 = ~Tak prawdê mówi¹c, niepotrzebna nam twoja pomoc.~
+
+//#518
+@20107 = ~Dobrze... i lepiej poka¿, co jesteœ warta.~
+
+//#1994
+@20108 = ~Och. To mo¿e byæ ciekawe... Zróbcie to.~
+
+//#1995
+@20109 = ~Lepiej ju¿ idŸcie. Droth jest ju¿ niedaleko... i mo¿e byæ nieprzyjemny - dla mnie i dla was.~
+
+//#1134
+@20110 = ~Chyba masz racjê, Jeb. Nie maj¹ wiatru w ¿aglach! Zostawcie nas, sami zajmiemy siê naszymi problemami.~
+
+//#11215
+@20111 = ~Musisz! Stajê przed tob¹ i nie pozwolê iœæ dalej. Jestem przeszkod¹, któr¹ musisz usun¹æ! Uwolnisz... bêdziesz ze mn¹ walczy³!~
+
+//#11216
+@20112 = ~Je¿eli muszê ciê zabiæ, by przejœæ, to trudno - niech¿e i tak bêdzie. Uczyniê to wybaczaj¹c wszystko, co mi uczyni³aœ.~
+
+//#11217
+@20113 = ~Jeœli odrzuci³aœ ¿ycie, jesteœ ju¿ martwa. To twój wybór, wiêc nie jestem ci potrzebny.~
+
+//#13756
+@20114 = ~Byliœcie dla mnie bardzo dobrzy w tym dziwnym œwiecie, pe³nym œwiat³a. Byæ mo¿e jednak macie racjê. Mroczne elfy powinny unikaæ innych ras. Uwa¿ajcie na siebie, dobrze?~
+
+//#6258
+@20115 = ~Jesteœcie œwietnymi przyjació³mi, wiêc dam wam prezent. Macie ten kawa³ek z³ota - mi ju¿ siê nie przyda.~
+
+//#8146
+@20116 = ~Chcia³abym z tob¹ uciec, kochaniutki, ale mój m¹¿ jest tak bardzo zazdrosny. Nie chcia³abym go denerwowaæ. Zabierz ten pierœcieñ, niech ci o mnie przypomina.~
+
+//#7926
+@20117 = ~Chcia³bym, ¿eby Nanna pozwoli³a mi z wami iœæ. Ale... ona nigdy siê na to nie zgodzi. Zanim odejdziecie, chcia³bym daæ wam coœ na pami¹tkê. Chyba jest cenne, skoro Nanna trzyma to tak starannie zamkniête. Kiedyœ sobie to po¿yczy³em, a teraz chcê, ¿ebyœcie zrobili z tego u¿ytek. Wracajcie szybko i opowiedzcie mi o waszych przygodach.~
+
+//#7912
+@20118 = ~Nie by³bym goœcinny, gdybym nie pomóg³ wam w twoich przysz³ych misjach. Mam tu parê pami¹tek z mojej m³odoœci, mo¿e wam siê przydadz¹. WeŸcie tê procê - nie wygl¹da imponuj¹co, ale wierzcie mi, ¿e pewnego dnia wam siê przyda.~
+
+//#8855
+@20119 = ~Zabierz mnie z tego miejsca, je¿eli jesteœ moim przyjacielem! Makabryczna istota œciga mnie poprzez mój umys³ i nie mogê zaznaæ nawet chwili koj¹cego snu. Ja nie chcia³em okradaæ tego grobowca! No, dobrze... mo¿e... chcia³em, ale jest mi tak przykro. Proszê, przyjacielu, zanieœ to z powrotem do grobowca. Zgoda?~
+
+//#7661
+@20120 = ~Wiecie co? WeŸcie te 25 sztuk z³ota i idŸcie siê zabawiæ.~
+
+//#8420
+@20121 = ~Nazywaj mnie Ithyl, przyjacielu. Cieszê siê, ¿e pozna³em osobê tak zabawn¹ jak ty. Dlaczego nie zejdziesz na dó³ i nie rozerwiesz siê? Proszê, oto 20 sztuk z³ota. Spe³nij swoje fantazje i zachcianki!~
+
+//#6296
+@20122 = ~Dobrze, przyjaciele. Macie, weŸcie to antidotum. I tak nie jest mi potrzebne.~
+
+//#7511
+@20123 = ~Dzisiaj raczej nie mam szczêœcia, ale je¿eli chcecie, to dam wam tê sztukê z³ota na dobry pocz¹tek. Mo¿e dla was Tymora bêdzie ³askawsza.~
+
+//#8802
+@20124 = ~Nie opuszczam domu zbyt czêsto, tote¿ niewiele wiem o tym, co dzieje siê we mieœcie. Dlaczego nie weŸmiecie sobie tej sztuki z³ota i nie zabawicie siê? W dzielnicy targowej znajdziecie wszystko, czego wam trzeba.~
+
+//#8115
+@20125 = ~Nagle nasz³a mnie ochota, ¿eby daæ ci prezent, przyjacielu. Przyjmij t¹ b³yskotkê, pami¹tkê z dzieciñstwa. Chyba bêdzie ci pasowaæ.~
+
+//#7491
+@20126 = ~Trzymaj, przyjacielu. Je¿eli nie masz przy sobie pieniêdzy, weŸ te 10 sztuk z³ota.~
+
+//#7780
+@20127 = ~Przecie¿ to oczywiste, ¿e potrzebujecie pomocy, przyjaciele. ¯ycie w tych murach pewnie nie wp³ywa dobrze na wasze sakiewki. Macie tutaj 20 sztuk z³ota. Dla mnie to nic, ale jestem pewien, ¿e pomo¿e wam to wróciæ na dobr¹ drogê.~
+
+//#7994
+@20128 = ~Poniewa¿ jesteœmy przyjació³mi, chcia³bym powierzyæ wam ten cenny pierœcieñ. To pami¹tka rodzinna i bojê siê, by ktoœ jej nie ukrad³. Tylu teraz z³odziei i w³óczykijów na drogach, pewnie niewiele mniej jest ich w tej gospodzie.~
+
+//#8034
+@20129 = ~Przyjacielu, chcia³bym daæ ci t¹ zbrojê na odchodnym. Bardzo bym siê zmartwi³, gdyby w czasie podró¿y sta³o ci siê coœ z³ego.~
+
+//dialogues/u!totscminor.d
+//#21708
+@20130 = ~O szanowni zgromadzeni, WYS£UCHAJCIE opowieœci o straszliwym miejscu, do którego mo¿ecie siê udaæ. Przy³¹czcie siê do mnie, poszukiwacza przygód wielkiej s³awy, Ike'a Cascadiona Vendara, a poprowadzê kolejn¹ grupê œmia³ków do SIEDZIBY z³a wszelkiego w Krainach. Udamy siê do Wie¿y Durlaga, by stawiæ czo³o niebezpieczeñstwom, w których ¿ycie straci³y setki dzielnych kobiet i mê¿czyzn. NATKNIECIE SIÊ na okrutne pu³apki, POCZUJECIE obecnoœæ zmar³ych, którzy nie chc¹ odejœæ z tego œwiata; ZADZIWI¥ was nieprzebrane bogactwa, pogrzebane pod ziemi¹. Wyprawa NIE jest dla miêczaków, albowiem nie odpowiadam za ewentualny atak serca podczas jej trwania, B¥D po jej zakoñczeniu! Odwa¿ni, wyst¹pcie! POJEDYNCZO!~
+
+//#21709
+@20131 = ~Ach, dobrzy ludzie szlachetnej krwi, którzy nie wahacie siê rzuciæ wyzwania losowi! ChodŸcie ze mn¹, a zobaczycie, przez co musi przejœæ cz³owiek broni¹cy swej w³asnoœci. Mam dla was specjaln¹ ofertê - choæ wiem, ¿e nie potrzebujecie rabatu: szeœædziesi¹t sztuk z³ota za ca³¹ grupê.~
+
+//#21715
+@20132 = ~Umowa stoi! Kiedy wyruszamy?~
+
+//#21716
+@20133 = ~To dla nas za drogo.~
+
+//#21717
+@20134 = ~Nie interesuj¹ nas twoje "przygody", kupczyku.~
+
+//#21710
+@20135 = ~Witajcie, przyjaciele! Przekonajcie siê sami, co musi zrobiæ bogacz, by obroniæ sw¹ fortunê! Nikomu nie ¿yczê takiego ¿ycia. Osiemdziesi¹t sztuk z³ota za was wszystkich - a nie dla ka¿dego mam tak niskie ceny.~
+
+//#21711
+@20136 = ~No dobrze, ruszcie siê wreszcie, kmiotki! Sto sztuk z³ota za wszystkich, ale nie podchodŸcie za blisko. A jak zobaczê, ¿e któryœ z was kradnie jak¹œ sakiewkê, po¿a³ujecie. Udajemy siê w niebezpieczne miejsce, a ja ju¿ nieraz "gubi³em" klientów.~
+
+//#21712
+@20137 = ~Nie ma mowy o zmianie ceny: mo¿ecie siê zgodziæ albo nie.~
+
+//#21726
+@20138 = ~W porz¹dku, ty lichwiarzu! Ud³aw siê t¹ twoj¹ wypraw¹!~
+
+//#21713
+@20139 = ~Brakuje wam kasy czy mo¿e raczej odwagi? Jestem tu codziennie, wiêc jeœli znajdziecie jedno albo drugie... A na razie precz, muszê siê zaj¹æ tymi, którzy mi p³ac¹.~
+
+//#23531
+@20140 = ~Natknêliœmy siê na zarozumia³ego cwaniaczka, oferuj¹cego wycieczki do Wie¿y Durlaga. Wydaje siê, ¿e chce on zmieniæ œmierteln¹ pu³apkê w atrakcjê turystyczn¹. Na razie nie przyjmiemy jego oferty, ale wiem gdzie go znaleŸæ, jeœli zmienimy zdanie.~
+
+//#21714
+@20141 = ~Tak, wie¿a przera¿a nawet najlepszych. Jestem tu dzieñ w dzieñ, wiêc jak siê zdecydujecie...~
+
+//#21727
+@20142 = ~No to mam komplet. Wyruszamy natychmiast! Uca³ujcie swoich ukochanych i ukochane na po¿egnanie, bo mo¿ecie ich ju¿ NIGDY nie zobaczyæ! Spotkamy siê u stóp wie¿y. Beze mnie na pewno ZGINIECIE, ale nie bójcie siê! Tylko ja mogê wejœæ tam, gdzie inni BOJ¥ SIÊ postawiæ stopê!~
+
+//#23532
+@20143 = ~Spotkaliœmy pewnego handlarza o imieniu Ike, który oferuje wycieczki do Wie¿y Durlaga. Wydaje siê, ¿e s³ynna œmiertelna pu³apka sta³a siê czymœ w rodzaju atrakcji turystycznej. Przyjêliœmy jego ofertê i mamy siê z nim spotkaæ obok wie¿y, najszybciej jak to mo¿liwe. To z pewnoœci¹ bêdzie bezpieczna wyprawa. Nie prowadziliby tam ludzi, gdyby im grozi³o jakieœ niebezpieczeñstwo.~
+
+//#22049
+@20144 = ~Nowi majtkowie? Có¿ mam tylu majtków, co dni w roku i niech mnie piorun trzaœnie, jeœli prosi³em o nastêpnych... ChodŸcie ch³opcy, znaleŸliœmy miejsce, które trzeba wyczyœciæ!~
+
+//#23519
+@20145 = ~Na nic siê zda³y nasze próby przekonania kapitana Tollara Kieresa, ¿e powinien nam pozwoliæ poszukaæ tych cholernych map morskich. Och, có¿ tam - albo siê przeœlizgniemy albo wywalczymy sobie drogê. Tak czy owak, nie zostawimy œwiadków.~
+
+//#22050
+@20146 = ~Prosicie mnie, ¿ebym pokaza³ wam moje mapy? To¿ to nie tylko przynosi strasznego pecha, ale i przeczy wszelkim nakazom Ligi! ChodŸcie ch³opcy, ofiarujmy Umberlee kilka cia³, ¿eby nas chroni³a przed z³¹ pogod¹...~
+
+//#21498
+@20147 = ~Nie wierzcie w to co mówi! On nie nale¿y! Jest szalony tak jak te potwory i niemal równie niebezpieczny.~
+
+//#21499
+@20148 = ~Powiedzia³, ¿e wasz pierwszy statek wcale nie rozbi³ siê o rafy. Na pok³adzie by³y potwory, które zabi³y za³ogê.~
+
+//#21500
+@20149 = ~Dobrze, wiêcej o nim nie wspomnê. NajwyraŸniej jest szalony.~
+
+//#21501
+@20150 = ~A wiêc ju¿ doœæ o nim. Zabiliœmy wszystkie potwory, jak prosi³aœ.~
+
+//#21502
+@20151 = ~Jeszcze nie zabiliœmy ich wszystkich. Bêdziemy siê dalej staraæ.~
+
+//#21514
+@20152 = ~Musieliœmy walczyæ i zabijaæ, gdy przybyliœmy w to miejsce, ale zapewniam ciê, ¿e przetrwali tylko ci, którzy ¿yli w pokoju. Uciekliœmy z ton¹cego statku i zaczêliœmy nowe ¿ycie. Byli jednak tacy, którzy nie nale¿eli i grozili nam œmierci¹.~
+
+//#21517
+@20153 = ~A wiêc w koñcu wszystko skoñczy³o siê dobrze. Przetrwaliœcie i zbudowaliœcie ten piêkny dom. Mo¿ecie w dalszym ci¹gu liczyæ na nasz¹ pomoc.~
+
+//#21519
+@20154 = ~Co siê wydarzy³o na tym statku? Co to znaczy "nie nale¿eli"?~
+
+//stores/ubstores.d
+//#15365
+@20155 = ~Nie wygoniê obcych, skoro interesy id¹ ostatnio tak kiepsko. Jeœli czegoœ potrzebujecie, nie wahajcie siê pytaæ.~
+
+//#15366
+@20156 = ~Ciê¿k¹ mieliœmy przeprawê, by siê tu dostaæ. Co mo¿esz zaproponowaæ, aby poprawiæ nam nastroje?~
+
+//#15367
+@20157 = ~W tej chwili niczego mi nie trzeba, choæ doceniam ofertê.~
+
+//#3629
+@20158 = ~Hej tam, wygl¹dacie na takich, co szukaj¹ przygód. Potrzebujecie nowego ekwipunku? Moje ceny mog¹ wydaæ siê wysokie, ale nic na to nie poradzê - wszêdzie brakuje ¿elaza.~
+
+//#15290
+@20159 = ~Poka¿ nam swoje towary.~
+
+//#15291
+@20160 = ~Dziœ nie trzeba nam niczego.~
+
+//#6298
+@20161 = ~Wiele ostatnio s³ysza³em. Ciê¿ko zdobyæ ¿elazo, a tu jeszcze ci bandyci i s³aba ruda z Nashkel. Szykuj¹ siê k³opoty miêdzy Wrotami Baldura a Amnem. Nie zdziwi³bym siê, gdyby wybuch³a tam wojna.~
+
+//#7082
+@20162 = ~Zauroczyliœmy pewnego kupca, który zacz¹³ mówiæ jakieœ niejasne rzeczy na temat braku ¿elaza, bandytów i wojny.~
+
+//#9165
+@20163 = ~Nie mam do was ani krzty zaufania!~
+
+//area/ubarea.d
+//#7415
+@20164 = ~Macie pecha, nie przyjmujemy ³apówek.~
+
+//coran/coran.d
+//#899
+@20167 = ~Nic nie szkodzi, choæ przepadnie wam wspania³a przygoda.~
+
+//#902
+@20168 = ~Nie jesteœcie zbyt odwa¿ni. o có¿, rozumiem - nie wszyscy maj¹ waleczne serca.~
+
+//dialogues/u!ch7.d
+//#1754
+@20169 = ~Kto zabi³ Scara?~
+
+//#1755
+@20170 = ~Jaka choroba powali³a Eltana?~
+
+//#11196
+@20171 = ~Jest... ktoœ jeszcze. Na szczycie wie¿y Tronu znajdziesz kobietê, której wp³ywy zatruwa³y duszê Sarevoka. Wiem, ¿e gdyby zosta³a usuniêta on pos³ucha³by moich b³agañ. Nazywa siê Cythandria i ma wielk¹ moc. Te¿ stara siê o wzglêdy Sarevoka, choæ rada jest jego ¿¹dzy samozniszczenia, dopóki czerpie z niej korzyœci. Teraz... muszê ju¿ iœæ. On nie mo¿e siê dowiedzieæ, ¿e ci pomog³am.~
+
+//#1780
+@20172 = ~Wiesz kto zabi³ Scara?~
+
+//#20666
+@20173 = ~Musimy udaæ siê do G³êbokich Piwnic i odszukaæ Slythe i Krystin, dwoje skrytobójców Sarevoka. Eltan s¹dzi, ¿e Sarevok planuje zg³adziæ Wielkich Ksi¹¿¹t Belta i Liiê. Nie wolno do tego dopuœciæ. Mamy te¿ zaprowadziæ Eltana do budynku kapitana portu, który znajduje siê we wschodniej czêœci portu.~
+
+//sharteel/rangelo.d
+//#2144
+@20174 = ~Nie jesteœ dowódc¹ P³omiennej Piêœci; ten tytu³ nale¿y siê Ksiêciu Eltanowi, komuœ kto nañ w pe³ni zas³uguje. Jesteœ tylko pretendentem, do tego œmierdz¹cym i obleœnym. Bezmózgi gibberling by³by lepszym dowódc¹, ni¿ ty.~
+
+//#6537 (add 'Afoul of the law')
+@20175 = ~ Konflikt z prawem
+
+Z jakiegoœ powodu ksi¹¿ê Eltan ju¿ nie dowodzi P³omienn¹ Piêœci¹. Teraz za dowódcê podaje siê cz³owiek o imieniu Angelo.~
+
+
+//BGT/Tutu SOLVED/UNSOLVED + Headers - DiaryEntries for Quoningar, added by Jarl
+
+//@20011 with header:
+@20176 = ~Cisza w ruchliwym mieœcie
+
+Kap³an Quoningar, najwyraŸniej równie nieprzyzwyczajony do miejskiego gwaru co ja, poszukuje mikstury skupienia. Bez niej, chyba nigdy nie skoñczy swoich medytacji...~
+
+@20177 = ~Cisza w ruchliwym mieœcie
+
+Po przyniesieniu Quoningarowi mikstury, której to potrzebowa³ do swych medytacji, zostaliœmy sowicie wynagrodzeni. Przynajmniej ktoœ w tym zgie³ku znalaz³ odrobinê ciszy i spokój wewnêtrzny.~
+
+
+//BGT/Tutu SOLVED/UNSOLVED + Headers - DiaryEntries for Shilo Chen, added by Jarl
+
+@20178 = ~Shilo Chen i ogrzy mag
+
+Shilo Chen, ³owca z Lasu Ostrych K³ów, przyby³ do Wrót Baldura szukaæ pomocy. Banda ogrów-magów trzebi zwierzynê w po³udniowo-zachodniej czêœci lasu. Poprosi³ nas, byœmy tam poszli i postarali siê jakoœ temu zaradziæ. Doda³, ¿e jeœli uda mu siê znale¿æ jakichœ innych œmia³ków, przyœle ich, aby nam pomogli.~
+
+@20179 = ~Shilo Chen i ogrzy mag
+
+Po klêsce ogrzych-magów w Lesie Ostrych K³ów, Shilo Chen sowicie nas wynagrodzi³.~
+
+
+
+
+
+
+//setup-bg1ub.tp2
+//#7810
+@30000 = ~Witam, witam, witam. W³aœnie wkroczyliœcie w progi domu Bunsena, wiêc witam was serdecznie! Pozwólcie odpocz¹æ swym strudzonym nogom.~
+
+//#7819
+@30001 = ~Zawsze jesteœ tak uprzejmy dla obcych, co w³a¿¹ do twojego domu? Nie wydaje mi siê, ¿eby by³o to bezpieczne.~
+
+//#7821
+@30002 = ~OszczêdŸ mi swoich uœmiechów, kurduplu. Zajrzeliœmy po prostu by sprawdziæ, czy masz coœ, co jest warte zachodu. G³upio postêpujesz zostawiaj¹c swoj¹ norê otwart¹.~
+
+//#7823
+@30003 = ~Przepraszam najmocniej, ale drzwi by³y otwarte i pomyœleliœmy, ¿e norka jest opuszczona. Nie zamierzaliœmy wdzieraæ siê do twojego domu.~
+
+
+//Tutu/D -- all files
+//#8330
+@40000 = ~Witajcie, podró¿ni. Mam nadziejê, ¿e bêdziecie trzymaæ broñ przy sobie i nie sprowokujecie ¿adnych k³opotów. Wierzcie mi, ¿e tak bêdzie najlepiej dla wszystkich. Wiêkszoœæ moich klientów jest dobrze przygotowana by siê broniæ, a i bar te¿ nie wypad³ psu spod ogona. Czy jest coœ, co mogê dla was zrobiæ?~
+
+//#15072
+@40001 = ~W rzeczy samej.~
+
+//#15073
+@40002 = ~Nie.~
+
+//#8331
+@40003 = ~Serdecznie witam. Serdecznie, dopóki bêdziecie p³aciæ rachunki. Wystrzegajcie siê ciemnych zau³ków, bo stra¿ nie dostrzega wiêkszoœci rzeczy, które maj¹ tam miejsce. Mogê coœ dla was zrobiæ?~
+
+//#8332
+@40004 = ~No, no! Proszê, któ¿ to wype³z³ ze œcieków. Rób tutaj co chcesz, ale ostrzegam ciê - jeœli zwrócisz na nas uwagê stra¿ników, to puœcimy ciê na pe³ne morze w dziurawej ³ódce. I to bez ¿agla.~
+
+//#8380
+@40005 = ~Dobry wieczór. "He³m i P³aszcz" jest gotów s³u¿yæ wam bezpiecznym i mi³ym schronieniem. Mam nadziejê, ¿e zostaliœcie ostrze¿eni, i¿ ceny tutaj s¹ nieco wy¿sze ni¿ w innych, "mniej szanowanych" zajazdach w naszym mieœcie? To, oczywiœcie, prawda, ale zawsze dbam o to, aby moi klienci wiedzieli za co p³ac¹. Co mogê dla was zrobiæ?~
+
+//#8381
+@40006 = ~Hmm? Witajcie w "He³mie i P³aszczu". Mo¿ecie tu oczekiwaæ wspania³ej obs³ugi i doskona³ej jakoœci...eeee...macie czym ZAP£ACIÆ, prawda? Dopóki bêdziecie to robiæ, nasze stosunki bêd¹ uk³adaæ siê znakomicie. Tylko, proszê, abyœcie nie sprawiali ¿adnych k³opotów, póki tu jesteœcie. "He³m i P³aszcz" jest dobrze strze¿ony i ugoœci was wszystkim czego zapragniecie, póki nie bêdziecie niepokoiæ innych klientów. Mogê coœ dla was zrobiæ?~
+
+//#8382
+@40007 = ~Oj, nie, nie. S¹dzê, ¿e ktoœ waszego... pokroju nie bêdzie czu³ siê tutaj dobrze. Jesteœmy dumni, ¿e naszym klientom dostarczamy zadowolenia za godziw¹ op³at¹, ale wy mi wygl¹dacie na takich, co polubiliby raczej atmosferê "Sp³onionej Syreny". Przykro mi to mówiæ, ale to nie by³ komplement. Najlepiej bêdzie, jeœli ju¿ sobie pójdziecie, bo wasz pobyt bêdzie oznaczaæ tylko k³opoty. Mogê coœ dla was zrobiæ?~
+
+//#14220
+@40008 = ~Sio! To nie wasze kurczaki! Erlin! Erlin, ktoœ jest w kurniku!~
+
+//#14360
+@40009 = ~Znam twe sekrety, stara wiedŸmo! Coœ ci chyba ugrzêz³o w gardzieli!~
+
+//#14361
+@40010 = ~To sprawa pomiêdzy nami i kurczakami, pani, i zamierzam naprawdê grzecznie poprosiæ, byœ trzyma³a siê z dala.~
+
+//#14223
+@40011 = ~Czego chcecie?~
+
+//#14224
+@40012 = ~Czy mo¿esz mi powiedzieæ jak dotrzeæ do Beregostu?~
+
+//#14225
+@40013 = ~Ile za te kurczaki?~
+
+//#14226
+@40014 = ~Kto jest w³aœcicielem farmy le¿¹cej na wschodzie?~
+
+//#14227
+@40015 = ~Nigdy tam nie by³am.~
+
+//#14228
+@40016 = ~Nie s¹ na sprzeda¿.~
+
+//#14229
+@40017 = ~To miejsce Jeba. Niczego dobrego nie spodziewam siê po tym nêdzniku. W ka¿dym razie od czasu, gdy jego ¿ona umar³a.~
+
+//#14230
+@40018 = ~Proszê, zostawcie nas. Ju¿ zbyt wielu tu umar³o.~
+
+//#14231
+@40019 = ~Nie wiem, co mo¿e ciê interesowaæ. Najlepiej porozmawiaj z Erlinem.~
+
+//#14376
+@40020 = ~Wynocha z mojej farmy, przyb³êdy!~
+
+//#1517
+@40021 = ~Kim jesteœcie? Co robicie w moim maj¹tku? Stra¿e! Intruzi!~
+
+//#6136
+@40022 = ~Jestem Entar Srebrna Tarcza, jeden z Wielkich Ksi¹¿¹t Wrót Baldura! Mam wam wiele do powiedzenia, przyjaciele. Mo¿e chcecie us³yszeæ o ¯elaznym Tronie. To nowa organizacja kupiecka, która powsta³a we Wrotach Baldura. Wielu z nas uwa¿a ich dzia³ania za podejrzane, ale oni obiecali dostarczyæ nam ¿elazo, którego tak ostatnio potrzebujemy. Podejrzewamy, ¿e Amn, nasz po³udniowy s¹siad, sprzymierzy³ siê z Zhentarimami przeciwko naszemu wspania³emu miastu. Jednak Scar twierdzi, ¿e dowody przeciwko Amnowi s¹ zbyt oczywiste - jak gdyby ktoœ próbowa³ wrobiæ królestwo i wywo³aæ napiêcia pomiêdzy naszymi narodami. Dodam tylko, mój najlepszy przyjacielu, ¿e mam piêkn¹ córkê. Nazywa siê Skie i w³aœnie jest na wydaniu.~
+
+//#6598
+@40023 = ~Zauroczyliœmy Entara Srebrn¹ Tarczê i dowiedzieliœmy siê kilku ciekawych rzeczy. Powiedzia³ on, ¿e przedstawiciele ¯elaznego Tronu pojawili siê ostatnio we Wrotach Baldura z propozycj¹ sprzeda¿y ¿elaza. Wielki Ksi¹¿ê jest zaniepokojony mo¿liw¹ napaœci¹ ze strony Amnu i w zwi¹zku z tym powa¿nie rozwa¿a przyjêcie oferty ¯elaznego Tronu, pomimo tego, i¿ ma pewne podejrzenia w stosunku do ich intencji.~
+
+//#8983
+@40024 = ~Moje drzwi nie stoj¹ ju¿ otworem dla takich jak wy!~
+
+//#14221
+@40025 = ~Zostaw ich, Enna. Oni wiedz¹, czego szukaj¹. Na tej farmie i tak nie ma miejsca na sekrety.~
+
+//#14222
+@40026 = ~Nich Beshaba was przeklnie! Co zrobiliœcie mojej Ennie?~
+
+//#14232
+@40027 = ~To nasza ziemia. Nie chcemy, by tu ktoœ myszkowa³.~
+
+//#14233
+@40028 = ~Je¿eli szukaliœcie k³opotów, obcy, to w³aœnie je znaleŸliœcie. Talos! Myrkul! Malar! Braæ ich, ch³opcy!~
+
+//#14234
+@40029 = ~Wygl¹dacie na takich, co maj¹ ochotê na kurczaka. Tu, przyjacielu, jest ich co nieco.~
+
+//#14235
+@40030 = ~Chyba nie dos³yszeliœcie? Mówi³em, ¿e to nasza ziemia.~
+
+//#1464
+@40031 = ~Jaheira i Khalid s¹ jedynymi porz¹dnymi klientami, jakich ostatnio widzieliœmy.~
+
+//#1465
+@40032 = ~Nie doœæ, ¿e i tak dostajê ma³o napiwków, to jeszcze w kó³ko mnie zatrzymuj¹!~
+
+//#1466
+@40033 = ~Z drogi, mam du¿o pracy.~
+
+//#6940
+@40034 = ~Nie interesuj¹ mnie prywatne sprawy moich klientów. Za to nie dostaje siê napiwków.~
+
+//#9020
+@40035 = ~Zostawcie mnie!~
+
+//#8179
+@40036 = ~Kim jesteœcie? Nie, nie odpowiadajcie, i tak mnie to nie obchodzi. Weszliœcie do mojej kuchni bez zaproszenia! Lepiej siê st¹d zabierajcie, bo jak nie, to mo¿e wam siê przydarzyæ coœ gorszego ni¿ przybycie stra¿y. Mog¹ przecie¿ nie przyjœæ na tyle szybko, ¿eby was ocaliæ przed mym gniewem! Wynocha!~
+
+//#8180
+@40037 = ~Sio!~
+
+//#8181
+@40038 = ~Nie zmuszajcie mnie, ¿ebym po³ama³a sobie nogê na waszych ty³kach! Spadajcie!~
+
+//#8182
+@40039 = ~Je¿eli tylko chcecie, to mogê nauczyæ was gotowaæ nawet najwymyœlniejsze potrawy. Ale znaj¹c takich jak wy, nie zostaniecie tu a¿ tak d³ugo.~
+
+//#9061
+@40040 = ~Nie jesteœcie tu mile widziani!~
+
+//#8192
+@40041 = ~Czekam a¿ tatuœ wróci do domu. Na pewno nied³ugo siê zjawi. Przecie¿ nie mo¿e zostaæ w kopalni na zawsze... prawda?~
+
+//#8193
+@40042 = ~Nie wróci³ do domu, bo jest martwy, dzieciaku. Zaciukany, trup, nieboszczyk, sztywniak.~
+
+//#8194
+@40043 = ~Twój tatko pewnie wkrótce wróci. Nie trap siê.~
+
+//#8195
+@40044 = ~Mam nadziejê. Tak bardzo za nim têskniê.~
+
+//#8196
+@40045 = ~£aaaaaaa!!! Mój tatuœ nie ¿yje!~
+
+//#8197
+@40046 = ~Jestem twoj¹ najlepsz¹ przyjació³k¹.~
+
+//#9027
+@40047 = ~Zostawcie mnie! Jesteœcie podli!~
+
+//#7843
+@40048 = ~Och, witam was. Szkoda, ¿e nie ma tu mojego syna. Na pewno by siê ucieszy³.~
+
+//#7853
+@40049 = ~Dlaczego mia³by siê nami interesowaæ, mateczko?~
+
+//#7855
+@40050 = ~Trzymaj tego szczeniaka z daleka od nas. Nie zamierzamy marnowaæ czasu na pilnowaniu twojego synalka.~
+
+//#7857
+@40051 = ~Najlepsze w tym wszystkim jest to, ¿e go tu nie ma, gdy my wynosimy mu z domciu wszystkie wartoœciowe przedmioty.~
+
+//#7858
+@40052 = ~Obawiam siê, ¿e nie bêdziemy mogli poœwiêciæ mu za wiele czasu. Jesteœmy tu tylko przypadkiem.~
+
+//#7844
+@40053 = ~Och, spotkanie ka¿dego, który ma w sobie ducha Littlemana jest dla ka¿dego nizio³ka wielkim prze¿yciem. Mo¿e trochê nie pasujecie do naszych spokojnych domostw, ale wasze wyprawy s¹ na pewno takie ekscytuj¹ce... je¿eli wiecie o czym mówiê. Wróæcie do nas, kiedy tylko bêdziecie chcieli.~
+
+//#7845
+@40054 = ~Wielu podobnych mnie cieszy siê niezwykle, mog¹c ujrzeæ w waszych czynach wspania³oœæ Littlemana. Osobiœcie nie poci¹ga mnie myœl o opuszczeniu mojego domostwa. Mo¿ecie zostaæ tu ile chcecie, ale starajcie siê nie wp³ywaæ zanadto na nasze dzieci.~
+
+//#7846
+@40055 = ~Phi! I tak nie chcia³abym, ¿eby ktoœ siê przy nim tak zachowywa³! Od razu widaæ, ¿e nie spêdzacie du¿o czasu z takimi, jak my. Nikt, kto zna³by nasz sposób ¿ycia, nie oœmieli³by siê byæ tak niegrzeczny. PrzyjdŸcie z powrotem, gdy ju¿ nauczycie siê trochê uprzejmoœci.~
+
+//#7847
+@40056 = ~Có¿ za wstyd. Spanie na zimnej pod³odze podziemi mo¿e jednak zmieniæ w kogoœ nieprzystêpnego. ¯al mi was. Zostañcie tyle, ile chcecie, ale przynajmniej spróbujcie byæ mili.~
+
+//#7848
+@40057 = ~Na niebiosa! Jak mo¿ecie byæ takimi draniami? Jeszcze nikt nigdy nie by³ tak niegrzeczny w towarzystwie nizio³ków. Sama kradzie¿, to jeszcze mo¿na prze³kn¹æ, ale takie zachowanie... tego ju¿ za wiele. Proszê, zostawcie mnie sam¹.~
+
+//#7849
+@40058 = ~Taki w³aœnie jest zew przygody. Littleman du¿o nam o tym opowiada³, choæ nigdy nie mog³am tego do koñca zrozumieæ. Przecie¿ o wiele przyjemniej jest spêdzaæ noce w cieple domowego ogniska. Niech szczêœcie wam sprzyja w waszych podró¿ach.~
+
+//#7850
+@40059 = ~Takie oto jest szaleñstwo Littlemana. Nigdy nie pojmê, dlaczego zdrowi na umyœle ruszaj¹ w nieznane, coraz dalej od rodziny. Niech szczêœcie wam sprzyja w waszych podró¿ach.~
+
+//#7851
+@40060 = ~Witam ponownie. Ju¿ myœla³am, ¿e ruszyliœcie w dalsz¹ drogê; ale to dobrze, ¿e jeszcze tu zostaliœcie.~
+
+//#7852
+@40061 = ~Dziwiê siê, ¿e znowu was widzê. Czy nie ci¹gnie was jeszcze do dziczy? Na Dallilliê, mam nadziejê, ¿e ¿adne z naszych dzieci nie pójdzie w wasze œlady.~
+
+//#7860
+@40062 = ~Mo¿e chcecie trochê z nami zostaæ i opowiedzieæ o swoich przygodach. Zawsze lubi³am s³uchaæ o bohaterach, choæ nigdy nie poci¹ga³ mnie ten sposób ¿ycia.~
+
+//#9293
+@40063 = ~Nadu¿yliœcie naszego zaufania!~
+
+//#7810
+@40064 = ~Witam, witam, witam. W³aœnie wkroczyliœcie w progi domu Bunsena, wiêc witam was serdecznie! Pozwólcie odpocz¹æ swym strudzonym nogom.~
+
+//#7819
+@40065 = ~Zawsze jesteœ tak uprzejmy dla obcych, co w³a¿¹ do twojego domu? Nie wydaje mi siê, ¿eby by³o to bezpieczne.~
+
+//#7821
+@40066 = ~OszczêdŸ mi swoich uœmiechów, kurduplu. Zajrzeliœmy po prostu by sprawdziæ, czy masz coœ, co jest warte zachodu. G³upio postêpujesz zostawiaj¹c swoj¹ norê otwart¹.~
+
+//#7823
+@40067 = ~Przepraszam najmocniej, ale drzwi by³y otwarte i pomyœleliœmy, ¿e norka jest opuszczona. Nie zamierzaliœmy wdzieraæ siê do twojego domu.~
+
+//#7811
+@40068 = ~Chyba dawno nie zawitaliœcie w cywilizowane okolice, skoro pytacie o takie rzeczy. Do najwiêkszych cnót nale¿y mo¿noœæ przyjaznego podejmowania wszystkich - nawet tych, których jeszcze nie znamy. Mo¿ecie zostaæ tu tak d³ugo, jak sobie ¿yczycie.~
+
+//#7812
+@40069 = ~Có¿ to za maniery! Jeszcze nikt mnie tak nie obrazi³! Choæ Cyrrollalee zaleca przyjmowaæ nieznajomych serdecznie, to jednak zawsze w zamian nale¿y siê choæ odrobina wdziêcznoœci. Nie jesteœcie tu mile widziani, a je¿eli dalej bêdziecie siê tak zachowywali, to nie przyjmie was ¿aden z moich s¹siadów.~
+
+//#7813
+@40070 = ~Opuszczony? Nawet je¿eli gospodarza nie by³o w jego domu od wielu lat, jego przyjaciele i s¹siedzi opiekowaliby siê domem i czekali na niego z ciep³ym posi³kiem. Gdyby w miêdzyczasie chcia³ z tego domu skorzystaæ nieznajomy, na pewno nikt nie mia³by nic przeciwko. Nie musicie przepraszaæ. Je¿eli mój dom wydawa³ siê wam opuszczony, to tym bardziej potrzebujecie przyjaznej rêki. Cyrrollalee na pewno by siê to podoba³o.~
+
+//#7814
+@40071 = ~Nie znajdziecie tu nikogo, kto zamyka³by drzwi przed przybyszami. W naszej naturze le¿y okazywanie goœcinnoœci nawet tym, którzy zachowuj¹ siê... dziwnie. Mo¿ecie trochê tu zostaæ, choæ dzieñ ma siê ju¿ ku zachodowi.~
+
+//#7815
+@40072 = ~Potrzebujecie czegoœ, co posiadam? Wystarczy³o tylko powiedzieæ. Dobra materialne nie s¹ dla nas tak wa¿ne, jak spokój i bezpieczeñstwo naszych domostw. Poniewa¿ jednak byliœcie tak niegrzeczni, nie jesteœcie ju¿ tu mile widziani.~
+
+//#7816
+@40073 = ~Przebaczam wam wszystkie obrazy, jakich siê dopuœciliœcie. Te drzwi zawsze stoj¹ otworem, bez wzglêdu na wasze... pochodzenie. Mo¿ecie tu trochê zostaæ, jeœli chcecie.~
+
+//#7817
+@40074 = ~Witajcie ponownie. Cieszê siê, ¿e was znowu widzê.~
+
+//#7818
+@40075 = ~Widzê, ¿e wróciliœcie. Ufam, ¿e nie zostaniecie tu d³u¿ej ni¿ ostatnim razem?~
+
+//#7826
+@40076 = ~Mo¿e przy³¹czycie siê do mnie - mam gdzieœ dodatkow¹ fajki. Coœ mi jednak mówi, ¿e tacy jak wy nie maj¹ czasu na odpoczynek.~
+
+//#9294
+@40077 = ~Nie chcia³bym byæ niegrzeczny, ale wola³bym ¿ebyœcie ju¿ sobie poszli.~
+
+//#15107
+@40078 = ~Hm, wolê nie pracowaæ z amatorami.~
+
+//#15108
+@40079 = ~W "Gospodzie Feldeposta" w Beregoœcie zatrzyma³ siê gruby cz³owiek o imieniu Algernon. W jego pokoju, w zamkniêtej skrzyni jest szata, której potrzebujê. Przynieœcie mi j¹, a rêczê, ¿e zap³ata bêdzie uczciwa. Przy okazji, spróbujcie go nie zabiæ.~
+
+//#15742
+@40080 = ~Pheirkas, krasnoludzka wojowniczka z Wrót Baldura, zapyta³a mnie czy wezmê udzia³ w czymœ, co nazwa³a tajemn¹ misj¹. Wspomnia³a, ¿e w "Gospodzie Feldeposta" w Beregoœcie zatrzyma³ siê oty³y Algernon. Ponoæ trzyma w zamkniêtej skrzyni w swoim pokoju p³aszcz, który chce zdobyæ Pherikas... Ryzyko jest du¿e, ale zap³ata, mam nadziejê, bêdzie godna... Po zakoñczeniu zadania znajdê j¹ w pó³nocno-zachodniej czêœci miasta.~
+
+//#15109
+@40081 = ~Przynieœliœcie szatê Algernona?~
+
+//#15110
+@40082 = ~Ach, dziêkujê. Oto 150 sztuk z³ota za wasze wysi³ki.~
+
+//#15111
+@40083 = ~Ach, podoba mi siê wasza robota. Proszê, oto 200 sztuk z³ota za wasze wysi³ki.~
+
+//#15112
+@40084 = ~Cholera, myœla³am, ¿e jesteœcie lepsi.~
+
+//#15113
+@40085 = ~Jak wam siê podoba moja nowa szata?~
+
+//#9765
+@40086 = ~Witam, witam. Mo¿e zainteresuje was parê zabawek? Moneta lub dwie za moje piêkne towary? Ech... wiedzia³em, ¿e nie. Kryzys ¿elazny mija, ale starzy klienci jeszcze nie wrócili. Któ¿by ich zreszt¹ wini³? Boj¹ siê, bo wci¹¿ widz¹ puste kramy kupieckie. Kto uwierzy, ¿e kryzys siê skoñczy³, kiedy nadal nie mo¿na jeszcze wzi¹æ w d³oñ dobrego ostrza? Tak, sk³adam winê na ¯elazny Tron. Nie tylko ja, jeœli ju¿ o tym mowa.~
+
+//#9766
+@40087 = ~Dlaczego ich winicie? Co takiego zrobili?~
+
+//#9768
+@40088 = ~Wcale mnie to nie dziwi. Ich rola w kryzysie braku ¿elaza to czyste ³ajdactwo.~
+
+//#9769
+@40089 = ~Przepraszam... gdzie s³yszeliœcie coœ takiego? W tym mieœcie ka¿dy uwa¿a ¯elazny Tron za szanowne stowarzyszenie kupieckie. Dam g³owê, ¿e takie gadki - bez dowodów - nigdzie was nie zaprowadz¹.~
+
+//#9775
+@40090 = ~No to co mia³eœ na myœli?~
+
+//#9776
+@40091 = ~Mówi³em o dzia³aniach Tronu od czasu, kiedy kontrolê nad nimi przej¹³ Sarevok. W ogóle straci³ do nich serce i wydaje siê, ¿e gotów jest poœwiêciæ organizacjê na dozbrojenie Wrót, a co za tym idzie, poprawê swoich szans na tytu³ Wielkiego Ksiêcia. Ale os³abienie pozycji Tronu wzmaga napiêcie w mieœcie i o to w³aœnie obwiniaj¹ ich inni kupcy. Byli g³ównymi pracodawcami w mieœcie i bez ich pomocy nie³atwo bêdzie przekonaæ gmin, ¿e wszystko idzie ku lepszemu. Wszystkie ich poczynania z kupieckiego punktu widzenia s¹ bez sensu i myœlê, ¿e w ich siedzibie dzieje siê coœ z³ego.~
+
+//#10104
+@40092 = ~Z ¿elazem jest coraz lepiej, ale kupcy wci¹¿ nie maj¹ towarów. To niestabilnoœæ ¯elaznego Tronu przed³u¿a konflikt w mieœcie. O to w³aœnie kupcy oskar¿aj¹ organizacjê. Byli g³ównymi importerami i bez ich pomocy, przekonanie mieszkañców, ¿e wszystko jest w porz¹dku zajmie du¿o czasu. Od czasu przejêcia kontroli przez Sarevoka wstrzymali wiêkszoœæ transakcji i zamrozili znaczn¹ czêœæ aktywów. Doprowadzenie do ruiny wielkiego domu kupieckiego wydaje siê im bez sensu. A Sarevoka niemal nic nie interesuje - najwyraŸniej zamierza poœwiêciæ organizacjê byle tylko uzbroiæ Wrota Baldura i dziêki temu zostaæ Wielkim Ksiêciem. Nie potrafiê sobie wyobraziæ osoby przy zdrowych zmys³ach, która kierowa³aby siê takimi motywami. Doprawdy dziwne rzeczy musz¹ dziaæ siê w budynku ¯elaznego Tronu.~
+
+//#9779
+@40093 = ~Nic bezpoœredniego, jak myœlê, choæ wstrz¹s wci¹¿ jest odczuwalny. Od czasu, jak Sarevok przej¹³ kontrolê, zamrozili wiêkszoœæ gotówki i zamknêli niemal wszystkie operacje. Byli du¿ymi importerami i bez ich pomocy nie³atwo bêdzie przekonaæ gmin, ¿e kryzys siê skoñczy³. Wygl¹da na to, ¿e Sarevok zamierza wykorzystaæ Tron, by wzmocniæ swoj¹ politykê wrogoœci wobec Amnu, a co za tym idzie, swoje pretensje do pozycji Wielkiego Ksiêcia. Fakt, ¿e niszczy przez to wielkie konsorcjum kupieckie nie ma chyba dlañ znaczenia. Nie umiem sobie wyobraziæ zwyk³ego, zdrowego na umyœle cz³owieka interesów, który zdecydowa³by siê na coœ takiego. W siedzibie Tronu dziej¹ siê doprawdy osobliwe sprawy.~
+
+//#3661
+@40094 = ~I tak interes nie szed³ dobrze, a na dodatek ostatnio bandyci panosz¹ siê na Nabrze¿nym Trakcie.~
+
+//#15288
+@40095 = ~Poka¿, co masz na sprzeda¿.~
+
+//#15289
+@40096 = ~W tej chwili nie mamy zamiaru niczego kupowaæ.~
+
+//#3691
+@40097 = ~Nie jestem jakimœ tam kupcem! Lepiej ze mn¹ nie zadzierajcie. MÓWIÊ SERIO!! Jak podajê cenê, to nie chcê s³yszeæ o ¿adnym targowaniu czy innych gównach. ZROZUMIANO?!!!~
+
+//#6297
+@40098 = ~Wiele ostatnio s³ysza³em. Ciê¿ko zdobyæ ¿elazo, a tu jeszcze ci bandyci i s³aba ruda z Nashkel. Szykuj¹ siê k³opoty miêdzy Wrotami Baldura a Amnem. Nie zdziwi³bym siê, gdyby wybuch³a tam wojna.~
+
+//#7082
+@40099 = ~Zauroczyliœmy pewnego kupca, który zacz¹³ mówiæ jakieœ niejasne rzeczy na temat braku ¿elaza, bandytów i wojny.~
+
+//#9166
+@40100 = ~Nie mam do was ani krzty zaufania!~
+
+//#8323
+@40101 = ~Wiem, ¿e "Jesiotr" jest diablo tañszy od "He³mu i P³aszcza", ale nie myœlicie chyba, ¿e bêdê z kimkolwiek dzieli³ komnatê? Wynocha! W koñcu by³em tu pierwszy!~
+
+//#8324
+@40102 = ~Dzielcie ze mn¹ pokój jak d³ugo zechcecie. Naprawdê lubiê towarzystwo.~
+
+//#9178
+@40103 = ~Obetnê wam uszy, jeœli zbli¿ycie siê choæ o krok!~
+
+//#8348
+@40104 = ~Wynocha, g³upcy! Nie ¿yczê sobie, ¿ebyœcie tu wêszyli i wtykali nos w nie swoje sprawy!~
+
+//#8349
+@40105 = ~W¹tpiê, byœcie mogli z kimœ powa¿nie porozmawiaæ - szczególnie, ¿e Pani przesta³a œpiewaæ. Jeœli ten g³os do nas nie wróci, wielu zmieni siê ju¿ na zawsze...~
+
+//#8350
+@40106 = ~Wetknijcie coœ w gêbê tego przeklêtego barda, zanim zatkam mu usta butem!~
+
+//#8351
+@40107 = ~Ju¿ raczej wolê ws³uchiwaæ siê w t¹ przeklêt¹ ciszê, spowodowan¹ brakiem Pani, ni¿ w twoje zawodzenie. I nie zmuszaj mnie, ¿ebym powtarza³ to raz jeszcze.~
+
+//#8373
+@40108 = ~Hej, koledzy, powinniœmy machn¹æ siê do G³êbokich Piwnic i poderwaæ jakieœ dziewczynki. Co wy na to?~
+
+//#8799
+@40109 = ~Nie mam nic cennego w domu. Zostawcie mnie, proszê.~
+
+//#8800
+@40110 = ~Stra¿nicy z radoœci¹ zmusz¹ was do wyjœcia! Mam ich wezwaæ, czy sami sobie pójdziecie?~
+
+//#8801
+@40111 = ~Stra¿e! Z³odzieje! Mordercy!~
+
+//#8802
+@40112 = ~Nie opuszczam domu zbyt czêsto, tote¿ niewiele wiem o tym, co dzieje siê we mieœcie. Dlaczego nie weŸmiecie sobie tej sztuki z³ota i nie zabawicie siê? W dzielnicy targowej znajdziecie wszystko, czego wam trzeba.~
+
+//#9173
+@40113 = ~Zostawcie mnie! Nadu¿yliœcie mojego zaufania!~
+
+//#8228
+@40114 = ~Oooo, spryciarze! Podgl¹danie jest zabawne, prawda kochanie?~
+
+//#9105
+@40115 = ~On nalega, aby nazywaæ mnie "Britannia". Krêci go byle co, no nie?~
+
+//#3520
+@40116 = ~Witam. Przykro mi, ale nie mogê wam teraz pomóc - muszê skoñczyæ moj¹ pracê.~
+
+//#3524
+@40117 = ~Chyba nie s³yszeliœcie co powiedzia³em! Potrzebujê samotnoœci. Mo¿ecie wyjœæ, PROSZÊ?~
+
+//#6370
+@40118 = ~Jestem zwyk³ym czytaczem i niewiele mogê wam powiedzieæ o œwiecie poza Candlekeep.~
+
+//#9095
+@40119 = ~Po tym co siê sta³o, nie powiem ani s³owa!~
+
+//#14135
+@40120 = ~Nie chcê mieæ nic wspólnego z takimi jak wy! IdŸcie prowadziæ swoje interesy gdzie indziej.~
+
+//#14138
+@40121 = ~Ostatnio interesy id¹ nienajlepiej. Ale dobrze widzieæ nowe twarze w mieœcie.~
+
+//#14139
+@40122 = ~Myœlicie, ¿e we Wrotach Baldura jest ruch? Ha, teraz to wymar³e miasto - wszystko przez te k³opoty z ¿elazem.~
+
+//#14140
+@40123 = ~Niewa¿ne, czego szukacie. Na pewno znajdziecie to we Wrotach Baldura.~
+
+//#14141
+@40124 = ~Czy ja was ju¿ kiedyœ nie widzia³em? Ostatnio pojawia siê niewiele nowych twarzy, za to du¿o k³opotów.~
+
+//#14142
+@40125 = ~Jaka szkoda, ¿e nie widzieliœcie naszego miasta przed nadejœciem tych wszystkich k³opotów. Handel umiera na naszych oczach.~
+
+//#7927
+@40126 = ~Na bogów zdrowia i dostatku, jak dobrze znów zobaczyæ "Pod Pomocn¹ D³oni¹"! Czy ktokolwiek mo¿e wyobraziæ sobie piêkniejszy widok ni¿ te mury wy³aniaj¹ce siê przed oczami, zw³aszcza, gdy przez ca³¹ drogê z Wrót Baldura mia³o siê na karku bandytów.~
+
+//#7936
+@40127 = ~Mówisz tak, jakbyœ czu³ ogromn¹ ulgê, ¿eœ tu dotar³. Jak zdradzieckie by³o przejœcie?~
+
+//#7938
+@40128 = ~Zamknij siê, che³pliwy durniu! Nic nas nie obchodzi opowieœæ o twoim przejœciu!~
+
+//#7940
+@40129 = ~Piwa dla tego znu¿onego wêdrowca! Jeœli chcemy, by zamkn¹³ gêbê, trzeba znaleŸæ dla niej inne zajêcie!~
+
+//#7928
+@40130 = ~Zdradzieckie? Gdyby ziemia otworzy³a siê pod moimi stopami i wyplu³a ze swego wnêtrza wszelkie robactwo, to nie by³oby to bardziej zdradzieckie. Bandyci ze wszystkich stron, a ja mia³em do obrony tylko swoje nogi. Wiesz, co sprawia³o, ¿e nie traci³em nadziei? Ten œwietlisty drogowskaz, ten przybytek radoœci, jakkolwiek to nazwiesz. "Pod Pomocn¹ D³oni¹" jest dla mnie jak dom. Bentley! Przyjacielu! Daj miodu w nagrodê za to, ¿e tak zachwalam to miejsce!~
+
+//#7944
+@40131 = ~Podró¿nik napotkany tu¿ za Wrotami Baldura powiedzia³ nam, ¿e Nabrze¿ny Trakt nie nale¿y do najbezpieczniejszych. Ponoæ wzd³u¿ ca³ej drogi czaj¹ siê bandyci.~
+
+//#7929
+@40132 = ~Co? Jak bardzo zdradzieckie? Wystarczaj¹co, abym musia³ zapomnieæ o gadaniu o swoich podró¿ach i przepchaæ siê do baru zanim zginê z pragnienia. Je¿eli macie uczulenie na bandytów, to unikajcie terenów na pó³nocy! Bentley! Podaj butlê taniego wina!~
+
+//#7930
+@40133 = ~Nie obchodzi mnie wasze zdanie. Je¿eli nie podzielacie mojej radoœci, to siê odsuñcie i siedŸcie cicho. Ja nie bêdê wchodzi³ wam w drogê, a wy róbcie to samo.~
+
+//#7931
+@40134 = ~Co za wstyd! Wygl¹dacie na podró¿nych, ale mówicie, jak gdyby podró¿ was denerwowa³a. Podczas gdy ja œwiêtujê, ¿e siê skoñczy³a, wam nie podoba siê, i¿ w ogóle siê odby³a. Jak to mówi¹, g³owa do góry, a lepiej bêdzie ci siê spa³o w nocy.~
+
+//#7932
+@40135 = ~To mog³oby nawet byæ œmieszne, gdyby zosta³o podane w inny sposób. Teraz jednak czujê siê obra¿ony. Z drugiej strony, nie powinno siê zbyt d³ugo pamiêtaæ o urazach. Postaram siê o was nie myœleæ. Niech wam siê dobrze wiedzie... byle z dala od tego miejsca.~
+
+//#7933
+@40136 = ~HA! Znacie mnie dobrze, choæ nigdy siê nie spotkaliœmy. Teraz jesteœmy przyjació³mi na œmieræ i ¿ycie. Lepiej trzymajcie siê z dala od szlaków na pó³nocy, bo nasza przyjaŸñ mog³aby siê przedwczeœnie skoñczyæ.~
+
+//#7934
+@40137 = ~Wiêc mówiê temu goœciowi: "Je¿eli to jest twoja siostra, to gdzie jest moja ¯ONA?" Ha! Och, przepraszam, ¿e was oplu³em. Och, to znów moi przyjaciele! W³aœnie próbujê wypiæ wystarczaj¹co du¿o odwagi, ¿eby starczy³o mi jej na wyruszenie na szlak. Mo¿e jednak zostanê tu troszkê d³u¿ej; niebo siê przejaœni³o, ale za to w mojej g³owie zrobi³o siê strasznie ciemno.~
+
+//#7935
+@40138 = ~Niech to, ale niespodzianka - ci nudziarze wracaj¹ do œwiata radoœci. Mam nadziejê, ¿e tym razem oka¿ecie trochê wiêcej ¿yczliwoœci?~
+
+//#7942
+@40139 = ~Dobrzy przyjaciele! Napijcie siê ze mn¹!~
+
+//#5096
+@40140 = ~Hej, wy tam! Potrzebujê pieniêdzy i leczenia. Je¿eli wiecie, co dla was dobre, to zaraz mi to dacie!~
+
+//#5097
+@40141 = ~Kpisz, czy co? Jesteœ zwyk³ym hobgoblinem, wiêc dlaczego nie mielibyœmy ciê po prostu zabiæ?~
+
+//#5098
+@40142 = ~WeŸ te 25 sztuk z³ota.~
+
+//#5099
+@40143 = ~Dlaczego mielibyœmy ci pomagaæ?~
+
+//#5100
+@40144 = ~Dobra robota, wy s³abeusze przepraszaj¹cy, ¿e ¿yj¹!~
+
+//#5101
+@40145 = ~Nale¿ê do Ch³odu, bandy najemników. Jeœli chcesz, ¿eby moi kumple siê tob¹ zajêli, to wkurzaj mnie jeszcze bardziej.~
+
+//#5102
+@40146 = ~Dobra, dobra... Masz swoje 25 sztuk z³ota i zostaw nas w spokoju!~
+
+//#5103
+@40147 = ~Hmm... Na razie jesteœ sam, wiêc chyba zaryzykujemy.~
+
+//#5104
+@40148 = ~Grozisz nam? Chyba ci siê coœ popl¹ta³o, zdegenerowana, smrodliwy bestio. Zanim zakoñczymy twoje nêdzne ¿ycie, powinieneœ nas o nie b³agaæ... i mo¿e podaæ nieco informacji o tych Czarnych Szponach.~
+
+//#5105
+@40149 = ~Po¿a³ujecie tej decyzji.~
+
+//#5106
+@40150 = ~Czekajcie! Strasznie mi przykro, tylko mnie nie zabijajcie... b³agam. Opowiem wam o Czarnych Szponach.~
+
+//#5107
+@40151 = ~Dalej.~
+
+//#5108
+@40152 = ~Mo¿esz siê zamkn¹æ i zwiewaæ.~
+
+//#5109
+
+@40153 = ~Czarne Szpony to banda najemników, nale¿¹ca do grupy, która napada na kupieckie karawany. Ja zgubi³em siê parê dni temu, w trakcie napadu, gdy kilku z P³omiennej Piêœci zaczê³o mnie goniæ. Powiedzia³em wam wszystko co wiem.~
+
+//#7013
+@40154 = ~Hobgoblin powiedzia³ nam, ¿e pracuje dla kompanii najemników, znanej jako Ch³ód. Ch³ód grasuje na Nabrze¿nym Trakcie.~
+
+//#6259
+@40155 = ~Jestem tylko podrzêdnym cz³onkiem Ch³odu. Moj¹ grupê wynajêli Zhentarimowie; mamy utrudniaæ transport ¿elaza w tym rejonie.~
+
+//#7012
+@40156 = ~Hobgoblin, którego zauroczyliœmy powiedzia³ nam, ¿e dzia³a na zlecenie bandy najemników, znanej jako Ch³ód. Wed³ug niego Ch³ód pracuje dla Zhentarimów.~
+
+//#6260
+@40157 = ~Zostawcie mnie w spokoju!~
+
+//#15383
+@40158 = ~Witaj w moim sklepie. Ogl¹daj do woli, tylko spróbuj niczego nie zniszczyæ.~ 
+
+//#15384
+@40159 = ~Zachowam odpowiedni¹ ostro¿noœæ i uwagê. Co chcia³byœ mi pokazaæ?~
+
+//#15385
+@40160 = ~Nie martw siê, ju¿ wychodzê.~

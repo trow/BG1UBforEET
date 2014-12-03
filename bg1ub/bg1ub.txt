@@ -1,0 +1,233 @@
+Changes (v13.2):
+BG/BGT: Patch of FTOBE5 state 4 adapted to make it compatible with Dudleyfix: Patching of state trigger and state action conditioned with UNLESS, REPLACE_TRIGGER TEXT changed to ADD_STATE_TRIGGER FTOBE5 4
+BG/BGT: Patch of NOBL10 state 6 adapted to make it compatible with Dudleyfix: Patching of state trigger and state action conditioned with UNLESS, REPLACE_TRIGGER TEXT changed to ADD_STATE_TRIGGER NOBL10 6
+BG/BGT: Patch of NOBL11 state 2 adapted to make it compatible with Dudleyfix: Patching of state trigger and state action conditioned with UNLESS, REPLACE_TRIGGER TEXT changed to ADD_STATE_TRIGGER NOBL11 2
+BG/BGT: Patch of HALFG6 state 9 adapted to make it compatible with Dudleyfix: Patching of state trigger and state action conditioned with UNLESS, REPLACE_TRIGGER TEXT changed to ADD_STATE_TRIGGER HALFG6 9
+BG/BGT: Patch of IRONM2 state 3 adapted to make it compatible with Dudleyfix: Patching of state trigger and state action conditioned with UNLESS, REPLACE_TRIGGER TEXT changed to ADD_STATE_TRIGGER IRONM2 3
+BG/BGT: Patch of IRONM3 state 3 adapted to make it compatible with Dudleyfix: Patching of state trigger and state action conditioned with UNLESS, REPLACE_TRIGGER TEXT changed to ADD_STATE_TRIGGER IRONM3 3
+BG/BGT: Patch of MAREK state 5 adapted to make it compatible with Dudleyfix: Patching of state trigger and state action conditioned with UNLESS, REPLACE_TRIGGER TEXT changed to ADD_STATE_TRIGGER MAREK 5
+BG/BGT: Patch of NOBL4 state 7 adapted to make it compatible with Dudleyfix: Patching of state trigger and state action conditioned with UNLESS, REPLACE_TRIGGER TEXT changed to ADD_STATE_TRIGGER NOBL4 7
+BGT: Patch of HENTOL state 9 adapted to make it compatible with Dudleyfix: Patching of state trigger and state action conditioned with UNLESS, REPLACE_TRIGGER TEXT changed to ADD_STATE_TRIGGER HENTOL 9
+BGT: Patching of MINEC2 state 10: UNLESS added for BGT's TakePartyItem() action
+BG/BGT/Tutu: changed Albert's reward to %tutu_var%misc35 (horncoral gem) for all installs. Added REPLACE_TRANS_ACTION %tutu_var%ALBERT to erase bandit scalp reward from Baldurdash / BGT.
+
+Changes (v13.1):
+BG/BGT/Tutu: New component "Duke Eltan in the Harbor Master's Building".
+Tutu: Audio restorations of the core changes: German audio files tuned down to BGII-sound level.
+BGT: Installation of The Original Saga Music Playlist Corrections is skipped completely (BGT already covers this).
+BG/BGT/Tutu: Audio restorations of the core changes: Polish audio files provided by Promilus.
+BG/BGT/Tutu: New component "Prism and the Emeralds Tweak" (by plainab)
+BG/BGT: maltz.dlg now uses unused renamed store "tav0810"; shop01 -> tav0809, shop05 -> sto1116; Fix duplicate weapon store in SWBaldursGate_WeaponsStore2: SHOP03 -> SHOP05
+BG/BGT/Tutu: alyth uses shop tav0705 (by Miloch (BG) and Hurricane); 
+BG/BGT/Tutu: Fixes to Store Fixes: UBSTO01, UBSTO02, UBSTO03 are dublicated directly from game ressources
+BG/BGT/Tutu: correction of the weight in the expanded Wyvern Head's description (all languages) (by Hurricane)
+BG/BGT/Tutu: made the expanded Winter Wolf Pelt's description visible (by Hurricane)
+BG/BGT/Tutu: corrected all German sound reference strings to match the audio (by Hurricane)
+BG/BGT/Tutu: corrected all German tra files, revised some translations (by Hurricane)
+BGT: %tutu_scriptbg%MISC79 corrected so that Arkion does not take MISC79 ("Raissas skin") but the female body BGMISC79 (also corrected for itm spawn in the sewers).
+BGT: "Scar and the Sashenstar's Daughter: corrected the OUTER_SPRINT to %tutu_scriptbg%MISC79.ITM. Now the correct file BGMISC79 for the body is used instead of a replica of "Raissa's skin" (MISC79).
+Update to WeiDU 236
+
+Changes (v13):
+Update to WeiDU 231
+BG/BGT/Tutu: corrected readme (new Polish translation was wrongly announced as Russian translation)
+BG/BGT/Tutu: Imoen portrait patching now checks whether another portrait was assigned
+BG/BGT/Tutu: Assigns the SIL script as General script instead of Class script (component "Creature Corrections")
+BG/BGT/Tutu: Scar quest extention more extended (component "Scar and the Sashenstar's Daughter"): -making the ring a unique item, add more reply options that enable to restart the Scar quests if denied at the bridge, added reply options where missing to be able to return to the quests if not finished.
+BG/BGT/Tutu: Scar quest: fixes of quest rewards (component "Scar and the Sashenstar's Daughter")
+BG/BGT/Tutu: Spanish translation completed and proof-read (by Ancalagon el Negro)
+BG/BGT/Tutu: Italian version completed by Salk
+BG/BGT/Tutu: French version completed by Isaya
+BG/BGT/Tutu: Polish version completed by Bartek
+BG/BGT/Tutu: Russian version completed by prowler
+BG/BGT/Tutu: German version completed by jastey
+
+Tutu: Shilo Chen Ogre spawn fixed (missing %tutu_var% in _ar1900.baf)
+- files "ppglogofinal.ico" and "bg1ubplaceholder" moved from the backup-folder into the general bg1ub folder
+BG / BGT: Replaced "_" with "%tutu_var%" to the tp2 so that the Tanar'ri sound fix checks for "%tutu_var%durlag.mve" and not only for the Tutu-source.
+BG/BGT/Tutu: Component "Item Corrections and Restorations": Corrected sound reference for Bolt of Lightning to ~%tutu_scripte%FF_M23C~ in tp2.
+BG/BGT/Tutu: Changed in tp2 to lower case letters "ubquon" (Component "Quoningar, the Cleric").
+BG/BGT/Tutu: For the component "Elven Charm & Sleep Racial Resistance" added to tp2: REQUIRE_PREDICATE !FILE_EXISTS_IN_GAME ~cdelfcm0.eff~ @115
+to prevent installation if already installed via BGII fixpack.
+BGT/Tutu: merged the .d-file for the component "The Mysterious Vial" and changed subfolder to "cpm" instead of two seperate folders for Tutu and BGT.
+BGT/Tutu: By Jarl: Changed journal entries to UNSOLVED / SOLVED for the components  (added new lines if missing):
+-Edie, the Merchant League Applicant
+-Quoningar, the Cleric
+-Shilo Chen and the Ogre-Magi
+-The Mysterious Vial
+BGT: The audio restorations of the core changes will not be installed (all files are already imported by BGT).
+Tutu: The audio restorations of the core changes were reduced to the audio files not present in BGII.
+BGT/Tutu: The "%tutu_scripte"ff_p22c" file doesn't get installed any more since it was the wrong audio-file. 
+BGT: The "eff_p22c" file no longer replaces the BGII-resource.
+BG: added an UNLESS check to the charm fixes of FTOBE5.dlg (in dialogues/u!minor.d) if Dudley Fix is installed to prevent giving of two rings.
+BG/BGT/Tutu: Reward unified to 100 XP and %tutu_var%pot38 for "Corianna, the Petrified Ranger" in Creature restorations (ubcre.d).
+BGT/Tutu: "REPLACE %tutu_var%ARKION" for state 3 was taken out (scar/cpm/ubscar.d) (the original state does exactly the same thing)
+
+
+Changes (v12):
+BG/BGT/Tutu: added Polish translation (by Bartek)
+BG/BGT/Tutu: revised German translation (by Leomar)
+BG/BGT/Tutu: updated to WeiDU v215
+
+
+
+Changes (v11):
+BG/Tutu: fixed a stutter bug for Coran in the specific scenario that: (i) the player has killed the specific wyverns for the quest, (ii) Coran's timer runs out , and (iii) the player has not yet killed any standard non-specific wyverns yet
+BG/BGT/Tutu: Angelo now properly kills some player, not just Player2, so that Player2 already being dead does not result in no death
+BG/BGT/Tutu: fixed a problem with the party not being transferred to jail in Angelo notices Shar-Teel component
+BG/BGT/Tutu: updated compatibility checks for BG1NPC components
+
+
+
+Changes (v10):
+BG/BGT/Tutu: added Russian translation (by prowler)
+BG/BGT/Tutu: revised Italian translation (by Stone Angel and ilot)
+
+
+
+Changes (v9):
+BG/BGT/Tutu: fixed typo in Scar component compiling the override folder
+
+
+
+Changes (v8):
+BG: fixed installation on vanilla BG1 (missing CULT3.DLG and corrected BG1 vanilla install check)
+
+BGT: fixed journal entry issue with Scar
+BGT: fixed sound for BGWI924.SPL (WERE_01 to WEREG_01)
+BGT: corrected minor typo in an unused banter file BJAHEI.DLG
+BGT: fixed a bug with Thalantyr and Taerom not recognising the ore and vials
+
+Tutu: fixed installation of Creature Corrections on non-TotSC Tutu (missing _CULT3.DLG)
+Tutu: fixed patching of WYVERN in the Cloakwood cave
+
+BGT/Tutu: HALFEN2 now correctly imported
+
+BG/BGT/Tutu: fixed non-traified Kagain dialogue
+BG/BGT/Tutu: Added checks to item slot re-assignations in CamDawg's Inventory Checker, so not re-assignation is performed if slot already taken by another modification
+BG/BGT/Tutu: corrected patching of Blink Dog
+
+
+
+Changes (v7):
+BGT: fixed crash when going to store in Helm and Cloak
+BGT: installation no longer overwrites existing items
+BGT: fixed crash when going from Ice Island L2 back to L1
+BGT: fixed 'mauled' Halfling Enforcer (HALFEN) dialogue
+BGT: Berrun's dialogue in Mysterious Vial component now removes the journal entries of Nashkel mines
+BGT: renamed SPKI924.SPL to BGWI924.sPL
+
+Tutu: Raise Dead scroll now works
+Tutu: Ice Island Level 2 Restoration detects BG1Tutu as well as EasyTutu
+Tutu: corrected patching of READ4.DLG
+Tutu: fixed area script assignation in Durlag's Tower areas
+Tutu: on newer versions of EasyTutu, Baresh no longer transforms into a second Selaad Gan
+Tutu: corrected Cultist death variables
+Tutu: made Coran's wyverns unique
+Tutu: corrected imported strings containing sounds
+
+BGT/Tutu: Shilo-Chen no longer replaces Aoln
+BGT/Tutu: Edie takes only one potion, not the whole stack
+BGT/Tutu: Quoningar takes only one potion, not the whole stack
+BGT/Tutu: fixed Bunsen saying gibberish
+BGT/Tutu: fixed changes to Coran's dialogue (CORAN)
+BGT/Tutu: WAVC installation changed to OGG and is now language-sensitive
+BGT/Tutu: removed duplicate TIZ
+BGT/Tutu: added German translation (by Timothy)
+BGT/Tutu: fixed Hobgoblin (HOBGO5) with no set dialogue
+BGT/Tutu: Hobgoblin (HOBGO5) doesn't escape area if you provoke a fight, no longer uses INITDLG to start dialogue
+BGT/Tutu: updated Castilian translation (by Immortality - www.clandlan.net)
+BGT/Tutu: updated French translation (by Isaya and ForeverDream)
+BGT/Tutu: fixed REPLACE_ACTION_TEXT in stores (ubstores.d)
+BGT/Tutu: recoded Finishable Kagain Caravan quest component
+BGT/Tutu: removed WEIGHT parameter from inline bunsenfix.d and REPLACE block in ubscar.d (WeiDU ignores them)
+BGT/Tutu: fixed WEIGHTs for ubscar.d (WEIGHT #0 to put after NumTimesTalkedTo trigger)
+BGT/Tutu: fixed bug where Arkion would not take a body after it was delivered
+BGT/Tutu: fixed FAI Serving Wench not spawning correctly
+BGT/Tutu: 'nixed' Aldeth's ring of blur
+BGT/Tutu: Nobleman (NOBL9) now has 2 gold to give to the player
+BGT/Tutu: Edie now has 50 gold to reward the player
+BGT/Tutu: corrected misleading readme description of Coran and the Wyverns component
+BGT/Tutu: Blink Dog (DOGBLINK) now has a real bite
+BGT/Tutu: Minor Dialogue Restorations now features major consistency improvements to Chapter 7 dialogue
+BGT/Tutu: fixed patching of Baresh
+
+
+
+Known issues
+BG: Edie and Quoningar still take the entire stack, even if TakePartyItemNum used
+HOBGO5 override script: conflicts with SCS component
+
+
+
+Changes (v6):
+-BGT: Corrected dialogue assignation or numerous BG1-imported CREs (was Tutu naming)
+-BGT: Corrected IMOEN.CRE portrait assignation (was Tutu naming)
+-BGT: Corrected UBSHOPGE.CRE dialogue assignation (was Tutu naming)
+-BGT: Corrected random treasure patching in "Item Corrections and Restorations"
+-BGT: Fixed a bug where Thalantyr takes vials only upon the second time he is spoken to
+
+-Tutu: Corrected setting of EDIE.CRE death variable
+-Tutu: Fixed some problems with the component "Finishable Kagain Quest"
+
+-BGT/Tutu: Now installs on BGT/Tutu using a combined installer
+-BGT/Tutu: Assigned script to the new area in the component "Ice Island Level Two Restoration"
+-BGT/Tutu: Corrected English description of proficiency for 'Root of the Problem'
+-BGT/Tutu: Merged Extra4b2.tra with Extra.tra
+-BGT/Tutu: Replaced all EXTEND_TOPs with EXTEND_BOTTOMs
+
+
+
+Changes (v4b4):
+-BGT: Scripts are no longer assigned to areas since BGT-WeiDU v1.05a already does this
+-BGT: "Area Corrections and Restorations": Fixed a bug with the Firedrake Script Restoration that prevented it from working as well as a component of Ding0Tweak from installing
+-BGT: "Audio Restorations": Ghost Knight rare selection sounds of a shrieking Eagle no longer 'restored'
+-BGT: "Minor Dialogue Restorations": Fixed some serious errors that have or may have broken dialogues of Edwin and Jaheira
+-BGT: "Shilo Chen and the Ogre Magi": Added Northern Tales of the Sword Coast check
+-BGT: "Store, Tavern and Inn Fixes and Restorations": Fixed restoration of Alvanhendar's healing and sundries in Gullykin
+-BGT: "The Original Saga Music Playlist Corrections": Confirmed deprecated; not required in BGT-WeiDU
+
+-Tutu: Corrected issue with assignation of area scripts in BiggDU versions 202 and above
+-Tutu: Ghost Knight rare selection sounds of a shrieking Eagle no longer 'restored' in the component "Audio Restorations"
+
+-BGT/Tutu: Added Italian translation (by Andrea Colombo)
+-BGT/Tutu: The tileset now extracts correctly under Mac OS
+-BGT/Tutu: Updated Castilian translation
+-BGT/Tutu: Updated to BiggDU v202
+
+
+
+Changes (v4b31):
+-BGT: Fixed wrong dialogue filenames for some imported dialogues
+-BGT: Fixed a critical error that deactivate a large number of area scripts in BGT-WeiDU
+
+
+
+Changes (v4b3):
+-BGT: First BGT release (based upon the Tutu v4 beta 3)
+
+-Tutu: Removed redundant and erroneous \t regexps
+-Tutu: Component "Sarevok's Diary Corrections" now contains amended dates for the diary contents only
+-Tutu: Added BG1 StrRefs to tra\%s\Tutu.tra to simplify the translation process
+-Tutu: Corrected usability data for a number of the imported items
+-Tutu: Corrected identified description for 'Root of the Problem'
+-Tutu: Corrected general names for three imported books
+-Tutu: Corrected a problem with one of the imported commoners being copied with a wrong target filename
+-Tutu: Minor inconsequential code changes
+-Tutu: No more forced view of readmes
+
+
+
+Changes (v4b2):
+-Tutu: Added BG1NPC checks to components "Angelo Notices Shar-teel", "Finishable Kagain Caravan Quest", "Coran and the Wyverns", "Kivan and Tazok", "Branwen and Tranzig"
+-Tutu: Added placeholders for installation of all components
+-Tutu: Updated Finishable Kagain Quest
+-Tutu: Corrected bad StrRef for a line by Taerom in the Mysterious Vial component
+-Tutu: Added "Creature Corrections" compatibility with the BG1NPC "Add Non-joinable character portraits for quests and dialogues" component
+-Tutu: Added common code for Tutu area script assignment, replacing the older code checks
+-Tutu: Marked the following components for future deprecation: "Creature Corrections", "Store, Tavern, and Inn Fixes and Restorations", AR0717 crash fix in "Area Corrections and Restorations", "Permanent Corpses", "Elven Charm & Sleep Racial Immunity", "The Original Saga Music Playlist Corrections", "Sarevok's Diary Corrections"
+
+
+
+Changes (v4):
+-Tutu: First Tutu release

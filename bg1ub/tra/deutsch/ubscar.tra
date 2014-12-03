@@ -1,0 +1,42 @@
+//#15015
+@0  = ~Ah, gut abgehangen. Das habt Ihr wirklich gut gemacht. Hier habt Ihr 250 Goldmünzen, die stinken ja bekanntlich nicht... Na warte, Nemphre, ich krieg den Ring schon noch!~
+@1  = ~Ich erkenne den Ring. Er gehörte Sashenstars Tochter; sie war ebenfalls unter den Vermissten. Ich denke, die Familie hätte gerne eine angemessene Beerdigung für ihre Tochter. Wärt Ihr bereit, in die Kanalisation zurückzukehren und ihre Leiche zu bergen? Ihr könnt sie zu mir bringen, dann überbringe ich den Sashenstars die Nachricht.~
+@2  = ~Ich habe die Leiche bei mir. Sie ist derart exquisit bekleidet, dass ich mir schon dachte, sie müsse eine wichtige Person sein.~
+@3  = ~Ich werde auf keinen Fall in die stinkende Kanalisation zurückkehren. Ich bin sicher, Ihr habt einen Laufburschen, den Ihr hinunterschicken könnt, um die Leiche zu holen.~
+@4  = ~Wenn es dabei hilft, die trauernde Familie zu beruhigen, dann werde ich tun, was immer ich kann. Ich werde Euch die Leiche bringen.~
+@5  = ~Ich habe Besseres zu tun, als diese belanglosen Botengänge zu erledigen. Holt Euch die Leiche doch selbst.~
+@6  = ~Das habt Ihr gut gemacht. Vielleicht werden die Sashenstars nun etwas Frieden finden. Bitte nehmt diese 3000 Goldmünzen für das Bergen der Leiche. Wie auch immer, ich brauche einige Leute, die den Eisenthron näher untersuchen. Ich muss jetzt nur noch etwas Papierkram erledigen, dann werde ich draußen vor den Haupttoren des Quartiers der Flammenden Faust sein. Falls Ihr wünscht, über den Eisenthron zu sprechen, dann kommt dorthin und redet mit mir.~
+@7  = ~Ihr enttäuscht mich, aber ich danke Euch, dass Ihr die Kanalisation von der Plage befreit und den Ring zurückgeholt habt. Bitte nehmt diese 500 Goldmünzen als Bonus für das Zurückbringen des Ringes. Wie auch immer, ich brauche einige Leute, die den Eisenthron näher untersuchen. Ich muss jetzt nur noch etwas Papierkram erledigen, dann werde ich draußen vor den Haupttoren des Quartiers der Flammenden Faust sein. Falls Ihr wünscht, über den Eisenthron zu sprechen, dann kommt dorthin und redet mit mir.~
+@8  = ~Ihr seid wahrlich eine noble Person. Ich werde auf Eure Rückkehr warten.~
+@9  = ~Ah, Ihr seid zurückgekehrt. Habt Ihr die Leiche von Sashenstars Tochter dabei?~
+@10 = ~Ja, in der Tat. Hier ist sie.~
+@11 = ~Nein, noch nicht.~
+@12 = ~Ich habe meine Meinung geändert, Scar. Holt Euch die Leiche selber.~
+@13 = ~Ich sehe, dass Ihr die Leiche von Sashenstars Tochter mitgebracht habt. Habt Ihr vielleicht Eure Meinung geändert?~
+@14 = ~So was in der Art. Es wäre nett, wenn Ihr mir diese Leiche jetzt abnehmt, danke.~
+@15 = ~Ich verstehe. Ich bin ein viel beschäftigter Mann, kommt also bitte nicht zurück, ehe Ihr die Leiche habt.~
+@16 = ~Das ist die Leiche einer verdammten Adligen! Die bringt mir bloß 'nen Haufen Ärger. Könnt Ihr nicht die Leiche irgendeines Bauern finden?~
+
+/* new in v13 */
+@17   = ~Ihr... Ich habe von Euch gehört. Ihr könntet hilfreiche Dienste für mich und diese Stadt leisten. Wollt Ihr mir zuhören?~
+@18   = ~Es tut mir leid, aber ich arbeite im Moment für Euren stellvertretenden Kommandanten, und diese Untersuchungen möchte ich erst noch abschließen.~
+@19   = ~Ja, sagt mir, was Ihr wollt. Ich bin sicher, dass Scar seine Probleme alleine lösen kann.~
+@20   = ~Noch nicht... Zuerst muss ich noch etwas erledigen.~
+@21   = ~Ja, bitte sprecht.~
+@22   = ~Nicht so schnell. Zuerst möchte ich Euch sagen, dass ich in der Tat zu der Gruppe gehöre, die an dem Fiasko in den Minen von Nashkell beteiligt war.~
+@23   = ~Einen Moment. Ihr spracht davon, dass Ihr Hilfe benötigt. Ich wäre jetzt daran interessiert, für Euch zu arbeiten.~
+@24   = ~Ich bin damit noch nicht fertig.~
+@25   = ~Kehrt bitte zurück und bekämpft diese Kreaturen. Ich werde erst beruhigt sein, wenn ich weiß, dass das Gebäude der Sieben Sonnen von Monstern befreit und keine Person mehr in Gefahr ist.~
+@26   = ~Ich gebe auf.~
+@27   = ~Wir sind noch dran.~
+@28   = ~Selbstverständlich werden wir zurückkehren und diese Monster bekämpfen!~
+@29   = ~Ja, wir werden den Ring mit Freuden zurückgeben.~
+@30   = ~Ich werde noch einmal genauer nachsehen.~
+@31   = ~Ich denke, ich habe auch ihre Leiche gefunden.~
+@32   = ~Einen Ring habe ich zwar nicht gefunden, aber dies hier scheint ihre Leiche zu sein.~
+@33   = ~Das habt Ihr hervorragend gemacht! Dies wird der Familie Sashenstar helfen, etwas Frieden zu finden. Dennoch bin ich überzeugt, dass sie für den Ring als Erinnerungsstück dankbar wären.~
+@34   = ~Dafür habe ich jetzt wirklich keine Zeit.~
+@35   = ~Wenn Ihr die Zeit erübrigen könntet, bin ich sicher, dass die Familie Sashenstar sehr dankbar wäre.~
+@36   = ~Es freut mich, Euch wiederzusehen. Wie ist es gelaufen?~
+@37   = ~Ich suche immer noch nach Besitztümern von möglichen Opfern.~
+@38   = ~Wir haben einen Ring gefunden, der ungewöhnlich aussieht.~

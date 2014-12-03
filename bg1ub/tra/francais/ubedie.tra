@@ -1,0 +1,30 @@
+@0    = ~Il faut réussir un examen difficile pour entrer dans la Ligue des Marchands proche d'ici, alors je n'arrête pas d'étudier mais ça semble ne pas vouloir rentrer. Comme il s'agit de marchands, question honnêteté et intégrité, ils doivent pas être trop regardants, je pense ! Alors, si vous aviez une potion ou quelque chose capable d'augmenter mon intelligence ou ma sagesse juste provisoirement, ça me rendrait bien service !~
+@1    = ~Bien sûr, pourquoi pas ? Je n'ai jamais aimé les examens moi non plus. Je vais voir ce que je peux faire pour vous aider.~
+@2    = ~La jeune Edie m'a demandé mon aide pour tricher au terrible examen d'entrée de la Ligue des Marchands de la Porte de Baldur. Il faut reconnaître que ce ne serait pas très honorable mais peut-être qu'une potion influençant sa sagesse ou son intelligence ferait l'affaire...~
+@3    = ~Je ne vais pas vous aider à tricher à un examen !~
+@4    = ~Tenez, j'ai une Potion de génie. Est-ce que ça ferait l'affaire ?~
+@5    = ~Tenez, j'ai une Potion de focalisation mentale. Est-ce que ça ferait l'affaire ?~
+@6    = ~Tenez, j'ai une Potion de perspicacité. Est-ce que ça ferait l'affaire ?~
+@7    = ~Non, je ne vous aiderai pas. J'espère que vous échouerez à votre examen.~
+@8    = ~Bien le bonjour. J'espère que vous m'avez rapporté quelque chose de spécial...~
+@9    = ~En fait, j'ai décidé que vous aider à tricher à l'examen me mettrait mal à l'aise. Toutes mes excuses.~
+@10   = ~N'y pensez plus. Je ne vous aiderai pas et j'espère que vous échouerez.~
+@11   = ~Non, pas encore. Mais je continuerai de chercher.~
+@12   = ~Oui, je pense que ça devrait la faire ! Merci mille fois ! Tenez, 50 po. Je vous préviendrai du résultat.~
+@13   = ~Oui, je pense que ça devrait la faire ! Merci mille fois ! Tenez, 50 po. Je vous préviendrai du résultat. L'examen est dans une journée.~
+@14   = ~Quel curieux examen ! Tout l'intérêt de la chose était d'inciter les gens à tricher. "Profitez du moindre avantage", ont dit ensuite les instructeurs. Quand je leur ai raconté ce que vous m'aviez donné pour seulement 50 po, ils m'ont reçue avec les honneurs ! Le capitalisme, c'est vraiment bizarre. Enfin. Je devrais vraiment rentrer à la maison maintenant. Merci encore pour votre aide.~
+@15   = ~Ce n'est pas la peine de le prendre ainsi. Je vais simplement aller étudier ailleurs.~
+@16   = ~Bien, inutile de vous remercier, je suppose. Maintenant, si vous voulez bien me pardonner, il me reste des choses à étudier, et moins de temps pour le faire, grâce à vous.~
+
+// @2 with header:
+@17 = ~Triche à l'examen d'entrée
+
+La jeune Edie m'a demandé mon aide pour tricher au terrible examen d'entrée de la Ligue des Marchands de la Porte de Baldur. Il faut reconnaître que ce ne serait pas très honorable mais peut-être qu'une potion influençant sa sagesse ou son intelligence ferait l'affaire...~
+
+@18 = ~Triche à l'examen d'entrée
+
+J'ai changé d'avis et n'aiderai pas Edie à tricher pour son examen d'entrée dans la Ligue des Marchands de la Porte de Baldur.~
+
+@19 = ~Triche à l'examen d'entrée
+
+I could help young Edie with a magical potion. It might count as cheating, but considering she joined the Merchants' League some might say that's part of the job...~

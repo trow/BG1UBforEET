@@ -1,0 +1,8 @@
+IF
+  See([PC])
+  NumTimesTalkedTo(0)
+THEN
+  RESPONSE #100
+    SmallWait(2)
+    StartDialog("%tutu_var%hobgo5",[PC])
+END

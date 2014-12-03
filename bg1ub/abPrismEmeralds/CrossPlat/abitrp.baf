@@ -1,0 +1,38 @@
+IF
+  Dead("prism")
+  Global("abgf_GemInEye","GLOBAL",0)
+THEN
+  RESPONSE #100
+    Unlock("A6StatueRightEye")
+    Unlock("A6StatueLeftEye")
+    ActionOverride("A6StatueRightEye",DestroyItem("abgfEyeR"))
+    ActionOverride("A6StatueLeftEye",DestroyItem("abgfEyeL"))
+    SetGlobal("abgf_GemInEye","GLOBAL",3) //3 = not in eyes
+END
+
+IF
+  Opened([ANYONE])
+  Global("abgf_GemInEye","GLOBAL",0)
+  !Global("ab_GemsTrulyGone","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("abgf_BrokeInto","GLOBAL",1)
+    ActionOverride("Prism",Dialogue([PC])
+END
+IF
+  Opened([ANYONE])
+  Global("abgf_GemInEye","GLOBAL",1)
+THEN
+  RESPONSE #100
+  SetGlobal("abgf_GemInEye","GLOBAL",2) //2 is only 1 gem taken from statue
+  ReputationInc(-1) //only one rep point loss in total cause it reverts the rep point gain given by letting him finish the work
+  AddJournalEntry(@%AddJournal_0%%QUEST%)
+END
+IF
+  Opened([ANYONE])
+  Global("abgf_GemInEye","GLOBAL",2)
+THEN
+RESPONSE #100
+  SetGlobal("abgf_GemInEye","GLOBAL",3)
+  AddJournalEntry(@%AddJournal_1%%QUEST%)
+END

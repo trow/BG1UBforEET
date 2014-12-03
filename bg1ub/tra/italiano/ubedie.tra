@@ -1,0 +1,30 @@
+@0    = ~Occorre superare un grosso esame per entrare a far parte della Lega dei Mercanti da queste parti, ma nonostante il mio studio matto e disperatissimo le cose non mi entravano in testa. Trattandosi di mercanti, tuttavia, dubito siano particolarmente interessati a caratteristiche quali l'onestà e l'integrità... Se voi aveste una pozione o qualche altro intruglio che potesse rendermi più intelligente per il tempo necessario a superare l'esame, te ne sarei infinitamente grato.~
+@1    = ~Certo, perché no?  Io stesso non ho mai amato particolarmente i test.  Vedrò cosa posso fare per aiutarti.~
+@2    = ~Il giovane Edie mi ha chiesto aiuto per barare al famigerato esame d'ingresso della Lega dei Mercanti di Baldur's Gate. Sarebbe quantomeno eticamente discutibile ma forse un sorso di qualche pozione d'intelligenza o di saggezza potrebbe aiutarlo...~
+@3    = ~Cosa? Non intendo aiutarti a barare ad un esame!~
+@4    = ~Ecco, guarda: ho una Pozione di Genio.  Pensi possa esserti d'aiuto?~
+@5    = ~Ecco, guarda: ho una Pozione di Focalizzazione dei Pensieri .  Pensi possa esserti d'aiuto?~
+@6    = ~Ecco, guarda: ho una Pozione di Intuito.  Pensi possa esserti d'aiuto?~
+@7    = ~No, non ti aiuterò.  Anzi, spero ti boccino.~
+@8    = ~Beh, salve di nuovo.  Mi auguro siate tornato con qualcosa di speciale per me...~
+@9    = ~A pensarci bene, non sono esattamente a mio agio all'idea di aiutarti a barare a un esame.  Ti porgo le mie scuse.~
+@10   = ~Scordatelo.  Non ti aiuterò, e spero che tu sia bocciato.~
+@11   = ~No, non ancora.  Continuerò a cercare, comunque.~
+@12   = ~Si, direi proprio di si!  Mille grazie!  Eccovi 50 monete d'oro.  Vi farò sapere come sarà andata.~
+@13   = ~Si, direi proprio di si!  Mille grazie!  Eccovi 50 gp.  Vi farò sapere come sarà andata.  L'esame è domani.~
+@14   = ~Che strano esame... Praticamente era stato ideato al solo scopo di far barare i partecipanti in quel modo.  "Approfittate di qualunque vantaggio," ha detto l'istruttore.  Quando gli ho detto di aver ottenuto la pozione da voi per sole 50 monete, mi hanno accettato entusiasticamente!  Ah, le stranezze del capitalismo...  Beh, farei meglio a tornare a casa, ora.  Grazie ancora del vostro aiuto!~
+@15   = ~Non c'è affatto bisogno di essere così sgarbati.  Andrò a studiare da un'altra parte.~
+@16   = ~Beh, grazie di niente, a questo punto.  Ora, se volete scusarmi, ho più da cose da studiare e meno tempo a disposizione per farlo. Grazie a voi, naturalmente.~
+
+// @2 with header:
+@17 = ~Barare all'esame di ingresso
+
+Il giovane Edie mi ha chiesto aiuto per barare al famigerato esame d'ingresso della Lega dei Mercanti di Baldur's Gate. Sarebbe quantomeno eticamente discutibile ma forse un sorso di qualche pozione d'intelligenza o di saggezza potrebbe aiutarlo...~
+
+@18 = ~Barare all'esame di ingresso
+
+Ho cambiato idea e non aiuterò Edie a barare nell'esame di ingresso alla Lega dei Mercanti.~
+
+@19 = ~Barare all'esame di ingresso
+
+Potrei aiutare la giovane Edie con una pozione magica. Sembrerebbe una truffa, ma considerando il fatto che ha a che fare con la Lega dei Mercanti si può dire che sia parte del lavoro...~

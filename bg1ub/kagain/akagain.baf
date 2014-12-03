@@ -1,0 +1,23 @@
+IF
+  InParty(Myself)
+  GlobalTimerExpired("Kagain","GLOBAL")
+  Global("KagainCaravan","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("KagainCaravan","GLOBAL",3)
+    Dialogue([PC])
+END
+
+IF
+  InParty(Myself)
+  !GlobalTimerExpired("Kagain","GLOBAL")
+  Global("KagainCaravan","GLOBAL",2)
+  See("DLOSTKAG")
+  Range("DLOSTKAG",6)
+THEN
+  RESPONSE #100
+    //SetGlobalTimer again to ensure timer does not expire between now and when he starts dialogue
+    SetGlobalTimer("Kagain","GLOBAL",ONE_DAY)
+    SetGlobal("KagainCaravan","GLOBAL",3)
+    Dialogue([PC])
+END

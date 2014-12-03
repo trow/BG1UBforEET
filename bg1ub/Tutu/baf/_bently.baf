@@ -1,0 +1,11 @@
+IF
+  StealFailed([ANYONE])
+THEN
+  RESPONSE #100
+    Enemy()
+    Wait(3)
+    CreateCreature("_FLAMEN",[397.559],0)
+    CreateCreature("_FLAMEN2",[397.559],0)
+    CreateCreature("_FLAMEN2",[397.559],0)
+END
+

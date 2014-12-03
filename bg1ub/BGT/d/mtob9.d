@@ -1,0 +1,29 @@
+BEGIN ~MTOB9~
+
+IF ~NumTimesTalkedTo(0)
+~ THEN BEGIN 0
+  SAY @40109
+  IF ~~ THEN EXIT
+END
+
+IF ~NumTimesTalkedTo(1)
+~ THEN BEGIN 1
+  SAY @40110
+  IF ~~ THEN EXIT
+END
+
+IF ~NumTimesTalkedTo(2)
+~ THEN BEGIN 2
+  SAY @40111
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 3
+  SAY @40112
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 4
+  SAY @40113
+  IF ~~ THEN EXIT
+END

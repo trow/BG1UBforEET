@@ -1,0 +1,9 @@
+IF
+  InParty(Myself)
+  Dead("Tazok")
+  Global("UBKivanTazokDead","GLOBAL",0)
+THEN
+  RESPONSE #100
+           SetGlobal("UBKivanTazokDead","GLOBAL",1)
+           ActionOverride("Kivan",Dialogue([PC]))
+END

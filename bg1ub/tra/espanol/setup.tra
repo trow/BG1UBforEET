@@ -1,0 +1,445 @@
+//DOS prompts - use DOS encoding
+@90000 = ~El componente de BG1 NPC Project "BG1 NPC Project: Parte II (Busquedas e interacciones)" causa un conflicto con este componente.~
+@90001 = ~El componente de BG1 NPC Project "BG1 NPC Project: Instalaci¢n de nucleo" causa un conflicto con este componente.~
+@90002 = ~El componente de BG1 NPC Project "BG1 NPC Project: Parte I (conversaciones)" causa un conflicto con este componente.~
+@90003 = ~Northern Tales of the Sword Coast causa un conflicto con este componente.~
+
+@90010 = ~Instalaci¢n Tutu detectada.~
+@90011 = ~Instalaci¢n BGT detectada.~
+@90012 = ~Instalaci¢n BG detectada.~
+@90013 = ~Por favor, instalar sobre BG, BGT, o Tutu.~
+@90014 = ~Por favor, instalar sobre BGT o Tutu.~
+
+@0   = ~Restauraci¢n del nivel 2 de la Isla de Hielo~ 
+@1   = ~Este componente requiere la expansion Tales of the Sword Coast~
+
+@2   = ~El Recipiente Misterioso~ 
+@3   = ~Encuentro de Elminster Adicional~
+@4   = ~Angelo reconoce Shar-teel~ 
+@5   = ~Busqueda de la Caravana de Kagain con Final~
+@7   = ~Coran y los Wyverns~ 
+@8   = ~Kivan y Tazok~
+@9   = ~Branwen y Tranzig~ 
+@10  = ~Safana Coquetea~
+@12  = ~Recompensa de Albert y Rufie Apropiada~ 
+@13  = ~Entar Escudodeplata esta en su Casa~
+@14  = ~Scar y la Hija de Sashenstar~ 
+@17  = ~Quoningar, el Clerigo~
+@18  = ~Shilo Chen y los Ogro magos~
+@22  = ~Refuerzos Mercenarios del Puño Llameante~
+@23  = ~Correcciones a Criaturas~ 
+@24  = ~Restauracion a Criaturas~
+@26  = ~Nombres de Criaturas Restaurados~
+@58  = ~Restauraciones Menores de Dialogo~
+@59  = ~Restauraciones de Audio (ingles)~
+@94  = ~Correcciones y Restauraciones de Objetos~
+@100 = ~Correcciones y Restauraciones de Areas~
+@101 = ~Cadaveres Permanentes~
+@102 = ~Hechizado Elfico e Inmunidad Racial al Sueño~
+@103 = ~Correcciones a la Lista de Musica de la Saga Original~
+@104 = ~Correcciones del Diario de Sarevok~
+
+/* new v13.1 */
+// tp2 strings
+@116 = ~Mejora a Prism y las esmeraldas~
+
+@219   = ~Duque Eltan en el Edificio del capitán del puerto~
+
+
+
+//Game text - use Windows encoding
+@6    = ~Eddard Escudodeplata~
+
+@11   = ~Flirteo~
+
+@15   = ~Cuerpo de Mujer noble~
+
+@16   = ~Este es el cadáver de una mujer noble.~
+
+@19  = ~Guantes de robar~
+@20  = ~Guantes de robar
+Hace unos años, Fong Moo un famoso ladrón conocido tanto en Puerta de Baldur como en Athkatla, fue encontrado muerto en el camino desde la Puerta a Beregost. Parece que robó un artefacto a un gran mago e intentó escapar sin mucho éxito. Sus posesiones recayeron en un sobrino con la misma vocación que su tío, y se hizo muy bueno robando carteras. Si estos guantes eran mágicos antes de caer en manos de Fong o si la esencia de su maestro ha quedado impregnada en ellos, es algo que no se sabe. 
+
+ESTADÍSTICAS
+
+Robar:  +20% ~
+
+@21  = ~Edie, el Estudiante a Mercader de la Liga~ 
+
+@25  = ~Granjero~
+
+@27  = ~Kaitlin~
+@28  = ~Malicia~
+@29  = ~Henrette~
+@30  = ~Sari~
+@31  = ~Mabledale~
+@32  = ~Bunsen~
+@33  = ~Farthendell~
+@34  = ~Arlond~
+@35  = ~Joldenan~
+@36  = ~Carl~
+@37  = ~Jurgen~
+@38  = ~Berden~
+@39  = ~Dath~
+@40  = ~Solgen~
+@41  = ~Borland~
+@42  = ~Galteran~
+@43  = ~Davis~
+@44  = ~Sherman~
+@45  = ~Thurston~
+@46  = ~Quincy~
+@47  = ~Christian~
+@48  = ~Marlon~
+@49  = ~Lady Areana~
+@50  = ~Wade~
+@51  = ~Ludrug~
+@52  = ~Ted~
+@53  = ~Sarah~
+@54  = ~Selaad Gan~
+@55  = ~Baresh~
+@56  = ~Daese~
+@57  = ~Kaishas Gan~
+
+//@60-@88 moved to sound_tmp.tra
+@89  = ~Arreglos y Restauraciones a Tiendas y Tabernas~
+@90  = ~Artículos diversos y de Curación de Alvanhendar~
+@91  = ~Tienda Black Lily~
+@92  = ~Taberna~
+@93  = ~El Escudo Vigilante~
+
+@95  = ~Anillo de Piel robliza~
+@96  = ~Hacha de Bala - Asesino de Magos:
+
+Bala era un príncipe muy temperamental de un clan de enanos gully que fue esclavizado por el mago Thesk. Aunque Bala no tenía las facetas más cobardes de su raza, era mucho más sucio y molesto que los enanos gully normales. Cansado de su esclavitud, Bala subió hasta la guarida del mago elfo y le rompió el cráneo. Aunque los rumores digan que fue el hedor del enano lo que mató al mago, en realidad fue su hacha, que anuló las defensas mágicas del mago. Es obvio que el mismo Bala fue quién creó el hacha. El misterio yace en dónde se origina el poder. Luego de muchos años de asesinar magos, Bala murió, y nunca reveló el secreto a aquellos que tuvieron el valor de acercarse a su tremendo hedor. Algunos dicen que el poder del hacha se originaba en el odio de Bala a los magos.
+
+ESTADÍSTICAS:
+
+Aptitud especial: 
+  Magia equívoca afecta a la víctima con cada golpe recibido
+  (Magia equívoca: Cualquier criatura lanzadora de hechizos es afectada por esta propiedad. Cuando la criatura intenta lanzar un hechizo, tiene un 80% de probabilidades de fallo. Las criaturas pueden salvar contra hechizos con penalización de -2.)
+
+Daño: 1D8
+Tipo de daño: Cortante
+Peso: 6
+Factor de Velocidad: 7
+Tipo de talento: Hacha
+Tipo: Una mano
+
+No permitido a:
+ Clérigo
+ Druida
+ Ladrón
+ Mago~
+@97  = ~La cabeza cortada de un dragón es una visión tan terrible como tranquilizadora. Por muy horripilantes que sean sus fauces afiladas y llameantes sus ojos, existe el consuelo de saber que puede ser vencido por simples y humildes mortales.
+
+ESTADÍSTICAS:
+Peso: 30~
+@98  = ~El pelaje blanco y puro del lobo de invierno es suave y lujoso. Con frecuencia se cose en vestimentas tan diversas como las toscas camisas de los bárbaros de Uthgardt del norte y las estolas invernales de moda que llevan todas las damas nobles en la región de la Costa de la Espada.
+
+ESTADÍSTICAS:
+Peso: 10~
+@99  = ~El Ankheg es una criatura con forma de insecto de unos 3 ó 6 metros de largo que se suele encontrar en los bosques o tierras de agricultura.  Están recubiertos de placas o caparazones hechos de una sustancia llamada quitina que es sumamente dura y muy ligera. El tamaño, peso y la fuerza de los caparazones los convierten en un bien muy preciado en muchas situaciones, como por ejemplo en la creación de armaduras.
+
+ESTADÍSTICAS:
+Peso: 100~
+
+
+@105 = ~Son liderados por Sarevok Anchev.~
+@106 = ~Un hombre llamado Sarevok Anchev es responsable de la incriminación.~
+@107 = ~El vidente nos dijo que el líder del Trono de Hierro era Sarevok Anchev.~
+@108 = ~El vidente nos dijo que Sarevok Anchev fue quien nos incriminó por las muertes en Candelero.~
+@109 = ~[Nota para Davaeorn 1]Davaeorn,
+
+He recibido vuestro pedido para más esclavos. Os serán enviados lo antes posible. Las cosas van bien en Puerta de Baldur. Hemos comprado una de las mansiones nobles del oeste como base de operaciones. Es un edificio antiguo, probablemente construido antes de la erección del muro de piedra. Su construcción hace que sea casi impenetrable para aquellos que quieran robar. Recordad preguntarle a Yeslick si le gusta su nueva habitación.
+
+Rieltar.
+Eleint 14, 1367~
+@110 = ~[Nota para Davaeorn 2]Davaeorn,
+
+Nuestros planes van bien. Sarevok ha llegado desde nuestros cuarteles en Ordulin. Trae noticias de nuestros superiores; están satisfechos con nuestro progreso. Planeo poner a Sarevok como comandante de nuestras fuerzas mercenarias en la región. Él ya ha enviado a su subordinado, Tazok, al Bosque del Diente Afilado para tomar el comando de las fuerzas que se encuentran allí.  Las cosas están tranquilas en Puerta de Baldur. Hemos puesto a nuestro primer agente entre los cargos de los Siete Soles.
+
+Rieltar.
+Uktar 4, 1367~
+@111 = ~[Nota para Davaeorn 3]Davaeorn,
+
+Como habéis podido escuchar, el veneno del hierro ha comenzado a hacer efecto en la costa. Con la mayoría de las importaciones de hierro siendo interceptadas por Tazok, casi todo proviene de la zona infectada de Nashkel. Con el levantamiento sythillisiano en Amn, nos aseguramos de que ninguna fuerza de la nación sea capaz de tomar acción contra nuestras fuerzas mercenarias. Sin embargo, El Puño Llameante ha capturado a varios mercenarios de la Garra Negra. Todos los capturados han dicho ser aliados de los Zhentarim, desviado la atención sobre el Trono de Hierro. Envié a Tranzig a trabajar con los mercenarios transportando el hierro a vuestra base en el Bosque de las Capas. Ha traído varias bolsas de contención para que de esa manera pueda transportar él solo el hierro al Bosque de las Capas, reduciendo la posibilidad de que el Puño Llameante pueda encontrar vuestro escondite.
+
+Rieltar.
+Ches 21, 1368~
+@112 = ~El diario personal de Sarevok
+
+Este diario parece importante. Deberíais guardarlo, porque puede ser una pieza incriminatoria contra Sarevok, además de poder comprender mejor a su escritor. Algunas de las entradas más relevantes leen lo siguiente:
+
+
+21 de Nightal, 1366:  Padre parece estar tramando algo importante, pero como es usual, no me revela los detalles del plan. Las conversaciones en su estudio se desvían hacia Bosque de las Capas y sus defensas naturales, y el extraer agua de las cuevas. No he podido sacar nada en concreto de esto, ni sé quiénes son los hombres que le visitan.  Esto cambiará.
+
+11 de Ches, 1367:  Otro sueño violento. Otra vez era niño, y me ladraba un perro, por eso lo maté con la daga que tenía en la mano, la misma daga de hueso de los otros sueños. Madre comenzó a reprenderme y por eso le corté la garganta. Su sangre era fresca, pero yo ya tenía sangre antigua en mis manos, y mis dedos se habían transformado en garras. La cabeza del perro volvió a la vida; sus ojos negros. "De tal padre, tal hijo", dijo. Estaba calmado mientras soñaba, pero cuando desperté me di cuenta de que había estado llorando. ¿Es esto flaqueza? Debo quitarla de mí.
+
+14 de Mirtul, 1367:  La ceremonia que marca el final de mi entrenamiento como portador de muerte no me pareció especial, pero mi actuación impresionó a Padre. Me llevó a un lado y me dijo que mañana me revelará lo que ha estado tramando estos meses, e incluso me ofreció un rol de importancia allí, si sus asociados están de acuerdo. Me aseguró que es un plan con mucho alcance, y que no debo sentirme mal con mis responsabilidades. Me ha picado la curiosidad.
+Cythandria también estaba impresionada con mi actuación de la mañana, tanto que le costó horas el poder expresar su aprecio. Cuando nos acercamos el uno al otro me acuerdo de lo bien que me sentí al encontrar a alguien a quien no le repeliera mi afinidad a la muerte, pero hoy me di cuenta de que su sed no es como la mía:  Ella no tiene ningún deseo en acercarse y hacerlo ella misma, prefiere mirar las cosas desde fuera. Y si siente ese deseo de sangre como yo, o si es solamente algo que le excita, no lo sé... pero me temo que es la segunda opción.
+
+15 de Mirtul, 1367: Padre me ha comentado su secreto, y a decir verdad, es bastante patético y nada excitante. Todo lo que tiene es la localización en el Bosque de las Capas, del clan enano Orothiar, y de acuerdo con él el hierro de la cueva sigue ahí cuando se inundó accidentalmente hace años.  Bah. ¿¡Hierro!? Ya me lo figuraba, pero con todo el secreto y precaución de Padre, me imaginaba algo bastante más importante que una estúpida mina de hierro. ¿Dónde está la gloriosa sangre que me espera? No he gastado años de mi vida en entrenamiento sólo para asistir a Padre en sus tonterías. Necesito algo más importante y excitante que malgastar mis habilidades en esto. Necesito matar algo que merezca la fuerza que he sentido crecer en mí.
+
+8 de Flamerule, 1367:  Hoy padre me presentó a sus subordinados, Davaeorn y Tranzig, que han viajado a la mina escondida y confirmado que volverá a ponerse activa. 
+Esta noche se me acercó un hombre en harapos que no me dio su nombre, pero me dio un libro y dijo que regresaría. El libro no vale nada, es un recuento de la Era de los Trastornos, y está en una condición terrible también; casi todas las hojas están rotas.  Sin embargo, algo de ese hombre me dice que es más que un simple lunático.
+
+9 de Flamerule, 1367:  El sueño de esta noche fue muy extraño: estaba en el templo, pero todos los sacerdotes tenían MI cara, y una daga de hueso como la mía. Miré al altar dónde había estado antes, pero en vez de mí, estaba el libro que me dieron ayer. Tenía la daga, y cuando se la clavé al libro, sangró. El libro, y la sangre del libro se convirtieron en alguna clase de energía mágica que se evaporó en el aire. Me desperté sintiendo un frío que me rajaba el corazón. Inmediatamente examiné el libro. Estaba roto adrede: Las únicas páginas que no estaban rotas hablaban de Baal y sus esfuerzos para asegurar su legado. Cuanto más lo pienso, más dudo en escribirlo, incluso aquí.
+
+14 de Eleint, 1367: Cormyr ha abolido el Trono de Hierro y ya no puede operar en sus fronteras. Aunque es un duro golpe al Trono de Hierro, es la oportunidad perfecta para que Padre se acerque al alto mando del Trono con su propuesta. Si todo va bien, podemos comenzar la operación dentro de un año. 
+En materias más personales, mi curiosidad acerca de mis ancestros crece; Necesito saber si los sueños dicen la verdad. No creeré lo que dicen los fantasmas sin tener pruebas, pero el sacerdote de Baal a quien confronté hoy no me dio nada: era viejo y murió rápidamente bajo mi mano. Si las palabras son ciertas, seguramente conseguiré acólitos más fuertes que él.
+
+20 de Eleint, 1367:  El hombre en harapos reapareció, esta vez sin su disfraz. Da el nombre de Winski Perorate, y confirma mis sospechas: soy uno de los muchos engendros de Baal.  Dice haber aprendido de un acechador de muerte, y conoce los signos. Ha pasado años viajando, encontrando tantos hijos como puede, pero parece que yo soy el más prometedor, y parece querer entrenarme como su alumno. Me dijo que no podía haber elegido un camino mejor que el de portador de muerte. Creo que voy a disfrutar mucho de esto.
+
+28 de Eleint, 1367:  Davaeorn reporta que la mina en el Bosque de las Capas ha sido dragada y está lista para su uso. Esta revelación servirá para convencer a los líderes del Trono. Rieltar está creando una base en Puerta de Baldur, en la mansión de una familia noble destituida, y todo va muy bien. 
+
+19 de Marpenoth, 1367: El consejo del Trono de Hierro ha elegido ayudar a los planes de Padre. Se le ha dado todo lo que necesita, hasta el liderazgo del proyecto. He expresado interés en mi padre ya que ha prometido incluirme en las operaciones a lo largo de la Costa de la Espada. Me enviará a mí y a su representante a hacer contactos con grupos mercenarios operando en el este. Mencionó a madre en nuestra conversación: el cómo no debía ser desleal como ella. Ha dejado claro que yo sufriría su mismo final si lo era. Sus amenazas son débiles y vacías, pero por ahora no haré nada. 
+Me tienta el usar la oportunidad para visitar Candelero a la vuelta del viaje. Hay cosas sobre mi herencia que Winski no sabe, y las profecías de Alaundo pueden dar luz a esto.
+
+30 de Marpenoth, 1367:  Me encontré con los líderes del Escalofrío, ya de las Garras Negras. No me gusta Ardenor, comandante del Escalofrío, pero Taugosz parece ser hombre de palabra. Eso es bueno, porque tendré que trabajar con estos mercenarios:  Rieltar me apoya en ser el líder de la operación. Pero no servirá ya que el hijo adoptado del líder del Trono de Hierro no puede ser visto con bandidos, así que elegí al medio ogro Tazok; sus habilidades y lealtad a mí son satisfactorias.
+
+3 de Uktar, 1367:  Un nuevo sueño esta noche. Madre me hablaba, pero mientras lo hacía su cara se hinchaba y perdía el color. Su voz se hacía más débil, diciéndome que la salvara de Rieltar. Pude ver el garrote que le rompía el cuello, pero no hice nada. Fue sólo un sueño.
+
+8 de Uktar, 1367: Hoy llegué al nuevo cuartel general en Puerta de Baldur y reporté a Rieltar. El tonto insiste en llamarme su hijo, y por ahora le dejo. Asume que le soy leal porque me crió. Bueno, leal sí, siempre y cuando me sea útil. Me ha puesto como líder de las operaciones mercenarias, mientras él supervisa las intrigas de doppelganger y Davaeorn se encarga de la mina. La demostración del veneno mineral fue muy interesante.
+
+9 de Uktar, 1367: Winksi también se ha ocupado en mi ausencia, y hoy me dio la localización de la secta de Cyricistas, que han hecho muchos estudios acerca de Baal, especialmente de su sucesor. Tiene sentido que Cyric se interese en el hijo de su enemigo. Winski quiere capturar a algunos de sus líderes para averiguar qué saben, pero yo creo que debemos interrogarlos a todos ellos. Pero eso requiere más de dos personas, así que comenzaré a conseguir seguidores. Aunque sé que mi herencia debe permanecer en secreto, especialmente de Rieltar, es hora de que el Hijo del Asesinato tenga los acólitos que merece.
+
+14 de Uktar, 1367: Cythandria reaccionó a mi revelación justo como suponía: Se vio como reina o ídolo que adorar, los dos únicos roles para la consorte del Señor del Asesinato. Sólo luego de varios minutos de imaginarse sentada a mi derecha, pensó ella en jurar obediencia. Si pudiera elegir, no aguantaría semejante actitud, pero necesito construir una base de poder, así que la toleraré... por ahora. Podré corregirla luego.
+
+Fiesta de la Luna, 1367: Los Cyricistas son nuestros, y hemos comenzado a obtener información, con Zhalimar tomando mi lugar para otras cosas. Ordené que los miembros más jóvenes sigan vivos, para servir como ejemplos a los sacerdotes viejos y que ellos suelten información. Lo que preocupa a Winski es que un misterioso "Pupilo de Gorion" se menciona en las profecías, y parece tener un rol importante en la sucesión de Baal, pero no hay ningún dibujo o descripción de esta runa por ningún sitio, ni se sabe cuál puede ser su significado. Es una lástima que Gorion sea un nombre tan común.
+
+17 de Nightal, 1367:  Mulahey se ha establecido en las minas de Nashkel, y ya debe estar convirtiendo a los kóbolds para que le sigan como líder. Espero que comiencen pronto a contaminar el mineral, aunque puede que lleve algún tiempo para que se den cuenta.  Sólo unos pocos esclavos han comenzado a minar el hierro del Bosque de las Capas, aunque una vez que comiencen las incursiones de los bandidos, le proporcionaré a Davaeorn más esclavos. Ojalá pudiera hacer que Davaeorn se uniera a mi culto, sabiendo que secretamente adora a Baal, pero no confía en mí, incluso cuando he dejado caer pistas sobre mi herencia.
+
+29 de Nightal, 1367:  Tamoko ha mostrado gran habilidad en romper la moral de los Cyricistas. La forma en que mató a algunos de los miembros jóvenes, y luego reanimó sus cuerpos para que atacaran a sus camaradas que dormían, fue muy interesante de ver.  Sin embargo, me sorprendió su audacia al despertarme y levantarme de la cama para otra parte. No es que necesitara excusa para dejar a Cythandria: Ella se queja demasiado.
+
+6 de Hammer, 1368:  El Puño Llameante se ha dado cuenta de nuestra operación mercenaria, y ha despachado pequeños contingentes hacia la Vía de la Costa para defenderla de las incursiones de bandidos. Debo ordenar a todos los hombres que, si les capturan, digan ser parte de los Zheratrim, además de darles detalles sobre cómo hacerlo de forma convincente. Seguro que los Zhents en Darkhold no van a estar felices de que su nombre se haya usado falsamente, pero no podemos permitir que las autoridades nos encuentren. Mientras tanto, hemos infiltrado a Angelo en el Puño Llameante, y le estoy instruyendo en tácticas militares. Una vez que su talento sea reconocido, ascenderá y será un espía valioso bajo la nariz de Eltan.
+
+22 de Hammer, 1368: Más revelaciones de los Cyricistas: luego de un examen intenso, ya tenemos nombres y números. ¿Me pregunto qué es tan importante acerca de Saradush?  Parece que literalmente, Baal ha engendrado miles de hijos por todo Faerun, pero sólo veinte de ellos serán de importancia, y de ellos, cinco casi llegarán a hacer que los cielos tiemblen de miedo. Esto es muy prometedor. Pero parece que el sacerdote líder de Cyric sabe tan poco acerca del 'Pupilo de Gorion' como nosotros. ¡Maldición!  Deberé ir a Candelero después de todo.
+
+14 de Alturiak, 1368:  Al fin en Candelero, y como Winski está demasiado enfermo como para dejar Puerta de Baldur, mis estudios han ido bien. Los monjes son muy serviciales. Por lo que he leído, no hay duda que la sangre de Baal corre por mis venas.  Las profecías de Alaundo no son nada explícitas, pero creo que las entiendo. Los hijos de Baal llevan marcas de caos, tienen poder sin dirección, sentirán la sangre de un dios dentro, y serán causantes de muerte y destrucción, especialmente entre ellos mismos.  "Las muertes que traigan despertarán al padre, y a través de ellos se levantará." Las palabras son ambiguas, pero obviamente se refieren a que las muertes que los hijos produzcan harán que asciendan. Y como el padre es el Señor del Asesinato, el probar la valía va acorde a su causa. Veo lo que debo hacer. Matar a gran escala.
+
+15 de Alturiak, 1368:  Winski fue un tonto. "El pupilo de Gorion" no es un jeroglífico, si no un crío llamado <CHARNAME>, un poco menor que yo. Y Gorion aunque un poco más viejo, el hombre del templo de hace tantos años. Que irónico que la cara que me he memorizado todo este tiempo ha estado viviendo como monje prácticamente como vecino. No tengo nada para probarlo, pero creo que <CHARNAME> era ese bebé gritón con pañales mojados. ¿Y ESTA pequeña rata tiene un rol de monumental importancia en mi destino?  Es una idea ridícula. Hoy sólo pude mirarlo, pero parece que <CHARNAME> no es más que un patético ignorante, sin casi entrenamiento. No parece una figura que haga temblar deidades. Pero Gorion me preocupa. Parece que le interesa lo que leo; Debo tener cuidado y estudiar clandestinamente.
+
+16 de Alturiak, 1368: Por ahora me voy de Candelero, y no demasiado rápido, porque estoy seguro que Gorion ha percibido mi herencia. Ojalá pudiera matarlo, pero no creo que pueda hacerlo de forma segura dentro de esta biblioteca. De una cosa estoy seguro: <CHARNAME> es uno de los engendros de Baal. Todos los signos están ahí, y además explicaría la curiosidad de Gorion en mis estudios, así como la mención de <CHARNAME> en las profecías. Aunque no hay nada que pueda hacer ahora, tendré que regresar para matar al crío. Sería tonto dejar que uno de mis hermanos viva, especialmente siendo criado por Arpistas (estoy seguro que son aliados de Gorion). Y espero que el poder de Baal se divida entre los hijos restantes, así que obviamente debo ser quién quede vivo. Si voy a heredar el Trono de Baal, lo quiero todo para mí.
+
+19 de Alturiak, 1368: El último de nuestro pequeño culto a Cyric ha muerto, y creo que tenemos todo lo que necesitamos por ahora. Winski comparte mi opinión acerca de <CHARNAME> en que la muerte de ese niño es necesaria, pero me avisa que no lo mate hasta que pueda determinar el rol del "Pupilo de Gorion" con exactitud. Muy bien, puedo esperar. La salud de Winski se deteriora, así que ha nombrado a Semaj para que rastree a los posibles engendros en el área, y los atraiga al Trono de Hierro bajo pretensiones de negocios. A aquellos que considere una amenaza, los mataré yo mismo, y con los otros dejaré que Semaj se encargue. Discretamente he comisionado una armadura digna del Señor del Asesinato, y esperaré a llevar acabo mis actos fratricidas hasta que pueda vestirme.
+
+17 de Ches, 1368: Todo va bien. El mineral que viene de Nashkel ha comenzado a deteriorarse y los mercenarios han estado haciendo un buen trabajo parando a las caravanas en ruta hacia Puerta de Baldur. Aunque han capturado a algunos hombres, la historia Zhent aún aguanta, así que aún no desconfían del Trono de Hierro.  Pero tendré que tener cuidado con los agentes Zhent en los meses que vienen. 
+Estoy un poco decepcionado de Rieltar: Su habilidad manipulando este plan del hierro, para él no es más que una forma para subir en la jerarquía del Trono de Hierro. ¡Bah!  ¿A quién le interesan las intrigas infantiles de una organización mercantil cuando uno puede comandar naciones enteras? Ah, bueno. Su ceguera es mi ganancia.
+
+25 de Tarsakh, 1368: La armadura está completa, y es muy apropiada para la terrible presencia de un portador de muerte descendiente del Señor del Asesinato. Debo congratular a Winski por ayudarme con el diseño, especialmente los encantamientos adicionales que se despiertan solamente cuando están cerca de la presencia de la esencia de Baal. La espada estará lista dentro de uno o dos días, pero parece apropiado que mate a mi primer hermano con mis propias manos. Adiós, Colin de'Graage. Sois uno de los veinte. A Alaundo no le importáis, y a mí tampoco. 
+
+28 de Tarsakh, 1368: La Espada del Caos es gloriosa. Ha llegado el momento de encargarme de Gorion y de ese crío. Debo informar a mis hombres que estaré ausente por unos días. Cythandria estaba furiosa cuando se dio cuenta de que estaba tomando a Tamoko en vez de a ella. Tal vez esta sea la oportunidad para que ella me apoye en otras áreas además de la cama.
+
+2 de Mirtul, 1368:  Mi venganza sobre el viejo está completa. En realidad lo maté demasiado rápido; Quería el tiempo para mirarle a los ojos y recordarle de donde nos conocimos. No importa ya. Que tontos fueron él y su cachorro en abandonar Candelero escondiéndose en la noche, ninguno de los dos con demasiado equipo. Los agentes de Semaj los llevaron a una emboscada. Sin embargo, el crío se escapó, corrió asustado como un conejo luego del primer hechizo. Debería haberle dicho a Tamoko que lo siguiera, pero entre mi risa y mis deseos de venganza, se me pasó. Pero con el viejo tonto muerto, el tonto joven no debe ir lejos. Por lo que he visto, espero que alguien con la habilidad de <CHARNAME> se pierda en los bosques y muera en un día o dos. Un buen final para el alumno de alguien que pensó que yo era menos importante que un bebé llorón. Regreso a Puerta de Baldur, y a la lista de hermanos y hermanas que merecen morir. Para estar seguro, he contactado a Semaj y agregado el nombre de <CHARNAME> a la lista de los hermanos cuya muerte tiene recompensa.
+
+9 de Mirtul, 1368: ¡Bueno, bueno! No sólo <CHARNAME> no ha muerto comido por gibberlings, si no que ha sobrevivido los intentos de asesinato de los mercenarios de Semaj, se juntó con un grupo de aventureros y se encontró con el mayor de Nashkel.  Parece que éste sí que puede ser de cuidado. Aún así, parece que este grupito quiere interferir en las actividades de la mina; felizmente, Tazok y Tranzig han estado preparados para este tipo de cosas, y saben qué hacer.
+
+15 de Mirtul, 1368: La pérdida de Nashkel ha sido un golpe duro, pero podemos recuperarnos; en la reunión de emergencia convenimos en que la mejor solución sería enviar a nuestros propios hombres a Nashkel, si no dentro de la mina misma, y corromper lo más posible sin ser detectados. Sugerí que el momento más oportuno sería durante el tránsito: ya sea haciéndose pasar por conductores de vagones o guardias, nuestros hombres fácilmente pueden contaminar el hierro, ya que nadie estaría mirando, y en el evento de un ataque a nuestros mercenarios, los Garras Negras ya tendrían varios infiltrados en los rangos enemigos. Luego de un corto debate, hasta Davaeorn reconoció que era sabio. La mejor parte es que aunque sólo logremos contaminar PARTE del mineral que envía Nashkel, los rumores circularán y dirán que el mineral está tan contaminado como antes. Algunos dirán que hasta el grupo de aventureros fue una mentira que creó Nashkel para que la gente comprara su hierro. Mañana mismo le comentaré esto a Rieltar. Aún así, las noticias de que <CHARNAME> aún sigue vivo me molestan. Hablaré con Winski y atacaré. Personalmente. Si puedo encontrar tiempo.
+
+24 de Mirtul, 1368: ¡Maldita sea! No puedo creer los reportes. Con el campamento de Tazok destruido deberé establecer una base de operaciones y supervisarla yo mismo.  Rieltar y Davaeorn han accedido principalmente por mi armadura. No puedo ser reconocido y seguido hasta el Trono de Hierro. Pero maldita sea, sumando a la pérdida de hombres, esto tomará TODO mi tiempo, y tendré que utilizar todo mi escuadrón para buscar a <CHARNAME> y compañía. La situación se ve negra, <CHARNAME> ya sabe demasiado. Al menos su próximo movimiento es predecible; Davaeorn y unas personas elegidas por Rieltar ya han salido a guardar las minas personalmente. Dejaré a <CHARNAME> y su banda seguirles el rastro. Les dejaré INTENTARLO a través del Bosque de las Capas, y ojalá todos perezcan en el intento. A mí no me importa si encuentran la mina o no; los hombres pertenecen a Davaeorn y Rieltar, no a mí. Yo debo usar este tiempo para recolectar los mercenarios y hacer de ellos algo útil otra vez.
+
+9 de Kythorn, 1368: De regreso en Puerta de Baldur, por la reunión de emergencia.  Las noticias del Bosque de las Capas han hecho que Rieltar casi enloquezca de preocupación. Admito que las cosas no han salido como planeábamos, pero aún podemos usarlo en nuestra ventaja. Dudo que <CHARNAME> pueda cargar con una tonelada de hierro del Bosque de las Capas, por lo cual está allí esperando que lo recojamos. El truco debe estar en manipular la opinión pública: Debo encontrar la forma de culpar a <CHARNAME> ya que no puedo apartarme del Trono de Hierro aún. Al menos el próximo movimiento de <CHARNAME> es obvio: De aquí a Puerta de Baldur para incriminar al Trono de Hierro. Podría matarlos en las calles, pero no quiero causar impresión, y en todo caso, me necesitan en el campamento. He preparado a Zhalimar y su equipo para esperar a <CHARNAME>.
+
+12 de Kythorn, 1368: <CHARNAME> ha entrado finalmente en Puerta de Baldur, y se ha hecho amigo de Scar, pero aún no ha hecho movimiento contra el Trono de Hierro. Por el tono en su carta, Rieltar está en el límite del pánico, esperando que le caigan asesinos en cualquier momento. Me urge ir a la ciudad cuanto antes, mencionando siempre una reunión en un lugar seguro. Algo me dice que el cobarde está buscando cualquier excusa para estar alejado de <CHARNAME>. Felizmente, Tazok ha regresado a luchar, así que puede reanudar sus tareas mientras yo regreso a la ciudad y pongo las cosas en orden.
+
+14 de Kythorn, 1368: Conocía las tendencias pacifistas de Rieltar, pero nunca esperé que hiciera una reunión con los Caballeros del Escudo para PREVENIR una guerra que le daría beneficios. Nadie diría que mi 'padre' mortal es bueno, pero debo intervenir.  Pero el secreto es crucial ahora: Si la Rueda del Destino tiene que rodar bajo mi mano, debe ser de una forma indetectable. Por eso he informado a Rieltar que la banda de mercenarios de <CHARNAME> ha sido despachada y suplantada por una banda de dopplegangers. Por lo tanto, cuando entre en la reunión su pánico asegurará un final sangriento. Pero mucho tenemos que perder como para dejar algo sin hilar: Los dopplegangers y yo debemos estar presentes pero sin ser vistos. Les pediré a mis acólitos que hagan lo necesario. Felizmente, la secta de Cyric tenía textos viejos que resultaron ser útiles para entrar en Candelero y Winksi y Semaj ya han copiado todo lo que necesitamos.
+
+19 de Kythorn, 1368: Casi sin tiempo de escribir, pero no debo olvidarme de mi diario.  Los futuros muertos deben saber cómo se creó el Señor del Asesinato. Tal vez deba contratar un escriba cuando me lo permita el tiempo. Tal parece que no tuve que maniobrar con los libros de Cyric en las manos de <CHARNAME> ya que el Duque Eltan estuvo más que feliz de dárselos a mi chivo expiatorio. Hace unos momentos vi a <CHARNAME> entrar en Candelero, y espero que el drama comience en cualquier momento. Mi padre, Rieltar, está arriba con dos representantes de los Caballeros del Escudo. Como he previsto, él ha estado bloqueando mis intentos de escalar las hostilidades en la frontera. Lo siento, 'padre', pero mi herencia verdadera se pone en mi camino. Si ocurriera que el encuentro no produce derramamiento de sangre, me aseguraré de que los dopplegangers maten a Rieltar. Creo que un garrote sería perfecto.
+
+21 de Kythorn, 1368: En la cima del mundo. Con Thaldorn, Rieltar y Brunos muertos, <CHARNAME> bajo custodia por sus muertes y el Trono de Hierro a mi disposición, la ciudad entera está a mis pies, todo funciona tal y como Alaundo dijo. He anunciado mi intención de donar todo al esfuerzo de la guerra, y ahora que Escudo de Plata está fuera de mi camino, los rumores de elevarme a Gran Duque están comenzando a circular entre el populacho. Lo único malo es el mensaje que envié a Zhalimar no llegó a tiempo, robándome a seis de mis mejores hombres. Me he encargado personalmente del mensajero, y tal vez pueda hacer arreglos para poder ser yo mismo quien ejecute a <CHARNAME>, completando mi círculo de venganza.~
+~El diario personal de Sarevok
+
+Este diario parece importante. Deberíais guardarlo, porque puede ser una pieza incriminatoria contra Sarevok, además de poder comprender mejor a su escritor. Algunas de las entradas más relevantes leen lo siguiente:
+
+
+21 de Nightal, 1366:  Padre parece estar tramando algo importante, pero como es usual, no me revela los detalles del plan. Las conversaciones en su estudio se desvían hacia Bosque de las Capas y sus defensas naturales, y el extraer agua de las cuevas. No he podido sacar nada en concreto de esto, ni sé quiénes son los hombres que le visitan. Esto cambiará.
+
+11 de Ches, 1367: Otro sueño violento. Otra vez era niño, y me ladraba un perro, por eso lo maté con la daga que tenía en la mano, la misma daga de hueso de los otros sueños. Madre comenzó a reprenderme y por eso le corté la garganta. Su sangre era fresca, pero yo ya tenía sangre antigua en mis manos, y mis dedos se habían transformado en garras. La cabeza del perro volvió a la vida; sus ojos negros. "De tal padre, tal hijo", dijo. Estaba calmado mientras soñaba, pero cuando desperté me di cuenta de que había estado llorando. ¿Es esto flaqueza? Debo quitarla de mí.
+
+14 de Mirtul, 1367: La ceremonia que marca el final de mi entrenamiento como portador de muerte no me pareció especial, pero mi actuación impresionó a Padre. Me llevó a un lado y me dijo que mañana me revelará lo que ha estado tramando estos meses, e incluso me ofreció un rol de importancia allí, si sus asociados están de acuerdo. Me aseguró que es un plan con mucho alcance, y que no debo sentirme mal con mis responsabilidades.  Me ha picado la curiosidad.
+Cythandria también estaba impresionada con mi actuación de la mañana, tanto que le costó horas el poder expresar su aprecio. Cuando nos acercamos el uno al otro me acuerdo de lo bien que me sentí al encontrar a alguien a quien no le repeliera mi afinidad a la muerte, pero hoy me di cuenta de que su sed no es como la mía: Ella no tiene ningún deseo en acercarse y hacerlo ella misma, prefiere mirar las cosas desde fuera. Y si siente ese deseo de sangre como yo, o si es solamente algo que le excita, no lo sé... pero me temo que es la segunda opción.
+
+15 de Mirtul, 1367: Padre me ha comentado su secreto, y a decir verdad, es bastante patético y nada excitante. Todo lo que tiene es la localización en el Bosque de las Capas, del clan enano Orothiar, y de acuerdo con él el hierro de la cueva sigue ahí cuando se inundó accidentalmente hace años. Bah. ¿¡Hierro!? Ya me lo figuraba, pero con todo el secreto y precaución de Padre, me imaginaba algo bastante más importante que una estúpida mina de hierro. ¿Dónde está la gloriosa sangre que me espera? No he gastado años de mi vida en entrenamiento sólo para asistir a Padre en sus tonterías. Necesito algo más importante y excitante que malgastar mis habilidades en esto. Necesito matar algo que merezca la fuerza que he sentido crecer en mí.
+
+8 de Flamerule, 1367: Hoy padre me presentó a sus subordinados, Davaeorn y Tranzig, que han viajado a la mina escondida y confirmado que volverá a ponerse activa. 
+Esta noche se me acercó un hombre en harapos que no me dio su nombre, pero me dio un libro y dijo que regresaría. El libro no vale nada, es un recuento de la Era de los Trastornos, y está en una condición terrible también; casi todas las hojas están rotas.  Sin embargo, algo de ese hombre me dice que es más que un simple lunático.
+
+9 de Flamerule, 1367: El sueño de esta noche fue muy extraño: estaba en el templo, pero todos los sacerdotes tenían MI cara, y una daga de hueso como la mía. Miré al altar dónde había estado antes, pero en vez de mí, estaba el libro que me dieron ayer. Tenía la daga, y cuando se la clavé al libro, sangró. El libro, y la sangre del libro se convirtieron en alguna clase de energía mágica que se evaporó en el aire. Me desperté sintiendo un frío que me rajaba el corazón. Inmediatamente examiné el libro. Estaba roto adrede: Las únicas páginas que no estaban rotas hablaban de Baal y sus esfuerzos para asegurar su legado. Cuanto más lo pienso, más dudo en escribirlo, incluso aquí.
+
+14 de Eleint, 1367:  Cormyr ha abolido el Trono de Hierro y ya no puede operar en sus fronteras. Aunque es un duro golpe al Trono de Hierro, es la oportunidad perfecta para que Padre se acerque al alto mando del Trono con su propuesta. Si todo va bien, podemos comenzar la operación dentro de un año. 
+En materias más personales, mi curiosidad acerca de mis ancestros crece; Necesito saber si los sueños dicen la verdad. No creeré lo que dicen los fantasmas sin tener pruebas, pero el sacerdote de Baal a quien confronté hoy no me dio nada: era viejo y murió rápidamente bajo mi mano. Si las palabras son ciertas, seguramente conseguiré acólitos más fuertes que él.
+
+20 de Eleint, 1367: El hombre en harapos reapareció, esta vez sin su disfraz. Da el nombre de Winski Perorate, y confirma mis sospechas: soy uno de los muchos engendros de Baal. Dice haber aprendido de un acechador de muerte, y conoce los signos. Ha pasado años viajando, encontrando tantos hijos como puede, pero parece que yo soy el más prometedor, y parece querer entrenarme como su alumno. Me dijo que no podía haber elegido un camino mejor que el de portador de muerte. Creo que voy a disfrutar mucho de esto.
+
+28 de Eleint, 1367: Davaeorn reporta que la mina en el Bosque de las Capas ha sido dragada y está lista para su uso. Esta revelación servirá para convencer a los líderes del Trono. Rieltar está creando una base en Puerta de Baldur, en la mansión de una familia noble destituída, y todo va muy bien. 
+
+19 de Marpenoth, 1367: El consejo del Trono de Hierro ha elegido ayudar a los planes de Padre. Se le ha dado todo lo que necesita, hasta el liderazgo del proyecto. He expresado interés en mi padre ya que ha prometido incluirme en las operaciones a lo largo de la Costa de la Espada. Me enviará a mí y a su representante a hacer contactos con grupos mercenarios operando en el este. Mencionó a madre en nuestra conversación: el cómo no debía ser desleal como ella. Ha dejado claro que yo sufriría su mismo final si lo era. Sus amenazas son débiles y vacías, pero por ahora no haré nada. 
+Me tienta el usar la oportunidad para visitar Candelero a la vuelta del viaje. Hay cosas sobre mi herencia que Winski no sabe, y las profecías de Alaundo pueden dar luz a esto.
+
+30 de Marpenoth, 1367: Me encontré con los líderes del Escalofrío, ya de las Garras Negras. No me gusta Ardenor, comandante del Escalofrío, pero Taugosz parece ser hombre de palabra. Eso es bueno, porque tendré que trabajar con estos mercenarios:  Rieltar me apoya en ser el líder de la operación. Pero no servirá ya que el hijo adoptado del líder del Trono de Hierro no puede ser visto con bandidos, así que elegí al medio ogro Tazok; sus habilidades y lealtad a mí son satisfactorias.
+
+3 de Uktar, 1367: Un nuevo sueño esta noche. Madre me hablaba, pero mientras lo hacía su cara se hinchaba y perdía el color. Su voz se hacía más débil, diciéndome que la salvara de Rieltar. Pude ver el garrote que le rompía el cuello, pero no hice nada. Fue sólo un sueño.
+
+8 de Uktar, 1367: Hoy llegué al nuevo cuartel general en Puerta de Baldur y reporté a Rieltar. El tonto insiste en llamarme su hijo, y por ahora le dejo. Asume que le soy leal porque me crió. Bueno, leal sí, siempre y cuando me sea útil. Me ha puesto como líder de las operaciones mercenarias, mientras él supervisa las intrigas de doppelganger y Davaeorn se encarga de la mina. La demostración del veneno mineral fue muy interesante.
+
+9 de Uktar, 1367: Winksi también se ha ocupado en mi ausencia, y hoy me dio la localización de la secta de Cyricistas, que han hecho muchos estudios acerca de Baal, especialmente de su sucesor. Tiene sentido que Cyric se interese en el hijo de su enemigo. Winski quiere capturar a algunos de sus líderes para averiguar qué saben, pero yo creo que debemos interrogarlos a todos ellos. Pero eso requiere más de dos personas, así que comenzaré a conseguir seguidores. Aunque sé que mi herencia debe permanecer en secreto, especialmente de Rieltar, es hora de que el Hijo del Asesinato tenga los acólitos que merece.
+
+14 de Uktar, 1367: Cythandria reaccionó a mi revelación justo como suponía: Se vio como reina o ídolo que adorar, los dos únicos roles para la consorte del Señor del Asesinato. Sólo luego de varios minutos de imaginarse sentada a mi derecha, pensó ella en jurar obediencia. Si pudiera elegir, no aguantaría semejante actitud, pero necesito construir una base de poder, así que la toleraré... por ahora. Podré corregirla luego.
+
+Fiesta de la Luna, 1367: Los Cyricistas son nuestros, y hemos comenzado a obtener información, con Zhalimar tomando mi lugar para otras cosas. Ordené que los miembros más jóvenes sigan vivos, para servir como ejemplos a los sacerdotes viejos y que ellos suelten información. Lo que preocupa a Winski es que una misteriosa "Pupila de Gorion" se menciona en las profecías, y parece tener un rol importante en la sucesión de Baal, pero no hay ningún dibujo o descripción de esta runa por ningún sitio, ni se sabe cuál puede ser su significado. Es una lástima que Gorion sea un nombre tan común.
+
+17 de Nightal, 1367: Mulahey se ha establecido en las minas de Nashkel, y ya debe estar convirtiendo a los kóbolds para que le sigan como líder. Espero que comiencen pronto a contaminar el mineral, aunque puede que lleve algún tiempo para que se den cuenta.  Sólo unos pocos esclavos han comenzado a minar el hierro del Bosque de las Capas, aunque una vez que comiencen las incursiones de los bandidos, le proporcionaré a Davaeorn más esclavos. Ojalá pudiera hacer que Davaeorn se uniera a mi culto, sabiendo que secretamente adora a Baal, pero no confía en mí, incluso cuando he dejado caer pistas sobre mi herencia.
+
+29 de Nightal, 1367: Tamoko ha mostrado gran habilidad en romper la moral de los Cyricistas. La forma en que mató a algunos de los miembros jóvenes, y luego reanimó sus cuerpos para que atacaran a sus camaradas que dormían, fue muy interesante de ver. Sin embargo, me sorprendió su audacia al despertarme y levantarme de la cama para otra parte. No es que necesitara excusa para dejar a Cythandria: Ella se queja demasiado.
+
+6 de Hammer, 1368: El Puño Llameante se ha dado cuenta de nuestra operación mercenaria, y ha despachado pequeños contingentes hacia la Vía de la Costa para defenderla de las incursiones de bandidos. Debo ordenar a todos los hombres que, si les capturan, digan ser parte de los Zheratrim, además de darles detalles sobre cómo hacerlo de forma convincente. Seguro que los Zhents en Darkhold no van a estar felices de que su nombre se haya usado falsamente, pero no podemos permitir que las autoridades nos encuentren. Mientras tanto, hemos infiltrado a Angelo en el Puño Llameante, y le estoy instruyendo en tácticas militares: Una vez que su talento sea reconocido, ascenderá y será un espía valioso bajo la nariz de Eltan.
+
+22 de Hammer, 1368: Más revelaciones de los Cyricistas: luego de un examen  intenso, ya tenemos nombres y números. ¿Me pregunto qué es tan importante acerca de Saradush? Parece que literalmente, Baal ha engendrado miles de hijos por todo Faerun, pero sólo veinte de ellos serán de importancia, y de ellos, cinco casi llegarán a hacer que los cielos tiemblen de miedo. Esto es muy prometedor. Pero parece que el sacerdote líder de Cyric sabe tan poco acerca de la 'Pupila de Gorion' como nosotros. ¡Maldición!  Deberé ir a Candelero después de todo.
+
+14 de Alturiak, 1368: Al fin en Candelero, y como Winski está demasiado enfermo como para dejar Puerta de Baldur, mis estudios han ido bien. Los monjes son muy serviciales. Por lo que he leído, no hay duda que la sangre de Baal corre por mis venas.  Las profecías de Alaundo no son nada explícitas, pero creo que las entiendo. Los hijos de Baal llevan marcas de caos, tienen poder sin dirección, sentirán la sangre de un dios dentro, y serán causantes de muerte y destrucción, especialmente entre ellos mismos.  "Las muertes que traigan despertarán al padre, y a través de ellos se levantará." Las palabras son ambiguas, pero obviamente se refieren a que las muertes que los hijos produzcan harán que asciendan. Y como el padre es el Señor del Asesinato, el probar la valía va acorde a su causa. Veo lo que debo hacer. Matar a gran escala.
+
+15 de Alturiak, 1368: Winski fue un tonto. "La pupila de Gorion" no es un jeroglífico, si no una cría llamada <CHARNAME>, un poco menor que yo.  Y Gorion aunque un poco más viejo, el hombre del templo de hace tantos años. Que irónico que la cara que me he memorizado todo este tiempo ha estado viviendo como monje prácticamente como vecino. No tengo nada para probarlo, pero creo que <CHARNAME> era esa bebé gritona con pañales mojados. ¿Y ESTA pequeña rata tiene un rol de monumental importancia en mi destino? Es una idea ridícula. Hoy sólo pude mirarla, pero parece que <CHARNAME> no es más que una patética ignorante, sin casi entrenamiento. No parece una figura que haga temblar deidades. Pero Gorion me preocupa. Parece que le interesa lo que leo; Debo tener cuidado y estudiar clandestinamente.
+
+16 de Alturiak, 1368: Por ahora me voy de Candelero, y no demasiado rápido, porque estoy seguro que Gorion ha percibido mi herencia. Ojalá pudiera matarlo, pero no creo que pueda hacerlo de forma segura dentro de esta biblioteca. De una cosa estoy seguro: <CHARNAME> es una de los engendros de Baal. Todos los signos están ahí, y además explicaría la curiosidad de Gorion en mis estudios, así como la mención de <CHARNAME> en las profecías. Aunque no hay nada que pueda hacer ahora, tendré que regresar para matar a la cría. Sería tonto dejar que uno de mis hermanos viva, especialmente siendo criado por Arpistas (estoy seguro que son aliados de Gorion). Y espero que el poder de Baal se divida entre los hijos restantes, así que obviamente debo ser quién quede vivo. Si voy a heredar el Trono de Baal, lo quiero todo para mí.
+
+19 de Alturiak, 1368: El último de nuestro pequeño culto a Cyric ha muerto, y creo que tenemos todo lo que necesitamos por ahora. Winski comparte mi opinión acerca de <CHARNAME> en que la muerte de esa niña es necesaria, pero me avisa que no la mate hasta que pueda determinar el rol de la "Pupila de Gorion" con exactitud. Muy bien, puedo esperar. La salud de Winski se deteriora, así que ha nombrado a Semaj para que rastree a los posibles engendros en el área, y los atraiga al Trono de Hierro bajo pretensiones de negocios. A aquellos que considere una amenaza, los mataré yo mismo, y con los otros dejaré que Semaj se encargue. Discretamente he comisionado una armadura digna del Señor del Asesinato, y esperaré a llevar acabo mis actos fratricidas hasta que pueda vestirme.
+
+17 de Ches, 1368: Todo va bien. El mineral que viene de Nashkel ha comenzado a deteriorarse y los mercenarios han estado haciendo un buen trabajo parando a las caravanas en ruta hacia Puerta de Baldur. Aunque han capturado a algunos hombres, la historia Zhent aún aguanta, así que aún no desconfían del Trono de Hierro.  Pero tendré que tener cuidado con los agentes Zhent en los meses que vienen. 
+Estoy un poco decepcionado de Rieltar: Su habilidad manipulando este plan del hierro, para él no es más que una forma para subir en la jerarquía del Trono de Hierro. ¡Bah! ¿A quién le interesan las intrigas infantiles de una organización mercantil cuando uno puede comandar naciones enteras? Ah, bueno. Su ceguera es mi ganancia.
+
+25 de Tarsakh, 1368: La armadura está completa, y es muy apropiada para la terrible presencia de un portador de muerte descendiente del Señor del Asesinato. Debo congratular a Winski por ayudarme con el diseño, especialmente los encantamientos adicionales que se despiertan solamente cuando están cerca de la presencia de la esencia de Baal. La espada estará lista dentro de uno o dos días, pero parece apropiado que mate a mi primer hermano con mis propias manos. Adiós, Colin de'Graage. Sois uno de los veinte. A Alaundo no le importáis, y a mí tampoco. 
+
+28 de Tarsakh, 1368: La Espada del Caos es gloriosa. Ha llegado el momento de encargarme de Gorion y de esa cría. Debo informar a mis hombres que estaré ausente por unos días. Cythandria estaba furiosa cuando se dio cuenta de que estaba tomando a Tamoko en vez de a ella. Tal vez esta sea la oportunidad para que ella me apoye en otras áreas además de la cama.
+
+2 de Mirtul, 1368: Mi venganza sobre el viejo está completa. En realidad lo maté demasiado rápido; Quería el tiempo para mirarle a los ojos y recordarle de donde nos conocimos. No importa ya. Que tontos fueron él y su cachorra en abandonar Candelero escondiéndose en la noche, ninguno de los dos con demasiado equipo. Los agentes de Semaj los llevaron a una emboscada. Sin embargo, la cría se escapó, corrió asustada como un conejo luego del primer hechizo. Debería haberle dicho a Tamoko que la siguiera, pero entre mi risa y mis deseos de venganza, se me pasó. Pero con el viejo tonto muerto, la tonta joven no debe ir lejos. Por lo que he visto, espero que alguien con la habilidad de <CHARNAME> se pierda en los bosques y muera en un día o dos. Un buen final para la alumna de alguien que pensó que yo era menos importante que un bebé llorón. Regreso a Puerta de Baldur, y a la lista de hermanos y hermanas que merecen morir. Para estar seguro, he contactado a Semaj y agregado el nombre de <CHARNAME> a la lista de los hermanos cuya muerte tiene recompensa.
+
+9 de Mirtul, 1368: ¡Bueno, bueno! No sólo <CHARNAME> no ha muerto comida por gibberlings, si no que ha sobrevivido los intentos de asesinato de los mercenarios de Semaj, se juntó con un grupo de aventureros y se encontró con el mayor de Nashkel.  Parece que ésta sí que puede ser de cuidado. Aún así, parece que este grupito quiere interferir en las actividades de la mina; felizmente, Tazok y Tranzig han estado preparados para este tipo de cosas, y saben qué hacer.
+
+15 de Mirtul, 1368: La pérdida de Nashkel ha sido un golpe duro, pero podemos recuperarnos; en la reunión de emergencia convenimos en que la mejor solución sería enviar a nuestros propios hombres a Nashkel, si no dentro de la mina misma, y corromper lo más posible sin ser detectados. Sugerí que el momento más oportuno sería durante el tránsito: ya sea haciéndose pasar por conductores de vagones o guardias, nuestros hombres fácilmente pueden contaminar el hierro, ya que nadie estaría mirando, y en el evento de un ataque a nuestros mercenarios, los Garras Negras ya tendrían varios infiltrados en los rangos enemigos. Luego de un corto debate, hasta Davaeorn reconoció que era sabio. La mejor parte es que aunque sólo logremos contaminar PARTE del mineral que envía Nashkel, los rumores circularán y dirán que el mineral está tan contaminado como antes. Algunos dirán que hasta el grupo de aventureros fue una mentira que creó Nashkel para que la gente comprara su hierro. Mañana mismo le comentaré esto a Rieltar. Aún así, las noticias de que <CHARNAME> aún sigue viva me molestan. Hablaré con Winski y atacaré. Personalmente. Si puedo encontrar tiempo.
+
+24 de Mirtul, 1368: ¡Maldita sea! No puedo creer los reportes. Con el campamento de Tazok destruido deberé establecer una base de operaciones y supervisarla yo mismo.  Rieltar y Davaeorn han accedido principalmente por mi armadura. No puedo ser reconocido y seguido hasta el Trono de Hierro. Pero maldita sea, sumando a la pérdida de hombres, esto tomará TODO mi tiempo, y tendré que utilizar todo mi escuadrón para buscar a <CHARNAME> y compañía.  La situación se ve negra, <CHARNAME> ya sabe demasiado. Al menos su próximo movimiento es predecible; Davaeorn y unas personas elegidas por Rieltar ya han salido a guardar las minas personalmente. Dejaré a <CHARNAME> y su banda seguirles el rastro. Les dejaré INTENTARLO a través del Bosque de las Capas, y ojalá todos perezcan en el intento. A mí no me importa si encuentran la mina o no; los hombres pertenecen a Davaeorn y Rieltar, no a mí. Yo debo usar este tiempo para recolectar los mercenarios y hacer de ellos algo útil otra vez.
+
+9 de Kythorn, 1368: De regreso en Puerta de Baldur, por la reunión de emergencia.  Las noticias del Bosque de las Capas han hecho que Rieltar casi enloquezca de preocupación. Admito que las cosas no han salido como planeábamos, pero aún podemos usarlo en nuestra ventaja. Dudo que <CHARNAME> pueda cargar con una tonelada de hierro del Bosque de las Capas, por lo cual está allí esperando que lo recojamos. El truco debe estar en manipular la opinión pública: Debo encontrar la forma de culpar a <CHARNAME> ya que no puedo apartarme del Trono de Hierro aún. Al menos el próximo movimiento de <CHARNAME> es obvio: De aquí a Puerta de Baldur para incriminar al Trono de Hierro. Podría matarlos en las calles, pero no quiero causar impresión, y en todo caso, me necesitan en el campamento. He preparado a Zhalimar y su equipo para esperar a <CHARNAME>.
+
+12 de Kythorn, 1368: <CHARNAME> ha entrado finalmente en Puerta de Baldur, y se ha hecho amiga de Scar, pero aún no ha hecho movimiento contra el Trono de Hierro. Por el tono en su carta, Rieltar está en el límite del pánico, esperando que le caigan asesinos en cualquier momento. Me urge ir a la ciudad cuanto antes, mencionando siempre una reunión en un lugar seguro. Algo me dice que el cobarde está buscando cualquier excusa para estar alejado de <CHARNAME>. Felizmente, Tazok ha regresado a luchar, así que puede reanudar sus tareas mientras yo regreso a la ciudad y pongo las cosas en orden.
+
+14 de Kythorn, 1368: Conocía las tendencias pacifistas de Rieltar, pero nunca esperé que hiciera una reunión con los Caballeros del Escudo para PREVENIR una guerra que le daría beneficios. Nadie diría que mi 'padre' mortal es bueno, pero debo intervenir.  Pero el secreto es crucial ahora: Si la Rueda del Destino tiene que rodar bajo mi mano, debe ser de una forma indetectable. Por eso he informado a Rieltar que la banda de mercenarios de <CHARNAME> ha sido despachada y suplantada por una banda de dopplegangers. Por lo tanto, cuando entre en la reunión su pánico asegurará un final sangriento. Pero mucho tenemos que perder como para dejar algo sin hilar: Los dopplegangers y yo debemos estar presentes pero sin ser vistos. Les pediré a mis acólitos que hagan lo necesario. Felizmente, la secta de Cyric tenía textos viejos que resultaron ser útiles para entrar en Candelero y Winksi y Semaj ya han copiado todo lo que necesitamos.
+
+19 de Kythorn, 1368: Casi sin tiempo de escribir, pero no debo olvidarme de mi diario.  Los futuros muertos deben saber cómo se creó el Señor del Asesinato. Tal vez deba contratar un escriba cuando me lo permita el tiempo. Tal parece que no tuve que maniobrar con los libros de Cyric en las manos de <CHARNAME> ya que el Duque Eltan estuvo más que feliz de dárselos a mi chivo expiatorio. Hace unos momentos vi a <CHARNAME> entrar en Candelero, y espero que el drama comience en cualquier momento. Mi padre, Rieltar, está arriba con dos representantes de los Caballeros del Escudo. Como he previsto, él ha estado bloqueando mis intentos de escalar las hostilidades en la frontera. Lo siento, 'padre', pero mi herencia verdadera se pone en mi camino. Si ocurriera que el encuentro no produce derramamiento de sangre, me aseguraré de que los dopplegangers maten a Rieltar. Creo que un garrote sería perfecto.
+
+21 de Kythorn, 1368: En la cima del mundo. Con Thaldorn, Rieltar y Brunos muertos, <CHARNAME> bajo custodia por sus muertes y el Trono de Hierro a mi disposición, la ciudad entera está a mis pies, todo funciona tal y como Alaundo dijo. He anunciado mi intención de donar todo al esfuerzo de la guerra, y ahora que Escudo de Plata está fuera de mi camino, los rumores de elevarme a Gran Duque están comenzando a circular entre el populacho. Lo único malo es el mensaje que envié a Zhalimar no llegó a tiempo, robándome a seis de mis mejores hombres. Me he encargado personalmente del mensajero, y tal vez pueda hacer arreglos para poder ser yo mismo quien ejecute a <CHARNAME>, completando mi círculo de venganza.~
+
+
+@113   = ~Anillo sello~
+@114   = ~Este es un anillo sello con un rubí incrustado.~
+@115   = ~La funcionalidad de este componente ya está incluida o reemplazada por uno de los mods que ya tienes instalados.~
+
+
+
+//item strings
+@117 = ~Una esmeralda es un berilo verde y brillante, troceado en cuadros de líneas rectas, con un acabado rectangular en la gema pulida.  Las esmeraldas están conectadas con la salud, y por eso se usan de forma ornamental para tal propósito. Esta esmeralda está marcada con una pequeña 'L'. Había sido robada por Prism para usar en una estatua de su amor, Ellesime. Se piensa que esta gema iba a ser usada como un ojo izquierdo. Haya sido usada o no, hay una recompensa sobre ella para devolverla a las autoridades.~
+@118 = ~Una esmeralda es un berilo verde y brillante, troceado en cuadros de líneas rectas, con un acabado rectangular en la gema pulida.  Las esmeraldas están conectadas con la salud, y por eso se usan de forma ornamental para tal propósito. Esta esmeralda está marcada con una pequeña 'R'. Había sido robada por Prism para usar en una estatua de su amor, Ellesime. Se piensa que esta gema iba a ser usada como un ojo derecho. Haya sido usada o no, hay una recompensa sobre ella para devolverla a las autoridades.~
+ 
+//journal entries ##
+@119 = ~Prism es un tonto. Realmente se creyó que yo no sabía nada sobre las esmeraldas. Oh bueno... Mala suerte para él. Ganancia para mí.~
+@120 = ~Tal vez no estuvo bien, pero tras haber permitido a Prism completar su obra maestra final, robé uno de los ojos de la estatua. Seguro que alguien pagará mucho por él si lo vendo en el lugar correcto...~
+@121 = ~Tras algo de trabajo, finalmente quité la segunda esmeralda que Prism había usado en su obra maestra final.~
+@122 = ~La historia de Prism es verdaderamente triste.  Lástima que no tuviera un mejor final.  Ah, bueno, al final he ganado algo.  Una recompensa de 300 piezas de oro por la esmeralda que robó.~
+@123 = ~La próxima vez no me haré pasar por otro para ganar un poco de dinero. Aunque Oublek mantuvo su parte, al fin me compensaron por regresar las esmeraldas de Prism.~
+/* Unused line for Captain Brage Journal entry
+@ = ~La próxima vez no me haré pasar por otro para ganar un poco de dinero. Aunque Oublek mantuvo su parte, al fin me compensaron por entregar al Capitán Brage.~
+*/
+@124 = ~Logré llevarme algunas esmeraldas que el escultor Prism estaba usando como ojos en una estatua. Sin embargo, se dió cuenta. Tuve que matarlo cuando se me tiró encima con el cincel.~
+@125 = ~Una esmeralda dió una recompensa de 150 piezas de oro. Si llevo la otra esmeralda me pagarán otras 150. Debe estar cerca del sitio donde conseguí la primera.~
+@126 = ~Sólo conseguí una recompensa reducida por llevar una de las esmeraldas de Prism. Sólo 75 piezas de oro. Será mejor que consulte con otros mercaderes si llego a encontrar la otra esmeralda.~
+//journal entries for bg2 engine
+//Tutu
+@127 = ~Prism el escultor
+ 
+Prism es un tonto. Realmente se creyó que yo no sabía nada sobre las esmeraldas. Oh bueno... Mala suerte para él. Ganancia para mí.~
+@128 = ~Prism el escultor
+ 
+Tal vez no estuvo bien, pero tras haber permitido a Prism completar su obra maestra final, robé uno de los ojos de la estatua. Seguro que alguien pagará mucho por él si lo vendo en el lugar correcto...~
+@129 = ~Prism el escultor
+ 
+Tras algo de trabajo, finalmente quité la segunda esmeralda que Prism había usado en su obra maestra final.~
+@130 = ~Prism el escultor
+ 
+La historia de Prism es verdaderamente triste.  Lástima que no tuviera un mejor final.  Ah, bueno, al final he ganado algo.  Una recompensa de 300 piezas de oro por la esmeralda que robó.~
+@131 = ~Prism el escultor
+ 
+La próxima vez no me haré pasar por otro para ganar un poco de dinero. Aunque Oublek mantuvo su parte, al fin me compensaron por regresar las esmeraldas de Prism.~
+/* Unused line for Captain Brage Journal entry
+@ = ~Prism el escultor
+ 
+La próxima vez no me haré pasar por otro para ganar un poco de dinero. Aunque Oublek mantuvo su parte, al fin me compensaron por entregar al Capitán Brage.~
+*/
+@132 = ~Prism el escultor
+ 
+Logré llevarme algunas esmeraldas que el escultor Prism estaba usando como ojos en una estatua. Sin embargo, se dió cuenta. Tuve que matarlo cuando se me tiró encima con el cincel.~
+@133 = ~Prism el escultor
+ 
+Una esmeralda dio una recompensa de 150 piezas de oro. Si llevo la otra esmeralda me pagarán otras 150. Debe estar cerca del sitio donde conseguí la primera.~
+@134 = ~Prism el escultor
+ 
+Sólo conseguí una recompensa reducida por llevar una de las esmeraldas de Prism. Sólo 75 piezas de oro. Será mejor que consulte con otros mercaderes si llego a encontrar la otra esmeralda.~
+//BGT
+@210 = ~Prism, el ladrón de esmeraldas.
+ 
+Prism es un tonto. Realmente se creyó que yo no sabía nada sobre las esmeraldas. Oh bueno... Mala suerte para él. Ganancia para mí.~
+@211 = ~Prism, el ladrón de esmeraldas.
+ 
+Tal vez no estuvo bien, pero tras haber permitido a Prism completar su obra maestra final, robé uno de los ojos de la estatua. Seguro que alguien pagará mucho por él si lo vendo en el lugar correcto...~
+@212 = ~Prism, el ladrón de esmeraldas.
+ 
+Tras algo de trabajo, finalmente quité la segunda esmeralda que Prism había usado en su obra maestra final.~
+@213 = ~Prism, el ladrón de esmeraldas.
+ 
+La historia de Prism es verdaderamente triste.  Lástima que no tuviera un mejor final.  Ah, bueno, al final he ganado algo.  Una recompensa de 300 piezas de oro por la esmeralda que robó.~
+@214 = ~Prism, el ladrón de esmeraldas.
+ 
+La próxima vez no me haré pasar por otro para ganar un poco de dinero. Aunque Oublek mantuvo su parte, al fin me compensaron por regresar las esmeraldas de Prism.~
+/* Unused line for Captain Brage Journal entry
+@215 = ~Prism, el ladrón de esmeraldas.
+ 
+La próxima vez no me haré pasar por otro para ganar un poco de dinero. Aunque Oublek mantuvo su parte, al fin me compensaron por entregar al Capitán Brage.~
+*/
+@216 = ~Prism, el ladrón de esmeraldas.
+ 
+Logré llevarme algunas esmeraldas que el escultor Prism estaba usando como ojos en una estatua. Sin embargo, se dio cuenta. Tuve que matarlo cuando se me tiró encima con el cincel.~
+@217 = ~Prism, el ladrón de esmeraldas.
+ 
+Una esmeralda dio una recompensa de 150 piezas de oro. Si llevo la otra esmeralda me pagarán otras 150. Debe estar cerca del sitio donde conseguí la primera.~
+@218 = ~Prism, el ladrón de esmeraldas.
+ 
+Sólo conseguí una recompensa reducida por llevar una de las esmeraldas de Prism. Sólo 75 piezas de oro. Será mejor que consulte con otros mercaderes si llego a encontrar la otra esmeralda.~
+
+
+
+
+
+//oublek dialog
+@1000 = ~¡Una de las esmeraldas! La recompensa es de 150 monedas de oro.  Traedme la otra si es que la encontráis.~
+@1001 = ~¡La última esmeralda! La recompensa es de 150 monedas de oro. Bueno, os haréis muy reconocido entre los cazarrecompensas si seguís así.  Si es para mejor o peor, no lo sé.~ ~¡La última esmeralda! La recompensa es de 150 monedas de oro. Bueno, os haréis muy reconocida entre los cazarrecompensas si seguís así.  Si es para mejor o peor, no lo sé.~
+@1002 = ~¡Una de las esmeraldas! Qué bueno veros intentar ganar dinero limpiamente, aunque sea haciendo de cazarrecompensas. Os pagaré menos de lo anunciado. Traedme la otra si es que la encontráis.~
+@1003 = ~¡La última esmeralda! Qué bueno veros intentar ganar dinero limpiamente, aunque sea haciendo de cazarrecompensas.  Os pagaré menos de lo anunciado.  Nos quedaremos con el resto en caso de que decidáis... alterar los hechos en otros negocios.~
+@1004 = ~He venido a cobrar una recompensa.~
+ 
+//prism dialog
+@1100 = ~¡Cómo os atrevéis! ¡Cómo os atrevéis a quitar el brillo de sus ojos!~
+@1101 = ~Tengo mucho que hacer. ¿Pero tal vez podríais ayudar a un tonto escultor con una epifanía?  Por favor, guardad este lugar, porque seguro que vendrá Lobo Gris.  ¡Os lo pagaré con mis últimas posesiones!~
+@1102 = ~¡Esperad! Vos os llevásteis mis esmeraldas. Devolvedlas. Las necesito para terminar mi epifanía. Por favor. Os daré todo lo que poseo.~
+@1103 = ~Ya no las tengo. Se las di a las autoridades. Ya no terminaréis de esculpir ese trozo de piedra.~
+@1104 = ~Ya no las tengo. Las vendí para que las hagan collares.~
+@1105 = ~Sí, me las llevé. Aún tengo una. La otra hace tiempo la vendí.~
+@1106 = ~¿Qué es esto? ¿Un loco me acusa de robo? Morid por vuestros insultos.~
+@1107 = ~¡Esperad! Vos os llevásteis mi esmeralda. Devolvedla. La necesito para terminar mi epifanía. Por favor. Os daré todo lo que poseo.~
+@1108 = ~¿Todo lo que poseéis, eh? Muy bien.~
+@1109 = ~"Lo que poseéis" no me interesa.  Le llevaré estas gemas al guardia y cobraré la recompensa.~
+@1110 = ~No sé de qué estáis hablando.~
+@1111 = ~Dadme la que tenéis. Id a buscar la otra y traedla también. Debo completar esta epifanía. Os daré todo lo que poseo.~
+@1112 = ~Se la di a las autoridades. Ya no podréis recuperarla.~
+@1113 = ~No puedo. Se la di a las autoridades y vengo a por la otra.~
+@1114 = ~No puedo. Está vendida a un mercader, o guardada en algún sitio seguro.~
+@1115 = ~No tengo la gema, pero felizmente me llevaré todo lo que poseéis. Preparaos para morir.~
+@1116 = ~Devolvedla por favor. Debo completar mi epifanía. Os daré todo lo que poseo.~

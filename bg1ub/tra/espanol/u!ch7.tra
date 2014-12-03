@@ -1,0 +1,45 @@
+//#9665 - modified
+@0 = ~Sugar, una de las señoras de la noche de por aquí, me ha contado que Scar ha muerto. Era un buen hombre y casi me maldigo a mí mismo por haberlo abandonado, pero supongo que tenía otras cosas más urgentes que hacer.~
+
+//#9683 - modified
+@1 = ~He oído lo que cuenta Ivanne, único testigo de la muerte de Scar aparte de su asesino. Por lo que cuenta, Scar cayó en la trampa y tuvo una muerte espantosa a manos de otro doppelganguer, sin duda empleado por el Trono de Hierro, aunque Ivanne pensó que Angelo podría tener una buena causa. La agonía de Scar fue felizmente breve, al menos, aunque más por razones de sigilo que de compasión. Sí, he visto muchos de esas especies de espejos asquerosos últimamente, pero juro que no me acostumbro a sus malditas caras mutantes. Si tengo que llegar al fondo de este asesinato, sólo se me ocurre la torre del Trono de Hierro. Parece que todo lo demás carece de sentido.~
+@2 = ~He oído lo que cuenta Ivanne, único testigo de la muerte de Scar aparte de su asesino. Por lo que cuenta, Scar cayó en la trampa y tuvo una muerte espantosa a manos de otro doppelganguers, sin duda empleado por el Trono de Hierro, aunque Ivanne pensó que Angelo podría tener una buena causa. La agonía de Scar fue felizmente breve, al menos, aunque más por razones de sigilo que de compasión. Sí, he visto muchos de esas especies de espejos asquerosos últimamente, pero juro que no me acostumbro a sus malditas caras mutantes. Si tengo que llegar al fondo de este asesinato, sólo se me ocurren los barracones del Puño Llameante, donde se dice que el duque Eltan yace con una palidez enfermiza. Parece que todo lo demás carece de sentido.~
+@3 = ~He oído lo que cuenta Ivanne, único testigo de la muerte de Scar aparte de su asesino. Por lo que cuenta, Scar cayó en la trampa y tuvo una muerte espantosa a manos de otro doppelganguers, sin duda empleado por el Trono de Hierro, aunque Ivanne pensó que Angelo podría tener una buena causa. La agonía de Scar fue felizmente breve, al menos, aunque más por razones de sigilo que de compasión. Sí, he visto muchos de esas especies de espejos asquerosos últimamente, pero juro que no me acostumbro a sus malditas caras mutantes.~
+
+//#9703 = modified
+@4 = ~Angelo está haciéndose con el poder del Puño Llameante y puede ser el responsable tanto de la enfermedad del duque Eltan como de la muerte de Scar. Sus presuntas relaciones con el Trono de Hierro me hacen sospechar. Debo buscar al duque Eltan en el recinto del Puño Llameante y demostrar mis sospechas con respecto a su enfermedad.~
+@5 = ~Angelo está haciéndose con el poder del Puño Llameante y puede ser el responsable tanto de la enfermedad del duque Eltan como de la muerte de Scar. Sus presuntas relaciones con el Trono de Hierro me hacen sospechar. Debo volver al Trono de Hierro y seguir con mis investigaciones allí.~
+@6 = ~Angelo está haciéndose con el poder del Puño Llameante y puede ser el responsable tanto de la enfermedad del duque Eltan como de la muerte de Scar.~
+
+//#10104 - modified
+@7 = ~La escasez de hierro disminuye, pero los mercaderes aún no tienen existencias. Es la inestabilidad del Trono de Hierro la que ha prolongado el conflicto en la ciudad y por eso les culpan otros mercaderes. Ellos eran los principales importadores, y sin su ayuda llevará mucho más tiempo convencer a la gente de que todo va bien. Desde que Sarevok ha asumido el control, han cesado la mayoría de sus transacciones comerciales y se han congelado la mayoría de sus activos. No parece importarle el hecho de que esté paralizando una gran casa comercial. Está desinteresado y parece dispuesto a sacrificarla para contribuir al rearme de Puerta de Baldur y, por ende, a su pugna por ser un Gran Duque. No puedo imaginar que hombres de negocio en su sano juicio sigan esas directivas. ~
+
+//new
+@8 = ~Ya están muertos.~
+
+//#16943 - modified
+@9 = ~¿Encontrasteis algo entre sus ropas?~
+
+//#11668 - modified
+@10 = ~Me he encontrado con Tamoko otra vez y he accedido a lo que me pidió que le prometiera. Me ha pedido que derrote a Sarevok y frustre sus planes, pero que al final le perdone la vida. Ella intentará salvar a Sarevok, el hombre, una vez que Sarevok, el aspirante a dios, sea aniquilado. A cambio, me ha confirmado lo que sospechaba de Slythe y Krystin, los secuaces de Sarevok que asesinaron al duque Entar Escudo de Plata. También me ha dicho que busque en la base del Trono de Hierro a una mujer llamada Cythandria (la cual parece ser más rival suya que mía). Tamoko me ha dado también mucho en que pensar. Sarevok y yo somos de la misma sangre: la sangre de un dios. Sarevok piensa que fue creado para ocupar el lugar del difunto Señor del Asesinato, Bhaal, y que puede ascender a esa condición sembrando la muerte en la misma medida que un dios lo haría. Tamoko duda que eso pueda ocurrir, pues asegura que un dios muerto no crearía a sus hijos para que lo sustituyeran, sino para resucitar. Parece que piensa que la muerte de Sarevok le servirá a Bhaal más que un solemne sacrificio en su nombre. Sarevok ha dado a conocer lo que piensa, ¿pero de qué me sirve a mí esto? ¿Qué será de mí al final?~
+@11 = ~Me he encontrado con Tamoko otra vez y he accedido a lo que me pidió que le prometiera. Me ha pedido que derrote a Sarevok y frustre sus planes, pero que al final le perdone la vida. Ella intentará salvar a Sarevok, el hombre, una vez que Sarevok, el aspirante a dios, sea aniquilado. A cambio, me ha confirmado lo que sospechaba de Slythe y Krystin, los secuaces de Sarevok que asesinaron al duque Entar Escudo de Plata. Tamoko me ha dado también mucho en que pensar. Sarevok y yo somos de la misma sangre: la sangre de un dios. Sarevok piensa que fue creado para ocupar el lugar del difunto Señor del Asesinato, Bhaal, y que puede ascender a esa condición sembrando la muerte en la misma medida que un dios lo haría. Tamoko duda que eso pueda ocurrir, pues asegura que un dios muerto no crearía a sus hijos para que lo sustituyeran, sino para resucitar. Parece que piensa que la muerte de Sarevok le servirá a Bhaal más que un solemne sacrificio en su nombre. Sarevok ha dado a conocer lo que piensa, ¿pero de qué me sirve a mí esto? ¿Qué será de mí al final?~
+
+//#10105 - modified
+@12 = ~Sarevok se ha asegurado el puesto de jefe del Trono de Hierro y está en vías de destruir su credibilidad mercantil saqueándolo prácticamente. Sus jefes anteriores pueden haber muerto, pero los miembros que quedan nunca permitirían que se produjera ese trato. No de buena gana, desde luego.~
+
+//#9649 - modified
+@13 = ~El Puño Llameante se está preparando para la guerra y se están equipando con armas forjadas en el Trono de Hierro. Al parecer, su líder es un hombre llamado Angelo, que dicen guarda alguna relación con Sarevok.~
+
+//#7071 - modified
+@14 = ~Kolvar nos cuenta que Scar fue asesinado mientras estábamos en Candelero.~
+
+//#10103 - modified
+@15 = ~Puerta de Baldur es casi una cárcel en estos tiempos. Toda la ciudad está al límite y todos los miembros del Puño Llameante están buscando sangre. A Scar, el lugarteniente, lo mataron recientemente y el duque Entar Escudo de Plata fue asesinado. Angelo Dosan tiene ahora el control efectivo del Puño Llameante, aunque nadie parece confiar en él. No obstante, tiene amigos poderosos y he oído que recibe órdenes directamente de Sarevok. El duque Eltan, el auténtico jefe del Puño Llameante, se aferra a duras penas a la vida. Nadie parece poder ayudarle, aunque tiene un curandero llamado Rashad que le atiende todo el tiempo.
+
+Con Entar muerto y Eltan enfermo, los otros duques han convocado elecciones de emergencia. Sarevok es el mejor situado y su posición contra Amn es muy popular. Tendré que esperar para enfrentarme a él directamente hasta que tenga pruebas concretas. Nadie aceptaría mi palabra contra la suya.~
+@16 = ~Puerta de Baldur es casi una cárcel en estos tiempos. Toda la ciudad está al límite y todos los miembros del Puño Llameante están buscando sangre. A Scar, el lugarteniente, lo mataron recientemente y el duque Entar Escudo de Plata fue asesinado. Angelo Dosan tiene ahora el control efectivo del Puño Llameante, aunque nadie parece confiar en él. No obstante, tiene amigos poderosos y he oído que recibe órdenes directamente de Sarevok. El duque Eltan, el auténtico jefe del Puño Llameante, se aferra a duras penas a la vida. 
+
+Con Entar muerto y Eltan enfermo, los otros duques han convocado elecciones de emergencia. Sarevok es el mejor situado y su posición contra Amn es muy popular. Tendré que esperar para enfrentarme a él directamente hasta que tenga pruebas concretas. Nadie aceptaría mi palabra contra la suya. Quizás tenga más suerte investigando a Angelo en el cuartel general del Puño Llameante.~
+
+//#20666 - re-organised
+@17 = ~Debemos llevar a Eltan al edificio del Capitán del Puerto, que se encuentra en la parte este del puerto. Eltan piensa que Sarevok quiere asesinar a los Grandes Duques Belt y Liia. Tenemos que asegurarnos de que esto no ocurra.~

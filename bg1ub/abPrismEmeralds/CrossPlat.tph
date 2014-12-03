@@ -1,0 +1,161 @@
+//PrismEmeralds
+PRINT ~Installing Prism Emeralds~
+SILENT
+// ----------------------------------------------------------------------------
+//BEGIN //~Optional: Oublek & Prism - No Exploit & Multiple Ways to Solve Quest~
+//first container
+COPY_EXISTING ~%NashkelMines%.are~ override
+LAUNCH_PATCH_FUNCTION ~fj_are_structure~
+INT_VAR fj_loc_x = 641
+        fj_loc_y = 2713
+        fj_type = 6
+        fj_lock_diff = 30
+//        fj_flags to the bitwise container flags (bit0=locked, bit3=trap resets, bit5=disabled);
+        fj_flags = %fj_flags%
+//        fj_flags = 0b00100001  //for tutu & bgt (i hope)
+        fj_trap_detect = 100
+        fj_trap_remove_diff = 100
+        fj_trap_active = 1 //to whether the container is trapped (0=no, 1=yes);
+        fj_trap_status = 0 // to whether the trap is detected (0=no, 1=yes);
+        fj_trap_loc_x = 641
+        fj_trap_loc_y = 2713
+        fj_box_left = 564
+        fj_box_top = 2552
+        fj_box_right = 590
+        fj_box_bottom = 2563
+        fj_vertex_0 = (564 + (2559 << 16))
+        fj_vertex_1 = (578 + (2552 << 16))
+        fj_vertex_2 = (590 + (2556 << 16))
+        fj_vertex_3 = (586 + (2561 << 16))
+        fj_vertex_4 = (580 + (2563 << 16))
+        fj_vertex_5 = (570 + (2562 << 16))
+//        fj_lockpick_strref to the lockpick string reference (default -1);
+STR_VAR fj_structure_type = ~container~
+        fj_name = ~A6StatueRightEye~
+        fj_trap_script = ~abitrp~
+//        fj_trap_script to the trap’s script;
+//        fj_key_resref to the filename of the container’s key;
+END
+
+ LAUNCH_PATCH_FUNCTION ~fj_are_structure~
+    INT_VAR fj_charge0 = 1
+            fj_con_itm_idx    = SHORT_AT 0x74 - 1
+    STR_VAR fj_name = ~abgfEyeR~
+            fj_structure_type = ~itm~
+ END
+
+BUT_ONLY
+//second container
+COPY_EXISTING ~%NashkelMines%.are~ override
+LAUNCH_PATCH_FUNCTION ~fj_are_structure~
+INT_VAR fj_loc_x = 641
+        fj_loc_y = 2713
+        fj_type = 6
+        fj_lock_diff = 70
+//        fj_flags to the bitwise container flags (bit0=locked, bit3=trap resets, bit5=disabled);
+        fj_flags = %fj_flags%
+//        fj_flags = 0b00100001  //for tutu & bgt (i hope)
+        fj_trap_detect = 100
+        fj_trap_remove_diff = 100
+        fj_trap_active = 1 //to whether the container is trapped (0=no, 1=yes);
+        fj_trap_status = 0 // to whether the trap is detected (0=no, 1=yes);
+        fj_trap_loc_x = 641
+        fj_trap_loc_y = 2713
+        fj_box_left = 614
+        fj_box_top = 2541
+        fj_box_right = 638
+        fj_box_bottom = 2555
+        fj_vertex_0 = (638 + (2544 << 16))
+        fj_vertex_1 = (635 + (2550 << 16))
+        fj_vertex_2 = (627 + (2554 << 16))
+        fj_vertex_3 = (614 + (2555 << 16))
+        fj_vertex_4 = (626 + (2543 << 16))
+        fj_vertex_5 = (635 + (2541 << 16))
+//        fj_lockpick_strref to the lockpick string reference (default -1);
+STR_VAR fj_structure_type = ~container~
+        fj_name = ~A6StatueLeftEye~
+        fj_trap_script = ~abitrp~
+//        fj_trap_script to the trap’s script;
+//        fj_key_resref to the filename of the container’s key;
+END
+
+ LAUNCH_PATCH_FUNCTION ~fj_are_structure~
+    INT_VAR fj_charge0 = 1
+            fj_con_itm_idx    = SHORT_AT 0x74 - 1
+    STR_VAR fj_name = ~abgfEyeL~
+            fj_structure_type = ~itm~
+ END
+
+BUT_ONLY
+
+//create left eye emerald
+COPY_EXISTING ~%tutu_var%misc43.itm~ ~override/abgfEyeL.itm~
+ SAY UNIDENTIFIED_DESC @117
+ SAY IDENTIFIED_DESC @117
+BUT_ONLY_IF_IT_CHANGES
+//create right eye emerald
+COPY_EXISTING ~%tutu_var%misc43.itm~ ~override/abgfEyeR.itm~
+ SAY UNIDENTIFIED_DESC @118
+ SAY IDENTIFIED_DESC @118
+BUT_ONLY_IF_IT_CHANGES
+//change the emeralds that prism carries
+COPY_EXISTING ~%tutu_var%prism.cre~ ~override~
+ REMOVE_CRE_ITEM ~%tutu_var%misc43~
+ REPLACE_CRE_ITEM ~abgfEyeL~ #1 #0 #0 ~identified~ ~qitem1~
+ REPLACE_CRE_ITEM ~abgfEyeR~ #1 #0 #0 ~identified~ ~qitem2~
+ READ_ASCII 0x0248 ~overridescript~
+ PATCH_IF (FILE_EXISTS_IN_GAME ~%overridescript%~) BEGIN
+  INNER_ACTION BEGIN
+   EXTEND_BOTTOM ~%overridescript%.bcs~ ~bg1ub/abPrismEmeralds/CrossPlat/abgfprsm.baf~ //add our stuff -- creates new if doesn't exist
+  END
+ END ELSE BEGIN
+  WRITE_EVALUATED_ASCII 0x0248 ~abgfprsm~
+  READ_ASCII 0x0248 ~overridescript~
+  INNER_ACTION BEGIN
+   EXTEND_BOTTOM ~%overridescript%.bcs~ ~bg1ub/abPrismEmeralds/CrossPlat/abgfprsm.baf~ //add our stuff -- creates new if doesn't exist
+  END
+ END
+
+BUT_ONLY_IF_IT_CHANGES
+//compile the script for the eye container traps
+COMPILE ~bg1ub/abPrismEmeralds/CrossPlat/abitrp.baf~ EVALUATE_BUFFER
+
+//scripts cannot use TRA references, must replace based on platform
+<<<<<<<< scriptfunkyness.tph
+COPY_EXISTING ~abitrp.bcs~ override
+ REPLACE 99999998 @AddJournal_0
+ REPLACE 99999997 @AddJournal_1
+BUT_ONLY
+>>>>>>>>
+COPY scriptfunkyness.tph ~bg1ub/abPrismEmeralds\scriptfunkyness.tph~
+ REPLACE_TEXTUALLY ~AddJournal_0~ ~%AddJournal_0%~
+ REPLACE_TEXTUALLY ~AddJournal_1~ ~%AddJournal_1%~
+BUT_ONLY
+
+INCLUDE ~bg1ub/abPrismEmeralds\scriptfunkyness.tph~
+
+//compile the dialog changes to oublek and prism
+COMPILE ~bg1ub/abPrismEmeralds/CrossPlat/oublek.d~ EVALUATE_BUFFER
+
+/*weidu isn't replacing the @# with a TRA ref after its been evaluted from a variable
+so we have to use a high number and replace again.  only affects BGT & Tutu*/
+COPY_EXISTING ~%tutu_var%oublek.dlg~ override
+ DECOMPILE_DLG_TO_D
+  PATCH_IF (GAME_IS ~bgt~) BEGIN
+   REPLACE 99999210 @210
+   REPLACE 99999211 @211
+   REPLACE 99999212 @212
+   REPLACE 99999217 @217
+   REPLACE 99999218 @218
+   REPLACE 99999216 @216
+  END
+  PATCH_IF (GAME_IS ~tutu tutu_totsc~) BEGIN
+   REPLACE 99999210 @127
+   REPLACE 99999211 @128
+   REPLACE 99999212 @129
+   REPLACE 99999217 @133
+   REPLACE 99999218 @134
+   REPLACE 99999216 @132
+  END
+ COMPILE_D_TO_DLG
+BUT_ONLY

@@ -1,0 +1,7 @@
+IF
+  Global("LostChild","%CoastWay%",0)
+THEN
+  RESPONSE #100
+    CreateCreature("DLOSTKAG",[3849.2581],10)
+    SetGlobal("LostChild","%CoastWay%",1)
+END

@@ -1,0 +1,46 @@
+// Arkion (identique à 15015 du jeu original)
+@0    = ~Ah, en v'la un bien mûr ! C'est du bon travail ! Tenez, v'là 250 po pour faire passer c'te puanteur... Ah, Nemphré, j'l'aurai cet anneau !~
+// La Balafre
+@1    = ~Je reconnais cette bague. Elle appartenait à la fille des Sashenstar ; elle faisait partie des disparus, elle aussi. Je suis certain que la famille voudra donner de dignes funérailles à leur fille. Voudriez-vous bien retourner dans les égouts et rapporter le corps ? Vous pouvez me le ramener et j'annoncerai la nouvelle aux Sashenstar.~
+@2    = ~En fait, j'ai amené le corps avec moi. Elle était vétue de façon si exquise que j'ai senti qu'elle devait être une personne importante.~
+@3    = ~Il n'est pas question que je retourne dans ces égouts puants. Je suis sûr que vous avez un homme de libre que vous pouvez envoyer là-dessous pour récupérer le corps.~
+@4    = ~Si cela peut aider à apaiser une famille dans le deuil, je vais faire ce que je peux. Je vous ramènerai le corps.~
+@5    = ~J'ai mieux à faire que ces insignifiantes quêtes "Va chercher !". Allez chercher le corps vous-même.~
+@6    = ~Vous avez bien fait, peut-être les Sashenstar vont-ils trouver la paix maintenant. Veuillez accepter cette prime de 3 000 pièces d'or pour avoir ramené le corps. En tout cas, je vais avoir besoin de gens pour aller enquêter au Trône de Fer. J'ai de la paperasserie à terminer, ensuite je serai à l'extérieur des portes principales de la caserne du Poing Enflammé. Si vous voulez discuter du Trône de Fer, venez m'y retrouver.~
+@7    = ~Vous me décevez, mais je vous remercie d'avoir débarrassé les égouts de ce fléau et d'avoir rapporté la bague. Veuillez accepter cette prime de 500 pièces d'or pour la récupération de la bague. Bon, je vais avoir besoin de gens pour aller enquêter au Trône de Fer. J'ai de la paperasserie à terminer, ensuite je serai à l'extérieur des portes principales de la caserne du Poing Enflammé. Si vous voulez discuter du Trône de Fer, venez m'y retrouver.~
+@8    = ~Vous êtes une personne très vaillante. J'attendrai votre retour.~
+@9    = ~Ah, vous êtes de retour. Avez-vous ramené le corps de la fille des Sashenstar ?~
+@10   = ~Oui, en effet. Le voilà.~
+@11   = ~Non, pas encore.~
+@12   = ~J'ai changé d'avis, La Balafre. Allez chercher le corps vous-même.~
+@13   = ~Je vois que vous avez apporté le corps de la fille des Sashenstar avec vous. Vous avez changé d'avis, peut-être ?~
+@14   = ~C'est à peu-près ça. J'apprécierais que vous me débarrassiez de ce corps maintenant, merci.~
+@15   = ~Je vois. Je suis un homme occupé, alors je vous prie de ne pas revenir avant d'avoir le corps avec vous.~// Arkion
+@16   = ~C'est le corps d'une espèce d'idiote de noble ! Celle-là ne m'apportera rien d'autre que des ennuis. Vous pouvez sûrement trouver le corps de quelque paysan ?~
+@17   = ~Vous... Je crois avoir entendu parler de vous. Vous pourriez me rendre service ainsi qu'à cette ville. Voulez-vous m'écouter ?~
+@18   = ~Je suis désolé mais je mène des investigations pour le compte de votre adjoint et je voudrais d'abord les achever.~
+        ~Je suis désolée mais je mène des investigations pour le compte de votre adjoint et je voudrais d'abord les achever.~
+@19   = ~Oui, dites-moi ce que vous voulez. Je suis sûr que la Balafre pourra s'occuper lui-même de ses problèmes.~
+        ~Oui, dites-moi ce que vous voulez. Je suis sûre que la Balafre pourra s'occuper lui-même de ses problèmes.~
+@20   = ~Un instant... Je dois d'abord finir quelque chose.~
+@21   = ~Oui, parlez, je vous en prie.~
+@22   = ~Pas si vite. Laissez-moi d'abord vous dire que je suis effectivement celui qui a pris part au nettoyage des mines de Nashkel.~
+        ~Pas si vite. Laissez-moi d'abord vous dire que je suis effectivement celle qui a pris part au nettoyage des mines de Nashkel.~
+@23   = ~Une minute. Vous avez dit quelque chose à propos d'une aide dont vous auriez besoin. Travailler pour vous m'intéresse maintenant.~
+@24   = ~Je n'en ai pas encore terminé là-bas.~
+@25   = ~S'il vous plaît, retournez-y et combattez ces créatures. Je ne me sentirai pas tranquille tant que je ne saurai pas que le domaine des Sept Soleils est nettoyé et que personne d'autre n'est en danger.~
+@26   = ~Je renonce à cette mission-là.~
+@27   = ~Nous nous en occupons toujours.~
+@28   = ~Évidemment, nous retournerons combattre ces montres !~
+//#83:
+@29   = ~Oui et nous nous en déferons avec plaisir.~
+@30   = ~Je vais y retourner et regarder plus attentivement.~
+@31   = ~Je pense avoir trouvé son cadavre également.~
+@32   = ~Je n'ai pas trouvé de bague mais ce qui semble être son cadavre.~
+@33   = ~Vous avez fait du bon travail ! Cela aidera les Sashenstar à trouver un peu la tranquillité. Quand même, je suis sûr qu'avoir la bague les aiderait à se souvenir de leur être cher.~
+@34   = ~Je n'ai vraiment pas le temps pour cela en ce moment.~
+@35   = ~Si vous en preniez le temps, je suis sûr que la famille Sashenstar serait plus que reconnaissante.~
+//#77:
+@36   = ~Content de vous revoir, où en êtes-vous ?~
+@37   = ~Je suis toujours à la recherche des biens des victimes.~
+@38   = ~Nous avons trouvé une bague d'aspect particulier.~

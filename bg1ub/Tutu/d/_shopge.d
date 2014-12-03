@@ -1,0 +1,31 @@
+BEGIN ~_SHOPGE~
+
+IF ~~ THEN BEGIN 0
+  SAY @40120
+  IF ~~ THEN DO ~~ EXIT
+END
+
+IF ~RandomNum(5,1)~ THEN BEGIN 1
+  SAY @40121
+  IF ~~ THEN DO ~~ EXIT
+END
+
+IF ~RandomNum(5,2)~ THEN BEGIN 2
+  SAY@40122
+  IF ~~ THEN DO ~~ EXIT
+END
+
+IF ~RandomNum(5,3)~ THEN BEGIN 3
+  SAY @40123
+  IF ~~ THEN DO ~~ EXIT
+END
+
+IF ~RandomNum(5,4)~ THEN BEGIN 4
+  SAY @40124
+  IF ~~ THEN DO ~~ EXIT
+END
+
+IF ~RandomNum(5,5)~ THEN BEGIN 5
+  SAY @40125
+  IF ~~ THEN DO ~~ EXIT
+END

@@ -1,0 +1,309 @@
+//DOS prompts - use DOS encoding
+@90000 = ~The BG1 NPC Project component "The BG1 NPC Project: Phase II (Quests and Interjections)" conflicts with this component.~
+@90001 = ~The BG1 NPC Project component "The BG1 NPC Project: Core Install" conflicts with this component.~
+@90002 = ~The BG1 NPC Project component "The BG1 NPC Project: Phase I (Banters)" conflicts with this component.~
+@90003 = ~Northern Tales of the Sword Coast conflicts with this component.~
+
+@90010 = ~Tutu install detected.~
+@90011 = ~BGT install detected.~
+@90012 = ~BG install detected.~
+@90013 = ~Please install on BG, BGT, or Tutu.~
+@90014 = ~Please install on BGT or Tutu.~
+
+@0    = ~Ice Island Level Two Restoration~
+@1    = ~The Tales of the Sword Coast expansion is required for this component.~
+
+@2    = ~The Mysterious Vial~
+@3    = ~Additional Elminster Encounter~
+@4    = ~Angelo Notices Shar-teel~
+@5    = ~Finishable Kagain Caravan Quest~
+@7    = ~Coran and the Wyverns~
+@8    = ~Kivan and Tazok~
+@9    = ~Branwen and Tranzig~
+@10   = ~Safana the Flirt~
+@12   = ~Appropriate Albert and Rufie Reward~
+@13   = ~Place Entar Silvershield in His Home~
+@14   = ~Scar and the Sashenstar's Daughter~
+@17   = ~Quoningar, the Cleric~
+@18   = ~Shilo Chen and the Ogre-Magi~
+@22   = ~Flaming Fist Mercenary Reinforcements~
+@23   = ~Creature Corrections~
+@24   = ~Creature Restorations~
+@26   = ~Creature Name Restorations~
+@58   = ~Minor Dialogue Restorations~
+@59   = ~Audio Restorations~
+@94   = ~Item Corrections and Restorations~
+@100  = ~Area Corrections and Restorations~
+@101  = ~Permanent Corpses~
+@102  = ~Elven Charm and Sleep Racial Resistance~
+@103  = ~The Original Saga Music Playlist Corrections~
+@104  = ~Sarevok's Diary Corrections~
+/* new v13.1 */
+@116 = ~Prism and the Emeralds Tweak~
+@219   = ~Duke Eltan in the Harbor Master's Building~
+
+
+//Game text - use Windows encoding
+@6    = ~Eddard Silvershield~
+
+@11   = ~Flirt~
+
+@15   = ~Female Noble's Body~
+
+@16   = ~This is the dead body of a female noble.~
+
+@19   = ~Gloves of Pick Pocketing~
+@20   = ~Gloves of Pick Pocketing
+A few years back Fong Moo a famous cutpurse, known in both Baldur's Gate and Athkatla, was found dead on the road between the Gate and Beregost.  Seems he'd stolen an artifact from a powerful mage and tried escaping, with little success.  His possessions went to a nephew, who took up the same trade as his uncle, and became especially good at pick pocketing.  Whether these gloves were magical before falling into Fong's hands or if they are somehow imbued with the master's essence is not known. 
+
+STATISTICS
+
+Pick Pocketing:  +20% Bonus~
+
+@21   = ~Edie, the Merchant League Applicant~
+
+@25   = ~Farmer~
+
+@27   = ~Kaitlin~
+@28   = ~Malicia~
+@29   = ~Henrette~
+@30   = ~Sari~
+@31   = ~Mabledale~
+@32   = ~Bunsen~
+@33   = ~Farthendell~
+@34   = ~Arlond~
+@35   = ~Joldenan~
+@36   = ~Carl~
+@37   = ~Jurgen~
+@38   = ~Berden~
+@39   = ~Dath~
+@40   = ~Solgen~
+@41   = ~Borland~
+@42   = ~Galteran~
+@43   = ~Davis~
+@44   = ~Sherman~
+@45   = ~Thurston~
+@46   = ~Quincy~
+@47   = ~Christian~
+@48   = ~Marlon~
+@49   = ~Lady Areana~
+@50   = ~Wade~
+@51   = ~Ludrug~
+@52   = ~Ted~
+@53   = ~Sarah~
+@54   = ~Selaad Gan~
+@55   = ~Baresh~
+@56   = ~Daese~
+@57   = ~Kaishas Gan~
+
+//@60-@88 moved to sound_tmp.tra
+@89   = ~Store, Tavern and Inn Fixes and Restorations~
+@90   = ~Alvanhendar's Healing and Sundries~
+@91   = ~Black Lily's Shop~
+@92   = ~Tavern~
+@93   = ~The Watchful Shield~
+
+@95   = ~Ring of Barkskin~
+@96   = ~Bala's Axe - Wizard Slayer:
+Bala was a foul-tempered prince of a gully dwarf clan, which was enslaved by a cruel elven mage in Thesk. Though Bala managed to escape the more cowardly traits of his race he was even more filthy and obnoxious than the average gully dwarf. Sickened of his enslavement, Bala crept into the mage's lair and cracked the elf's skull open. Although rumor has it that it was the dwarf's stench that overcame the mage, it was, in fact, his enchanted axe that dispelled the elf's magical defenses. It is obvious from the poor workmanship that Bala himself crafted the axe. The mystery lies in where its power originates. After a lengthy career of mage-slaying, Bala died, never having revealed his secret to those who were willing to risk a lice infestation by approaching him. Some say that the axe was powered by Bala's intense hatred of wizards.
+
+STATISTICS:
+
+Damage:  1D8
+Damage type:  slashing
+
+Special:  Miscast Magic affects victim on each successful hit
+Miscast Magic:    Any spell casting creature that is affected by this spell has its casting ability severely disabled.  When the creature attempts to cast a spell it has an 80% chance of failure.  Creatures can save vs spells to avoid the affect, but do so at -2.
+
+Weight: 6
+Speed Factor: 7
+Proficiency Type: Axe
+Type:  1-handed
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief~
+@97   = ~The severed head of a wyvern is both a fearsome and a reassuring sight. Gruesome as its fanged maw and blazing eyes may be, there is consolation in the knowledge that they can be conquered by mere and lowly mortals.
+
+STATISTICS:
+
+Weight: 30~
+@98   = ~The pure white pelt of the winter wolf is soft and luxurious. It is often sewn into garments as diverse as the rugged vests of the northern Uthgardt Barbarians and the delicate and fashionable winter stoles worn by noblewomen throughout the Sword Coast region.
+
+STATISTICS:
+
+Weight: 10~
+@99   = ~The Ankheg is a burrowing insect-like creature between 10 and 20 feet long, found mainly in forests or choice agricultural land.  They are covered with plates or shells made out of a substance called chitin which is extremely tough and very light.  The size, weight and strength of the shells make them highly sought after in many situations, including the creation of armor.
+
+STATISTICS:
+
+Weight: 100~
+
+@105  = ~They are led by Sarevok Anchev.~
+@106  = ~A man named Sarevok Anchev is responsible for the frame.~
+@107  = ~The seer told us that the leader of the Iron Throne was Sarevok Anchev.~
+@108  = ~The seer tells us that Sarevok Anchev was the man who framed us for the murders at Candlekeep.~
+@109  = ~[Note for Davaeorn 1]Davaeorn,
+I have received your request for extra slaves.  They will be sent as soon as possible.  Events go well in Baldur's Gate.  We have purchased one of the western noble estates to use as our base of operations.  It is an ancient building, most likely constructed before the erection of the second wall.  Its construction makes it very defensible against those who would thieve it.  Remember to ask Yeslick if he enjoys his new accommodations.
+
+Rieltar.
+Eleint 14, 1367~
+@110  = ~[Note for Davaeorn 2]Davaeorn,
+Our plans go smoothly.  Sarevok has arrived from our headquarters in Ordulin.  He brings news from our superiors; they are pleased with our progress so far.  I plan to place Sarevok as the commander of our mercenary forces in the region.  He has already sent his subordinate, Tazok, to the Wood of Sharp Teeth to take command of the forces located there.  Things go apace here in Baldur's Gate.  We have placed our first agent among the ranks of the Seven Suns trading coster.
+
+Rieltar.
+Uktar 4, 1367~
+@111  = ~[Note for Davaeorn 3]Davaeorn,
+As you have probably heard, the iron poison has begun to take effect around the coast.  With the majority of iron imports being disrupted by Tazok, almost all of it comes from the tainted source in Nashkel.  The Sythillisian uprising in Amn has ensured that no forces from that nation will be able to take action against our mercenary forces.  However, the Flaming Fist has caught several of the Black Talon mercenaries.  All of those captured have claimed allegiance with the Zhentarim and have thus shifted any suspicion away from the Iron Throne.  I have sent Tranzig to work with the mercenaries in transporting the iron to your base in Cloakwood.  He has brought several bags of holding so that he, alone, will make trips into Cloakwood, thereby lessening the chance that Flaming Fist trackers might find your stronghold.
+
+Rieltar.
+Ches 21, 1368~
+@112  = ~The Personal Diary of Sarevok
+
+14th of Eleint, 1367:  Cormyr has instituted a ban against the Iron Throne from operating within their borders.  While this is a great blow to the Iron Throne, it is the perfect opportunity for father to approach the Throne high council with his proposal.  If things go well, we could begin the operation within the year. 
+
+28th of Eleint, 1367:  Davaeorn reports that the mines at Cloakwood have been drained and are ready for use.  This revelation should help greatly in convincing the Throne high council.
+
+19th of Marpenoth, 1367:  The Iron Throne council has agreed to support father's plan.  He has been given all the resources he needs, as well as leadership of the project.  I have expressed interest to my 'father', and as promised, he is including me within the operations along the Sword Coast.  He is sending me, as his representative, to make contact with some of the mercenary groups operating to the east.  He mentioned mother in our conversation: how I wasn't to be disloyal to him as she had.  He made it clear that I would suffer her fate if I was.  His threats are weak and hollow, and I shall listen to them for only so long. 
+
+30th of Marpenoth, 1367:  I met with the leaders of the Chill, and Black Talons.  I have little liking for Ardenor, commander of the Chill, but Taugosz seems to be a man of his word.  It is a good thing, as I'll have to work with these mercenaries for the full duration.
+
+3rd of Uktar, 1367:  A new dream this night.  Mother was talking to me, but as she did her face became bloated and discolored.  Her voice became weaker as she spoke to me, telling me to save her from Rieltar.  I could see the garrote cutting into her neck, but I did nothing.  It was only a dream.
+
+8th of Uktar, 1367:  Today I returned to Baldur's Gate and reported to Rieltar.  The fool still insists on calling me his son, and for now I will let him.  He assumes that I am loyal to him because he raised me.  Well, loyal I am, but only as long as he is useful.  He's set up a base in the mansion of a destitute noble family and says that everything is running smoothly.  
+
+17th of Nightal, 1367:  Mulahey has established himself at the mines of Nashkel, and should already be converting the kobolds to follow him as their leader.  Only a few slaves have begun to mine out the ore at Cloakwood, though once the bandit raids begin I will be sending Davaeorn a steady supply of new slaves.
+
+6th of Hammer, 1368:  The Flaming Fist have finally begun to take notice of our little mercenary operation, and have dispatched several small contingents to the Coast Way to try to fend off the bandit raids.  Should any of the mercenaries be captured, most believe they work for the Zhents, so no trouble should befall the Iron Throne.  I am sure the Zhents at Darkhold won't be pleased to know that their name has been falsely used, but we cannot have the authorities catching our scent.
+
+9th of Hammer, 1368:  I have decided to take this time to make my visit to Candlekeep.  I have waited a long time to research the prophecies of Alaundo, and I must know if the dreams speak the truth.  I will not believe the words of phantoms without proof, and the Priest of Bhaal I confronted gave me nothing. He was old and died quickly in my grasp.  If the words are true, I shall surely groom stronger acolytes than this.
+
+14th of Alturiak, 1368:  In Candlekeep at last, and the monks here are quite helpful.  From what I have read, it is beyond all doubt that the blood of Bhaal flows through my veins.  Alaundo's prophecies are, of course, anything but explicit, but I think I understand them.  Bhaal foresaw his coming death, and seeded his essence across the land. These spawn bear the marks of chaos, have power with no direction, shall feel the blood of a god within them, and shall be driven to cause death and destruction.  "The deaths they bring shall awaken the father, and through them he will rise."  The wording is somewhat ambiguous, but obviously this means that death wrought by the children will cause them to ascend.  Fitting, and since the father was the Lord of Murder, proving one's worth must involve an act in accordance with his portfolio.  I begin to see what I must do.  Death on a god-like scale. 
+
+15th of Alturiak, 1368:  More research.  It seems that Bhaal sired hundreds, if not thousands, of bastard spawn, though of these only twenty shall rise to any real power . . . and from those, five shall make the gods themselves tremble in fear.  But the monk Gorion troubles me.  Alaundo's writings include some more obscure passages that mention a "ward of Gorion," and the monk is indeed trailed by a youth named <CHARNAME> who, although seeming but a blissfully ignorant whelp, is also somehow familiar to me.  Gorion seems to have taken an interest in my readings.  I must be careful to be more clandestine in my research.  
+
+16th of Alturiak, 1368:  I take my leave of Candlekeep now, and not a moment too soon, for I am sure that Gorion has perceived my heritage.  I wish I could simply kill him, but I doubt I could safely murder him within this damnable library.  One thing I am certain of: <CHARNAME> is, in actuality, one of Bhaal's brood as well.  All the markings are there, and it would explain Gorion's curiosity of my studies, as well as <CHARNAME>'s being mentioned in the prophecy.  Though there is nothing I can do now, I will have to make certain to return and kill the little brat.  It would be foolish of me to let one of my siblings live, especially one being brought up by Harpers (and I am sure that is where Gorion's allegiances lay).
+
+17th of Ches, 1368:  Everything proceeds well.  The ore coming from Nashkel has started to deteriorate, and the mercenaries have been doing a fine job at seizing any iron caravans on route to Baldur's Gate.  Though some of my men have been captured, the Zhent story is holding up well, so no trouble has fallen on the Iron Throne.  But I will have to be wary for Zhentish agents in the coming months.
+
+28th of Tarsakh, 1368:  The time is now ripe to deal with that old codger Gorion, and his little whelp.  I will have to inform my men that I'll be gone for the next few days.
+
+19th of Kythorn, 1368:  Barely enough time to write, but I must not neglect my journals so.  The future dead must know of how the Lord of Murder again came to them.  Perhaps I shall hire a scribe, when time allows, but right now I expect our little drama to commence here any minute.  My self-styled father, Rieltar, is upstairs with two representatives of the Knights of the Shield.  As foreseen, he has been blocking all my attempts to escalate the border hostilities.  Terribly sorry, 'father,' but my true parentage calls and you are in my way.  On the off chance that the upcoming encounter does not immediately produce bloodshed, I shall be sure to instruct the dopplegangers in the exact manner Rieltar should die.  I think a garrote would be perfect for the task.
+
+This diary looks to be important.  You should probably keep it on your person.~
+
+/* new v13 */
+@113   = ~Signet Ring~
+@114   = ~This is a signet ring inset with a ruby.~
+
+@115   = ~The functionality of this component is either already included or superseded by one of your already installed mods.~
+
+
+
+
+//item strings
+@117 = ~An emerald is a brilliant green beryl, cleaved along straight box like lines, with rectangular cutting in the finished gem.  Emeralds are often connected with health, and so are used ornamentally for such a purpose. This emerald is marked with a small 'L'. It had been stolen by Prism for his use in a statue of his lady love, Ellesime. It is surmised that this gem was intended to be used as the left eye. Whether or not it was used in the statue, there is a bounty for returning it to the proper authorities.~
+@118 = ~An emerald is a brilliant green beryl, cleaved along straight box like lines, with rectangular cutting in the finished gem.  Emeralds are often connected with health, and so are used ornamentally for such a purpose. This emerald is marked with a small 'R'. It had been stolen by Prism for his use in a statue of his lady love, Ellesime. It is surmised that this gem was intended to be used as the right eye. Whether or not it was used in the statue, there is a bounty for returning it to the proper authorities.~
+
+//journal entries for vanilla BG1: no title
+@119 = ~What a fool that Prism is. He really believed my denial in knowing anything about the loss of those emeralds. Oh well... Loss for him. Profit for me.~
+@120 = ~Perhaps it was wrong, but after allowing Prism to complete his 'final masterpiece' I've taken one of the emeralds out of the statue's eyes. It should bring a hefty price at the right place or a decent reward...~
+@121 = ~After a bit of hard work, I finally removed the second emerald which Prism had stolen to use in one of the eyes of his 'final masterpiece'.~
+@122 = ~Prism's story was a sad tale indeed.  A shame it could not have had a better ending.  Ah well, I profit in the end.  300 gold bounty for the emeralds he stole.~
+@123 = ~Next time I shall have to remind myself not to pretend to be another just for some quick gold. Though Oublek kept part, I was finally rewarded for turning in the emeralds from Prism.~
+/* Unused line for Captain Brage Journal entry
+@ = ~Next time I shall have to remind myself not to pretend to be another just for some quick gold. Though Oublek kept part, I was finally rewarded for turning in Captain Brage.~
+*/
+@124 = ~I managed to take some emeralds that the sculptor Prism was using as eyes in a statue. However, he had noticed me. I was forced to put him out of his misery after he lunged at me with a chisel.~
+@125 = ~One emerald turned in for 150 gold bounty. I can get the other half of the bounty if I can bring in the other emerald. It has to be somewhere near where I picked the last one up.~
+@126 = ~Only half of a reduced reward for turning in one of Prism's emeralds. A measly 75 gold. Should I get the other emerald it might be prudent to check with some merchants before claiming the bounty.~
+//journal entries for bg2 engine
+//Tutu
+@127 = ~Prism the sculptor
+
+What a fool that Prism is. He really believed my denial in knowing anything about the loss of those emeralds. Oh well... Loss for him. Profit for me.~
+@128 = ~Prism the sculptor
+
+Perhaps it was wrong, but after allowing Prism to complete his 'final masterpiece' I've taken one of the emeralds out of the statue's eyes. It should bring a hefty price at the right place or a decent reward...~
+@129 = ~Prism the sculptor
+
+After a bit of hard work, I finally removed the second emerald which Prism had stolen to use in one of the eyes of his 'final masterpiece'.~
+@130 = ~Prism the sculptor
+
+Prism's story was a sad tale indeed.  A shame it could not have had a better ending.  Ah well, I profit in the end.  300 gold bounty for the emeralds he stole.~
+@131 = ~Prism the sculptor
+
+Next time I shall have to remind myself not to pretend to be another just for some quick gold. Though Oublek kept part, I was finally rewarded for turning in the emeralds from Prism.~
+/* Unused line for Captain Brage Journal entry
+@ = ~Prism the sculptor
+
+Next time I shall have to remind myself not to pretend to be another just for some quick gold. Though Oublek kept part, I was finally rewarded for turning in Captain Brage.~
+*/
+@132 = ~Prism the sculptor
+
+I managed to take some emeralds that the sculptor Prism was using as eyes in a statue. However, he had noticed me. I was forced to put him out of his misery after he lunged at me with a chisel.~
+@133 = ~Prism the sculptor
+
+One emerald turned in for 150 gold bounty. I can get the other half of the bounty if I can bring in the other emerald. It has to be somewhere near where I picked the last one up.~
+@134 = ~Prism the sculptor
+
+Only half of a reduced reward for turning in one of Prism's emeralds. A measly 75 gold. Should I get the other emerald it might be prudent to check with some merchants before claiming the bounty.~
+//BGT
+@210 = ~Prism, the emerald thief.
+
+What a fool that Prism is. He really believed my denial in knowing anything about the loss of those emeralds. Oh well... Loss for him. Profit for me.~
+@211 = ~Prism, the emerald thief.
+
+Perhaps it was wrong, but after allowing Prism to complete his 'final masterpiece' I've taken one of the emeralds out of the statue's eyes. It should bring a hefty price at the right place or a decent reward...~
+@212 = ~Prism, the emerald thief.
+
+After a bit of hard work, I finally removed the second emerald which Prism had stolen to use in one of the eyes of his 'final masterpiece'.~
+@213 = ~Prism, the emerald thief.
+
+Prism's story was a sad tale indeed.  A shame it could not have had a better ending.  Ah well, I profit in the end.  300 gold bounty for the emeralds he stole.~
+@214 = ~Prism, the emerald thief.
+
+Next time I shall have to remind myself not to pretend to be another just for some quick gold. Though Oublek kept part, I was finally rewarded for turning in the emeralds from Prism.~
+/* Unused line for Captain Brage Journal entry
+@215 = ~Prism, the emerald thief.
+
+Next time I shall have to remind myself not to pretend to be another just for some quick gold. Though Oublek kept part, I was finally rewarded for turning in Captain Brage.~
+*/
+@216 = ~Prism, the emerald thief.
+
+I managed to take some emeralds that the sculptor Prism was using as eyes in a statue. However, he had noticed me. I was forced to put him out of his misery after he lunged at me with a chisel.~
+@217 = ~Prism, the emerald thief.
+
+One emerald turned in for 150 gold bounty. I can get the other half of the bounty if I can bring in the other emerald. It has to be somewhere near where I picked the last one up.~
+@218 = ~Prism, the emerald thief.
+
+Only half of a reduced reward for turning in one of Prism's emeralds. A measly 75 gold. Should I get the other emerald it might be prudent to check with some merchants before claiming the bounty.~
+
+
+//oublek dialog
+@1000 = ~One of the emeralds! That will be a 150 gold bounty for you.  Be sure to bring the other if you should find it.~
+@1001 = ~The last of the emeralds! That will be another 150 gold bounty for you. Well, you'll make quite a name for yourself among the bounty hunters if you keep this up.  Whether it is for better or worse, I do not know.~
+@1002 = ~One of the emeralds! It is good to see you attempting to earn honest gold, even if it is through the unsavory task of bounty hunting. I shall pay you, though less than the posted amount. Be sure to bring the other if you should find it.~
+@1003 = ~The last of the emeralds! Well, it is good to see you attempting to earn honest gold, even if it is through the unsavory task of bounty hunting.  I shall pay you, though less than the posted amount.  We shall store the extra in case you decide to...alter the facts in any further dealings.~
+@1004 = ~I've come to turn in a bounty, and collect the reward that is duly mine.~
+
+//prism dialog
+@1100 = ~How dare you! How dare you take the sparkle from her eyes!~
+@1101 = ~I've much work to do. But mayhaps you would help a foolish sculptor finish this epiphany now?  Please, guard this place, for surely Greywolf will come.  I will pay with my last possessions!~
+@1102 = ~Hold! You took my emeralds. I must have them back. I need them to finish this epiphany. Please, please return them. I will give you all else that is mine.~
+@1103 = ~They are gone. Given to the authorities. You will never finish that lump of stone now.~
+@1104 = ~They are gone. Sold by now to hang on the neck as some fat woman's trinket.~
+@1105 = ~Aye, I took them. Still have one. The other is long gone, though.~
+@1106 = ~What is this? Some madman accusing me of thievery? Die for your insults.~
+@1107 = ~Hold! You took my emerald. I must have it back. I need it to finish this epiphany. Please, please return it. I will give you all else that is mine.~
+@1108 = ~All that is yours, eh?  So be it.~
+@1109 = ~"All else that is yours" does not concern me.  I'm taking you and the gems to the guard, where I shall get a hefty reward.~
+@1110 = ~I know not what you are talking about.~
+@1111 = ~Give me the one you have. Go get the other and bring it back. I must finish this epiphany. I will give you all else that is mine.~
+@1112 = ~I gave it to the authorities. You shall never get it back.~
+@1113 = ~Not possible. I gave it to the authorities and have come back to claim the other for its bounty.~
+@1114 = ~Not possible. Sold to some forgotten merchant or stashed in some forgotten place.~
+@1115 = ~The gem may be gone, but I'll gladly take all else that is yours. Prepare to die.~
+@1116 = ~Give it back please. I must finish this epiphany. I will give you all else that is mine.~
+

@@ -1,0 +1,30 @@
+@0  = ~Tenéis que pasar una prueba muy importante pare entrar en la Liga de Mercaderes, así que he estado estudiando, pero parece que no entiendo bien. Siendo mercaderes, no creo que estén interesados en la honestidad e integridad. Si tenéis alguna poción que mejore mi inteligencia, os lo agradecería.~ 
+@1  = ~Claro, ¿por qué no? A mí nunca me gustaron los exámenes. Veré qué puedo hacer para ayudaros.~
+@2  = ~El joven Edie ha pedido mi ayuda, que le ayude en el examen para entrar en la Liga de Mercaderes de Puerta de Baldur. Tendrá bastante deshonor, pero una poción de inteligencia (o sabiduría) podría servir...~ 
+@3  = ~¡No voy a ayudaros a hacer trampas en el examen!~
+@4  = ~Aquí tengo una Poción de Genio. ¿Ayudará?~ 
+@5  = ~Aquí tengo una Poción para la concentración mental. ¿Ayudará?~
+@6  = ~Aquí tengo una Poción de Perspicacia. ¿Ayudará?~
+@7  = ~No, no os ayudaré. Ojalá no aprobéis.~ 
+@8  = ~Bueno, hola de nuevo. Espero que hayáis regresado con algo especial para mí...~
+@9  = ~En realidad, no me siento bien ayudándoos a hacer trampas en el examen. Lo siento.~ 
+@10 = ~Olvidadlo. No os ayudaré y espero que suspendáis.~
+@11 = ~No, aún no. Sin embargo, seguiré buscando.~
+@12 = ~¡Sí, creo que sí! ¡Muchas gracias! Tomad 50 piezas de oro. Ya os haré saber cómo me fue.~ 
+@13 = ~¡Sí, creo que sí! ¡Muchas gracias! Tomad 50 piezas de oro. Ya os haré saber cómo me fue. El examen es mañana.~
+@14 = ~Que examen más extraño... El objetivo era hacer que la gente hiciera trampa. "Estar en ventaja", dijeron los instructores al finalizar. Cuando les dije que me la disteis por sólo 50 piezas de oro, ¡me aprobaron al momento! El capitalismo es tan extraño. Oh, bueno. Debo irme ya a casa. Gracias otra vez.~ 
+@15 = ~No hay necesidad de ponerse así. Iré a estudiar a otro sitio.~
+@16 = ~Bueno, entonces gracias por nada. Disculpadme pero tengo mucho que estudiar, y menos tiempo, gracias a vos.~
+
+// @2 with header:
+@17 = ~Haciendo trampas en el examen de admisión
+
+El joven Edie ha pedido mi ayuda, que le ayude en el examen para entrar en la Liga de Mercaderes de Puerta de Baldur. Tendrá bastante deshonor, pero una poción de inteligencia (o sabiduría) podría servir...~
+
+@18 = ~Haciendo trampas en el examen de admisión
+
+He cambiado de idea y no ayudaré a Edie a hacer trampas en su prueba de acceso a la Liga de Mercaderes de Puerta de Baldur.~
+
+@19 = ~Haciendo trampas en el examen de admisión
+
+Pude ayudar a la joven Edie con una poción mágica. Esto podría contar como hacer trampas, pero teniendo en cuentra que entró en la Liga de Mercaderes se podría decir que era parte del trabajo...~

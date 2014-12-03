@@ -1,0 +1,71 @@
+//if died while blue circle and gems were not put into eyes
+IF
+  Die()
+  Global("abgf_GemInEye","GLOBAL",0)
+THEN
+  RESPONSE #100
+    Unlock("A6StatueRightEye")
+    Unlock("A6StatueLeftEye")
+    ActionOverride("A6StatueRightEye",DestroyItem("abgfEyeR"))
+    ActionOverride("A6StatueLeftEye",DestroyItem("abgfEyeL"))
+    SetGlobal("abgf_GemInEye","GLOBAL",3) //3 = not in eyes
+END
+
+//if turned hostile and gems were not put into the eyes
+IF
+  Allegiance(Myself,ENEMY)
+  Global("abgf_GemInEye","GLOBAL",0)
+THEN
+  RESPONSE #100
+    Unlock("A6StatueRightEye")
+    Unlock("A6StatueLeftEye")
+    ActionOverride("A6StatueRightEye",DestroyItem("abgfEyeR"))
+    ActionOverride("A6StatueLeftEye",DestroyItem("abgfEyeL"))
+    SetGlobal("abgf_GemInEye","GLOBAL",3) //3 = not in eyes
+    Attack(NearestEnemyOf(Myself))
+END
+
+//initiate with player if pickpocketed
+IF
+  See([PC])
+  Range(LastSeenBy,4)
+  !HasItem("abgfEyeL",Myself)
+  !HasItem("abgfEyeR",Myself)
+  !Global("ab_GemsTrulyGone","GLOBAL",1)
+  Global("ab_TalkAbouMissingGems","GLOBAL",1)
+THEN
+  RESPONSE #100
+    Dialogue([PC])
+END
+IF
+  See([PC])
+  Range(LastSeenBy,4)
+  !HasItem("abgfEyeL",Myself)
+  HasItem("abgfEyeR",Myself)
+  !Global("ab_GemsTrulyGone","GLOBAL",1)
+  !Global("ab_TalkAbouMissingGems","GLOBAL",1)
+THEN
+  RESPONSE #100
+    Dialogue([PC])
+END
+IF
+  See([PC])
+  Range(LastSeenBy,4)
+  HasItem("abgfEyeL",Myself)
+  !HasItem("abgfEyeR",Myself)
+  !Global("ab_GemsTrulyGone","GLOBAL",1)
+  !Global("ab_TalkAbouMissingGems","GLOBAL",1)
+THEN
+  RESPONSE #100
+    Dialogue([PC])
+END
+
+//return to spot if tried to talk and player ran out of range
+IF
+  See([PC])
+  !Range(LastSeenBy,4)
+THEN
+  RESPONSE #100
+    ClearActions(Myself)
+    MoveToPoint([641.2713])
+END

@@ -1,0 +1,8 @@
+IF
+  Heard("Dillar",1)
+THEN
+  RESPONSE #100
+    Enemy()
+END
+
+

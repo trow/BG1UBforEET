@@ -1,0 +1,7 @@
+BEGIN ~BGSHOP05~
+
+IF ~True()~ THEN BEGIN 0
+  SAY @40158
+  IF ~~ THEN REPLY @40159 DO ~StartStore("sto1115",LastTalkedToBy(Myself))~ EXIT
+  IF ~~ THEN REPLY @40160 DO ~~ EXIT
+END

@@ -1,0 +1,22 @@
+IF
+  Heard("Delorna",1)
+THEN
+  RESPONSE #100
+    Enemy()
+END
+
+IF
+  Heard("Ithmeera",1)
+THEN
+  RESPONSE #100
+    Enemy()
+END
+
+IF
+  Heard("Helshara",1)
+THEN
+  RESPONSE #100
+    Enemy()
+END
+
+

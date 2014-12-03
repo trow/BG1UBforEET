@@ -1,0 +1,1511 @@
+//Imported dialogue text for BGT/Tutu
+
+//Sound references: no plain translations - all texts must match the corresponding sounds verbatim
+//German translation: unless noted otherwise, the predetermined texts from BG1 should be consistent with MK's BG1 Textpatch (v3.3)
+
+//#17578
+@10000 = ~Edie~
+
+//#11166
+@10001 = ~Hey, du wirst meinen Absatz zu spüren bekommen, wenn du mich nicht in Ruhe lässt!~ [%tutu_var%WOMLC02]
+@10002 = ~~ [%tutu_var%FTOWN05]
+@10003 = ~~ [%tutu_var%WOMLC03]
+
+//#19704
+@10004 = ~Enna Hendrik~
+
+//#4902
+@10005 = ~Mein Mann will nicht, dass ich mit Fremden sprech.~ [%tutu_var%FTOWN02]
+
+//#13309
+@10006 = ~Ihr seid hier nicht willkommen!~
+
+//#19706
+@10007 = ~Erlin Hendrik~
+
+//#4908
+@10008 = ~Ich hab grad keine Zeit zum Mit-Euch-Reden.~ [%tutu_var%FARME01]
+@10009 = ~~ [%tutu_var%FARME05]
+@10010 = ~~ [%tutu_var%FARME06]
+
+//#8959
+@10011 = ~Geht mir aus dem Weg! Ich werde nichts für Euch tun!~
+
+//#20245
+@10012 = ~Feldane~
+
+//#4983
+@10013 = ~Unsere Bibliothek ist der Harem des Wissens der Menschheit.~ [%tutu_var%READR01]
+@10014 = ~~ [%tutu_var%READR05]
+@10015 = ~~ [%tutu_var%READR06]
+
+//#4984
+@10016 = ~Entschuldigt mich, aber ich komme zu spät zu meinem Unterricht.~ [%tutu_var%READR02]
+
+//#12238
+@10017 = ~Galkin~
+
+//#4762
+@10018 = ~Nimmt denn keiner mein Angebot an? Bah! Ihr seid ja alles Waschlappen!~ [%tutu_var%GALKN01]
+@10019 = ~~ [%tutu_var%GALKN03]
+@10020 = ~~ [%tutu_var%GALKN04]
+
+//#4763
+@10021 = ~Argh! Mein linkes Bein hat die Gicht und ist irgendwie ganz lahm, und... ich muss noch den Wirt bezahlen, sonst nimmt er mir auch noch mein rechtes!~ [%tutu_var%GALKN02]
+
+//#9406
+@10022 = ~Mädchen~
+
+//#4861
+@10023 = ~Ich hab meine Püppi verloren.~ [%tutu_var%FCHIL01]
+@10024 = ~~ [%tutu_var%FCHIL05]
+@10025 = ~~ [%tutu_var%FCHIL06]
+
+//#8944
+@10026 = ~Lass mich in Ruhe! Du bist gemein!~
+
+//#13840
+@10027 = ~Halblingsfrau~
+
+//#11238
+@10028 = ~Ohh, es ist ein toller Tag, um neue Freunde zu treffen.~ [%tutu_var%HALFF01]
+@10029 = ~~ [%tutu_var%HALFF05]
+@10030 = ~~ [%tutu_var%HALFF06]
+
+//#13343
+@10031 = ~Ihr seid hier nicht mehr willkommen!~
+
+//#13344 - German: using variant #7851
+@10032 = ~Da seid Ihr ja wieder! Ich dachte, Ihr wärt bereits weitergezogen. Schön, dass Ihr noch da seid!~
+
+//#13345 - German: using variant #7852
+@10033 = ~Es überrascht mich, Euch wiederzusehen! Hat der Ruf der Ferne nicht schon wieder Euren Verstand besiegt? Bei Dallillia, ich hoffe nur, dass keines der Kinder Euch folgt, wenn Ihr geht!~
+
+//#13839
+@10034 = ~Halblingsmann~
+
+//#4926
+@10035 = ~Seltsame Dinge sind hier im Gange.~ [%tutu_var%HALFL03]
+@10036 = ~~ [%tutu_var%HALFL05]
+@10037 = ~~ [%tutu_var%HALFL06]
+
+//#8954 - German: improved translation
+@10038 = ~Ich möchte ja nicht unhöflich sein, aber mir wäre lieber, Ihr würdet jetzt gehen.~
+
+//#13347 - German: using variant #7817
+@10039 = ~Hallo, da seid Ihr ja wieder. Es ist mir immer wieder eine Freude!~
+
+//#13348 - German: using variant #7818
+@10040 = ~Wie ich sehe, seid Ihr zurückgekehrt. Ich hoffe, Ihr bleibt nicht länger als beim letzten Mal.~
+
+//#12310
+@10041 = ~Elminster~
+
+//#9431
+@10042 = ~Bürger~
+
+//#11093
+@10043 = ~Hey, Kollege.~ [%tutu_var%GENMG13]
+@10044 = ~~ [%tutu_var%VILLM05]
+@10045 = ~~ [%tutu_var%MTOWN06]
+
+//#8950
+@10046 = ~Nach dem, was Ihr getan habt, sage ich kein Wort mehr!~
+
+//#20602 = #11095
+@10047 = ~Hey da!~ [%tutu_var%GENMG15]
+
+//#9359
+@10048 = ~Ogrillon~
+
+//#5163
+@10049 = ~Zeit für ein Blutbad!~ [%tutu_var%OGRIL03]
+
+//#5164
+@10050 = ~Sterbt, ihr quiekenden Ratten!~ [%tutu_var%OGRIL04]
+@10051 = ~~ [%tutu_var%OGRIL05] //non-existent
+@10052 = ~~ [%tutu_var%OGRIL06] //non-existent
+@10053 = ~~ [%tutu_var%OGRIL08]
+@10054 = ~~ [%tutu_var%OGRIL09]
+
+//#5161
+@10055 = ~Veräppel mich nicht, oder ich mach dich zu Mus!~ [%tutu_var%OGRIL01]
+
+//#5162
+@10056 = ~Alle hänseln mich, weil ich nur zwei Meter groß bin.~ [%tutu_var%OGRIL02]
+
+//#9356
+@10057 = ~Halboger~
+
+//#5158
+@10058 = ~Ich böse!~ [%tutu_var%HOGRE03]
+
+//#5159
+@10059 = ~Ich töten Männer, die mich machen böse!~ [%tutu_var%HOGRE04]
+@10060 = ~~ [%tutu_var%HOGRE08]
+@10061 = ~~ [%tutu_var%HOGRE09]
+
+//#5155
+@10062 = ~Ich hungrig.~ [%tutu_var%HOGRE01]
+
+//#5156
+@10063 = ~(Rülpsen) Nah-ha-ha-ha-ha! (Furzen)~ [%tutu_var%HOGRE02]
+
+//#9412
+@10064 = ~Gelehrter~
+
+//#8753
+@10065 = ~Tasloi~
+@10066 = ~~ [%tutu_var%TASLO03]
+@10067 = ~~ [%tutu_var%TASLO04]
+@10068 = ~~ [%tutu_var%TASLO05]
+@10069 = ~~ [%tutu_var%TASLO06]
+@10070 = ~~ [%tutu_var%TASLO08]
+@10071 = ~~ [%tutu_var%TASLO09]
+@10072 = ~~ [%tutu_var%TASLO00] //non-existent
+@10073 = ~~ [%tutu_var%TASLO01]
+@10074 = ~~ [%tutu_var%TASLO02]
+
+//#9495
+@10075 = ~Reisender~
+
+//#12884 - German: improved translation
+@10076 = ~Dienstmädchen~
+
+//#4786
+@10077 = ~Darf ich die Rechnung bringen? Herr Volo war lange hier.~ [%tutu_var%WENCH01]
+@10078 = ~~ [%tutu_var%WENCH03]
+@10079 = ~~ [%tutu_var%WENCH04]
+
+//#4787
+@10080 = ~Eigentlich bin ich Schriftstellerin. Ich arbeite nur als Kellnerin, um meine Rechnungen zu bezahlen.~ [%tutu_var%WENCH02]
+
+//#12761
+@10081 = ~Wilton~
+
+//#4821
+@10082 = ~Wartet mal eine Sekunde. Ich hab gehört, was Ihr für den alten Brun getan habt.~ [%tutu_var%WILTN01]
+@10083 = ~~ [%tutu_var%WILTN03]
+@10084 = ~~ [%tutu_var%WILTN04]
+
+//#4822
+@10085 = ~Ist ganz schön schwer, heutzutage gute Kameraden zu finden.~ [%tutu_var%WILTN02]
+
+//#9036
+@10086 = ~Lasst mich in Ruhe! Ich habe nichts für Euch.~
+
+//#13679 = ubcre.tra @6 (improved translation)
+@10087 = ~Tut mir leid, <GIRLBOY>, aber ich hab noch meinen Acker zu bestellen.~
+
+//#23935
+@10088 = ~Oh, ein neues Gesicht in der Stadt, was?~ [%tutu_var%TSCFT01]
+
+//#13649 - German: improved translation
+@10089 = ~Ihr bekommt nichts von mir!~
+
+//#23936
+@10090 = ~Ihr wollt was sagen? Dann lasst mal hören.~ [%tutu_var%TSCFT02]
+@10091 = ~~ [%tutu_var%WOMCO03]
+@10092 = ~~ [%tutu_var%WOMCO04]
+
+//#21974
+@10093 = ~Meym~
+
+//#11081 - German: gender specification is irrelevant, text must still match the sound
+@10094 = ~Ihr benötigt etwas, Fremder?~ [%tutu_var%GENMG04]
+@10095 = ~~ [%tutu_var%MINER05]
+@10096 = ~~ [%tutu_var%MINER06]
+
+//#23929 - German: gender specification is irrelevant, text must still match the sound
+@10097 = ~Na... hallo, Jüngelchen.~ [%tutu_var%TSCMT02]
+@10098 = ~~ [%tutu_var%VILLM06]
+
+//#23930
+@10099 = ~Ihr seht nicht so aus, als seid Ihr von hier.~ [%tutu_var%TSCMT03]
+
+//#15975
+@10100 = ~Oger~
+
+//#5148
+@10101 = ~Dummdiedeldei, aus dir mach ich Brei!~ [%tutu_var%OGREE03]
+
+//#5149
+@10102 = ~Ich zermalm dein Gesicht!~ [%tutu_var%OGREE04]
+@10103 = ~~ [%tutu_var%OGREE08]
+@10104 = ~~ [%tutu_var%OGREE09]
+
+//#5147
+@10105 = ~Ich will zermatschen!~ [%tutu_var%OGREE01]
+@10106 = ~~ [%tutu_var%OGREE02]
+
+//#10006
+@10107 = ~Magier in Kutte~
+
+//#11079
+@10108 = ~Hmm?~ [%tutu_var%GENMG03]
+@10109 = ~~ [%tutu_var%RAMAZ03]
+@10110 = ~~ [%tutu_var%RAMAZ04]
+
+//#6315
+@10111 = ~Ghul~
+@10112 = ~~ [%tutu_var%GHOUL03]
+@10113 = ~~ [%tutu_var%GHOUL04]
+@10114 = ~~ [%tutu_var%GHOUL05]
+@10115 = ~~ [%tutu_var%GHOUL06]
+@10116 = ~~ [%tutu_var%GHOUL08]
+@10117 = ~~ [%tutu_var%GHOUL09]
+@10118 = ~~ [%tutu_var%GHOUL01]
+
+//#5142
+@10119 = ~Hmmmm, ich mögen Fleisch, a-ha-ha-ha-ha-ha.~ [%tutu_var%GHOUL02]
+
+//#13712
+@10120 = ~Vogel~
+@10121 = ~~ [%tutu_scripta%MB_E05D]
+@10122 = ~~ [%tutu_scripta%MB_E05E]
+@10123 = ~~ [%tutu_scripta%MB_E05F]
+@10124 = ~~ [%tutu_scripta%MB_E05G]
+@10125 = ~~ [%tutu_scripta%MB_E05H]
+
+//#13841
+@10126 = ~Halblingsmietling~
+
+//#4925
+@10127 = ~Ihr seid ein absonderliches Volk, dass Ihr Euch hier herumtreibt.~ [%tutu_var%HALFL02]
+@10128 = ~~ [%tutu_var%FTOWN06]
+
+//#12245
+@10129 = ~Entar Silberschild~
+
+//#4705
+@10130 = ~Was machen Eindringlinge in meinem Haus?~ [%tutu_var%ENTAR01]
+
+//#12421 - no "Mon Dieu!" in the German sound
+@10131 = ~~ [%tutu_var%ENTAR03]
+@10132 = ~~ [%tutu_var%ENTAR04]
+
+//#4706
+@10133 = ~Ich hoffe, meiner süßen Tochter Skie ist nichts geschehen.~ [%tutu_var%ENTAR02]
+
+//#8983 - German: improved translation
+@10134 = ~Für solche wie Euch sind meine Türen nicht länger geöffnet!~
+
+//#9857
+@10135 = ~Herschel~
+
+//#4874
+@10136 = ~Keine Zeit für Plaudereien.~ [%tutu_var%NOBLE02]
+@10137 = ~~ [%tutu_var%NOBLE05]
+@10138 = ~~ [%tutu_var%NOBLE06]
+
+//#4875
+@10139 = ~Fort mit Euch, Bettler!~ [%tutu_var%NOBLE03]
+
+//#4874
+@10140 = ~Keine Zeit für Plaudereien.~ [%tutu_var%NOBLE02]
+
+//#4873
+@10141 = ~Ein Mann sollte seinen Herren nie zuerst ansprechen.~ [%tutu_var%NOBLE01]
+
+//#4876
+@10142 = ~Fasst mich nicht an! Ich könnte mir was einfangen.~ [%tutu_var%NOBLE04]
+
+//#8909
+@10143 = ~Keinen Schritt näher! Ich mische Euch auf, darauf könnt Ihr Euch verlassen!~
+
+//#9432
+@10144 = ~Kaufmann~
+
+//#4959
+@10145 = ~Ich hab die besten Preise diesseits von Cormyr.~ [%tutu_var%MERCH01]
+@10146 = ~~ [%tutu_var%MERCH05]
+@10147 = ~~ [%tutu_var%MERCH06]
+
+//#4959
+@10148 = ~Ich hab die besten Preise diesseits von Cormyr.~ [%tutu_var%MERCH01]
+
+//#4960
+@10149 = ~Alle meine Sachen sind echt, das garantier ich.~ [%tutu_var%MERCH02]
+
+//#4961
+@10150 = ~Diese verdammten Banditen machen das Geschäft kaputt!~ [%tutu_var%MERCH03]
+
+//#4962
+@10151 = ~Ich liebe Geld, ja, das tue ich!~ [%tutu_var%MERCH04]
+
+//#8930
+@10152 = ~Ich vertraue Euch nicht einmal so weit, wie ich spucken kann!~
+
+//#12884 - German: improved translation (= @10076)
+@10153 = ~Dienstmädchen~
+
+//#4866
+@10154 = ~Na, Ihr seid aber alle große Männer!~ [%tutu_var%SWENC02]
+@10155 = ~~ [%tutu_var%SWENC05]
+@10156 = ~~ [%tutu_var%SWENC06]
+
+//#4865
+@10157 = ~Ein kleines Trinkgeld ist immer gut.~ [%tutu_var%SWENC01]
+
+//#9086 - German: improved translation, not gender-specific; sticking to "du" instead of "Ihr"
+@10158 = ~Verwschwinde, du Trampel!~
+
+//#13607
+@10159 = ~Wenn Ihr Eure Hand noch mal so sorglos in meine Nähe bringt, verliert Ihr sie, das garantiere ich Euch! Bestellt wird an der Bar.~
+@10160 = ~~ [%tutu_var%SWENC04]
+
+//#12894
+@10161 = ~Schankwirt~
+
+//#4944
+@10162 = ~Wie wär's mit 'nem Whisky?~ [%tutu_var%BARTN01]
+@10163 = ~~ [%tutu_var%BARTN05]
+@10164 = ~~ [%tutu_var%BARTN06]
+
+//#4945
+@10165 = ~Bei mir ist das Bier billig.~ [%tutu_var%BARTN02]
+
+//#4946
+@10166 = ~(Rülpsen) - Ich muss aufhören, mein eigenes Bier zu saufen.~ [%tutu_var%BARTN03]
+
+//#4947
+@10167 = ~Ich hab ein paar schmucke Kellnerinnen, findet Ihr nicht?~ [%tutu_var%BARTN04]
+
+//#4862
+@10168 = ~(Weint)~ [%tutu_var%FCHIL02]
+@10169 = ~~ [%tutu_scripta%MB_M34A]
+
+//#22786 - change Blunt Weapons to Club
+@10170 = ~Die Wurzel allen Übels
+
+Man sagt, dass diese magische Keule seit dem Untergang Nesserils und der Entstehung der großen Wüste Anauroch existiert. Die damalige Katastrophe verlangte der zivilisierten Welt natürlich einen fürchterlichen Preis ab, aber die wahren Leidtragenden waren die Wesen der Natur, die hilflos mit ansehen mussten, wie ihr Lebensraum verfiel und starb. Während die Lebensräume immer mehr schrumpften, wurden jene Wesen, die nicht flohen, von jenen überrannt, die aus den noch unwirtlicher gewordenen Gegenden flohen. Diese Wesen nahmen sich, was sie benötigten, und scheuten auch vor Gewaltanwendung nicht zurück. Diese besondere Waffe ist angeblich das letzte Geschenk einer Dryade, die die Invasoren ihres Landes vergeblich aufzuhalten versuchte. Die Keule soll aus dem Baum der Dryade entstanden sein. Das arme Wesen musste einen bittersüßen Schmerz durchleiden, weil ihr Wald nur wohl deswegen zum Opfer solch fürchterlicher Heimsuchungen wurde, weil er so stark, gesund und reich an Leben war. Die Waffe hat ihren Namen von einem nicht gerade respektvollen Gelehrten erhalten. Die treuen Diener der Natur schätzen diese Art von Humor hingegen gar nicht.
+
+EIGENSCHAFTEN:
+
+Schaden: 
+ 1W6 +1 (Wucht)
+ 1W6 +3 (gg. unnatürliche Wesen)
+ETW0-Bonus: -1
+ -3 (gg. unnatürliche Wesen)
+Gewicht: 3
+Initiativefaktor: 3
+Mindeststärke: 5
+Fertigkeit: Keule
+Typ: 1-händig
+
+Kann nicht verwendet werden von:
+- Magiern~
+
+//#7149
+@10171 = ~Buch~
+
+//#7414
+@10172 = ~Die Leute von Gullykin haben etwas dagegen, wenn ihnen ihre sauer verdienten Besitztümer geklaut werden. Ergebt Euch, Diebe!~
+
+//#7416
+@10173 = ~Kommt schon, Kleiner, gebt uns noch eine Chance. Wie wär's mit diesen 100 Goldmünzen?~
+
+//#7417
+@10174 = ~Würden 200 Goldmünzen Eure Meinung über diese Situation ändern?~
+
+//#7418
+@10175 = ~Als ob es so ein laufender Meter mit uns aufnehmen könnte. Versucht's doch!~
+
+//#7415 - German: improved translation
+@10176 = ~Tut mir leid, aber wir lassen uns nicht bestechen.~
+
+//#7419
+@10177 = ~Als Abenteurer wollt Ihr bestimmt nur etwas über die Ruinen der Feuerwein-Brücke erfahren. Dort sollen Schätze lagern, die von einem Koboldstamm bewacht werden. Ihr würdet uns einen großen Dienst erweisen, wenn Ihr diese Kobolde beseitigen könntet. Sie haben in letzter Zeit ziemlich viel Ärger gemacht.~
+
+//#4924
+@10178 = ~Ich fürchte, es kommen finstere Zeiten auf uns zu.~ [%tutu_var%HALFL01]
+
+//#9408
+@10179 = ~Ladenbesitzer~
+
+//#4881
+@10180 = ~Willkommen in meinem bescheidenen Reich.~ [%tutu_var%STORE01]
+
+//#12558
+@10181 = ~~ [%tutu_var%STORE05]
+
+//#12559
+@10182 = ~~ [%tutu_var%STORE06]
+
+//#4882
+@10183 = ~Die Geschäfte laufen schlecht. Kein Wunder, bei der Eisenknappheit.~ [%tutu_var%STORE02]
+
+//#4883
+@10184 = ~Der Kunde hat immer recht.~ [%tutu_var%STORE03]
+
+//#4884
+@10185 = ~Meine Preise sind die besten südlich von Tiefwasser.~ [%tutu_var%STORE04]
+
+//vial/ubvial.d
+//#19438
+@20000 = ~Ich habe die Minen von Nashkell erfolgreich gesäubert und bin dafür reichlich entlohnt worden. Ich erhielt 900 Goldmünzen von Berrun Ghastkill und den Dank der ganzen Stadt. Es wird nun bald wieder Eisen bis an die Küste gelangen, auch wenn der Transport weiterhin tückisch ist. Mit den Straßenräubern muss ebenfalls aufgeräumt werden.~
+
+//#5837
+@20001 = ~Taerom ist dabei, aus meinem Ankheg-Panzer eine Rüstung zu fertigen. In zehn Tagen wird sie fertig sein.~
+
+//#187
+@20165 = ~Ich bin noch nicht fertig. Es kann noch ein bis zwei Tage dauern. Habt Geduld, gut Ding will bekanntlich Weile haben.~
+
+//#15267
+@20166 = ~Könnt Ihr uns zeigen, was Ihr zu verkaufen habt?~
+
+//kagain/rKAGAIJ.d
+//#16782 - German: improved translation (mixed with variant #456)
+@20002 = ~Sieh mal einer an, ich habe die Leiche von Silberschilds Sohn gefunden. Jetzt sitze ich ganz schön in der Klemme. Durch seinen Tod bin ich von jetzt an ein vogelfreier Zwerg. Wenn ich richtig verstanden habe, seid Ihr hinter diesen verfluchten Räubern her. Da mein Ruf jetzt sowieso verwirkt ist, könnte ich Euch ja bei Euren Racheplänen unterstützen.~
+
+//#16783
+@20003 = ~Ich will Euch nicht mehr sehen, also macht, dass Ihr wegkommt.~
+
+//#7045
+@20004 = ~Der Sohn von Entar Silberschild wurde getötet.~
+
+//#16784 - German: using variant #473
+@20005 = ~Sicher, wir können Eure Fähigkeiten gebrauchen.~
+
+//albert/_ALBERT.d
+//#6500
+@20006 = ~RUFIE!! Mein kleiner Schnuckiputzi, mein kleiner wuschliger Rufie! Dudududu, du kleiner, frecher Ausreißer! Habt tausendmal Dank! Ich werde dieses kleine Hündchen jetzt wohl besser nach Hause bringen. Hier, nehmt dies, das ist auch sowas zum Kauen. Wo wir hingehen, gibt's noch mehr davon. Nochmals vielen Dank!~
+
+//#6509
+@20007 = ~Ich rettete den "kleinen" Rufie und brachte ihn zu dem "Kind" namens Albert zurück. Ich möchte überhaupt nicht wissen, wohin sie gegangen sind. Wenn ich Glück habe, finde ich es nie heraus.~
+
+//scar/ubscar.d
+//#10649
+@20008 = ~Scar wartet außerhalb der Kaserne der Flammenden Faust. Er möchte mit uns über den Verdacht reden, den er gegenüber dem Eisenthron hegt.~
+
+//quoningar/ubquon.d
+//#15528
+@20009 = ~Stört nicht die Meditation des Heiligen.~
+
+//#15532
+@20010 = ~Es ist schwer für mich, im Lärm dieser Stadt zu meditieren. Könnte ich Euch wohl um Hilfe bei der Beschaffung eines Konzentrationstrankes bitten?~
+
+//#15809
+@20011 = ~Der Priester Quoningar, der scheinbar genauso wenig an das rege Treiben in der Stadt gewöhnt ist wie ich, sucht nach einem Konzentrationstrank. Ohne ihn wird er seine Meditationen wohl nie beenden können...~
+
+//#15538
+@20012 = ~Bitte, falls Ihr nicht gerade einen Konzentrationstrank habt, muss ich mich wieder dieser wenig fruchtbaren Beschäftigung zuwenden.~
+
+//#15539
+@20013 = ~Ich bin froh, dass ich trotz aller Widrigkeiten dieser Stadt jemanden wie Euch getroffen habe, der sie erträglicher macht. Ihr könnt mich Quoningar nennen, wenn Ihr mögt. Bitte, nehmt diesen Hammer, damit Ihr Euch meiner entsinnt, wenn Ihr Euch demnächst wieder in einen Kampf stürzt.~
+
+//#15540
+@20014 = ~Ich bin froh, dass ich trotz aller Widrigkeiten dieser Stadt jemanden wie Euch getroffen habe, der sie erträglicher macht. Ihr könnt mich Quoningar nennen, wenn Ihr mögt. Bitte, nehmt diesen Magieabwehrtrank. Ich habe das Gefühl, dass er einem auf diesen Straßen gute Dienste erweisen kann.~
+
+//#15541
+@20015 = ~Diese Stadt macht mir Angst, mein Freund. Mit jedem Tag, den ich hier verbringe, werde ich besorgter.~ ~Diese Stadt macht mir Angst, meine Freundin. Mit jedem Tag, den ich hier verbringe, werde ich besorgter.~
+
+//#15542
+@20016 = ~Ich kann diese Stadt nicht ausstehen, aber vielleicht wäre sie ohne Euch ein freundlicherer Ort!~
+
+//shilchen/ubshilo.d
+//#15182 - German: improved translation
+@20017 = ~Ich rieche die Stadt an Euch.~
+
+//#15772
+@20018 = ~Shilo Chen, ein Waldläufer aus dem Scharfzahnwald, sucht zurzeit in Baldurs Tor Hilfe. Die Tiere im südwestlichen Teil des Waldes werden nämlich von einer Gruppe von Oger Magi getötet. Er hat mich gebeten, dort hinzugehen und zu sehen, was ich machen kann. Wenn er noch andere bereitwillige Abenteurer finden kann, wird er mir diese als Verstärkung schicken.~
+
+//#15184
+@20019 = ~Wie könnt Ihr in dieser üblen Stadt bleiben, wenn der Wald in Gefahr ist?~
+
+//#15185
+@20020 = ~Die Falken haben mir erzählt, dass Ihr die Oger Magi ohne fremde Hilfe losgeworden seid. Ich bin von Eurem Heldenmut beeindruckt. Bitte nehmt diese Handschuhe als Zeichen meiner Wertschätzung. Sie sind so dünn, dass Ihr sogar die weichste Feder in Eurer Hand spüren könnt.~
+
+//#15186
+@20021 = ~Ihr Stadtbewohner seid alle gleich!~
+
+//edie/ubedie.d
+//#15175
+@20022 = ~Bitte seid still. Ich versuche zu lernen.~
+
+//#15178
+@20023 = ~Ich hasse Prüfungen...~
+
+//creature/ubcre.d
+//#19945 - German: improved translation
+@20024 = ~Oh, hallo <CHARNAME>. Ich habe Euch schon eine ganze Weile nicht mehr gesehen. Leider ist gerade viel zu viel zu tun, um über die alten Zeiten zu plaudern. Ich muss die Konferenzräume herrichten für unsere... Gäste.~
+
+//#19946
+@20025 = ~Nur sehr selten haben Gäste diese Räume benutzt. Wer ist hier?~
+
+//#19947
+@20026 = ~Ihr wirkt zögerlich, Feldane. Kann man diesen Leuten nicht trauen?~
+
+//#19948
+@20027 = ~Oh, ich sollte eigentlich nichts sagen. Sie haben der Burg eine sehr großzügige Spende gegeben; einige seltene Schriften, die viel mehr wert sind als die normale Eintrittsgebühr. Ich weiß nicht, warum ich's Euch nicht erzählen sollte. Schließlich wart Ihr an diesem Ort einst zu Hause. Sie geben sich als Händler aus, aber ich bin sicher, dass ihre Organisationen noch bei vielem anderen ihre Finger im Spiel haben. Die drei Anführer des Eisenthrons treffen sich mit Vertretern der Ritter des Schildes.~
+
+//#19950
+@20028 = ~Was wisst Ihr über diese beiden Gruppen?~
+
+//#19952
+@20029 = ~Interessant, geht mich aber nichts an. Danke für Eure Zeit.~
+
+//#19957 - German: improved translation
+@20030 = ~Ich habe zwar kein Recht, das zu sagen, aber ich würde empfehlen, Eure Geldbörse im Auge zu behalten, während Ihr hier seid. Drei sind vom Eisenthron gekommen, angeblich die Anführer selbst. Die anderen stammen aus Amn. Ich glaube, dass sie die Ritter des Schildes vertreten. Sie behaupten, diese Reise diene der Besprechung zukünftiger Geschäftsbeziehungen, weil der Eisenthron in letzter Zeit so stark gewachsen ist. Ich weiß nur sehr wenig über die Wirtschaftslage in Baldurs Tor, doch ich habe den Eindruck, dass sie beide mehr sind als bloße Geschäftsleute.~
+
+//#19962
+@20031 = ~Was meint Ihr damit? Ich hatte "Geschäfte" mit dem Eisenthron, deswegen würde ich gerne wissen, was man dort plant.~
+
+//#19963
+@20032 = ~Danke für die Warnung. Ich werde aufpassen.~
+
+//#19964
+@20033 = ~Nicht sehr viel, aber Gerüchte gehen halt immer um. Ich habe gehört, dass diese Treffen eher Verhandlungen sein sollen, weil der Eisenthron gedroht hat, in das Gebiet der Ritter des Schildes vorzudringen. Ich habe, natürlich zufällig, einem von ihnen zugehört und ich glaube, dass der Eisenthron durch den Eisenmangel stark an Macht gewonnen hat. Das passt doch irgendwie zusammen, findet Ihr nicht? Sie treffen sich hier, weil ihnen der Ort neutral und ziemlich sicher erscheint. Ich bezweifle, dass Ulraunt, der Hüter der Bibliothek, ihnen den Zutritt gewährt hätte, wenn er gewusst hätte, wer sie sind... obwohl sie hier keine Gesetze übertreten haben.~
+
+//#19967
+@20034 = ~Danke für die Informationen. Ich sollte gehen.~
+
+//#19968
+@20035 = ~Hmm. Ihr wisst nicht zufällig, in welchen Räumen sie sich befinden?~
+
+//#19965 - German: improved translation
+@20036 = ~Kein Problem. Wir müssen uns während Eures Aufenthalts hier noch einmal treffen.~
+
+//#19966 - German: improved translation
+@20037 = ~Oh, ich hoffe, dass Ihr Euch nicht mit ihnen zusammengetan habt. Ich habe gehört, dass sie sehr zwielichtige Gesellen sein sollen. Mehr an der Macht als am Handel interessiert. Ich habe zufällig eines ihrer Gespräche belauscht und erfahren, dass sie von der Eisenkrise profitiert haben! Deshalb sind auch die Ritter des Schildes hier - der Eisenthron hat in letzter Zeit stark an Einfluss gewonnen und droht mit der Übernahme gewisser amnischer Interessen. Ich bin überrascht, dass ihnen Ulraunt, der Hüter der Bibliothek, den Zutritt gewährt hat, aber bisher kann man ihnen keine Verstöße gegen das Gesetz anlasten.~
+
+//#19970
+@20038 = ~Danke für die Informationen. Ich ziehe mich jetzt auf mein Zimmer zurück.~
+
+//#19971
+@20039 = ~Ihr wisst nicht zufällig, welche Zimmer sie belegen?~
+
+//#19969
+@20040 = ~Ich habe bereits zu viel gesagt. Ich will ja nicht wie eine Klatschtante aussehen. Ich gehe jetzt besser, aber wir sollten uns vor Eurer Abreise noch einmal unterhalten.~
+
+//#15543
+@20041 = ~Verfluchte Basilisken! Ich glaube, er ist nach Osten gezogen, aber ich habe für heute wirklich genug von ihm, vielen Dank. Wenn Ihr die blöden Dinger aber unbedingt jagen wollt, dann lasst Euch von mir nicht aufhalten.~
+
+//#15810
+@20042 = ~Ich habe die Waldläuferin Corianna aus der Versteinerung eines Basilisken gerettet. Corianna möchte diesem Wesen zwar kein zweites Mal begegnen, doch sie hat mir freundlicherweise mitgeteilt, dass es nach Osten unterwegs war...~
+
+//#15544
+@20043 = ~Ich bin so froh, dass Ihr mich hier draußen gefunden habt. Basilisken sollte man nicht unbedingt alleine gegenübertreten. Ich gehe jetzt nach Hause, aber wenn Ihr ihn erlegen wollt, dann nehmt diesen Trank der Spiegelaugen mit. Sein Bau kann nicht sehr weit von hier entfernt liegen.~
+
+//#15811
+@20044 = ~Ich habe die Waldläuferin Corianna aus der Versteinerung eines Basilisken gerettet. Corianna möchte diesem Wesen zwar kein zweites Mal begegnen, doch sie hat mir freundlicherweise einen Trank der Spiegelaugen gegeben und mir mitgeteilt, dass es nach Osten unterwegs war...~
+
+//#15545 - German: improved translation
+@20045 = ~Im Ernst? Nein, wenn Ihr dem Basilisken begegnen wollt, dann ist das Eure Angelegenheit. Ich gehe nach Hause.~
+
+//#15546 - German: improved translation
+@20046 = ~Muss das sein? Seht, es war ein langer Tag für mich... Ach, seid verdammt nach alledem!~
+
+//#6145
+@20047 = ~Ich bin nur ein einfacher Bauer. Ich weiß nicht viel.~
+
+//#3991
+@20048 = ~Hey! Wer seid Ihr?~
+
+//#3993
+@20049 = ~Wir sind Söldner.~
+
+//#3994
+@20050 = ~Wir sind Abenteurer.~
+
+//#3995
+@20051 = ~Wir sind nur ganz normale Reisende.~
+
+//#6601
+@20052 = ~Ein Bauer, den wir im Scharfzahnwald trafen, hat uns erzählt, dass jemand im Wald Müll ablädt.~
+
+//#4004
+@20053 = ~Ja genau, und wenn Ihr ganz normale Reisende seid, dann bin ich Elminster persönlich. Nichtsnutziges Pack!~
+
+//#9036 = @10086
+@20054 = ~Lasst mich in Ruhe! Ich habe nichts für Euch.~
+
+//#106
+@20055 = ~Haltet mal inne, junger Mann. Ich hab nämlich gehört, was Ihr für den alten Brun getan habt. Es beschämt mich richtig, dass ich nich selbst versucht hab, ihm zu helfen. Is aber gut zu wissen, dass es noch jemanden gibt, der bereit is, selbst für einen Fremden Unannehmlichkeiten auf sich zu nehmen. Für das, was Ihr getan habt, möcht ich Euch mein Erbstück überreichen. Tja, was Großartiges haben mir meine Vorfahren nich hinterlassen, aber Ihr solltet mehr damit anfangen können als ich. Ach, Ihr gebt einem alten, verbrauchten Mann die Hoffnung, dass es da draußen noch anständige Leute gibt.~ ~Haltet mal inne, junge Frau. Ich hab nämlich gehört, was Ihr für den alten Brun getan habt. Es beschämt mich richtig, dass ich nich selbst versucht hab, ihm zu helfen. Is aber gut zu wissen, dass es noch jemanden gibt, der bereit is, selbst für einen Fremden Unannehmlichkeiten auf sich zu nehmen. Für das, was Ihr getan habt, möcht ich Euch mein Erbstück überreichen. Tja, was Großartiges haben mir meine Vorfahren nich hinterlassen, aber Ihr solltet mehr damit anfangen können als ich. Ach, Ihr gebt einem alten, verbrauchten Mann die Hoffnung, dass es da draußen noch anständige Leute gibt.~
+
+//#5833 - German: improved translation
+@20056 = ~Ein Mann namens Wilton gab mir eine Belohnung dafür, dass ich dem alten Bauern Brun geholfen habe. Wie die Saat, so die Ernte, nehme ich an.~
+
+//#6432
+@20057 = ~Das einzig Aufregende, was hier passiert, sind die Räuberüberfälle. Doch ich warne Euch: Ich würde mich besser nicht mit diesen Halunken einlassen, die können angeblich ziemlich unangenehm werden.~
+
+//dialogues/u!minor1.d
+//#5096
+@20058 = ~Ihr dort! Ich brauche etwas Geld und Heilung. Wenn Ihr wisst, was gut für Euch ist, gebt Ihr mir, was ich benötige!~
+
+//#5097
+@20059 = ~Ihr beliebt wohl zu scherzen?! Ihr seid ein Hobgoblin, warum sollten wir Euch also nicht umbringen?~
+
+//#5098
+@20060 = ~Hier, nehmt 25 Goldmünzen.~
+
+//#5099
+@20061 = ~Warum sollte ich Euch helfen?~
+
+//#5100 - German: improved translation
+@20062 = ~Gut gemacht, Ihr armseligen Schwächlinge.~
+
+//#5101 - German: improved translation
+@20063 = ~Ich bin ein Mitglied der Söldnerbande Kalte Hand. Wenn Ihr wollt, dass alle meine Freunde Euch auf die Pelle rücken, dann ärgert mich ruhig weiter.~
+
+//#5102
+@20064 = ~Okay! Hier habt Ihr 25 Goldmünzen, und jetzt lasst uns in Ruhe.~
+
+//#5103
+@20065 = ~Nun... im Moment ist nur einer von Euch da, daher wollen wir es wagen.~
+
+//#5104
+@20066 = ~Du willst uns drohen, du degeneriertes, stinkendes Biest?! Bevor wir deinem trostlosen Dasein ein Ende bereiten, solltest du uns noch ein bisschen auf den Knien anflehen und vielleicht noch ein paar Informationen über die Schwarzen Krallen rausrücken.~
+
+//#5105
+@20067 = ~Du wirst deine Entscheidung noch bereuen.~
+
+//#5106
+@20068 = ~Wartet! Hey, es tut mir leid, lasst mich bitte leben. Ich erzähle Euch auch, was ich über die Schwarzen Krallen weiß.~
+
+//#5107
+@20069 = ~Na los.~
+
+//#5108
+@20070 = ~Du kannst die Klappe halten und verschwinden.~
+
+//#5109
+@20071 = ~Die Schwarzen Krallen sind eine Söldnergruppe und haben bei den Überfällen auf die Händlerkarawanen mitgemacht. Ich bin halt bei einem Überfall vor ein paar Tagen verloren gegangen, und jemand von der Flammenden Faust hat sich an meine Fersen geheftet. So, das wolltet Ihr doch wissen.~
+
+//#7013
+@20072 = ~Ein Hobgoblin erzählte mir, dass er für eine Söldnertruppe namens "Kalte Hand" gearbeitet hat. Die Kalte Hand überfällt seit einiger Zeit Karawanen auf dem Küstenweg.~
+
+//#6529
+@20073 = ~Hallo, da seid Ihr ja wieder, meine jungen Abenteurer! Wie ich sehe, habt Ihr die benötigte Komponente. Na, dann wollen wir doch mal sehen, ob Melicamp sein Leben zurückgewinnen kann oder ob er als Festtagsbraten endet.~
+
+//#7012
+@20074 = ~Nachdem der Hobgoblin bezaubert wurde, erzählte er mir, er arbeite für eine Söldnertruppe mit dem Namen "Kalte Hand". Nach seinen Worten arbeitet die Kalte Hand für die Zentarim.~
+
+//#6260
+@20075 = ~Lasst mich in Ruhe!~
+
+//#208
+@20076 = ~Ihr habt Mumm in den Knochen! Wir machen Mehl draus, werdet schon sehen! Kalte Hand, angreifen!~
+
+//#6426
+@20077 = ~Ich bin einer Räuberbande von Halbmenschen begegnet! Sie wollten Eisen und Gold.~
+
+//#1761
+@20078 = ~Nun... habt Ihr sonst noch Fragen?~
+
+//#1762
+@20079 = ~Wer sind die Schattendiebe?~
+
+//#1763
+@20080 = ~Durch welche Hinweise wurden die Schattendiebe belastet?~
+
+//#1764
+@20081 = ~An welcher Krankheit leidet Eltan?~
+
+//#1765
+@20082 = ~Das sind erstmal genug Fragen.~
+
+//#11885
+@20083 = ~IthNal cOR dan osa KOZAH! Rrrackne dall'a osa KOZAH! Das Idol... muss das Idol finden...~
+
+//#14375 - German: improved translation
+@20084 = ~Wenn es Euch nach meiner Gesellschaft nicht länger verlangt, dann soll es so sein. Ich werde mich nicht aufdrängen, wo ich nicht erwünscht bin.~
+
+//#16741
+@20085 = ~(Ihrem Verlangen fehlt es an Weitsicht und Originalität.) Wenn Münzen alles sind, was Ihr wollt, dann reise ich lieber mit mehr "abenteuerlustigen" Abenteurern. Nehmt, was ich habe, und denkt an meine Worte, wenn Ihr das Geld ausgegeben habt.~
+
+//#16172
+@20086 = ~Tatsächlich? Dann soll es so sein. Ich werde mich sicherlich irgendwo hier aufhalten, wenn Ihr meine Gesellschaft wünschen solltet. Ich werde versuchen, Euch nicht zu lange suchen zu lassen.~
+
+//#6135
+@20087 = ~Als guter Freund kann ich's Euch ja verraten: In der Mine treibt eine Horde böser, hundeartiger Kreaturen ihr Unwesen, die meine Leute da unten umbringt. Ihr müsst ihnen Einhalt gebieten!~
+
+//#16558
+@20088 = ~Nachdem der Vorarbeiter der Mine von Nashkell bezaubert wurde, sagte er, dass es "hundeähnliche" Geschöpfe gibt, die da unten für Ärger sorgen.~
+
+//#14736
+@20089 = ~Nun denn, ich nehme an, es wird mir die Gelegenheit geben, an dieser neuen Ballade zu arbeiten, die mir im Kopf rumschwirrt... Ich wette, Ihr werdet niemals erraten, wer die Hauptfiguren sind.~
+
+//#7592
+@20090 = ~Auch wenn das wahr ist, dürft Ihr trotzdem nich' in' Keller. Los, haut ab!~
+
+//#16688
+@20091 = ~Ich stimme darin nicht mit Euch überein, aber die Entscheidung liegt bei Euch. Ihr zeigt ein gewisses Maß an Führungsqualität, und ich werde Euch in der Zukunft gerne behilflich sein. Komm, Khalid, wir müssen vorerst unseren Abschied nehmen.~
+
+//#15351
+@20092 = ~Äh, na gut. Ich muss jetzt langsam weiter... Äh... Macht weiter so.~
+
+//#15352
+@20093 = ~Okay, nicht ganz das, was Ihr wollt. Aber hier sind 50 Goldmünzen. Ist das... äh, genug?~
+
+//#15353
+@20094 = ~Meine Güte... danke, Leute. Der alte Trampel hätte mich fast erwischt, wenn Ihr jungen Trampel Euch nicht eingemischt hättet. Hier, falls Ihr noch eine Weile durch diese Berge zieht, könnt Ihr vielleicht ein besseres Paar Stiefel gebrauchen. Was mich betrifft, so würde ich nicht einmal hier bleiben, wenn ich dafür bezahlt würde.~
+
+//#5710
+@20095 = ~Habt Dank! Es ist westlich von Beregost. Thalantyr lebt dort in einem großen Anwesen. Bis wir diesen Ort erreichen, kuschele ich mich solange in Euer Bündel.~
+
+//#5728
+@20096 = ~Ich habe einen unglückseligen Zauberlehrling in Gestalt eines Huhns getroffen. Ich soll ihn zu Thalantyr westlich von Beregost bringen.~
+
+//#8468
+@20097 = ~Hier habt Ihr die 500 Goldmünzen, die ich Euch schulde. Ich denke, ich schulde Euch mehr für Eure tapfere Tat, also nehmt auch diesen Edelstein. Das dürfte dann genug des Lohnes sein.~
+
+//#8469
+@20098 = ~Ach, wenn ich doch nur das Geld hätte, das ich Euch versprochen habe! Ich habe aber nur diese 500 Goldmünzen. Hier, nehmt auch diesen Edelstein, vielleicht lässt sich ja damit der Rest begleichen.~
+
+//#15113
+@20099 = ~Wie gefällt Euch mein neuer Umhang?~
+
+//#1161
+@20100 = ~Ihr selbst könnt wählen, was zuerst zu Boden fällt: Eure Schwerter oder Eure Köpfe! Diese Entscheidung wird entweder Eure klügste sein - oder Eure letzte.~
+
+//#1162
+@20101 = ~Ihr werdet uns nicht lebend bekommen!~
+
+//#1163
+@20102 = ~Wir werden Euch nicht bekämpfen. Im Gegenteil, wir möchten uns Euch anschließen.~
+
+//#1164
+@20103 = ~Wir wollen keine Schwierigkeiten. Nehmt, was Ihr wollt, und lasst uns in Frieden.~
+
+//#14740
+@20104 = ~Kann ich nicht wenigstens noch ein bisschen länger bei Euch bleiben? Unsere gemeinsame Zeit war so... angenehm. Nun gut, vielleicht werden wir uns wieder treffen.~
+
+//#505
+@20105 = ~Ich kann es einfach nicht glauben: Ich bin unterlegen, noch dazu einem Mann! Ich fürchte, ich muss mein Wort halten. Ich stelle mein Schwert in den Dienst Eurer Sache, so schwachsinnig die auch sein mag.~
+
+//#517
+@20106 = ~Tatsache ist, wir brauchen Eure Hilfe nicht.~
+
+//#518
+@20107 = ~Gut, Ihr solltet besser Euren Wert unter Beweis stellen.~
+
+//#1994
+@20108 = ~Oh ja, das könnte interessant werden. Ja, tut das.~
+
+//#1995
+@20109 = ~Dann solltet Ihr jetzt besser gehen, denn Droth ist nicht weit. Wir könnten beide erhebliche Schwierigkeiten bekommen.~
+
+//#1134
+@20110 = ~Ich fürchte, du hattest Recht, Jeb, sie haben keinen Wind in Ihren Segeln. Nun geht, wir kommen auch ohne Euch klar.~
+
+//#11215
+@20111 = ~Ihr müsst aber! Ich stehe vor Euch, versperre Euch den Weg! Ich bin das Hindernis, das Euch aufhält! Ihr werdet mich befreien... mich bekämpfen!~
+
+//#11216
+@20112 = ~Wenn ich Euch umbringen muss, um vorbeizukommen, dann soll es wohl so sein. Ich werde es tun und Euch dabei Euren Fehltritt gegen mich vergeben.~
+
+//#11217
+@20113 = ~Wenn Ihr Euer Leben wegwerfen wollt, dann seid Ihr bereits tot. Wenn so Eure Entscheidung lautet, dann benötigt Ihr mich nicht.~
+
+//#13756
+@20114 = ~Ihr wart sehr nett zu mir, in dieser sonderbaren und hellen Welt. Doch vielleicht habt Ihr Recht. Die Drow sind eine andere Rasse. Passt auf Euch auf.~
+
+//#6258
+@20115 = ~Da Ihr so gute Freunde seid, möchte ich Euch ein Geschenk überreichen. Nehmt dieses Gold, ich brauche es nicht.~
+
+//#8146
+@20116 = ~Ich würde ja gern mit dir flüchten, Schatz, aber mein Mann kann so eifersüchtig sein! Ich möchte nicht seinen Zorn wecken. Nimm diesen Ring, damit du dich immer an mich erinnerst.~
+
+//#7926
+@20117 = ~Wenn mich meine Omi doch bloß mit Euch ziehen lassen würde! Ich will, ich will... Ach, sie wird mich niemals gehen lassen. Wie wär's, wenn ich Euch was geben würde, das Euch helfen kann, bevor Ihr geht? Das muss ziemlich wertvoll sein, weil Omi es ständig unter Verschluss hält. Ich hab's mir für 'ne Weile... ausgeborgt, aber jetzt sollt Ihr's kriegen. Hier habt Ihr's! Kommt bald wieder und erzählt mir dann von Euren Abenteuern!~
+
+//#7912
+@20118 = ~Ich glaube, es wäre unfreundlich von mir, Euch bei Euren Abenteuern nicht zu unterstützen. Ich habe da noch was aus der alten Zeit, etwas, was Euch vielleicht nutzen könnte. Nehmt meine Schleuder. Sie sieht zwar nach nichts aus, aber glaubt mir, sie ist mehr als nur einmal hilfreich gewesen.~
+
+//#8855
+@20119 = ~Wenn Ihr mein Freund seid, dann helft mir, von hier wegzukommen! Ein Ghul spukt in meinem Kopf herum. Ich kann keine Sekunde wirklich ruhig schlafen. Ich wollte doch nichts von seinem Grab stehlen! Nun, vielleicht hab ich's getan... aber es tut mir wirklich leid! Bitte bringt es für mich zurück zu seinem Grab... bitte!~ ~Wenn Ihr meine Freundin seid, dann helft mir, von hier wegzukommen! Ein Ghul spukt in meinem Kopf herum. Ich kann keine Sekunde wirklich ruhig schlafen. Ich wollte doch nichts von seinem Grab stehlen! Nun, vielleicht hab ich's getan... aber es tut mir wirklich leid! Bitte bringt es für mich zurück zu seinem Grab... bitte!~
+
+//#7661
+@20120 = ~Guter Freund, warum nehmt Ihr nicht diese 25 Goldmünzen und geht? Macht Euch 'nen schönen Tag!~
+
+//#8420
+@20121 = ~Ihr könnt mich Ithtyl nennen, guter Freund. Es freut mich, eine so lebhafte und unterhaltsame Person wie Euch kennenzulernen. Warum geht Ihr nicht nach unten und habt Spaß? Hier, nehmt diese 20 Goldmünzen, damit Ihr Euch leisten könnt, was Ihr haben wollt.~ ~Ihr könnt mich Ithtyl nennen, gute Freundin. Es freut mich, eine so lebhafte und unterhaltsame Person wie Euch kennenzulernen. Warum geht Ihr nicht nach unten und habt Spaß? Hier, nehmt diese 20 Goldmünzen, damit Ihr Euch leisten könnt, was Ihr haben wollt.~
+
+//#6296 - German: improved translation
+@20122 = ~Hey Freunde. Hier, nehmt das Gegengift. Ich kann es eh nicht gebrauchen.~
+
+//#7511
+@20123 = ~Ich hab nicht allzu viel Glück gehabt im Spiel. Hier, nehmt dieses Goldstück als Anfangskapital, damit Ihr's mal versuchen könnt. Ich hoffe, Tymora bringt Euch Glück.~
+
+//#8802
+@20124 = ~Ich gehe selten aus, weiß also kaum, was in der Stadt so passiert. Nehmt doch diese Goldmünze und macht Euch einen schönen Tag auf dem Markt! Da findet Ihr jede Menge Ablenkung!~
+
+//#8115
+@20125 = ~Ich würde Euch gerne ein Geschenk machen, mein Freund! Ich schenke Euch dieses kleine Spielzeug, eine Kindheitserinnerung von mir. Ich denke, es ist bei Euch, meinem engsten Freund, am besten aufgehoben.~ ~Ich würde Euch gerne ein Geschenk machen, meine Freundin! Ich schenke Euch dieses kleine Spielzeug, eine Kindheitserinnerung von mir. Ich denke, es ist bei Euch, meiner engsten Freundin, am besten aufgehoben.~
+
+//#7491 - German: improved translation
+@20126 = ~Hier, mein Freund! Wenn Ihr das Geld nicht habt, nehmt diese 10 Goldmünzen.~ ~Hier, meine Freundin! Wenn Ihr das Geld nicht habt, nehmt diese 10 Goldmünzen.~
+
+//#7780
+@20127 = ~Es ist doch ganz klar, was Ihr braucht, mein guter Freund. Wenn man hier in dieser Bibliotheksfestung lebt, hat man nicht viel für Geld übrig. Hier, nehmt diese 20 Goldmünzen. Für mich ist's nur eine Kleinigkeit, aber ich bin sicher, Ihr werdet damit auf den richtigen Weg kommen.~ ~Es ist doch ganz klar, was Ihr braucht, meine gute Freundin. Wenn man hier in dieser Bibliotheksfestung lebt, hat man nicht viel für Geld übrig. Hier, nehmt diese 20 Goldmünzen. Für mich ist's nur eine Kleinigkeit, aber ich bin sicher, Ihr werdet damit auf den richtigen Weg kommen.~
+
+//#7994
+@20128 = ~Ihr seid ein guter Freund, und deshalb möchte ich Euch diesen wertvollen Ring anvertrauen. Er ist ein Erbstück und ich habe Angst, dass er geklaut werden könnte. Wenn da draußen in der Wildnis so viele Diebe und Räuber rumlungern, liegt die Vermutung nahe, dass diese Typen auch hier im Freundlichen Arm anzutreffen sind.~ ~Ihr seid eine gute Freundin, und deshalb möchte ich Euch diesen wertvollen Ring anvertrauen. Er ist ein Erbstück und ich habe Angst, dass er geklaut werden könnte. Wenn da draußen in der Wildnis so viele Diebe und Räuber rumlungern, liegt die Vermutung nahe, dass diese Typen auch hier im Freundlichen Arm anzutreffen sind.~
+
+//#8034
+@20129 = ~Mein Freund, ich möchte, dass Ihr diese Rüstung mitnehmt, wenn Ihr Euch auf den Weg macht. Es täte mir schrecklich leid, wenn Euch auf Euren Reisen etwas zustoßen würde.~ ~Meine Freundin, ich möchte, dass Ihr diese Rüstung mitnehmt, wenn Ihr Euch auf den Weg macht. Es täte mir schrecklich leid, wenn Euch auf Euren Reisen etwas zustoßen würde.~
+
+//dialogues/u!totscminor.d
+//#21708
+@20130 = ~Tretet ruhig näher, Leute, und HÖRT die Geschichte des Schreckens, der vor Euch liegt. Kommt mit mir, dem außerordentlichen Abenteurer Ike Cascadion Vendar, der eine neue Gruppe tapferer Seelen durch den SCHLUND der Gefahr in den Reichen führt. Wir werden zu Durlags Turm gehen und dort Zeugen der Gefahren sein, die Hunderten von tapferen Männern und Frauen das Leben gekostet haben. SEHT die Schrecken der verräterischen Fallen, FÜHLT die Anwesenheit der längst Verstorbenen, BESTAUNT die wunderbaren Reichtümer, die dort vergraben sind! Doch für ängstliche Naturen ist dies nicht geeignet. Ich werde KEINE Verantwortung übernehmen, wenn jemand an Herzversagen während oder nach unserem Ausflug stirbt! Kommt herbei, kommt herbei! EINER nach dem anderen!~
+
+//#21709 - German: improved translation
+@20131 = ~Ahh, gute Leute von edlem Blut, die Ihrem Schicksal den Fehdehandschuh entgegenwerfen! Kommt und seht, wie aufwendig ein Mann sein Eigentum schützen muss. Ich mache Euch einen Sonderpreis von 60 Goldmünzen für Eure ganze Gruppe... Nicht, dass Ihr es nötig hättet.~
+
+//#21715
+@20132 = ~Abgemacht, mein Herr! Wann geht's los?~
+
+//#21716
+@20133 = ~Das ist zu viel Gold für uns.~
+
+//#21717
+@20134 = ~Wir haben kein Interesse an Eurem "Abenteuer"-Ausflug, Werbetrommler.~
+
+//#21710
+@20135 = ~Hallo, meine Freunde! Kommt und seht, was ein reicher Mann alles tun muss, um seinen Reichtum zu schützen. Das ist ein Leben, das ich keinem wünschen würde. Nur 80 Goldmünzen für Eure ganze Gruppe, so einen guten Preis gebe ich nicht jedem.~
+
+//#21711
+@20136 = ~Kommt nur her, Leute! 100 Goldmünzen für Euch, aber Ihr steht hinten! Und wenn ich sehe, dass Ihr nur eine einzige Goldmünze klaut, werdet Ihr alle durchsucht. Es ist ein gefährlicher Ort, an den wir gehen und ich habe schon zuvor Leute "verloren".~
+
+//#21712
+@20137 = ~Andere Preise gibt es nicht. Entweder Ihr zahlt oder lasst es bleiben.~
+
+//#21726 - German: improved translation
+@20138 = ~Gut, Ihr unverschämter Geizhals! Geht allein auf Eure verdammte Führung!~
+
+//#21713
+@20139 = ~Ist es das Geld oder der Mut, der Euch fehlt? Nun, ich werde jeden Tag hier sein, solltet Ihr das eine oder andere doch noch finden. Zur Seite! Ich habe zahlende Kunden.~
+
+//#23531
+@20140 = ~Ich habe einen großmäuligen Rüpel getroffen, der Führungen in Durlags Turm anbietet. Er will wohl eine Art Touristenattraktion aus der Todesfalle machen. Ich habe aber beschlossen, keine Führung mitzumachen. Wenn ich mich noch umentscheiden sollte, kann ich mich ja an ihn wenden.~
+
+//#21714
+@20141 = ~Ja, der Turm jagt selbst den Mutigsten von uns Angst ein. Die Führung beginnt täglich von hier - solltet Ihr einmal genug Mut haben.~
+
+//#21727
+@20142 = ~Das füllt meine Quote für diese Führung. Los geht's! Denkt daran, Euren Lieben einen Abschiedskuss zu geben, denn vielleicht werdet Ihr sie... NIEMALS... wiedersehen. Wir treffen uns am Fuße des Turms! Ohne mich würdet Ihr GARANTIERT getötet werden, doch fürchtet Euch nicht! Nur ICH kann jene Räume betreten, die andere aus ANGST meiden!~
+
+//#23532
+@20143 = ~Ich habe einen Burschen namens Ike getroffen, der Führungen in Durlags Turm anbietet. Sieht ganz so aus, als ob er eine Art Touristenattraktion aus der alten Todesfalle gemacht hätte. Ich will die Tour auch mitmachen und sollte Ike so schnell wie möglich am Turm treffen. Da wird schon nichts passieren. Sie würden ja keine Leute reinlassen, wenn es immer noch gefährlich wäre.~
+
+//#22049
+@20144 = ~Auf meinem Schiff anheuern wollt Ihr? Ha, ich hab mehr Matrosen als das Jahr Tage hat und such bestimmt nicht nach neuen... Kommt, Leute, wir haben hier eine Quelle für Ärger gefunden, die wir ein bisschen aufräumen können!~
+
+//#23519
+@20145 = ~Ich wollte an Kapitän Tollar Kieres vorbei, um einen Blick auf die verdammten Seekarten zu werfen, aber mit ihm war nicht zu spaßen. Na wenn schon, ob ich jetzt kämpfe oder mit Tricks arbeite, Zeugen gibt es da eh keine.~
+
+//#22050
+@20146 = ~Zu meinen Seekarten soll ich Euch führen? Darum bittet Ihr mich? Ha, nicht nur würde es schlimmstes Unglück bedeuten, sie jemandem zu zeigen, bevor wir die Segel hissen, es würde auch sämtlichen Regeln der Liga zuwiderlaufen! Schnell, Leute, lasst uns einige Leichen für Umberlee einsammeln, bevor das Wetter wieder schlecht wird...~
+
+//#21498
+@20147 = ~Glaubt ihm nicht! Er gehört nicht dazu! Er ist so verrückt wie die Bestien und fast genauso gefährlich.~
+
+//#21499
+@20148 = ~Er sagte, dass es nicht die Klippen waren, die Euch Euer ursprüngliches Schiff gekostet haben. Die Bestien waren an Bord und haben die Mannschaft getötet.~
+
+//#21500
+@20149 = ~Ich werde es nicht mehr erwähnen. Er war eindeutig verrückt.~
+
+//#21501
+@20150 = ~Genug über ihn. Wir haben alle Bestien getötet, wie Ihr uns aufgetragen habt.~
+
+//#21502
+@20151 = ~Wir haben noch nicht alle von ihnen getötet. Wir werden es weiter versuchen.~
+
+//#21514
+@20152 = ~Es gab Tote, als wir hierherkamen, doch ich versichere Euch, nur die Friedfertigen haben überlebt. Wir flüchteten vom sinkenden Schiff und begannen ein neues Leben. Es gab solche, die konnten nicht dazugehören. Sie wollten sich nicht zu uns gesellen und bedrohten das Leben der Gründer.~
+
+//#21517
+@20153 = ~So hat sich doch alles zum Besten gewendet. Ihr habt überlebt und dieses schöne Heim gebaut. Wir werden Euch weiterhin helfen.~
+
+//#21519
+@20154 = ~Was meint Ihr mit "konnten nicht dazugehören"?~
+
+//stores/ubstores.d
+//#15365
+@20155 = ~Ich werde neue Gäste doch nicht abweisen, wenn das Geschäft schon so schlecht läuft. Wenn Ihr irgendetwas benötigt, dann fragt mich ruhig.~
+
+//#15366 - German: improved translation
+@20156 = ~Es war eine anstrengende Reise hierher. Was habt Ihr, um unsere müden Geister wiederzubeleben?~
+
+//#15367
+@20157 = ~Ich benötige im Moment nichts, aber danke für das Angebot.~
+
+//#3629
+@20158 = ~Hallo, Ihr dort. Ihr seht mir aus wie echte Abenteurer! Braucht Ihr neue Ausrüstung? Meine Preise mögen zwar ziemlich hoch sein, aber was soll ich tun, wo's Eisen doch grad so knapp ist...~
+
+//#15290
+@20159 = ~Zeigt uns Eure Waren.~
+
+//#15291
+@20160 = ~Heute brauchen wir nichts.~
+
+//#6298
+@20161 = ~Ich hab in letzter Zeit viel gehört. Eisen scheint ziemlich knapp zu sein, wegen der Räuber und der Probleme in der Mine von Nashkell. Zwischen Baldurs Tor und Amn muss es ernste Spannungen geben. Es würde mich nicht wundern, wenn's da bald zum Krieg kommt.~
+
+//#7082
+@20162 = ~Nachdem der Händler bezaubert wurde, erzählte er ein paar vage Dinge über Eisenmangel, Räuber und Krieg.~
+
+//#9165
+@20163 = ~Euch würde ich niemals über den Weg trauen!~
+
+//area/ubarea.d
+//#7415
+@20164 = ~Tut mir leid, aber mit Bestechung ist bei uns nichts zu machen.~
+
+//coran/coran.d
+//#899
+@20167 = ~Schon gut. Aber Ihr lasst Euch da ein hübsches, kleines Abenteuer entgehen.~
+
+//#902
+@20168 = ~Na, Angst vor der eigenen Courage? So was kommt in den besten Familien vor.~
+
+//dialogues/u!ch7.d
+//#1754
+@20169 = ~Wer hat Scar getötet?~
+
+//#1755
+@20170 = ~An welcher Krankheit leidet Eltan?~
+
+//#11196 - German: improved translation
+@20171 = ~Da ist... noch jemand. Unter den Anführern des Eisenthrons befindet sich eine Frau... Ihr Einfluss vergiftet Sarevoks Seele. Wenn sie aus dem Weg wäre, wäre er sicherlich zugänglich für meine vernünftigen Ratschläge. Sie heißt Cythandria und hat große Macht in dieser Sache. Auch sie versucht, Sarevok zu gefallen, ist aber mit seiner Selbstzerstörung zufrieden, wenn sie nur aus den Dingen ihren Nutzen ziehen kann. Ich... muss jetzt gehen. Er darf nicht wissen, dass ich Euch geholfen habe.~
+
+//#1780
+@20172 = ~Wisst Ihr, wer Scar getötet hat?~
+
+//#20666
+@20173 = ~Wir müssen uns in den Unterkeller begeben und nach Sarevoks Meuchelmördern Slythe und Krystin suchen. Eltan glaubt, dass Sarevok vorhat, die Großherzöge Belt und Liia umbringen zu lassen. Wir müssen dies unbedingt verhindern. Außerdem sollen wir Eltan zum Gebäude des Hafenmeisters bringen, das sich auf der Ostseite des Hafens befindet.~
+
+//sharteel/rangelo.d
+//#2144
+@20174 = ~Ihr seid nicht der Befehlshaber der Flammenden Faust; diesen Titel hat Herzog Eltan inne, einer, der den Titel verdient hat. Ihr seid ein Blender, und dazu noch ein ziemlich hässlicher und übel riechender. Sogar ein Kreischling nach einer Gehirnwäsche würde einen besseren Anführer abgeben als Ihr.~
+
+//#6537 (add 'Afoul of the law')
+@20175 = ~Ein Frevel des Gesetzes
+
+Aus irgendeinem Grund ist Herzog Eltan nicht mehr der Kommandant der Flammenden Faust. Ein Mann namens Angelo hat diese Position jetzt inne.~
+
+//BGT/Tutu SOLVED/UNSOLVED + Headers - DiaryEntries for Quoningar, added by Jarl
+
+//@20011 with header:
+@20176 = ~Etwas Ruhe im Treiben der Großstadt
+
+Der Priester Quoningar, der scheinbar genauso wenig an das rege Treiben in der Stadt gewöhnt ist wie ich, sucht nach einem Konzentrationstrank. Ohne ihn wird er seine Meditationen wohl nie beenden können...~
+
+//ubquon.tra @0 with header:
+@20177 = ~Etwas Ruhe im Treiben der Großstadt
+
+Nachdem wir Quoningar den Trank brachten, den er für seine Meditation brauchte, wurden wir gütig belohnt. So kann wenigstens Einer in dieser geschäftigen Stadt etwas Ruhe und inneren Frieden finden.~
+
+
+//BGT/Tutu SOLVED/UNSOLVED + Headers - DiaryEntries for Shilo Chen, added by Jarl
+
+//@20018 with header:
+@20178 = ~Shilo Chen und die Oger Magi
+
+Shilo Chen, ein Waldläufer aus dem Scharfzahnwald, sucht zurzeit in Baldurs Tor Hilfe. Die Tiere im südwestlichen Teil des Waldes werden nämlich von einer Gruppe von Oger Magi getötet. Er hat mich gebeten, dort hinzugehen und zu sehen, was ich machen kann. Wenn er noch andere bereitwillige Abenteurer finden kann, wird er mir diese als Verstärkung schicken.~
+
+//ubshilo.tra @1 with header:
+@20179 = ~Shilo Chen und die Oger Magi
+
+Nachdem die Oger Magi im Scharfzahnwald besiegt waren, hat uns Shilo Chen angemessen belohnt.~
+
+
+//setup-bg1ub.tp2
+//#7810
+@30000 = ~Hallo, hallo, hallo! Willkommen in Bunsens Haus! Gönnt Euren nur wenig behaarten Füßen doch ein wenig Ruhe am Kamin!~
+
+//#7819
+@30001 = ~Seid Ihr immer so höflich, wenn Fremde Euer Haus betreten? Sicher erscheint es mir nicht gerade.~
+
+//#7821
+@30002 = ~Erspart mir Euer Lächeln, Kleiner. Ich wollte nur sehen, ob Ihr etwas habt, das mich interessiert. Es war nicht sehr klug, Euer Heim unverschlossen zu lassen.~
+
+//#7823
+@30003 = ~Ich bitte um Verzeihung, doch die Tür war unverschlossen und ich dachte, das Haus sei verlassen. Ich wollte nicht in Euer Heim eindringen.~
+
+
+//Tutu/D -- all files
+//#8330
+@40000 = ~Seid willkommen, Reisende! Ich hoffe, Ihr lasst Eure Waffen wo sie sind und macht hier keinen Ärger?! Besser ist das. Ihr werdet merken, dass die meisten unserer Kunden sich sehr wohl recht gut selbst verteidigen können, und wenn's nötig ist, auch die Theke! Kann ich etwas für Euch tun?~
+
+//#15072
+@40001 = ~Ja.~
+
+//#15073
+@40002 = ~Nein.~
+
+//#8331
+@40003 = ~Ihr seid willkommen, zumindest, solange Ihr die Zeche zahlen könnt. Hütet Euch vor den dunklen Ecken des Hauses. Die Wache schaut meistens weg, wenn da was passiert. Kann ich etwas für Euch tun?~
+
+//#8332
+@40004 = ~Schaut Euch bloß an, was da an Unrat angespült wurde! Ich warne Euch: Ihr könnt hier tun und lassen, was Ihr wollt, aber wehe, Euretwegen kommt die Stadtwache hierher! Ihr würdet riskieren, aufs Meer rausgetrieben zu werden, und zwar ohne Boot und Segel!~
+
+//#8380
+@40005 = ~Guten Abend! Im "Helm und Umhang" erwarten Euch eine flinke Bedienung und Stunden der Entspannung. Ihr habt bestimmt gehört, dass bei uns Speis und Trank ein wenig mehr kosten als in anderen, "weniger gut angesehenen" Gasthäusern in der Stadt. Das ist wohl wahr, doch bin ich stets bestrebt, dafür zu sorgen, dass Ihr auch erhaltet, wofür Ihr zahlt. Kann ich etwas für Euch tun?~
+
+//#8381
+@40006 = ~Hmm? Hallo! Willkommen im "Helm und Umhang". Hier erwarten Euch ein hervorragender Service und eine ausgezeichnete Qualität... ähm... Ihr könnt doch BEZAHLEN, oder? Solange das so ist, werden wir hervorragend miteinander auskommen. Bitte versucht jeden Ärger zu vermeiden. Wir sind gut geschützt und jeglicher Rabatz stört nur die anderen Gäste. Kann ich etwas für Euch tun?~
+
+//#8382
+@40007 = ~Oh, nein nein nein. Ich denke nur, jemandem mit Eurem... Niveau wird es im "Helm und Umhang" wohl nicht so recht gefallen. Wir sind dafür bekannt, etwas teurer, aber dafür auch entspannter zu sein als die anderen Gasthäuser, wohingegen Ihr jemand zu sein scheint, der eher an der Atmosphäre im... nun, sagen wir... in der "Errötenden Nixe" Gefallen finden dürfte. Entschuldigt, wenn ich das sage, aber das war nicht gerade als Kompliment gemeint. Besser, Ihr geht gleich, sonst gibt's sicherlich Ärger. Kann ich sonst etwas für Euch tun?~
+
+//#14220
+@40008 = ~Husch! Sind das nicht die Hühner? Erlin! Erlin, jemand ist hinter den Hühnern her!~
+
+//#14360
+@40009 = ~Ich kenne Eure Geheimnisse, alte Hexe. Wer weiß, was sich noch in Eurer Kehle verbirgt!~
+
+//#14361
+@40010 = ~Das geht nur uns und die Hühner was an, meine Gute, und ich möchte Euch höflichst bitten, Euch da rauszuhalten.~
+
+//#14223
+@40011 = ~Was wollt Ihr?~
+
+//#14224
+@40012 = ~Könnt Ihr mir sagen, wo es nach Beregost geht?~
+
+//#14225
+@40013 = ~Wie viel wollt Ihr für diese Hühner?~
+
+//#14226
+@40014 = ~Wem gehört der Bauernhof, der östlich von hier liegt?~
+
+//#14227
+@40015 = ~Da war ich noch nie.~
+
+//#14228
+@40016 = ~Die sind nicht zu verkaufen.~
+
+//#14229
+@40017 = ~Sieh an, das ist Jebs Haus. Der Schurke hat noch nie Gutes bewirkt, jedenfalls nicht, seitdem seine Frau tot ist.~
+
+//#14230
+@40018 = ~Bitte lasst uns in Frieden. Hier hat es sowieso schon zu viele Tote gegeben.~
+
+//#14231
+@40019 = ~Ich weiß nicht, woran Ihr interessiert sein könntet. Am besten sprecht Ihr mit Erlin.~
+
+//#14376
+@40020 = ~Verschwindet von meinem Hof, Ihr Rüpel!~
+
+//#1517
+@40021 = ~Wer seid Ihr? Was habt Ihr in meinem Anwesen zu suchen? Wachen! Hier sind Eindringlinge!~
+
+//#6136
+@40022 = ~Ich bin Entar Silberschild, einer der Großherzöge von Baldurs Tor! Ich kann Euch viele Dinge erzählen, mein Freund. Vielleicht wollt Ihr etwas über den Eisenthron hören? Das ist eine neue Handelsorganisation in Baldurs Tor. Den meisten von uns bereitet das Wirken des Eisenthrons gewisse Sorgen, aber sie haben uns versprochen, uns mit Eisen zu beliefern - ein Rohstoff, der in letzter Zeit sehr rar geworden ist. Wir haben Amn, unseren Nachbarn im Süden, in Verdacht. Wir glauben, dass Amn sich mit den Zentarim verbündet hat, um unsere glorreiche Stadt einzunehmen. Scar hat jedoch den Eindruck, dass die Beweise gegen Amn viel zu offensichtlich sind, fast so, als würde jemand versuchen, uns dazu zu bringen, Zwist zwischen unseren beiden Nationen zu säen. Da Ihr mein bester Freund seid, sollte ich Euch wohl sagen, dass ich eine sehr schöne Tochter habe. Sie heißt Skie und ist im heiratsfähigen Alter.~ ~Ich bin Entar Silberschild, einer der Großherzöge von Baldurs Tor! Ich kann Euch viele Dinge erzählen, meine Freundin. Vielleicht wollt Ihr etwas über den Eisenthron hören? Das ist eine neue Handelsorganisation in Baldurs Tor. Den meisten von uns bereitet das Wirken des Eisenthrons gewisse Sorgen, aber sie haben uns versprochen, uns mit Eisen zu beliefern - ein Rohstoff, der in letzter Zeit sehr rar geworden ist. Wir haben Amn, unseren Nachbarn im Süden, in Verdacht. Wir glauben, dass Amn sich mit den Zentarim verbündet hat, um unsere glorreiche Stadt einzunehmen. Scar hat jedoch den Eindruck, dass die Beweise gegen Amn viel zu offensichtlich sind, fast so, als würde jemand versuchen, uns dazu zu bringen, Zwist zwischen unseren beiden Nationen zu säen.~
+
+//#6598
+@40023 = ~Nachdem Entar Silberschild bezaubert wurde, erzählte er eine ganze Menge. Er meinte, dass sich der Eisenthron kürzlich in Baldurs Tor niedergelassen hat und der Stadt nun Eisen zum Verkauf anbietet. Die Großherzöge befürchten eine Invasion durch Amn und nehmen deshalb das Angebot des Eisenthrons ernst, obwohl sie gewisse Zweifel über deren redliche Absichten hegen.~
+
+//#8983
+@40024 = ~Für so jemanden wie Euch sind meine Türen nicht mehr geöffnet!~
+
+//#14221
+@40025 = ~Lasst sie in Ruhe, Enna. Die wissen, wonach sie suchen und hier auf'm Hof gibt's eh keine Geheimnisse.~
+
+//#14222
+@40026 = ~Beim Fluch von Beshaba, was habt Ihr mit meiner Enna gemacht!~
+
+//#14232
+@40027 = ~Das ist Privatgrund. Schnüffler sehen wir hier nicht gern.~
+
+//#14233
+@40028 = ~Wenn Ihr Ärger sucht, hier habt Ihr ihn gefunden, Fremder. Talos! Myrkul! Malar! Greift ihn euch!~ ~Wenn Ihr Ärger sucht, hier habt Ihr ihn gefunden, Fremde. Talos! Myrkul! Malar! Greift sie euch!~
+
+//#14234
+@40029 = ~Ihr seht aus, als könntet Ihr ein Huhn gebrauchen. Hier, das geht auf Rechnung des Hauses.~
+
+//#14235
+@40030 = ~Ihr hört wohl nicht gut, wie? Ich sagte, das hier ist Privatgrund.~
+
+//#1464
+@40031 = ~Jaheira und Khalid sind die einzigen anständigen Kunden, die wir in letzter Zeit hatten.~
+
+//#1465
+@40032 = ~Man kriegt schon selten genug ein Trinkgeld, auch ohne dass Ihr mich aufhaltet.~
+
+//#1466
+@40033 = ~Lasst mich, ich habe zu tun.~
+
+//#6940
+@40034 = ~Ich schnüffle nicht in den Angelegenheiten der Kunden rum. Das ist schlecht fürs Trinkgeld.~
+
+//#9020
+@40035 = ~Geht mir aus den Augen!~
+
+//#8179
+@40036 = ~Und wer könntet Ihr sein? Nein, antwortet nicht, es ist mir egal! Ihr habt Euch ohne jede Einladung in meine Küche geschlichen, nicht einmal die Tür war offen! Haut ab, wenn Ihr nicht riskieren wollt, dass die Wache zu spät kommt, um Euch vor mir zu retten! Raus!~
+
+//#8180 - German: improved translation
+@40037 = ~Husch!~
+
+//#8181
+@40038 = ~Passt bloß auf, dass ich Euch nicht eins über die Rübe gebe! Haut ab!~
+
+//#8182
+@40039 = ~Wenn Ihr wollt, könnt Ihr einen kompletten Kochkurs von mir bekommen. Aber wie ich Euch Abenteurer so kenne, werdet Ihr nicht lange genug bleiben.~
+
+//#9061
+@40040 = ~Ihr seid hier nicht willkommen!~
+
+//#8192
+@40041 = ~Ich warte auf meinen Papa. Er kommt bestimmt bald nach Hause. Er kann ja nicht für immer in der Mine bleiben... stimmt's?~
+
+//#8193 - German: improved translation
+@40042 = ~Er kommt nicht mehr zurück, weil er tot ist, Kleine. Er ist hinüber, abgenippelt, hat den Löffel abgegeben, schaut sich die Radieschen von unten an, ist krepiert.~
+
+//#8194
+@40043 = ~Dein Papa kommt wahrscheinlich bald zurück. Mach dir keine Sorgen.~
+
+//#8195
+@40044 = ~Das hoffe ich wirklich. Ich vermisse ihn so.~
+
+//#8196
+@40045 = ~Waaaahhh!!! Papa ist tot!~
+
+//#8197
+@40046 = ~Ich bin dein bester Freund.~
+
+//#9027
+@40047 = ~Lass mich in Ruhe! Du bist gemein!~
+
+//#7843 - German: improved translation
+@40048 = ~Ah, herzlich willkommen! Wie schade, dass mein Sohn nicht hier ist, um Euch kennenzulernen. Es wäre wohl das Aufregendste für ihn.~
+
+//#7853
+@40049 = ~Warum sollte er sich für uns interessieren, kleine Mutter?~
+
+//#7855
+@40050 = ~Haltet diesen Zwerg von mir fern. Ich habe nicht die Absicht, meine Zeit damit zu verschwenden, auf Euren kleinen Balg aufzupassen.~
+
+//#7857
+@40051 = ~Gut, dass er nicht hier ist, während ich sein Haus leer räume.~
+
+//#7858
+@40052 = ~Ich fürchte, ich habe nicht die Zeit, bei ihm zu verweilen. Ich wollte nur kurz hereinschauen.~
+
+//#7844
+@40053 = ~Oh, es ist für jeden Halbling außerordentlich aufregend, Leute zu treffen, die den Geist des Kleinen Riesen in sich tragen. Es mag zwar ein klein wenig... exzentrisch sein, die Annehmlichkeiten eines wohlbestückten Herdes zu verlassen, aber ich bin sicher, dass Eure Eskapaden viel Spaß machen... wenn's einem gefällt. Ihr könnt jederzeit zurückkommen, wenn Ihr wollt.~
+
+//#7845
+@40054 = ~Für viele unserer jungen Leute sind eigentümlicherweise die Taten von Leuten, wie Ihr es seid, der Inbegriff des wandernden Kleinen Riesen. Ich persönlich halte ja nicht allzu viel davon, Heim und Herd zu verlassen. Bleibt, solange Ihr wollt, aber versucht nicht, die Kinder zu sehr für Euch und Euer Leben zu begeistern!~
+
+//#7846
+@40055 = ~Hmmpf! Und ich möchte nicht, dass er einem solchen Benehmen ausgesetzt wird! Man merkt, dass Ihr nicht allzu viel von den kleinen Leuten wisst. Niemand, der uns wirklich kennt, wäre so frech zu uns. Ihr dürft gerne zurückkehren, wenn Ihr etwas ziviles Benehmen gelernt habt.~
+
+//#7847
+@40056 = ~Es ist wirklich sehr schade. Anscheinend führt ständiges Schlafen auf einem kalten Kerkerboden dazu, dass man gereizt und ungesellig wird. Ihr tut mir in vielerlei Hinsicht leid. Bleibt, solange es Euch beliebt, aber versucht wenigstens etwas netter zu sein!~
+
+//#7848 - German: improved translation
+@40057 = ~Große Güte! Wie kann man nur so gemein und hintertrieben sein? Solch ein Unfrieden ist unbekannt in der Gesellschaft, in der wir Halblinge uns aufhalten. Allein schon der Diebstahl ist mehr als nur eine Unannehmlichkeit, aber Euer ungebührliches Benehmen... ist für eine zivilisierte Frau schon beinahe nicht mehr zu ertragen! Lasst mich in Ruhe!~
+
+//#7849
+@40058 = ~Das Wanderleben ist nun mal sehr anziehend. Von dieser Anziehungskraft haben wir alle durch die Erzählungen des Kleinen Riesen gehört, obwohl ich ja gestehen muss, dass ich's nicht ganz verstehen kann. Es ist doch allemal bequemer, die Abende bei seiner Familie am Herd zu verbringen. So lebt denn wohl und viel Glück auf Euren Reisen!~
+
+//#7850 - German: improved translation
+@40059 = ~So ist's nun mal mit dem Wahnsinn des Kleinen Riesen. Was manche Leute bewegen mag, seine Familie zu verlassen und durch den Wald zu wandern, kann ich einfach nicht verstehen! Trotzdem wünsche ich Euch viel Glück auf Euren Wegen!~
+
+//#7851
+@40060 = ~Da seid Ihr ja wieder! Ich dachte, Ihr wärt bereits weitergezogen. Schön, dass Ihr noch da seid!~
+
+//#7852
+@40061 = ~Es überrascht mich, Euch wiederzusehen! Hat der Ruf der Ferne nicht schon wieder Euren Verstand besiegt? Bei Dallillia, ich hoffe nur, dass keines der Kinder Euch folgt, wenn Ihr geht!~
+
+//#7860
+@40062 = ~Wie wär's, wenn Ihr noch ein bisschen bleibt und einige Eurer Geschichten zum Besten gebt? Heldengeschichten hab ich schon immer gemocht. Aber selber möchte ich keine erleben!~
+
+//#9293
+@40063 = ~Ihr seid hier nicht länger willkommen!~
+
+//#7810
+@40064 = ~Hallo, hallo, hallo! Willkommen in Bunsens Haus! Gönnt Euren nur wenig behaarten Füßen doch ein wenig Ruhe am Kamin!~
+
+//#7819
+@40065 = ~Seid Ihr immer so höflich, wenn Fremde Euer Haus betreten? Sicher erscheint es mir nicht gerade.~
+
+//#7821
+@40066 = ~Erspart mir Euer Lächeln, Kleiner. Ich wollte nur sehen, ob Ihr etwas habt, das mich interessiert. Es war nicht sehr klug, Euer Heim unverschlossen zu lassen.~
+
+//#7823
+@40067 = ~Ich bitte um Verzeihung, doch die Tür war unverschlossen und ich dachte, das Haus sei verlassen. Ich wollte nicht in Euer Heim eindringen.~
+
+//#7811
+@40068 = ~Wenn Ihr so etwas fragt, müsst Ihr schon ziemlich lange nicht mehr mit uns kleinen Leuten zu tun gehabt haben. Es ist die höchste Tugend, Freunde, denen wir noch nicht begegnet sind, wie Mitglieder der Familie zu behandeln. Ihr seid im Geiste von Cyrrollalee und allem, wofür sie steht, willkommen und könnt so lange bleiben, wie Ihr wollt.~
+
+//#7812
+@40069 = ~Was für ein Benehmen! Ich kann mich nicht erinnern, dass jemand in diesem Dorf mich schon einmal so beleidigt hat! Auch wenn Cyrrollalee Gastfreundschaft fordert, kann dennoch ein gewisses Maß an Dankbarkeit erwartet werden. Ihr seid in meinem Heim nicht willkommen, und wenn Ihr so weiter macht, gilt das auch für meine Nachbarn.~
+
+//#7813
+@40070 = ~Verlassen? Bei uns ist es Sitte, dass auch bei jemandem, der sein Heim für Jahre verlässt, sich die Freunde und Nachbarn darum kümmern, dass die Hütte warm und gemütlich bleibt, so dass er stets zurückkehren kann. Käme in der Zwischenzeit ein Fremder daher und bräuchte ein Dach über dem Kopf, gäbe es wohl niemanden, der etwas dagegen hätte. Ihr müsst Euch nicht entschuldigen. Wenn mein Haus Euch verlassen vorkommt, muss ich mich umso mehr bemühen, ein einladendes und freundliches Gesicht zu machen. Cyrrollalee wäre mit weniger nicht zufrieden.~
+
+//#7814
+@40071 = ~Ich behaupte, dass Ihr niemanden unter den kleinen Leuten finden werdet, der Besuchern, ob bekannt oder nicht, seine Tür verschließen würde. Es ist bei uns gang und gäbe, jeden, der Einlass begehrt, herzlich willkommen zu heißen, gleich welches... Benehmen er an den Tag legt. Auch Ihr seid willkommen, eine Weile zu bleiben... obwohl es schon recht spät ist.~
+
+//#7815
+@40072 = ~Wenn ich etwas besitzen würde, was Ihr benötigt, müsstet Ihr nur darum bitten. Materielle Dinge sind für uns kleine Leute im Vergleich zu einem sicheren Herd nur von geringer Bedeutung. So ein unfreundlicher Auftritt wird Euch jedoch nur feindselige Blicke einbringen. Verweilt nicht zu lange in meinem Heim. Ihr seid nicht willkommen!~
+
+//#7816
+@40073 = ~Eure Höflichkeit lässt die Störung durch Euer Eindringen ganz vergessen! Für freundliche Leute ist meine Tür immer offen, ungeachtet ihrer... Herkunft. Bleibt für einige Zeit, wenn Ihr wollt.~
+
+//#7817
+@40074 = ~Hallo, da seid Ihr ja wieder. Es ist mir immer wieder eine Freude!~
+
+//#7818
+@40075 = ~Wie ich sehe, seid Ihr zurückgekehrt. Ich hoffe, Ihr bleibt nicht länger als beim letzten Mal.~
+
+//#7826
+@40076 = ~Hallo Freund, kommt und setzt Euch mit an den Herd! Ich habe noch eine Pfeife, die könnt Ihr rauchen. Ihr Abenteurertypen scheint niemals Zeit für ein bisschen Erholung zu haben.~ ~Hallo Freundin, kommt und setzt Euch mit an den Herd! Ich habe noch eine Pfeife, die könnt Ihr rauchen. Ihr Abenteurertypen scheint niemals Zeit für ein bisschen Erholung zu haben.~
+
+//#9294
+@40077 = ~Ich möchte nicht unhöflich sein, aber Ihr solltet jetzt wohl besser gehen!~
+
+//#15107
+@40078 = ~Hmm, ich arbeite lieber nicht mit Amateuren zusammen.~
+
+//#15108
+@40079 = ~In Feldeposts Wirtshaus in Beregost logiert ein fetter Mann namens Algernon. Er bewahrt in seinem Zimmer einen Umhang auf. Ich brauche Eure diebischen Finger, um den Umhang zu entwenden und ihn mir zu bringen. Ihr sollt auch eine hübsche Belohnung dafür bekommen. Verschont wenn möglich sein Leben. Nehmt ihm lediglich den Umhang ab.~
+
+//#15742
+@40080 = ~Pheirkas, ein Zwergenkämpfer in Baldurs Tor, hat mich gebeten, auf eine, ich kann es nicht anders nennen, geheime Mission zu gehen. In Feldeposts Wirtshaus in Beregost soll gerade der übergewichtige Algernon abgestiegen sein. Er hat einen Umhang in seinem Besitz, an dem Pheirkas interessiert ist... Es ist zwar ein großes Risiko, aber bestimmt gibt es auch eine entsprechende Belohnung. Pheirkas hält sich im Nordwesten der Stadt auf.~
+
+//#15109
+@40081 = ~Habt Ihr Algernons Umhang mitgebracht?~
+
+//#15110
+@40082 = ~Ah, heißen Dank. Hier, 150 Goldmünzen für Eure Mühe.~
+
+//#15111
+@40083 = ~Ich bin mit Eurer Fingerfertigkeit sehr zufrieden. Hier habt Ihr 200 Goldmünzen für Eure Umstände.~
+
+//#15112
+@40084 = ~Verflucht, ich hatte gehofft, Ihr wärt mehr der passiv-aggressive Typ.~
+
+//#15113
+@40085 = ~Wie gefällt Euch mein neuer Umhang?~
+
+//#9765
+@40086 = ~Hallo, hallo! Wärt Ihr vielleicht interessiert an ein paar Schmuckstücken? Eine Münze oder auch zwei für meine schöne Ware? Ehh, das habe ich befürchtet. Es gibt zwar langsam wieder Eisen, aber die Kunden bleiben weiterhin aus. Wer kann ihnen das schon verübeln? Sie haben Angst, weil sie sehen, dass die Händler weiterhin keine Waren haben. Wer glaubt schon, dass eine Knappheit vorbei ist, wenn sie immer noch keine neue Klinge erwerben können. Der Eisenthron ist schuld, jawohl! Und ich bin nicht der einzige, der das meint!~
+
+//#9766
+@40087 = ~Warum gebt Ihr denen die Schuld? Was haben sie getan?~
+
+//#9768
+@40088 = ~Ich bin nicht überrascht. Ihre Rolle bei dem Eisenmangel war reine Gaunerei.~
+
+//#9769
+@40089 = ~Wie bitte? Wer hat Euch denn solche Geschichten erzählt? Jeder hier in der Stadt wird Euch sagen können, dass der Eisenthron eine respektable Handelsgruppe ist. Mit solch faulem Gerede ohne Beweise kommt Ihr hier nicht weiter, dessen bin ich sicher.~
+
+//#9775
+@40090 = ~Was meintet Ihr dann?~
+
+//#9776 - German: improved translations
+@40091 = ~Ich sprach von den Taten des Eisenthrons, seit Sarevok die Kontrolle übernommen hat. Er wirkt desinteressiert und könnte ihn glatt opfern, um die Wiederbewaffnung von Baldurs Tor zu finanzieren - daher auch sein Streben danach, Großherzog zu werden. Die Instabilität des Eisenthrons ist die Ursache der anhaltenden Unruhen in der Stadt und deshalb geben ihm die anderen Händler die Schuld daran. Er war einst der wichtigste Importeur und ohne seine Hilfe wird es sehr viel länger dauern, das Volk davon zu überzeugen, dass alles wieder in Ordnung ist. Was der Eisenthron heute tut, macht wirtschaftlich keinen Sinn und deswegen denke ich, dass bei denen im Hauptquartier etwas nicht stimmt.~
+
+//#10104
+@40092 = ~Der Eisenmangel nimmt ab, doch die Händler haben immer noch keine Waren. Die Instabilität des Eisenthrons ist die Ursache der anhaltenden Unruhen in der Stadt und deshalb geben ihm die anderen Händler die Schuld daran. Er war einst der wichtigste Importeur und ohne seine Hilfe wird es sehr viel länger dauern, das Volk davon zu überzeugen, dass alles wieder in Ordnung ist. Seit Sarevok die Kontrolle übernommen hat, wurden die meisten Geschäftstätigkeiten eingestellt und fast alle Geldmittel eingefroren. Dass er ein großes Handelshaus lahmlegt, scheint ihn nicht zu bekümmern. Er wirkt desinteressiert und scheint ihn opfern zu wollen, um die Wiederbewaffnung von Baldurs Tor zu finanzieren und dadurch Großherzog zu werden. Ich kann mir nicht vorstellen, dass Geschäftsleute, die klar im Kopf sind, solche Vorgehensweisen befolgen. Etwas ist faul im Gebäude des Eisenthrons.~
+
+//#9779
+@40093 = ~Nichts Konkretes, würde ich denken, auch wenn die Auswirkungen immer noch stark zu spüren sind. Seit Sarevok die Kontrolle übernommen hat, wurden die meisten Geschäftstätigkeiten eingestellt und fast alle Geldmittel eingefroren. Sie waren wichtige Importeure, und ohne ihre aktive Hilfe wird es viel länger dauern, bis der normale Bürger spürt, dass die Krise vorüber ist. Sarevok hat wohl vor, den Eisenthron für sein hartes Auftreten gegen Amn zu benutzen - deshalb sein Streben nach der Position des Großherzogs. Die Tatsache, dass er ein großes Handelshaus verkümmern lässt, scheint ihm gleichgültig. Ich kann mir nicht vorstellen, dass vernünftige Geschäftsleute solche Anweisungen Folge leisten. Etwas ist faul im Gebäude des Eisenthrons.~
+
+//#3661
+@40094 = ~Die Geschäfte laufen schlecht. Kein Wunder, bei all dem Ärger mit den Räubern entlang der Küstenstraße.~
+
+//#15288
+@40095 = ~Zeigt uns, was Ihr zu verkaufen habt.~
+
+//#15289
+@40096 = ~Wir haben im Moment kein Interesse, irgendetwas zu kaufen.~
+
+//#3691
+@40097 = ~Mit mir ist nicht gut Kirschen essen. Ich rate jedem, sich besser nicht mit mir anzulegen! ICH MEINE ES ERNST! Wenn ich einen Preis nenne, dann wird der bezahlt und kein dämlicher Tauschhandel. KAPIERT?!~
+
+//#6297
+@40098 = ~Ich hab in letzter Zeit viel gehört. Eisen scheint ziemlich knapp zu sein, wegen der Räuber und der Probleme in der Mine von Nashkell. Zwischen Baldurs Tor und Amn muss es ernste Spannungen geben. Es würde mich nicht wundern, wenn's da bald zum Krieg kommt.~
+
+//#7082
+@40099 = ~Nachdem der Händler bezaubert wurde, erzählte er ein paar vage Dinge über Eisenmangel, Räuber und Krieg.~
+
+//#9166
+@40100 = ~Euch würde ich niemals über den Weg trauen!~
+
+//#8323
+@40101 = ~Ich weiß zwar, dass der "Feiernde Stör" wesentlich billiger ist als der "Helm und Umhang", aber trotzdem teile ich mein Zimmer mit niemandem! Raus mit Euch! Ich war zuerst hier!~
+
+//#8324
+@40102 = ~Ihr könnt hierbleiben, so lange Ihr wollt! Ich hab gern Gesellschaft.~
+
+//#9178
+@40103 = ~Wenn Ihr nur einen Zentimeter näherkommt, gibt's heiße Ohren!~
+
+//#8348
+@40104 = ~Hau ab, du Hanswurst! Ich brauche niemanden, der in meinen Angelegenheiten rumschnüffelt!~ ~Hau ab, du Dummkopf! Ich brauche niemanden, der in meinen Angelegenheiten rumschnüffelt!~
+
+//#8349
+@40105 = ~Ich bezweifle, dass Ihr sowas wie ein Gespräch zustande kriegt, wenn die Dame nicht mehr singt. Wenn diese Stimme nicht wieder auftaucht, werden einige Männer nicht mehr dieselben sein, die sie früher einmal waren.~
+
+//#8350
+@40106 = ~Kann nicht mal einer diesem verdammten Barden einen Korken reinstecken? Oder muss ich ihm etwa seine Fresse mit meinem Stiefel stopfen?~
+
+//#8351
+@40107 = ~Lieber ertrage ich diese verdammte Stille, die die Dame und ihre Stimme hinterlassen haben, als Euer Gejaule! Ich möchte das nicht noch einmal sagen müssen!~
+
+//#8373
+@40108 = ~Eh, Kumpel! Komm, wir gehen zum Unterkeller und gucken uns mal die Mädels an! Wie wär's?~ ~He, Kleine! Komm, wir gehen zum Unterkeller und amüsieren uns! Wie wär's?~
+
+//#8799
+@40109 = ~Ich habe nichts Wertvolles hier. Verlasst bitte mein Haus so, wie Ihr's vorgefunden habt!~
+
+//#8800
+@40110 = ~Die Wachen werden schon dafür sorgen, dass Ihr verschwindet! Soll ich sie rufen oder geht Ihr freiwillig?~
+
+//#8801
+@40111 = ~Wachen! Diebe! Mörder!~
+
+//#8802
+@40112 = ~Ich gehe selten aus, weiß also kaum, was in der Stadt so passiert. Nehmt doch diese Goldmünze und macht Euch einen schönen Tag auf dem Markt! Da findet Ihr jede Menge Ablenkung!~
+
+//#9173
+@40113 = ~Lasst mich! Ihr seid hier nicht länger willkommen!~
+
+//#8228
+@40114 = ~Uuuuu, ganz schön frech! Zugucken kostet aber extra, Süßer!~ ~Uuuuu, ganz schön frech! Zugucken kostet aber extra, Süße!~
+
+//#9105
+@40115 = ~Er besteht darauf, mich "Loreley" zu nennen. Wahrscheinlich versüßt ihm das die Nacht.~
+
+//#3520
+@40116 = ~Hallo. Ich kann Euch im Moment leider nicht helfen. Ich habe viele Studien zu beenden.~
+
+//#3524
+@40117 = ~Vielleicht habt Ihr mich beim ersten Mal nicht verstanden, aber ich brauche meine Ruhe. Könntet Ihr BITTE gehen?!~
+
+//#6370
+@40118 = ~Ich bin nur ein bescheidener Gelehrter. Über die Welt außerhalb der Kerzenburg kann ich Euch nicht allzu viel berichten.~
+
+//#9095
+@40119 = ~Nach dem, was Ihr getan habt, sage ich kein Wort mehr!~
+
+//#14135 - German: improved translation
+@40120 = ~Macht Eure Geschäfte woanders! Von Leuten wie Euch brauche ich nichts.~
+
+//#14138
+@40121 = ~In letzter Zeit ist das Geschäft in Baldurs Tor nicht so gut gelaufen. Nett, ein paar neue Gesichter in der Stadt zu sehen.~
+
+//#14139
+@40122 = ~Ihr meint, in Baldurs Tor sei jetzt viel los? Im Vergleich zu früher, vor dem Eisenmangel, ist es eine richtige Geisterstadt.~
+
+//#14140
+@40123 = ~Egal, was Ihr braucht, in Baldurs Tor findet Ihr's.~
+
+//#14141
+@40124 = ~Habe ich Euch hier schon mal gesehen? Hier sieht man nicht allzu viele neue Gesichter, mit dem ganzen Ärger in letzter Zeit.~
+
+//#14142
+@40125 = ~Wirklich schade, dass Ihr Baldurs Tor nicht kennengelernt habt, bevor der ganze Ärger anfing. Der Handel damals war überwältigend.~
+
+//#7927
+@40126 = ~Bei den Göttern der Gesundheit und des Herdes, es ist so schön, den Freundlichen Arm wiederzusehen! Kann sich jemand hier einen schöneren Anblick als diese heiligen Hallen vorstellen, wenn einem den ganzen Weg von Baldurs Tor bis hierher die Räuber im Nacken sitzen?~
+
+//#7936
+@40127 = ~Ihr wirkt ausgesprochen erleichtert, es bis hierher geschafft zu haben. Wie gefährlich war Eure Reise?~
+
+//#7938
+@40128 = ~Klappe, Ihr aufgeblasener Narr! Die Geschichte Eurer Reise interessiert mich kein Stück.~
+
+//#7940
+@40129 = ~Ein Bier für diesen müden Reisenden! (Wir setzen ihm besser was vor, sonst hält er nie den Mund.)~
+
+//#7928
+@40130 = ~Gefährlich? Gefährlich, mein Freund? Wenn sich die Erde unter meinen Füßen geöffnet und den ganzen Abschaum ausgespien hätte, der die Neun Höllen verpestet, hätte es nicht höllischer sein können! Räuber von allen Seiten und ich hatte nichts weiter als meine Füße. Ich hätte nie gedacht, dass ich so schnell rennen kann! Einzig ein Gedanke hat mich noch vorangetrieben: Dieser scheinende Stern, diese Ebene der Freude, diese wohlgepriesene Trinkhalle. Wie Ihr's auch nennen mögt, aber der Freundliche Arm ist meine Heimat! Bentley! Einen Met auf Kosten des Hauses für die Werbung, die ich für Euch mache, mein Freund!~
+
+//#7944 - German: improved translation
+@40131 = ~Ein Reisender, der von Baldurs Tor kommt, erzählte, dass der Küstenweg für Reisende gefährlich ist. Räuber greifen jeden an, der dort entlangzieht.~
+
+//#7929
+@40132 = ~Hä? Wie "gefährlich"? Jedenfalls gefährlich genug, dass ich auf meinen üblichen lautstarken Bericht über die Reise verzichten und Euch zur Seite schieben muss, da ich sonst vor Durst sterbe, bevor ich die Theke erreiche. Wer gegen Räuber allergisch ist, sollte sich hüten, in den Norden zu gehen! Bentley! Eine Flasche Eures zweitbilligsten Weines!~
+
+//#7930
+@40133 = ~Und genauso wenig interessiert mich Eure Meinung, guter Freund! Wenn Ihr meine Freude und meinen Jubel nicht teilen könnt, setzt Euch irgendwo da drüben hin und ich lass Euch in Ruhe. Ich werde Euch nicht auf die Zehen treten, aber passt auf, dass Ihr nicht auf meine tretet!~ ~Und genauso wenig interessiert mich Eure Meinung, Fräulein! Wenn Ihr meine Freude und meinen Jubel nicht teilen könnt, setzt Euch irgendwo da drüben hin und ich lass Euch in Ruhe. Ich werde Euch nicht auf die Zehen treten, aber passt auf, dass Ihr nicht auf meine tretet!~
+
+//#7931
+@40134 = ~Schämt Euch! Sieht aus wie ein Wanderkumpel, aber klingt, als ob er von der Reise etwas gereizt wäre. Ich feiere, dass es vorbei ist, Ihr aber regt Euch auf, dass es passiert ist! Seid nicht so griesgrämig, dann könnt Ihr heut Nacht auch besser schlafen!~ ~Schämt Euch! Sieht aus wie eine Wanderfreundin, aber klingt, als ob sie von der Reise etwas gereizt wäre. Ich feiere, dass es vorbei ist, Ihr aber regt Euch auf, dass es passiert ist! Seid nicht so griesgrämig, dann könnt Ihr heut' Nacht auch besser schlafen!~
+
+//#7932 - German: improved translation
+@40135 = ~Aus einem redegewandteren Mund wäre das vielleicht komisch gewesen. Ich bin eher wütend als beleidigt. Aber man soll ja nicht nachtragend sein. Ich halte nicht weniger von Euch, obgleich ich bezweifle, dass ich MEHR von Euch halten sollte. Lebt wohl, aber bitte woanders!~
+
+//#7933
+@40136 = ~HA! Ihr kennt mich gut, und doch haben wir uns nie getroffen! Macht nichts, wir bleiben Freunde, bis dass der Tod uns scheidet! Das schwört Euch Wade! Ihr solltet Euch vom Handelsweg nach Norden fernhalten, sonst wäre unsere Freundschaft wohl schneller beendet, als uns beiden lieb ist.~
+
+//#7934
+@40137 = ~Und da sach isch zu dem Kerl, "wenn dasch Eure Schweschter isch", sach isch, "wo isch'n dann meine FRAU?" HA! Oh, tschulschjung, hab isch Euch anjespuckt? - (hick) - Oh, da seid Ihr ja wieder, mein Freund! Isch versuch grad, mir genuch Mut anzutrinken, um misch wieder auf den beschissenen Wesch zu machen. Vielleicht sollt'sch aber noch 'n bisschen bleiben. Der Himmel is' klar, aber mein Kopf isch 'n bischl - (hick) - umnebelt.~ ~Und da sach isch zu dem Kerl, "wenn dasch Eure Schweschter isch", sach isch, "wo isch'n dann meine FRAU?" HA! Oh, tschulschjung, hab isch Euch anjespuckt? - (hick) - Oh, da seid Ihr ja wieder, meine Freundin! Isch versuch grad, mir genuch Mut anzutrinken, um misch wieder auf den beschissenen Wesch zu machen. Vielleicht sollt'sch aber noch 'n bisschen bleiben. Der Himmel is' klar, aber mein Kopf isch 'n bischl - (hick) - umnebelt.~
+
+//#7935
+@40138 = ~He, das ist mal 'ne Überraschung: Der Miesepeter ist ins Land der Feiernden zurückgekehrt! Ich hoffe, Ihr seid ein wenig umgänglicher?~ ~He, das ist mal 'ne Überraschung: Die Miesepeterin ist ins Land der Feiernden zurückgekehrt! Ich hoffe, Ihr seid ein wenig umgänglicher?~
+
+//#7942
+@40139 = ~Liebe Freunde! Ich gebe Euch einen aus!~
+
+//#5096
+@40140 = ~Ihr dort! Ich brauche etwas Geld und Heilung. Wenn Ihr wisst, was gut für Euch ist, gebt Ihr mir, was ich benötige!~
+
+//#5097
+@40141 = ~Ihr beliebt wohl zu scherzen?! Ihr seid ein Hobgoblin, warum sollten wir Euch also nicht umbringen?~
+
+//#5098
+@40142 = ~Hier, nehmt 25 Goldmünzen.~
+
+//#5099 
+@40143 = ~Warum sollte ich Euch helfen?~
+
+//#5100 - German: improved translation
+@40144 = ~Gut gemacht, Ihr armseligen Schwächlinge.~
+
+//#5101 - German: improved translation
+@40145 = ~Ich bin ein Mitglied der Söldnerbande Kalte Hand. Wenn Ihr wollt, dass alle meine Freunde Euch auf die Pelle rücken, dann ärgert mich ruhig weiter.~
+
+//#5102
+@40146 = ~Okay! Hier habt Ihr 25 Goldmünzen, und jetzt lasst uns in Ruhe.~
+
+//#5103
+@40147 = ~Nun... im Moment ist nur einer von Euch da, daher wollen wir es wagen.~
+
+//#5104
+@40148 = ~Du willst uns drohen, du degeneriertes, stinkendes Biest?! Bevor wir deinem trostlosen Dasein ein Ende bereiten, solltest du uns noch ein bisschen auf den Knien anflehen und vielleicht noch ein paar Informationen über die Schwarzen Krallen rausrücken.~
+
+//#5105
+@40149 = ~Du wirst deine Entscheidung noch bereuen.~
+
+//#5106
+@40150 = ~Wartet! Hey, es tut mir leid, lasst mich bitte leben. Ich erzähle Euch auch, was ich über die Schwarzen Krallen weiß.~
+
+//#5107
+@40151 = ~Na los.~
+
+//#5108
+@40152 = ~Du kannst die Klappe halten und verschwinden.~
+
+//#5109
+@40153 = ~Die Schwarzen Krallen sind eine Söldnergruppe und haben bei den Überfällen auf die Händlerkarawanen mitgemacht. Ich bin halt bei einem Überfall vor ein paar Tagen verloren gegangen, und jemand von der Flammenden Faust hat sich an meine Fersen geheftet. So, das wolltet Ihr doch wissen.~
+
+//#7013
+@40154 = ~Ein Hobgoblin erzählte mir, dass er für eine Söldnertruppe namens "Kalte Hand" gearbeitet hat. Die Kalte Hand überfällt seit einiger Zeit Karawanen auf dem Küstenweg.~
+
+//#6259
+@40155 = ~Ich bin nur ein rangniedriges Mitglied der Kalten Hand. Die Hand ist ein Söldnertrupp, der von den Zentarim beauftragt wurde, die Eisentransporte durch dieses Gebiet zu unterbinden.~
+
+//#7012
+@40156 = ~Nachdem der Hobgoblin bezaubert wurde, erzählte er mir, er arbeite für eine Söldnertruppe mit dem Namen "Kalte Hand". Nach seinen Worten arbeitet die Kalte Hand für die Zentarim.~
+
+//#6260
+@40157 = ~Lasst mich in Ruhe!~
+
+//#15383
+@40158 = ~Willkommen in meinem Laden. Seht Euch ruhig um, aber macht mir bitte nichts kaputt.~
+
+//#15384
+@40159 = ~Ich werde mit der entsprechenden Vorsicht und Sorgfalt vorgehen. Was könnt Ihr mir zeigen?~
+
+//#15385
+@40160 = ~Ihr braucht Euch keine Sorgen um Eure Ware zu machen. Ich wollte gerade gehen.~
