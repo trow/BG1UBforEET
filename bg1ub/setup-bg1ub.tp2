@@ -1678,7 +1678,9 @@ BEGIN @14
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBScar.UB~
 
 COMPILE EVALUATE_BUFFER ~bg1ub/scar/ubscar.d~
-COMPILE EVALUATE_BUFFER ~bg1ub/scar/ubscar_fixes.d~
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN
+  COMPILE EVALUATE_BUFFER ~bg1ub/scar/ubscar_fixes.d~
+END
 
 COPY_EXISTING ~%tutu_scriptbg%MISC79.ITM~ ~override/UBFEBODY.ITM~ // Create a unique item for the Sashenstar's daughter
   SAY NAME1 @15
@@ -1777,7 +1779,7 @@ PATCH_IF (SOURCE_SIZE > 0xd4) BEGIN
 END
 BUT_ONLY_IF_IT_CHANGES
 
-COPY_EXISTING ~%ESewers%.ARE~ ~override~ 
+COPY_EXISTING ~%ESewers%.ARE~ ~override~
  // PATCH_IF SOURCE_SIZE > 0x28f BEGIN
     LAUNCH_PATCH_FUNCTION ADD_AREA_ITEM
       INT_VAR container_to_add_to = 1
