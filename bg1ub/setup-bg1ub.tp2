@@ -4473,9 +4473,12 @@ COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBItems.UB~
 // Ground, inventory and description icon restorations (NiGHTMARE)
 COPY_EXISTING ~%tutu_var%book68.itm~ ~override~ // History of the Nether Scrolls
   WRITE_EVALUATED_ASCII 0x3a "%tutu_var%ibook68"
+BUT_ONLY_IF_IT_CHANGES
+
 COPY_EXISTING ~%tutu_var%boot06.itm~ ~override~ // Worn Out Boots
   WRITE_EVALUATED_ASCII 0x3a "%tutu_var%iboot06"
   WRITE_EVALUATED_ASCII 0x58 "%tutu_var%cboot06"
+BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%brac11.itm~ ~override~ // Bracers Of Binding
   PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
@@ -4486,8 +4489,11 @@ BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%clck08.itm~ ~override~ // Algeron's Cloak
   WRITE_EVALUATED_ASCII 0x58 "%tutu_var%cclck08"
+BUT_ONLY_IF_IT_CHANGES
+
 COPY_EXISTING ~%tutu_var%misc13.itm~ ~override~ // Samuel's Body
   WRITE_EVALUATED_ASCII 0x44 "%tutu_var%gmisc13"
+BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%misc1a.itm~ ~override~ // Bottle Of Wine
   PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
@@ -4503,23 +4509,38 @@ BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%misc62.itm~ ~override~ // Dead Cat
   WRITE_EVALUATED_ASCII 0x44 "%tutu_var%gmisc62"
+BUT_ONLY_IF_IT_CHANGES
+
 COPY_EXISTING ~%tutu_var%misc65.itm~ ~override~ // Brage's Body
   WRITE_EVALUATED_ASCII 0x3a "%tutu_var%imisc65"
   WRITE_EVALUATED_ASCII 0x44 "%tutu_var%gmisc65"
+BUT_ONLY_IF_IT_CHANGES
+
 COPY_EXISTING ~%tutu_var%misc68.itm~ ~override~ // Abela's Body
   WRITE_EVALUATED_ASCII 0x3a "%tutu_var%imisc68"
   WRITE_EVALUATED_ASCII 0x44 "%tutu_var%gmisc68"
+BUT_ONLY_IF_IT_CHANGES
+
 COPY_EXISTING ~%tutu_var%misc70.itm~ ~override~ // Delorna's Statue
   WRITE_EVALUATED_ASCII 0x3a "%tutu_var%imisc70"
+BUT_ONLY_IF_IT_CHANGES
+
 COPY_EXISTING ~%tutu_var%misc71.itm~ ~override~ // Delorna's Spellbook
   WRITE_EVALUATED_ASCII 0x3a "%tutu_var%imisc71"
+BUT_ONLY_IF_IT_CHANGES
+
 COPY_EXISTING ~%tutu_var%misc75.itm~ ~override~ // Dagger Of Venom
   WRITE_EVALUATED_ASCII 0x3a "%tutu_var%imisc75"
+BUT_ONLY_IF_IT_CHANGES
+
 COPY_EXISTING ~%tutu_var%misc76.itm~ ~override~ // Dream Potion
   WRITE_EVALUATED_ASCII 0x3a "%tutu_var%imisc76"
   WRITE_EVALUATED_ASCII 0x58 "%tutu_var%cpotn13"
+BUT_ONLY_IF_IT_CHANGES
+
 COPY_EXISTING ~%tutu_var%misc77.itm~ ~override~ // Skull Of Kereph
   WRITE_EVALUATED_ASCII 0x3a "%tutu_var%imisc77"
+BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%misc92.itm~ ~override~ // Switch For An Engine
   PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
@@ -4533,7 +4554,7 @@ COPY_EXISTING ~%tutu_var%misc94.itm~ ~override~ // Mallet Head
   END
 BUT_ONLY_IF_IT_CHANGES
 
-COPY_EXISTING ~%tutu_var%misc95.itm~ ~override~ // Malled Handle
+COPY_EXISTING ~%tutu_var%misc95.itm~ ~override~ // Mallet Handle
   PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
     WRITE_EVALUATED_ASCII 0x44 "%tutu_var%gmisc95"
   END
@@ -4551,7 +4572,7 @@ THEN
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR2608" OUTER_SPRINT temp_bgt "AR6508" OUTER_SPRINT temp_bg "AR2608" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR2608" OUTER_SPRINT temp_bgt "AR6508" OUTER_SPRINT temp_bgee "AR2608" OUTER_SPRINT temp_bg "AR2608" LAUNCH_ACTION_MACRO "getcpmvara"
 EXTEND_BOTTOM ~%temp_cpmvar%.bcs~ ~.../bg1ub/bk_0101.baf~
   EVALUATE_BUFFER
 
@@ -4567,7 +4588,7 @@ THEN
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR0512" OUTER_SPRINT temp_bgt "ARD012" OUTER_SPRINT temp_bg "AR0512" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR0512" OUTER_SPRINT temp_bgt "ARD012" OUTER_SPRINT temp_bgee "AR0512" OUTER_SPRINT temp_bg "AR0512" LAUNCH_ACTION_MACRO "getcpmvara"
 EXTEND_BOTTOM ~%temp_cpmvar%.bcs~ ~.../bg1ub/bk_0102.baf~
   EVALUATE_BUFFER
 
@@ -4583,7 +4604,7 @@ THEN
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR0512" OUTER_SPRINT temp_bgt "ARD012" OUTER_SPRINT temp_bg "AR0512" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR0512" OUTER_SPRINT temp_bgt "ARD012" OUTER_SPRINT temp_bgee "AR0512" OUTER_SPRINT temp_bg "AR0512" LAUNCH_ACTION_MACRO "getcpmvara"
 EXTEND_BOTTOM ~%temp_cpmvar%.bcs~ ~.../bg1ub/bk_0103.baf~
   EVALUATE_BUFFER
 
@@ -4599,7 +4620,7 @@ THEN
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR3300" OUTER_SPRINT temp_bgt "AR6700" OUTER_SPRINT temp_bg "AR3300" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR3300" OUTER_SPRINT temp_bgt "AR6700" OUTER_SPRINT temp_bgee "AR3300" OUTER_SPRINT temp_bg "AR3300" LAUNCH_ACTION_MACRO "getcpmvara"
 EXTEND_BOTTOM ~%temp_cpmvar%.bcs~ ~.../bg1ub/br_0101.baf~
   EVALUATE_BUFFER
 
@@ -4630,7 +4651,7 @@ COPY_EXISTING ~%tutu_var%SW2H05.ITM~ ~override~ //
   SAY NAME2 #16477
 BUT_ONLY_IF_IT_CHANGES
 
-ACTION_IF !("%tutuorbgt%" STRING_EQUAL "BGT") THEN BEGIN //BG or Tutu
+ACTION_IF !GAME_IS ~bgt~ THEN BEGIN //BG, Tutu, BGEE
   COPY_EXISTING ~RNDTREAS.2DA~ ~override~
     READ_2DA_ENTRIES_NOW ~_#_#_#rndtreas~ 20
     FOR (row = 0; row < "%_#_#_#rndtreas%"; row += 1) BEGIN
@@ -4702,9 +4723,11 @@ COPY_EXISTING ~%tutu_var%MAGE02.ITM~ ~override~
   SAY NAME2 @95 // Item originally did not have a name
 BUT_ONLY_IF_IT_CHANGES
 
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN // Skip for BGEE
 COPY_EXISTING ~%tutu_var%BOLT03.ITM~ ~override~ // Bolt of Lightning
   WRITE_EVALUATED_ASCII 0x11e ~%tutu_scripte%FF_M23C~ // Replace invalid wav file reference
 BUT_ONLY_IF_IT_CHANGES
+END
 
 COPY_EXISTING ~%tutu_var%POTN41.ITM~ ~override~ // Potion of Power
               /*~%tutu_var%PTION41.ITM~ ~override~ - unused*/
@@ -4779,17 +4802,31 @@ COPY_EXISTING ~%tutu_var%HENTOL.CRE~ ~override~ // Hentold
   ADD_CRE_ITEM ~%tutu_var%DAGG08~ #0 #0 #0 ~IDENTIFIED~ ~INV1 INV5~ // Assign Hentold's Dagger to his inventory
 BUT_ONLY_IF_IT_CHANGES
 
-COPY_EXISTING ~%tutu_var%AMARAN.CRE~ ~override~ // Amarande, the Arch Druid
-  READ_LONG  0x2bc "itm_off" ELSE 0
-  READ_LONG  0x2c0 "itm_num" ELSE 0
-  FOR (index = 0 ; index < itm_num ; index = index + 1) BEGIN // searches through items
-    READ_ASCII ("%itm_off%" + (0x14 * "%index%")) "item"
-    PATCH_IF ("%item%" STRING_COMPARE_CASE "%tutu_var%STAF01" = 0) BEGIN // Replaces the Quarterstaff
-      WRITE_EVALUATED_ASCII ("%itm_off%" + (0x14 * "%index%")) "%tutu_var%blun10" #8 // Assigns "The Root of the Problem"
-      SET "index" = "%itm_num%" // kills loop
-    END
-  END
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN // BG, BGT, Tutu
+  COPY_EXISTING ~%tutu_var%AMARAN.CRE~ ~override~ // Amarande, the Arch Druid
+  	READ_LONG  0x2bc "itm_off" ELSE 0
+  	READ_LONG  0x2c0 "itm_num" ELSE 0
+  	FOR (index = 0 ; index < itm_num ; index = index + 1) BEGIN // searches through items
+    	READ_ASCII ("%itm_off%" + (0x14 * "%index%")) "item"
+    	PATCH_IF ("%item%" STRING_COMPARE_CASE "%tutu_var%STAF01" = 0) BEGIN // Replaces the Quarterstaff
+      		WRITE_EVALUATED_ASCII ("%itm_off%" + (0x14 * "%index%")) "%tutu_var%blun10" #8 // Assigns "The Root of the Problem"
+      		SET "index" = "%itm_num%" // kills loop
+    	END
+  	END
   BUT_ONLY_IF_IT_CHANGES
+END ELSE BEGIN  // BGEE
+  COPY_EXISTING ~CORSONE.CRE~ ~override~  // Amarande already has Might Oak +2 in BGEE, give Corsone "The Root of the Problem" instead
+  	READ_LONG  0x2bc "itm_off" ELSE 0
+  	READ_LONG  0x2c0 "itm_num" ELSE 0
+  	FOR (index = 0 ; index < itm_num ; index = index + 1) BEGIN // searches through items
+    	READ_ASCII ("%itm_off%" + (0x14 * "%index%")) "item"
+    	PATCH_IF ("%item%" STRING_COMPARE_CASE "%tutu_var%STAF01" = 0) BEGIN // Replaces the Quarterstaff
+      		WRITE_EVALUATED_ASCII ("%itm_off%" + (0x14 * "%index%")) "%tutu_var%blun10" #8 // Assigns "The Root of the Problem"
+      		SET "index" = "%itm_num%" // kills loop
+    	END
+  	END
+  BUT_ONLY_IF_IT_CHANGES
+END
 
 COPY_EXISTING ~%tutu_scriptbg%SENDAI.CRE~ ~override~ // Sendai Argrim
   READ_LONG  0x2bc "itm_off" ELSE 0
@@ -4829,26 +4866,21 @@ COPY_EXISTING ~%tutu_var%KNIGHT6.CRE~ ~override~ // Ghost Knight, AR5201 (Firewi
   BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%INN3351.STO~ ~override~ // Feldepost's Inn
-  ADD_STORE_ITEM ~%tutu_var%HELM06~ AFTER ~%tutu_var%BRAC01~ #1 #1 #1 ~IDENTIFIED~ #1 // Helmet of Charm Protection
+  ADD_STORE_ITEM ~%tutu_var%HELM06~ AFTER ~%tutu_var%BRAC01~ #0 #0 #0 ~IDENTIFIED~ #1 // Helmet of Charm Protection
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_scripts%TOCHEAP.STO~ ~override~ // Lucky Aello's
-  ADD_STORE_ITEM ~%tutu_var%LEAT06~ LAST #1 #1 #1 ~IDENTIFIED~ #1 // Studded Leather Armor +2 : Missle Attraction
+  ADD_STORE_ITEM ~%tutu_var%LEAT06~ LAST #0 #0 #0 ~~ #1 // Studded Leather Armor +2 : Missle Attraction
 BUT_ONLY_IF_IT_CHANGES
 
-
-ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN 
+ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
 /* In BG1, the raise dead scroll has an incorrect target type. */
-
-COPY ~bg1ub/ITM/SCRL63.ITM~ ~override~
-
+	COPY ~bg1ub/ITM/SCRL63.ITM~ ~override~
 END
-
-
 
 COPY_EXISTING ~%tutu_var%TEM0002.STO~ ~override~ // The Watchful Shield (Temple of Helm, AR0002: BG)
   // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #1 #1 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
-  ADD_STORE_ITEM ~%tutu_var%SCRL62~ LAST #1 #1 #1 ~IDENTIFIED~ #1 // Flame Strike scroll, qty 1 (was 3)
+  ADD_STORE_ITEM ~%tutu_var%SCRL62~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Flame Strike scroll, qty 1 (was 3)
   // ADD_STORE_ITEM ~%tutu_var%SCRL63~ AFTER ~%tutu_var%SCRL62~ #1 #1 #1 ~IDENTIFIED~ #3 // Raise Dead scroll, qty 3
   // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #1 #1 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
   // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #1 #1 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
@@ -4856,32 +4888,32 @@ BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%TEM0131.STO~ ~override~ // High Hall of Wonders (Temple of Gond, AR0131: BG)
   // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #1 #1 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
-  ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #1 #1 ~IDENTIFIED~ #1 // Raise Dead scroll, qty 1 (was 3)
+  ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Raise Dead scroll, qty 1 (was 3)
   // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #1 #1 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
   // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #1 #1 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%TEM0132.STO~ ~override~ // Lady's Hall (Temple of Tymora, AR0132: BG)
   // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #1 #1 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
-  ADD_STORE_ITEM ~%tutu_var%SCRL5F~ LAST #1 #1 #1 ~IDENTIFIED~ #1 // Chaotic Commands, qty 1 (was 5)
+  ADD_STORE_ITEM ~%tutu_var%SCRL5F~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Chaotic Commands, qty 1 (was 5)
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%TEM2304.STO~ ~override~ // Temple of Wisdom (Temple of Garl Glittergold, AR2304: FAI)
-  ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #1 #1 ~IDENTIFIED~ #1 // Cure Critical Wounds, qty 1 (was 5)
+  ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Cure Critical Wounds, qty 1 (was 5)
   // ADD_STORE_ITEM ~%tutu_var%SCRL63~ AFTER ~%tutu_var%SCRL61~ #1 #1 #1 ~IDENTIFIED~ #3 // Raise Dead scroll, qty 3
-  ADD_STORE_ITEM ~%tutu_var%SCRL5F~ LAST #1 #1 #1 ~IDENTIFIED~ #1 // Chaotic Commands, qty 1 (was 5)
+  ADD_STORE_ITEM ~%tutu_var%SCRL5F~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Chaotic Commands, qty 1 (was 5)
   // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #1 #1 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%TEM2601.STO~ ~override~ // Oghma Temple (Temple of Oghma, AR2600: Candlekeep)
   // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #1 #1 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
-  ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #1 #1 ~IDENTIFIED~ #1 // Raise Dead scroll, qty 1 (was 3)
+  ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Raise Dead scroll, qty 1 (was 3)
   // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL63~ #1 #1 #1 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%TEM3402.STO~ ~override~ // Song of the Morning (Temple of Lathander, AR3402: West of Beregost)
-  ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #1 #1 ~IDENTIFIED~ #2 // Cure Critical Wounds, qty 2 (was 5)
-  ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #1 #1 ~IDENTIFIED~ #1 // Raise Dead scroll, qty 1 (was 3)
+  ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #2 // Cure Critical Wounds, qty 2 (was 5)
+  ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Raise Dead scroll, qty 1 (was 3)
   // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #1 #1 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
   // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #1 #1 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
 BUT_ONLY_IF_IT_CHANGES
@@ -4890,28 +4922,28 @@ COPY_EXISTING ~%tutu_var%TEM4802.STO~ ~override~ // Temple of Helm (Temple of He
   // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #1 #1 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
   // ADD_STORE_ITEM ~%tutu_var%SCRL62~ AFTER ~%tutu_var%SCRL61~ #1 #1 #1 ~IDENTIFIED~ #1 // Flame Strike scroll, qty 1
   // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #1 #1 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
-  ADD_STORE_ITEM ~%tutu_var%SCRL5E~ LAST #1 #1 #1 ~IDENTIFIED~ #2   // Champion's Strength, qty 2 (was 5)
-  ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #1 #1 ~IDENTIFIED~ #3   // Raise Dead scroll, qty 3
+  ADD_STORE_ITEM ~%tutu_var%SCRL5E~ LAST #1 #0 #0 ~IDENTIFIED~ #2   // Champion's Strength, qty 2 (was 5)
+  ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #0 #0 ~IDENTIFIED~ #3   // Raise Dead scroll, qty 3
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%ULGOTH.STO~ ~override~ // Ulgoth's Beard Store and Inn
   PATCH_IF (SOURCE_SIZE > 0x74) BEGIN
-    ADD_STORE_ITEM ~%tutu_var%SCRL2D~ AFTER ~%tutu_var%SCRL1Y~ #1 #1 #1 ~IDENTIFIED~ #1 // Animate Dead scroll, qty 1
-    // ADD_STORE_ITEM ~%tutu_var%SCRL2F~ AFTER ~%tutu_var%SCRL2D~ #1 #1 #1 ~IDENTIFIED~ #1 // Cone of Cold scroll, qty 1
-    ADD_STORE_ITEM ~%tutu_var%SCRL2H~ AFTER ~%tutu_var%SCRL2D~ #1 #1 #1 ~IDENTIFIED~ #1 // Shadow Door scroll, qty 1
-    ADD_STORE_ITEM ~%tutu_var%SCRL5L~ AFTER ~%tutu_var%SCRL2H~ #1 #1 #1 ~IDENTIFIED~ #1 // Polymorph Other scroll, qty 1
-    // ADD_STORE_ITEM ~%tutu_var%SCRL61~ AFTER ~%tutu_var%SCRL5L~ #1 #1 #1 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
-    ADD_STORE_ITEM ~%tutu_var%SCRL62~ AFTER ~%tutu_var%SCRL5L~ #1 #1 #1 ~IDENTIFIED~ #1 // Flame Strike scroll, qty 1
-    ADD_STORE_ITEM ~%tutu_var%SCRL63~ AFTER ~%tutu_var%SCRL62~ #1 #1 #1 ~IDENTIFIED~ #3 // Raise Dead scroll, qty 3
-    // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #1 #1 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
-    // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #1 #1 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
-    ADD_STORE_ITEM ~%tutu_var%BOLT05~ AFTER ~%tutu_var%BOLT03~ #1 #1 #1 ~IDENTIFIED~ #5 // Bolt of Polymorphing, qty 5 (was 10)
+    ADD_STORE_ITEM ~%tutu_var%SCRL2D~ AFTER ~%tutu_var%SCRL1Y~ #1 #0 #0 ~IDENTIFIED~ #1 // Animate Dead scroll, qty 1
+    // ADD_STORE_ITEM ~%tutu_var%SCRL2F~ AFTER ~%tutu_var%SCRL2D~ #1 #0 #0 ~IDENTIFIED~ #1 // Cone of Cold scroll, qty 1
+    ADD_STORE_ITEM ~%tutu_var%SCRL2H~ AFTER ~%tutu_var%SCRL2D~ #1 #0 #0 ~IDENTIFIED~ #1 // Shadow Door scroll, qty 1
+    ADD_STORE_ITEM ~%tutu_var%SCRL5L~ AFTER ~%tutu_var%SCRL2H~ #1 #0 #0 ~IDENTIFIED~ #1 // Polymorph Other scroll, qty 1
+    // ADD_STORE_ITEM ~%tutu_var%SCRL61~ AFTER ~%tutu_var%SCRL5L~ #1 #0 #0 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
+    ADD_STORE_ITEM ~%tutu_var%SCRL62~ AFTER ~%tutu_var%SCRL5L~ #1 #0 #0 ~IDENTIFIED~ #1 // Flame Strike scroll, qty 1
+    ADD_STORE_ITEM ~%tutu_var%SCRL63~ AFTER ~%tutu_var%SCRL62~ #1 #0 #0 ~IDENTIFIED~ #3 // Raise Dead scroll, qty 3
+    // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #0 #0 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
+    // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
+    ADD_STORE_ITEM ~%tutu_var%BOLT05~ AFTER ~%tutu_var%BOLT03~ #1 #0 #0 ~IDENTIFIED~ #5 // Bolt of Polymorphing, qty 5 (was 10)
   END
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%ERDANE.STO~ ~override~ // Erdane
   PATCH_IF (SOURCE_SIZE > 0x74) BEGIN
-    ADD_STORE_ITEM ~%tutu_var%BOLT05~ AFTER ~%tutu_var%BOLT03~ #1 #1 #1 ~IDENTIFIED~ #7 // Bolt of Polymorphing, qty 7 (was 60)
+    ADD_STORE_ITEM ~%tutu_var%BOLT05~ AFTER ~%tutu_var%BOLT03~ #1 #0 #0 ~IDENTIFIED~ #7 // Bolt of Polymorphing, qty 7 (was 60)
   END
 BUT_ONLY_IF_IT_CHANGES
 
@@ -4920,60 +4952,70 @@ BUT_ONLY_IF_IT_CHANGES
 // BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%FRIEND.STO~ ~override~ // Friendly Arm Inn
-  ADD_STORE_ITEM ~%tutu_var%XBOW02~ AFTER ~%tutu_var%XBOW01~ #1 #1 #1 ~IDENTIFIED~ #1 // Heavy Crossbow +1, qty 1
-  ADD_STORE_ITEM ~%tutu_var%BRAC05~ LAST #1 #1 #1 ~IDENTIFIED~ #1   // Bracers
-  ADD_STORE_ITEM ~%tutu_var%BELT01~ AFTER ~%tutu_var%BRAC05~ #1 #1 #1 ~IDENTIFIED~ #1 // Girdle
+  ADD_STORE_ITEM ~%tutu_var%XBOW02~ AFTER ~%tutu_var%XBOW01~ #0 #0 #0 ~IDENTIFIED~ #1 // Heavy Crossbow +1, qty 1
+  ADD_STORE_ITEM ~%tutu_var%BRAC05~ LAST #0 #0 #0 ~IDENTIFIED~ #1   // Bracers
+  ADD_STORE_ITEM ~%tutu_var%BELT01~ AFTER ~%tutu_var%BRAC05~ #0 #0 #0 ~IDENTIFIED~ #1 // Girdle
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%INN2616.STO~ ~override~ // Candlekeep Inn
               ~%tutu_var%INN3304.STO~ ~override~ // Jovial Juggler
               ~%tutu_var%STO1112.STO~ ~override~ // General Store
               ~%tutu_var%STO1320.STO~ ~override~ // General Store
-  ADD_STORE_ITEM ~%tutu_var%BRAC05~ LAST #1 #1 #1 ~IDENTIFIED~ #1 // Bracers
-  ADD_STORE_ITEM ~%tutu_var%BELT01~ AFTER ~%tutu_var%BRAC05~ #1 #1 #1 ~IDENTIFIED~ #1 // Girdle
+  ADD_STORE_ITEM ~%tutu_var%BRAC05~ LAST #0 #0 #0 ~IDENTIFIED~ #1 // Bracers
+  ADD_STORE_ITEM ~%tutu_var%BELT01~ AFTER ~%tutu_var%BRAC05~ #0 #0 #0 ~IDENTIFIED~ #1 // Girdle
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%STO4803.STO~ ~override~ // Nashkel Store
-  ADD_STORE_ITEM ~%tutu_var%BRAC05~ LAST #1 #1 #1 ~IDENTIFIED~ #1 // Bracers
-  ADD_STORE_ITEM ~%tutu_var%BELT01~ AFTER ~%tutu_var%BRAC05~ #1 #1 #1 ~IDENTIFIED~ #1 // Girdle
+  ADD_STORE_ITEM ~%tutu_var%BRAC05~ LAST #0 #0 #0 ~IDENTIFIED~ #1 // Bracers
+  ADD_STORE_ITEM ~%tutu_var%BELT01~ AFTER ~%tutu_var%BRAC05~ #0 #0 #0 ~IDENTIFIED~ #1 // Girdle
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%TAERUM.STO~ ~override~ // Thunderhammer Smithy
-  ADD_STORE_ITEM ~%tutu_var%BRAC05~ LAST #1 #1 #1 ~IDENTIFIED~ #1 // Bracers
-  ADD_STORE_ITEM ~%tutu_var%BELT01~ AFTER ~%tutu_var%BRAC05~ #1 #1 #1 ~IDENTIFIED~ #1 // Girdle
+  ADD_STORE_ITEM ~%tutu_var%BRAC05~ LAST #0 #0 #0 ~IDENTIFIED~ #1 // Bracers
+  ADD_STORE_ITEM ~%tutu_var%BELT01~ AFTER ~%tutu_var%BRAC05~ #0 #0 #0 ~IDENTIFIED~ #1 // Girdle
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%STO0703.STO~ ~override~ // Sorcerous Sundries
-  ADD_STORE_ITEM ~%tutu_var%BOLT05~ AFTER ~%tutu_var%BOLT06~ #1 #1 #1 ~IDENTIFIED~ #10 // Bolt of Polymorphing, qty 10 (was 100)
+  ADD_STORE_ITEM ~%tutu_var%BOLT05~ AFTER ~%tutu_var%BOLT06~ #0 #0 #0 ~IDENTIFIED~ #10 // Bolt of Polymorphing, qty 10 (was 100)
 BUT_ONLY_IF_IT_CHANGES
 
 // Removes the following sentence from the description of Bala's Axe: "The axe gives the owner the ability to dispel magic once a day."
-COPY_EXISTING ~%tutu_var%AX1H07.ITM~ ~override~
-  PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
-    SAY 0x50 @96
-  END
-BUT_ONLY_IF_IT_CHANGES
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN
+	COPY_EXISTING ~%tutu_var%AX1H07.ITM~ ~override~
+  		PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
+    		SAY 0x54 @96
+  		END
+	BUT_ONLY_IF_IT_CHANGES
+END ELSE BEGIN
+	COPY_EXISTING ~AX1H07.ITM~ ~override~
+  		PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
+    		SAY 0x54 @115
+  		END
+	BUT_ONLY_IF_IT_CHANGES
+END
 
 /////////////////////////////////////////
 // Adds weight to the items' descriptions
-COPY_EXISTING ~%tutu_var%MISC52.ITM~ ~override~ // Wyvern Head
-SAY 0x54 @97
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN  // Already included in BGEE
+	COPY_EXISTING ~%tutu_var%MISC52.ITM~ ~override~ // Wyvern Head
+		SAY 0x54 @97
 
-COPY_EXISTING ~%tutu_var%MISC01.ITM~ ~override~ // Winter Wolf Pelt
-  SAY 0x50 @98
-SAY 0x54 @98
+	COPY_EXISTING ~%tutu_var%MISC01.ITM~ ~override~ // Winter Wolf Pelt
+  		SAY 0x50 @98
+		SAY 0x54 @98
 
-COPY_EXISTING ~%tutu_var%MISC12.ITM~ ~override~ // Ankheg Shell
-SAY 0x54 @99
+	COPY_EXISTING ~%tutu_var%MISC12.ITM~ ~override~ // Ankheg Shell
+		SAY 0x54 @99
+END
 
 //Give CLCK11 electricity bonus
-ACTION_IF ("%tutuorbgt%" STRING_EQUAL "BG") THEN BEGIN //BG only
+ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN //BG only
   COPY_EXISTING ~%tutu_var%CLCK11.ITM~ ~override~
     READ_LONG 0x64 abil_off
     READ_SHORT 0x68 abil_num
     READ_LONG 0x6a fx_off
     READ_SHORT 0x70 fx_global_num
-  
+
     SET fx_total_num = %fx_global_num%
 
     FOR (i = 0; i < %abil_num%; i += 1) BEGIN
