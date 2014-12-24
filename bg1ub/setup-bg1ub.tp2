@@ -1871,11 +1871,13 @@ COPY_EXISTING ~%tutu_var%AOLN.CRE~ ~override/UBSHILO.CRE~
   WRITE_ASCII 0x2cc ~ubshilo~ #8
   ADD_CRE_ITEM ~UBGLOVE1~ #0 #0 #0 ~NONE~ ~INV1 INV5~
 
-ACTION_IF !("%tutuorbgt%" STRING_EQUAL "BG") THEN BEGIN
+ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/shilochen/cpm/ubshilo.d~
 END ELSE BEGIN
   COMPILE ~bg1ub/shilochen/ubshilo.d~
 END
+
+ADD_JOURNAL @20178 @20179 USING ~bg1ub/tra/%LANGUAGE%/extra_tmp.tra~ // Add journal entries for BGEE
 
 <<<<<<<< .../bg1ub/ub_ar0705sc.baf
 IF
@@ -1887,7 +1889,7 @@ SetGlobal("CreateUBShiloChen","%EBaldursGate_ElfsongTavern_L1%",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR0705" OUTER_SPRINT temp_bgt "AR7705" OUTER_SPRINT temp_bg "AR0705" LAUNCH_ACTION_MACRO ~getcpmvara~
+OUTER_SPRINT temp_tutu "_AR0705" OUTER_SPRINT temp_bgt "AR7705" OUTER_SPRINT temp_bgee "AR0705" OUTER_SPRINT temp_bg "AR0705" LAUNCH_ACTION_MACRO ~getcpmvara~
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar0705sc.baf~
   EVALUATE_BUFFER
 
@@ -1907,7 +1909,7 @@ SetGlobal("CreateUBOgreMagi","%BanditCamp%",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR1900" OUTER_SPRINT temp_bgt "AR8700" OUTER_SPRINT temp_bg "AR1900" LAUNCH_ACTION_MACRO ~getcpmvara~
+OUTER_SPRINT temp_tutu "_AR1900" OUTER_SPRINT temp_bgt "AR8700" OUTER_SPRINT temp_bgee "AR1900" OUTER_SPRINT temp_bg "AR1900" LAUNCH_ACTION_MACRO ~getcpmvara~
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar1900.baf~
   EVALUATE_BUFFER
 
