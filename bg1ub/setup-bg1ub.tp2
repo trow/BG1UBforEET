@@ -1401,6 +1401,7 @@ END
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @3
+REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
 
 // Author: SimDing0
 // Email: SimDing0@hotmail.com
@@ -1429,6 +1430,7 @@ BUT_ONLY_IF_IT_CHANGES
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @4
+REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
 //FORBID_FILE ~override/X#BG1NPCPhase2.G3~ @90000
 
 // Author: Ascension64
@@ -1585,6 +1587,7 @@ COMPILE EVALUATE_BUFFER ~bg1ub/branwen/ubbranwen.d~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @10
+REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
 
 // Author: Dudley
 // Email:
@@ -1610,6 +1613,7 @@ REPLACE_TEXTUALLY ~%temp_cpmvar%~ ~D0IN108~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @12
+REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
 
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBAlbert.UB~
 
@@ -1949,6 +1953,7 @@ EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar0128.baf~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @22
+REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
 
 // Author: devSin
 // Email:
@@ -3889,6 +3894,7 @@ BUT_ONLY_IF_IT_CHANGES
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @59
+REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
 
 // Author: devSin
 // Email:
@@ -4980,6 +4986,7 @@ BUT_ONLY_IF_IT_CHANGES
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @100
+REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
 
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBAreas.UB~
 
@@ -5089,6 +5096,8 @@ BUT_ONLY_IF_IT_CHANGES
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @101
+REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
+
 //DEPRECATED ~Ascension64~
 
 // Author: devSin
@@ -5121,11 +5130,9 @@ BUT_ONLY_IF_IT_CHANGES
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @102
-
-REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~ulgoth.sto~) OR
-                  (FILE_EXISTS ~bg1data/AREA1500.bif~) @1
-
-REQUIRE_PREDICATE !FILE_EXISTS_IN_GAME ~cdelfcm0.eff~ @115
+REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
+REQUIRE_PREDICATE (GAME_IS ~totsc tutu_totsc bgt~) @1
+REQUIRE_PREDICATE !FILE_EXISTS_IN_GAME ~cdelfcm0.eff~ @90015
 
 //DEPRECATED ~Ascension64~
 
@@ -5232,9 +5239,8 @@ COPY ~bg1ub/elfcharm~ ~override~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @103
-
-//not needed for BGT, already fixed
-REQUIRE_PREDICATE NOT GAME_IS ~bgt~ @115
+REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
+REQUIRE_PREDICATE !GAME_IS ~bgt~ @90015 //not needed for BGT, already fixed
 
 //DEPRECATED ~Ascension64~
 
@@ -5257,6 +5263,7 @@ COPY ~bg1ub/music~ ~music~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @104
+REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
 //DEPRECATED ~Ascension64~
 
 // Author: SixOfSpades
