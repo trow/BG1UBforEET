@@ -1502,7 +1502,7 @@ FORBID_FILE ~override/X#BG1NPCCore.G3~ @90001
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBCoran.UB~
 
 //Ascension64: makes Coran's wyverns unique
-ACTION_IF !("%tutuorbgt%" STRING_EQUAL "BGT") THEN BEGIN //BG and Tutu
+ACTION_IF !GAME_IS ~bgt~ THEN BEGIN //BG, BGEE and Tutu
   COPY_EXISTING ~%tutu_var%WYVERN.CRE~ ~override/X#CORWYV.CRE~
     WRITE_ASCII 0x280 ~X#CoranWyvern~ #32 //script name
 
@@ -1524,17 +1524,20 @@ ACTION_IF !("%tutuorbgt%" STRING_EQUAL "BGT") THEN BEGIN //BG and Tutu
     COMPILE_BAF_TO_BCS
   BUT_ONLY_IF_IT_CHANGES
 
-  ACTION_IF ("%tutuorbgt%" STRING_EQUAL "Tutu") THEN BEGIN //Tutu
+  ACTION_IF GAME_IS ~tutu tutu_totsc bgee~ THEN BEGIN //Tutu BGEE
     COMPILE EVALUATE_BUFFER ~bg1ub/coran/cpm/Wyvern.d~
   END ELSE BEGIN //BG
     COMPILE ~bg1ub/coran/Wyvern.d~
   END
 END
 
-ACTION_IF !("%tutuorbgt%" STRING_EQUAL "BG") THEN BEGIN
+// IKCoranWyvernFix for BG1, Tutu, BGT (already included in BGEE as DXCoran)
+ACTION_IF GAME_IS ~tutu tutu_totsc bgt~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/coran/cpm/Coran.d~
 END ELSE BEGIN
-  COMPILE ~bg1ub/coran/Coran.d~
+  ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
+	COMPILE ~bg1ub/coran/Coran.d~
+  END
 END
 
 
