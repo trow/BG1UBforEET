@@ -1,0 +1,100 @@
+//journal entries for vanilla BG1: no title
+@119 = ~Was für ein Narr dieser Prism ist. Er hat doch wirklich meinen Beteuerungen geglaubt, nichts mit dem Verschwinden der Smaragde zu tun zu haben. Nun, des einen Verlust ist des anderen Gewinn...~
+@120 = ~Vielleicht war es nicht richtig, aber nachdem ich Prism ermöglicht habe, sein "Meisterwerk" zu vollenden, habe ich einen der Smaragde daraus entfernt. Er sollte sich für einen guten Preis verkaufen lassen oder eine entsprechende Belohnung vom rechtmäßigen Besitzer einbringen...~
+@121 = ~Nach einiger Anstrengung habe ich nun auch den zweiten Smaragd entfernt, den Prism gestohlen hatte, um ihn als eines der Augen in seinem "Meisterwerk" zu verwenden.~
+@122 = ~Prisms Geschichte war wirklich traurig. Schade, dass sie nicht besser ausgegangen ist. Naja, immerhin hat es meine Kasse aufgebessert; 300 Goldmünzen Belohnung für die Smaragde, die er gestohlen hatte.~
+@123 = ~Nächstes Mal sollte ich daran denken, mir nicht für schnelles Gold eine falsche Identität zu geben. Oublek hat einen Teil der Belohnung einbehalten, mich aber schlussendlich doch für das Zurückbringen der Smaragde belohnt, die Prism gestohlen hatte.~
+/* Unused line for Captain Brage Journal entry
+@ = ~Nächstes Mal sollte ich daran denken, mir nicht für schnelles Gold eine falsche Identität zu geben. Oublek hat einen Teil der Belohnung einbehalten, mich aber schlussendlich doch für das Zurückbringen von Hauptmann Brage belohnt.~
+*/
+@124 = ~Ich bin an Prisms gestohlene Smaragde gekommen, die er für die Augen seiner Statue verwenden wollte. Allerdings hat er mich dabei bemerkt und ist mit einem Meißel auf mich losgegangen, so dass ich seiner leidvollen Existenz leider ein Ende bereiten musste.~
+@125 = ~Für den einen Smaragd erhielt ich 150 Goldstücke als Belohnung. Die andere Hälfte des Goldes bekomme ich, wenn ich den zweiten gestohlenen Smaragd zurückbringe. Er sollte sich noch ganz in der Nähe des Ortes befinden, wo ich den ersten gefunden hatte.~
+@126 = ~Das Zurückbringen eines von Prisms gestohlenen Smaragden brachte mir nur einen Teil der halben Belohnung - lausige 75 Goldstücke. Sollte ich den anderen Smaragd noch holen, ist es höchstwahrscheinlich lohnender, ihn den Händlern anzubieten, als ihn gegen Belohnung zurückzugeben.~
+//journal entries for bg2 engine
+//Tutu
+@127 = ~Prism, der Bildhauer
+
+Was für ein Narr dieser Prism ist. Er hat doch wirklich meinen Beteuerungen geglaubt, nichts mit dem Verschwinden der Smaragde zu tun zu haben. Nun, des einen Verlust ist des anderen Gewinn...~
+@128 = ~Prism, der Bildhauer
+
+Vielleicht war es nicht richtig, aber nachdem ich Prism ermöglicht habe, sein "Meisterwerk" zu vollenden, habe ich einen der Smaragde daraus entfernt. Er sollte sich für einen guten Preis verkaufen lassen oder eine entsprechende Belohnung vom rechtmäßigen Besitzer einbringen...~
+@129 = ~Prism, der Bildhauer
+
+Nach einiger Anstrengung habe ich nun auch den zweiten Smaragd entfernt, den Prism gestohlen hatte, um ihn als eines der Augen in seinem "Meisterwerk" zu verwenden.~
+@130 = ~Prism, der Bildhauer
+
+Prisms Geschichte war wirklich traurig. Schade, dass sie nicht besser ausgegangen ist. Naja, immerhin hat es meine Kasse aufgebessert; 300 Goldmünzen Belohnung für die Smaragde, die er gestohlen hatte.~
+@131 = ~Prism, der Bildhauer
+
+Nächstes Mal sollte ich daran denken, mir nicht für schnelles Gold eine falsche Identität zu geben. Oublek hat einen Teil der Belohnung einbehalten, mich aber schlussendlich doch für das Zurückbringen der Smaragde belohnt, die Prism gestohlen hatte.~
+/* Unused line for Captain Brage Journal entry
+@ = ~Prism, der Bildhauer
+
+Nächstes Mal sollte ich daran denken, mir nicht für schnelles Gold eine falsche Identität zu geben. Oublek hat einen Teil der Belohnung einbehalten, mich aber schlussendlich doch für das Zurückbringen von Hauptmann Brage belohnt.~
+*/
+@132 = ~Prism, der Bildhauer
+
+Ich bin an Prisms gestohlene Smaragde gekommen, die er für die Augen seiner Statue verwenden wollte. Allerdings hat er mich dabei bemerkt und ist mit einem Meißel auf mich losgegangen, so dass ich seiner leidvollen Existenz leider ein Ende bereiten musste.~
+@133 = ~Prism, der Bildhauer
+
+Für den einen Smaragd erhielt ich 150 Goldstücke als Belohnung. Die andere Hälfte des Goldes bekomme ich, wenn ich den zweiten gestohlenen Smaragd zurückbringe. Er sollte sich noch ganz in der Nähe des Ortes befinden, wo ich den ersten gefunden hatte.~
+@134 = ~Prism, der Bildhauer
+
+Das Zurückbringen eines von Prisms gestohlenen Smaragden brachte mir nur einen Teil der halben Belohnung - lausige 75 Goldstücke. Sollte ich den anderen Smaragd noch holen, ist es höchstwahrscheinlich lohnender, ihn den Händlern anzubieten, als ihn gegen Belohnung zurückzugeben.~
+//BGT
+@210 = ~Prism, der Edelsteindieb
+
+Was für ein Narr dieser Prism ist. Er hat doch wirklich meinen Beteuerungen geglaubt, nichts mit dem Verschwinden der Smaragde zu tun zu haben. Nun, des einen Verlust ist des anderen Gewinn...~
+@211 = ~Prism, der Edelsteindieb
+
+Vielleicht war es nicht richtig, aber nachdem ich Prism ermöglicht habe, sein "Meisterwerk" zu vollenden, habe ich einen der Smaragde daraus entfernt. Er sollte sich für einen guten Preis verkaufen lassen oder eine entsprechende Belohnung vom rechtmäßigen Besitzer einbringen...~
+@212 = ~Prism, der Edelsteindieb
+
+Nach einiger Anstrengung habe ich nun auch den zweiten Smaragd entfernt, den Prism gestohlen hatte, um ihn als eines der Augen in seinem "Meisterwerk" zu verwenden.~
+@213 = ~Prism, der Edelsteindieb
+
+Prisms Geschichte war wirklich traurig. Schade, dass sie nicht besser ausgegangen ist. Naja, immerhin hat es meine Kasse aufgebessert; 300 Goldmünzen Belohnung für die Smaragde, die er gestohlen hatte.~
+@214 = ~Prism, der Edelsteindieb
+
+Nächstes Mal sollte ich daran denken, mir nicht für schnelles Gold eine falsche Identität zu geben. Oublek hat einen Teil der Belohnung einbehalten, mich aber schlussendlich doch für das Zurückbringen der Smaragde belohnt, die Prism gestohlen hatte.~
+/* Unused line for Captain Brage Journal entry
+@215 = ~Prism, der Edelsteindieb
+
+Nächstes Mal sollte ich daran denken, mir nicht für schnelles Gold eine falsche Identität zu geben. Oublek hat einen Teil der Belohnung einbehalten, mich aber schlussendlich doch für das Zurückbringen von Hauptmann Brage belohnt.~
+*/
+@216 = ~Prism, der Edelsteindieb
+
+Ich bin an Prisms gestohlene Smaragde gekommen, die er für die Augen seiner Statue verwenden wollte. Allerdings hat er mich dabei bemerkt und ist mit einem Meißel auf mich losgegangen, so dass ich seiner leidvollen Existenz leider ein Ende bereiten musste.~
+@217 = ~Prism, der Edelsteindieb
+
+Für den einen Smaragd erhielt ich 150 Goldstücke als Belohnung. Die andere Hälfte des Goldes bekomme ich, wenn ich den zweiten gestohlenen Smaragd zurückbringe. Er sollte sich noch ganz in der Nähe des Ortes befinden, wo ich den ersten gefunden hatte.~
+@218 = ~Prism, der Edelsteindieb
+
+Das Zurückbringen eines von Prisms gestohlenen Smaragden brachte mir nur einen Teil der halben Belohnung - lausige 75 Goldstücke. Sollte ich den anderen Smaragd noch holen, ist es höchstwahrscheinlich lohnender, ihn den Händlern anzubieten, als ihn gegen Belohnung zurückzugeben.~
+
+
+//oublek dialog
+@1000 = ~Einer der Smaragde! Das macht eine Belohnung von 150 Goldmünzen für Euch. Bringt den anderen auf alle Fälle ebenfalls her, wenn Ihr ihn findet.~
+@1001 = ~Der letzte fehlende Smaragd! Dafür erhaltet Ihr weitere 150 Goldmünzen Belohnung. Nun, da macht Ihr Euch ja einen ganz schönen Namen unter den Kopfgeldjägern, wenn Ihr so weitermacht. Ob das gut ist, sei dahingestellt.~
+@1002 = ~Einer der Smaragde! Es ist schön, zu sehen, dass Ihr auf ehrliche Weise versucht, Euer Gold zu verdienen, auch wenn es durch die Betätigung als unsäglicher Kopfgeldjäger ist. Ich bezahle Euch, doch weniger als der angekündigte Betrag. Bringt den anderen Smaragd auf alle Fälle ebenfalls her, wenn Ihr ihn findet.~
+@1003 = ~Der letzte fehlende Smaragd! Es ist schön, zu sehen, dass Ihr auf ehrliche Weise versucht, Euer Gold zu verdienen, auch wenn es durch die Betätigung als unsäglicher Kopfgeldjäger ist. Ich bezahle Euch, doch weniger als der angekündigte Betrag. Den Rest behalten wir ein, für den Fall, dass Ihr bei zukünftigen Geschäften den... Ausgang zu beeinflussen versucht.~
+@1004 = ~Ich bin gekommen, um meine Beute abzuliefern und die Belohnung abzuholen, die mir zusteht.~
+
+//prism dialog
+@1100 = ~Wie könnt Ihr es wagen! Wie könnt Ihr es wagen, ihr das Funkeln der Augen zu entfernen!~
+@1101 = ~Ich habe noch so viel zu tun. Aber vielleicht helft Ihr einem närrischen Bildhauer, sein Meisterwerk zu beenden? Bitte wacht hier. Grauwolf kommt bestimmt hierher. Als Bezahlung gebe ich Euch alles, was ich habe!~
+@1102 = ~Halt! Ihr habt meine Smaragde genommen. Ihr müsst sie mir wiedergeben. Ich brauche sie, um mein Meisterwerk zu beenden. Bitte, bitte, gebt sie mir zurück. Ich gebe Euch dafür alles, was ich sonst besitze.~
+@1103 = ~Sie sind weg. Ich habe sie abgeliefert. Ihr werdet Euer Steingebilde nicht mehr vollenden.~
+@1104 = ~Sie sind weg. Verkauft, damit sie um den Hals einer alten Schachtel hängen können.~
+@1105 = ~Ja, ich habe sie genommen. Einen habe ich noch. Der andere ist allerdings längst weg.~
+@1106 = ~Was soll das? Ein Irrer beschuldigt mich des Diebstahls? Sterbt für diese Anschuldigungen!~
+@1107 = ~Halt! Ihr habt meinen Smaragd genommen. Ihr müsst ihn mir wiedergeben. Ich brauche ihn, um mein Meisterwerk zu beenden. Bitte, bitte, gebt ihn mir zurück. Ich gebe Euch dafür alles, was ich sonst besitze.~
+@1108 = ~Alle Eure sonstigen Besitztümer, ja? So sei es.~
+@1109 = ~"Alles, was Ihr sonst besitzt" interessiert mich nicht. Ich werde Euch mitsamt Edelsteinen zur Wache bringen und mir die hohe Belohnung abholen.~
+@1110 = ~Ich weiß nicht, wovon Ihr sprecht.~
+@1111 = ~Gebt mir den einen, den Ihr habt. Holt den anderen und bringt ihn mir wieder. Ich muss dieses Meisterwerk beenden. Ich werde Euch dafür alles geben, was ich sonst besitze.~
+@1112 = ~Ich habe ihn längst abgeliefert. Ihr werdet ihn nicht mehr kriegen.~
+@1113 = ~Das geht nicht mehr. Ich habe ihn zurückgegeben und komme nun wieder, um den anderen ebenfalls für die Belohnung zu holen.~
+@1114 = ~Das geht nicht mehr. Er ist bei irgendeinem Händler oder an sonst einem vergessenen Ort.~
+@1115 = ~Edelsteine habe ich zwar keine mehr, aber ich nehme trotzdem gerne alles, was Ihr sonst noch so habt. Macht Euch bereit, zu sterben.~
+@1116 = ~Gebt ihn mir, bitte. Ich muss dieses Meisterwerk beenden. Ich werde Euch dafür alles geben, was ich sonst besitze.~

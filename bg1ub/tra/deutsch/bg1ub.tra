@@ -1,0 +1,189 @@
+//Game text - use Windows encoding
+@6     = ~Eddard Silberschild~
+
+@11    = ~Flirten~
+
+@15    = ~Leiche einer weiblichen Adligen~
+
+@16    = ~Das ist der tote Körper einer weiblichen Adligen~
+
+@19    = ~Handschuhe des Taschendiebstahls~
+//#39607 in BG2
+@20    = ~Handschuhe des Taschendiebstahls
+
+Vor ein paar Jahren fand man die Leiche von Fong Moo, eines berühmten Taschendiebs, der sowohl in Baldurs Tor als auch in Athkatla bekannt war, auf der Straße zwischen Baldurs Tor und Beregost. Offenbar hatte er von einem mächtigen Magier ein Artefakt gestohlen und war dann bei dem Versuch gescheitert, vor dem Magier zu fliehen. Seine Besitztümer gingen an seinen Neffen, der sich dem gleichen "Beruf" wie sein Onkel verschrieb und zu einem außergewöhnlich fähigen Taschendieb wurde. Ob die Handschuhe schon früher magisch waren oder ob sie von der Essenz des Meisterdiebes Fong Moo erfüllt sind, lässt sich nicht sagen.
+
+EIGENSCHAFTEN:
+
+Taschendiebstahl: +20%
+Gewicht: 2~
+
+@21    = ~Edie, die Bewerberin fuer die Haendlerliga~
+
+@25    = ~Bauer~
+
+@27    = ~Kaitlin~
+@28    = ~Malicia~
+@29    = ~Henriette~
+@30    = ~Sari~
+@31    = ~Mabledale~
+@32    = ~Bunsen~
+@33    = ~Farthendell~
+@34    = ~Arlond~
+@35    = ~Joldenan~
+@36    = ~Karl~
+@37    = ~Jürgen~
+@38    = ~Berden~
+@39    = ~Dath~
+@40    = ~Solgen~
+@41    = ~Borland~
+@42    = ~Galteran~
+@43    = ~Davis~
+@44    = ~Sherman~
+@45    = ~Thurston~
+@46    = ~Quincy~
+@47    = ~Christian~
+@48    = ~Marlon~
+// 
+@49    = ~Fürstin Areana~
+@50    = ~Wade~
+@51    = ~Ludrug~
+@52    = ~Palin~
+@53    = ~Sarah~
+@54    = ~Selaad Gan~
+@55    = ~Baresh~
+@56    = ~Daese~
+@57    = ~Kaishas Gan~
+
+//@60-@88 moved to sound_tmp.tra
+@89    = ~Korrekturen und Wiederherstellungen von Laeden, Tavernen und Wirtshaeusern~
+//#20713
+@90    = ~Alvanhendars Heilmittel und Allerlei~
+//Black Lily's name isn't translated into German
+@91    = ~Black Lilys Laden~
+@92    = ~Taverne~
+@93    = ~Der Wachsame Schild~
+
+@95    = ~Ring der Rindenhaut~
+@96    = ~Balas Axt - Magierschlächter
+
+Bala war ein stets missmutiger Prinz eines Clans der Gossenzwerge, der von einem grausamen Elfenmagier in Thesk versklavt wurde. Bala war zwar nicht ganz so feige wie der gewöhnliche Gossenzwerg, dafür war er aber erheblich schmutziger und abstoßender. Als ihm seine Gefangenschaft unerträglich wurde, kroch Bala in den Schlafsaal des Magiers und schlug dem Elfen den Schädel ein. Manche behaupten zwar, Bala habe den Magier mit seinen Körperausdünstungen erstickt, aber es war tatsächlich die magische Axt des Gossenzwerges, die die arkanen Abwehrzauber des Magiers überwand.
+Die schlampige Verarbeitung ist Beweis dafür, dass es Bala selbst war, der die Axt gefertigt hat. Das große Geheimnis ist aber, woher die Macht der Waffe stammt. Nach einer langen Karriere als Magiertöter starb Bala, ohne dieses Geheimnis preiszugeben - nicht einmal den wenigen, die mutig genug waren, die völlige Verlausung zu riskieren, indem sie ihn aufsuchten. Einige sagen, dass wohl Balas intensiver Hass auf Magier die Machtquelle der Axt gewesen sein muss.
+
+EIGENSCHAFTEN:
+
+Bei jedem Treffer wird auf das Ziel "Magie fehlwirken" gewirkt (Rettungswurf gg. Zauber, +2 Malus).
+
+Magie fehlwirken: Wenn ein Wesen von diesem Zauber getroffen wird, wird es ihm fast unmöglich, zu zaubern. Jedes Mal, wenn das Wesen einen Zauber einsetzen möchte, besteht eine Chance von 80%, dass der Zauber fehlschlägt.
+
+Schaden: 1W8 (Klinge)
+Gewicht: 6
+Initiativefaktor: 5
+Mindeststärke: 10
+Fertigkeit: Axt
+Typ: 1-händig
+
+Kann nicht verwendet werden von:
+- Dieben
+- Druiden
+- Klerikern
+- Magiern~
+@97    = ~Der abgetrennte Kopf eines Lindwurms ist zwar furchteinflößend, aber zugleich auch beruhigend. Sein mit Fangzähnen bewehrtes Maul und seine stechenden Augen lassen einen erschauern, doch zugleich ist der Gedanke, dass er auch von gewöhnlichen und bescheidenen Sterblichen besiegt werden kann, sehr beruhigend.
+
+EIGENSCHAFTEN:
+
+Gewicht: 30~
+@98    = ~Der schneeweiße Pelz des Winterwolfes ist weich und edel. Er wird zu den unterschiedlichsten Kleidungsstücken verarbeitet, angefangen von den einfachen Westen der Barbaren im Norden Uthgardts bis hin zu den eleganten Winterstolen, die von den Edelfrauen an der gesamten Schwertküste getragen werden.
+
+EIGENSCHAFTEN:
+
+Gewicht: 10~
+@99    = ~Der Ankheg ist ein in der Erde lebendes insektenähnliches Wesen von drei bis sechs Metern Länge. Er ist hauptsächlich in Wäldern oder guten Ackerböden zu finden. Ankhegs haben einen Panzer aus einer Substanz, die Chitin genannt wird. Chitin ist äußerst hart und dabei doch sehr leicht. Größe, Gewicht und Härte des Panzers machen diesen zu einem vielgesuchten Material. Es können daraus zum Beispiel Rüstungen gefertigt werden.
+
+EIGENSCHAFTEN:
+
+Gewicht: 100~
+
+@105   = ~Sie werden von Sarevok Anchev angeführt.~
+@106   = ~Ein Mann namens Sarevok Anchev ist für die Verleumdung verantwortlich.~
+@107   = ~Der Prophet sagte uns, dass der Führer des Eisenthrons Sarevok Anchev sei.~
+@108   = ~Der Prophet erzählte uns, dass es Sarevok Anchev war, der uns die Morde in Kerzenburg anhängte.~
+@109   = ~Davaeorn,
+
+ich habe Eure Anfrage nach zusätzlichen Sklaven erhalten. Sie werden Euch so schnell wie möglich zugesandt. Die Dinge in Baldurs Tor stehen gut. Wir haben eines der edlen Grundstücke im Westen erworben, das wir als Basislager für unsere Operationen benutzen. Es handelt sich um ein sehr altes Gebäude, das höchstwahrscheinlich schon vor dem Bau der zweiten Mauer errichtet wurde. Durch seine Bauweise lässt es sich leicht vor dem Eindringen von Dieben schützen. Denkt daran, Yeslick zu fragen, ob ihm seine neue Behausung gefällt.
+
+Rieltar
+14. Eleint 1367~
+@110   = ~Davaeorn,
+
+unsere Pläne laufen gut. Sarevok ist von unserem Hauptquartier in Ordulin zurückgekehrt. Er bringt Neuigkeiten von unseren Vorgesetzten, die mit unseren Fortschritten so weit zufrieden sind. Ich habe vor, Sarevok zum Befehlshaber über unsere Söldnereinheiten in der Region zu ernennen. Er hat bereits Tazok, seinen Bediensteten, in den Scharfzahnwald gesandt, damit dieser die dort stationierten Kräfte befehligt. In Baldurs Tor gehen die Dinge geschwind voran. Wir haben unseren besten Agenten in die Reihen des Handelskontors der Gemeinschaft der Sieben Sonnen eingeschleust.
+
+Rieltar
+4. Uktar 1367~
+@111   = ~Davaeorn,
+
+wie Ihr wahrscheinlich gehört habt, zeigt das Eisengift in der Küstengegend bereits Wirkung. Nachdem die meisten Eisenimporte von Tazok aufgehalten worden sind, kommt nun der Großteil aus der verseuchten Eisenquelle in Nashkell. Der Aufstand der Sythillisianer in Amn hat dafür gesorgt, dass keine Kräfte dieser Nation in der Lage sind, sich unseren Söldnereinheiten entgegenzustellen. Jedoch wurden einige der Söldner der Schwarzen Krallen von der Flammenden Faust gefangen genommen. Alle Gefangenen haben behauptet, mit den Zentarim verbündet zu sein, und damit jeglichen Verdacht vom Eisenthron abgelenkt. Ich habe Tranzig ausgesandt, den Söldnern dabei zu helfen, das Eisen zu Eurer Basis im Mantelwald zu schaffen. Er hat einige Nimmervolle Beutel mitgebracht, so dass er alleine zum Mantelwald reisen kann und somit die Gefahr verringert, dass Euer Stützpunkt von Spähern der Flammenden Faust entdeckt wird.
+
+Rieltar
+21. Ches 1368~
+@112   = ~Das persönliche Tagebuch von Sarevok
+
+14. Eleint 1367: Heute hat König Azoun dem Eisenthron das Verbot auferlegt, innerhalb der Grenzen von Cormyr zu handeln. Obwohl dies ein großer Schlag gegen den Eisenthron ist, bietet sich nun für Rieltar die günstigste Gelegenheit, dem Hoherat des Throns mit seinem Antrag gegenüberzutreten. Wenn alles gut läuft, können wir die Operation in diesem Jahr beginnen.
+
+28. Eleint 1367: Davaeorn berichtet, dass die Mine im Mantelwald trockengelegt und einsatzbereit ist. Diese Mitteilung sollte sehr hilfreich dabei sein, den Hoherat des Throns zu überzeugen.
+
+19. Marpenot 1367: Der Rat des Eisenthrons hat beschlossen, Rieltars Plan zu unterstützen. Er hat alle erforderlichen Ressourcen erhalten und ihm wurde die Leitung des Projekts übertragen. Ich habe meinem "Vater" gegenüber Interesse bekundet und er hat versprochen, mich an den Operationen entlang der Schwertküste teilhaben zu lassen. Er schickt mich als seinen Stellvertreter, um Kontakt mit einigen der Söldnergruppen herzustellen, die im Osten agieren. In unserem Gespräch erwähnte er Mutter: Ich solle ihm nicht untreu werden, so wie sie es tat. Er stellte klar, dass ich ihr Schicksal teilen müsse, wenn ich es doch täte. Wenn er glaubt, mich mit seinen schwächlichen Drohungen einzuschüchtern, irrt er.
+
+30. Marpenot 1367: Ich habe mich mit den Anführern der Kalten Hand und der Schwarzen Krallen getroffen. Für Ardenor, den Anführer der Kalten Hand, habe ich nichts übrig, doch Taugosz scheint ein zuverlässiger Mann zu sein. Es ist gut so, denn für die nächste Zeit werde ich mit den Söldnern zusammenarbeiten müssen.
+
+3. Uktar 1367: Ich hatte vergangene Nacht einen neuen Traum. Mutter sprach zu mir, doch ihr Gesicht wurde aufgedunsen und farblos und ihre Stimme schwächer, als sie mich bat, sie vor Rieltar zu schützen. Ich sah, wie die Garotte ihr in den Nacken schnitt, aber ich tat nichts. Es war nur ein Traum.
+
+8. Uktar 1367: Heute bin ich nach Baldurs Tor zurückgekehrt, um mich mit Rieltar zu treffen. Der Narr glaubt noch immer, mich seinen "Sohn" nennen zu können. Er geht davon aus, dass ich ihm treu bin, weil er mich großgezogen hat. Gut, treu bin ich, aber nur, solange er nützlich ist. Er hat einen Stützpunkt in einem Herrenhaus einer verarmten Adelsfamilie eingerichtet und sagt, dass alles glatt liefe.
+
+17. Nachtal 1367: Mulahey hat sich in der Mine von Nashkell eingenistet und sollte bereits die Kobolde unter sein Kommando gebracht haben. Nur einige wenige Sklaven haben begonnen, das Erz im Mantelwald abzubauen. Doch wenn die Raubüberfälle erst angefangen haben, werde ich Davaeorn ständig mit neuen Sklaven versorgen.
+
+6. Hammer 1368: Die Flammende Faust hat nun etwas von unseren kleinen Söldneroperationen mitbekommen und ein paar Truppen an die Küstenstraße entsandt, um die Überfälle abzuwehren. Sollten einige der Söldner gefangen genommen werden, glauben die meisten, dass sie für die Zentarim arbeiten, so dass kein Verdacht auf den Eisenthron fallen wird. Ich bin mir sicher, dass die Zentarim in Dunkelburg nicht begeistert wären, wenn sie wüssten, dass ihr Name fälschlicherweise benutzt wird. Doch wir müssen im Verborgenen bleiben.
+
+9. Hammer 1368: Ich habe beschlossen, die Zeit für einen Besuch in Kerzenburg zu nutzen. Ich habe lange damit gewartet, den Prophezeiungen des Alaundo nachzugehen, und muss endlich wissen, ob aus meinen Träumen die Wahrheit spricht. Ich kann den Worten der Erscheinungen keinen Glauben schenken, ohne einen Beweis dafür zu haben. Vom Bhaalspriester, den ich mir vornahm, erfuhr ich nichts - er war alt und starb zu schnell. Doch wenn jene Worte wahr sind, werde ich sicherlich bald stärkere Gehilfen heranziehen als diese.
+
+14. Alturiak 1368: Endlich in Kerzenburg angekommen, waren die hiesigen Mönche ganz hilfsbereit. Aus dem zu schließen, was ich gelesen habe, steht es außer Zweifel, dass in meinen Adern das Blut Bhaals fließt. Alaundos Prophezeiungen sind natürlich alles andere als eindeutig, doch ich denke, dass ich sie verstehe. Bhaal sah das Nahen seines eigenen Todes und säte seine Essenz über den Ländern aus. Die daraus entsprießende Brut trägt die Zeichen des Chaos, fühlt Macht ohne Ziel und Zweck; sie spürt göttliches Blut durch ihre Adern pulsieren und wird Tod und Zerstörung bringen. "Die Tode, die sie bringen, werden den Vater erwecken und durch sie wird er emporsteigen". Der Wortlaut ist etwas doppelsinnig, doch offenbar bedeutet er, dass der Tod, den Bhaals Kinder wirken, ihnen zu göttlicher Macht verhelfen wird. Und da unser Vater der Gott des Todes war, müssen wir auf die einzige ihm gebührende Art beweisen, seiner würdig zu sein. Ich denke, ich weiß nun, was ich zu tun habe... die göttliche Huldigung des Todes!
+
+15. Alturiak 1368: Weitere Nachforschungen. Es scheint, dass Bhaal Hunderte, wenn nicht Tausende von Bastardkindern zeugte, von denen jedoch nur zwanzig zu wahrer Macht aufsteigen sollen... und von diesen werden fünf die Götter selbst vor Furcht erzittern lassen. Doch der Mönch Gorion macht mir Schwierigkeiten. Alaundos Schriften beinhalten einige äußerst obskure Abschnitte, die ein "Mündel Gorions" erwähnen. Tatsächlich wird der Mönch mit einem Balg namens <CHARNAME> erwähnt, das, obgleich es nur ein naives, dummes Ding zu sein scheint, mir irgendwie vertraut vorkommt. Ich bin mir sicher, dass Gorion mich beobachtet. Ich muss vorsichtiger mit meinen Nachforschungen sein.
+
+16. Alturiak 1368: Ich verabschiede mich nun von Kerzenburg, und das keinen Augenblick zu früh, bin ich doch überzeugt, dass Gorion mein Erbe erkannt hat. Ich wünschte, ich könnte ihn einfach beseitigen, doch in dieser verdammten Festung wäre das zu leichtsinnig. Inzwischen bin ich mir sicher, dass <CHARNAME> ebenfalls eines der Kinder Bhaals ist. Ich erkenne die Zeichen an <PRO_HIMHER> und daraus erklärt sich nicht nur Gorions Neugierde an meinen Studien, sondern auch die Andeutungen in der Prophezeiung. Im Moment kann ich nichts weiter tun, doch ich muss unbedingt zurückkehren und das kleine Balg töten. Es wäre dumm von mir, eines meiner Halbgeschwister am Leben zu lassen, vor allem eines, das von den Harfnern aufgezogen wurde (und ich bin sicher, dass Gorion zu ihnen Verbindungen hegt).
+
+17. Ches 1368: Alles entwickelt sich gut. Die Qualität des Erzes aus Nashkell wird langsam schlechter und die Söldner haben bei der Beschlagnahmung aller auf dem Weg nach Baldurs Tor befindlichen Eisenkarawanen gute Arbeit geleistet. Obwohl einige meiner Männern gefangen genommen wurden, hält sich die Geschichte der Zentarim gut, so dass der Eisenthron noch keine Probleme bekommen hat. In den kommenden Monaten werde ich mich vor zentischen Spionen hüten müssen.
+
+28. Tarsak 1368: Es ist an der Zeit, mich endlich um den alten Kauz Gorion und seinen kleinen Balg zu kümmern. Ich muss meinen Männern Bescheid geben, dass ich die nächsten paar Tage abwesend sein werde.
+
+19. Kytorn 1368: Kaum Zeit zum Schreiben, doch sollte ich meine Aufzeichnungen nicht vernachlässigen. Die Todgeweihten müssen wissen, wie ihr alter und neuer Herr des Mordens über sie kam. Wenn ich die Zeit dazu finde, werde ich mir einen Schreiber besorgen. Doch vorerst erwarte ich den Beginn unseres kleinen Dramas hier... Rieltar, mein selbsternannter "Vater", trifft sich oben mit zwei Repräsentanten der Ritter des Schildes. Wie ich mir dachte, hat er all meine Versuche unterbunden, den Grenzkonflikt eskalieren zu lassen. Tut mir wirklich leid, "Vater", doch meine wahre Herkunft ruft und du stehst im Weg. Für den unwahrscheinlichen Fall, dass die bevorstehende Begegnung nicht umgehend zu Blutvergießen führt, werde ich die Doppelgänger anweisen, auf welche Weise sie Rieltar umzubringen haben. Die Garotte scheint mir das passende Werkzeug dafür.
+
+
+Dieses Tagebuch sieht sehr wichtig aus. Ihr solltet es persönlich bei Euch tragen.~
+
+@113   = ~Siegelring~
+@114   = ~Dies ist ein Siegelring, in den ein Rubin eingelassen ist.~
+
+//item strings
+@117 = ~Ein Smaragd ist ein leuchtend grüner Beryll, der als fertig geschliffener Schmuckstein ein rechteckiges Muster aufweist. Smaragden wird oft eine heilende Wirkung zugesprochen, und genau zu diesem Zweck werden manche Gegenstände damit verziert. Dieser Smaragd wurde mit einem kleinen "L" markiert. Er wurde von Prism gestohlen, um ihn für die Statue seiner großen Liebe, der Dame Ellesime, zu verwenden. Vermutlich hatte Prism ihn für das linke Auge vorgesehen. Ob der Smaragd nun im Auge der Statue war oder nicht - es gibt jedenfalls eine Belohnung dafür, ihn zu Oublek zurückzubringen.~
+@118 = ~Ein Smaragd ist ein leuchtend grüner Beryll, der als fertig geschliffener Schmuckstein ein rechteckiges Muster aufweist. Smaragden wird oft eine heilende Wirkung zugesprochen, und genau zu diesem Zweck werden manche Gegenstände damit verziert. Dieser Smaragd wurde mit einem kleinen "R" markiert. Er wurde von Prism gestohlen, um ihn für die Statue seiner großen Liebe, der Dame Ellesime, zu verwenden. Vermutlich hatte Prism ihn für das rechte Auge vorgesehen. Ob der Smaragd nun im Auge der Statue war oder nicht - es gibt jedenfalls eine Belohnung dafür, ihn zu Oublek zurückzubringen.~
+
+//Additions for BGEE
+@115 = ~Balas Axt - Magierschlächter
+
+Bala war ein stets missmutiger Prinz eines Clans der Gossenzwerge, der von einem grausamen Elfenmagier in Thesk versklavt wurde. Bala war zwar nicht ganz so feige wie der gewöhnliche Gossenzwerg, dafür war er aber erheblich schmutziger und abstoßender. Als ihm seine Gefangenschaft unerträglich wurde, kroch Bala in den Schlafsaal des Magiers und schlug dem Elfen den Schädel ein. Manche behaupten zwar, Bala habe den Magier mit seinen Körperausdünstungen erstickt, aber es war tatsächlich die magische Axt des Gossenzwerges, die die arkanen Abwehrzauber des Magiers überwand.
+Die schlampige Verarbeitung ist Beweis dafür, dass es Bala selbst war, der die Axt gefertigt hat. Das große Geheimnis ist aber, woher die Macht der Waffe stammt. Nach einer langen Karriere als Magiertöter starb Bala, ohne dieses Geheimnis preiszugeben - nicht einmal den wenigen, die mutig genug waren, die völlige Verlausung zu riskieren, indem sie ihn aufsuchten. Einige sagen, dass wohl Balas intensiver Hass auf Magier die Machtquelle der Axt gewesen sein muss.
+
+EIGENSCHAFTEN:
+
+Bei jedem Treffer wird auf das Ziel "Magie fehlwirken" gewirkt (Rettungswurf gg. Zauber, +2 Malus).
+
+Magie fehlwirken: Wenn ein Wesen von diesem Zauber getroffen wird, wird es ihm fast unmöglich, zu zaubern. Jedes Mal, wenn das Wesen einen Zauber einsetzen möchte, besteht eine Chance von 80%, dass der Zauber fehlschlägt.
+
+Schaden: 1W8 (Klinge)
+Gewicht: 6
+Initiativefaktor: 5
+Mindeststärke: 10
+Fertigkeit: Axt
+Typ: 1-händig
+~
