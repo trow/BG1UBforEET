@@ -1931,11 +1931,13 @@ COPY_EXISTING ~%tutu_var%EDIE.CRE~ ~override~
   WRITE_ASCII 0x280 ~Edie~        // Assigns death variable
 BUT_ONLY_IF_IT_CHANGES
 
-ACTION_IF !("%tutuorbgt%" STRING_EQUAL "BG") THEN BEGIN
+ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/edie/cpm/ubedie.d~
 END ELSE BEGIN
   COMPILE ~bg1ub/edie/ubedie.d~
 END
+
+ADD_JOURNAL @17 @18 @19 USING ~bg1ub/tra/%LANGUAGE%/ubedie.tra~ // Add journal entries for BGEE
 
 <<<<<<<< .../bg1ub/ub_ar0128.baf
 IF
@@ -1949,7 +1951,7 @@ SetGlobal("UB_EDIE_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR0128" OUTER_SPRINT temp_bgt "AR7228" OUTER_SPRINT temp_bg "AR0128" LAUNCH_ACTION_MACRO ~getcpmvara~
+OUTER_SPRINT temp_tutu "_AR0128" OUTER_SPRINT temp_bgt "AR7228" OUTER_SPRINT temp_bgee "AR0128" OUTER_SPRINT temp_bg "AR0128" LAUNCH_ACTION_MACRO ~getcpmvara~
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar0128.baf~
   EVALUATE_BUFFER
 
