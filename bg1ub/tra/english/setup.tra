@@ -1,0 +1,48 @@
+//DOS prompts - use DOS encoding
+@90000 = ~The BG1 NPC Project component "The BG1 NPC Project: Phase II (Quests and Interjections)" conflicts with this component.~
+@90001 = ~The BG1 NPC Project component "The BG1 NPC Project: Core Install" conflicts with this component.~
+@90002 = ~The BG1 NPC Project component "The BG1 NPC Project: Phase I (Banters)" conflicts with this component.~
+@90003 = ~Northern Tales of the Sword Coast conflicts with this component.~
+
+@90010 = ~Tutu install detected.~
+@90011 = ~BGT install detected.~
+@90012 = ~BG install detected.~
+@90013 = ~Please install on BG, BGT, Tutu, or BGEE.~
+@90014 = ~Please install on BGT or Tutu.~
+
+@90015 = ~The functionality of this component is either already included or superseded by one of your already installed mods.~
+@90016 = ~The functionality of this component is already included in BGEE.~
+@90017 = ~BGEE install detected.~
+
+
+@0    = ~Ice Island Level Two Restoration~
+@1    = ~The Tales of the Sword Coast expansion is required for this component.~
+
+@2    = ~The Mysterious Vial~
+@3    = ~Additional Elminster Encounter~
+@4    = ~Angelo Notices Shar-teel~
+@5    = ~Finishable Kagain Caravan Quest~
+@7    = ~Coran and the Wyverns~
+@8    = ~Kivan and Tazok~
+@9    = ~Branwen and Tranzig~
+@10   = ~Safana the Flirt~
+@12   = ~Appropriate Albert and Rufie Reward~
+@13   = ~Place Entar Silvershield in His Home~
+@14   = ~Scar and the Sashenstar's Daughter~
+@17   = ~Quoningar, the Cleric~
+@18   = ~Shilo Chen and the Ogre-Magi~
+@22   = ~Flaming Fist Mercenary Reinforcements~
+@23   = ~Creature Corrections~
+@24   = ~Creature Restorations~
+@26   = ~Creature Name Restorations~
+@58   = ~Minor Dialogue Restorations~
+@59   = ~Audio Restorations~
+@94   = ~Item Corrections and Restorations~
+@100  = ~Area Corrections and Restorations~
+@101  = ~Permanent Corpses~
+@102  = ~Elven Charm and Sleep Racial Resistance~
+@103  = ~The Original Saga Music Playlist Corrections~
+@104  = ~Sarevok's Diary Corrections~
+/* new v13.1 */
+@116  = ~Prism and the Emeralds Tweak~
+@219  = ~Duke Eltan in the Harbor Master's Building~
