@@ -5411,13 +5411,11 @@ ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
 END
 
 ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
-
-//BG Method specific variables
-OUTER_SET fj_flags = 0b00000001
-OUTER_SPRINT abContainerEnable ~DestroyItem("abgfEyeL")
-DestroyItem("abgfEyeR")
-SetGlobal("abgf_GemInEye","GLOBAL",1)~
-
+  //BG Method specific variables
+  OUTER_SET fj_flags = 0b00000001
+  OUTER_SPRINT abContainerEnable ~DestroyItem("abgfEyeL")
+  DestroyItem("abgfEyeR")
+  SetGlobal("abgf_GemInEye","GLOBAL",1)~
 END
 
 ACTION_IF GAME_IS ~tutu tutu_totsc~ THEN BEGIN
@@ -5428,7 +5426,12 @@ ACTION_IF GAME_IS ~bgt~ THEN BEGIN
  INCLUDE ~bg1ub/abPrismEmeralds/tph/rr_bgt_addvars.tpa~
 END
 
-ACTION_IF GAME_IS ~tutu tutu_totsc bgt~ THEN BEGIN
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+ INCLUDE ~bg1ub/abPrismEmeralds/tph/rr_bgee_addvars.tpa~
+ ADD_JOURNAL EXISTING TITLE (#31383) @127 @128 @129 @130 @131 @132 @133 @134 USING ~bg1ub/tra/%LANGUAGE%/ubprism.tra~
+END
+
+ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee~ THEN BEGIN
 
 //BG2 Method specific variables
 OUTER_SET fj_flags = 0b00100001
@@ -5479,8 +5482,8 @@ INT_VAR fj_loc_x = 641
 STR_VAR fj_structure_type = ~container~
         fj_name = ~A6StatueRightEye~
         fj_trap_script = ~abitrp~
-//        fj_trap_script to the trap’s script;
-//        fj_key_resref to the filename of the container’s key;
+//        fj_trap_script to the trap's script;
+//        fj_key_resref to the filename of the container's key;
 END
 
  LAUNCH_PATCH_FUNCTION ~fj_are_structure~
@@ -5521,8 +5524,8 @@ INT_VAR fj_loc_x = 641
 STR_VAR fj_structure_type = ~container~
         fj_name = ~A6StatueLeftEye~
         fj_trap_script = ~abitrp~
-//        fj_trap_script to the trap’s script;
-//        fj_key_resref to the filename of the container’s key;
+//        fj_trap_script to the trap's script;
+//        fj_key_resref to the filename of the container's key;
 END
 
  LAUNCH_PATCH_FUNCTION ~fj_are_structure~
@@ -5564,11 +5567,10 @@ COPY_EXISTING ~%tutu_var%prism.cre~ ~override~
 
 BUT_ONLY_IF_IT_CHANGES
 //compile the script for the eye container traps
-COMPILE ~bg1ub/abPrismEmeralds/CrossPlat/abitrp.baf~ EVALUATE_BUFFER
+COMPILE ~bg1ub/abPrismEmeralds/CrossPlat/abitrp.baf~ EVALUATE_BUFFER USING ~bg1ub/tra/%LANGUAGE%/ubprism.tra~
 
 //compile the dialog changes to oublek and prism
-COMPILE ~bg1ub/abPrismEmeralds/CrossPlat/oublek.d~ EVALUATE_BUFFER
-
+COMPILE ~bg1ub/abPrismEmeralds/CrossPlat/oublek.d~ EVALUATE_BUFFER USING ~bg1ub/tra/%LANGUAGE%/ubprism.tra~
 
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
