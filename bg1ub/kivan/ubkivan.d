@@ -4,7 +4,7 @@ I_C_T2 ~%tutu_scriptbg%TAZOK~ 1 UBKivanAndTazok
 END
 
 I_C_T2 ~%tutu_scriptbg%TAZOK~ 13 UBKivanAndTazokLeave
-== KIVANJ IF ~InParty("kivan") !Dead("kivan") !StateCheck("kivan",STATE_SLEEPING)~ THEN @2
+== %KIVAN_JOINED% IF ~InParty("kivan") !Dead("kivan") !StateCheck("kivan",STATE_SLEEPING)~ THEN @2
 END
 
 APPEND %KIVAN_JOINED%
