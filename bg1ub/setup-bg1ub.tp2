@@ -309,122 +309,152 @@ ALWAYS
     //main conversion code
   INCLUDE ~%Z!PL_TRA_Patch%/BG1&BG2UniversalPolishFont.tpa~
     //all TRAs declared in LANGUAGE must be reloaded
-  LOAD_TRA "bg1ub/%LANGUAGE%/setup.tra"
+  LOAD_TRA "bg1ub/tra/%LANGUAGE%/setup.tra"
+
+  INCLUDE ~%MOD_FOLDER%/handle_charsets.tpa~
+  ACTION_DEFINE_ARRAY ub#noconvert BEGIN setup END
+  ACTION_DEFINE_ARRAY ub#reload BEGIN bg1ub END
+
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY ub#charsets BEGIN
+    deutsch => cp1252
+    english => cp1252
+    espanol => cp1252
+    francias => cp1252
+    italiano => cp1252
+    polish => cp1250
+    russian => cp1251
+  END
+
+  LAF HANDLE_CHARSETS
+    INT_VAR
+      infer_charset = 1
+    STR_VAR
+      tra_path = EVAL ~%MOD_FOLDER%/tra~
+      charset_table = ub#charsets
+      noconvert_array = ub#noconvert
+      reload_array = ub#reload
+  END
 
 
   ACTION_IF !("%percentage_sign%" STRING_EQUAL "%") THEN BEGIN //do once
-    ACTION_IF FILE_EXISTS_IN_GAME ~FW0100.are~ THEN BEGIN //Tutu
+    ACTION_IF GAME_IS ~tutu tutu_totsc~ THEN BEGIN //Tutu
       PRINT @90010
       INCLUDE ~bg1ub/lib/g3_tutu_cpmvars.tpa~
       INCLUDE ~bg1ub/lib/tutu_area_script_assign.tph~
-	INCLUDE ~bg1ub/lib/rr_tutubgt_addvars.tpa~
-      COPY ~bg1ub/%LANGUAGE%/extra_tmp.tra~ ~bg1ub/%LANGUAGE%/extra.tra~
+	INCLUDE ~bg1ub/lib/rr_tutubgtbgee_addvars.tpa~
+      COPY ~bg1ub/tra/%LANGUAGE%/extra_tmp.tra~ ~bg1ub/tra/%LANGUAGE%/extra.tra~
         EVALUATE_BUFFER
-      LOAD_TRA ~bg1ub/%LANGUAGE%/extra.tra~
+      LOAD_TRA ~bg1ub/tra/%LANGUAGE%/extra.tra~
     END
     ELSE BEGIN
-      ACTION_IF FILE_EXISTS_IN_GAME ~AR7200.are~ THEN BEGIN //BGT
+      ACTION_IF GAME_IS ~bgt~ THEN BEGIN //BGT
         PRINT @90011
         INCLUDE ~bg1ub/lib/g3_bgt_cpmvars.tpa~
-	INCLUDE ~bg1ub/lib/rr_tutubgt_addvars.tpa~
-        COPY ~bg1ub/%LANGUAGE%/extra_tmp.tra~ ~bg1ub/%LANGUAGE%/extra.tra~
+		INCLUDE ~bg1ub/lib/rr_tutubgtbgee_addvars.tpa~
+        COPY ~bg1ub/tra/%LANGUAGE%/extra_tmp.tra~ ~bg1ub/tra/%LANGUAGE%/extra.tra~
           EVALUATE_BUFFER
-        LOAD_TRA ~bg1ub/%LANGUAGE%/extra.tra~
+        LOAD_TRA ~bg1ub/tra/%LANGUAGE%/extra.tra~
       END
       ELSE BEGIN
         ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN //BG
           PRINT @90012
           INCLUDE ~bg1ub/lib/g3_bg_cpmvars.tpa~
 
-/* Extra stuff needed for cross platform code:
-BG1 with TotSC installed */
-ACTION_IF GAME_IS ~totsc~ THEN BEGIN
-     INCLUDE ~bg1ub/lib/rr_totsc_addvars.tpa~
+			/* Extra stuff needed for cross platform code:
+			BG1 with TotSC installed */
+			ACTION_IF GAME_IS ~totsc~ THEN BEGIN
+     			INCLUDE ~bg1ub/lib/rr_totsc_addvars.tpa~
+			END ELSE BEGIN
+				/* BG1 without TotSC installed */
+     			INCLUDE ~bg1ub/lib/rr_bg1_addvars.tpa~
+			END //still bg1+totsc
 
- 
-END ELSE BEGIN 
-
-/* BG1 without TotSC installed */
-     INCLUDE ~bg1ub/lib/rr_bg1_addvars.tpa~
-
-END //still bg1+totsc
-
-          COPY ~bg1ub/%LANGUAGE%/extra_tmp.tra~ ~bg1ub/%LANGUAGE%/extra.tra~
+          COPY ~bg1ub/tra/%LANGUAGE%/extra_tmp.tra~ ~bg1ub/tra/%LANGUAGE%/extra.tra~
             EVALUATE_BUFFER
-          LOAD_TRA ~bg1ub/%LANGUAGE%/extra.tra~
+          LOAD_TRA ~bg1ub/tra/%LANGUAGE%/extra.tra~
         END
         ELSE BEGIN
-          FAIL @90013
+     		ACTION_IF GAME_IS ~bgee~ THEN BEGIN //bgee
+      			PRINT @90017
+      			INCLUDE ~bg1ub/lib/g3_bgee_cpmvars.tpa~
+				INCLUDE ~bg1ub/lib/rr_tutubgtbgee_addvars.tpa~
+      			COPY ~bg1ub/tra/%LANGUAGE%/extra_tmp.tra~ ~bg1ub/tra/%LANGUAGE%/extra.tra~
+        			EVALUATE_BUFFER
+      			LOAD_TRA ~bg1ub/tra/%LANGUAGE%/extra.tra~
+    		END
+    		ELSE BEGIN
+         		FAIL @90013
+         	END
         END
       END
     END
   END
 
   // BGT/Tutu compatibility
-  ACTION_IF !("%tutuorbgt%" STRING_EQUAL "BG") AND //BGT or Tutu only
+  ACTION_IF GAME_IS ~tutu tutu_totsc bgt~ AND //BGT or Tutu only
             NOT FILE_EXISTS_IN_GAME EVALUATE_BUFFER ~%IceIslandMaze_L2%.ARE~ THEN BEGIN //do once
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%EDIE.CRE~ ~override~
      SAY NAME1 @10000
      SAY NAME2 @10000
-     SAY INITIAL_MEETING @10001 
+     SAY INITIAL_MEETING @10001
      SAY DAMAGE @10002
      SAY DYING @10003
-     SAY SELECT_COMMON1 @10001 
+     SAY SELECT_COMMON1 @10001
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%ENNAHE.CRE~ ~override~
      SAY NAME1 @10004
      SAY NAME2 @10004
-     SAY INITIAL_MEETING @10005 
+     SAY INITIAL_MEETING @10005
      SAY DAMAGE @10002
      SAY DYING @10002
-     SAY SELECT_COMMON1 @10005 
+     SAY SELECT_COMMON1 @10005
      SAY 0x198 @10006
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%ERLINH.CRE~ ~override~
      SAY NAME1 @10007
      SAY NAME2 @10007
-     SAY INITIAL_MEETING @10008 
+     SAY INITIAL_MEETING @10008
      SAY DAMAGE @10009
      SAY DYING @10010
-     SAY SELECT_COMMON1 @10008 
+     SAY SELECT_COMMON1 @10008
      SAY 0x198 @10011
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%FELDAN.CRE~ ~override~
      SAY NAME1 @10012
      SAY NAME2 @10012
-     SAY INITIAL_MEETING @10013 
+     SAY INITIAL_MEETING @10013
      SAY DAMAGE @10014
      SAY DYING @10015
      SAY SELECT_COMMON1 @10013
-     SAY SELECT_COMMON2 @10016 
-     SAY SELECT_RARE1 @10016 
-     SAY SELECT_RARE2 @10016 
+     SAY SELECT_COMMON2 @10016
+     SAY SELECT_RARE1 @10016
+     SAY SELECT_RARE2 @10016
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%GALKIN.CRE~ ~override~
      SAY NAME1 @10017
      SAY NAME2 @10017
-     SAY INITIAL_MEETING @10018 
+     SAY INITIAL_MEETING @10018
      SAY DAMAGE @10019
      SAY DYING @10020
-     SAY SELECT_COMMON1 @10021 
+     SAY SELECT_COMMON1 @10021
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%GIRLBAX.CRE~ ~override~
      SAY NAME1 @10022
      SAY NAME2 @10022
-     SAY INITIAL_MEETING @10023 
+     SAY INITIAL_MEETING @10023
      SAY DAMAGE @10024
      SAY DYING @10025
-     SAY SELECT_COMMON1 @10023 
+     SAY SELECT_COMMON1 @10023
      SAY 0x198 @10026
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%HAFFG2.CRE~ ~override~
      SAY NAME1 @10027
      SAY NAME2 @10027
-     SAY INITIAL_MEETING @10028 
+     SAY INITIAL_MEETING @10028
      SAY DAMAGE @10029
      SAY DYING @10030
-     SAY SELECT_COMMON1 @10028 
+     SAY SELECT_COMMON1 @10028
      SAY 0x198 @10031
      SAY 0x19c @10032
      SAY 0x1a0 @10033
@@ -432,10 +462,10 @@ END //still bg1+totsc
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%HALFG2.CRE~ ~override~
      SAY NAME1 @10034
      SAY NAME2 @10034
-     SAY INITIAL_MEETING @10035 
+     SAY INITIAL_MEETING @10035
      SAY DAMAGE @10036
      SAY DYING @10037
-     SAY SELECT_COMMON1 @10035 
+     SAY SELECT_COMMON1 @10035
      SAY 0x198 @10038
      SAY 0x19c @10039
      SAY 0x1a0 @10040
@@ -447,16 +477,16 @@ END //still bg1+totsc
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%MTOB4.CRE~ ~override~
      SAY NAME1 @10042
      SAY NAME2 @10042
-     SAY INITIAL_MEETING @10043 
+     SAY INITIAL_MEETING @10043
      SAY DAMAGE @10044
      SAY DYING @10045
-     SAY SELECT_COMMON1 @10043 
+     SAY SELECT_COMMON1 @10043
      SAY 0x198 @10046
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%MTOB5.CRE~ ~override~
      SAY NAME1 @10042
      SAY NAME2 @10042
-     SAY INITIAL_MEETING @10047 
+     SAY INITIAL_MEETING @10047
      SAY DAMAGE @10044
      SAY DYING @10045
      SAY SELECT_COMMON1 @10047
@@ -470,14 +500,14 @@ END //still bg1+totsc
          ~bg1ub/%tutuorbgt%/CRE/%tutu_scripto%GREGRSU.CRE~ ~override~
      SAY NAME1 @10048
      SAY NAME2 @10048
-     SAY BATTLE_CRY1 @10049 
-     SAY BATTLE_CRY2 @10050 
+     SAY BATTLE_CRY1 @10049
+     SAY BATTLE_CRY2 @10050
      SAY ATTACK1 @10051
      SAY ATTACK2 @10052
      SAY DAMAGE @10053
      SAY DYING @10054
-     SAY SELECT_COMMON1 @10055 
-     SAY SELECT_RARE1 @10056 
+     SAY SELECT_COMMON1 @10055
+     SAY SELECT_RARE1 @10056
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREHA1.CRE~ ~override~
          ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREHA2.CRE~ ~override~
@@ -490,23 +520,23 @@ END //still bg1+totsc
          ~bg1ub/%tutuorbgt%/CRE/%tutu_scripto%GREHA_E.CRE~ ~override~
      SAY NAME1 @10057
      SAY NAME2 @10057
-     SAY BATTLE_CRY1 @10058 
-     SAY BATTLE_CRY2 @10059 
+     SAY BATTLE_CRY1 @10058
+     SAY BATTLE_CRY2 @10059
      SAY DAMAGE @10060
      SAY DYING @10061
-     SAY SELECT_COMMON1 @10062 
-     SAY SELECT_COMMON2 @10063 
+     SAY SELECT_COMMON1 @10062
+     SAY SELECT_COMMON2 @10063
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%READ4.CRE~ ~override~
      SAY NAME1 @10064
      SAY NAME2 @10064
-     SAY INITIAL_MEETING @10016 
+     SAY INITIAL_MEETING @10016
      SAY DAMAGE @10014
      SAY DYING @10015
-     SAY SELECT_COMMON1 @10013 
-     SAY SELECT_COMMON2 @10016 
-     SAY SELECT_RARE1 @10016 
-     SAY SELECT_RARE2 @10016 
+     SAY SELECT_COMMON1 @10013
+     SAY SELECT_COMMON2 @10016
+     SAY SELECT_RARE1 @10016
+     SAY SELECT_RARE2 @10016
      SAY 0x198 @10046
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptt%ASLOI02.CRE~ ~override~
@@ -526,26 +556,26 @@ END //still bg1+totsc
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%TRAVEL.CRE~ ~override~
      SAY NAME1 @10075
      SAY NAME2 @10075
-     SAY INITIAL_MEETING @10047 
+     SAY INITIAL_MEETING @10047
      SAY DAMAGE @10044
      SAY DYING @10045
-     SAY SELECT_COMMON1 @10047 
+     SAY SELECT_COMMON1 @10047
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%VOLOSE.CRE~ ~override~
      SAY NAME1 @10076
      SAY NAME2 @10076
-     SAY INITIAL_MEETING @10077 
+     SAY INITIAL_MEETING @10077
      SAY DAMAGE @10078
      SAY DYING @10079
-     SAY SELECT_COMMON1 @10080 
+     SAY SELECT_COMMON1 @10080
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%WILTON.CRE~ ~override~
      SAY NAME1 @10081
      SAY NAME2 @10081
-     SAY INITIAL_MEETING @10082 
+     SAY INITIAL_MEETING @10082
      SAY DAMAGE @10083
      SAY DYING @10084
-     SAY SELECT_COMMON1 @10085 
+     SAY SELECT_COMMON1 @10085
      SAY 0x198 @10086
      SAY 0x19c @10087
 
@@ -555,25 +585,25 @@ END //still bg1+totsc
      SAY INITIAL_MEETING @10088
      SAY DAMAGE @10002
      SAY DYING @10128
-     SAY SELECT_COMMON1 @10088 
+     SAY SELECT_COMMON1 @10088
      SAY 0x198 @10089
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%FTOWUBSN%.CRE~ ~override~
      SAY NAME1 @10042
      SAY NAME2 @10042
-     SAY INITIAL_MEETING @10090 
+     SAY INITIAL_MEETING @10090
      SAY DAMAGE @10091
      SAY DYING @10092
-     SAY SELECT_COMMON1 @10090 
+     SAY SELECT_COMMON1 @10090
      SAY 0x198 @10089
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%MEMNIS.CRE~ ~override~
      SAY NAME1 @10093
      SAY NAME2 @10093
-     SAY INITIAL_MEETING @10094 
+     SAY INITIAL_MEETING @10094
      SAY DAMAGE @10095
      SAY DYING @10096
-     SAY SELECT_COMMON1 @10094 
+     SAY SELECT_COMMON1 @10094
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%MTOWUBSN%.CRE~ ~override~
      SAY NAME1 @10042
@@ -581,33 +611,33 @@ END //still bg1+totsc
      SAY INITIAL_MEETING @10097
      SAY DAMAGE @10044
      SAY DYING @10098
-     SAY SELECT_COMMON1 @10097 
+     SAY SELECT_COMMON1 @10097
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%MTOWUBST%.CRE~ ~override~
      SAY NAME1 @10042
      SAY NAME2 @10042
-     SAY INITIAL_MEETING @10099 
+     SAY INITIAL_MEETING @10099
      SAY DAMAGE @10044
      SAY DYING @10098
-     SAY SELECT_COMMON1 @10099 
+     SAY SELECT_COMMON1 @10099
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%PLYOGRE.CRE~ ~override~
      SAY NAME1 @10100
      SAY NAME2 @10100
-     SAY BATTLE_CRY1 @10101 
-     SAY BATTLE_CRY2 @10102 
+     SAY BATTLE_CRY1 @10101
+     SAY BATTLE_CRY2 @10102
      SAY DAMAGE @10103
      SAY DYING @10104
-     SAY SELECT_COMMON1 @10105 
+     SAY SELECT_COMMON1 @10105
      SAY SELECT_COMMON2 @10106
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%COWLED.CRE~ ~override~
      SAY NAME1 @10107
      SAY NAME2 @10107
-     SAY INITIAL_MEETING @10108 
+     SAY INITIAL_MEETING @10108
      SAY DAMAGE @10109
      SAY DYING @10110
-     SAY SELECT_COMMON1 @10108 
+     SAY SELECT_COMMON1 @10108
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%GHOULSU.CRE~ ~override~
      SAY NAME1 @10111
@@ -619,7 +649,7 @@ END //still bg1+totsc
      SAY DAMAGE @10116
      SAY DYING @10117
      SAY SELECT_COMMON1 @10118
-     SAY SELECT_COMMON2 @10119 
+     SAY SELECT_COMMON2 @10119
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptb%IRD_INE.CRE~ ~override~
          ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptb%IRD_INN.CRE~ ~override~
@@ -636,10 +666,10 @@ END //still bg1+totsc
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%HALFEN.CRE~ ~override~
      SAY NAME1 @10126
      SAY NAME2 @10126
-     SAY INITIAL_MEETING @10127 
+     SAY INITIAL_MEETING @10127
      SAY DAMAGE @10036
      SAY DYING @10037
-     SAY SELECT_COMMON1 @10127 
+     SAY SELECT_COMMON1 @10127
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%HALFEN2.CRE~ ~override~
      SAY NAME1 @10126
@@ -735,19 +765,19 @@ END //still bg1+totsc
 
     //sounds
     ACTION_IF ("%tutuorbgt%" STRING_EQUAL "Tutu") BEGIN //Tutu only
-       ACTION_IF ("%LANGUAGE%" STRING_EQUAL "tra/Deutsch") BEGIN
+       ACTION_IF ("%LANGUAGE%" STRING_EQUAL "Deutsch") BEGIN
 //German version only (BGII sounds are corrupted):
 
-        COPY ~bg1ub/%LANGUAGE%/ogg/GNOMF03.ogg~ ~bg1ub/_GNOMF03.ogg~
-        COPY ~bg1ub/%LANGUAGE%/ogg/WENCH01.ogg~ ~bg1ub/_WENCH01.ogg~
-        COPY ~bg1ub/%LANGUAGE%/ogg/WENCH02.ogg~ ~bg1ub/_WENCH02.ogg~
-        COPY ~bg1ub/%LANGUAGE%/ogg/WENCH04.ogg~ ~bg1ub/_WENCH04.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/GNOMF03.ogg~ ~bg1ub/_GNOMF03.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/WENCH01.ogg~ ~bg1ub/_WENCH01.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/WENCH02.ogg~ ~bg1ub/_WENCH02.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/WENCH04.ogg~ ~bg1ub/_WENCH04.ogg~
 
 	COPY ~bg1ub/bg1ubplaceholder~ ~override/_GNOMF03.wav~
 	COPY ~bg1ub/bg1ubplaceholder~ ~override/_WENCH01.wav~
 	COPY ~bg1ub/bg1ubplaceholder~ ~override/_WENCH02.wav~
 	COPY ~bg1ub/bg1ubplaceholder~ ~override/_WENCH04.wav~
-      END ELSE BEGIN 
+      END ELSE BEGIN
 
 //other versions than German: BGII resources can be used
 
@@ -757,52 +787,52 @@ END //still bg1+totsc
 	COPY_EXISTING ~WENCH02.wav~ ~override/_WENCH02.wav~
 	COPY_EXISTING ~WENCH04.wav~ ~override/_WENCH04.wav~
 
-       END 
-	
-      ACTION_IF (FILE_EXISTS ~bg1ub/%LANGUAGE%/ogg/AMB_E43B.ogg~) BEGIN
+       END
+
+      ACTION_IF (FILE_EXISTS ~bg1ub/audio/%LANGUAGE%/ogg/AMB_E43B.ogg~) BEGIN
 
 //for all language versions with sounds:
 
-        COPY ~bg1ub/%LANGUAGE%/ogg/AMB_E43B.ogg~ ~bg1ub/_MB_E43B.ogg~
-        COPY ~bg1ub/%LANGUAGE%/ogg/DELSV01.ogg~ ~bg1ub/_DELSV01.ogg~
-        COPY ~bg1ub/%LANGUAGE%/ogg/DELSV02.ogg~ ~bg1ub/_DELSV02.ogg~
-        COPY ~bg1ub/%LANGUAGE%/ogg/DELSV03.ogg~ ~bg1ub/_DELSV03.ogg~
-        COPY ~bg1ub/%LANGUAGE%/ogg/DELSV04.ogg~ ~bg1ub/_DELSV04.ogg~
-        COPY ~bg1ub/%LANGUAGE%/ogg/ENTAR01.ogg~ ~bg1ub/_ENTAR01.ogg~
-        COPY ~bg1ub/%LANGUAGE%/ogg/ENTAR02.ogg~ ~bg1ub/_ENTAR02.ogg~
-        COPY ~bg1ub/%LANGUAGE%/ogg/ENTAR03.ogg~ ~bg1ub/_ENTAR03.ogg~
-        COPY ~bg1ub/%LANGUAGE%/ogg/ENTAR04.ogg~ ~bg1ub/_ENTAR04.ogg~
-        COPY ~bg1ub/%LANGUAGE%/ogg/GARRK13.ogg~ ~bg1ub/_GARRK13.ogg~
-        COPY ~bg1ub/%LANGUAGE%/ogg/WILTN01.ogg~ ~bg1ub/_WILTN01.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/AMB_E43B.ogg~ ~bg1ub/_MB_E43B.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/DELSV01.ogg~ ~bg1ub/_DELSV01.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/DELSV02.ogg~ ~bg1ub/_DELSV02.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/DELSV03.ogg~ ~bg1ub/_DELSV03.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/DELSV04.ogg~ ~bg1ub/_DELSV04.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/ENTAR01.ogg~ ~bg1ub/_ENTAR01.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/ENTAR02.ogg~ ~bg1ub/_ENTAR02.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/ENTAR03.ogg~ ~bg1ub/_ENTAR03.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/ENTAR04.ogg~ ~bg1ub/_ENTAR04.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/GARRK13.ogg~ ~bg1ub/_GARRK13.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/WILTN01.ogg~ ~bg1ub/_WILTN01.ogg~
 
-       ACTION_IF !("%LANGUAGE%" STRING_EQUAL "tra/Polish") BEGIN
+       ACTION_IF !("%LANGUAGE%" STRING_EQUAL "Polish") BEGIN
 
-        COPY ~bg1ub/%LANGUAGE%/ogg/GANDL01.ogg~ ~bg1ub/_GANDL01.ogg~
-        COPY ~bg1ub/%LANGUAGE%/ogg/GANDL02.ogg~ ~bg1ub/_GANDL02.ogg~
-        COPY ~bg1ub/%LANGUAGE%/ogg/GANDL03.ogg~ ~bg1ub/_GANDL03.ogg~
-        COPY ~bg1ub/%LANGUAGE%/ogg/GANDL04.ogg~ ~bg1ub/_GANDL04.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/GANDL01.ogg~ ~bg1ub/_GANDL01.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/GANDL02.ogg~ ~bg1ub/_GANDL02.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/GANDL03.ogg~ ~bg1ub/_GANDL03.ogg~
+        COPY ~bg1ub/audio/%LANGUAGE%/ogg/GANDL04.ogg~ ~bg1ub/_GANDL04.ogg~
 END
 
-END ELSE BEGIN //all language versions with English sounds (Russian and Italian)      
-      
-        COPY ~bg1ub/tra/english/ogg/AMB_E43B.ogg~ ~bg1ub/_MB_E43B.ogg~
-        COPY ~bg1ub/tra/english/ogg/DELSV01.ogg~ ~bg1ub/_DELSV01.ogg~
-        COPY ~bg1ub/tra/english/ogg/DELSV02.ogg~ ~bg1ub/_DELSV02.ogg~
-        COPY ~bg1ub/tra/english/ogg/DELSV03.ogg~ ~bg1ub/_DELSV03.ogg~
-        COPY ~bg1ub/tra/english/ogg/DELSV04.ogg~ ~bg1ub/_DELSV04.ogg~
-        COPY ~bg1ub/tra/english/ogg/ENTAR01.ogg~ ~bg1ub/_ENTAR01.ogg~
-        COPY ~bg1ub/tra/english/ogg/ENTAR02.ogg~ ~bg1ub/_ENTAR02.ogg~
-        COPY ~bg1ub/tra/english/ogg/ENTAR03.ogg~ ~bg1ub/_ENTAR03.ogg~
-        COPY ~bg1ub/tra/english/ogg/ENTAR04.ogg~ ~bg1ub/_ENTAR04.ogg~
-        COPY ~bg1ub/tra/english/ogg/GANDL01.ogg~ ~bg1ub/_GANDL01.ogg~
-        COPY ~bg1ub/tra/english/ogg/GANDL02.ogg~ ~bg1ub/_GANDL02.ogg~
-        COPY ~bg1ub/tra/english/ogg/GANDL03.ogg~ ~bg1ub/_GANDL03.ogg~
-        COPY ~bg1ub/tra/english/ogg/GANDL04.ogg~ ~bg1ub/_GANDL04.ogg~
-        COPY ~bg1ub/tra/english/ogg/GARRK13.ogg~ ~bg1ub/_GARRK13.ogg~
-        COPY ~bg1ub/tra/english/ogg/WILTN01.ogg~ ~bg1ub/_WILTN01.ogg~
+END ELSE BEGIN //all language versions with English sounds (Russian and Italian)
+
+        COPY ~bg1ub/audio/english/ogg/AMB_E43B.ogg~ ~bg1ub/_MB_E43B.ogg~
+        COPY ~bg1ub/audio/english/ogg/DELSV01.ogg~ ~bg1ub/_DELSV01.ogg~
+        COPY ~bg1ub/audio/english/ogg/DELSV02.ogg~ ~bg1ub/_DELSV02.ogg~
+        COPY ~bg1ub/audio/english/ogg/DELSV03.ogg~ ~bg1ub/_DELSV03.ogg~
+        COPY ~bg1ub/audio/english/ogg/DELSV04.ogg~ ~bg1ub/_DELSV04.ogg~
+        COPY ~bg1ub/audio/english/ogg/ENTAR01.ogg~ ~bg1ub/_ENTAR01.ogg~
+        COPY ~bg1ub/audio/english/ogg/ENTAR02.ogg~ ~bg1ub/_ENTAR02.ogg~
+        COPY ~bg1ub/audio/english/ogg/ENTAR03.ogg~ ~bg1ub/_ENTAR03.ogg~
+        COPY ~bg1ub/audio/english/ogg/ENTAR04.ogg~ ~bg1ub/_ENTAR04.ogg~
+        COPY ~bg1ub/audio/english/ogg/GANDL01.ogg~ ~bg1ub/_GANDL01.ogg~
+        COPY ~bg1ub/audio/english/ogg/GANDL02.ogg~ ~bg1ub/_GANDL02.ogg~
+        COPY ~bg1ub/audio/english/ogg/GANDL03.ogg~ ~bg1ub/_GANDL03.ogg~
+        COPY ~bg1ub/audio/english/ogg/GANDL04.ogg~ ~bg1ub/_GANDL04.ogg~
+        COPY ~bg1ub/audio/english/ogg/GARRK13.ogg~ ~bg1ub/_GARRK13.ogg~
+        COPY ~bg1ub/audio/english/ogg/WILTN01.ogg~ ~bg1ub/_WILTN01.ogg~
 
 END //ALL versions with sounds including Russian (Tutu only)
-      
+
 	COPY ~bg1ub/bg1ubplaceholder~ ~override/_MB_E43B.wav~
 	COPY ~bg1ub/bg1ubplaceholder~ ~override/_DELSV01.wav~
 	COPY ~bg1ub/bg1ubplaceholder~ ~override/_DELSV02.wav~
@@ -831,7 +861,7 @@ END //ALL versions with sounds including Russian (Tutu only)
 	COPY_EXISTING ~TANAR05.wav~ ~override/_TANAR05.wav~
 	COPY_EXISTING ~TANAR06.wav~ ~override/_TANAR06.wav~
 
-       
+
 
     ACTION_IF ("%WEIDU_OS%" STRING_COMPARE_CASE ~WIN32~ = 0) THEN BEGIN // Windows
       AT_NOW ~bg1ub/bg1ub-audio-win32.bat~
@@ -889,60 +919,77 @@ END
 AUTO_TRA ~bg1ub/%s~
 
 DEFINE_ACTION_MACRO ~getcpmvara~ BEGIN
-  ACTION_IF FILE_EXISTS_IN_GAME ~FW0100.are~ THEN BEGIN //Tutu
+  ACTION_IF GAME_IS ~tutu tutu_totsc~ THEN BEGIN //Tutu
     OUTER_SPRINT temp_cpmvar ~%temp_tutu%~
   END
   ELSE BEGIN
-    ACTION_IF FILE_EXISTS_IN_GAME ~AR7200.are~ THEN BEGIN //BGT
+    ACTION_IF GAME_IS ~bgt~ THEN BEGIN //BGT
       OUTER_SPRINT temp_cpmvar ~%temp_bgt%~
     END
-    ELSE BEGIN //BG
-      OUTER_SPRINT temp_cpmvar ~%temp_bg%~
+    ELSE BEGIN
+    	ACTION_IF GAME_IS ~bgee~ THEN BEGIN //BGEE
+      		OUTER_SPRINT temp_cpmvar ~%temp_bgee%~
+    	END
+      	ELSE BEGIN // BG
+      		OUTER_SPRINT temp_cpmvar ~%temp_bg%~
+      	END
     END
   END
 END
 
 DEFINE_PATCH_MACRO ~getcpmvarp~ BEGIN
-  PATCH_IF FILE_EXISTS_IN_GAME ~FW0100.are~ THEN BEGIN //Tutu
+  PATCH_IF GAME_IS ~tutu tutu_totsc~ THEN BEGIN //Tutu
     SPRINT temp_cpmvar ~%temp_tutu%~
   END
   ELSE BEGIN
-    PATCH_IF FILE_EXISTS_IN_GAME ~AR7200.are~ THEN BEGIN //BGT
+    PATCH_IF GAME_IS ~bgt~ THEN BEGIN //BGT
       SPRINT temp_cpmvar ~%temp_bgt%~
     END
-    ELSE BEGIN //BG
-      SPRINT temp_cpmvar ~%temp_bg%~
+  	ELSE BEGIN
+    	PATCH_IF GAME_IS ~bgee~ THEN BEGIN //BGEE
+      		SPRINT temp_cpmvar ~%temp_bgee%~
+    	END
+    	ELSE BEGIN //BG
+      		SPRINT temp_cpmvar ~%temp_bg%~
+      	END
     END
   END
 END
 
 LANGUAGE ~English~
-	 ~tra/English~
+	 ~English~
 	 ~bg1ub/tra/English/setup.tra~
+     ~bg1ub/tra/English/bg1ub.tra~
 
 LANGUAGE ~Deutsch~ // Timothy
-	 ~tra/Deutsch~
+	 ~Deutsch~
 	 ~bg1ub/tra/Deutsch/setup.tra~
+     ~bg1ub/tra/Deutsch/setup.tra~
 
 LANGUAGE ~EspaÒol~ // Immortality (clandlan.net)
-	 ~tra/Espanol~
+	 ~Espanol~
 	 ~bg1ub/tra/Espanol/setup.tra~
+     ~bg1ub/tra/Espanol/bg1ub.tra~
 
 LANGUAGE ~FranÁais~ // IronFistedGiant, Isaya
-	 ~tra/Francais~
+	 ~Francais~
 	 ~bg1ub/tra/Francais/setup.tra~
+     ~bg1ub/tra/Francais/bg1ub.tra~
 
 LANGUAGE ~Italiano~ // Andrea Colombo, Stone Angel, ilot, Salk
-	 ~tra/Italiano~
+	 ~Italiano~
 	 ~bg1ub/tra/Italiano/setup.tra~
+     ~bg1ub/tra/Italiano/bg1ub.tra~
 
 LANGUAGE ~ê„··™®© (Russian)~ // by aerie.ru & Darktech (now maintained by arcanecoast.ru team)
-         ~tra/Russian~
-         ~bg1ub/tra/Russian/setup.tra~
+     ~Russian~
+     ~bg1ub/tra/Russian/setup.tra~
+     ~bg1ub/tra/Russian/bg1ub.tra~
 
 LANGUAGE ~Polish~ // Bartek
-	 ~tra/Polish~
+	 ~Polish~
 	 ~bg1ub/tra/Polish/setup.tra~
+     ~bg1ub/tra/Polish/bg1ub.tra~
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
