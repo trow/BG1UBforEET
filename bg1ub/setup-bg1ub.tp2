@@ -311,7 +311,7 @@ ALWAYS
     //all TRAs declared in LANGUAGE must be reloaded
   LOAD_TRA "bg1ub/tra/%LANGUAGE%/setup.tra"
 
-  INCLUDE ~%MOD_FOLDER%/handle_charsets.tpa~
+  // INCLUDE ~%MOD_FOLDER%/handle_charsets.tpa~
   ACTION_DEFINE_ARRAY ub#noconvert BEGIN setup END
   ACTION_DEFINE_ARRAY ub#reload BEGIN bg1ub END
 
@@ -957,39 +957,39 @@ DEFINE_PATCH_MACRO ~getcpmvarp~ BEGIN
 END
 
 LANGUAGE ~English~
-	 ~English~
-	 ~bg1ub/tra/English/setup.tra~
-     ~bg1ub/tra/English/bg1ub.tra~
+	 ~english~
+	 ~bg1ub/tra/english/setup.tra~
+     ~bg1ub/tra/english/bg1ub.tra~
 
 LANGUAGE ~Deutsch~ // Timothy
-	 ~Deutsch~
-	 ~bg1ub/tra/Deutsch/setup.tra~
-     ~bg1ub/tra/Deutsch/setup.tra~
+	 ~deutsch~
+	 ~bg1ub/tra/deutsch/setup.tra~
+     ~bg1ub/tra/deutsch/setup.tra~
 
 LANGUAGE ~EspaÒol~ // Immortality (clandlan.net)
-	 ~Espanol~
-	 ~bg1ub/tra/Espanol/setup.tra~
-     ~bg1ub/tra/Espanol/bg1ub.tra~
+	 ~espanol~
+	 ~bg1ub/tra/espanol/setup.tra~
+     ~bg1ub/tra/espanol/bg1ub.tra~
 
 LANGUAGE ~FranÁais~ // IronFistedGiant, Isaya
-	 ~Francais~
-	 ~bg1ub/tra/Francais/setup.tra~
-     ~bg1ub/tra/Francais/bg1ub.tra~
+	 ~francais~
+	 ~bg1ub/tra/francais/setup.tra~
+     ~bg1ub/tra/francais/bg1ub.tra~
 
 LANGUAGE ~Italiano~ // Andrea Colombo, Stone Angel, ilot, Salk
-	 ~Italiano~
-	 ~bg1ub/tra/Italiano/setup.tra~
-     ~bg1ub/tra/Italiano/bg1ub.tra~
+	 ~italiano~
+	 ~bg1ub/tra/italiano/setup.tra~
+     ~bg1ub/tra/italiano/bg1ub.tra~
 
 LANGUAGE ~ê„··™®© (Russian)~ // by aerie.ru & Darktech (now maintained by arcanecoast.ru team)
-     ~Russian~
-     ~bg1ub/tra/Russian/setup.tra~
-     ~bg1ub/tra/Russian/bg1ub.tra~
+     ~russian~
+     ~bg1ub/tra/russian/setup.tra~
+     ~bg1ub/tra/russian/bg1ub.tra~
 
 LANGUAGE ~Polish~ // Bartek
-	 ~Polish~
-	 ~bg1ub/tra/Polish/setup.tra~
-     ~bg1ub/tra/Polish/bg1ub.tra~
+	 ~polish~
+	 ~bg1ub/tra/polish/setup.tra~
+     ~bg1ub/tra/polish/bg1ub.tra~
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
