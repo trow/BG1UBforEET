@@ -1807,11 +1807,13 @@ COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBQuoningar.UB~
 
 COPY ~bg1ub/quoningar/%tutuorbgt%/ubquon.cre~ ~override~
 
-ACTION_IF !("%tutuorbgt%" STRING_EQUAL "BG") THEN BEGIN
+ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/quoningar/cpm/ubquon.d~
 END ELSE BEGIN
   COMPILE ~bg1ub/quoningar/ubquon.d~
 END
+
+ADD_JOURNAL @20176 @20177 USING ~bg1ub/tra/%LANGUAGE%/extra_tmp.tra~ // Add journal entries for BGEE
 
 <<<<<<<< .../bg1ub/eb_ar0120.baf
 IF
@@ -1826,7 +1828,7 @@ SetGlobal("UB_QUONIN_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR0120" OUTER_SPRINT temp_bgt "AR7220" OUTER_SPRINT temp_bg "AR0120" LAUNCH_ACTION_MACRO ~getcpmvara~
+OUTER_SPRINT temp_tutu "_AR0120" OUTER_SPRINT temp_bgt "AR7220" OUTER_SPRINT temp_bgee "AR0120" OUTER_SPRINT temp_bg "AR0120" LAUNCH_ACTION_MACRO ~getcpmvara~
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/eb_ar0120.baf~
   EVALUATE_BUFFER
 
