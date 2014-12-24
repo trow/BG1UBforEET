@@ -5584,7 +5584,7 @@ COMPILE ~bg1ub/abPrismEmeralds/CrossPlat/oublek.d~ EVALUATE_BUFFER USING ~bg1ub/
 BEGIN @219 /* ~Duke Eltan in the Harbor Master's Building~ */
 
 
-ACTION_IF GAME_IS ~tutu tutu_totsc bgt~ THEN BEGIN
+ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee~ THEN BEGIN
 
 <<<<<<<< ...inlined/harbor.d
 REPLACE_ACTION_TEXT %tutu_var%harbor ~EscapeArea[^)]+)~ ~MoveToPoint([431.171])
