@@ -4129,19 +4129,24 @@ COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBStore.UB~
 
 /////////////////////////////////////////////////////////
 // Restore Alvanhendar's healing and sundries in Gullykin
-ACTION_IF !("%tutuorbgt%" STRING_EQUAL "BG") THEN BEGIN //BGT or Tutu
+ACTION_IF GAME_IS ~bgt tutu tutu_totsc~ THEN BEGIN //BGT or Tutu
   ACTION_IF NOT FILE_EXISTS_IN_GAME EVALUATE_BUFFER ~%tutu_var%TEM4003.sto~ THEN BEGIN // if Gullykin does not have a store already
     COPY_EXISTING ~%tutu_var%TEM4802.sto~ ~override/%tutu_var%TEM4003.sto~ // clones and renames Temple of Helm
       SAY 0x0C @90
   END
-END ELSE BEGIN //BG
-  STRING_SET 20713 @90
-  ACTION_IF NOT FILE_EXISTS_IN_GAME EVALUATE_BUFFER ~TEM4003.sto~ THEN BEGIN // if Gullykin does not have a store already
-    COPY_EXISTING ~TEM4802.sto~ ~override/TEM4003.sto~ // clones and renames Temple of Helm
-      SAY 0x0C #20713
+END ELSE BEGIN
+  ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN //BG
+  	STRING_SET 20713 @90
+  	ACTION_IF NOT FILE_EXISTS_IN_GAME EVALUATE_BUFFER ~TEM4003.sto~ THEN BEGIN // if Gullykin does not have a store already
+    	COPY_EXISTING ~TEM4802.sto~ ~override/TEM4003.sto~ // clones and renames Temple of Helm
+      	SAY 0x0C #20713
+    END
   END
 END
 
+/////////////////////////////////////////////////////////
+//  Bartender fixes
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN // Already included in BGEE
 COPY_EXISTING ~%SEBaldursGate_Inn_L1%.ARE~ ~override~ // Change bartender so that TAV1215 can be renamed
   PATCH_IF (SOURCE_SIZE > 0x11c) BEGIN
     READ_LONG 0x54 actOff
@@ -4225,6 +4230,8 @@ BUT_ONLY_IF_IT_CHANGES
 COPY_EXISTING ~%tutu_var%BART15.CRE~ ~override/UBBA0133.CRE~
   WRITE_ASCII 0x2cc ~UBBA0133~
 
+COPY_EXISTING ~%tutu_var%bart15.dlg~ ~override/ubba0133.dlg~
+
 COPY_EXISTING ~%BaldursGate_DocksLowLantern_D1%.ARE~ ~override~ // Restore Low Lantern bartender
   PATCH_IF (SOURCE_SIZE > 0x11c) BEGIN
     READ_LONG 0x54 actOff
@@ -4241,8 +4248,11 @@ BUT_ONLY_IF_IT_CHANGES
 COPY_EXISTING ~%tutu_var%TAV0133.STO~ ~override~ // Low Lantern
   SAY 0x0C #14976
 BUT_ONLY_IF_IT_CHANGES
+END // Bartender fixes
 
 ////////////////////////////////////////////////////////////////////////////////////////
+// Inn, Tavern, Store name restorations
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN // Already included in BGEE
 
 COPY_EXISTING ~%tutu_var%INN4801.STO~ ~override~ // The Northern Light
   SAY 0x0C #11696
@@ -4296,6 +4306,20 @@ COPY_EXISTING ~%tutu_var%TEM0002.STO~ ~override~
   SAY 0x0C @93
 BUT_ONLY_IF_IT_CHANGES
 
+ACTION_IF GAME_IS ~bg1 totsc bgt~ THEN BEGIN
+  COPY_EXISTING ~%tutu_var%tav0810.sto~ ~override~ //Maltz' Weapon Shop
+  	SAY NAME2 #11782 //Maltz' Weapon Shop
+  BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~%tutu_var%tav0809.sto~ ~override~ //unused General Store
+    SAY NAME2 #11685
+  BUT_ONLY_IF_IT_CHANGES
+END
+
+END // Inn, Tavern, Store name restorations
+
+////////////////////////////////////////////////////////////////////////////////////////
+// Item shop in Jovial Juggler
 COPY_EXISTING ~%tutu_var%INN3304.STO~ ~override~ // Jovial Juggler
   WRITE_SHORT 0x10 0x4d // Allows purchasing items, stealing items, and identifying
 BUT_ONLY_IF_IT_CHANGES
@@ -4304,6 +4328,9 @@ COMPILE EVALUATE_BUFFER ~bg1ub/stores/ubin3304.baf~  // Add stealing script to b
 COPY_EXISTING ~%tutu_var%BART4.CRE~ ~override~
   WRITE_ASCII 0x260 ~UBIN3304~
 
+////////////////////////////////////////////////////////////////////////////////////////
+// Ulgoth's Beard Store and Inn fixes
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN // Already included in BGEE
 COPY_EXISTING ~%tutu_var%ULGOTH.STO~ ~override~ // Ulgoth's Beard Store and Inn
   PATCH_IF (%SOURCE_SIZE% > 0x78) BEGIN
     READ_LONG 0x34 saleOff
@@ -4319,7 +4346,10 @@ COPY_EXISTING ~%tutu_var%ULGOTH.STO~ ~override~ // Ulgoth's Beard Store and Inn
     END
   END
 BUT_ONLY_IF_IT_CHANGES
+END
 
+////////////////////////////////////////////////////////////////////////////////////////
+// More Nashkel Carnival Merchants
 <<<<<<<< .../bg1ub/ub_ar4900.baf
 IF
 Global("UB_NASHKELMERCH1_SPAWN","%NashkelCarnival%",0)
@@ -4338,23 +4368,25 @@ SetGlobal("UB_NASHKELMERCH2_SPAWN","%NashkelCarnival%",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR4900" OUTER_SPRINT temp_bgt "AR3800" OUTER_SPRINT temp_bg "AR4900" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR4900" OUTER_SPRINT temp_bgt "AR3800" OUTER_SPRINT temp_bgee "AR4900" OUTER_SPRINT temp_bg "AR4900" LAUNCH_ACTION_MACRO "getcpmvara"
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar4900.baf~
   EVALUATE_BUFFER
 
 COPY_EXISTING ~%tutu_var%MERCH2.CRE~ ~override/UBMERCH.CRE~
   WRITE_ASCII 0x2cc ~UBMERCH~
 
-ACTION_IF GAME_IS ~tutu tutu_totsc bgt~ THEN BEGIN
-// Fixes the overused STO1115.STO file
-COPY_EXISTING ~%tutu_var%STO1115.STO~ ~override/UBSTO01.sto~
-COPY_EXISTING ~%tutu_var%STO1115.STO~ ~override/UBSTO02.sto~
-COPY_EXISTING ~%tutu_var%STO1115.STO~ ~override/UBSTO03.sto~
+COPY_EXISTING ~%tutu_var%merch2.dlg~ ~override/ubmerch.dlg~
 
+// Fixes the overused STO1115.STO file
+ACTION_IF GAME_IS ~tutu tutu_totsc bgt~ THEN BEGIN
+	COPY_EXISTING ~%tutu_var%STO1115.STO~ ~override/UBSTO01.sto~
+	COPY_EXISTING ~%tutu_var%STO1115.STO~ ~override/UBSTO02.sto~
+	COPY_EXISTING ~%tutu_var%STO1115.STO~ ~override/UBSTO03.sto~
 END
 
-
-ACTION_IF ("%tutuorbgt%" STRING_EQUAL "BGT") THEN BEGIN //only BGT for now
+////////////////////////////////////////////////////////////////////////////////////////
+// SW Baldur's Gate Weapon Shop
+ACTION_IF GAME_IS ~bgt~ THEN BEGIN //only BGT for now
       COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptbg%SHOP05.CRE~ ~override~
        SAY NAME1 @10179
        SAY NAME2 @10179
@@ -4366,16 +4398,7 @@ ACTION_IF ("%tutuorbgt%" STRING_EQUAL "BGT") THEN BEGIN //only BGT for now
        SAY SELECT_COMMON3 @10185
 END
 
-
-ACTION_IF GAME_IS ~bg1 totsc bgt~ THEN BEGIN
-COPY_EXISTING ~%tutu_var%tav0810.sto~ ~override~ //Maltz' Weapon Shop
-  SAY NAME2 #11782 //Maltz' Weapon Shop
-BUT_ONLY
-
-COPY_EXISTING ~%tutu_var%tav0809.sto~ ~override~ //unused General Store
-  SAY NAME2 #11685
-BUT_ONLY
-
+ACTION_IF GAME_IS ~bg1 totsc bgt~ THEN BEGIN // BG1, BGT only
 COPY_EXISTING ~%SWBaldursGate_WeaponsStore2%.are~ ~override~ //Fix duplicate weapon store
   PATCH_IF SOURCE_SIZE > 0x11c BEGIN
     READ_LONG 0x54 actOff
@@ -4387,12 +4410,12 @@ COPY_EXISTING ~%SWBaldursGate_WeaponsStore2%.are~ ~override~ //Fix duplicate wea
           actOff += 0x110
     END
   END
-BUT_ONLY
-
+BUT_ONLY_IF_IT_CHANGES
 END
 
-
-
+////////////////////////////////////////////////////////////////////////////////////////
+// Elfsong Tavern Merchant
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN // Already included in BGEE
 
 COPY_EXISTING ~%tutu_var%merch4.cre~ ~override/ubme0706.cre~ //Copy merchant used in Nashkel Carnival
   WRITE_ASCII 0x2cc ~ubme0706~ #8 //Dialog
@@ -4408,15 +4431,14 @@ COPY_EXISTING ~%EBaldursGate_ElfsongTavern_L2%.are~ ~override~ //Correct Elfsong
       actOff += 0x110
     END
   END
-BUT_ONLY
+BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%sto4906.sto~ ~override/ubst0706.sto~ //Merchant
   SAY NAME2 #9432 //Merchant
-BUT_ONLY
+BUT_ONLY_IF_IT_CHANGES
 
-COPY_EXISTING ~%tutu_var%bart15.dlg~ ~override/ubba0133.dlg~
 COPY_EXISTING ~%tutu_var%merch4.dlg~ ~override/ubme0706.dlg~
-COPY_EXISTING ~%tutu_var%merch2.dlg~ ~override/ubmerch.dlg~
+END // Elfsong
 
 
 ACTION_IF GAME_IS ~tutu tutu_totsc~ THEN BEGIN
@@ -4426,6 +4448,10 @@ END
 ACTION_IF GAME_IS ~bgt~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/stores/cpm/ubstores.d~
   COMPILE EVALUATE_BUFFER ~bg1ub/stores/cpm/ubstores_bgtadd.d~
+END
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+  COMPILE EVALUATE_BUFFER ~bg1ub/stores/cpm/ubstores_bgee.d~
 END
 
 ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
