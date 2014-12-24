@@ -1462,12 +1462,12 @@ FORBID_FILE ~override/X#BG1NPCPhase2.G3~ @90000
 
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBKagain.UB~
 
-OUTER_SPRINT temp_tutu "_AR2800" OUTER_SPRINT temp_bgt "AR6900" OUTER_SPRINT temp_bg "AR2800" LAUNCH_ACTION_MACRO ~getcpmvara~
+OUTER_SPRINT temp_tutu "_AR2800" OUTER_SPRINT temp_bgt "AR6900" OUTER_SPRINT temp_bgee "AR2800" OUTER_SPRINT temp_bg "AR2800" LAUNCH_ACTION_MACRO ~getcpmvara~
 COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_BCS_TO_BAF
-  //once you get to AR2800, you get one day to find the caravan
-  REPLACE_TEXTUALLY ~ActionOverride("Kagain",Dialog\(ue\)?(\[PC\]))~ ~SetGlobalTimer("Kagain","GLOBAL",ONE_DAY)~
-  COMPILE_BAF_TO_BCS
+  DECOMPILE_AND_PATCH BEGIN
+  	//once you get to AR2800, you get one day to find the caravan
+  	REPLACE_TEXTUALLY ~ActionOverride("Kagain",Dialog\(ue\)?(\[PC\]))~ ~SetGlobalTimer("Kagain","GLOBAL",ONE_DAY)~
+  END
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~bg1ub/kagain/aAR2800.BAF~ //spawns the lost child
   EVALUATE_BUFFER
 
@@ -1475,7 +1475,7 @@ EXTEND_BOTTOM ~%tutu_var%KAGAIN.BCS~ ~bg1ub/kagain/aKAGAIN.BAF~
 
 COMPILE EVALUATE_BUFFER ~bg1ub/kagain/KAGAIJ.D~
 
-ACTION_IF ("%tutuorbgt%" STRING_EQUAL "BG") THEN BEGIN
+ACTION_IF GAME_IS ~bg1 totsc bgee~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/kagain/bgKAGAIJ.D~
 END
 
