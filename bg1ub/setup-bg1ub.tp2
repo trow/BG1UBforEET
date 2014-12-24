@@ -1005,42 +1005,23 @@ BEGIN @0
 // Email:
 // Website:
 
-//variables not set yet
-REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~ulgoth.sto~) OR //BG:TotSC, BGT
-                  (FILE_EXISTS_IN_GAME ~FW1500.ARE~) OR //BG1Tutu:TotSC (BG1Tutu has own version of _ulgoth.sto)
-                  (FILE_EXISTS ~bg1data/AREA1500.bif~) //EasyTutu:TotSC
-                  @1
+// variables not set yet
+REQUIRE_PREDICATE GAME_IS ~totsc tutu_totsc bgt bgee~ @1
 
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBIceIsland.UB~
 
-ACTION_IF ("%tutuorbgt%" STRING_EQUAL "Tutu") THEN BEGIN
-  COPY ~bg1ub/bg1ubplaceholder~ ~override/_AR1010.tis~
-
-  ACTION_IF ("%WEIDU_OS%" STRING_COMPARE_CASE ~WIN32~ = 0) THEN BEGIN // Windows
-    AT_NOW ~bg1ub/tis/tisunpack -f -s -o override/_AR1010.tis bg1ub/tis/AR1010.tiz~
+ACTION_IF GAME_IS ~tutu_totsc~ THEN BEGIN
+  LAF HANDLE_TILESETS END
+  MOVE ~override/ub1010.tis~ ~override/_AR1010.tis~
+END ELSE BEGIN
+  ACTION_IF GAME_IS ~bgt~ THEN BEGIN
+    LAF HANDLE_TILESETS END
+    MOVE ~override/ub1010.tis~ ~override/ARU010.tis~
   END ELSE BEGIN
-    ACTION_IF ("%WEIDU_OS%" STRING_COMPARE_CASE ~OSX~ = 0) THEN BEGIN // Mac
-      AT_NOW ~bg1ub/tis/tisunpack -f -s -o override/_AR1010.tis bg1ub/tis/AR1010.tiz~
-    END ELSE BEGIN // Linux
-      AT_NOW ~tisunpack -f -s -o override/_AR1010.tis bg1ub/tis/AR1010.tiz~
+    ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+      LAF HANDLE_TILESETS END
+      MOVE ~override/ub1010.tis~ ~override/AR1010.tis~
     END
-  END
-
-END
-ELSE BEGIN
-  ACTION_IF ("%tutuorbgt%" STRING_EQUAL "BGT") THEN BEGIN
-    COPY ~bg1ub/bg1ubplaceholder~ ~override/ARU010.tis~
-
-    ACTION_IF ("%WEIDU_OS%" STRING_COMPARE_CASE ~WIN32~ = 0) THEN BEGIN // Windows
-      AT_NOW ~bg1ub/tis/tisunpack -f -s -o override/ARU010.tis bg1ub/tis/AR1010.tiz~
-    END ELSE BEGIN
-      ACTION_IF ("%WEIDU_OS%" STRING_COMPARE_CASE ~OSX~ = 0) THEN BEGIN // Mac
-        AT_NOW ~tisunpack -f -s -o override/ARU010.tis bg1ub/tis/AR1010.tiz~
-      END ELSE BEGIN // Linux
-        AT_NOW ~tisunpack -f -s -o override/ARU010.tis bg1ub/tis/AR1010.tiz~
-      END
-    END
-
   END
 END
 
@@ -1064,7 +1045,7 @@ COPY_EXISTING ~%IceIsland%.ARE~ ~override~
       END
       PATCH_IF !("%SOURCE_RES%" STRING_COMPARE_CASE "%IceIslandMaze_L1%") BEGIN
         READ_ASCII trigOff name
-        SPRINT temp_tutu "1" SPRINT temp_bgt "U" SPRINT temp_bg "1" LAUNCH_PATCH_MACRO ~getcpmvarp~
+        SPRINT temp_tutu "1" SPRINT temp_bgt "U" SPRINT temp_bgee "1" SPRINT temp_bg "1" LAUNCH_PATCH_MACRO ~getcpmvarp~
         PATCH_IF !("%name%" STRING_COMPARE_CASE "DOOR%temp_cpmvar%010") BEGIN
           WRITE_EVALUATED_ASCII trigOff + 0x38 ~%IceIslandMaze_L2%~ #8 // Set destination area
         END
@@ -1078,7 +1059,7 @@ COPY_EXISTING ~%IceIsland%.ARE~ ~override~
     READ_LONG 0x68 entrOff
     entrOff += numEntr * 0x68 // Added as last entrance in file
     INSERT_BYTES entrOff 0x68
-    SPRINT temp_tutu "1" SPRINT temp_bgt "U" SPRINT temp_bg "1" LAUNCH_PATCH_MACRO ~getcpmvarp~
+    SPRINT temp_tutu "1" SPRINT temp_bgt "U" SPRINT temp_bgee "1" SPRINT temp_bg "1" LAUNCH_PATCH_MACRO ~getcpmvarp~
     WRITE_EVALUATED_ASCII entrOff ~EXIT%temp_cpmvar%010~ // Entrance name
     PATCH_IF !("%SOURCE_RES%" STRING_COMPARE_CASE "%IceIsland%") BEGIN
       WRITE_SHORT entrOff + 0x20 842 // Location X
@@ -1238,6 +1219,7 @@ COPY_EXISTING ~%IceIslandMaze_L1%.ARE~ ~override~
   END
 BUT_ONLY_IF_IT_CHANGES
 
+ACTION_IF GAME_IS ~totsc tutu_totsc bgt~ THEN BEGIN  /* Not needed for BGEE */
 COPY_EXISTING ~%IceIslandMaze_L2%.ARE~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x11c) BEGIN
     // Update number of vertices
@@ -1376,6 +1358,7 @@ COPY_EXISTING ~%IceIslandMaze_L2%.ARE~ ~override~
     END
   END
 BUT_ONLY_IF_IT_CHANGES
+END
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
