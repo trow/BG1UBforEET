@@ -5360,13 +5360,15 @@ REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
 
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBSarevok.UB~
 
-ACTION_IF !("%tutuorbgt%" STRING_EQUAL "BG") THEN BEGIN //BGT or Tutu
+ACTION_IF GAME_IS ~bgt tutu tutu_totsc~ THEN BEGIN //BGT or Tutu
   COMPILE ~bg1ub/%tutuorbgt%/diary/divine.d~
-END ELSE BEGIN //BG
-  STRING_SET 1355 @105
-  STRING_SET 1359 @106
-  STRING_SET 7238 @107
-  STRING_SET 7243 @108
+END ELSE BEGIN
+  ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN //BG
+  	STRING_SET 1355 @105
+  	STRING_SET 1359 @106
+  	STRING_SET 7238 @107
+  	STRING_SET 7243 @108
+  END
 END
 
 COPY_EXISTING ~%tutu_var%SCRL2S.ITM~ ~override~ // Note for Davaeorn #1
