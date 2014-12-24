@@ -1,0 +1,100 @@
+//journal entries for vanilla BG1: no title
+@119 = ~What a fool that Prism is. He really believed my denial in knowing anything about the loss of those emeralds. Oh well... Loss for him. Profit for me.~
+@120 = ~Perhaps it was wrong, but after allowing Prism to complete his 'final masterpiece' I've taken one of the emeralds out of the statue's eyes. It should bring a hefty price at the right place or a decent reward...~
+@121 = ~After a bit of hard work, I finally removed the second emerald which Prism had stolen to use in one of the eyes of his 'final masterpiece'.~
+@122 = ~Prism's story was a sad tale indeed.  A shame it could not have had a better ending.  Ah well, I profit in the end.  300 gold bounty for the emeralds he stole.~
+@123 = ~Next time I shall have to remind myself not to pretend to be another just for some quick gold. Though Oublek kept part, I was finally rewarded for turning in the emeralds from Prism.~
+/* Unused line for Captain Brage Journal entry
+@ = ~Next time I shall have to remind myself not to pretend to be another just for some quick gold. Though Oublek kept part, I was finally rewarded for turning in Captain Brage.~
+*/
+@124 = ~I managed to take some emeralds that the sculptor Prism was using as eyes in a statue. However, he had noticed me. I was forced to put him out of his misery after he lunged at me with a chisel.~
+@125 = ~One emerald turned in for 150 gold bounty. I can get the other half of the bounty if I can bring in the other emerald. It has to be somewhere near where I picked the last one up.~
+@126 = ~Only half of a reduced reward for turning in one of Prism's emeralds. A measly 75 gold. Should I get the other emerald it might be prudent to check with some merchants before claiming the bounty.~
+//journal entries for bg2 engine
+//Tutu
+@127 = ~Prism the sculptor
+
+What a fool that Prism is. He really believed my denial in knowing anything about the loss of those emeralds. Oh well... Loss for him. Profit for me.~
+@128 = ~Prism the sculptor
+
+Perhaps it was wrong, but after allowing Prism to complete his 'final masterpiece' I've taken one of the emeralds out of the statue's eyes. It should bring a hefty price at the right place or a decent reward...~
+@129 = ~Prism the sculptor
+
+After a bit of hard work, I finally removed the second emerald which Prism had stolen to use in one of the eyes of his 'final masterpiece'.~
+@130 = ~Prism the sculptor
+
+Prism's story was a sad tale indeed.  A shame it could not have had a better ending.  Ah well, I profit in the end.  300 gold bounty for the emeralds he stole.~
+@131 = ~Prism the sculptor
+
+Next time I shall have to remind myself not to pretend to be another just for some quick gold. Though Oublek kept part, I was finally rewarded for turning in the emeralds from Prism.~
+/* Unused line for Captain Brage Journal entry
+@ = ~Prism the sculptor
+
+Next time I shall have to remind myself not to pretend to be another just for some quick gold. Though Oublek kept part, I was finally rewarded for turning in Captain Brage.~
+*/
+@132 = ~Prism the sculptor
+
+I managed to take some emeralds that the sculptor Prism was using as eyes in a statue. However, he had noticed me. I was forced to put him out of his misery after he lunged at me with a chisel.~
+@133 = ~Prism the sculptor
+
+One emerald turned in for 150 gold bounty. I can get the other half of the bounty if I can bring in the other emerald. It has to be somewhere near where I picked the last one up.~
+@134 = ~Prism the sculptor
+
+Only half of a reduced reward for turning in one of Prism's emeralds. A measly 75 gold. Should I get the other emerald it might be prudent to check with some merchants before claiming the bounty.~
+//BGT
+@210 = ~Prism, the emerald thief.
+
+What a fool that Prism is. He really believed my denial in knowing anything about the loss of those emeralds. Oh well... Loss for him. Profit for me.~
+@211 = ~Prism, the emerald thief.
+
+Perhaps it was wrong, but after allowing Prism to complete his 'final masterpiece' I've taken one of the emeralds out of the statue's eyes. It should bring a hefty price at the right place or a decent reward...~
+@212 = ~Prism, the emerald thief.
+
+After a bit of hard work, I finally removed the second emerald which Prism had stolen to use in one of the eyes of his 'final masterpiece'.~
+@213 = ~Prism, the emerald thief.
+
+Prism's story was a sad tale indeed.  A shame it could not have had a better ending.  Ah well, I profit in the end.  300 gold bounty for the emeralds he stole.~
+@214 = ~Prism, the emerald thief.
+
+Next time I shall have to remind myself not to pretend to be another just for some quick gold. Though Oublek kept part, I was finally rewarded for turning in the emeralds from Prism.~
+/* Unused line for Captain Brage Journal entry
+@215 = ~Prism, the emerald thief.
+
+Next time I shall have to remind myself not to pretend to be another just for some quick gold. Though Oublek kept part, I was finally rewarded for turning in Captain Brage.~
+*/
+@216 = ~Prism, the emerald thief.
+
+I managed to take some emeralds that the sculptor Prism was using as eyes in a statue. However, he had noticed me. I was forced to put him out of his misery after he lunged at me with a chisel.~
+@217 = ~Prism, the emerald thief.
+
+One emerald turned in for 150 gold bounty. I can get the other half of the bounty if I can bring in the other emerald. It has to be somewhere near where I picked the last one up.~
+@218 = ~Prism, the emerald thief.
+
+Only half of a reduced reward for turning in one of Prism's emeralds. A measly 75 gold. Should I get the other emerald it might be prudent to check with some merchants before claiming the bounty.~
+
+
+//oublek dialog
+@1000 = ~One of the emeralds! That will be a 150 gold bounty for you.  Be sure to bring the other if you should find it.~
+@1001 = ~The last of the emeralds! That will be another 150 gold bounty for you. Well, you'll make quite a name for yourself among the bounty hunters if you keep this up.  Whether it is for better or worse, I do not know.~
+@1002 = ~One of the emeralds! It is good to see you attempting to earn honest gold, even if it is through the unsavory task of bounty hunting. I shall pay you, though less than the posted amount. Be sure to bring the other if you should find it.~
+@1003 = ~The last of the emeralds! Well, it is good to see you attempting to earn honest gold, even if it is through the unsavory task of bounty hunting.  I shall pay you, though less than the posted amount.  We shall store the extra in case you decide to...alter the facts in any further dealings.~
+@1004 = ~I've come to turn in a bounty, and collect the reward that is duly mine.~
+
+//prism dialog
+@1100 = ~How dare you! How dare you take the sparkle from her eyes!~
+@1101 = ~I've much work to do. But mayhaps you would help a foolish sculptor finish this epiphany now?  Please, guard this place, for surely Greywolf will come.  I will pay with my last possessions!~
+@1102 = ~Hold! You took my emeralds. I must have them back. I need them to finish this epiphany. Please, please return them. I will give you all else that is mine.~
+@1103 = ~They are gone. Given to the authorities. You will never finish that lump of stone now.~
+@1104 = ~They are gone. Sold by now to hang on the neck as some fat woman's trinket.~
+@1105 = ~Aye, I took them. Still have one. The other is long gone, though.~
+@1106 = ~What is this? Some madman accusing me of thievery? Die for your insults.~
+@1107 = ~Hold! You took my emerald. I must have it back. I need it to finish this epiphany. Please, please return it. I will give you all else that is mine.~
+@1108 = ~All that is yours, eh?  So be it.~
+@1109 = ~"All else that is yours" does not concern me.  I'm taking you and the gems to the guard, where I shall get a hefty reward.~
+@1110 = ~I know not what you are talking about.~
+@1111 = ~Give me the one you have. Go get the other and bring it back. I must finish this epiphany. I will give you all else that is mine.~
+@1112 = ~I gave it to the authorities. You shall never get it back.~
+@1113 = ~Not possible. I gave it to the authorities and have come back to claim the other for its bounty.~
+@1114 = ~Not possible. Sold to some forgotten merchant or stashed in some forgotten place.~
+@1115 = ~The gem may be gone, but I'll gladly take all else that is yours. Prepare to die.~
+@1116 = ~Give it back please. I must finish this epiphany. I will give you all else that is mine.~
