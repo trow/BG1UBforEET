@@ -1,4 +1,4 @@
-/* Declaration of BG1 WITHOUT TotSC Platform Variables 
+/* Declaration of BG1: TotSC Platform Variables 
 additional content*/
     /* order of journal entries */
     OUTER_SPRINT "SOLVED_JOURNAL" "JOURNAL"
@@ -6,7 +6,7 @@ additional content*/
     OUTER_SPRINT "QUEST" ""
     OUTER_SPRINT "QUEST_DONE" ""
 
-    /* EraseJournalEntry() for Tutu and BGT*/
+    /* EraseJournalEntry() for BG1:TotSC */
     OUTER_SPRINT "ERASEJOURNALENTRY_0" ""
     OUTER_SPRINT "ERASEJOURNALENTRY_1" ""
     OUTER_SPRINT "ERASEJOURNALENTRY_2" ""
