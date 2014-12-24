@@ -1661,7 +1661,7 @@ THEN
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR0101" OUTER_SPRINT temp_bgt "AR7201" OUTER_SPRINT temp_bg "AR0101" LAUNCH_ACTION_MACRO ~getcpmvara~
+OUTER_SPRINT temp_tutu "_AR0101" OUTER_SPRINT temp_bgt "AR7201" OUTER_SPRINT temp_bgee "AR0101" OUTER_SPRINT temp_bg "AR0101" LAUNCH_ACTION_MACRO ~getcpmvara~
 EXTEND_BOTTOM ~%temp_cpmvar%.bcs~ ~.../bg1ub/et_0101.baf~
   EVALUATE_BUFFER
 
