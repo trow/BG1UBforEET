@@ -2106,7 +2106,7 @@ COPY_EXISTING ~%tutu_var%KAROUG.CRE~ ~override~
 BUT_ONLY_IF_IT_CHANGES
 
 // Galkin.cre isn't actually used ingame. Galken.cre is the same guy, but the version that's used. However,
-// the latter is classified as an "innocent", which seems more correct than the former's choice of "mage".
+// the former is classified as an "innocent", which seems more correct than the latter's choice of "mage".
 // Thus, correct the classification and fix the invalid dialog reference.
 COPY_EXISTING ~%tutu_var%GALKIN.CRE~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
@@ -2383,75 +2383,73 @@ COPY_EXISTING ~%tutu_var%ZOMBIEB.CRE~ ~override~ // Bassilus' family zombies
 BUT_ONLY_IF_IT_CHANGES
 // end death variable assignation
 
-OUTER_SPRINT temp_tutu "_AR0114" OUTER_SPRINT temp_bgt "AR7214" OUTER_SPRINT temp_bg "AR0114" LAUNCH_ACTION_MACRO ~getcpmvara~
+OUTER_SPRINT temp_tutu "_AR0114" OUTER_SPRINT temp_bgt "AR7214" OUTER_SPRINT temp_bgee "AR0114" OUTER_SPRINT temp_bg "AR0114" LAUNCH_ACTION_MACRO ~getcpmvara~
 COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_BCS_TO_BAF
-  REPLACE_TEXTUALLY ~Exists(\"DETRAN\")~ ~Exists("DETRANION")~
-  COMPILE_BAF_TO_BCS
+  DECOMPILE_AND_PATCH BEGIN
+  	REPLACE_TEXTUALLY ~Exists(\"DETRAN\")~ ~Exists("DETRANION")~
+  END
 BUT_ONLY_IF_IT_CHANGES
 
-OUTER_SPRINT temp_tutu "_AR0502" OUTER_SPRINT temp_bgt "ARD002" OUTER_SPRINT temp_bg "AR0502" LAUNCH_ACTION_MACRO ~getcpmvara~
+OUTER_SPRINT temp_tutu "_AR0502" OUTER_SPRINT temp_bgt "ARD002" OUTER_SPRINT temp_bgee "AR0502" OUTER_SPRINT temp_bg "AR0502" LAUNCH_ACTION_MACRO ~getcpmvara~
 COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_BCS_TO_BAF
-  REPLACE_TEXTUALLY ~(\"Tourist4\",~ ~("TOURIST3",~
-  COMPILE_BAF_TO_BCS
+  DECOMPILE_AND_PATCH BEGIN
+  	REPLACE_TEXTUALLY ~(\"Tourist4\",~ ~("TOURIST3",~
+  END
 BUT_ONLY_IF_IT_CHANGES
 
-OUTER_SPRINT temp_tutu "_AR0612" OUTER_SPRINT temp_bgt "AR7612" OUTER_SPRINT temp_bg "AR0612" LAUNCH_ACTION_MACRO ~getcpmvara~
+OUTER_SPRINT temp_tutu "_AR0612" OUTER_SPRINT temp_bgt "AR7612" OUTER_SPRINT temp_bgee "AR0612" OUTER_SPRINT temp_bg "AR0612" LAUNCH_ACTION_MACRO ~getcpmvara~
 COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_BCS_TO_BAF
-  REPLACE_TEXTUALLY ~Exists(\"TRALIT\")~ ~Exists("TRALITHAN")~
-  COMPILE_BAF_TO_BCS
+  DECOMPILE_AND_PATCH BEGIN
+  	REPLACE_TEXTUALLY ~Exists(\"TRALIT\")~ ~Exists("TRALITHAN")~
+  END
 BUT_ONLY_IF_IT_CHANGES
 
-OUTER_SPRINT temp_tutu "_AR0613" OUTER_SPRINT temp_bgt "AR7613" OUTER_SPRINT temp_bg "AR0613" LAUNCH_ACTION_MACRO ~getcpmvara~
+OUTER_SPRINT temp_tutu "_AR0613" OUTER_SPRINT temp_bgt "AR7613" OUTER_SPRINT temp_bgee "AR0613" OUTER_SPRINT temp_bg "AR0613" LAUNCH_ACTION_MACRO ~getcpmvara~
 COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_BCS_TO_BAF
-  REPLACE_TEXTUALLY ~Exists(\"KALESS\")~ ~Exists("KALESSIA")~
-  COMPILE_BAF_TO_BCS
+  DECOMPILE_AND_PATCH BEGIN
+	REPLACE_TEXTUALLY ~Exists(\"KALESS\")~ ~Exists("KALESSIA")~
+  END
 BUT_ONLY_IF_IT_CHANGES
 
-OUTER_SPRINT temp_tutu "_AR0614" OUTER_SPRINT temp_bgt "AR7614" OUTER_SPRINT temp_bg "AR0614" LAUNCH_ACTION_MACRO ~getcpmvara~
+OUTER_SPRINT temp_tutu "_AR0614" OUTER_SPRINT temp_bgt "AR7614" OUTER_SPRINT temp_bgee "AR0614" OUTER_SPRINT temp_bg "AR0614" LAUNCH_ACTION_MACRO ~getcpmvara~
 COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_BCS_TO_BAF
-  REPLACE_TEXTUALLY ~Exists(\"WIRTHI\")~ ~Exists("WIRTHING")~
-  COMPILE_BAF_TO_BCS
+  DECOMPILE_AND_PATCH BEGIN
+  	REPLACE_TEXTUALLY ~Exists(\"WIRTHI\")~ ~Exists("WIRTHING")~
+  END
 BUT_ONLY_IF_IT_CHANGES
 
-OUTER_SPRINT temp_tutu "_AR0616" OUTER_SPRINT temp_bgt "AR7616" OUTER_SPRINT temp_bg "AR0616" LAUNCH_ACTION_MACRO ~getcpmvara~
+OUTER_SPRINT temp_tutu "_AR0616" OUTER_SPRINT temp_bgt "AR7616" OUTER_SPRINT temp_bgee "AR0616" OUTER_SPRINT temp_bg "AR0616" LAUNCH_ACTION_MACRO ~getcpmvara~
 COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_BCS_TO_BAF
-  REPLACE_TEXTUALLY ~Exists(\"PANGWA\")~ ~Exists("PANG")~
-  REPLACE_TEXTUALLY ~Exists(\"DHANIA\")~ ~Exists("DHANIAL")~
-  COMPILE_BAF_TO_BCS
+  DECOMPILE_AND_PATCH BEGIN
+  	REPLACE_TEXTUALLY ~Exists(\"PANGWA\")~ ~Exists("PANG")~
+  	REPLACE_TEXTUALLY ~Exists(\"DHANIA\")~ ~Exists("DHANIAL")~
+  END
 BUT_ONLY_IF_IT_CHANGES
 
-OUTER_SPRINT temp_tutu "_AR1300" OUTER_SPRINT temp_bgt "AR8200" OUTER_SPRINT temp_bg "AR1300" LAUNCH_ACTION_MACRO ~getcpmvara~
+OUTER_SPRINT temp_tutu "_AR1300" OUTER_SPRINT temp_bgt "AR8200" OUTER_SPRINT temp_bgee "AR1300" OUTER_SPRINT temp_bg "AR1300" LAUNCH_ACTION_MACRO ~getcpmvara~
 COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_BCS_TO_BAF
-  REPLACE_TEXTUALLY ~Exists(\"ALANBL\")~ ~Exists("ALAN")~
-  COMPILE_BAF_TO_BCS
+  DECOMPILE_AND_PATCH BEGIN
+  	REPLACE_TEXTUALLY ~Exists(\"ALANBL\")~ ~Exists("ALAN")~
+  END
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%LOVE.BCS~ ~override~
-  DECOMPILE_BCS_TO_BAF
-  REPLACE_TEXTUALLY ~ActionOverride(\"AVARICEM\"~ ~ActionOverride("AVARICE"~
-  COMPILE_BAF_TO_BCS
+  DECOMPILE_AND_PATCH BEGIN
+  	REPLACE_TEXTUALLY ~ActionOverride(\"AVARICEM\"~ ~ActionOverride("AVARICE"~
+  END
 BUT_ONLY_IF_IT_CHANGES
 
 // Bears no longer turn hostile if PC druid or ranger is visible
 COPY_EXISTING ~%tutu_var%BEAR.BCS~ ~override~
-  DECOMPILE_BCS_TO_BAF
-  REPLACE_TEXTUALLY ~\(\(Range(\[GOODCUTOFF\],7)\|AttackedBy(\[ANYONE\],DEFAULT)\)[
-  ]+Allegiance(Myself,NEUTRAL)\)~
-    ~\1 !See([2.0.0.11]) !See([2.0.0.12]) !See([2.0.0.16]) !See([2.0.0.18])~
-  COMPILE_BAF_TO_BCS
+  DECOMPILE_AND_PATCH BEGIN
+  	REPLACE_TEXTUALLY ~\(\(Range(\[GOODCUTOFF\],7)\|AttackedBy(\[ANYONE\],DEFAULT)\)[ ]+Allegiance(Myself,NEUTRAL)\)~ ~\1 !See([2.0.0.11]) !See([2.0.0.12]) !See([2.0.0.16]) !See([2.0.0.18])~
+  END
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%MINSC.DLG~ ~override~
-  DECOMPILE_DLG_TO_D
-  REPLACE_TEXTUALLY ~!Dead(\"Dynahe\"~ ~!Dead("Dynaheir"~
-  COMPILE_D_TO_DLG
+  DECOMPILE_AND_PATCH BEGIN
+  	REPLACE_TEXTUALLY ~!Dead(\"Dynahe\"~ ~!Dead("Dynaheir"~
+  END
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_scriptb%IRD_INE.CRE~ ~override~
@@ -2477,6 +2475,7 @@ COPY_EXISTING ~%tutu_var%PROSLAY.CRE~ ~override~ // Ho
   WRITE_EVALUATED_ASCII 0x2cc ~%tutu_var%PROSLA~ #8      // Fixes dialog file (PROSLAY does not exist)
 BUT_ONLY_IF_IT_CHANGES
 
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN  // BOOT01 exists in BGEE, so don't do this block for BGEE
 COPY_EXISTING ~%tutu_var%DEAD2.CRE~ ~override~ // Amnish Soldier (various)
               ~%tutu_scriptd%EADFUCK.CRE~ ~override~ // Amnish Soldier (AR5403, Nashkel Mines)
               ~%tutu_var%DRELIK.CRE~ ~override~ // Drelik         (AR0010, Baldur's Gate)
@@ -2506,6 +2505,7 @@ PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
   END
 END
 BUT_ONLY_IF_IT_CHANGES
+END
 
 //////////////////////////////////////
 // Assign weapons to unarmed creatures
@@ -2703,7 +2703,7 @@ COPY_EXISTING ~%tutu_var%IMOEN.CRE~ ~override~ // Imoen (Thief, AR2600, Candleke
     READ_ASCII 0x34 ~ports~
     READ_ASCII 0x3c ~portm~
     TEXT_SPRINT medium ~M~
-    PATCH_IF (~%tutuorbgt%~ STRING_EQUAL ~BG~) BEGIN
+    PATCH_IF GAME_IS ~bg1 totsc~ BEGIN
       TEXT_SPRINT medium ~L~
     END
     PATCH_IF (("%ports%" STRING_EQUAL_CASE ~~) OR ("%ports%" STRING_EQUAL_CASE ~None~)) BEGIN
@@ -2940,6 +2940,7 @@ BUT_ONLY_IF_IT_CHANGES
 
 //////////////////////////////////////////////////////////
 // Fixes due to the results of CamDawg's Inventory Checker
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN  // Already included in BGEE
 COPY_EXISTING ~%tutu_var%AASIM.CRE~ ~override~ // Aasim (AR0615, Iron Throne Building)
  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
   READ_LONG  0x2bc "itm_off" ELSE 0
@@ -3069,7 +3070,7 @@ COPY_EXISTING ~%tutu_var%NADARI.CRE~ ~override~ // Nadarin: BOOT02 (Boots of Ste
 BUT_ONLY_IF_IT_CHANGES
 
 //devSin 'nixed' this (that ring is there because it's the key to his door, not because he actually needs it or was supposed to be wearing it)
-/* 
+/*
 COPY_EXISTING ~%tutu_var%ALDETH.CRE~ ~override~ // Aldeth Sashenstar: MAGE04 (blur ring)
  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
   READ_LONG  0x2b8 "slot_off" ELSE 0
@@ -3091,6 +3092,7 @@ COPY_EXISTING ~%tutu_var%ALDETH.CRE~ ~override~ // Aldeth Sashenstar: MAGE04 (bl
  END
 BUT_ONLY_IF_IT_CHANGES
 */
+END // Fixes due to the results of CamDawg's Inventory Checker
 
 /////////////////////////
 // Bandits without scalps
@@ -3116,7 +3118,7 @@ BUT_ONLY_IF_IT_CHANGES
 
 /////////////////////////////////
 //Correct cultist death variables
-ACTION_IF !("%tutuorbgt%" STRING_EQUAL "BGT") THEN BEGIN //BG and Tutu only
+ACTION_IF GAME_IS ~tutu tutu_totsc bg1 totsc~ THEN BEGIN //BG and Tutu only
 
 COPY_EXISTING ~%tutu_var%CULT1.CRE~ ~override~ //Cult Guard
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
@@ -3224,7 +3226,8 @@ COPY_EXISTING ~%Candlekeep_Library_L4%.ARE~ ~override~ // Add READ4 to Candlekee
     READ_LONG 0x54 actOff
     FOR (READ_SHORT 0x58 numAct; numAct; numAct -= 0x1) BEGIN
       READ_ASCII actOff + 0x80 actor
-      PATCH_IF !("%actor%" STRING_COMPARE_CASE "%tutu_var%READ3") BEGIN
+      READ_SHORT actOff + 0x20 xPos
+      PATCH_IF ((xPos == 1080) && !("%actor%" STRING_COMPARE_CASE "%tutu_var%READ3")) BEGIN
         WRITE_EVALUATED_ASCII actOff + 0x80 ~%tutu_var%READ4~ #8
       END
       actOff += 0x110
@@ -3254,26 +3257,26 @@ BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%NEBaldursGate_SplurgingSturgeon_L2%.ARE~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x1cc) BEGIN
-    SPRINT temp_tutu "_AR0104" SPRINT temp_bgt "AR7204" SPRINT temp_bg "AR0104" LAUNCH_PATCH_MACRO "getcpmvarp"
+    SPRINT temp_tutu "_AR0104" SPRINT temp_bgt "AR7204" SPRINT temp_bgee "AR0104" SPRINT temp_bg "AR0104" LAUNCH_PATCH_MACRO "getcpmvarp"
     WRITE_EVALUATED_ASCII 0x94 ~%temp_cpmvar%~ #8 // Area script
   END
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%Gullykin_House1_Cellar%.ARE~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x1cc) BEGIN
-    SPRINT temp_tutu "_AR4006" SPRINT temp_bgt "AR9906" SPRINT temp_bg "AR4006" LAUNCH_PATCH_MACRO "getcpmvarp"
+    SPRINT temp_tutu "_AR4006" SPRINT temp_bgt "AR9906" SPRINT temp_bgee "AR4006" SPRINT temp_bg "AR4006" LAUNCH_PATCH_MACRO "getcpmvarp"
     WRITE_EVALUATED_ASCII 0x94 ~%temp_cpmvar%~ #8 // Area script
   END
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%Gullykin_House2_L1%.ARE~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x1cc) BEGIN
-    SPRINT temp_tutu "_AR4013" SPRINT temp_bgt "AR9913" SPRINT temp_bg "AR4013" LAUNCH_PATCH_MACRO "getcpmvarp"
+    SPRINT temp_tutu "_AR4013" SPRINT temp_bgt "AR9913" SPRINT temp_bgee "AR4013" SPRINT temp_bg "AR4013" LAUNCH_PATCH_MACRO "getcpmvarp"
     WRITE_EVALUATED_ASCII 0x94 ~%temp_cpmvar%~ #8 // Area script
   END
 BUT_ONLY_IF_IT_CHANGES
 
-OUTER_SPRINT temp_tutu "_AR0800" OUTER_SPRINT temp_bgt "AR8200" OUTER_SPRINT temp_bg "AR0800" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR0800" OUTER_SPRINT temp_bgt "AR8200" OUTER_SPRINT temp_bgee "AR0800" OUTER_SPRINT temp_bg "AR0800" LAUNCH_ACTION_MACRO "getcpmvara"
 COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
   DECOMPILE_BCS_TO_BAF
   REPLACE_TEXTUALLY ~Exists(\"BERSCH\")~ ~Exists("HERSCHEL")~
@@ -3296,7 +3299,7 @@ SetGlobal("UB_MTOB4_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR0104" OUTER_SPRINT temp_bgt "AR7204" OUTER_SPRINT temp_bg "AR0104" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR0104" OUTER_SPRINT temp_bgt "AR7204" OUTER_SPRINT temp_bgee "AR0104" OUTER_SPRINT temp_bg "AR0104" LAUNCH_ACTION_MACRO "getcpmvara"
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ex_ar0104.baf~
   EVALUATE_BUFFER
 
@@ -3314,7 +3317,7 @@ SetGlobal("UB_MTOB5_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR0705" OUTER_SPRINT temp_bgt "AR7705" OUTER_SPRINT temp_bg "AR0705" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR0705" OUTER_SPRINT temp_bgt "AR7705" OUTER_SPRINT temp_bgee "AR0705" OUTER_SPRINT temp_bg "AR0705" LAUNCH_ACTION_MACRO "getcpmvara"
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/eb_0705.baf~
   EVALUATE_BUFFER
 
@@ -3331,7 +3334,7 @@ CreateCreature("%tutu_var%TRAVEL",[691.398],0) // Traveler
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR2301" OUTER_SPRINT temp_bgt "AR6801" OUTER_SPRINT temp_bg "AR2301" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR2301" OUTER_SPRINT temp_bgt "AR6801" OUTER_SPRINT temp_bgee "AR2301" OUTER_SPRINT temp_bg "AR2301" LAUNCH_ACTION_MACRO "getcpmvara"
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/eb_2301.baf~
   EVALUATE_BUFFER
 
@@ -3350,7 +3353,7 @@ SetGlobal("UB_HAFFG2_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR4006" OUTER_SPRINT temp_bgt "AR9906" OUTER_SPRINT temp_bg "AR4406" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR4006" OUTER_SPRINT temp_bgt "AR9906" OUTER_SPRINT temp_bgee "AR4406" OUTER_SPRINT temp_bg "AR4406" LAUNCH_ACTION_MACRO "getcpmvara"
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/eb_ar4006.baf~
   EVALUATE_BUFFER
 
@@ -3368,7 +3371,7 @@ SetGlobal("UB_HALFG2_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR4013" OUTER_SPRINT temp_bgt "AR9913" OUTER_SPRINT temp_bg "AR4013" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR4013" OUTER_SPRINT temp_bgt "AR9913" OUTER_SPRINT temp_bgee "AR4013" OUTER_SPRINT temp_bg "AR4013" LAUNCH_ACTION_MACRO "getcpmvara"
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/eb_ar4013.baf~
   EVALUATE_BUFFER
 
@@ -3416,7 +3419,7 @@ SetGlobal("UB_FRIWEN_SPAWN","%FriendlyArmInn_L1%",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR2301" OUTER_SPRINT temp_bgt "AR6801" OUTER_SPRINT temp_bg "AR2301" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR2301" OUTER_SPRINT temp_bgt "AR6801" OUTER_SPRINT temp_bgee "AR2301" OUTER_SPRINT temp_bg "AR2301" LAUNCH_ACTION_MACRO "getcpmvara"
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar2301.baf~
   EVALUATE_BUFFER
 
@@ -3438,7 +3441,7 @@ SetGlobal("UB_FARMER5_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR0900" OUTER_SPRINT temp_bgt "AR7900" OUTER_SPRINT temp_bg "AR0900" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR0900" OUTER_SPRINT temp_bgt "AR7900" OUTER_SPRINT temp_bgee "AR0900" OUTER_SPRINT temp_bg "AR0900" LAUNCH_ACTION_MACRO "getcpmvara"
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar0900.baf~
   EVALUATE_BUFFER
 
@@ -3459,7 +3462,7 @@ SetGlobal("UB_FELDANE_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR2626" OUTER_SPRINT temp_bgt "AR6526" OUTER_SPRINT temp_bg "AR2626" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR2626" OUTER_SPRINT temp_bgt "AR6526" OUTER_SPRINT temp_bgee "AR2626" OUTER_SPRINT temp_bg "AR2626" LAUNCH_ACTION_MACRO "getcpmvara"
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar2626.baf~
   EVALUATE_BUFFER
 
@@ -3475,7 +3478,7 @@ SetGlobal("UB_GIRLBE_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR4806" OUTER_SPRINT temp_bgt "AR3706" OUTER_SPRINT temp_bg "AR4806" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR4806" OUTER_SPRINT temp_bgt "AR3706" OUTER_SPRINT temp_bgee "AR4806" OUTER_SPRINT temp_bg "AR4806" LAUNCH_ACTION_MACRO "getcpmvara"
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar4806.baf~
   EVALUATE_BUFFER
 
@@ -3497,7 +3500,7 @@ SetGlobal("UB_SHOPGE_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR1100" OUTER_SPRINT temp_bgt "AR8000" OUTER_SPRINT temp_bg "AR1100" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR1100" OUTER_SPRINT temp_bgt "AR8000" OUTER_SPRINT temp_bgee "AR1100" OUTER_SPRINT temp_bg "AR1100" LAUNCH_ACTION_MACRO "getcpmvara"
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar1100.baf~
   EVALUATE_BUFFER
 
@@ -3524,7 +3527,7 @@ SetGlobal("UB_WILTON_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR1403" OUTER_SPRINT temp_bgt "AR8303" OUTER_SPRINT temp_bg "AR1403" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR1403" OUTER_SPRINT temp_bgt "AR8303" OUTER_SPRINT temp_bgee "AR1403" OUTER_SPRINT temp_bg "AR1403" LAUNCH_ACTION_MACRO "getcpmvara"
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar1403.baf~
   EVALUATE_BUFFER
 
@@ -3548,14 +3551,14 @@ SetGlobal("UB_CORIANNA_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR3400" OUTER_SPRINT temp_bgt "AR9300" OUTER_SPRINT temp_bg "AR3400" LAUNCH_ACTION_MACRO "getcpmvara"
+OUTER_SPRINT temp_tutu "_AR3400" OUTER_SPRINT temp_bgt "AR9300" OUTER_SPRINT temp_bgee "AR3400" OUTER_SPRINT temp_bg "AR3400" LAUNCH_ACTION_MACRO "getcpmvara"
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar3400.baf~
   EVALUATE_BUFFER
 
 /////////////////////////////////
 // Compile all relevant dialogues
 
-ACTION_IF !("%tutuorbgt%" STRING_EQUAL "BG") THEN BEGIN
+ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/creature/cpm/ubcre.d~
 END ELSE BEGIN
   COMPILE ~bg1ub/creature/ubcre.d~
