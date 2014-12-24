@@ -1377,14 +1377,14 @@ BEGIN @2
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBVial.UB~
 
 
-ACTION_IF ("%tutuorbgt%" STRING_EQUAL "Tutu") THEN BEGIN
-COMPILE EVALUATE_BUFFER ~bg1ub/vial/cpm/ubvial.d~ 
+ACTION_IF GAME_IS ~tutu tutu_totsc bgee~ THEN BEGIN
+COMPILE EVALUATE_BUFFER ~bg1ub/vial/cpm/ubvial.d~
 
 END ELSE BEGIN
-  ACTION_IF ("%tutuorbgt%" STRING_EQUAL "BGT") THEN BEGIN
+  ACTION_IF GAME_IS ~bgt~ THEN BEGIN
     COMPILE EVALUATE_BUFFER ~bg1ub/vial/cpm/ubvial.d~
 ~bg1ub/vial/cpm/ubvial_addBGT.d~
-USING ~bg1ub/%LANGUAGE%/ubvial.tra~
+USING ~bg1ub/tra/%LANGUAGE%/ubvial.tra~
   END ELSE BEGIN
     COMPILE ~bg1ub/vial/ubvial.d~
   END
