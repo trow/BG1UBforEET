@@ -3833,7 +3833,7 @@ BEGIN @58
 
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBDialogue.UB~
 
-ACTION_IF !("%tutuorbgt%" STRING_EQUAL "BG") THEN BEGIN
+ACTION_IF !GAME_IS ~bg1 totsc~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/u!minor1.d~
   COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/u!ch7.d~
   COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/ubhobgo5.baf~
@@ -3843,11 +3843,10 @@ END ELSE BEGIN
   COMPILE ~bg1ub/dialogues/ubhobgo5.baf~
 END
 
-ACTION_IF (FILE_EXISTS_IN_GAME ~ulgoth.sto~) OR
-          (FILE_EXISTS ~bg1data/AREA1500.bif~) THEN BEGIN
-  ACTION_IF !("%tutuorbgt%" STRING_EQUAL "BG") THEN BEGIN
-    COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/u!totscminor.d~
-  END ELSE BEGIN
+ACTION_IF GAME_IS ~tutu_totsc bgt bgee~ THEN BEGIN
+  COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/u!totscminor.d~
+END ELSE BEGIN
+  ACTION_IF GAME_IS ~totsc~ THEN BEGIN
     COMPILE ~bg1ub/dialogues/u!totscminor.d~
   END
 END
@@ -3921,11 +3920,11 @@ REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
 
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBAudio.UB~
 
-COPY ~bg1ub/%LANGUAGE%/sound_tmp.tra~ ~bg1ub/%LANGUAGE%/sound.tra~
+COPY ~bg1ub/tra/%LANGUAGE%/sound_tmp.tra~ ~bg1ub/tra/%LANGUAGE%/sound.tra~
   EVALUATE_BUFFER
-LOAD_TRA ~bg1ub/%LANGUAGE%/sound.tra~
+LOAD_TRA ~bg1ub/tra/%LANGUAGE%/sound.tra~
 
-ACTION_IF !("%tutuorbgt%" STRING_EQUAL "BG") THEN BEGIN //BGT or Tutu
+ACTION_IF GAME_IS ~bgt tutu tutu_totsc~ THEN BEGIN //BGT or Tutu
 
 /////////////////////////////////////////////////////////
 // Ajantis sound fix (duplicate, probably unused strings)
@@ -3939,7 +3938,7 @@ COPY_EXISTING ~%tutu_var%AJANTI.CRE~ ~override~
 
 /////////////////////
 // Tanar'ri sound fix
-ACTION_IF FILE_EXISTS_IN_GAME ~%tutu_var%durlag.mve~ THEN BEGIN
+ACTION_IF GAME_IS ~bgt tutu_totsc~ THEN BEGIN
  COPY_EXISTING ~%tutu_var%TANAR.CRE~ ~override~
   SAY 0xa4 @68
   SAY 0xa8 @64
@@ -4031,57 +4030,58 @@ COPY_EXISTING ~%tutu_var%CULT3.CRE~ ~override~
  SAY 0xec @88
 
 END ELSE BEGIN //BG
+ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
 
 /////////////////////////////////////////////////////////
 // Ajantis sound fix (duplicate, probably unused strings)
-STRING_SET 14399 @60 
-STRING_SET 14400 @61 
-STRING_SET 14401 @62 
-STRING_SET 14402 @63 
+STRING_SET 14399 @60
+STRING_SET 14400 @61
+STRING_SET 14401 @62
+STRING_SET 14402 @63
 
 /////////////////////
 // Tanar'ri sound fix
-ACTION_IF FILE_EXISTS_IN_GAME ~durlag.mve~ THEN BEGIN
-STRING_SET 23827 @64 
+ACTION_IF GAME_IS ~totsc~ THEN BEGIN
+STRING_SET 23827 @64
 STRING_SET 23828 @65
-STRING_SET 23829 @66 
-STRING_SET 23830 @67 
+STRING_SET 23829 @66
+STRING_SET 23830 @67
 STRING_SET 23831 @68
-STRING_SET 23832 @69 
+STRING_SET 23832 @69
 END
 
 ///////////////////////////
 // Delsvirftanyon sound fix
-STRING_SET 4839 @70 
-STRING_SET 4842 @71 
-STRING_SET 12532 @72 
-STRING_SET 12533 @73 
+STRING_SET 4839 @70
+STRING_SET 4842 @71
+STRING_SET 12532 @72
+STRING_SET 12533 @73
 
 ///////////////////////////////
 // Gandolar Luckyfoot sound fix
-STRING_SET 4843 @74 
-STRING_SET 4844 @75 
-STRING_SET 12534 @76 
-STRING_SET 12535 @77 
+STRING_SET 4843 @74
+STRING_SET 4844 @75
+STRING_SET 12534 @76
+STRING_SET 12535 @77
 
 ////////////////////////////////
 // Garrick sound fix (not funny)
-STRING_SET 3668 @78 
+STRING_SET 3668 @78
 
 /////////////////////////////////////////////
 // Xan sound fix (duplicate, probably unused)
-STRING_SET 14388 @79 
+STRING_SET 14388 @79
 
 ///////////////////
 // Misc sound fixes
-STRING_SET 2913 @80 
-STRING_SET 5482 @81 
-STRING_SET 5962 @82 
-STRING_SET 11342 @83 
+STRING_SET 2913 @80
+STRING_SET 5482 @81
+STRING_SET 5962 @82
+STRING_SET 11342 @83
 STRING_SET 11402 @85
-STRING_SET 11635 @86 
+STRING_SET 11635 @86
 STRING_SET 11640 @87
-STRING_SET 12355 @88 
+STRING_SET 12355 @88
 
 ////////////////////////////////////
 // Restore Delsvirftanyon's soundset
@@ -4094,7 +4094,8 @@ PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
 END
 BUT_ONLY_IF_IT_CHANGES
 
-END //BG/BGT/Tutu check
+END //BG
+END //BGT/Tutu check
 
 // Zombie Soundset Fix, by Macready~
 // Author: Macready
