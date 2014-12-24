@@ -3771,8 +3771,11 @@ COPY_EXISTING ~%tutu_var%NOBW7.CRE~ ~override~ // see her dialogue for name
   SAY NAME2 @53
 BUT_ONLY_IF_IT_CHANGES
 
+// Corrections for TOTSC content
+ACTION_IF GAME_IS ~totsc bgt tutu_totsc bgee~ THEN BEGIN
+
 //EasyTutu modifies Baresh to change into LOUPGAR instead of KAISHWLF
-ACTION_IF !("%tutuorbgt%" STRING_EQUAL "Tutu") THEN BEGIN //BGT and BG
+ACTION_IF GAME_IS ~totsc bgt bgee~ THEN BEGIN //BGT, BGEE, BG1-TOTSC
   COPY_EXISTING ~%tutu_var%LOUPGAR.CRE~ ~override~ // only used from spell cast by Mendas
     PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
       SAY NAME1 @54 // or could be Mendas
@@ -3802,19 +3805,21 @@ COPY_EXISTING ~%tutu_scriptk%AISHWLF.CRE~ ~override~ // Kaishas as loup garou
   END
 BUT_ONLY_IF_IT_CHANGES
 
-ACTION_IF (FILE_EXISTS_IN_GAME ~ulgoth.sto~) OR
-          (FILE_EXISTS ~bg1data/AREA1500.bif~) THEN BEGIN
-  ACTION_IF ("%tutuorbgt%" STRING_EQUAL "BGT") THEN BEGIN //BGT
+ACTION_IF GAME_IS ~totsc tutu_totsc bgt~ THEN BEGIN  // Fixes already in BGEE
+  ACTION_IF GAME_IS ~bgt~ THEN BEGIN //BGT
     COPY ~bg1ub/BGT/SPL/BGWI924.SPL~ ~override~
     COMPILE EVALUATE_BUFFER ~bg1ub/creature/BGT/beresh.d~
   END ELSE BEGIN //BG or Tutu
-    ACTION_IF ("%tutuorbgt%" STRING_EQUAL "Tutu") THEN BEGIN //Tutu
+    ACTION_IF GAME_IS ~tutu_totsc~ THEN BEGIN //Tutu
       COMPILE EVALUATE_BUFFER ~bg1ub/creature/Tutu/beresh.d~
     END ELSE BEGIN //BG
-      COMPILE EVALUATE_BUFFER ~bg1ub/creature/beresh.d~
+	  COMPILE EVALUATE_BUFFER ~bg1ub/creature/beresh.d~
     END
   END
 END
+
+END // Corrections for TOTSC content
+
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
