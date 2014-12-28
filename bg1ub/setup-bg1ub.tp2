@@ -392,7 +392,9 @@ ALWAYS
 
   // BGT/Tutu compatibility
   ACTION_IF GAME_IS ~tutu tutu_totsc bgt~ AND //BGT or Tutu only
-            NOT FILE_EXISTS_IN_GAME EVALUATE_BUFFER ~%IceIslandMaze_L2%.ARE~ THEN BEGIN //do once
+    !(FILE_EXISTS ~override/BG1UBBGTTutuCompat.UB~) THEN BEGIN //do once
+
+	COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBBGTTutuCompat.UB~
 
     COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%EDIE.CRE~ ~override~
      SAY NAME1 @10000
@@ -764,122 +766,39 @@ ALWAYS
           ~bg1ub/%tutuorbgt%/EFF~ ~override~
 
     //sounds
-    ACTION_IF ("%tutuorbgt%" STRING_EQUAL "Tutu") BEGIN //Tutu only
-       ACTION_IF ("%LANGUAGE%" STRING_EQUAL "Deutsch") BEGIN
-//German version only (BGII sounds are corrupted):
+	ACTION_IF GAME_IS ~tutu tutu_totsc~ BEGIN // Tutu only
 
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/GNOMF03.ogg~ ~bg1ub/_GNOMF03.ogg~
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/WENCH01.ogg~ ~bg1ub/_WENCH01.ogg~
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/WENCH02.ogg~ ~bg1ub/_WENCH02.ogg~
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/WENCH04.ogg~ ~bg1ub/_WENCH04.ogg~
+    	ACTION_IF (FILE_EXISTS ~bg1ub/audio/%LANGUAGE%/_MB_E43B.ogg~) BEGIN
+  			LAF HANDLE_AUDIO
+    			STR_VAR
+      				audio_path = EVAL ~bg1ub/audio/%LANGUAGE%~
+      				oggdec_path = ~bg1ub/audio~
+      				sox_path = ~bg1ub/audio~
+  			END
+	   	END ELSE BEGIN
+  			LAF HANDLE_AUDIO
+    			STR_VAR
+      				audio_path = ~bg1ub/audio/english~
+      				oggdec_path = ~bg1ub/audio~
+      				sox_path = ~bg1ub/audio~
+  			END
+  	   	END
 
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_GNOMF03.wav~
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_WENCH01.wav~
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_WENCH02.wav~
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_WENCH04.wav~
-      END ELSE BEGIN
-
-//other versions than German: BGII resources can be used
-
-
-	COPY_EXISTING ~GNOMF03.wav~ ~override/_GNOMF03.wav~
- 	COPY_EXISTING ~WENCH01.wav~ ~override/_WENCH01.wav~
-	COPY_EXISTING ~WENCH02.wav~ ~override/_WENCH02.wav~
-	COPY_EXISTING ~WENCH04.wav~ ~override/_WENCH04.wav~
-
-       END
-
-      ACTION_IF (FILE_EXISTS ~bg1ub/audio/%LANGUAGE%/ogg/AMB_E43B.ogg~) BEGIN
-
-//for all language versions with sounds:
-
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/AMB_E43B.ogg~ ~bg1ub/_MB_E43B.ogg~
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/DELSV01.ogg~ ~bg1ub/_DELSV01.ogg~
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/DELSV02.ogg~ ~bg1ub/_DELSV02.ogg~
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/DELSV03.ogg~ ~bg1ub/_DELSV03.ogg~
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/DELSV04.ogg~ ~bg1ub/_DELSV04.ogg~
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/ENTAR01.ogg~ ~bg1ub/_ENTAR01.ogg~
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/ENTAR02.ogg~ ~bg1ub/_ENTAR02.ogg~
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/ENTAR03.ogg~ ~bg1ub/_ENTAR03.ogg~
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/ENTAR04.ogg~ ~bg1ub/_ENTAR04.ogg~
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/GARRK13.ogg~ ~bg1ub/_GARRK13.ogg~
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/WILTN01.ogg~ ~bg1ub/_WILTN01.ogg~
-
-       ACTION_IF !("%LANGUAGE%" STRING_EQUAL "Polish") BEGIN
-
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/GANDL01.ogg~ ~bg1ub/_GANDL01.ogg~
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/GANDL02.ogg~ ~bg1ub/_GANDL02.ogg~
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/GANDL03.ogg~ ~bg1ub/_GANDL03.ogg~
-        COPY ~bg1ub/audio/%LANGUAGE%/ogg/GANDL04.ogg~ ~bg1ub/_GANDL04.ogg~
-END
-
-END ELSE BEGIN //all language versions with English sounds (Russian and Italian)
-
-        COPY ~bg1ub/audio/english/ogg/AMB_E43B.ogg~ ~bg1ub/_MB_E43B.ogg~
-        COPY ~bg1ub/audio/english/ogg/DELSV01.ogg~ ~bg1ub/_DELSV01.ogg~
-        COPY ~bg1ub/audio/english/ogg/DELSV02.ogg~ ~bg1ub/_DELSV02.ogg~
-        COPY ~bg1ub/audio/english/ogg/DELSV03.ogg~ ~bg1ub/_DELSV03.ogg~
-        COPY ~bg1ub/audio/english/ogg/DELSV04.ogg~ ~bg1ub/_DELSV04.ogg~
-        COPY ~bg1ub/audio/english/ogg/ENTAR01.ogg~ ~bg1ub/_ENTAR01.ogg~
-        COPY ~bg1ub/audio/english/ogg/ENTAR02.ogg~ ~bg1ub/_ENTAR02.ogg~
-        COPY ~bg1ub/audio/english/ogg/ENTAR03.ogg~ ~bg1ub/_ENTAR03.ogg~
-        COPY ~bg1ub/audio/english/ogg/ENTAR04.ogg~ ~bg1ub/_ENTAR04.ogg~
-        COPY ~bg1ub/audio/english/ogg/GANDL01.ogg~ ~bg1ub/_GANDL01.ogg~
-        COPY ~bg1ub/audio/english/ogg/GANDL02.ogg~ ~bg1ub/_GANDL02.ogg~
-        COPY ~bg1ub/audio/english/ogg/GANDL03.ogg~ ~bg1ub/_GANDL03.ogg~
-        COPY ~bg1ub/audio/english/ogg/GANDL04.ogg~ ~bg1ub/_GANDL04.ogg~
-        COPY ~bg1ub/audio/english/ogg/GARRK13.ogg~ ~bg1ub/_GARRK13.ogg~
-        COPY ~bg1ub/audio/english/ogg/WILTN01.ogg~ ~bg1ub/_WILTN01.ogg~
-
-END //ALL versions with sounds including Russian (Tutu only)
-
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_MB_E43B.wav~
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_DELSV01.wav~
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_DELSV02.wav~
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_DELSV03.wav~
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_DELSV04.wav~
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_ENTAR01.wav~
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_ENTAR02.wav~
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_ENTAR03.wav~
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_ENTAR04.wav~
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_GANDL01.wav~
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_GANDL02.wav~
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_GANDL03.wav~
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_GANDL04.wav~
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_GARRK13.wav~
-	COPY ~bg1ub/bg1ubplaceholder~ ~override/_WILTN01.wav~
-
-//USING BGII - resources for Tutu (all language versions):
-	COPY_EXISTING ~HALFF01.wav~ ~override/_HALFF01.wav~
-	COPY_EXISTING ~MUSTR08.wav~ ~override/_MUSTR08.wav~
-	COPY_EXISTING ~SWENC01.wav~ ~override/_SWENC01.wav~
-	COPY_EXISTING ~SWENC02.wav~ ~override/_SWENC02.wav~
-	COPY_EXISTING ~TANAR01.wav~ ~override/_TANAR01.wav~
-	COPY_EXISTING ~TANAR02.wav~ ~override/_TANAR02.wav~
-	COPY_EXISTING ~TANAR03.wav~ ~override/_TANAR03.wav~
-	COPY_EXISTING ~TANAR04.wav~ ~override/_TANAR04.wav~
-	COPY_EXISTING ~TANAR05.wav~ ~override/_TANAR05.wav~
-	COPY_EXISTING ~TANAR06.wav~ ~override/_TANAR06.wav~
-
-
-
-    ACTION_IF ("%WEIDU_OS%" STRING_COMPARE_CASE ~WIN32~ = 0) THEN BEGIN // Windows
-      AT_NOW ~bg1ub/bg1ub-audio-win32.bat~
-    END ELSE BEGIN
-      ACTION_IF ("%WEIDU_OS%" STRING_COMPARE_CASE ~OSX~ = 0) THEN BEGIN // Mac
-        AT_NOW ~sh bg1ub/bg1ub-audio-osx.sh~
-        //AT_NOW ~tr -d \\r < bg1ub/bg1ub-audio-osx.sh | sh~
-      END ELSE BEGIN // Linux
-        AT_NOW ~bg1ub/bg1ub-audio-linux.sh~
-      END
-    END
-
-
-END //sounds for Tutu
-
+		//USING BGII - resources for Tutu (all language versions):
+		COPY_EXISTING ~HALFF01.wav~ ~override/_HALFF01.wav~
+		COPY_EXISTING ~MUSTR08.wav~ ~override/_MUSTR08.wav~
+		COPY_EXISTING ~SWENC01.wav~ ~override/_SWENC01.wav~
+		COPY_EXISTING ~SWENC02.wav~ ~override/_SWENC02.wav~
+		COPY_EXISTING ~TANAR01.wav~ ~override/_TANAR01.wav~
+		COPY_EXISTING ~TANAR02.wav~ ~override/_TANAR02.wav~
+		COPY_EXISTING ~TANAR03.wav~ ~override/_TANAR03.wav~
+		COPY_EXISTING ~TANAR04.wav~ ~override/_TANAR04.wav~
+		COPY_EXISTING ~TANAR05.wav~ ~override/_TANAR05.wav~
+		COPY_EXISTING ~TANAR06.wav~ ~override/_TANAR06.wav~
+	END //sounds for Tutu
 
     //missing from Tutu only
-    ACTION_IF ("%tutuorbgt%" STRING_EQUAL "Tutu") BEGIN //Tutu only
+    ACTION_IF GAME_IS ~tutu tutu_totsc~ BEGIN //Tutu only
       COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%AMUL02.ITM~ ~override~
       COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%B1-2.ITM~ ~override~
 
@@ -1023,10 +942,12 @@ END ELSE BEGIN
       MOVE ~override/ub1010.tis~ ~override/AR1010.tis~
     END
   END
-END
-
+END 
 // AR1010.TIS and AR1010.MOS already included with TotSC
-COPY ~bg1ub/AR1010/%tutuorbgt%~ ~override~
+
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN
+	COPY ~bg1ub/AR1010/%tutuorbgt%~ ~override~
+END
 
 COPY_EXISTING ~%IceIsland%.ARE~ ~override~
               ~%IceIslandMaze_L1%.ARE~ ~override~
