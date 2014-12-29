@@ -1,0 +1,120 @@
+@90000 = ~Le composant "The BG1 NPC Project: Phase II (Quests and Interjections)" de BG1 NPC Project est en conflit avec ce composant.~
+@90001 = ~Le composant "The BG1 NPC Project: Core Install" de BG1 NPC Project est en conflit avec ce composant.~
+@90002 = ~Le composant "The BG1 NPC Project: Phase I (Banters)" de BG1 NPC Project est en conflit avec ce composant.~
+@90003 = ~Northern Tales of the Sword Coast est en conflit avec ce composant.~
+
+@90010 = ~Installation de Tutu detectee.~
+@90011 = ~Installation de BGT detectee.~
+@90012 = ~Installation de BG detectee.~
+@90013 = ~Veuillez installer sur un jeu BG, BGT, ou Tutu.~
+@90014 = ~Veuillez installer sur un jeu BGT ou Tutu.~
+
+@90015 = ~Les fonctionnalites de ce composant sont deja incluses ou supplantees par un des mods que vous avez deja installes.~
+@90016 = ~Les fonctionnalites de ce composant sont deja incluses de BGEE.~
+@90017 = ~Installation de BGEE detectee.~
+
+
+// Remarques
+// J'ai retiré les accents des textes qui correspondent aux différents composants pour préserver l'affichage dans la fenêtre WeiDU
+@0    = ~Restitution du deuxieme niveau de l'Ile de Glace~
+@1    = ~L'extension Tales of the Sword Coast est requise pour installer ce composant.~
+@2    = ~La fiole mysterieuse~
+@3    = ~Rencontre supplementaire avec Elminster~
+@4    = ~Angelo remarque Shar-Teel~
+@5    = ~Quete de la caravane de Kagain finissable~
+@7    = ~Coran et les wyvernes~
+@8    = ~Kivan et Tazok~
+@9    = ~Branwen et Tranzig~
+@10   = ~Safana la flirteuse~
+@12   = ~Recompense appropriee pour Albert et Rufie~
+@13   = ~Placer Entar Ecudargent dans sa demeure~
+@14   = ~Scar et la fille des Sashenstar~
+@17   = ~Quoningar le Clerc~
+@18   = ~Shilo Chen et les Ogres-mages~
+@21   = ~Edie, la postulante de la Ligue des Marchands~
+@22   = ~Renforts de mercenaires du Poing Enflamme~
+@23   = ~Corrections de creatures~
+@24   = ~Restitutions de creatures~
+@26   = ~Restitutions de noms de creatures~
+@58   = ~Restitutions mineures de dialogues~
+@59   = ~Restitutions audio~
+//@60-@88 moved to sound_tmp.tra
+@89   = ~Reparations et restitutions de magasins, tavernes et auberges~
+@94   = ~Corrections et restitutions d'objets~
+@100  = ~Corrections et restitutions de lieux~
+@101  = ~Cadavres permanents~
+@102  = ~Immunite raciale des Elfes au charme et au sommeil~
+@103  = ~Corrections de la liste de musiques pour La Saga Originale~
+@104  = ~Corrections du journal de Sarevok~
+
+/* new v13.1 */
+// tp2 strings
+@116 = ~Alteration de Prisme et ses emeraudes~
+@219   = ~Le Duc Eltan dans la batisse du Maitre du Port~
+
+
+////////////////////////////////////////////////////////////////////////////////
+// WeiDU prompts
+@-1000= "Le mod %TP2_FILE_NAME% contient"
+@-1001= "composants optionnels distincts.
+Pour gagner du temps, vous pouvez choisir ce que vous souhaitez faire d'eux
+au niveau general plutot que de repondre aux questions pour chacun.
+"
+@-1002= "Que faut-il faire de tous les composants qui NE sont PAS ENCORE installes ?
+Les [I]nstaller, les [S]auter, dem[A]nder pour chacun ? "
+@-1003= "Que faut-il faire de tous les composants qui sont DEJA installes ?
+Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
+
+@-1004= "S'IL VOUS PLAIT, envoyez par e-mail le fichier"
+@-1005= "a"
+
+@-1006= "Installer le composant ["
+@-1007= "] ?
+[R]einstaller, co[N]server, s[U]pprimer ou [Q]uitter ? "
+@-1008= "] ?
+[I]nstaller, [N]e pas installer ou [Q]uitter ? "
+
+@-1009= "Entrez une partie du nom du module : "
+
+@-1010= "Reinstallation du composant ["
+@-1011= "] "
+@-1012= "Reinstallation dans la langue"
+
+@-1013= "Suppression de l'ancienne installation de ["
+@-1014= "] au prealable..."
+@-1015= "SUPPRESSION REUSSIE DE L'ANCIEN"
+
+@-1016= "Installation en cours"
+@-1017= "ERREUR pendant l'installation de ["
+@-1018= "], retour a l'etat anterieur"
+@-1019= "INSTALLATION REUSSIE"
+@-1020= "Saute"
+@-1021= "Suppression de ["
+@-1022= "] (composant #"
+@-1023= ")"
+@-1024= "SUPPRESSION REUSSIE DE ["
+
+@-1025= "] ?
+[R]einstaller, co[N]server, s[U]pprimer, [Q]uitter ou choisir un parmi :"
+@-1026= "] ?
+[N]e pas installer, [Q]uitter ou choisir un parmi :"
+@-1027= " (installe actuellement)"
+
+@-1028= "Souhaitez-vous afficher les composants de ["
+@-1029= "] ?
+[Y]Oui, [N]on ? "
+
+@-1030= "] ?
+choisir un parmi :"
+@-1031= "] ?
+[R]einstaller, co[N]server, [Q]uitter ou choisir un parmi :"
+@-1032= "INSTALLATION ECHOUEE A CAUSE D'ERREURS"
+@-1033= "INSTALLATION AVEC DES ALERTES"
+@-1034= "Souhaitez-vous afficher les instructions (ReadMe) ? [Y]Oui [N]on"
+@-1035= "Dans la langue"
+
+@-1036= "Saute le GROUPE ["
+@-1037= "] pour cause d'absence des pre-requis."
+
+@-1038= "dem[A]nder pour chaque composant, tout [S]auter, ou choisir une selection pre-definie :"
+@-1039= "dem[A]nder pour chaque composant, [R]einstaller la configuration courante, tout s[U]pprimer, tout [S]auter, ou choisir une selection pre-definie :"
