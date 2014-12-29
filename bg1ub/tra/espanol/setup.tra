@@ -1,0 +1,52 @@
+//DOS prompts - use DOS encoding
+@90000 = ~El componente de BG1 NPC Project "BG1 NPC Project: Parte II (Busquedas e interacciones)" causa un conflicto con este componente.~
+@90001 = ~El componente de BG1 NPC Project "BG1 NPC Project: Instalaci¢n de nucleo" causa un conflicto con este componente.~
+@90002 = ~El componente de BG1 NPC Project "BG1 NPC Project: Parte I (conversaciones)" causa un conflicto con este componente.~
+@90003 = ~Northern Tales of the Sword Coast causa un conflicto con este componente.~
+
+@90010 = ~Instalaci¢n Tutu detectada.~
+@90011 = ~Instalaci¢n BGT detectada.~
+@90012 = ~Instalaci¢n BG detectada.~
+@90013 = ~Por favor, instalar sobre BG, BGT, Tutu o BGEE.~
+@90014 = ~Por favor, instalar sobre BGT o Tutu.~
+
+@90015 = ~La funcionalidad de este componente ya está incluida o reemplazada por uno de los mods que ya tienes instalados.~
+@90016 = ~La funcionalidad de este componente ya está incluida en BGEE.~
+@90017 = ~Instalaci¢n BGEE detectada.~
+
+
+@0   = ~Restauraci¢n del nivel 2 de la Isla de Hielo~ 
+@1   = ~Este componente requiere la expansion Tales of the Sword Coast~
+
+@2   = ~El Recipiente Misterioso~ 
+@3   = ~Encuentro de Elminster Adicional~
+@4   = ~Angelo reconoce Shar-teel~ 
+@5   = ~Busqueda de la Caravana de Kagain con Final~
+@7   = ~Coran y los Wyverns~ 
+@8   = ~Kivan y Tazok~
+@9   = ~Branwen y Tranzig~ 
+@10  = ~Safana Coquetea~
+@12  = ~Recompensa de Albert y Rufie Apropiada~ 
+@13  = ~Entar Escudodeplata esta en su Casa~
+@14  = ~Scar y la Hija de Sashenstar~ 
+@17  = ~Quoningar, el Clerigo~
+@18  = ~Shilo Chen y los Ogro magos~
+@21  = ~Edie, el Estudiante a Mercader de la Liga~ 
+@22  = ~Refuerzos Mercenarios del Puño Llameante~
+@23  = ~Correcciones a Criaturas~ 
+@24  = ~Restauracion a Criaturas~
+@26  = ~Nombres de Criaturas Restaurados~
+@58  = ~Restauraciones Menores de Dialogo~
+@59  = ~Restauraciones de Audio (ingles)~
+@89  = ~Arreglos y Restauraciones a Tiendas y Tabernas~
+@94  = ~Correcciones y Restauraciones de Objetos~
+@100 = ~Correcciones y Restauraciones de Areas~
+@101 = ~Cadaveres Permanentes~
+@102 = ~Hechizado Elfico e Inmunidad Racial al Sueño~
+@103 = ~Correcciones a la Lista de Musica de la Saga Original~
+@104 = ~Correcciones del Diario de Sarevok~
+
+/* new v13.1 */
+// tp2 strings
+@116 = ~Mejora a Prism y las esmeraldas~
+@219 = ~Duque Eltan en el Edificio del capitán del puerto~
