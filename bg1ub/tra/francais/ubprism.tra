@@ -1,0 +1,116 @@
+//journal entries ##
+@119 = ~Que Prisme est idiot. Il a vraiment cru mes dénégations à propos de la perte de ces émeraudes. Eh bien... Perte pour lui. Profit pour moi.~
+@120 = ~Peut-être que c'est mal, mais après avoir permis à Prisme d'achever son 'chef d'oeuvre ultime', j'ai pris une des émeraudes des yeux de la statue. Elle rapportera une jolie somme en s'adressant au bon endroit, ou une bonne prime...~
+@121 = ~Au prix de quelques efforts, j'ai finalement retiré la seconde émeraude que Prisme avait volée pour s'en servir d'oeil dans son 'chef d'oeuvre ultime'.~
+// Isaya : 16566 de BG1
+@122 = ~L'histoire de Prisme est bien triste, en vérité. Dommage qu'elle n'ait pas connu de fin plus heureuse. Enfin, j'en aurai profité : 300 pièces d'or de prime en échange des émeraudes qu'il avait volées.~
+@123 = ~A l'avenir il faudra que je me souvienne de ne pas prétendre être quelqu'un d'autre juste pour gagner un peu d'or sans effort. Bien qu'Oublek en ait gardé une partie, j'ai finalement été récompensé pour la restitution des émeraudes de Prisme.~
+~A l'avenir il faudra que je me souvienne de ne pas prétendre être quelqu'un d'autre juste pour gagner un peu d'or sans effort. Bien qu'Oublek en ait gardé une partie, j'ai finalement été récompensée pour la restitution des émeraudes de Prisme.~
+/* Unused line for Captain Brage Journal entry
+@ = ~A l'avenir il faudra que je me souvienne de ne pas prétendre être quelqu'un d'autre juste pour gagner un peu d'or sans effort. Bien qu'Oublek en ait gardé une partie, j'ai finalement été récompensé pour avoir livré le Capitaine Brage.~
+~A l'avenir il faudra que je me souvienne de ne pas prétendre être quelqu'un d'autre juste pour gagner un peu d'or sans effort. Bien qu'Oublek en ait gardé une partie, j'ai finalement été récompensée pour avoir livré le Capitaine Brage.~
+*/
+@124 = ~J'ai réussi à prendre quelques émeraudes que le sculpteur Prisme utilisait comme yeux pour une statue. Pourtant il s'en est aperçu. J'ai dû mettre fin à son malheur après qu'il se soit précipité sur moi avec un burin.~
+@125 = ~Une émeraude restituée pour une prime de 150 pièces d'or. Je peux obtenir l'autre moitié de la prime si je peux rapporter l'autre émeraude. Elle doit se trouver à proximité de l'endroit où j'ai pris l'autre.~
+@126 = ~Seulement la moitié d'une récompense réduite pour avoir rendu une des émeraudes de Prisme. 75 misérables pièces d'or. Si je venais à trouver l'autre émeraude, il serait peut-être prudent de vérifier auprès de marchands avant de réclamer la prime.~
+//journal entries for bg2 engine
+//Tutu
+@127 = ~Prisme le sculpteur
+
+Que Prisme est idiot. Il a vraiment cru mes dénégations à propos de la perte de ces émeraudes. Eh bien... Perte pour lui. Profit pour moi.~
+@128 = ~Prisme le sculpteur
+
+Peut-être que c'est mal, mais après avoir permis à Prisme d'achever son 'chef d'oeuvre ultime', j'ai pris une des émeraudes des yeux de la statue. Elle rapportera une jolie somme en s'adressant au bon endroit, ou une bonne prime...~
+@129 = ~Prisme le sculpteur
+
+Au prix de quelques efforts, j'ai finalement retiré la seconde émeraude que Prisme avait volée pour s'en servir d'oeil dans son 'chef d'oeuvre ultime'.~
+@130 = ~Prisme le sculpteur
+
+L'histoire de Prisme est bien triste, en vérité. Dommage qu'elle n'ait pas connu de fin plus heureuse. Enfin, j'en aurai profité : 300 pièces d'or de prime en échange des émeraudes qu'il avait volées.~
+@131 = ~Prisme le sculpteur
+
+A l'avenir il faudra que je me souvienne de ne pas prétendre être quelqu'un d'autre juste pour gagner un peu d'or sans effort. Bien qu'Oublek en ait gardé une partie, j'ai finalement été récompensé pour la restitution des émeraudes de Prisme.~
+~Prisme le sculpteur
+
+A l'avenir il faudra que je me souvienne de ne pas prétendre être quelqu'un d'autre juste pour gagner un peu d'or sans effort. Bien qu'Oublek en ait gardé une partie, j'ai finalement été récompensée pour la restitution des émeraudes de Prisme.~
+/* Unused line for Captain Brage Journal entry
+@ = ~Prisme le sculpteur
+
+A l'avenir il faudra que je me souvienne de ne pas prétendre être quelqu'un d'autre juste pour gagner un peu d'or sans effort. Bien qu'Oublek en ait gardé une partie, j'ai finalement été récompensé pour avoir livré le Capitaine Brage.~
+~Prisme le sculpteur
+
+A l'avenir il faudra que je me souvienne de ne pas prétendre être quelqu'un d'autre juste pour gagner un peu d'or sans effort. Bien qu'Oublek en ait gardé une partie, j'ai finalement été récompensée pour avoir livré le Capitaine Brage.~
+*/
+@132 = ~Prisme le sculpteur
+
+J'ai réussi à prendre quelques émeraudes que le sculpteur Prisme utilisait comme yeux pour une statue. Pourtant il s'en est aperçu. J'ai dû mettre fin à son malheur après qu'il se soit précipité sur moi avec un burin.~
+@133 = ~Prisme le sculpteur
+
+Une émeraude restituée pour une prime de 150 pièces d'or. Je peux obtenir l'autre moitié de la prime si je peux rapporter l'autre émeraude. Elle doit se trouver à proximité de l'endroit où j'ai pris l'autre.~
+@134 = ~Prisme le sculpteur
+
+Seulement la moitié d'une récompense réduite pour avoir rendu une des émeraudes de Prisme. 75 misérables pièces d'or. Si je venais à trouver l'autre émeraude, il serait peut-être prudent de vérifier auprès de marchands avant de réclamer la prime.~
+//BGT
+@210 = ~Prisme, le voleur d'émeraudes.
+
+Que Prisme est idiot. Il a vraiment cru mes dénégations à propos de la perte de ces émeraudes. Eh bien... Perte pour lui. Profit pour moi.~
+@211 = ~Prisme, le voleur d'émeraudes.
+
+Peut-être que c'est mal, mais après avoir permis à Prisme d'achever son 'chef d'oeuvre ultime', j'ai pris une des émeraudes des yeux de la statue. Elle rapportera une jolie somme en s'adressant au bon endroit, ou une bonne prime...~
+@212 = ~Prisme, le voleur d'émeraudes.
+
+Au prix de quelques efforts, j'ai finalement retiré la seconde émeraude que Prisme avait volée pour s'en servir d'oeil dans son 'chef d'oeuvre ultime'.~
+@213 = ~Prisme, le voleur d'émeraudes.
+
+L'histoire de Prisme est bien triste, en vérité. Dommage qu'elle n'ait pas connu de fin plus heureuse. Enfin, j'en aurai profité : 300 pièces d'or de prime en échange des émeraudes qu'il avait volées.~
+@214 = ~Prisme, le voleur d'émeraudes.
+
+A l'avenir il faudra que je me souvienne de ne pas prétendre être quelqu'un d'autre juste pour gagner un peu d'or sans effort. Bien qu'Oublek en ait gardé une partie, j'ai finalement été récompensé pour la restitution des émeraudes de Prisme.~
+~Prisme, le voleur d'émeraudes.
+
+A l'avenir il faudra que je me souvienne de ne pas prétendre être quelqu'un d'autre juste pour gagner un peu d'or sans effort. Bien qu'Oublek en ait gardé une partie, j'ai finalement été récompensée pour la restitution des émeraudes de Prisme.~
+/* Unused line for Captain Brage Journal entry
+@215 = ~Prisme, le voleur d'émeraudes.
+
+A l'avenir il faudra que je me souvienne de ne pas prétendre être quelqu'un d'autre juste pour gagner un peu d'or sans effort. Bien qu'Oublek en ait gardé une partie, j'ai finalement été récompensé pour avoir livré le Capitaine Brage.~
+~Prisme, le voleur d'émeraudes.
+
+A l'avenir il faudra que je me souvienne de ne pas prétendre être quelqu'un d'autre juste pour gagner un peu d'or sans effort. Bien qu'Oublek en ait gardé une partie, j'ai finalement été récompensée pour avoir livré le Capitaine Brage.~
+*/
+@216 = ~Prisme, le voleur d'émeraudes.
+
+J'ai réussi à prendre quelques émeraudes que le sculpteur Prisme utilisait comme yeux pour une statue. Pourtant il s'en est aperçu. J'ai dû mettre fin à son malheur après qu'il se soit précipité sur moi avec un burin.~
+@217 = ~Prisme, le voleur d'émeraudes.
+
+Une émeraude restituée pour une prime de 150 pièces d'or. Je peux obtenir l'autre moitié de la prime si je peux rapporter l'autre émeraude. Elle doit se trouver à proximité de l'endroit où j'ai pris l'autre.~
+@218 = ~Prisme, le voleur d'émeraudes.
+
+Seulement la moitié d'une récompense réduite pour avoir rendu une des émeraudes de Prisme. 75 misérables pièces d'or. Si je venais à trouver l'autre émeraude, il serait peut-être prudent de vérifier auprès de marchands avant de réclamer la prime.~
+
+
+//oublek dialog
+@1000 = ~Une des émeraudes ! Ce sera une prime de 150 pièces d'or pour vous. Pensez à rapporter l'autre si jamais vous la trouvez.~
+@1001 = ~La dernière des émeraudes ! Ce sera une autre prime de 150 pièces d'or pour vous. Eh bien, vous allez vous faire un nom parmi les chasseurs de prime si vous continuez ainsi. J'ignore si c'est pour le meilleur ou pour le pire.~
+@1002 = ~Une des émeraudes ! C'est bien de vous voir essayer de gagner honnêtement de l'or, même si c'est au travers de la tâche peu ragoûtante de chasse à la prime. Je vais vous payer, mais moins que le montant annoncé. Pensez à rapporter l'autre si jamais vous la trouvez.~
+@1003 = ~La dernière des émeraudes ! Bon, c'est bien de vous voir essayer de gagner honnêtement de l'or, même si c'est au travers de la tâche peu ragoûtante de chasse à la prime. Je vais vous payer, mais moins que le montant annoncé. Nous allons conserver le reste au cas où vous décidiez de... d'altérer la vérité lors de futurs échanges.~
+@1004 = ~Je viens vous rapporter ce qui fait l'objet d'une prime et récupérer la récompense qui m'est due.~
+
+//prism dialog
+@1100 = ~Comment osez-vous ! Comment osez-vous prendre l'éclat de ses yeux !~
+@1101 = ~J'ai beaucoup de travail à faire. Mais peut-être aideriez-vous un sculpteur insensé à finir cette apparition ? S'il vous plaît, gardez cet endroit, car Loup-gris viendra sans doute. Je paierai avec mes derniers biens !~
+@1102 = ~Attendez ! Vous avez pris mes émeraudes. Il faut que vous me les rendiez. J'en ai besoin pour achever cette apparition. S'il vous plaît, rendez-les moi, je vous en prie. Je vous donnerai tout ce que je possède d'autre.~
+@1103 = ~Elles ont disparu. Données aux autorités. Vous n'achèverez jamais ce bloc de pierre désormais.~
+@1104 = ~Elles ont disparu. Vendues pour pendre comme un colifichet au cou de quelque dame enrobée.~
+@1105 = ~Ouais, je les ai prises. J'en ai encore une. Cependant l'autre a disparu depuis longtemps.~
+@1106 = ~Que se passe-t-il ? Un fou qui m'accuse de vol ? Mourez pour prix de vos insultes.~
+@1107 = ~Attendez ! Vous avez pris mon émeraude. Il faut que vous me la rendiez. J'en ai besoin pour achever cette apparition. S'il vous plaît, rendez-la moi, je vous en prie. Je vous donnerai tout ce que je possède d'autre.~
+@1108 = ~Tout ce que vous possédez, hein ? Qu'il en soit ainsi.~
+@1109 = ~"Tout ce que vous possédez d'autre" ne m'intéresse pas. Je vous amène, vous et les gemmes, à la garde, où je vais avoir une jolie récompense.~
+@1110 = ~Je ne vois pas de que vous parlez.~
+@1111 = ~Donnez-moi celle que vous avez. Allez chercher l'autre et ramenez-la moi. Je dois achever cette apparition. Je vous donnerai tout ce que je possède d'autre.~
+@1112 = ~Je l'ai donnée aux autorités. Vous ne la récupérerez jamais.~
+@1113 = ~Impossible. Je l'ai donnée aux autorités et suis revenu pour récupérer l'autre pour sa prime.~
+~Impossible. Je l'ai donnée aux autorités et suis revenue pour récupérer l'autre pour sa prime.~
+@1114 = ~Impossible. Je l'ai vendue à un marchand quelconque ou planquée dans un endroit que j'ai oublié.~
+@1115 = ~La gemme a peut-être disparu mais je prendrai avec joie tout le reste de ce que vous possédez. Préparez-vous à mourir.~
+@1116 = ~Rendez-la moi s'il vous plaît. Je dois achever cette apparition. Je vous donnerai tout ce que je possède d'autre.~

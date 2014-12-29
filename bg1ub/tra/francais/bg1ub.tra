@@ -1,0 +1,165 @@
+// Remarques
+// J'ai retiré les accents des textes qui correspondent aux différents composants pour préserver l'affichage dans la fenêtre WeiDU
+@6    = ~Eddard Ecudargent~
+@11   = ~Flirt~
+@15   = ~Corps de Femme Noble~
+@16   = ~Ceci est le corps d'une femme noble.~
+@19   = ~Gants de Pickpocket~
+@20   = ~Gants de Pickpocket
+Il y a quelques années, Fong Moo, un fameux pickpocket connu à la Porte de Baldur et à Athkatla, fut retrouvé mort sur la route entre la Porte et Berégost. Il semble qu'il avait volé un artefact d'un mage puissant et avait essayé de s'échapper, sans succès. Ses biens furent remis à un neveu, qui fit le même choix de carrière que son oncle, et qui devint particulièrement excellent en vol à la tire. Nul ne sait si les gants étaient magiques avant de tomber entre les mains de Fong ou s'ils se sont imprégnés d'une façon ou d'une autre de l'essence du maître.
+
+PARAMÈTRES
+
+Vol à la Tire : bonus de +20%~
+@25   = ~Fermier~
+@27   = ~Kaitlin~
+@28   = ~Malicia~
+@29   = ~Henrette~
+@30   = ~Sari~
+@31   = ~Mabledale~
+@32   = ~Bunsen~
+@33   = ~Farthendell~
+@34   = ~Arlond~
+@35   = ~Joldenan~
+@36   = ~Carl~
+@37   = ~Jurgen~
+@38   = ~Berden~
+@39   = ~Dath~
+@40   = ~Solgen~
+@41   = ~Borland~
+@42   = ~Galteran~
+@43   = ~Davis~
+@44   = ~Sherman~
+@45   = ~Thurston~
+@46   = ~Quincy~
+@47   = ~Christian~
+@48   = ~Marlon~
+@49   = ~Dame Areana~
+@50   = ~Wade~
+@51   = ~Ludrug~
+@52   = ~Ted~
+@53   = ~Sarah~
+@54   = ~Selaad Gan~
+@55   = ~Baresh~
+@56   = ~Daese~
+@57   = ~Kaishas Gan~
+//@60-@88 moved to sound_tmp.tra
+@90   = ~Soins et articles divers d'Alvanhendar~
+@91   = ~Magasin de Lis Noir~
+@92   = ~Taverne~
+@93   = ~La Protection Vigilante~
+@95   = ~Anneau de Peau d'écorce~
+@96   = ~Hache de Bala - tueur de magiciens :
+Bala était le prince malfaisant d'un clan de nains d'égouts, qui fut asservi par un cruel mage elfe à Thesk. Si Bala n'avait pas la fourberie de ses semblables, il était encore plus sale et infect que le nain d'égouts moyen. Fatigué de sa vie d'esclave, Bala rampa jusqu'à l'antre du mage et brisa le crâne de l'elfe. Bien que la rumeur prétende que c'est la puanteur du nain qui eut raison du mage, c'est en fait sa hache enchantée qui brisa les défenses magiques de l'elfe. Il est évident après observation que Bala l'a fabriquée lui-même, car elle est très rudimentaire. L'origine de son pouvoir reste cependant mystérieuse. Après une longue carrière consacrée au massacre de mages, Bala mourut sans avoir révélé son secret à ceux qui osaient l'approcher malgré ses poux. Certains disent que la hache tire son pouvoir de la haine farouche que Bala nourrissait à l'égard des magiciens.
+
+PARAMETRES :
+
+Dégâts : 1D8
+Type de dégâts : tranchant
+
+Spécial : le fourvoiement magique affecte la victime à chaque coup réussi.
+Fourvoiement magique : toute créature capable de jeter des sorts et affectée par ce sort voit son pouvoir d'incantation sérieusement diminué. Lorsqu'elle essaie de jeter un sort, ce dernier échoue huit fois sur dix. Les créatures peuvent effectuer des jets de sauvegarde contre les sorts pour se prémunir contre cet effet, mais moyennant une pénalité de - 2.
+
+Poids : 6
+Facteur de vitesse : 7
+Type de compétence : hache
+Type : à une main
+Non utilisable par :
+ Druide
+ Clerc
+ Mage 
+ Voleur~
+@97   = ~La tête tranchée d'une wiverne est une vision à la fois terrifiante et rassurante. Aussi terribles que soient ses dents aiguisées et ses yeux ardents, un simple mortel peut toutefois espérer les vaincre.
+
+PARAMETRES :
+
+Poids : 30~
+@98   = ~D'un blanc immaculé, la peau du loup des glaces est aussi douce que son pelage est abondant. Elle sert à la fabrication de vêtements aussi dissemblables que les pelisses des barbares uthgardt et les délicates étoles prisées par les femmes nobles de toute la région de la Côte des Epées.
+
+PARAMETRES :
+
+Poids : 10~
+@99   = ~L'ankheg est un insecte fouisseur qui mesure de 3 à 6 mètres de long et que l'on croise surtout dans les forêts ou sur les meilleures terres cultivées. Il est couvert de plaques ou d'écailles de chitine, un matériau  extrèmement dur et léger. Taille, poids et résistance de ces écailles en font un matériau de choix pour les utilisations les plus variées, y compris en armurerie.
+
+PARAMETRES :
+
+Poids : 100~
+
+@105  = ~Leur chef est Sarevok Anchev.~
+@106  = ~Un dénommé Sarevok Anchev est le responsable du complot.~
+@107  = ~L'augure nous a dit que le dirigeant du Trône de Fer était Sarevok Anchev.~
+@108  = ~L'augure nous dit que Sarevok Anchev est à l'origine du coup monté qui nous fait accuser des meurtres de Château-Suif.~
+@109  = ~[Note for Davaeorn 1]Davaëorn,
+J'ai reçu votre demande de nouveaux esclaves. Ils vous seront envoyés dès que possible. Les événements vont bon train à la Porte de Baldur. Nous avons acheté une propriété nobiliaire à l'ouest. Elle servira de base à nos opérations. Il s'agit d'un bâtiment ancien, vraisemblablement construit avant l'édification du deuxième mur. Ce mur constitue un outil de défense considérable contre ceux qui tentent de nous piller. N'oubliez pas de demander à Yeslick si ses nouveaux appartements lui plaisent. 
+
+Rieltar.
+14 Eleinte 1367~
+@110  = ~[Note for Davaeorn 2]Davaëorn,
+Nos projets se déroulent comme prévu. Mon fils Sarevok est arrivé de notre quartier général d'Ordulin. Il apporte des nouvelles de la part de nos supérieurs ; notre progression les satisfait jusqu'ici. J'ai l'intention de nommer Sarevok commandant de nos forces mercenaires dans la région. Il a déjà envoyé son subalterne, Tazok, à Bois-Manteau, pour prendre le commandement des forces basées là-bas. Les choses avancent vite ici à la Porte de Baldur. Nous avons posté notre premier agent parmi les rangs du Transmarche des Sept Soleils. 
+
+Rieltar.
+4 Uktar 1367~
+@111  = ~[Note for Davaeorn 3]Davaëorn,
+Comme vous le savez probablement déjà, la contamination du fer a commencé à faire effet le long de la côte. La majeure partie des importations de fer étant détournée par Tazok, la quasi-totalité de ces importations provient de la source impure de Nashkel. Le soulèvement Sythillisien de l'Amn empêche toute force de cette nation de s'en prendre à nos mercenaires. Toutefois, le Poing Enflammé a attrapé plusieurs mercenaires des Griffes Noires. Toutes les personnes capturées ont juré allégeance au Zhentarim et ont de ce fait détourné tous les soupçons qui pesaient sur le Trône de Fer. J'ai envoyé Tranzig pour assister les mercenaires dans le transport du fer jusqu'à votre base de Bois-Manteau. Il a apporté plusieurs sacs afin d'effectuer les voyages jusqu'à Bois-Manteau tout seul. Cela réduit le risque que les traqueurs du Poing Enflammé repèrent votre citadelle.
+
+Rieltar.          
+21 Ches 1368~
+// Remarque : il y a de nombreuses modifications (chronologie, ordre, ajouts, réorganisation) par rapport à l'original
+@112  = ~Le journal intime de Sarevok
+
+Le 14 Eleinte 1367 : Cormyr a émis un arrêté interdisant au Trône de Fer d'intervenir à l'intérieur de ses frontières. Ce coup porté au Trône de Fer offre à père une occasion rêvée de soumettre sa proposition au grand conseil du Trône. Si tout se passe bien, nous pourrions lancer l'opération dans l'année.
+
+Le 28 Eleinte 1367 : Davaëorn annonce que les mines de Bois-Manteau ont été asséchées et sont prêtes pour l'exploitation. Cette annonce devrait contribuer à convaincre le grand conseil du Trône.
+
+Le 19 Marpenoth 1367 : Le conseil du Trône de Fer a donné son accord au plan de père. Celui-ci a obtenu toutes les ressources dont il avait besoin, ainsi que la direction du projet. J'ai fait part de mon intérêt à mon « père » et il avait promis de me faire participer aux opérations le long de la Côte des Epées. Il m'envoie, en tant que son représentant, pour prendre contact avec quelques uns des groupes de mercenaires opérant dans l'est. Il a mentionné mère au cours de notre conversation ; qu'il ne fallait pas que je sois aussi déloyal envers lui qu'elle ne l'avait été. Il a clairement laissé entendre que je partagerais sa destinée si je l'étais. Ses menaces sont faibles et creuses, et je n'aurai pas à les écouter encore bien longtemps.
+
+Le 30 Marpenoth 1367 : J'ai rencontré les chefs du Frisson et des Griffes Noires. J'éprouve peu de sympathie pour Ardenor, le commandant du Frisson, mais Taurgosz semble être un homme de parole. C'est une bonne chose car je devrai travailler avec ces mercenaires pendant toute l'opération.
+
+Le 3 Uktar 1367 : Un nouveau rêve cette nuit. Ma mère me parlait... Mais peu à peu son visage s'est mis à se congestionner et à perdre ses couleurs... Sa voix est devenue plus faible. Elle demandait que je la protège de Rieltar. Je voyais le garrot autour de son cou, mais je ne réagissais pas. Ce n'était qu'un rêve.
+
+Le 8 Uktar 1367 : Aujourd'hui, je suis revenu à la Porte de Baldur faire mon rapport à Rieltar. L'imbécile tient encore à m'appeler son fils, et je laisse faire pour l'instant. Il suppose que je lui suis loyal parce qu'il m'a élevé. Eh bien, loyal je suis, mais uniquement tant qu'il m'est utile. Il a installé sa base dans le château d'une famille de nobles déchus et dit que tout se déroule sans incident.
+
+Le 17 Nuiteuse 1367 : Mulahey a établi son campement dans les mines de Nashkel et devrait être en train de convertir les kobolds pour qu'ils le suivent comme leur chef. Seuls quelques esclaves ont commencé à exploiter le minerai à Bois-Manteau, mais dès que les raids des bandits commenceront, j'enverrai de nouveaux esclaves à Davaëorn régulièrement.
+
+Le 6 Martel 1368 : Le Poing Enflammé a finalement commencé à remarquer notre petite opération de mercenaires et a dépêché plusieurs petits contingents sur la Voie Côtière afin d'essayer de repousser les raids des bandits. Même si des mercenaires venaient à être capturés, la plupart croient qu'ils travaillent pour les Zhents, aussi le Trône de Fer ne devrait connaître aucun problème. Il est évident que les Zhents de la Forteresse Noire n'apprécieront pas cette utilisation abusive de leur nom mais nous ne pouvons pas nous permettre que les autorités trouvent notre piste.
+
+Le 9 Martel 1368 : J'ai décidé de prendre du temps pour effectuer ma visite à Château-Suif. J'ai attendu longtemps avant de me mettre à la recherche des prophéties d'Alaundo et je veux savoir si les rêves disent la vérité. Je ne croirai pas les paroles de fantômes sans preuves et le prêtre de Bhaal que j'ai interrogé ne m'a rien appris. Il était vieux et est mort rapidement sous mon étreinte. Si les paroles sont vraies, je devrai certainement m'attirer des acolytes plus forts que lui.
+
+Le 14 Alturiak 1368 : A Château-Suif enfin, et les moines se montrent vraiment serviables. D'après ce que j'ai pu lire, il n'y aucun doute que le sang de Bhaal coule vraiment dans mes veines. Les prophéties d'Alaundo sont, naturellement, tout sauf explicites, mais je pense être en mesure de les interpréter. Bhaal avait prévu sa mort prochaine et a semé son essence partout sur terre. Cette progéniture porte les traces du chaos, a un pouvoir sans contrôle, sentira en elle le sang d'un dieu et sera poussée à semer la mort et la destruction. « Les morts qu'ils causeront éveilleront le père, et à travers elles il se relèvera. » Les termes sont quelque peu ambiguës, mais manifestement cela signifie que la mort semée par les enfants provoquera leur ascension. Approprié, et étant donné que mon père était le Dieu du Meurtre, pour prouver sa valeur, il faut impérativement commettre un acte en rapport avec sa charge. Je commence à voir ce que je dois faire. La mort à l'échelle d'un dieu.
+
+Le 15 Alturiak 1368 : Encore des recherches. Il semble que Bhaal ait engendré des centaines, si ce n'est des milliers, d'enfants bâtards, même si seuls vingt d'entre eux devraient acquérir un vrai pouvoir... et parmi ceux-là, cinq feront trembler de peur les dieux eux-même. Mais le moine Gorion m'inquiète. Les écrits d'Alaundo comprennent quelques passages plus obscurs qui mentionnent un "pupille de Gorion", et le moine est en effet suivi par une jeune personne nommée <CHARNAME> qui, bien qu'elle paraisse n'être qu'un bienheureux chiot ignorant, me semble vaguement familier. Gorion s'est apparemment intéressé à mes lectures. Je dois impérativement veiller à mieux protéger le secret de mes recherches.
+
+Le 16 Alturiak 1368 : Je quitte à présent Château-Suif, et il est plus que temps, car je suis sûr que Gorion connaît à présent mes origines. J'aimerais pouvoir m'en débarrasser, mais je ne crois pas qu'il soit possible de l'assassiner dans cette damnée bibliothèque. Une chose est certaine : <CHARNAME> descend en fait aussi de Bhaal. Tous les stigmates sont présents et cela pourrait expliquer la curiosité que Gorion manifeste pour mes études, ainsi que la mention de <CHARNAME> dans la prophétie. Je ne peux rien faire maintenant, mais il faudra absolument que je retourne là-bas pour tuer ce gamin. Ce serait de la folie de laisser la vie sauve à l'un de mes frères et soeurs, surtout quelqu'un élevé par les Ménestrels (et je suis sûr que Gorion en est un).
+
+Le 17 Ches 1368 : Tout se passe bien. Le minerai extrait de Nashkel a commencé à se détériorer et les mercenaires ont fait du bon travail en s'emparant de tous les convois qui acheminaient du métal vers la Porte de Baldur. Bien que certains de mes hommes aient été capturés, l'histoire des Zhents a l'air de bien tenir, ainsi aucun problème n'est retombé sur le Trône de Fer. Mias il faudra que je me méfie des agents Zhents dans les prochains mois.
+
+Le 28 Tarsakh 1368: Le moment est maintenant venu de m'occuper de ce vieux Gorion et de son rejeton. Je vais devoir informer mes hommes que je serai absent pendant les prochains jours.
+
+Le 19 Kythorn, 1368 : J'ai à peine le temps d'écrire, mais je ne dois pas négliger mon journal pour autant. Les morts à venir doivent savoir comment le Seigneur du Meurtre vint à nouveau à eux. Peut-être devrais-je engager un scribe, quand le temps le permettra, mais pour l'instant, je m'attends à ce que notre petit drame commence ici à tout instant. Celui qui se prétend mon père, Rieltar, est dans les étages avec deux représentants des Chevaliers de l'Ecu. Comme prévu, il a bloqué toutes mes tentatives visant à intensifier les hostilités à la frontière. Vraiment désolé, « père », mais ma véritable parenté m'appelle et tu me bloques le passage. Au cas où la rencontre à venir ne produise pas immédiatement un bain de sang, il faut que je m'assure de donner des instructions aux dopplegangers sur la manière exacte dont Rieltar doit mourir. Je pense qu'un garrot serait parfait pour cette tâche.
+
+Ce journal intime semble important. Vous devriez probablement le garder sur vous.~
+
+@113   = ~Chevalière~
+@114   = ~C'est une chevalière incrustée d'un rubis.~
+
+/* new v13.1 */
+//item strings
+@117 = ~Une émeraude est un béryl d'un vert très vif, aux arêtes vives elles aussi, aux lignes droites, taillée en rectangle le plus souvent. On a l'habitude de l'associer à la santé, aussi l'utilise-t-on en ornement pour cette raison. Cette émeraude est marquée d'un petit 'G'. Prisme l'avait volée pour s'en servir sur la statue de la dame de son coeur, Ellesime. On présume que cette gemme était destinée à devenir l'oeil gauche. Qu'elle ait ou non servi à la statue, il y a une récompense pour la rapporter aux autorités compétentes.~
+@118 = ~Une émeraude est un béryl d'un vert très vif, aux arêtes vives elles aussi, aux lignes droites, taillée en rectangle le plus souvent. On a l'habitude de l'associer à la santé, aussi l'utilise-t-on en ornement pour cette raison. Cette émeraude est marquée d'un petit 'D'. Prisme l'avait volée pour s'en servir sur la statue de la dame de son coeur, Ellesime. On présume que cette gemme était destinée à devenir l'oeil droit. Qu'elle ait ou non servi à la statue, il y a une récompense pour la rapporter aux autorités compétentes.~
+
+//New for BGEE
+@115 = ~Hache de Bala - tueur de magiciens :
+Bala était le prince malfaisant d'un clan de nains d'égouts, qui fut asservi par un cruel mage elfe à Thesk. Si Bala n'avait pas la fourberie de ses semblables, il était encore plus sale et infect que le nain d'égouts moyen. Fatigué de sa vie d'esclave, Bala rampa jusqu'à l'antre du mage et brisa le crâne de l'elfe. Bien que la rumeur prétende que c'est la puanteur du nain qui eut raison du mage, c'est en fait sa hache enchantée qui brisa les défenses magiques de l'elfe. Il est évident après observation que Bala l'a fabriquée lui-même, car elle est très rudimentaire. L'origine de son pouvoir reste cependant mystérieuse. Après une longue carrière consacrée au massacre de mages, Bala mourut sans avoir révélé son secret à ceux qui osaient l'approcher malgré ses poux. Certains disent que la hache tire son pouvoir de la haine farouche que Bala nourrissait à l'égard des magiciens.
+
+PARAMETRES :
+
+Dégâts : 1D8
+Type de dégâts : tranchant
+
+Spécial : le fourvoiement magique affecte la victime à chaque coup réussi.
+Fourvoiement magique : toute créature capable de jeter des sorts et affectée par ce sort voit son pouvoir d'incantation sérieusement diminué. Lorsqu'elle essaie de jeter un sort, ce dernier échoue huit fois sur dix. Les créatures peuvent effectuer des jets de sauvegarde contre les sorts pour se prémunir contre cet effet, mais moyennant une pénalité de - 2.
+
+Poids : 6
+Facteur de vitesse : 7
+Type de compétence : hache
+Type : à une main~
