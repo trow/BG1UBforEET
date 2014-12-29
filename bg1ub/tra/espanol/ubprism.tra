@@ -1,0 +1,104 @@
+//Game text - use Windows encoding
+//journal entries ##
+@119 = ~Prism es un tonto. Realmente se creyó que yo no sabía nada sobre las esmeraldas. Oh bueno... Mala suerte para él. Ganancia para mí.~
+@120 = ~Tal vez no estuvo bien, pero tras haber permitido a Prism completar su obra maestra final, robé uno de los ojos de la estatua. Seguro que alguien pagará mucho por él si lo vendo en el lugar correcto...~
+@121 = ~Tras algo de trabajo, finalmente quité la segunda esmeralda que Prism había usado en su obra maestra final.~
+@122 = ~La historia de Prism es verdaderamente triste.  Lástima que no tuviera un mejor final.  Ah, bueno, al final he ganado algo.  Una recompensa de 300 piezas de oro por la esmeralda que robó.~
+@123 = ~La próxima vez no me haré pasar por otro para ganar un poco de dinero. Aunque Oublek mantuvo su parte, al fin me compensaron por regresar las esmeraldas de Prism.~
+/* Unused line for Captain Brage Journal entry
+@ = ~La próxima vez no me haré pasar por otro para ganar un poco de dinero. Aunque Oublek mantuvo su parte, al fin me compensaron por entregar al Capitán Brage.~
+*/
+@124 = ~Logré llevarme algunas esmeraldas que el escultor Prism estaba usando como ojos en una estatua. Sin embargo, se dió cuenta. Tuve que matarlo cuando se me tiró encima con el cincel.~
+@125 = ~Una esmeralda dió una recompensa de 150 piezas de oro. Si llevo la otra esmeralda me pagarán otras 150. Debe estar cerca del sitio donde conseguí la primera.~
+@126 = ~Sólo conseguí una recompensa reducida por llevar una de las esmeraldas de Prism. Sólo 75 piezas de oro. Será mejor que consulte con otros mercaderes si llego a encontrar la otra esmeralda.~
+//journal entries for bg2 engine
+//Tutu
+@127 = ~Prism el escultor
+ 
+Prism es un tonto. Realmente se creyó que yo no sabía nada sobre las esmeraldas. Oh bueno... Mala suerte para él. Ganancia para mí.~
+@128 = ~Prism el escultor
+ 
+Tal vez no estuvo bien, pero tras haber permitido a Prism completar su obra maestra final, robé uno de los ojos de la estatua. Seguro que alguien pagará mucho por él si lo vendo en el lugar correcto...~
+@129 = ~Prism el escultor
+ 
+Tras algo de trabajo, finalmente quité la segunda esmeralda que Prism había usado en su obra maestra final.~
+@130 = ~Prism el escultor
+ 
+La historia de Prism es verdaderamente triste.  Lástima que no tuviera un mejor final.  Ah, bueno, al final he ganado algo.  Una recompensa de 300 piezas de oro por la esmeralda que robó.~
+@131 = ~Prism el escultor
+ 
+La próxima vez no me haré pasar por otro para ganar un poco de dinero. Aunque Oublek mantuvo su parte, al fin me compensaron por regresar las esmeraldas de Prism.~
+/* Unused line for Captain Brage Journal entry
+@ = ~Prism el escultor
+ 
+La próxima vez no me haré pasar por otro para ganar un poco de dinero. Aunque Oublek mantuvo su parte, al fin me compensaron por entregar al Capitán Brage.~
+*/
+@132 = ~Prism el escultor
+ 
+Logré llevarme algunas esmeraldas que el escultor Prism estaba usando como ojos en una estatua. Sin embargo, se dió cuenta. Tuve que matarlo cuando se me tiró encima con el cincel.~
+@133 = ~Prism el escultor
+ 
+Una esmeralda dio una recompensa de 150 piezas de oro. Si llevo la otra esmeralda me pagarán otras 150. Debe estar cerca del sitio donde conseguí la primera.~
+@134 = ~Prism el escultor
+ 
+Sólo conseguí una recompensa reducida por llevar una de las esmeraldas de Prism. Sólo 75 piezas de oro. Será mejor que consulte con otros mercaderes si llego a encontrar la otra esmeralda.~
+//BGT
+@210 = ~Prism, el ladrón de esmeraldas.
+ 
+Prism es un tonto. Realmente se creyó que yo no sabía nada sobre las esmeraldas. Oh bueno... Mala suerte para él. Ganancia para mí.~
+@211 = ~Prism, el ladrón de esmeraldas.
+ 
+Tal vez no estuvo bien, pero tras haber permitido a Prism completar su obra maestra final, robé uno de los ojos de la estatua. Seguro que alguien pagará mucho por él si lo vendo en el lugar correcto...~
+@212 = ~Prism, el ladrón de esmeraldas.
+ 
+Tras algo de trabajo, finalmente quité la segunda esmeralda que Prism había usado en su obra maestra final.~
+@213 = ~Prism, el ladrón de esmeraldas.
+ 
+La historia de Prism es verdaderamente triste.  Lástima que no tuviera un mejor final.  Ah, bueno, al final he ganado algo.  Una recompensa de 300 piezas de oro por la esmeralda que robó.~
+@214 = ~Prism, el ladrón de esmeraldas.
+ 
+La próxima vez no me haré pasar por otro para ganar un poco de dinero. Aunque Oublek mantuvo su parte, al fin me compensaron por regresar las esmeraldas de Prism.~
+/* Unused line for Captain Brage Journal entry
+@215 = ~Prism, el ladrón de esmeraldas.
+ 
+La próxima vez no me haré pasar por otro para ganar un poco de dinero. Aunque Oublek mantuvo su parte, al fin me compensaron por entregar al Capitán Brage.~
+*/
+@216 = ~Prism, el ladrón de esmeraldas.
+ 
+Logré llevarme algunas esmeraldas que el escultor Prism estaba usando como ojos en una estatua. Sin embargo, se dio cuenta. Tuve que matarlo cuando se me tiró encima con el cincel.~
+@217 = ~Prism, el ladrón de esmeraldas.
+ 
+Una esmeralda dio una recompensa de 150 piezas de oro. Si llevo la otra esmeralda me pagarán otras 150. Debe estar cerca del sitio donde conseguí la primera.~
+@218 = ~Prism, el ladrón de esmeraldas.
+ 
+Sólo conseguí una recompensa reducida por llevar una de las esmeraldas de Prism. Sólo 75 piezas de oro. Será mejor que consulte con otros mercaderes si llego a encontrar la otra esmeralda.~
+
+
+
+
+
+//oublek dialog
+@1000 = ~¡Una de las esmeraldas! La recompensa es de 150 monedas de oro.  Traedme la otra si es que la encontráis.~
+@1001 = ~¡La última esmeralda! La recompensa es de 150 monedas de oro. Bueno, os haréis muy reconocido entre los cazarrecompensas si seguís así.  Si es para mejor o peor, no lo sé.~ ~¡La última esmeralda! La recompensa es de 150 monedas de oro. Bueno, os haréis muy reconocida entre los cazarrecompensas si seguís así.  Si es para mejor o peor, no lo sé.~
+@1002 = ~¡Una de las esmeraldas! Qué bueno veros intentar ganar dinero limpiamente, aunque sea haciendo de cazarrecompensas. Os pagaré menos de lo anunciado. Traedme la otra si es que la encontráis.~
+@1003 = ~¡La última esmeralda! Qué bueno veros intentar ganar dinero limpiamente, aunque sea haciendo de cazarrecompensas.  Os pagaré menos de lo anunciado.  Nos quedaremos con el resto en caso de que decidáis... alterar los hechos en otros negocios.~
+@1004 = ~He venido a cobrar una recompensa.~
+ 
+//prism dialog
+@1100 = ~¡Cómo os atrevéis! ¡Cómo os atrevéis a quitar el brillo de sus ojos!~
+@1101 = ~Tengo mucho que hacer. ¿Pero tal vez podríais ayudar a un tonto escultor con una epifanía?  Por favor, guardad este lugar, porque seguro que vendrá Lobo Gris.  ¡Os lo pagaré con mis últimas posesiones!~
+@1102 = ~¡Esperad! Vos os llevásteis mis esmeraldas. Devolvedlas. Las necesito para terminar mi epifanía. Por favor. Os daré todo lo que poseo.~
+@1103 = ~Ya no las tengo. Se las di a las autoridades. Ya no terminaréis de esculpir ese trozo de piedra.~
+@1104 = ~Ya no las tengo. Las vendí para que las hagan collares.~
+@1105 = ~Sí, me las llevé. Aún tengo una. La otra hace tiempo la vendí.~
+@1106 = ~¿Qué es esto? ¿Un loco me acusa de robo? Morid por vuestros insultos.~
+@1107 = ~¡Esperad! Vos os llevásteis mi esmeralda. Devolvedla. La necesito para terminar mi epifanía. Por favor. Os daré todo lo que poseo.~
+@1108 = ~¿Todo lo que poseéis, eh? Muy bien.~
+@1109 = ~"Lo que poseéis" no me interesa.  Le llevaré estas gemas al guardia y cobraré la recompensa.~
+@1110 = ~No sé de qué estáis hablando.~
+@1111 = ~Dadme la que tenéis. Id a buscar la otra y traedla también. Debo completar esta epifanía. Os daré todo lo que poseo.~
+@1112 = ~Se la di a las autoridades. Ya no podréis recuperarla.~
+@1113 = ~No puedo. Se la di a las autoridades y vengo a por la otra.~
+@1114 = ~No puedo. Está vendida a un mercader, o guardada en algún sitio seguro.~
+@1115 = ~No tengo la gema, pero felizmente me llevaré todo lo que poseéis. Preparaos para morir.~
+@1116 = ~Devolvedla por favor. Debo completar mi epifanía. Os daré todo lo que poseo.~
