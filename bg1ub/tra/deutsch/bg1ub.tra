@@ -18,8 +18,6 @@ EIGENSCHAFTEN:
 Taschendiebstahl: +20%
 Gewicht: 2~
 
-@21    = ~Edie, die Bewerberin fuer die Haendlerliga~
-
 @25    = ~Bauer~
 
 @27    = ~Kaitlin~
@@ -56,7 +54,6 @@ Gewicht: 2~
 @57    = ~Kaishas Gan~
 
 //@60-@88 moved to sound_tmp.tra
-@89    = ~Korrekturen und Wiederherstellungen von Laeden, Tavernen und Wirtshaeusern~
 //#20713
 @90    = ~Alvanhendars Heilmittel und Allerlei~
 //Black Lily's name isn't translated into German

@@ -15,7 +15,6 @@ STATISTICS
 
 Pick Pocketing:  +20% Bonus~
 
-@21   = ~Edie, the Merchant League Applicant~
 
 @25   = ~Farmer~
 
@@ -52,7 +51,6 @@ Pick Pocketing:  +20% Bonus~
 @57   = ~Kaishas Gan~
 
 //@60-@88 moved to sound_tmp.tra
-@89   = ~Store, Tavern and Inn Fixes and Restorations~
 @90   = ~Alvanhendar's Healing and Sundries~
 @91   = ~Black Lily's Shop~
 @92   = ~Tavern~
@@ -163,7 +161,7 @@ Bala was a foul-tempered prince of a gully dwarf clan, which was enslaved by a c
 STATISTICS:
 
 Combat abilities:
-– Miscast Magic affects the victim for the next turn on each successful hit (80% chance of victim's spellcasting failure, Save vs. Spell at -2 negates)
+- Miscast Magic affects the victim for the next turn on each successful hit (80% chance of victim's spellcasting failure, Save vs. Spell at -2 negates)
 
 Damage: 1d8 (slashing)
 Speed Factor: 7
