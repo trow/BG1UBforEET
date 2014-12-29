@@ -1,3 +1,4 @@
+/* ITALIAN */
 @90000 = ~La componente "Fase II (Quest e Interiezioni)" del mod BG1 NPC Project è incompatibile con questo componente.~
 @90001 = ~La componente "Installazione di base" del mod BG1 NPC Project è incompatibile con questo componente.~
 @90002 = ~La componente "Fase I (Dialoghi)" del mod BG1 NPC Project è incompatibile con questo componente.~
@@ -6,8 +7,12 @@
 @90010 = ~Rilevato Tutu.~
 @90011 = ~Rilevato BGT.~
 @90012 = ~Rilevato BG.~
-@90013 = ~Per favore installa su BG, BGT, o Tutu.~
+@90013 = ~Per favore installa su BG, BGT, Tutu, o BGEE.~
 @90014 = ~Per favore installa su BGT o Tutu.~
+@90015 = ~Questo componente o la funzione che svolge è già presente tra le modifiche precedentemente installate.~
+@90016 = ~Questo componente o la funzione che svolge è già presente nel BGEE.~
+@90017 = ~Rilevato BGEE.~
+
 
 @0    = ~Ripristina il secondo livello dell'Isola Ghiacciata~
 @1    = ~L'espansione Tales of the Sword Coast è richiesta per installare questa componente.~
@@ -15,280 +20,32 @@
 @3    = ~Incontro aggiuntivo con Elminster~
 @4    = ~Angelo riconosce Shar-teel~
 @5    = ~Finale della quest della carovana di Kagain~
-@6    = ~Eddard Silvershield~
 @7    = ~Coran e le viverne~
 @8    = ~Kivan e Tazok~
 @9    = ~Branwen e Tranzig~
 @10   = ~Il flirt di Safana~
-@11   = ~Flirt~
 @12   = ~Ricompensa adeguata per la quest di Albert e Rufie~
 @13   = ~Posiziona Entar Silvershield dentro casa sua~
 @14   = ~Scar e la figlia di Sashenstar~
-@15   = ~Corpo di nobildonna~
-@16   = ~Questo è il corpo senza vita di una nobildonna.~
 @17   = ~Quoningar, il Chierico~
 @18   = ~Shilo Chen e l'Ogre-Magi~
-@19   = ~Guanti per Svuotare Tasche~
-@20   = ~Guanti per Svuotare Tasche
-Qualche anno fa, un famoso tagliaborse di nome Fong Moo, conosciuto tanto a Baldur's Gate quanto ad Athkatla, fu trovato morto sulla strada che collega i Cancelli a Beregost.  Sembra che avesse provato a rubare un artefatto a un potente mago e che la sua fuga non abbia avuto successo.  I suoi averi andarono a un nipote, che seguì le orme dello zio diventando particolarmente abile nel borseggio.  Se questi guanti fossero già magici prima di cadere nelle mani di Fong o siano invece imbevuti dell'essenza del maestro, rimane un mistero ancora irrisolto. 
-
-STATISTICHE
-
-Svuotare Tasche: bonus +20%~
 @21   = ~Edie, candidato membro della Lega dei Mercanti~
 @22   = ~Rinforzi mercenari del Pugno Fiammante~
 @23   = ~Correzioni alle creature~
 @24   = ~Ripristina creature~
-@25   = ~Agricoltore~
 @26   = ~Ripristina i nomi di alcune creature~
-@27   = ~Kaitlin~
-@28   = ~Malicia~
-@29   = ~Henrette~
-@30   = ~Sari~
-@31   = ~Mabledale~
-@32   = ~Bunsen~
-@33   = ~Farthendell~
-@34   = ~Arlond~
-@35   = ~Joldenan~
-@36   = ~Carl~
-@37   = ~Jurgen~
-@38   = ~Berden~
-@39   = ~Dath~
-@40   = ~Solgen~
-@41   = ~Borland~
-@42   = ~Galteran~
-@43   = ~Davis~
-@44   = ~Sherman~
-@45   = ~Thurston~
-@46   = ~Quincy~
-@47   = ~Christian~
-@48   = ~Marlon~
-@49   = ~Lady Areana~
-@50   = ~Wade~
-@51   = ~Ludrug~
-@52   = ~Ted~
-@53   = ~Sarah~
-@54   = ~Selaad Gan~
-@55   = ~Baresh~
-@56   = ~Daese~
-@57   = ~Kaishas Gan~
 @58   = ~Correzioni minori ai dialoghi~
 @59   = ~Ripristina alcuni file audio~
 //@60-@88 moved to sound_tmp.tra
 @89   = ~Correzioni varie e ripristino di negozi, taverne e locande~
-@90   = ~Cure e Merci Varie di Alvanhendar~
-@91   = ~Il negozio di Black Lily~
-@92   = ~Taverna~
-@93   = ~Lo Scudo Guardingo~
 @94   = ~Correzioni e ripristino di alcuni oggetti~
-@95   = ~Anello di Pelle Coriacea~
-@96   = ~Ascia di Bala - Ammazza Stregoni:
-Bala era l'irascibile principe di un clan di nani dei fossi, catturato e schiavizzato da un crudele mago di Thesk. Nonostante Bala non presentasse la codardia tipica degli altri membri della sua razza, era comunque più sporco e odioso di qualunque altro nano dei fossi. Stanco della propria prigionia, Bala s'intrufolò nel covo del mago e gli spaccò il cranio. Per quanto le malelingue sostengano che sia stato effettivamente l'odore del nano a sopraffare il mago, fu, in realtà, la sua ascia incantata, capace di dissolvere le protezioni magiche dell'elfo. Data la scarsa qualità della forgiatura, è evidente che l'ascia sia opera dello stesso Bala. Rimangono tuttavia sconosciute le origini del suo potere. Dopo una lunga carriera da ammazza stregoni, Bala morì senza aver rivelato il segreto a quegli impavidi disposti ad avvicinarlo nonostante rischiassero di prendere i pidocchi. Alcuni sostengono che l'ascia traesse potere dal profondo odio manifestato da Bala nei confronti degli stregoni.
-
-STATISTICHE:
-
-Danni:  1D8
-Tipo di danno:  da taglio
-
-Speciale:  lancia Sbagliare Lancio Magia sulla vittima ad ogni colpo andato a segno.
-Sbagliare Lancio Magia:    Ogni creatura toccata da questo incantesimo vede seriamente compromessa la propria capacità di lanciare incantesimi. Quando tale creatura cerca di lanciare un incantesimo, si ha un 80% di possibilità che questo fallisca. Le creature possono salvarsi dall'incantesimo, ma ciò provoca -2 di penalità.
-
-Peso: 6
-Fattore-Velocità: 7
-Tipo di Competenza: Ascia
-Tipo:  a 1 mano
-Non utilizzabile da:
- Druido
- Chierico
- Mago
- Ladro~
-@97   = ~La testa decapitata di una viverna è una visione allo stesso tempo pericolosa e tranquillizzante. Nonostante l'orrore delle zanne delle sue mascelle e dei suoi occhi penetranti, anche i poveri mortali di classe sociale più bassa possono conquistarle.
-
-STATISTICHE:
-
-Peso: 30~
-@98   = ~La pura pelliccia del lupo bianco è soffice e sontuosa. Spesso viene utilizzata per confezionare oggetti diversi, come abiti robusti dei Barbari nordici Uthgardt e le sofisticate ed eleganti stole indossate dalle nobildonne nella regione della Costa della Spada.
-
-STATISTICHE:
-
-Peso: 10~
-@99   = ~L'ankheg è una creatura simile a un verme, lunga tra i 3 e i 6 metri, che vive nelle foreste o nelle migliori zone agricole. E ricoperto di placche o gusci composti di una sostanza estremamente dura ma leggera chiamata chitin. A causa del peso, della dimensione e della durezza, i gusci sono molto ricercati per vari usi, tra cui la costruzione delle corazze.
-
-STATISTICHE:
-
-Peso: 100~
 @100  = ~Correzioni alle aree e ripristino di aree aggiuntive~
 @101  = ~Cadaveri permanenti~
 @102  = ~Immunità razziali degli elfi agli effetti di Sonno e Charme~
 @103  = ~Correzioni alla playlist della musica originale della saga~
 @104  = ~Correzioni al diario di Sarevok~
-@105  = ~Sono guidati da Sarevok Anchev.~
-@106  = ~È stato Sarevok Anchev a incastrarvi.~
-@107  = ~Il veggente ci ha detto che alla guida del Trono di Ferro c'è Sarevok Anchev.~
-@108  = ~Il veggente ci ha detto che è stato Sarevok Anchev a incastrarci per gli omicidi a Candlekeep.~
-@109  = ~[Nota per Davaeorn 1]Davaeorn,
-Ho ricevuto la tua richiesta di altri schiavi. Verranno mandati il più presto possibile. Le cose procedono bene a Baldur's Gate. Abbiamo comprato uno dei palazzi nobili a ovest da usare come base operativa. E un edificio antico, costruito molto probabilmente prima che venisse eretto il secondo muro. Per il modo in cui è costruito, sembra ben protetto da eventuali ladri. Ricordati di domandare a Yeslick se gradisce la nuova sistemazione.
-
-Rieltar.
-Eleint 14, 1367~
-@110  = ~[Nota per Davaeorn 2]Davaeorn,
-I nostri piani stanno procedendo bene. Mio figlio Sarevok è arrivato dal nostro quartier generale di Ordulin. Ci ha portato notizie dai nostri superiori, che si dicono soddisfatti dei risultati ottenuti fino a ora. Vorrei mettere Sarevok al comando degli eserciti mercenari nella regione. Ha già inviato il suo subalterno Tazok nel Bosco Ammantato per assumere il comando degli eserciti in questa zona. Non si perde tempo qui a Baldur's Gate. Abbiamo messo il nostro primo agente tra le fila dell'organizzazione commerciale dei Sette Soli.
-
-Rieltar.
-Uktar 4, 1367~
-@111  = ~[Nota per Davaeorn 3]Davaeorn,
-Avrai probabilmente saputo che il veleno nel ferro ha cominciato a produrre i suoi effetti sulla costa. Visto che le importazioni sono crollate per opera di Tazok, quasi tutto il ferro proviene ora dalle miniere contaminate di Nashkell. La rivolta dei Sythillis ad Amn ci garantisce che gli eserciti di tale nazione non possono occuparsi dei nostri mercenari. Però il Pugno Fiammante ha catturato molti dei mercenari degli Artigli Neri. Tutti quelli catturati hanno sostenuto di essere al servizio degli Zhentarim e quindi hanno allontanato i sospetti dal Trono di Ferro. Ho mandato Tranzig ad aiutare i mercenari a trasportare il ferro alla nostra base nei Boschi Ammantati. Ha portato con sé molti sacchi, così farà molti viaggi nei Boschi Ammantati da solo, diminuendo in questo modo la probabilità che i segugi del Pugno Fiammante possano scoprire il nostro rifugio.
-
-Rieltar.
-Ches 21, 1368~
-@112  = ~Il diario personale di Sarevok
-
-14th of Eleint, 1367:  Da oggi al Trono di Ferro è vietato operare all'interno dei confini di Cormyr. E' un grave colpo per il Trono di Ferro, ma Reiltar potrà sfruttare questa grande occasione per avanzare la sua proposta al Consiglio Supremo. Se tutto va bene, potremo iniziare l'operazione entro un anno. 
-
-28th of Eleint, 1367:  Daveorn ha inviato un messaggio a Reiltar per informarlo che le miniere del Bosco Ammantato sono state prosciugate e sono pronte. Questa notizia dovrebbe contribuire a convincere il Consiglio Supremo del Trono.
-
-19th of Marpenoth, 1367:  Il Consiglio del Trono di Ferro appoggerà il piano di Reiltar. Adesso egli è a capo del progetto e dispone di tutte le risorse necessarie. Dal canto mio, ho espresso a mio 'padre' il desiderio di prendere parte alle operazioni lungo la Costa della Spada ed egli ha accettato.  Mi manderà, in qualità di rappresentante, a prendere contatto con alcuni mercenari attivi ad est.  Durante la nostra conversazione ha accennato a mia madre. Ha detto che non dovrò tradirlo come ha fatto lei o mi spetterà la stessa sorte.  Le sue minacce sono deboli e vuote e non vi presterò ascolto ancora per molto. 
-
-30th of Marpenoth, 1367: Ho incontrato i Capi del Gelo e gli Artigli Neri. Non vado pazzo per Ardenor, il Capo del Gelo, ma Taurgosz sembra un uomo d'onore. Per tutto l'anno dovrò lavorare con dei mercenari.
-
-3rd of Uktar, 1367:  La scorsa notte mia madre è venuta a trovarmi in sogno. Mentre parlava il volto le si gonfiava e impallidiva, e la sua voce diventava sempre più strozzata. Mi ha supplicato di salvarla da Reiltar. Ho visto che veniva strangolata, ma non ho fatto niente. E' stato solo un sogno.
-
-8th of Uktar, 1367:  Oggi sono tornato a Baldur's Gate per incontrare Rieltar.  Il folle continua a chiamarmi suo figlio e per ora lo lascerò fare.  Crede che gli sia leale perché mi ha cresciuto.  Ebbene, leale lo sono, ma solo finché mi farà comodo esserlo.  Alloggia nel palazzo di una famiglia nobile decaduta e ha detto che tutto sta andando liscio.  
-
-17th of Nightal, 1367:  Mulahey ha preso posizione nelle miniere di Nashkel e dovrebbe già essere al lavoro per convincere i coboldi a seguirlo come loro nuovo comandante.  Sono pochi gli schiavi che hanno incominciato a estrarre il metallo dalle miniere del Bosco Ammantato, ma Reiltar mi ha assicurato che, appena inizieranno le scorribande, avremo una folta schiera di nuovi schiavi.
-
-6th of Hammer, 1368:  Il Pugno Fiammante sembra essersi finalmente accorto delle operazioni dei nostri mercenari e hanno disposto diversi piccoli contingenti lungo la Strada della Costa per cercare di fermare i saccheggi dei banditi.  Se anche dei mercenari dovessero essere catturati, la gran parte di essi crede di essere al servizio degli Zentharim, perciò il Trono di Ferro non dovrebbe avere guai.  Sono sicuro che gli Zhent a Darkhold non saranno felici di sapere che il loro nome è stato screditato, ma non possiamo permettere che le autorità fiutino le nostre tracce.
-
-9th of Hammer, 1368:  Ho deciso di approfittarne per fare visita a Candlekeep.  Ho aspettato a lungo a indagare le profezie di Alaundo e adesso devo sapere se il sogno dice la verità.  Non crederò alle parole di fantasmi senza prove e il sacerdote di Bhaal che ho consultato non è stato di alcun aiuto. Era vecchio ed è morto rapidamente, nella mia presa.  Se le parole sono vere, avrò senz'altro accoliti più forti di quelli attuali.
-
-14th of Alturiak, 1368:  Finalmente a Candlekeep, I monaci qui a Candlekeep mi sono stati di grande aiuto. Secondo quanto ho letto, nelle mie vene scorre veramente il sangue di Bhaal. Le sue profezie sono (indubbiamente) ambigue, ma io credo di averle capite:  Bhaal aveva previsto la sua morte imminente e ha sparso la sua essenza nel mondo. Queste progenie portano il marchio del caos, hanno potere senza cognizione, sentiranno il sangue di un dio dentro di loro e saranno indotti a portare morte e distruzione.  "I loro omicidi risveglieranno il padre, e tramite di essi egli risorgerà."  La frase è ambigua, ma evidentemente ciò significa che la morte causata dai suoi figli ne provocherà l'ascensione.  Poiché mio padre era il dio delle Stragi, per dimostrare di essere il suo unico degno erede dovrò agire secondo il suo insegnamento.  Morte su scala divina. 
-
-15th of Alturiak, 1368:  Ulteriori ricerche.  Sembra che Bhaal abbia generato centinaia, se non migliaia, di progenie bastarde, ma che solo una ventina svilupperà a pieno il proprio potenziale . . . e di questi, cinque faranno tremare di paura gli stessi dei. Ma padre Gorion mi preoccupa.  Gli scritti di Alaundo comprendono alcuni altre oscuri passaggi in cui si fa menzione del "protetto di Gorion," e il monaco ha in effetti cresciuto un giovane di nome <CHARNAME> che, per quanto sembri un cucciolo beatamente ignorante, mi è anche stranamente familiare.  Gorion sembra interessato alle mie letture. Devo essere più cauto nelle ricerche.
-
-16th of Alturiak, 1368:  Dovrò lasciare Candlekeep quanto prima. Sono ormai sicuro che Padre Gorion abbia intuito quali sono i miei veri natali.  Se solo potessi ucciderlo, ma temo che non riuscirei a farlo fuori nella sua dannata biblioteca.  Di una cosa sono sicuro: che <CHARNAME> in realtà sia un altro discendente di Bhaal. Ne porta chiaramente i segni. Ciò spiegherebbe anche la curiosità di Gorion circa i miei studi, così come la presenza del nome di <CHARNAME> nella profezia.  Non posso fare niente in questo momento, ma ritornerò e farò fuori quel marmocchio. Sarei sciocco a lasciare in vita uno dei mie fratelli, specialmente uno cresciuto tra gli Arpisti (perché Gorion è sicuramente uno di loro).
-
-17th of Ches, 1368:  Tutto procede nel migliore dei modi. Il metallo proveniente da Nashkel ha incominciato a deteriorarsi e i miei mercenari hanno fatto un buon lavoro distruggendo tutte le carovane del ferro dirette a Baldur's Gate. Alcuni mercenari sono stati catturati, ma la gente crede che siano al soldo degli Zhent, perciò il Trono di Ferro ne è rimasto fuori. Sono certo che gli Zhent di Darkhold non saranno affatto contenti di sapere che è stato fatto il loro nome. Nei prossimi mesi dovrò fare attenzione ai loro emissari.
-
-28th of Tarsakh, 1368: Credo di avere finalmente il tempo di occuparmi di quel vecchiaccio di Gorion e del suo moccioso. Dirò ai miei uomini che sarò via per alcune settimane.
-
-19th of Kythorn, 1368:  Ho a malapena il tempo di scrivere, ma non posso trascurare troppi i miei diari.  I futuri morti devono sapere come il Signore dell'Omicidio è tornato da loro.  Magari mi pagherò un scriba, quando ne avrò il tempo, ma al momento attendo l'inizio del nostro aspettacolo a minuti.  Il mio autoproclamato padre, Rieltar, è di sopra con due rappresentanti dei Cavalieri dello Scudo.  Finora ha ostacolato ogni mio tentativo di esasperare il conflitto tra Amn e Baldur's Gate. Sono terribilmente dispiaciuto, 'padre,' ma la mia vera discendenza chiama e tu sei d'intralcio.  Nella remota possibilità che il nostro prossimo incontro non finisca in un bagno di sangue, mi assicurerò di dare precise istruzioni ai replicanti sul modo in cui Rieltar deve morire.  L'ideale sarebbe strangolarlo.
-
-Questo diario sembra essere importante. Probabilmente dovresti portarlo con te.~
-
-@113   = ~Anello con Sigillo~
-@114   = ~Questo è un Anello con Sigillo con un rubino incastonato.~
-@115   = ~Questo componente o la funzione che svolge è già presente tra le modifiche precedentemente installate.~
-
 
 /* new v13.1 */
-/* ITALIAN */
 // tp2 strings
 @116 = ~Modifica di Prism e gli Smeraldi~
-
-
-//item strings
-@117 = ~Uno smeraldo è un berillo verde brillante, sgrezzato e tagliato a forma di prisma rettangolare in fase di raffinazione. Gli smeraldi sono spesso collegati al benessere, e come tali vengono utilizzati a scopo ornamentale. Questo smeraldo ha una piccola 'L' incisa su di esso. E' stato rubato da Prism per decorare la statua della donna amata, Ellesime. Si suppone che questa gemma fosse destinata a rappresentare l'occhio sinistro della statua. C'è una taglia da riscattare consegnando lo smeraldo alle autorità competenti.~
-@118 = ~Uno smeraldo è un berillo verde brillante, sgrezzato e tagliato a forma di prisma rettangolare in fase di raffinazione. Gli smeraldi sono spesso collegati al benessere, e come tali vengono utilizzati a scopo ornamentale. Questo smeraldo ha una piccola 'R' incisa su di esso. E' stato rubato da Prism per decorare la statua della donna amata, Ellesime. Si suppone che questa gemma fosse destinata a rappresentare l'occhio destro della statua. C'è una taglia da riscattare consegnando lo smeraldo alle autorità competenti.~
-
-//journal entries ##
-@119 = ~Che babbeo quel Prism. Ha abboccato subito quando ho detto di non sapere nulla degli smeraldi scomparsi. Va beh... Più povero lui. Più ricco io.~
-@120 = ~Forse è stato uno sbaglio, ma dopo aver permesso a Prism di completare il suo 'ultimo capolavoro' ho preso uno degli smeraldi incastonati nella statua. Nel posto giusto dovrebbe garantire una bella sommetta, o al limite mi prendo una bella ricompensa...~
-@121 = ~Dopo un pò di fatica, sono riuscito a togliere anche il secondo smeraldo rubato da Prism per farne un occhio nel suo 'ultimo capolavoro'.~
-@122 = ~La storia di Prism era davvero triste.  Un peccato che non ci sia stata lieta fine.  E va beh, alla fine io ci guadagno.  Una taglia di 300 pezzi d'oro per gli smeraldi rubati.~
-@123 = ~Meglio ricordarsi di non far finta di essere qualcun altro per fare soldi facili la prossima volta. Anche se Oublek s'è tenuto una parte, ho comunque ricevuto la ricompensa per aver riconsegnato gli smeraldi rubati.~
-/* Unused line for Captain Brage Journal entry
-@ = ~Meglio ricordarsi di non far finta di essere qualcun altro per fare soldi facili la prossima volta. Anche se Oublek s'è tenuto una parte, ho comunque ricevuto la ricompensa per aver catturato Capitan Brage.~
-*/
-@124 = ~Ero riuscito ad impossessarmi di un paio di smeraldi che lo scultore Prism stava usando come occhi di una statua. Però mi ha colto sul fatto. Sono stato costretto a farlo fuori dopo che mi ha assalito con uno scalpello.~
-@125 = ~Uno smeraldo ha fruttato 150 pezzi d'oro. Posso averne altrettanti riportando anche l'altro. Non può essere troppo lontano da dove ho trovato il primo.~
-@126 = ~Solo metà di una ricompensa già ridotta per aver consegnato uno degli smeraldi di Prism. 75 miseri pezzi d'oro. Se dovesse capitarmi l'altro smeraldo tra le mani, sarà più furbo controllare quanto posso farci vendendolo a qualcuno prima di prendere la taglia.~
-//journal entries for bg2 engine
-//Tutu
-@127 = ~Prism lo scultore
-
-Che babbeo quel Prism. Ha abboccato subito quando ho detto di non sapere nulla degli smeraldi scomparsi. Va beh... Più povero lui. Più ricco io.~
-@128 = ~Prism lo scultore
-
-Forse è stato uno sbaglio, ma dopo aver permesso a Prism di completare il suo 'ultimo capolavoro' ho preso uno degli smeraldi incastonati nella statua. Nel posto giusto dovrebbe garantire una bella sommetta, o al limite mi prendo una bella ricompensa...~
-@129 = ~Prism lo scultore
-
-Dopo un pò di fatica, sono riuscito a togliere anche il secondo smeraldo rubato da Prism per farne un occhio nel suo 'ultimo capolavoro'.~
-@130 = ~Prism lo scultore
-
-La storia di Prism era davvero triste.  Un peccato che non ci sia stata lieta fine.  E va beh, alla fine io ci guadagno.  Una taglia di 300 pezzi d'oro per gli smeraldi rubati.~
-@131 = ~Prism lo scultore
-
-Meglio ricordarsi di non far finta di essere qualcun altro per fare soldi facili la prossima volta. Anche se Oublek s'è tenuto una parte, ho comunque ricevuto la ricompensa per aver riconsegnato gli smeraldi rubati.~
-/* Unused line for Captain Brage Journal entry
-@ = ~Prism lo scultore
-
-Meglio ricordarsi di non far finta di essere qualcun altro per fare soldi facili la prossima volta. Anche se Oublek s'è tenuto una parte, ho comunque ricevuto la ricompensa per aver catturato Capitan Brage.~
-*/
-@132 = ~Prism lo scultore
-
-Ero riuscito ad impossessarmi di un paio di smeraldi che lo scultore Prism stava usando come occhi di una statua. Però mi ha colto sul fatto. Sono stato costretto a farlo fuori dopo che mi ha assalito con uno scalpello.~
-@133 = ~Prism lo scultore
-
-Uno smeraldo ha fruttato 150 pezzi d'oro. Posso averne altrettanti riportando anche l'altro. Non può essere troppo lontano da dove ho trovato il primo.~
-@134 = ~Prism lo scultore
-
-Solo metà di una ricompensa già ridotta per aver consegnato uno degli smeraldi di Prism. 75 miseri pezzi d'oro. Se dovesse capitarmi l'altro smeraldo tra le mani, sarà più furbo controllare quanto posso farci vendendolo a qualcuno prima di prendere la taglia.~
-//BGT
-@210 = ~Prism, il ladro di smeraldi.
-
-Che babbeo quel Prism. Ha abboccato subito quando ho detto di non sapere nulla degli smeraldi scomparsi. Va beh... Più povero lui. Più ricco io.~
-@211 = ~Prism, il ladro di smeraldi.
-
-Forse è stato uno sbaglio, ma dopo aver permesso a Prism di completare il suo 'ultimo capolavoro' ho preso uno degli smeraldi incastonati nella statua. Nel posto giusto dovrebbe garantire una bella sommetta, o al limite mi prendo una bella ricompensa...~
-@212 = ~Prism, il ladro di smeraldi.
-
-Dopo un pò di fatica, sono riuscito a togliere anche il secondo smeraldo rubato da Prism per farne un occhio nel suo 'ultimo capolavoro'.~
-@213 = ~Prism, il ladro di smeraldi.
-
-La storia di Prism era davvero triste.  Un peccato che non ci sia stata lieta fine.  E va beh, alla fine io ci guadagno.  Una taglia di 300 pezzi d'oro per gli smeraldi rubati.~
-@214 = ~Prism, il ladro di smeraldi.
-
-Meglio ricordarsi di non far finta di essere qualcun altro per fare soldi facili la prossima volta. Anche se Oublek s'è tenuto una parte, ho comunque ricevuto la ricompensa per aver riconsegnato gli smeraldi rubati.~
-/* Unused line for Captain Brage Journal entry
-@215 = ~Prism, il ladro di smeraldi.
-
-Meglio ricordarsi di non far finta di essere qualcun altro per fare soldi facili la prossima volta. Anche se Oublek s'è tenuto una parte, ho comunque ricevuto la ricompensa per aver catturato Capitan Brage.~
-*/
-@216 = ~Prism, il ladro di smeraldi.
-
-Ero riuscito ad impossessarmi di un paio di smeraldi che lo scultore Prism stava usando come occhi di una statua. Però mi ha colto sul fatto. Sono stato costretto a farlo fuori dopo che mi ha assalito con uno scalpello.~
-@217 = ~Prism, il ladro di smeraldi.
-
-Uno smeraldo ha fruttato 150 pezzi d'oro. Posso averne altrettanti riportando anche l'altro. Non può essere troppo lontano da dove ho trovato il primo.~
-@218 = ~Prism, il ladro di smeraldi.
-
-Solo metà di una ricompensa già ridotta per aver consegnato uno degli smeraldi di Prism. 75 miseri pezzi d'oro. Se dovesse capitarmi l'altro smeraldo tra le mani, sarà più furbo controllare quanto posso farci vendendolo a qualcuno prima di prendere la taglia.~
-
-
-//oublek dialog
-@1000 = ~Uno degli smeraldi! Ci sono 150 pezzi d'oro di ricompensa per te.  Se dovessi trovare anche l'altro portalo qui da me, mi raccomando.~
-@1001 = ~L'ultimo degli smeraldi! Eccoti altri 150 pezzi d'oro di ricompensa. Caspita, se continui così ti farei certo un nome tra i cacciatori di taglie. Se sia un bene o un male, questo non lo so.~
-@1002 = ~Uno degli smeraldi! E' bello vedere che stai cercando di guardagnare soldi onestamente, anche se cacciare taglie è un lavoro riprovevole. Sarai pagato, ma meno di quanto stabilito. Se dovessi trovare anche l'altro portalo qui da me, mi raccomando.~
-@1003 = ~L'ultimo degli smeraldi! The last of the Emeralds! E' bello vedere che stai cercando di guardagnare soldi onestamente, anche se cacciare taglie è un lavoro riprovevole. Sarai pagato, ma meno di quanto stabilito.  Il resto sarà trattenuto come cauzione nel caso un giorno ti venga voglia di... "colorare" i fatti in qualche altro affare.~
-@1004 = ~Sono qui per una taglia, e collezionare la ricompensa che mi spetta.~
-
-//prism dialog
-@1100 = ~Come osi! Come osi privare i suoi occhi della luce!~
-@1101 = ~Ho ancora tanto lavoro da fare. Ma forse accetteresti di aiutare un folle scultore a completare la sua ultima opera adesso?  Ti prego, stai qui di guardia perchè sicuramente verrà Greywolf.  Ti pagherò con i miei ultimi denari!~
-@1102 = ~Fermo lì! Hai preso gli smeraldi. Li devo riavere. Ne ho bisogno per finire quest'opera. Per favore, ti prego di restituirli. Ti darò ogni altra cosa in mio possesso.~
-@1103 = ~Non ci sono più. Restituiti alle autorità. Non finirai mai quel pezzo di roccia ora.~
-@1104 = ~Non ci sono più. Venduti. A quest'ora saranno già al collo di qualche cicciona.~
-@1105 = ~Si, li ho presi io. Ne ho uno. L'altro non ce l'ho più da tempo.~
-@1106 = ~Come? Un pazzo che mi accusa di furto? Morirai per questo insulto.~
-@1107 = ~Fermo lì! Hai preso uno smeraldo. Lo devo riavere. Ne ho bisogno per finire quest'opera. Per favore, ti prego di restituirlo. Ti darò ogni altra cosa in mio possesso.~
-@1108 = ~Ogni altra cosa in tuo possesso, eh?  Va bene, accetto.~
-@1109 = ~"Ogni altra cosa" non mi interessa.  Porto sia te che le gemme al corpo di guardia, dove mi sarà data una bella ricompensa.~
-@1110 = ~Non so di che cosa tu stia parlando.~
-@1111 = ~Dammi quello che hai. Trova l'altro e portamelo. Devo finire la mia opera. Ti darò ogni altro mio avere.~
-@1112 = ~L'ho consegnato alle autorità. Non lo rivedrai mai più.~
-@1113 = ~Impossibile. L'ho consegnato alle autorità e sono venuto a prendere anche l'altro per riscuotere la taglia.~
-@1114 = ~Impossibile. Venduto a un qualche mercante o messo via in qualche posto sperduto.~
-@1115 = ~Il gioiello non c'è più. Sarà un piacere prendere anche tutto il resto. Preparati a morire.~
-@1116 = ~Ti prego di restituirlo. Devo finire la mia opera. Ti darò ogni altro mio avere.~
-
 @219   = ~Il Duca Eltan dal Comandante della Capitaneria di Porto~
