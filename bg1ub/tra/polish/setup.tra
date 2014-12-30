@@ -4,25 +4,25 @@
 @90000 = ~Komponent modyfikacji BG1 NPC Project "The BG1 NPC Project: Phase II (Quests and Interjections) stwarza problemy z wybranym komponentem.~ 
 @90001 = ~Komponent modyfikacji BG1 NPC Project "The BG1 NPC Project: Core Install" stwarza problemy z wybranym komponentem.~
 @90002 = ~Komponent modyfikacji BG1 NPC Project "The BG1 NPC Project: Phase I (Banters)" stwarza problemy z wybranym komponentem.~ 
-@90003 = ~Pó³nocne Opowieœci z Wybrze¿a Mieczy stwarza problemy z wybranym komponentem.~
+@90003 = ~Polnocne Opowiesci z Wybrzeza Mieczy stwarzaja problemy z wybranym komponentem.~
 
 @90010 = ~Instalacja Tutu wykryta.~ 
 @90011 = ~Instalacja BGT wykryta.~
 @90012 = ~Instalacja BG wykryta.~
-@90013 = ~Proszê zainstalowaæ BG, BGT, Tutu lub BGEE.~ 
-@90014 = ~Proszê zainstalowaæ BGT lub Tutu.~
+@90013 = ~Prosze zainstalowac BG, BGT, Tutu lub BGEE.~ 
+@90014 = ~Prosze zainstalowa‘ BGT lub Tutu.~
 
-@90015 = ~Funkcjonalnoœæ tego komponentu ju¿ istnieje lub jest zast¹piona, przez któryœ z ju¿ zainstalowanych modów.~
-@90016 = ~Funkcjonalnoœæ tego komponentu jest ju¿ w BGEE.~
+@90015 = ~Funkcjonalnosc tego komponentu juz istnieje lub jest zastapiona, przez ktorys z juz zainstalowanych modow.~
+@90016 = ~Funkcjonalnosc tego komponentu jest juz w BGEE.~
 @90017 = ~Instalacja BGEE wykryta.~
 
 
-@0     = ~Przywrócenie drugiego poziomu Lodowej Wyspy~ 
-@1     = ~Ten komponent wymaga Opowieœci z Wybrze¿a Mieczy.~
+@0     = ~Przywrocenie drugiego poziomu Lodowej Wyspy~ 
+@1     = ~Ten komponent wymaga Opowiesci z Wybrzeza Mieczy.~
 @2     = ~Tajemniczy flakonik~
 @3     = ~Dodatkowe spotkanie z Elminsterem~ 
 @4     = ~Angelo reaguje na Shar-teel~
-@5     = ~Mo¿liwoœæ ukoñczenia zadania Kagaina~ 
+@5     = ~Mozliwosc ukonczenia zadania Kagaina~ 
 
 @7     = ~Coran i wiwerny~
 @8     = ~Kivan i Tazok~
@@ -31,31 +31,31 @@
 
 @12    = ~Sensowna nagroda Alberta~ 
 @13    = ~Umieszczenie Entara Srebrnej Tarczy w jego domu~
-@14    = ~Scar i córka Sashenstarów~ 
+@14    = ~Scar i corka Sashenstarow~ 
 
-@17    = ~Kap³an Quoningar~
+@17    = ~Kaplan Quoningar~
 @18    = ~Shilo Chen i Ogrzy-Mag~
 
 @21    = ~Edie, kandydatka do Ligii Kupieckiej~
-@22    = ~Poprawki dla Najemników P³omiennej Piêœci~
+@22    = ~Poprawki dla Najemnikow Plomiennej Piesci~
 @23    = ~Poprawki istot~
-@24    = ~Przywrócenie istot~
+@24    = ~Przywrocenie istot~
 
-@26    = ~Przywrócenie imion istotom~
+@26    = ~Przywrocenie imion istotom~
 
-@58    = ~Przywrócenie pomniejszych dialogów~
-@59    = ~Przywrócenie dŸwiêków~
+@58    = ~Przywrocenie pomniejszych dialogow~
+@59    = ~Przywrocenie dzwiekow~
 
-@89    = ~Poprawki i przywrócenia dla sklepów, tawern i karczm ~
+@89    = ~Poprawki i przywrocenia dla sklepow, tawern i karczm~
 
-@94    = ~Przywrócenie i poprawki przedmiotów~
+@94    = ~Przywrocenie i poprawki przedmiotow~
 
-@100   = ~Poprawki i przywrócenia dla obszarów~
-@101   = ~Wieczne zw³oki~
-@102   = ~Elfia odpornoœæ na sen i uroki~
-@103   = ~Poprawki listy utworów dla Oryginalnej Sagi~
-@104   = ~Poprawki dla pamiêtnika Sarevoka~
+@100   = ~Poprawki i przywrocenia dla obszarow~
+@101   = ~Wieczne zwloki~
+@102   = ~Elfia odpornosc na sen i uroki~
+@103   = ~Poprawki listy utworow dla Oryginalnej Sagi~
+@104   = ~Poprawki dla pamietnika Sarevoka~
 
 /* new v13.1 */
 @116 = ~Prism i Szmaragdy~
-@219 = ~Ksi¹¿ê Eltan w Budynku kapitanatu~
+@219 = ~Ksiaze Eltan w Budynku kapitanatu~
