@@ -1,14 +1,14 @@
-/*Declaration of additional Tutu Platform Variables needed for crossplatform coding Tutu/BGT/BG1*/
+/*Declaration of BGEE Platform Variables needed for crossplatform coding Tutu/BGT/BG1*/
 
     /* basic tutu var */
-    OUTER_SPRINT "tutu_var" "_"
+    OUTER_SPRINT "tutu_var" ""
 
     /* state differences */
     OUTER_SET BGT_DiffState = 14
     OUTER_SPRINT "GiveGold" "GivePartyGold"
 
     /* area files */
-    OUTER_SPRINT "NashkelMines" "fw5400"
+    OUTER_SPRINT "NashkelMines" "ar5400"
     
     /* added journal entries in scripts */
     OUTER_SET AddJournal_0 = 128
@@ -31,12 +31,12 @@
     OUTER_SPRINT UNSOLVED_JOURNAL_3 "UNSOLVED_JOURNAL @127"
 
     /* EraseJournalEntry() for Tutu and BGT*/
-    OUTER_SPRINT "ERASEJOURNALENTRY_0" "ErasejournalEntry(@127)"
-    OUTER_SPRINT "ERASEJOURNALENTRY_1" "ErasejournalEntry(@128)"
-    OUTER_SPRINT "ERASEJOURNALENTRY_2" "ErasejournalEntry(@129)"
-    OUTER_SPRINT "ERASEJOURNALENTRY_3" "ErasejournalEntry(@133)"
-    OUTER_SPRINT "ERASEJOURNALENTRY_4" "ErasejournalEntry(@134)"
-    OUTER_SPRINT "ERASEJOURNALENTRY_5" "ErasejournalEntry(@132)"
+    OUTER_SPRINT "ERASEJOURNALENTRY_PRISM_0" "ErasejournalEntry(99999210)"
+    OUTER_SPRINT "ERASEJOURNALENTRY_PRISM_1" "ErasejournalEntry(99999211)"
+    OUTER_SPRINT "ERASEJOURNALENTRY_PRISM_2" "ErasejournalEntry(99999212)"
+    OUTER_SPRINT "ERASEJOURNALENTRY_PRISM_3" "ErasejournalEntry(99999217)"
+    OUTER_SPRINT "ERASEJOURNALENTRY_PRISM_4" "ErasejournalEntry(99999218)"
+    OUTER_SPRINT "ERASEJOURNALENTRY_PRISM_5" "ErasejournalEntry(99999216)"
 
     /* Face orientation for CreateCreature([xxx.yyy]%FACE_x%) */
     OUTER_SPRINT ~FACE_0~ ~,0~

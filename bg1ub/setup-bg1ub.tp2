@@ -1,6 +1,5 @@
 /* to do:
-readme update! (+ bg1ub.txt)
-
+-readme update! (+ bg1ub.txt)
 
 
 13.2:
@@ -16,7 +15,11 @@ BG: corrected lib entry, to enable correct journal entries in Prologue
 
 BG: overwrites in-game scroll Raise Dead (SCRL63.itm), so now it works (Please note: works only at the place of the NPC's death. The NPC will be created next to the PC (also, if the PC is further away. I did not test what happens if the PC is in a different area, but I guess this will lead to problems. Important: The scroll is only applicable for the same game. You cannot save and reload! Inside the same game, leavng and re-entering the area of the death site seems to be no problem.)
 
+BGT/Tutu: "Prism": Journal entried of Prism quest should now be correctly erased after turning the gems in. (Changed the custom tphs for the Prism component: giving the OUTER_SPRINT variables unique names to prevent mixup with the ones from the lib, although that was not necessary, and changed the REPLACE method to replacing high numbers with string references in the tp2 because REPLACE_TRANS_ACTIOn does not evaluate tra-references, which did the trick. Also, the folder structure and the place of INCLUDE for the Prism tpas was changed slightly.
+
 Polish: for BG1, the correct text format is applied - by Zed Nocear
+
+Prism and the Emeralds Tweak: Added fix to make install order for bg1ub and BG1NPC Project / Gavin no longer a problem (Added a REPLACE_ACTION_TEXT for the whole Oublek.dlg and Prism.dlg to account for new states introduced by NPC mods doing I_C_T with passback line (namely BG1NPC Project and Gavin))
 */
 
 
@@ -297,7 +300,7 @@ GIANHIT.EFF
 MONSTHIT.EFF
 UNDEDHIT.EFF
 
-VERSION ~v13.2_140924~
+VERSION ~v13.2_141229~
 README ~bg1ub/BG1UB-Readme.html~
 
 ALWAYS
@@ -310,12 +313,13 @@ ALWAYS
   INCLUDE ~%Z!PL_TRA_Patch%/BG1&BG2UniversalPolishFont.tpa~
     //all TRAs declared in LANGUAGE must be reloaded
   LOAD_TRA "bg1ub/tra/%LANGUAGE%/setup.tra"
+  LOAD_TRA "bg1ub/tra/%LANGUAGE%/bg1ub.tra"
 
   // INCLUDE ~%MOD_FOLDER%/handle_charsets.tpa~
   ACTION_DEFINE_ARRAY ub#noconvert BEGIN setup END
   ACTION_DEFINE_ARRAY ub#reload BEGIN bg1ub END
 
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY ub#charsets BEGIN
+/*  ACTION_DEFINE_ASSOCIATIVE_ARRAY ub#charsets BEGIN
     deutsch => cp1252
     english => cp1252
     espanol => cp1252
@@ -324,6 +328,7 @@ ALWAYS
     polish => cp1250
     russian => cp1251
   END
+*/
 
   LAF HANDLE_CHARSETS
     INT_VAR
@@ -341,7 +346,7 @@ ALWAYS
       PRINT @90010
       INCLUDE ~bg1ub/lib/g3_tutu_cpmvars.tpa~
       INCLUDE ~bg1ub/lib/tutu_area_script_assign.tph~
-	INCLUDE ~bg1ub/lib/rr_tutubgtbgee_addvars.tpa~
+	  INCLUDE ~bg1ub/lib/rr_tutubgtbgee_addvars.tpa~
       COPY ~bg1ub/tra/%LANGUAGE%/extra_tmp.tra~ ~bg1ub/tra/%LANGUAGE%/extra.tra~
         EVALUATE_BUFFER
       LOAD_TRA ~bg1ub/tra/%LANGUAGE%/extra.tra~
@@ -1734,7 +1739,7 @@ END ELSE BEGIN
   COMPILE ~bg1ub/quoningar/ubquon.d~
 END
 
-ADD_JOURNAL @20176 @20177 USING ~bg1ub/tra/%LANGUAGE%/extra_tmp.tra~ // Add journal entries for BGEE
+ADD_JOURNAL @20176 @20177 USING ~bg1ub/tra/%LANGUAGE%/extra.tra~ // Add journal entries for BGEE
 
 <<<<<<<< .../bg1ub/eb_ar0120.baf
 IF
@@ -1798,7 +1803,7 @@ END ELSE BEGIN
   COMPILE ~bg1ub/shilochen/ubshilo.d~
 END
 
-ADD_JOURNAL @20178 @20179 USING ~bg1ub/tra/%LANGUAGE%/extra_tmp.tra~ // Add journal entries for BGEE
+ADD_JOURNAL @20178 @20179 USING ~bg1ub/tra/%LANGUAGE%/extra.tra~ // Add journal entries for BGEE
 
 <<<<<<<< .../bg1ub/ub_ar0705sc.baf
 IF
@@ -5323,12 +5328,14 @@ COPY_EXISTING ~%tutu_var%SCRL3F.ITM~ ~override~ // Sarevok's Diary
 
 BEGIN @116 /* ~Prism and the Emeralds Tweak~ */
 
+LOAD_TRA "bg1ub/tra/%LANGUAGE%/ubprism.tra"
+
 ACTION_IF GAME_IS ~bg1~ THEN BEGIN
- INCLUDE ~bg1ub/abPrismEmeralds/tph/rr_bg1_addvars.tpa~
+ INCLUDE ~bg1ub/abPrismEmeralds/tph/prism_bg1_addvars.tpa~
 END
 
-ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
- INCLUDE ~bg1ub/abPrismEmeralds/tph/rr_totsc_addvars.tpa~
+ACTION_IF GAME_IS ~totsc~ THEN BEGIN
+ INCLUDE ~bg1ub/abPrismEmeralds/tph/prism_totsc_addvars.tpa~
 END
 
 ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
@@ -5340,39 +5347,28 @@ ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
 END
 
 ACTION_IF GAME_IS ~tutu tutu_totsc~ THEN BEGIN
- INCLUDE ~bg1ub/abPrismEmeralds/tph/rr_tutu_addvars.tpa~
+ INCLUDE ~bg1ub/abPrismEmeralds/tph/prism_tutu_addvars.tpa~
 END
 
 ACTION_IF GAME_IS ~bgt~ THEN BEGIN
- INCLUDE ~bg1ub/abPrismEmeralds/tph/rr_bgt_addvars.tpa~
+ INCLUDE ~bg1ub/abPrismEmeralds/tph/prism_bgt_addvars.tpa~
 END
 
 ACTION_IF GAME_IS ~bgee~ THEN BEGIN
- INCLUDE ~bg1ub/abPrismEmeralds/tph/rr_bgee_addvars.tpa~
+ INCLUDE ~bg1ub/abPrismEmeralds/tph/prism_bgee_addvars.tpa~
  ADD_JOURNAL EXISTING TITLE (#31383) @127 @128 @129 @130 @131 @132 @133 @134 USING ~bg1ub/tra/%LANGUAGE%/ubprism.tra~
 END
 
 ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee~ THEN BEGIN
-
-//BG2 Method specific variables
-OUTER_SET fj_flags = 0b00100001
-OUTER_SPRINT abContainerEnable ~DestroyItem("abgfEyeL")
-DestroyItem("abgfEyeR")
-SetGlobal("abgf_GemInEye","GLOBAL",1)
-ContainerEnable("A6StatueRightEye",TRUE)
-ContainerEnable("A6StatueLeftEye",TRUE)~
-
+  //BG2 Method specific variables
+  OUTER_SET fj_flags = 0b00100001
+  OUTER_SPRINT abContainerEnable ~DestroyItem("abgfEyeL")
+  DestroyItem("abgfEyeR")
+  SetGlobal("abgf_GemInEye","GLOBAL",1)
+  ContainerEnable("A6StatueRightEye",TRUE)
+  ContainerEnable("A6StatueLeftEye",TRUE)~
 END
 
-/*
-//launch the main file
-INCLUDE ~bg1ub/abPrismEmeralds/CrossPlat.tph~
-*/
-//PrismEmeralds
-//PRINT ~Installing Prism Emeralds~
-//SILENT
-// ----------------------------------------------------------------------------
-//BEGIN //~Optional: Oublek & Prism - No Exploit & Multiple Ways to Solve Quest~
 //first container
 COPY_EXISTING ~%NashkelMines%.are~ override
 LAUNCH_PATCH_FUNCTION ~fj_are_structure~
@@ -5476,23 +5472,77 @@ COPY_EXISTING ~%tutu_var%prism.cre~ ~override~
  READ_ASCII 0x0248 ~overridescript~
  PATCH_IF (FILE_EXISTS_IN_GAME ~%overridescript%~) BEGIN
   INNER_ACTION BEGIN
-   EXTEND_BOTTOM ~%overridescript%.bcs~ ~bg1ub/abPrismEmeralds/CrossPlat/abgfprsm.baf~ //add our stuff -- creates new if doesn't exist
+   EXTEND_BOTTOM ~%overridescript%.bcs~ ~bg1ub/abPrismEmeralds/abgfprsm.baf~ //add our stuff -- creates new if doesn't exist
   END
  END ELSE BEGIN
   WRITE_EVALUATED_ASCII 0x0248 ~abgfprsm~
   READ_ASCII 0x0248 ~overridescript~
   INNER_ACTION BEGIN
-   EXTEND_BOTTOM ~%overridescript%.bcs~ ~bg1ub/abPrismEmeralds/CrossPlat/abgfprsm.baf~ //add our stuff -- creates new if doesn't exist
+   EXTEND_BOTTOM ~%overridescript%.bcs~ ~bg1ub/abPrismEmeralds/abgfprsm.baf~ //add our stuff -- creates new if doesn't exist
   END
  END
 
 BUT_ONLY_IF_IT_CHANGES
 //compile the script for the eye container traps
-COMPILE ~bg1ub/abPrismEmeralds/CrossPlat/abitrp.baf~ EVALUATE_BUFFER USING ~bg1ub/tra/%LANGUAGE%/ubprism.tra~
+COMPILE EVALUATE_BUFFER ~bg1ub/abPrismEmeralds/abitrp.baf~ 
 
 //compile the dialog changes to oublek and prism
-COMPILE ~bg1ub/abPrismEmeralds/CrossPlat/oublek.d~ EVALUATE_BUFFER USING ~bg1ub/tra/%LANGUAGE%/ubprism.tra~
+COMPILE EVALUATE_BUFFER ~bg1ub/abPrismEmeralds/oublek.d~ 
 
+
+/* hacking attempt to make the mod compatible with mods I_C_T into Prism state 7 and Oublek state 4: (BG1NPC Project and Gavin), if installed before bg1ub */
+
+
+/* IF BG1NPC Projekt "interjections" is installed: */
+
+ACTION_IF FILE_EXISTS_IN_GAME ~override/X#BG1NPCPhase2.G3~ THEN BEGIN
+
+/* this assumes that there is no other "TakePartyItem("%tutu_var%MISC43")" in the Oublek.d */
+
+<<<<<<<< ...inlined/oublek_compatibility.d
+REPLACE_ACTION_TEXT %tutu_var%oublek ~TakePartyItem("%tutu_var%MISC43")~ ~~
+REPLACE_ACTION_TEXT %tutu_var%oublek ~GivePartyGold(300)~ ~GivePartyGold(300) TakePartyItem("abgfEyeL") TakePartyItem("abgfEyeR") %ERASEJOURNALENTRY_PRISM_0% %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5%~
+REPLACE_ACTION_TEXT %tutu_var%oublek ~GiveGoldForce(300)~ ~GiveGoldForce(300) TakePartyItem("abgfEyeL") TakePartyItem("abgfEyeR") %ERASEJOURNALENTRY_PRISM_0% %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5%~
+>>>>>>>>
+COMPILE EVALUATE_BUFFER ~...inlined/oublek_compatibility.d~
+END
+ 
+
+/* IF Gavin OR BG1NPC interjections is installed: */
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~override/X#BG1NPCPhase2.G3~) OR 
+	(FILE_EXISTS_IN_GAME ~override/GavinNPC.B~) THEN BEGIN
+
+<<<<<<<< ...inlined/prism_compatibility.d
+REPLACE_ACTION_TEXT %tutu_var%prism ~DropInventory()~ ~%abContainerEnable%~
+>>>>>>>>
+COMPILE EVALUATE_BUFFER ~...inlined/prism_compatibility.d~
+
+END
+
+
+/*weidu isn't replacing the @# with a TRA ref after its been evaluted from a variable
+so we have to use a high number and replace again.  only affects BGT, Tutu, & BGEE*/
+COPY_EXISTING ~%tutu_var%oublek.dlg~ override
+ DECOMPILE_DLG_TO_D
+  PATCH_IF (GAME_IS ~bgt~) BEGIN
+   REPLACE 99999210 @210
+   REPLACE 99999211 @211
+   REPLACE 99999212 @212
+   REPLACE 99999217 @217
+   REPLACE 99999218 @218
+   REPLACE 99999216 @216
+  END
+  PATCH_IF (GAME_IS ~tutu tutu_totsc bgee~) BEGIN
+   REPLACE 99999210 @127
+   REPLACE 99999211 @128
+   REPLACE 99999212 @129
+   REPLACE 99999217 @133
+   REPLACE 99999218 @134
+   REPLACE 99999216 @132
+  END
+ COMPILE_D_TO_DLG
+BUT_ONLY
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
