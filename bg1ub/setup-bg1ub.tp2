@@ -1401,8 +1401,12 @@ EXTEND_BOTTOM ~%tutu_var%KAGAIN.BCS~ ~bg1ub/kagain/aKAGAIN.BAF~
 
 COMPILE EVALUATE_BUFFER ~bg1ub/kagain/KAGAIJ.D~
 
-ACTION_IF GAME_IS ~bg1 totsc bgee~ THEN BEGIN
+ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/kagain/bgKAGAIJ.D~
+END
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+  COMPILE EVALUATE_BUFFER ~bg1ub/kagain/bgeeKAGAIJ.D~
 END
 
 
@@ -1445,9 +1449,10 @@ ACTION_IF !GAME_IS ~bgt~ THEN BEGIN //BG, BGEE and Tutu
   BUT_ONLY_IF_IT_CHANGES
 
   COPY_EXISTING ~%tutu_var%CORAN.BCS~ ~override~
-    DECOMPILE_BCS_TO_BAF
-    REPLACE_TEXTUALLY ~!Dead("wyvern")~ ~!Dead("X#CoranWyvern")~
-    COMPILE_BAF_TO_BCS
+    DECOMPILE_AND_PATCH BEGIN
+    	REPLACE_TEXTUALLY ~!Dead("wyvern")~ ~!Dead("X#CoranWyvern")~
+    	REPLACE_TEXTUALLY ~Dead("wyvern")~ ~Dead("X#CoranWyvern")~
+    END
   BUT_ONLY_IF_IT_CHANGES
 
   ACTION_IF GAME_IS ~tutu tutu_totsc bgee~ THEN BEGIN //Tutu BGEE
