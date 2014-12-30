@@ -139,13 +139,9 @@ Le 19 Kythorn, 1368 : J'ai à peine le temps d'écrire, mais je ne dois pas néglig
 
 Ce journal intime semble important. Vous devriez probablement le garder sur vous.~
 
+/* new v13.1 */
 @113   = ~Chevalière~
 @114   = ~C'est une chevalière incrustée d'un rubis.~
-
-/* new v13.1 */
-//item strings
-@117 = ~Une émeraude est un béryl d'un vert très vif, aux arêtes vives elles aussi, aux lignes droites, taillée en rectangle le plus souvent. On a l'habitude de l'associer à la santé, aussi l'utilise-t-on en ornement pour cette raison. Cette émeraude est marquée d'un petit 'G'. Prisme l'avait volée pour s'en servir sur la statue de la dame de son coeur, Ellesime. On présume que cette gemme était destinée à devenir l'oeil gauche. Qu'elle ait ou non servi à la statue, il y a une récompense pour la rapporter aux autorités compétentes.~
-@118 = ~Une émeraude est un béryl d'un vert très vif, aux arêtes vives elles aussi, aux lignes droites, taillée en rectangle le plus souvent. On a l'habitude de l'associer à la santé, aussi l'utilise-t-on en ornement pour cette raison. Cette émeraude est marquée d'un petit 'D'. Prisme l'avait volée pour s'en servir sur la statue de la dame de son coeur, Ellesime. On présume que cette gemme était destinée à devenir l'oeil droit. Qu'elle ait ou non servi à la statue, il y a une récompense pour la rapporter aux autorités compétentes.~
 
 //New for BGEE
 @115 = ~Hache de Bala - tueur de magiciens :

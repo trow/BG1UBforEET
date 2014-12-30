@@ -1,4 +1,8 @@
 //Game text - use Windows encoding
+//item strings
+@117 = ~Una esmeralda es un berilo verde y brillante, troceado en cuadros de líneas rectas, con un acabado rectangular en la gema pulida.  Las esmeraldas están conectadas con la salud, y por eso se usan de forma ornamental para tal propósito. Esta esmeralda está marcada con una pequeña 'L'. Había sido robada por Prism para usar en una estatua de su amor, Ellesime. Se piensa que esta gema iba a ser usada como un ojo izquierdo. Haya sido usada o no, hay una recompensa sobre ella para devolverla a las autoridades.~
+@118 = ~Una esmeralda es un berilo verde y brillante, troceado en cuadros de líneas rectas, con un acabado rectangular en la gema pulida.  Las esmeraldas están conectadas con la salud, y por eso se usan de forma ornamental para tal propósito. Esta esmeralda está marcada con una pequeña 'R'. Había sido robada por Prism para usar en una estatua de su amor, Ellesime. Se piensa que esta gema iba a ser usada como un ojo derecho. Haya sido usada o no, hay una recompensa sobre ella para devolverla a las autoridades.~
+
 //journal entries ##
 @119 = ~Prism es un tonto. Realmente se creyó que yo no sabía nada sobre las esmeraldas. Oh bueno... Mala suerte para él. Ganancia para mí.~
 @120 = ~Tal vez no estuvo bien, pero tras haber permitido a Prism completar su obra maestra final, robé uno de los ojos de la estatua. Seguro que alguien pagará mucho por él si lo vendo en el lugar correcto...~

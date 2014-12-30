@@ -217,7 +217,3 @@ OpóŸnienie: 7
 Rodzaj bieg³oœci: topory
 Typ broni: 1-rêczny
 Wymagana si³a: 10~
-
-//item strings
-@117 = ~Szmaragd jest lœni¹cym zielonym berylem, oszlifowanym wed³ug ustalonego wzoru. Jest on czêsto kojarzony ze zdrowiem i bywa u¿ywany do ozdabiania przedmiotów ze zdrowiem zwi¹zanych. Na szmaragdzie tym wygrawerowano niewielk¹ literê "L". Zosta³ on wykradziony przez Prisma na potrzeby pos¹gu, rzeŸbionego przezeñ dla swej mi³oœci, Ellesime. Mówi siê, ¿e kamieñ ów mia³ pos³u¿yæ za jego lewe oko. Bez wzglêdu na to, czy mia³ on byæ w³o¿ony w oczodó³ pos¹gu, za zwrócenie go odpowiednim w³adzom przewidziana jest nagroda.~
-@118 = ~Szmaragd jest lœni¹cym zielonym berylem, oszlifowanym wed³ug ustalonego wzoru. Jest on czêsto kojarzony ze zdrowiem i bywa u¿ywany do ozdabiania przedmiotów ze zdrowiem zwi¹zanych. Na szmaragdzie tym wygrawerowano niewielk¹ literê "P". Zosta³ on wykradziony przez Prisma na potrzeby pos¹gu, rzeŸbionego przezeñ dla swej mi³oœci, Ellesime. Mówi siê, ¿e kamieñ ów mia³ pos³u¿yæ za jego prawe oko. Bez wzglêdu na to, czy mia³ on byæ w³o¿ony w oczodó³ pos¹gu, za zwrócenie go odpowiednim w³adzom przewidziana jest nagroda.~

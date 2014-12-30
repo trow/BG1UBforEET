@@ -1,5 +1,9 @@
 /* ITALIAN */
 //Game text - use Windows encoding
+//Prism item strings
+@117 = ~Uno smeraldo è un berillo verde brillante, sgrezzato e tagliato a forma di prisma rettangolare in fase di raffinazione. Gli smeraldi sono spesso collegati al benessere, e come tali vengono utilizzati a scopo ornamentale. Questo smeraldo ha una piccola 'L' incisa su di esso. E' stato rubato da Prism per decorare la statua della donna amata, Ellesime. Si suppone che questa gemma fosse destinata a rappresentare l'occhio sinistro della statua. C'è una taglia da riscattare consegnando lo smeraldo alle autorità competenti.~
+@118 = ~Uno smeraldo è un berillo verde brillante, sgrezzato e tagliato a forma di prisma rettangolare in fase di raffinazione. Gli smeraldi sono spesso collegati al benessere, e come tali vengono utilizzati a scopo ornamentale. Questo smeraldo ha una piccola 'R' incisa su di esso. E' stato rubato da Prism per decorare la statua della donna amata, Ellesime. Si suppone che questa gemma fosse destinata a rappresentare l'occhio destro della statua. C'è una taglia da riscattare consegnando lo smeraldo alle autorità competenti.~
+
 //journal entries ##
 @119 = ~Che babbeo quel Prism. Ha abboccato subito quando ho detto di non sapere nulla degli smeraldi scomparsi. Va beh... Più povero lui. Più ricco io.~
 @120 = ~Forse è stato uno sbaglio, ma dopo aver permesso a Prism di completare il suo 'ultimo capolavoro' ho preso uno degli smeraldi incastonati nella statua. Nel posto giusto dovrebbe garantire una bella sommetta, o al limite mi prendo una bella ricompensa...~

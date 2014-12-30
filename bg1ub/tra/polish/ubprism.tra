@@ -1,5 +1,9 @@
 /*BG2engine*/
 
+//item strings
+@117 = ~Szmaragd jest lœni¹cym zielonym berylem, oszlifowanym wed³ug ustalonego wzoru. Jest on czêsto kojarzony ze zdrowiem i bywa u¿ywany do ozdabiania przedmiotów ze zdrowiem zwi¹zanych. Na szmaragdzie tym wygrawerowano niewielk¹ literê "L". Zosta³ on wykradziony przez Prisma na potrzeby pos¹gu, rzeŸbionego przezeñ dla swej mi³oœci, Ellesime. Mówi siê, ¿e kamieñ ów mia³ pos³u¿yæ za jego lewe oko. Bez wzglêdu na to, czy mia³ on byæ w³o¿ony w oczodó³ pos¹gu, za zwrócenie go odpowiednim w³adzom przewidziana jest nagroda.~
+@118 = ~Szmaragd jest lœni¹cym zielonym berylem, oszlifowanym wed³ug ustalonego wzoru. Jest on czêsto kojarzony ze zdrowiem i bywa u¿ywany do ozdabiania przedmiotów ze zdrowiem zwi¹zanych. Na szmaragdzie tym wygrawerowano niewielk¹ literê "P". Zosta³ on wykradziony przez Prisma na potrzeby pos¹gu, rzeŸbionego przezeñ dla swej mi³oœci, Ellesime. Mówi siê, ¿e kamieñ ów mia³ pos³u¿yæ za jego prawe oko. Bez wzglêdu na to, czy mia³ on byæ w³o¿ony w oczodó³ pos¹gu, za zwrócenie go odpowiednim w³adzom przewidziana jest nagroda.~
+
 //journal entries
 @119 = ~Ale¿ g³upiec z tego Prisma. On doprawdy uwierzy³ w me zaprzeczenia, jakobym wiedzia³ cokolwiek o stracie tych szmaragdów. No có¿...jego stracie. Dla mnie, to czysty zysk.~ ~Ale¿ g³upiec z tego Prisma. On doprawdy uwierzy³ w me zaprzeczenia, jakobym wiedzia³a cokolwiek o stracie tych szmaragdów. No có¿...jego stracie. Dla mnie, to czysty zysk.~
 @120 = ~Byæ mo¿e by³ to b³¹d, lecz po tym, jak pozwoli³em Prismowi dokoñczyæ swe "dzie³o ¿ycia", wyj¹³em z oczodo³u pos¹gu jeden ze szmaragdów. Powinienem dostaæ za niego niez³¹ sumkê, w odpowiednim miejscu, lub przyzwoit¹ nagrodê...~ ~Byæ mo¿e by³ to b³¹d, lecz po tym, jak pozwoli³am Prismowi dokoñczyæ swe "dzie³o ¿ycia", wyjê³am z oczodo³u pos¹gu jeden ze szmaragdów. Powinnam dostaæ za niego niez³¹ sumkê, w odpowiednim miejscu, lub przyzwoit¹ nagrodê...~
