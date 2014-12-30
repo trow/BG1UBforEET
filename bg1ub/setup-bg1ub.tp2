@@ -4805,49 +4805,49 @@ ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
 END
 
 COPY_EXISTING ~%tutu_var%TEM0002.STO~ ~override~ // The Watchful Shield (Temple of Helm, AR0002: BG)
-  // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #1 #1 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
   ADD_STORE_ITEM ~%tutu_var%SCRL62~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Flame Strike scroll, qty 1 (was 3)
-  // ADD_STORE_ITEM ~%tutu_var%SCRL63~ AFTER ~%tutu_var%SCRL62~ #1 #1 #1 ~IDENTIFIED~ #3 // Raise Dead scroll, qty 3
-  // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #1 #1 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
-  // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #1 #1 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL63~ AFTER ~%tutu_var%SCRL62~ #1 #0 #0 ~IDENTIFIED~ #3 // Raise Dead scroll, qty 3
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #0 #0 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%TEM0131.STO~ ~override~ // High Hall of Wonders (Temple of Gond, AR0131: BG)
-  // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #1 #1 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
   ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Raise Dead scroll, qty 1 (was 3)
-  // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #1 #1 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
-  // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #1 #1 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #0 #0 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%TEM0132.STO~ ~override~ // Lady's Hall (Temple of Tymora, AR0132: BG)
-  // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #1 #1 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
   ADD_STORE_ITEM ~%tutu_var%SCRL5F~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Chaotic Commands, qty 1 (was 5)
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%TEM2304.STO~ ~override~ // Temple of Wisdom (Temple of Garl Glittergold, AR2304: FAI)
   ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Cure Critical Wounds, qty 1 (was 5)
-  // ADD_STORE_ITEM ~%tutu_var%SCRL63~ AFTER ~%tutu_var%SCRL61~ #1 #1 #1 ~IDENTIFIED~ #3 // Raise Dead scroll, qty 3
+  // ADD_STORE_ITEM ~%tutu_var%SCRL63~ AFTER ~%tutu_var%SCRL61~ #1 #0 #0 ~IDENTIFIED~ #3 // Raise Dead scroll, qty 3
   ADD_STORE_ITEM ~%tutu_var%SCRL5F~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Chaotic Commands, qty 1 (was 5)
-  // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #1 #1 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%TEM2601.STO~ ~override~ // Oghma Temple (Temple of Oghma, AR2600: Candlekeep)
-  // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #1 #1 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
   ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Raise Dead scroll, qty 1 (was 3)
-  // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL63~ #1 #1 #1 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL63~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%TEM3402.STO~ ~override~ // Song of the Morning (Temple of Lathander, AR3402: West of Beregost)
   ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #2 // Cure Critical Wounds, qty 2 (was 5)
   ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Raise Dead scroll, qty 1 (was 3)
-  // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #1 #1 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
-  // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #1 #1 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #0 #0 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%TEM4802.STO~ ~override~ // Temple of Helm (Temple of Helm, AR4802: Nashkel)
-  // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #1 #1 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
-  // ADD_STORE_ITEM ~%tutu_var%SCRL62~ AFTER ~%tutu_var%SCRL61~ #1 #1 #1 ~IDENTIFIED~ #1 // Flame Strike scroll, qty 1
-  // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #1 #1 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL62~ AFTER ~%tutu_var%SCRL61~ #1 #0 #0 ~IDENTIFIED~ #1 // Flame Strike scroll, qty 1
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #0 #0 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
   ADD_STORE_ITEM ~%tutu_var%SCRL5E~ LAST #1 #0 #0 ~IDENTIFIED~ #2   // Champion's Strength, qty 2 (was 5)
   ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #0 #0 ~IDENTIFIED~ #3   // Raise Dead scroll, qty 3
 BUT_ONLY_IF_IT_CHANGES
@@ -4874,7 +4874,7 @@ COPY_EXISTING ~%tutu_var%ERDANE.STO~ ~override~ // Erdane
 BUT_ONLY_IF_IT_CHANGES
 
 // COPY_EXISTING ~%tutu_scripth%IGHHEDG.STO~ ~override~ // High Hedge
-  // ADD_STORE_ITEM ~%tutu_var%BOLT05~ LAST #1 #1 #1 ~IDENTIFIED~ #200 // Bolt of Polymorphing, qty 200
+  // ADD_STORE_ITEM ~%tutu_var%BOLT05~ LAST #1 #0 #0 ~IDENTIFIED~ #200 // Bolt of Polymorphing, qty 200
 // BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%FRIEND.STO~ ~override~ // Friendly Arm Inn
@@ -4902,7 +4902,7 @@ COPY_EXISTING ~%tutu_var%TAERUM.STO~ ~override~ // Thunderhammer Smithy
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_var%STO0703.STO~ ~override~ // Sorcerous Sundries
-  ADD_STORE_ITEM ~%tutu_var%BOLT05~ AFTER ~%tutu_var%BOLT06~ #0 #0 #0 ~IDENTIFIED~ #10 // Bolt of Polymorphing, qty 10 (was 100)
+  ADD_STORE_ITEM ~%tutu_var%BOLT05~ AFTER ~%tutu_var%BOLT06~ #1 #0 #0 ~IDENTIFIED~ #10 // Bolt of Polymorphing, qty 10 (was 100)
 BUT_ONLY_IF_IT_CHANGES
 
 // Removes the following sentence from the description of Bala's Axe: "The axe gives the owner the ability to dispel magic once a day."
