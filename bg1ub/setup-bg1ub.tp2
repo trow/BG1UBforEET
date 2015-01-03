@@ -300,7 +300,7 @@ GIANHIT.EFF
 MONSTHIT.EFF
 UNDEDHIT.EFF
 
-VERSION ~v14.0_beta_141231~
+VERSION ~v14.0_beta_150102~
 README ~bg1ub/BG1UB-Readme.html~
 
 ALWAYS
@@ -840,7 +840,7 @@ ALWAYS
   END
 END
 
-AUTO_TRA ~bg1ub/%s~
+AUTO_TRA ~bg1ub/tra/%s~
 
 DEFINE_ACTION_MACRO ~getcpmvara~ BEGIN
   ACTION_IF GAME_IS ~tutu tutu_totsc~ THEN BEGIN //Tutu
@@ -1408,7 +1408,6 @@ END
 ACTION_IF GAME_IS ~bgee~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/kagain/bgeeKAGAIJ.D~
 END
-
 
 COPY ~bg1ub/kagain/DLOSTKAG.CRE~ ~override~
   SAY NAME1 @6
