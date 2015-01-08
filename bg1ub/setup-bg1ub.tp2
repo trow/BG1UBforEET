@@ -1399,8 +1399,6 @@ EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~bg1ub/kagain/aAR2800.BAF~ //spawns the lost c
 
 EXTEND_BOTTOM ~%tutu_var%KAGAIN.BCS~ ~bg1ub/kagain/aKAGAIN.BAF~
 
-COMPILE EVALUATE_BUFFER ~bg1ub/kagain/KAGAIJ.D~
-
 ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/kagain/bgKAGAIJ.D~
 END
@@ -1408,6 +1406,8 @@ END
 ACTION_IF GAME_IS ~bgee~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/kagain/bgeeKAGAIJ.D~
 END
+
+COMPILE EVALUATE_BUFFER ~bg1ub/kagain/KAGAIJ.D~
 
 COPY ~bg1ub/kagain/DLOSTKAG.CRE~ ~override~
   SAY NAME1 @6
