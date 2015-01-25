@@ -1787,6 +1787,12 @@ COPY ~bg1ub/shilochen/%tutuorbgt%/UBGLOVE1.ITM~ ~override~
   SAY UNIDENTIFIED_DESC #6791
   SAY IDENTIFIED_DESC @20
 
+COPY_EXISTING ~BEARBL.CRE~ ~override/UBDBEAR.CRE~
+  WRITE_LONG 0x010 5 // Permanent corpse
+  WRITE_LONG 0x014 0 // XP Value
+  WRITE_LONG 0x020 2048 // STATE_DEAD
+  WRITE_ASCII 0x280 ~UBDBEAR~
+
 COPY_EXISTING ~%tutu_scripto%GREMA_A.CRE~ ~override/UBOGMA01.CRE~
   WRITE_ASCII 0x280 ~UBOGMA01~
 
@@ -1823,24 +1829,34 @@ OUTER_SPRINT temp_tutu "_AR0705" OUTER_SPRINT temp_bgt "AR7705" OUTER_SPRINT tem
 EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar0705sc.baf~
   EVALUATE_BUFFER
 
-<<<<<<<< .../bg1ub/ub_ar1900.baf
+<<<<<<<< .../bg1ub/ub_ar2900.baf
 IF
-GlobalGT("Chapter","GLOBAL",4)
-Global("AcceptedUBShiloQuest","GLOBAL",1)
-Global("CreateUBOgreMagi","%BanditCamp%",0)
+	GlobalGT("Chapter","GLOBAL",4)
+	Global("AcceptedUBShiloQuest","GLOBAL",1)
+	Global("CreateUBOgreMagi","%Larswood%",0)
 THEN
 RESPONSE #100
-CreateCreature("UBOGMA01",[1736.2979],6)
-CreateCreature("UBOGMA02",[1754.2885],3)
-CreateCreature("%tutu_var%OGREHA",[1605.2915],14)
-CreateCreature("%tutu_var%OGREHA",[1716.2970],12)
-CreateCreature("%tutu_var%OGREHA",[1722.2990],8)
-SetGlobal("CreateUBOgreMagi","%BanditCamp%",1)
+	CreateCreature("UBDBEAR",[1020.3170]%FACE_12%)
+	CreateCreature("UBOGMA01",[1075.3200]%FACE_6%)
+	CreateCreature("UBOGMA02",[950.3175]%FACE_12%)
+	CreateCreature("%tutu_var%OGREHA",[910.3025]%FACE_14%)
+	CreateCreature("%tutu_var%OGREHA",[1000.3275]%FACE_8%)
+	CreateCreature("%tutu_var%OGREHA",[1190.3240]%FACE_8%)
+	SetGlobal("CreateUBOgreMagi","%Larswood%",1)
+END
+
+IF
+	Global("AcceptedUBShiloQuest","GLOBAL",2)
+	Dead("UBOGMA01")
+	Dead("UBOGMA02")
+THEN
+RESPONSE #100
+	ActionOverride("UBDBEAR",DestroySelf())
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR1900" OUTER_SPRINT temp_bgt "AR8700" OUTER_SPRINT temp_bgee "AR1900" OUTER_SPRINT temp_bg "AR1900" LAUNCH_ACTION_MACRO ~getcpmvara~
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar1900.baf~
+OUTER_SPRINT temp_tutu "_AR2900" OUTER_SPRINT temp_bgt "AR9000" OUTER_SPRINT temp_bgee "AR2900" OUTER_SPRINT temp_bg "AR2900" LAUNCH_ACTION_MACRO ~getcpmvara~
+EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar2900.baf~
   EVALUATE_BUFFER
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
