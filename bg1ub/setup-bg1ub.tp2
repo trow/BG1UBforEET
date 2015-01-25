@@ -4816,7 +4816,7 @@ COPY_EXISTING ~%tutu_var%INN3351.STO~ ~override~ // Feldepost's Inn
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~%tutu_scripts%TOCHEAP.STO~ ~override~ // Lucky Aello's
-  ADD_STORE_ITEM ~%tutu_var%LEAT06~ LAST #0 #0 #0 ~~ #1 // Studded Leather Armor +2 : Missle Attraction
+  ADD_STORE_ITEM ~%tutu_var%LEAT06~ LAST #0 #0 #0 ~NONE~ #1 // Studded Leather Armor +2 : Missle Attraction
 BUT_ONLY_IF_IT_CHANGES
 
 ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
