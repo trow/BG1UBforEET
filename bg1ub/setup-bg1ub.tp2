@@ -1836,7 +1836,7 @@ IF
 	Global("CreateUBOgreMagi","%Larswood%",0)
 THEN
 RESPONSE #100
-	CreateCreature("UBDBEAR",[1020.3170]%FACE_12%)
+	CreateCreature("UBDBEAR",[1025.3145]%FACE_10%)
 	CreateCreature("UBOGMA01",[1075.3200]%FACE_6%)
 	CreateCreature("UBOGMA02",[950.3175]%FACE_12%)
 	CreateCreature("%tutu_var%OGREHA",[910.3025]%FACE_14%)
