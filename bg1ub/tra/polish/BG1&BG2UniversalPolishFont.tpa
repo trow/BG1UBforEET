@@ -1,5 +1,5 @@
 ACTION_IF !("%Z!polish_signs%" STRING_EQUAL "%") AND ("%LANGUAGE%" STRING_COMPARE_CASE "%Z!Polish_Choosen%" = 0) THEN BEGIN //do code once if polish choosen
-  ACTION_IF FILE_EXISTS_IN_GAME ~AR0100.are~ AND FILE_CONTAINS_EVALUATED(~AR0100.are~ ~Ocellis~) //BG1 engine
+  ACTION_IF GAME_IS ~bg1 totsc~ //BG1 engine
   THEN BEGIN
   COPY ~%Z!PL_TRA_Patch%~  ~%Z!PL_TRA_Patch%~
    PATCH_IF (~%SOURCE_EXT%~ STRING_EQUAL_CASE ~TRA~) AND FILE_CONTAINS_EVALUATED(~%Z!PL_TRA_Patch%/%SOURCE_FILE%~ ~BG2engine~) BEGIN //TRA are BG2 coded

@@ -304,11 +304,11 @@ VERSION ~v14.0_beta_150128~
 README ~bg1ub/BG1UB-Readme.html~
 
 ALWAYS
-
+  
 // @@@ Support for polish translation @@@
     //set the proper values of string variables
   OUTER_SPRINT "Z!PL_TRA_Patch" "bg1ub/tra/polish"
-  OUTER_SPRINT "Z!Polish_Choosen" "tra/polish"
+  OUTER_SPRINT "Z!Polish_Choosen" "polish"
     //main conversion code
   INCLUDE ~%Z!PL_TRA_Patch%/BG1&BG2UniversalPolishFont.tpa~
     //all TRAs declared in LANGUAGE must be reloaded
