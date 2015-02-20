@@ -304,6 +304,8 @@ VERSION ~v14.0_beta_150128~
 README ~bg1ub/BG1UB-Readme.html~
 
 ALWAYS
+
+  INCLUDE ~bg1ub/lib/cre_project_macros.tpa~
   
 // @@@ Support for polish translation @@@
     //set the proper values of string variables

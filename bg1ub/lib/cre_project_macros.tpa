@@ -1,0 +1,225 @@
+/* creating some macros for tp2 cleanup */
+
+/* Macro for blanking sounds and setting SOURCE_RES as DV, script, and dialog */
+DEFINE_PATCH_MACRO ~source_cre_sound_cleanup~ BEGIN
+         WRITE_LONG INITIAL_MEETING (BNOT 0x0)
+         WRITE_LONG DIALOGUE_HOSTILE (BNOT 0x0)
+         WRITE_LONG MORALE (BNOT 0x0)
+         WRITE_LONG HAPPY (BNOT 0x0)
+         WRITE_LONG UNHAPPY_ANNOYED (BNOT 0x0)
+         WRITE_LONG UNHAPPY_SERIOUS (BNOT 0x0)
+         WRITE_LONG UNHAPPY_BREAKING (BNOT 0x0)
+         WRITE_LONG LEADER (BNOT 0x0)
+         WRITE_LONG TIRED (BNOT 0x0)
+         WRITE_LONG BORED (BNOT 0x0)
+         WRITE_LONG BATTLE_CRY1 (BNOT 0x0)
+         WRITE_LONG BATTLE_CRY2 (BNOT 0x0)
+         WRITE_LONG BATTLE_CRY3 (BNOT 0x0)
+         WRITE_LONG BATTLE_CRY4 (BNOT 0x0)
+         WRITE_LONG BATTLE_CRY5 (BNOT 0x0)
+         WRITE_LONG HURT (BNOT 0x0)
+         WRITE_LONG AREA_FOREST (BNOT 0x0)
+         WRITE_LONG AREA_CITY (BNOT 0x0)
+         WRITE_LONG AREA_DUNGEON (BNOT 0x0)
+         WRITE_LONG AREA_DAY (BNOT 0x0)
+         WRITE_LONG AREA_NIGHT (BNOT 0x0)
+         WRITE_LONG SELECT_COMMON1 (BNOT 0x0)
+         WRITE_LONG SELECT_COMMON2 (BNOT 0x0)
+         WRITE_LONG SELECT_COMMON3 (BNOT 0x0)
+         WRITE_LONG SELECT_COMMON4 (BNOT 0x0)
+         WRITE_LONG SELECT_COMMON5 (BNOT 0x0)
+         WRITE_LONG SELECT_COMMON6 (BNOT 0x0)
+         WRITE_LONG SELECT_ACTION1 (BNOT 0x0)
+         WRITE_LONG SELECT_ACTION2 (BNOT 0x0)
+         WRITE_LONG SELECT_ACTION3 (BNOT 0x0)
+         WRITE_LONG SELECT_ACTION4 (BNOT 0x0)
+         WRITE_LONG SELECT_ACTION5 (BNOT 0x0)
+         WRITE_LONG SELECT_ACTION6 (BNOT 0x0)
+         WRITE_LONG SELECT_ACTION7 (BNOT 0x0)
+         WRITE_LONG SELECT_RARE1 (BNOT 0x0)
+         WRITE_LONG SELECT_RARE2 (BNOT 0x0)
+         WRITE_LONG CRITICAL_HIT (BNOT 0x0)
+         WRITE_LONG CRITICAL_MISS (BNOT 0x0)
+         WRITE_LONG TARGET_IMMUNE (BNOT 0x0)
+         WRITE_LONG INVENTORY_FULL (BNOT 0x0)
+         WRITE_LONG PICKED_POCKET (BNOT 0x0)
+         WRITE_LONG HIDDEN_IN_SHADOWS (BNOT 0x0)
+         WRITE_LONG SPELL_DISRUPTED (BNOT 0x0)
+         WRITE_LONG SET_A_TRAP (BNOT 0x0)
+         WRITE_LONG BIO (BNOT 0x0)
+END
+
+DEFINE_PATCH_MACRO ~source_cre_script_cleanup~ BEGIN
+    WRITE_ASCII SCRIPT_OVERRIDE ~~ #8 //  override script
+    WRITE_ASCII SCRIPT_CLASS ~~ #8 //  class script
+    WRITE_ASCII SCRIPT_RACE ~~ #8 //  class script
+    WRITE_ASCII SCRIPT_GENERAL ~~ #8 //  class script
+    WRITE_ASCII SCRIPT_DEFAULT ~~ #8 //  class script
+END
+
+/* Macro setting cre script, dv, dialog to DEST_RES */         
+DEFINE_PATCH_MACRO ~cre_dest_res~ BEGIN    
+	WRITE_ASCIIE 0x248 ~%DEST_RES%~ #8 // script
+	WRITE_ASCIIE 0x2cc ~%DEST_RES%~ #8 // dialogue
+	WRITE_ASCIIE 0x280 ~%DEST_RES%~ #32 // death variable
+END
+
+/* Macro setting cre script, dv, dialog to SOURCE_RES */         
+DEFINE_PATCH_MACRO ~cre_source_res~ BEGIN         
+	WRITE_ASCIIE 0x248 ~%SOURCE_RES%~ #8 // script
+	WRITE_ASCIIE 0x2cc ~%SOURCE_RES%~ #8 // dialogue
+	WRITE_ASCIIE 0x280 ~%SOURCE_RES%~ #32 // death variable
+END
+        
+        
+DEFINE_PATCH_MACRO ~convert_bg_items_tutu~ BEGIN
+  READ_LONG 0x2bc "itm_off" ELSE 0
+  READ_LONG 0x2c0 "itm_num" ELSE 0
+  FOR (index = 0; index < itm_num; index = index + 1) BEGIN
+    READ_ASCII ("%itm_off%" + (0x14 * "%index%")) "item"
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "AROW01" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_AROW01" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "AROW02" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_AROW02" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "BOW01" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_BOW03" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "BOW03" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_BOW03" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "BOW08" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_BOW08" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "BLUN02" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_BLUN02" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "BULL02" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_BULL02" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "CHAN04" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_CHAN04" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "CHAN05" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_CHAN05" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "DAGG01" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_DAGG01" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "DAGG03" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_DAGG03" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "DAGG05" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_DAGG05" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "DART01" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_DART01" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "DART02" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_DART02" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "HELM09" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_HELM09" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "HELM11" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_HELM11" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "LEAT01" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_LEAT01" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "LEAT02" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_LEAT02" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "LEAT04" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_LEAT04" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "MAGE01" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_MAGE01" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "MAGE02" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_MAGE02" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "MAGE05" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_MAGE05" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "MISC33" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_MISC33" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "PLAT01" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_PLAT01" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "PLAT04" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_PLAT04" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "POTN20" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_POTN20" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "POTN21" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_POTN21" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "POTN36" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_POTN36" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "POTN37" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_POTN37" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "POTN45" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_POTN45" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "SCRL96" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_SCRL96" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "SHLD01" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_SHLD01" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "SHLD08" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_SHLD08" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "SLNG02" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_SLNG02" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "SPER01" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_SPER01" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "SPER02" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_SPER02" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "STAF01" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_STAF01" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "STAF02" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_STAF02" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "STAF07" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_STAF07" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "SW2H01" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_SW2H01" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "SW1H04" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_SW1H04" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "SW1H07" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_SW1H07" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "SW1H08" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_SW1H08" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "SW1H24" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_SW1H24" #8
+    END
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "RING95" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_RING95" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "MAGEBRAC" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_AGEBRAC" #8
+    END ELSE
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "JELLGR1" = 0) BEGIN
+      WRITE_ASCII ("%itm_off%" + (0x14 * "%index%")) "_JELLGR1" #8
+    END
+  END
+END
+
+
+
