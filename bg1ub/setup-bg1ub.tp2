@@ -306,7 +306,8 @@ README ~bg1ub/BG1UB-Readme.html~
 ALWAYS
 
   INCLUDE ~bg1ub/lib/cre_project_macros.tpa~
-  
+  APPEND ~state.ids~ ~0x00000FC0 STATE_REALLY_DEAD~ UNLESS ~STATE_REALLY_DEAD~  
+
 // @@@ Support for polish translation @@@
     //set the proper values of string variables
   OUTER_SPRINT "Z!PL_TRA_Patch" "bg1ub/tra/polish"
@@ -1601,7 +1602,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("D0CreateEntar","GLOBAL",1)
-		CreateCreature("%tutu_var%Entar",[649.904],12)
+		CreateCreature("%tutu_var%Entar",[649.904]%FACE_12%)
 END
 
 IF
@@ -1775,7 +1776,7 @@ Global("UB_QUONIN_SPAWN","GLOBAL",0)
 Global("UB_HELPQUONINGAR","GLOBAL",0)
 THEN
 RESPONSE #100
-CreateCreature("ubquon",[464.157],0)
+CreateCreature("ubquon",[464.157]%FACE_0%)
 SetGlobal("UB_QUONIN_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
@@ -1839,11 +1840,11 @@ ADD_JOURNAL @20178 @20179 USING ~bg1ub/tra/%LANGUAGE%/extra.tra~ // Add journal 
 
 <<<<<<<< .../bg1ub/ub_ar0705sc.baf
 IF
-Global("CreateUBShiloChen","%EBaldursGate_ElfsongTavern_L1%",0)
+Global("CreateUBShiloChen","%EBaldursGate_ElfsongTavern_L1%"%FACE_0%)
 THEN
 RESPONSE #100
-CreateCreature("UBShilo",[606.967],10)
-SetGlobal("CreateUBShiloChen","%EBaldursGate_ElfsongTavern_L1%",1)
+CreateCreature("UBShilo",[606.967]%FACE_10%)
+SetGlobal("CreateUBShiloChen","%EBaldursGate_ElfsongTavern_L1%"%FACE_1%)
 END
 >>>>>>>>
 
@@ -1914,7 +1915,7 @@ Global("UB_EDIE_SPAWN","GLOBAL",0)
 !Dead("Edie")
 THEN
 RESPONSE #100
-CreateCreature("%tutu_var%EDIE",[1102.917],4)
+CreateCreature("%tutu_var%EDIE",[1102.917]%FACE_4%)
 SetGlobal("UB_EDIE_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
@@ -1962,8 +1963,8 @@ Exists("FLAM5")
 !Dead("FLAM5")
 THEN
 RESPONSE #100
-CreateCreature("UBFLAM5",[3753.2954],9) // Flaming Fist Mercenary
-CreateCreature("UBFLAM5",[3869.2962],7) // Flaming Fist Mercenary
+CreateCreature("UBFLAM5",[3753.2954]%FACE_9%) // Flaming Fist Mercenary
+CreateCreature("UBFLAM5",[3869.2962]%FACE_7%) // Flaming Fist Mercenary
 SetGlobal("UB_FLAM5_REINFORCE","GLOBAL",1)
 END
 >>>>>>>>
@@ -3261,7 +3262,7 @@ Global("UB_MTOB4_SPAWN","GLOBAL",0)
 !Dead("MTOB4")
 THEN
 RESPONSE #100
-CreateCreature("%tutu_var%MTOB4",[518.252],2) // Commoner
+CreateCreature("%tutu_var%MTOB4",[518.252]%FACE_2%) // Commoner
 ActionOverride("MTOB4",Face(2))
 SetGlobal("UB_MTOB4_SPAWN","GLOBAL",1)
 END
@@ -3280,7 +3281,7 @@ Global("UB_MTOB5_SPAWN","GLOBAL",0)
 !Dead("MTOB5")
 THEN
 RESPONSE #100
-CreateCreature("%tutu_var%MTOB5",[851.367],0) // Commoner
+CreateCreature("%tutu_var%MTOB5",[851.367]%FACE_0%) // Commoner
 SetGlobal("UB_MTOB5_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
@@ -3298,7 +3299,7 @@ Global("CHAPTER","GLOBAL",%tutu_chapter_3%)
 !Dead("WADE")
 THEN
 RESPONSE #100
-CreateCreature("%tutu_var%TRAVEL",[691.398],0) // Traveler
+CreateCreature("%tutu_var%TRAVEL",[691.398]%FACE_0%) // Traveler
 END
 >>>>>>>>
 
@@ -3315,7 +3316,7 @@ Global("UB_HAFFG2_SPAWN","GLOBAL",0)
 !Dead("HAFFG2")
 THEN
 RESPONSE #100
-CreateCreature("%tutu_var%HAFFG2",[357.257],9) // Halfling Woman
+CreateCreature("%tutu_var%HAFFG2",[357.257]%FACE_9%) // Halfling Woman
 ActionOverride("HAFFG2",Face(9))
 SetGlobal("UB_HAFFG2_SPAWN","GLOBAL",1)
 END
@@ -3334,7 +3335,7 @@ Global("UB_HALFG2_SPAWN","GLOBAL",0)
 !Dead("HALFG2")
 THEN
 RESPONSE #100
-CreateCreature("%tutu_var%HALFG2",[311.179],0) // Halfling Man
+CreateCreature("%tutu_var%HALFG2",[311.179]%FACE_0%) // Halfling Man
 SetGlobal("UB_HALFG2_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
@@ -3382,7 +3383,7 @@ Global("UB_FRIWEN_SPAWN","%FriendlyArmInn_L1%",0)
 !Dead("FRIWEN")
 THEN
 RESPONSE #100
-CreateCreature("%tutu_var%FRIWEN",[1073.690],4) //
+CreateCreature("%tutu_var%FRIWEN",[1073.690]%FACE_4%) //
 SetGlobal("UB_FRIWEN_SPAWN","%FriendlyArmInn_L1%",1)
 END
 >>>>>>>>
@@ -3404,7 +3405,7 @@ IF
 Global("UB_FARMER5_SPAWN","GLOBAL",0)
 THEN
 RESPONSE #100
-CreateCreature("UBFARM5",[4716.3663],2)
+CreateCreature("UBFARM5",[4716.3663]%FACE_2%)
 SetGlobal("UB_FARMER5_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
@@ -3425,7 +3426,7 @@ IF
 Global("UB_FELDANE_SPAWN","GLOBAL",0)
 THEN
 RESPONSE #100
-CreateCreature("%tutu_var%FELDAN",[2965.1824],3)
+CreateCreature("%tutu_var%FELDAN",[2965.1824]%FACE_3%)
 SetGlobal("UB_FELDANE_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
@@ -3441,7 +3442,7 @@ IF
 Global("UB_GIRLBE_SPAWN","GLOBAL",0)
 THEN
 RESPONSE #100
-CreateCreature("%tutu_var%GIRLBE",[605.317],1)
+CreateCreature("%tutu_var%GIRLBE",[605.317]%FACE_1%)
 SetGlobal("UB_GIRLBE_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
@@ -3463,7 +3464,7 @@ IF
 Global("UB_SHOPGE_SPAWN","GLOBAL",0)
 THEN
 RESPONSE #100
-CreateCreature("UBSHOPGE",[3109.2627],0)
+CreateCreature("UBSHOPGE",[3109.2627]%FACE_0%)
 SetGlobal("UB_SHOPGE_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
@@ -3490,7 +3491,7 @@ Global("UB_WILTON_SPAWN","GLOBAL",0)
 !Dead("Wilton")
 THEN
 RESPONSE #100
-CreateCreature("%tutu_var%WILTON",[471.272],6)
+CreateCreature("%tutu_var%WILTON",[471.272]%FACE_6%)
 SetGlobal("UB_WILTON_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
@@ -3514,7 +3515,7 @@ Global("UB_CORIANNA_SPAWN","GLOBAL",0)
 Global("UB_HELPCORIANNA","GLOBAL",0)
 THEN
 RESPONSE #100
-CreateCreature("UBCORIAN",[4611.3449],2)
+CreateCreature("UBCORIAN",[4611.3449]%FACE_2%)
 SetGlobal("UB_CORIANNA_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
@@ -4323,7 +4324,7 @@ IF
 Global("UB_NASHKELMERCH1_SPAWN","%NashkelCarnival%",0)
 THEN
 RESPONSE #100
-CreateCreature("%tutu_var%MERCHA",[2825.3392],3)
+CreateCreature("%tutu_var%MERCHA",[2825.3392]%FACE_3%)
 SetGlobal("UB_NASHKELMERCH1_SPAWN","%NashkelCarnival%",1)
 END
 
@@ -4331,7 +4332,7 @@ IF
 Global("UB_NASHKELMERCH2_SPAWN","%NashkelCarnival%",0)
 THEN
 RESPONSE #100
-CreateCreature("UBMERCH",[2329.3584],12)
+CreateCreature("UBMERCH",[2329.3584]%FACE_12%)
 SetGlobal("UB_NASHKELMERCH2_SPAWN","%NashkelCarnival%",1)
 END
 >>>>>>>>
@@ -5636,3 +5637,7 @@ ADD_TRANS_ACTION harbor BEGIN 9 END BEGIN END ~DialogInterrupt(FALSE)~
 >>>>>>>>
 COMPILE EVALUATE_BUFFER ~...inlined/harbor.d~
 END
+
+
+
+
