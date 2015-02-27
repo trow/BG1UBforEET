@@ -3,6 +3,7 @@
 @90001 = ~La componente "Installazione di base" del mod BG1 NPC Project è incompatibile con questo componente.~
 @90002 = ~La componente "Fase I (Dialoghi)" del mod BG1 NPC Project è incompatibile con questo componente.~
 @90003 = ~Northern Tales of the Sword Coast è incompatibile con questo componente.~
+@90004 = ~Jarl's Adventure Pack conflicts with this component.~
 
 @90010 = ~Rilevato Tutu.~
 @90011 = ~Rilevato BGT.~
@@ -49,3 +50,8 @@
 // tp2 strings
 @116 = ~Modifica di Prism e gli Smeraldi~
 @219   = ~Il Duca Eltan dal Comandante della Capitaneria di Porto~
+
+/* new v14 */
+@4000 = ~Nim Furlwing Encounter~
+@4100 = ~Restored Elfsong Tavern Movie~
+@4101 = ~This component is not compatible with BGEE. A BGEE-compatible version of this movie is included with the mod BG:EE Classic Movies.~

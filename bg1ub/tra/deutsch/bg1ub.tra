@@ -178,5 +178,8 @@ Gewicht: 6
 Initiativefaktor: 5
 Mindeststärke: 10
 Fertigkeit: Axt
-Typ: 1-händig
-~
+Typ: 1-händig~
+
+// Nim Furlwing Encounter
+@4001 = ~Nim Furlwing~
+@4002 = ~Hunting Dog~

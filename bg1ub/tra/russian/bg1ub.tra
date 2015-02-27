@@ -164,3 +164,7 @@
 Фактор скорости:  7
 Оружейный навык:  Топор
 Тип:  1-ручное~
+
+// Nim Furlwing Encounter
+@4001 = ~Nim Furlwing~
+@4002 = ~Hunting Dog~

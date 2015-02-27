@@ -167,3 +167,7 @@ Requires:
  10 Strength
 
 Weight: 6~
+
+// Nim Furlwing Encounter
+@4001 = ~Nim Furlwing~
+@4002 = ~Hunting Dog~

@@ -1,0 +1,138 @@
+IF
+	StateCheck(Myself,STATE_PANIC)
+THEN
+	RESPONSE #100
+		RandomWalkContinuous()
+END
+
+IF
+	NumTimesTalkedTo(0)
+	See([PC])
+THEN
+	RESPONSE #100
+		StartDialogueNoSet([PC])
+END
+
+IF
+	Range([PC],30)
+	!Allegiance(Myself,ENEMY)
+	Global("UBNimFight","%Larswood%",0)
+THEN
+	RESPONSE #100
+		SetGlobal("UBNimFight","%Larswood%",1)
+END
+
+IF
+	Allegiance(Myself,NEUTRAL)
+	Global("UBNimFight","%Larswood%",2)
+THEN
+	RESPONSE #100
+		ChangeEnemyAlly(Myself,GOODBUTBLUE)
+END
+
+IF
+	AttackedBy([GOODCUTOFF],DEFAULT)
+	!Allegiance(Myself,ENEMY)
+THEN
+	RESPONSE #100
+		SetGlobal("UBNimFight","%Larswood%",3)
+		Enemy()
+END
+
+IF
+	!Allegiance(Myself,ENEMY)
+	Global("UBNimFight","%Larswood%",3)
+THEN
+	RESPONSE #100
+		Enemy()
+END
+
+IF
+	See([PC])
+	!See([EVILCUTOFF])
+	Global("UBNimWolvesDead","%Larswood%",5)
+	GlobalLT("UBNimFight","%Larswood%",3)
+THEN
+	RESPONSE #100
+		SetGlobal("UBNimFight","%Larswood%",4)
+		StartDialogueNoSet([PC])
+END
+
+IF
+	Global("UBNimFight","%Larswood%",5)
+THEN
+	RESPONSE #100
+		MoveToPoint([4800.3800])
+		Wait(3)
+		DestroySelf()
+END
+
+IF
+	OR(2)
+		Range("ubnimwlf",8)
+		Range(NearestEnemyOf(Myself),8)
+THEN
+	RESPONSE #100
+		EquipMostDamagingMelee()
+		Continue()
+END
+
+IF
+	!Range("ubnimwlf",8)
+	!Range(NearestEnemyOf(Myself),8)
+THEN
+	RESPONSE #100
+		EquipRanged()
+		Continue()
+END
+
+IF
+	Help("ubnimdog")
+THEN
+	RESPONSE #100
+		Attack(LastAttackerOf(LastHelp(Myself)))
+END
+
+IF
+	AttackedBy([ANYONE],DEFAULT)
+	GlobalGT("UBNimFight","%Larswood%",0)
+	Range(LastAttackerOf(Myself),8)
+THEN
+	RESPONSE #100
+		EquipMostDamagingMelee()
+		Attack(LastAttackerOf(Myself))
+END
+
+IF
+	AttackedBy([ANYONE],DEFAULT)
+	GlobalGT("UBNimFight","%Larswood%",0)
+	!Range("UBNIMWLF",8)
+	!Range(NearestEnemyOf(Myself),8)
+THEN
+	RESPONSE #100
+		EquipRanged()
+		Attack(LastAttackerOf(Myself))
+END
+
+IF
+	See("ubnimwlf")
+	GlobalGT("UBNimFight","%Larswood%",0)
+THEN
+	RESPONSE #100
+		GroupAttack(LastSeenBy(Myself))
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	GlobalGT("UBNimFight","%Larswood%",0)
+THEN
+	RESPONSE #100
+		Attack(NearestEnemyOf(Myself))
+END
+
+IF
+	Global("UBNimFight","%Larswood%",0)
+THEN
+	RESPONSE #100
+		NoAction()
+END

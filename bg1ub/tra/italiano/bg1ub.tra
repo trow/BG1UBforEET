@@ -166,3 +166,7 @@ Peso: 6
 Fattore-Velocità: 7
 Tipo di Competenza: Ascia
 Tipo:  a 1 mano~
+
+// Nim Furlwing Encounter
+@4001 = ~Nim Furlwing~
+@4002 = ~Hunting Dog~

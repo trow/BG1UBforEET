@@ -2,6 +2,7 @@
 @90001 = ~Le composant "The BG1 NPC Project: Core Install" de BG1 NPC Project est en conflit avec ce composant.~
 @90002 = ~Le composant "The BG1 NPC Project: Phase I (Banters)" de BG1 NPC Project est en conflit avec ce composant.~
 @90003 = ~Northern Tales of the Sword Coast est en conflit avec ce composant.~
+@90004 = ~Jarl's Adventure Pack conflicts with this component.~
 
 @90010 = ~Installation de Tutu detectee.~
 @90011 = ~Installation de BGT detectee.~
@@ -52,6 +53,10 @@
 @116 = ~Alteration de Prisme et ses emeraudes~
 @219   = ~Le Duc Eltan dans la batisse du Maitre du Port~
 
+/* new v14 */
+@4000 = ~Nim Furlwing Encounter~
+@4100 = ~Restored Elfsong Tavern Movie~
+@4101 = ~This component is not compatible with BGEE. A BGEE-compatible version of this movie is included with the mod BG:EE Classic Movies.~
 
 ////////////////////////////////////////////////////////////////////////////////
 // WeiDU prompts

@@ -159,3 +159,7 @@ Poids : 6
 Facteur de vitesse : 7
 Type de compétence : hache
 Type : à une main~
+
+// Nim Furlwing Encounter
+@4001 = ~Nim Furlwing~
+@4002 = ~Hunting Dog~

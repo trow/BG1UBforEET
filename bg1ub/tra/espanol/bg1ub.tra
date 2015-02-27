@@ -298,3 +298,7 @@ Peso: 6
 Factor de Velocidad: 7
 Tipo de talento: Hacha
 Tipo: Una mano~
+
+// Nim Furlwing Encounter
+@4001 = ~Nim Furlwing~
+@4002 = ~Hunting Dog~

@@ -1,0 +1,110 @@
+IF
+	StateCheck(Myself,STATE_PANIC)
+THEN
+	RESPONSE #100
+		RandomWalkContinuous()
+END
+
+IF
+	StateCheck(Myself,STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		IncrementGlobal("UBNimDogsDead","%Larswood%",1)
+END
+
+IF
+	Global("UBNimFight","%Larswood%",5)
+THEN
+	RESPONSE #100
+		MoveToObjectFollow("ubnimfur")
+		Wait(3)
+		DestroySelf()
+END
+
+IF
+	Allegiance(Myself,NEUTRAL)
+	Global("UBNimFight","%Larswood%",2)
+THEN
+	RESPONSE #100
+		ChangeEnemyAlly(Myself,GOODBUTBLUE)
+END
+
+IF
+	AttackedBy([GOODCUTOFF],DEFAULT)
+	GlobalLT("UBNimFight","%Larswood%",3)
+THEN
+	RESPONSE #100
+		SetGlobal("UBNimFight","%Larswood%",3)
+		Enemy()
+END
+
+IF
+	!Allegiance(Myself,ENEMY)
+	Global("UBNimFight","%Larswood%",3)
+THEN
+	RESPONSE #100
+		Enemy()
+END
+
+IF
+	AttackedBy([ANYONE],DEFAULT)
+	HPPercentLT(Myself,40)
+THEN
+	RESPONSE #100
+		Help()
+		RunAwayFrom(LastAttackerOf(Myself),150)
+END
+
+IF
+	AttackedBy([ANYONE],DEFAULT)
+	GlobalGT("UBNimFight","%Larswood%",0)
+	Range(LastAttackerOf(Myself),5)
+THEN
+	RESPONSE #100
+		Attack(LastAttackerOf(Myself))
+END
+
+IF
+	AttackedBy([ANYONE],DEFAULT)
+	GlobalGT("UBNimFight","%Larswood%",0)
+	!Range("UBNIMWLF",5)
+THEN
+	RESPONSE #100
+		Attack(LastAttackerOf(Myself))
+END
+
+IF
+	See("UBNIMWLF")
+	GlobalGT("UBNimFight","%Larswood%",0)
+THEN
+	RESPONSE #100
+		GroupAttack(LastSeenBy(Myself))
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	GlobalGT("UBNimFight","%Larswood%",0)
+THEN
+	RESPONSE #100
+		Attack(NearestEnemyOf(Myself))
+END
+
+IF
+	!See("UBNIMWLF")
+	!See(NearestEnemyOf(Myself))
+	GlobalGT("UBNimFight","%Larswood%",0)
+THEN
+	RESPONSE #33
+		MoveToObject("ubnimfur")
+	RESPONSE #33
+		Wait(2)
+	RESPONSE #33
+		RandomWalk()
+END
+
+IF
+	Global("UBNimFight","%Larswood%",0)
+THEN
+	RESPONSE #100
+		NoAction()
+END

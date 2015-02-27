@@ -5639,5 +5639,77 @@ COMPILE EVALUATE_BUFFER ~...inlined/harbor.d~
 END
 
 
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////
+/////Nim Furlwing Encounter
+/////by AstroBryGuy
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @4000 /* ~Nim Furlwing Encounter~ */
+FORBID_FILE ~override/NTNIMFUR.CRE~ @90003
+FORBID_FILE ~data/JA#NIMFU.CRE~ @90004
+
+COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBNimFurlwing.UB~
+
+/* Creatures */
+COPY ~bg1ub/nimfur/ubnimfur.cre~ ~override/ubnimfur.cre~
+    SAY NAME1 #15611
+    SAY NAME2 #15611
+    LAUNCH_PATCH_MACRO ~source_cre_sound_cleanup~
+    SAY INITIAL_MEETING #11112 
+    SAY BATTLE_CRY1 #11131
+    SAY DAMAGE #11075
+    SAY DYING #11076
+    SAY SELECT_COMMON1 #11112
+    SAY DIALOG_DEFAULT #11112
+    LAUNCH_PATCH_MACRO ~source_cre_script_cleanup~
+    LAUNCH_PATCH_MACRO ~cre_dest_res~
+	ADD_CRE_ITEM ~UBSCP402~ #1 #0 #0 ~IDENTIFIED~ ~QITEM1 QITEM2 QITEM3~
+
+COPY_EXISTING ~%tutu_var%dogwa.cre~ ~override/ubnimdog.cre~
+    SAY NAME1 @4002
+    SAY NAME2 @4002
+    WRITE_BYTE 0x270 0x80 //  Set Enemy/Ally to neutral
+    LAUNCH_PATCH_MACRO ~source_cre_script_cleanup~
+    LAUNCH_PATCH_MACRO ~cre_dest_res~
+
+COPY_EXISTING ~%tutu_var%wolfdi.cre~ ~override/ubnimwlf.cre~
+    LAUNCH_PATCH_MACRO ~source_cre_script_cleanup~
+    LAUNCH_PATCH_MACRO ~cre_dest_res~
+
+/* Items */
+COPY ~bg1ub/nimfur/ubscp402.itm~ ~override~
+
+/* Scripts */
+<<<<<<<< .../bg1ub/ub_ar2900.baf
+IF %BGT_VAR%
+!Exists("UBNIMFUR")
+Global("UBNimFurlwingSpawn","%Larswood%",0)
+THEN
+RESPONSE #100
+SetGlobal("UBNimFurlwingSpawn","%Larswood%",1)
+CreateCreature("UBNIMFUR",[4500.2740]%FACE_9%)
+CreateCreature("UBNIMDOG",[4535.2790]%FACE_9%)
+CreateCreature("UBNIMDOG",[4563.2765]%FACE_9%)
+CreateCreature("UBNIMDOG",[4460.2735]%FACE_9%)
+CreateCreature("UBNIMWLF",[4525.2600]%FACE_1%)
+CreateCreature("UBNIMWLF",[4560.2570]%FACE_1%)
+CreateCreature("UBNIMWLF",[4570.2500]%FACE_1%)
+CreateCreature("UBNIMWLF",[4625.2575]%FACE_1%)
+CreateCreature("UBNIMWLF",[4670.2580]%FACE_1%)
+END
+>>>>>>>>
+
+OUTER_SPRINT temp_tutu "_AR2900" OUTER_SPRINT temp_bgt "AR9000" OUTER_SPRINT temp_bgee "AR2900" OUTER_SPRINT temp_bg "AR2900" LAUNCH_ACTION_MACRO "getcpmvara"
+EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar2900.baf~
+  EVALUATE_BUFFER
+  
+COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimfur.d~
+COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimfur.baf~
+COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimdog.baf~
+COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimwlf.baf~
+
 
 
