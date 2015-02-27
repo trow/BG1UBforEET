@@ -5712,4 +5712,35 @@ COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimdog.baf~
 COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimwlf.baf~
 
 
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////
+/////Restored Elfsong Tavern Movie
+/////movie by Sams, code by AstroBryGuy
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+BEGIN @4100 /* ~Restored Elfsong Tavern Movie~ */
+REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
+FORBID_FILE ~data/JA#TAVER.MVE~ @90004
+
+/* Copy movie file */
+COPY ~bg1ub/tavern/ubtavern.mve~ ~override~
+
+/* Edit Elfsong area script */
+<<<<<<<< .../bg1ub/ub_ar0705.baf
+IF
+	Global("UBEnteredElfSong","GLOBAL",0)
+THEN
+	RESPONSE #100
+		StartMovie("UBTAVERN")
+		SetGlobal("UBEnteredElfSong","GLOBAL",1)
+		Continue()
+END
+>>>>>>>>
+
+OUTER_SPRINT temp_tutu "_AR0705" OUTER_SPRINT temp_bgt "AR7705" OUTER_SPRINT temp_bgee "AR0705" OUTER_SPRINT temp_bg "AR0705" LAUNCH_ACTION_MACRO "getcpmvara"
+EXTEND_TOP ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar0705.baf~
+  EVALUATE_BUFFER
+
+
 
