@@ -19,6 +19,7 @@ THEN
     SetGlobal("abgf_BrokeInto","GLOBAL",1)
     ActionOverride("Prism",Dialogue([PC])
 END
+
 IF
   Opened([ANYONE])
   Global("abgf_GemInEye","GLOBAL",1)
@@ -28,6 +29,7 @@ THEN
   ReputationInc(-1) //only one rep point loss in total cause it reverts the rep point gain given by letting him finish the work
   AddJournalEntry(@%AddJournal_0%%QUEST%)
 END
+
 IF
   Opened([ANYONE])
   Global("abgf_GemInEye","GLOBAL",2)

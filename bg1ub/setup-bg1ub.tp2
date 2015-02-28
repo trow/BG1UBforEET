@@ -5519,6 +5519,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~override/X#BG1NPCPhase2.G3~ THEN BEGIN
 
 <<<<<<<< ...inlined/oublek_compatibility.d
 REPLACE_ACTION_TEXT %tutu_var%oublek ~TakePartyItem("%tutu_var%MISC43")~ ~~
+REPLACE_ACTION_TEXT %tutu_var%oublek ~TakePartyItemNum("misc43",2)~ ~~
 REPLACE_ACTION_TEXT %tutu_var%oublek ~GivePartyGold(300)~ ~GivePartyGold(300) TakePartyItem("abgfEyeL") TakePartyItem("abgfEyeR") %ERASEJOURNALENTRY_PRISM_0% %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5%~
 REPLACE_ACTION_TEXT %tutu_var%oublek ~GiveGoldForce(300)~ ~GiveGoldForce(300) TakePartyItem("abgfEyeL") TakePartyItem("abgfEyeR") %ERASEJOURNALENTRY_PRISM_0% %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5%~
 >>>>>>>>
@@ -5695,7 +5696,7 @@ COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimwlf.baf~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 BEGIN @4100 /* ~Restored Elfsong Tavern Movie~ */
-REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90014  // Unavailable for BGEE
+REQUIRE_PREDICATE (!GAME_IS ~bgee~) @4101 // Unavailable for BGEE
 FORBID_FILE ~data/JA#TAVER.MVE~ @90004
 
 /* Copy movie file */

@@ -37,6 +37,7 @@ THEN
   RESPONSE #100
     Dialogue([PC])
 END
+
 IF
   See([PC])
   Range(LastSeenBy,4)
@@ -48,6 +49,7 @@ THEN
   RESPONSE #100
     Dialogue([PC])
 END
+
 IF
   See([PC])
   Range(LastSeenBy,4)
