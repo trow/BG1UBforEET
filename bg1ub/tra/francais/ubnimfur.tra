@@ -1,27 +1,29 @@
 //Nim Furlwing Dialog
 /* #14897 */
-@1 = ~Fine lot of help you were. My best purebred hunting hounds lay dead and bleeding. Honestly, you adventuring types always seem to fight better as bandits than as bodyguards.~ 
+@1 = ~Ah ça, votre aide a été efficace ! Mes meilleurs chiens de chasse pure race, saignés à mort ! Franchement, les aventuriers dans votre genre semblent avoir plus une vocation de bandits que de gardes du corps.~
 
 /* #14899 */
-@2 = ~Hmph. You were in my way more than anything. Now just look at this mess... They were purebreeds, I'll have you know.~ 
+@2 = ~Arrh ! Votre intervention était plus un obstacle qu'autre chose. Regardez-moi ce massacre... C'étaient des pure race, sachez-le !~
 
 /* #14900 */
-@3 = ~Thank you for your timely assistance. They're a fine breed of hunting dog, aren't they? Purebreds. Here, take this scroll of animal summoning as a token of my appreciation.~ 
+@3 = ~Merci, votre aide est arrivée à point nommé. De sacrés chiens de chasse, hein !?? Des pure race. Tenez, prenez ce parchemin de convocation d'animaux en gage de reconnaissance.~
 
 /* #14901 */
-@4 = ~I don't recommend coming between an elven hunter and her hounds, friend.~ 
+@4 = ~Je ne vous conseille pas de vous mettre entre un chasseur elfe et ses chiens, camarade.~
 
 /* #14902 */
-@5 = ~I spend too much of my time hunting to care about the world of politics.~ 
+@5 = ~Je passe trop de temps à chasser pour me soucier de politique.~
 
-@6 = ~Tua amin! Help! These foul beasts are attacking my hounds!~
+@6 = ~Tua amin ! A l'aide ! Ces sales bêtes s'en prennent à mes chiens !~
 
 //Journal Entries
 /* #15715 */
-@7 = ~I feel more a fool than a hearty adventurer, today. It appears I arrived too late and did too little to rescue the fine hunting hounds of a certain Nim Furlwing in the Wood of Sharp Teeth. ~
+@7 = ~Aujourd'hui je me sens davantage comme un idiot que comme un aventurier enthousiaste. J'ai le sentiment de n'avoir pas été là à temps et d'en avoir fait trop peu pour sauver les magnifiques chiens de chasse d'une personne dénommée Nim Furlwing dans le Bois des Dents Acérées.~
+     ~Aujourd'hui je me sens davantage comme une idiote que comme une aventurière enthousiaste. J'ai le sentiment de n'avoir pas été là à temps et d'en avoir fait trop peu pour sauver les magnifiques chiens de chasse d'une personne dénommée Nim Furlwing dans le Bois des Dents Acérées.~
 
 /* #15718 */
-@8 = ~I feel more a fool than a hearty adventurer, today. It appears I arrived too late and did too little to rescue the fine hunting hounds of a certain Nim Furlwing in the Wood of Sharp Teeth. ~  
+@8 = ~Aujourd'hui je me sens davantage comme un idiot que comme un aventurier enthousiaste. J'ai le sentiment de n'avoir pas été là à temps et d'en avoir fait trop peu pour sauver les magnifiques chiens de chasse d'une personne dénommée Nim Furlwing dans le Bois des Dents Acérées.~
+     ~Aujourd'hui je me sens davantage comme une idiote que comme une aventurière enthousiaste. J'ai le sentiment de n'avoir pas été là à temps et d'en avoir fait trop peu pour sauver les magnifiques chiens de chasse d'une personne dénommée Nim Furlwing dans le Bois des Dents Acérées.~
 
 /* #15717 */
-@9 = ~The Wood of Sharp Teeth, indeed! Today, I rescued the purebred hounds of Nim Furlwing from dire wolves and am, admittedly, still a little sore from the attempt.~ 
+@9 = ~Le Bois des Dents Acérées, pour sûr ! Aujourd'hui, j'y ai sauvé les chiens pure race de Nim Furlwing des crocs de loups noirs et j'en ai encore, je dois l'admettre, des courbatures.~
