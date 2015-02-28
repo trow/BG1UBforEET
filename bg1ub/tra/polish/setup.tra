@@ -5,7 +5,7 @@
 @90001 = ~Komponent modyfikacji BG1 NPC Project "The BG1 NPC Project: Core Install" stwarza problemy z wybranym komponentem.~
 @90002 = ~Komponent modyfikacji BG1 NPC Project "The BG1 NPC Project: Phase I (Banters)" stwarza problemy z wybranym komponentem.~ 
 @90003 = ~Polnocne Opowiesci z Wybrzeza Mieczy stwarzaja problemy z wybranym komponentem.~
-@90004 = ~Jarl's Adventure Pack conflicts with this component.~
+@90004 = ~Komponent ten nie jest kompatybilny z modem Jarl's Adventure Pack.~
 
 @90010 = ~Instalacja Tutu wykryta.~ 
 @90011 = ~Instalacja BGT wykryta.~
@@ -62,6 +62,6 @@
 @219 = ~Ksiaze Eltan w Budynku kapitanatu~
 
 /* new v14 */
-@4000 = ~Nim Furlwing Encounter~
-@4100 = ~Restored Elfsong Tavern Movie~
-@4101 = ~This component is not compatible with BGEE. A BGEE-compatible version of this movie is included with the mod BG:EE Classic Movies.~
+@4000 = ~Spotkanie z Nimem Furlwingiem~
+@4100 = ~Przywrocony film w tawernie Elfia Piesn~
+@4101 = ~Komponent ten nie jest kompatybilny z BGEE. Wersja tego filmu, kompatybilna z BG:EE, zawarta jest w modzie BG:EE Classic Movies.~

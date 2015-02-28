@@ -3,6 +3,7 @@
 @90001 = ~The BG1 NPC Project component "The BG1 NPC Project: Core Install" conflicts with this component.~
 @90002 = ~The BG1 NPC Project component "The BG1 NPC Project: Phase I (Banters)" conflicts with this component.~
 @90003 = ~Northern Tales of the Sword Coast conflicts with this component.~
+@90004 = ~Jarl's Adventure Pack conflicts with this component.~
 
 @90010 = ~Tutu install detected.~
 @90011 = ~BGT install detected.~
@@ -56,3 +57,8 @@
 /* new v13.1 */
 @116  = ~Prism and the Emeralds Tweak~
 @219  = ~Duke Eltan in the Harbor Master's Building~
+
+/* new v14 */
+@4000 = ~Nim Furlwing Encounter~
+@4100 = ~Restored Elfsong Tavern Movie~
+@4101 = ~This component is not compatible with BGEE. A BGEE-compatible version of this movie is included with the mod BG:EE Classic Movies.~

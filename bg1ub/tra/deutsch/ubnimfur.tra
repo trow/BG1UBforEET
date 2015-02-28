@@ -1,27 +1,27 @@
 //Nim Furlwing Dialog
 /* #14897 */
-@1 = ~Fine lot of help you were. My best purebred hunting hounds lay dead and bleeding. Honestly, you adventuring types always seem to fight better as bandits than as bodyguards.~ 
+@1 = ~Eine schöne Hilfe seid Ihr! Meine besten, reinrassigen Jagdhunde haben dran glauben müssen! Also ehrlich, Ihr Abenteurertypen kämpft als Räuber scheinbar besser denn als Leibwächter.~ 
 
 /* #14899 */
-@2 = ~Hmph. You were in my way more than anything. Now just look at this mess... They were purebreeds, I'll have you know.~ 
+@2 = ~Grmpf. Ihr seid mir ja wohl hauptsächlich im Weg herumgestanden. Jetzt seht Euch diese Sauerei hier an... Das waren Rassehunde, falls Euch das nicht klar ist.~ 
 
 /* #14900 */
-@3 = ~Thank you for your timely assistance. They're a fine breed of hunting dog, aren't they? Purebreds. Here, take this scroll of animal summoning as a token of my appreciation.~ 
+@3 = ~Danke für Eure rechtzeitige Hilfe. Sind das nicht ein paar feine Jagdhunde? Reinrassig. Hier, nehmt diese Formel zum Beschwören von Tieren als Zeichen meiner Anerkennung.~
 
 /* #14901 */
-@4 = ~I don't recommend coming between an elven hunter and her hounds, friend.~ 
+@4 = ~Ich kann Euch nicht empfehlen, zwischen eine jagende Elfe und ihre Hunde zu geraten, mein Freund!~ ~Ich kann Euch nicht empfehlen, zwischen eine jagende Elfe und ihre Hunde zu geraten, meine Freundin!~ 
 
 /* #14902 */
-@5 = ~I spend too much of my time hunting to care about the world of politics.~ 
+@5 = ~Ich verbringe zu viel Zeit mit Jagen, um mich für Politik zu interessieren.~  
 
-@6 = ~Tua amin! Help! These foul beasts are attacking my hounds!~
+@6 = ~Tua amin! Hilfe! Diese verdammten Biester attackieren meine Jagdhunde!~
 
 //Journal Entries
 /* #15715 */
-@7 = ~I feel more a fool than a hearty adventurer, today. It appears I arrived too late and did too little to rescue the fine hunting hounds of a certain Nim Furlwing in the Wood of Sharp Teeth. ~
+@7 = ~Heute fühle ich mich eher wie ein Dummkopf als wie ein mutiger Abenteurer. Ich bin scheinbar zu spät gekommen und habe nicht genug unternommen, um die edlen Jagdhunde einer gewissen Nim Furlwing zu retten.~
 
 /* #15718 */
-@8 = ~I feel more a fool than a hearty adventurer, today. It appears I arrived too late and did too little to rescue the fine hunting hounds of a certain Nim Furlwing in the Wood of Sharp Teeth. ~  
+@8 = ~Heute fühle ich mich eher wie ein Dummkopf als wie ein mutiger Abenteurer. Ich bin scheinbar zu spät gekommen und habe nicht genug unternommen, um die edlen Jagdhunde einer gewissen Nim Furlwing zu retten.~  
 
 /* #15717 */
-@9 = ~The Wood of Sharp Teeth, indeed! Today, I rescued the purebred hounds of Nim Furlwing from dire wolves and am, admittedly, still a little sore from the attempt.~ 
+@9 = ~Scharfzahnwald triffts genau! Ich habe heute die reinrassigen Hunde von Nim Furlwing vor Schreckenswölfen gerettet und verspüre nach dem Versuch zugegebenermaßen immer noch ziemliche Schmerzen.~

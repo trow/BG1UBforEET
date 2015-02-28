@@ -1,27 +1,27 @@
 //Nim Furlwing Dialog
 /* #14897 */
-@1 = ~Fine lot of help you were. My best purebred hunting hounds lay dead and bleeding. Honestly, you adventuring types always seem to fight better as bandits than as bodyguards.~ 
+@1 = ~To dopiero pomoc. Moje najlepsze psy myœliwskie le¿¹ bez ¿ycia, ca³e we krwi. Przysiêgam, ¿e wy poszukiwacze przygód zwykle znacznie lepiej radzicie sobie jako bandyci, a nie ochroniarze.~
 
-/* #14899 */
-@2 = ~Hmph. You were in my way more than anything. Now just look at this mess... They were purebreeds, I'll have you know.~ 
+ /* #14899 */
+@2 = ~Hmm, staliœcie tylko na mojej drodze. Teraz popatrzcie na ten ba³agan. Powinniœcie wiedzieæ, ¿e one by³y rasowe.~ 
 
 /* #14900 */
-@3 = ~Thank you for your timely assistance. They're a fine breed of hunting dog, aren't they? Purebreds. Here, take this scroll of animal summoning as a token of my appreciation.~ 
+@3 = ~Dziêkuje wam za pomoc. Œwietna rasa psów myœliwskich, prawda? Proszê, weŸcie ten pergamin pozwalaj¹cy na wezwanie zwierzêcia jako wyraz mojej wdziêcznoœci.~ 
 
 /* #14901 */
-@4 = ~I don't recommend coming between an elven hunter and her hounds, friend.~ 
+@4 = ~Nie radzê wchodziæ pomiêdzy elfiego myœliwego i jego psy, przyjaciele.~
 
 /* #14902 */
-@5 = ~I spend too much of my time hunting to care about the world of politics.~ 
+@5 = ~Zbyt du¿o czasu spêdzam na polowaniach, by k³opotaæ siê polityk¹.~ 
 
-@6 = ~Tua amin! Help! These foul beasts are attacking my hounds!~
+@6 = ~Tua amin! Pomocy! Te plugawe bestie atakuj¹ moje psy!~
 
 //Journal Entries
 /* #15715 */
-@7 = ~I feel more a fool than a hearty adventurer, today. It appears I arrived too late and did too little to rescue the fine hunting hounds of a certain Nim Furlwing in the Wood of Sharp Teeth. ~
+@7 = ~Wyszliœmy dzisiaj na g³upców, a nie doœwiadczonych poszukiwaczy przygód. Wygl¹da na to, ¿e przybyliœmy zbyt póŸno i zrobiliœmy za ma³o, by uratowaæ wspania³e psy myœliwskie Nima Furlwinga w Lesie Ostrych K³ów.~
 
 /* #15718 */
-@8 = ~I feel more a fool than a hearty adventurer, today. It appears I arrived too late and did too little to rescue the fine hunting hounds of a certain Nim Furlwing in the Wood of Sharp Teeth. ~  
+@8 = ~Wyszliœmy dzisiaj na g³upców, a nie doœwiadczonych poszukiwaczy przygód. Wygl¹da na to, ¿e przybyliœmy zbyt póŸno i zrobiliœmy za ma³o, by uratowaæ wspania³e psy myœliwskie Nima Furlwinga w Lesie Ostrych K³ów.~  
 
 /* #15717 */
-@9 = ~The Wood of Sharp Teeth, indeed! Today, I rescued the purebred hounds of Nim Furlwing from dire wolves and am, admittedly, still a little sore from the attempt.~ 
+@9 = ~Las Ostrych K³ów! Dzisiaj uratowaliœmy rasowe psy Nima Furlwinga przed sfor¹ wœciek³ych wilków i muszê przyznaæ, ¿e jestem po tym zdarzeniu nadal trochê obola³y.~ ~Las Ostrych K³ów! Dzisiaj uratowaliœmy rasowe psy Nima Furlwinga przed sfor¹ wœciek³ych wilków i muszê przyznaæ, ¿e jestem po tym zdarzeniu nadal trochê obola³a.~

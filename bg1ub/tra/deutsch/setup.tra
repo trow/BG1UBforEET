@@ -3,7 +3,7 @@
 @90001 = ~Die BG1 NPC Project Komponente "Das BG1 NSC Projekt: Hauptinstallation" steht im Widerspruch zu dieser Komponente.~
 @90002 = ~Die BG1 NPC Project Komponente "Das BG1 NSC Projekt: Phase I (Gespraeche)" steht im Widerspruch zu dieser Komponente.~
 @90003 = ~Die Modifikation "Northern Tales of the Sword Coast" steht im Widerspruch zu dieser Komponente.~
-@90004 = ~Jarl's Adventure Pack conflicts with this component.~
+@90004 = ~Diese Komponente ist inkompatibel zu Jarls Adventure Pack.~
 
 @90010 = ~Tutu-Installation erkannt.~
 @90011 = ~BGT-Installation erkannt.~
@@ -53,6 +53,6 @@
 @219   = ~Fürst Eltan im Haus des Hafenmeisters~
 
 /* new v14 */
-@4000 = ~Nim Furlwing Encounter~
-@4100 = ~Restored Elfsong Tavern Movie~
-@4101 = ~This component is not compatible with BGEE. A BGEE-compatible version of this movie is included with the mod BG:EE Classic Movies.~
+@4000 = ~Nim Furlwing Begegnung~
+@4100 = ~Elfgesang Taverne Intro-Movie Wiederherstellen~
+@4101 = ~Diese Komponente ist nicht mit BG:EE kompatibel. Eine BG:EE-kompatible Version des Intro-Movies ist in der Modifikation BG:EE Classic Movies enthalten.~
