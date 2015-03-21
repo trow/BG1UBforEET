@@ -27,7 +27,7 @@ IF
 	Global("UBNimFight","%Larswood%",2)
 THEN
 	RESPONSE #100
-		ChangeEnemyAlly(Myself,GOODBUTBLUE)
+		ChangeEnemyAlly(Myself,GOODCUTOFF)
 END
 
 IF
@@ -68,9 +68,15 @@ THEN
 END
 
 IF
-	OR(2)
-		Range("ubnimwlf",8)
-		Range(NearestEnemyOf(Myself),8)
+	Range("ubnimwlf",8)
+THEN
+	RESPONSE #100
+		EquipMostDamagingMelee()
+		Continue()
+END
+
+IF
+	Range(NearestEnemyOf(Myself),8)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
