@@ -1,0 +1,75 @@
+IF
+	Global("UBFightDezkiel","GLOBAL",1)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		Enemy()
+END
+
+IF
+	AttackedBy([ANYONE],DEFAULT)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		SetGlobal("UBFightDezkiel","GLOBAL",1)
+		ActionOverride("dezkiel",Enemy())
+		Enemy()
+END
+
+IF
+	Global("UBFightDezkiel","GLOBAL",0)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		NoAction()
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	!GlobalTimerNotExpired("UBSNOWGOLEMBREATH","LOCALS")
+	Range([PC],10)
+	RandomNum(3,1)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("UBSNOWGOLEMBREATH","LOCALS",60)
+		ForceSpellRES("UBSNOBRW",LastSeenBy(Myself))
+		Wait(2)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	InWeaponRange(LastSeenBy(Myself))
+THEN
+	RESPONSE #100
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	AttackedBy([ANYONE],DEFAULT)
+	InWeaponRange(LastAttackerOf(Myself))
+THEN
+	RESPONSE #100
+		Attack(LastAttackerOf(Myself))
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		MoveToObject(LastSeenBy(Myself))
+END
+
+IF
+	Global("UBFightDezkiel","GLOBAL",1)
+	!See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		MoveToObject(NearestEnemyOf(Myself))
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		NoAction()
+END

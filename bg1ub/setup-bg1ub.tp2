@@ -666,8 +666,130 @@ COPY_EXISTING ~%IceIslandMaze_L2%.ARE~ ~override~
     	fj_name             = UBTrap4
     	fj_reg_script		= EVALUATE_BUFFER "%tutu_var%GTAR7"
   	END
+	// Move Polar bears to a side cave and replace with snow golems
+	READ_LONG 0x54 actOff
+	actIdx = 0
+    FOR (READ_SHORT 0x58 numAct; numAct; numAct -= 0x1) BEGIN
+    	READ_ASCII actOff + 0x80 char
+    	PATCH_IF ("%char%" STR_EQ "%tutu_var%BEARPO") BEGIN
+			LPF fj_are_structure
+				INT_VAR
+				fj_delete_mode = actIdx  // Actor to delete
+				STR_VAR
+				fj_structure_type = actor
+			END
+		END ELSE BEGIN
+			actIdx += 1
+			actOff += 0x110
+		END
+	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 200
+    	fj_loc_y          = 2000
+    	fj_dest_x         = 200
+    	fj_dest_y         = 2000
+    	fj_animation      = 0x7203 // Polar bear
+    	fj_orientation    = 6      // NW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Polar Bear 1"
+    	fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%BEARPO"
+  	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 300
+    	fj_loc_y          = 2050
+    	fj_dest_x         = 300
+    	fj_dest_y         = 2050
+    	fj_animation      = 0x7203 // Polar bear
+    	fj_orientation    = 6      // NW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Polar Bear 2"
+    	fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%BEARPO"
+  	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 1550
+    	fj_loc_y          = 2410
+    	fj_dest_x         = 1550
+    	fj_dest_y         = 2410
+    	fj_animation      = 0x7001 // Ogrillon
+    	fj_orientation    = 6      // NW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Snow Golem 1"
+    	fj_cre_resref     = ubsnogol
+  	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 1050
+    	fj_loc_y          = 2330
+    	fj_dest_x         = 1050
+    	fj_dest_y         = 2330
+    	fj_animation      = 0x7001  // Ogrillon
+    	fj_orientation    = 10      // NE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Snow Golem 2"
+    	fj_cre_resref     = ubsnogol
+  	END
 BUT_ONLY
 
+// Add variable to Dezkiel's Enemy() actions
+<<<<<<<< .../bg1ub/ub_dezkie.d
+REPLACE_ACTION_TEXT ~%tutu_var%DEZKIEL~
+~Enemy()~
+~SetGlobal("UBFightDezkiel","GLOBAL",1) Enemy()~
+>>>>>>>>
+
+COMPILE EVALUATE_BUFFER ~.../bg1ub/ub_dezkie.d~
+
+// Add Snow Golem
+ACTION_IF GAME_IS ~totsc~ THEN BEGIN
+	COPY ~bg1ub/ar1010/ubsnorng_totsc.itm~ ~override/ubsnorng.itm~
+END ELSE BEGIN
+	COPY ~bg1ub/ar1010/ubsnorng.itm~ override
+END
+COPY ~bg1ub/ar1010/ubsnofst.itm~ override
+COPY ~bg1ub/ar1010/ubsnobrw.spl~ override
+	SAY NAME1 @1002
+	WRITE_ASCIIE 0x10 ~%tutu_var%REVEN01~ #8
+
+COPY ~bg1ub/ar1010/ubsnogol.cre~ override
+    LAUNCH_PATCH_MACRO ~source_cre_sound_cleanup~
+    LAUNCH_PATCH_MACRO ~source_cre_script_cleanup~
+    LAUNCH_PATCH_MACRO ~cre_source_res~
+	SAY NAME1 			@1001 // Snow golem
+	SAY NAME2 			@1001 // Snow golem
+    SAY BATTLE_CRY1 	~[ZOMBIE 03]~ [%tutu_var%ZOMBI03]
+    SAY BATTLE_CRY2 	~[ZOMBIE 01] ~ [%tutu_var%ZOMBI01]
+    SAY ATTACK1 		~[REVENANT 05] ~ [%tutu_var%REVEN05]
+    SAY ATTACK1 		~[REVENANT 06] ~ [%tutu_var%REVEN06] 
+    SAY DAMAGE 			~[REVENANT 08] ~ [%tutu_var%REVEN08]
+    SAY DYING 			~[REVENANT 09] ~ [%tutu_var%REVEN09]
+	ADD_CRE_ITEM ~ubsnorng~ #0 #0 #0 ~UNDROPPABLE~ ~RRING LRING~
+	ADD_CRE_ITEM ~ubsnofst~ #0 #0 #0 ~UNDROPPABLE~ ~WEAPON1~ EQUIP
+	
+COMPILE EVALUATE_BUFFER ~bg1ub/ar1010/ubsnogol.baf~
+
+COPY_EXISTING ~%tutu_var%DEZKIE.cre~ override
+	// Correcting errors in Dezkiel's CRE
+	WRITE_BYTE 0x0235 9  // Dezkiel has 5th level spells, should be 9th level mage
+	WRITE_BYTE 0x0052 13 // THAC0 for 8th level fighter is 13
+	WRITE_BYTE 0x006f 2  // Small Swords
+	WRITE_BYTE 0x0072 2  // Missile
+	WRITE_BYTE 0x0075 2  // Blunt	
+	// Give Dezkiel some weapons!
+	ADD_CRE_ITEM ~%tutu_var%STAF01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP
+	ADD_CRE_ITEM ~%tutu_var%DAGG05~ #10 #0 #0 ~IDENTIFIED~ ~WEAPON2~
+	// Replace fire-area of effect spells that might harm golems
+	REMOVE_MEMORIZED_SPELL ~SPWI304~  // Remove Fireball
+	REMOVE_MEMORIZED_SPELL ~SPWI217~  // Remove Aganazzar's Scorcher
+	ADD_MEMORIZED_SPELL ~SPWI303~ #2 ~wizard~ ( 2 ) // Add Flame Arrow
+	ADD_MEMORIZED_SPELL ~SPWI211~ #1 ~wizard~ ( 1 ) // Add Melf's Acid Arrow
+BUT_ONLY
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\

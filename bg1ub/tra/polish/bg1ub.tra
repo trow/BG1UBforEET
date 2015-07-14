@@ -218,6 +218,10 @@ Rodzaj bieg³oœci: topory
 Typ broni: 1-rêczny
 Wymagana si³a: 10~
 
+// Ice Island Level 2 Restoration
+@1001 = ~Snow Golem~
+@1002 = ~Snow Golem Breath~
+
 // Nim Furlwing Encounter
 @4001 = ~Nim Furlwing~
 @4002 = ~Pies myœliwski~

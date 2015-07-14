@@ -160,6 +160,10 @@ Facteur de vitesse : 7
 Type de compétence : hache
 Type : à une main~
 
+// Ice Island Level 2 Restoration
+@1001 = ~Snow Golem~
+@1002 = ~Snow Golem Breath~
+
 // Nim Furlwing Encounter
 @4001 = ~Nim Furlwing~
 @4002 = ~Chien de chasse~
