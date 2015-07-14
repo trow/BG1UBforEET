@@ -8,7 +8,7 @@ AUTHOR ~http://forums.pocketplane.net/index.php/board,79.0.html~
 
 // ASK_EVERY_COMPONENT
 
-/*ALLOW_MISSING
+ALLOW_MISSING
 // BG: TotSC files
 ANDRIS.CRE
 APPAR.CRE
@@ -274,7 +274,7 @@ UNDEDDAM.EFF
 GIANHIT.EFF
 MONSTHIT.EFF
 UNDEDHIT.EFF
-*/
+
 
 VERSION ~v14.0_beta_150713~
 README ~bg1ub/BG1UB-Readme.html~
@@ -283,7 +283,7 @@ ALWAYS
 
   INCLUDE ~bg1ub/lib/cre_project_macros.tpa~
   INCLUDE ~bg1ub/lib/are_project_functions.tpa~
-  APPEND ~state.ids~ ~0x00000FC0 STATE_REALLY_DEAD~ UNLESS ~STATE_REALLY_DEAD~  
+  APPEND ~state.ids~ ~0x00000FC0 STATE_REALLY_DEAD~ UNLESS ~STATE_REALLY_DEAD~
 
 // @@@ Support for polish translation @@@
     //set the proper values of string variables
@@ -340,6 +340,7 @@ ALWAYS
 		/* Extra stuff needed for cross platform code: BG1 with TotSC installed */
 		ACTION_IF GAME_IS ~totsc~ THEN BEGIN
      		INCLUDE ~bg1ub/lib/rr_totsc_addvars.tpa~
+     		APPEND ~action.ids~ ~181 ForceSpellRES(S:RES*, O:Target)~ UNLESS ~ForceSpellRES~
 		END ELSE BEGIN
 			/* BG1 without TotSC installed */
      		INCLUDE ~bg1ub/lib/rr_bg1_addvars.tpa~
@@ -753,7 +754,7 @@ END ELSE BEGIN
 	COPY ~bg1ub/ar1010/ubsnorng.itm~ override
 END
 COPY ~bg1ub/ar1010/ubsnofst.itm~ override
-COPY ~bg1ub/ar1010/ubsnobrw.spl~ override
+COPY ~bg1ub/ar1010/ubsnobr.spl~ override
 	SAY NAME1 @1002
 	WRITE_ASCIIE 0x10 ~%tutu_var%REVEN01~ #8
 
@@ -2703,8 +2704,8 @@ COPY_EXISTING ~%tutu_var%TRAVEL.CRE~ ~override~ // Traveler (Wade), AR2301
   WRITE_ASCIIE 0x280 "WADE" #18 // Script name
 BUT_ONLY
 
-LAF replacetext_area_script STR_VAR area="%EBaldursGate%" oldtext=~Exists(\"BERSCH\")~ newtext=~CreateCreature("HERSCH",~ END
-LAF replacetext_area_script STR_VAR area="%EBaldursGate%" oldtext=~CreateCreature(\"BERSCH\",~ newtext=~Exists("HERSCHEL")~ END
+LAF replacetext_area_script STR_VAR area="%EBaldursGate%" oldtext=~Exists(\"BERSCH\")~ newtext=~Exists("HERSCHEL")~ END
+LAF replacetext_area_script STR_VAR area="%EBaldursGate%" oldtext=~CreateCreature(\"BERSCH\",~ newtext=~CreateCreature("HERSCH",~ END
 
 //////////////////////////////////////////////////
 // Add patron to Splurging Sturgeon inn (upstairs)
@@ -5424,7 +5425,7 @@ THEN
 END
 >>>>>>>>
 
-LAF extend_area_script STR_VAR area="%EBaldursGate_ElfsongTavern_L1%" bottom=".../bg1ub/ub_ar0705tv.BAF" END
+LAF extend_area_script STR_VAR area="%EBaldursGate_ElfsongTavern_L1%" bottom=".../bg1ub/ub_ar0705tv.baf" END
 
 
 
