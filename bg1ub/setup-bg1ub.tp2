@@ -8,7 +8,7 @@ AUTHOR ~http://forums.pocketplane.net/index.php/board,79.0.html~
 
 // ASK_EVERY_COMPONENT
 
-ALLOW_MISSING
+/*ALLOW_MISSING
 // BG: TotSC files
 ANDRIS.CRE
 APPAR.CRE
@@ -274,13 +274,15 @@ UNDEDDAM.EFF
 GIANHIT.EFF
 MONSTHIT.EFF
 UNDEDHIT.EFF
+*/
 
-VERSION ~v14.0_beta_150320~
+VERSION ~v14.0_beta_150713~
 README ~bg1ub/BG1UB-Readme.html~
 
 ALWAYS
 
   INCLUDE ~bg1ub/lib/cre_project_macros.tpa~
+  INCLUDE ~bg1ub/lib/are_project_functions.tpa~
   APPEND ~state.ids~ ~0x00000FC0 STATE_REALLY_DEAD~ UNLESS ~STATE_REALLY_DEAD~  
 
 // @@@ Support for polish translation @@@
@@ -318,507 +320,48 @@ ALWAYS
       reload_array = ub#reload
   END
 
+  COPY ~bg1ub/tra/%LANGUAGE%/extra_tmp.tra~ ~bg1ub/tra/%LANGUAGE%/extra.tra~
+	EVALUATE_BUFFER
+  LOAD_TRA ~bg1ub/tra/%LANGUAGE%/extra.tra~
 
-  ACTION_IF !("%percentage_sign%" STRING_EQUAL "%") THEN BEGIN //do once
-    ACTION_IF GAME_IS ~tutu tutu_totsc~ THEN BEGIN //Tutu
-      PRINT @90010
-      INCLUDE ~bg1ub/lib/g3_tutu_cpmvars.tpa~
-      INCLUDE ~bg1ub/lib/tutu_area_script_assign.tph~
-	  INCLUDE ~bg1ub/lib/rr_tutubgtbgee_addvars.tpa~
-      COPY ~bg1ub/tra/%LANGUAGE%/extra_tmp.tra~ ~bg1ub/tra/%LANGUAGE%/extra.tra~
-        EVALUATE_BUFFER
-      LOAD_TRA ~bg1ub/tra/%LANGUAGE%/extra.tra~
+	ACTION_IF GAME_IS ~tutu tutu_totsc~ THEN BEGIN //Tutu
+		PRINT @90010
+      	INCLUDE ~bg1ub/lib/g3_tutu_cpmvars.tpa~
+	  	INCLUDE ~bg1ub/lib/rr_tutubgtbgee_addvars.tpa~
     END
-    ELSE BEGIN
-      ACTION_IF GAME_IS ~bgt~ THEN BEGIN //BGT
+    ACTION_IF GAME_IS ~bgt~ THEN BEGIN //BGT
         PRINT @90011
         INCLUDE ~bg1ub/lib/g3_bgt_cpmvars.tpa~
 		INCLUDE ~bg1ub/lib/rr_tutubgtbgee_addvars.tpa~
-        COPY ~bg1ub/tra/%LANGUAGE%/extra_tmp.tra~ ~bg1ub/tra/%LANGUAGE%/extra.tra~
-          EVALUATE_BUFFER
-        LOAD_TRA ~bg1ub/tra/%LANGUAGE%/extra.tra~
-      END
-      ELSE BEGIN
-        ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN //BG
-          PRINT @90012
-          INCLUDE ~bg1ub/lib/g3_bg_cpmvars.tpa~
-     	  INCLUDE ~bg1ub/lib/bg1_area_script_assign.tph~
-
-			/* Extra stuff needed for cross platform code:
-			BG1 with TotSC installed */
-			ACTION_IF GAME_IS ~totsc~ THEN BEGIN
-     			INCLUDE ~bg1ub/lib/rr_totsc_addvars.tpa~
-			END ELSE BEGIN
-				/* BG1 without TotSC installed */
-     			INCLUDE ~bg1ub/lib/rr_bg1_addvars.tpa~
-			END //still bg1+totsc
-
-          COPY ~bg1ub/tra/%LANGUAGE%/extra_tmp.tra~ ~bg1ub/tra/%LANGUAGE%/extra.tra~
-            EVALUATE_BUFFER
-          LOAD_TRA ~bg1ub/tra/%LANGUAGE%/extra.tra~
-        END
-        ELSE BEGIN
-     		ACTION_IF GAME_IS ~bgee~ THEN BEGIN //bgee
-      			PRINT @90017
-      			INCLUDE ~bg1ub/lib/g3_bgee_cpmvars.tpa~
-				INCLUDE ~bg1ub/lib/rr_tutubgtbgee_addvars.tpa~
-     	  		INCLUDE ~bg1ub/lib/bgee_area_script_assign.tph~
-      			COPY ~bg1ub/tra/%LANGUAGE%/extra_tmp.tra~ ~bg1ub/tra/%LANGUAGE%/extra.tra~
-        			EVALUATE_BUFFER
-      			LOAD_TRA ~bg1ub/tra/%LANGUAGE%/extra.tra~
-    		END
-    		ELSE BEGIN
-         		FAIL @90013
-         	END
-        END
-      END
     END
-  END
+    ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN //BG
+        PRINT @90012
+        INCLUDE ~bg1ub/lib/g3_bg_cpmvars.tpa~
+		/* Extra stuff needed for cross platform code: BG1 with TotSC installed */
+		ACTION_IF GAME_IS ~totsc~ THEN BEGIN
+     		INCLUDE ~bg1ub/lib/rr_totsc_addvars.tpa~
+		END ELSE BEGIN
+			/* BG1 without TotSC installed */
+     		INCLUDE ~bg1ub/lib/rr_bg1_addvars.tpa~
+		END //still bg1+totsc
+    END
+    ACTION_IF GAME_IS ~bgee~ THEN BEGIN //bgee
+      	PRINT @90017
+      	INCLUDE ~bg1ub/lib/g3_bgee_cpmvars.tpa~
+		INCLUDE ~bg1ub/lib/rr_tutubgtbgee_addvars.tpa~
+    END
+    ACTION_IF !(GAME_IS ~bg1 totsc bgt bgee tutu tutu_totsc~) THEN BEGIN //Not a supported game
+         FAIL @90013
+    END
 
   // BGT/Tutu compatibility
   ACTION_IF GAME_IS ~tutu tutu_totsc bgt~ AND //BGT or Tutu only
     !(FILE_EXISTS ~override/BG1UBBGTTutuCompat.UB~) THEN BEGIN //do once
 
 	COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBBGTTutuCompat.UB~
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%EDIE.CRE~ ~override~
-     SAY NAME1 @10000
-     SAY NAME2 @10000
-     SAY INITIAL_MEETING @10001
-     SAY DAMAGE @10002
-     SAY DYING @10003
-     SAY SELECT_COMMON1 @10001
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%ENNAHE.CRE~ ~override~
-     SAY NAME1 @10004
-     SAY NAME2 @10004
-     SAY INITIAL_MEETING @10005
-     SAY DAMAGE @10002
-     SAY DYING @10002
-     SAY SELECT_COMMON1 @10005
-     SAY 0x198 @10006
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%ERLINH.CRE~ ~override~
-     SAY NAME1 @10007
-     SAY NAME2 @10007
-     SAY INITIAL_MEETING @10008
-     SAY DAMAGE @10009
-     SAY DYING @10010
-     SAY SELECT_COMMON1 @10008
-     SAY 0x198 @10011
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%FELDAN.CRE~ ~override~
-     SAY NAME1 @10012
-     SAY NAME2 @10012
-     SAY INITIAL_MEETING @10013
-     SAY DAMAGE @10014
-     SAY DYING @10015
-     SAY SELECT_COMMON1 @10013
-     SAY SELECT_COMMON2 @10016
-     SAY SELECT_RARE1 @10016
-     SAY SELECT_RARE2 @10016
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%GALKIN.CRE~ ~override~
-     SAY NAME1 @10017
-     SAY NAME2 @10017
-     SAY INITIAL_MEETING @10018
-     SAY DAMAGE @10019
-     SAY DYING @10020
-     SAY SELECT_COMMON1 @10021
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%GIRLBAX.CRE~ ~override~
-     SAY NAME1 @10022
-     SAY NAME2 @10022
-     SAY INITIAL_MEETING @10023
-     SAY DAMAGE @10024
-     SAY DYING @10025
-     SAY SELECT_COMMON1 @10023
-     SAY 0x198 @10026
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%HAFFG2.CRE~ ~override~
-     SAY NAME1 @10027
-     SAY NAME2 @10027
-     SAY INITIAL_MEETING @10028
-     SAY DAMAGE @10029
-     SAY DYING @10030
-     SAY SELECT_COMMON1 @10028
-     SAY 0x198 @10031
-     SAY 0x19c @10032
-     SAY 0x1a0 @10033
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%HALFG2.CRE~ ~override~
-     SAY NAME1 @10034
-     SAY NAME2 @10034
-     SAY INITIAL_MEETING @10035
-     SAY DAMAGE @10036
-     SAY DYING @10037
-     SAY SELECT_COMMON1 @10035
-     SAY 0x198 @10038
-     SAY 0x19c @10039
-     SAY 0x1a0 @10040
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%MERLIN.CRE~ ~override~
-     SAY NAME1 @10041
-     SAY NAME2 @10041
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%MTOB4.CRE~ ~override~
-     SAY NAME1 @10042
-     SAY NAME2 @10042
-     SAY INITIAL_MEETING @10043
-     SAY DAMAGE @10044
-     SAY DYING @10045
-     SAY SELECT_COMMON1 @10043
-     SAY 0x198 @10046
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%MTOB5.CRE~ ~override~
-     SAY NAME1 @10042
-     SAY NAME2 @10042
-     SAY INITIAL_MEETING @10047
-     SAY DAMAGE @10044
-     SAY DYING @10045
-     SAY SELECT_COMMON1 @10047
-     SAY 0x198 @10046
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREGR1.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREGR2.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREGR3.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREGR4.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_scripto%GREGR_A.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_scripto%GREGRSU.CRE~ ~override~
-     SAY NAME1 @10048
-     SAY NAME2 @10048
-     SAY BATTLE_CRY1 @10049
-     SAY BATTLE_CRY2 @10050
-     SAY ATTACK1 @10051
-     SAY ATTACK2 @10052
-     SAY DAMAGE @10053
-     SAY DYING @10054
-     SAY SELECT_COMMON1 @10055
-     SAY SELECT_RARE1 @10056
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREHA1.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREHA2.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREHA3.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREHA4.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREHA5.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_scripto%GREHA_A.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_scripto%GREHA_C.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_scripto%GREHA_D.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_scripto%GREHA_E.CRE~ ~override~
-     SAY NAME1 @10057
-     SAY NAME2 @10057
-     SAY BATTLE_CRY1 @10058
-     SAY BATTLE_CRY2 @10059
-     SAY DAMAGE @10060
-     SAY DYING @10061
-     SAY SELECT_COMMON1 @10062
-     SAY SELECT_COMMON2 @10063
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%READ4.CRE~ ~override~
-     SAY NAME1 @10064
-     SAY NAME2 @10064
-     SAY INITIAL_MEETING @10016
-     SAY DAMAGE @10014
-     SAY DYING @10015
-     SAY SELECT_COMMON1 @10013
-     SAY SELECT_COMMON2 @10016
-     SAY SELECT_RARE1 @10016
-     SAY SELECT_RARE2 @10016
-     SAY 0x198 @10046
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptt%ASLOI02.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptt%ASLOI03.CRE~ ~override~
-     SAY NAME1 @10065
-     SAY NAME2 @10065
-     SAY BATTLE_CRY1 @10066
-     SAY BATTLE_CRY2 @10067
-     SAY ATTACK1 @10068
-     SAY ATTACK2 @10069
-     SAY DAMAGE @10070
-     SAY DYING @10071
-     SAY SELECT_COMMON1 @10072
-     SAY SELECT_COMMON2 @10073
-     SAY SELECT_COMMON3 @10074
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%TRAVEL.CRE~ ~override~
-     SAY NAME1 @10075
-     SAY NAME2 @10075
-     SAY INITIAL_MEETING @10047
-     SAY DAMAGE @10044
-     SAY DYING @10045
-     SAY SELECT_COMMON1 @10047
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%VOLOSE.CRE~ ~override~
-     SAY NAME1 @10076
-     SAY NAME2 @10076
-     SAY INITIAL_MEETING @10077
-     SAY DAMAGE @10078
-     SAY DYING @10079
-     SAY SELECT_COMMON1 @10080
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%WILTON.CRE~ ~override~
-     SAY NAME1 @10081
-     SAY NAME2 @10081
-     SAY INITIAL_MEETING @10082
-     SAY DAMAGE @10083
-     SAY DYING @10084
-     SAY SELECT_COMMON1 @10085
-     SAY 0x198 @10086
-     SAY 0x19c @10087
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%FTOWUBSC%.CRE~ ~override~
-     SAY NAME1 @10042
-     SAY NAME2 @10042
-     SAY INITIAL_MEETING @10088
-     SAY DAMAGE @10002
-     SAY DYING @10128
-     SAY SELECT_COMMON1 @10088
-     SAY 0x198 @10089
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%FTOWUBSN%.CRE~ ~override~
-     SAY NAME1 @10042
-     SAY NAME2 @10042
-     SAY INITIAL_MEETING @10090
-     SAY DAMAGE @10091
-     SAY DYING @10092
-     SAY SELECT_COMMON1 @10090
-     SAY 0x198 @10089
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%MEMNIS.CRE~ ~override~
-     SAY NAME1 @10093
-     SAY NAME2 @10093
-     SAY INITIAL_MEETING @10094
-     SAY DAMAGE @10095
-     SAY DYING @10096
-     SAY SELECT_COMMON1 @10094
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%MTOWUBSN%.CRE~ ~override~
-     SAY NAME1 @10042
-     SAY NAME2 @10042
-     SAY INITIAL_MEETING @10097
-     SAY DAMAGE @10044
-     SAY DYING @10098
-     SAY SELECT_COMMON1 @10097
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%MTOWUBST%.CRE~ ~override~
-     SAY NAME1 @10042
-     SAY NAME2 @10042
-     SAY INITIAL_MEETING @10099
-     SAY DAMAGE @10044
-     SAY DYING @10098
-     SAY SELECT_COMMON1 @10099
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%PLYOGRE.CRE~ ~override~
-     SAY NAME1 @10100
-     SAY NAME2 @10100
-     SAY BATTLE_CRY1 @10101
-     SAY BATTLE_CRY2 @10102
-     SAY DAMAGE @10103
-     SAY DYING @10104
-     SAY SELECT_COMMON1 @10105
-     SAY SELECT_COMMON2 @10106
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%COWLED.CRE~ ~override~
-     SAY NAME1 @10107
-     SAY NAME2 @10107
-     SAY INITIAL_MEETING @10108
-     SAY DAMAGE @10109
-     SAY DYING @10110
-     SAY SELECT_COMMON1 @10108
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%GHOULSU.CRE~ ~override~
-     SAY NAME1 @10111
-     SAY NAME2 @10111
-     SAY BATTLE_CRY1 @10112
-     SAY BATTLE_CRY2 @10113
-     SAY ATTACK1 @10114
-     SAY ATTACK2 @10115
-     SAY DAMAGE @10116
-     SAY DYING @10117
-     SAY SELECT_COMMON1 @10118
-     SAY SELECT_COMMON2 @10119
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptb%IRD_INE.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptb%IRD_INN.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptb%IRD_INS.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptb%IRD_INW.CRE~ ~override~
-     SAY NAME1 @10120
-     SAY NAME2 @10120
-     SAY 0x1b8 @10121
-     SAY 0x1bc @10122
-     SAY 0x1c0 @10123
-     SAY 0x1c4 @10124
-     SAY 0x1c8 @10125
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%HALFEN.CRE~ ~override~
-     SAY NAME1 @10126
-     SAY NAME2 @10126
-     SAY INITIAL_MEETING @10127
-     SAY DAMAGE @10036
-     SAY DYING @10037
-     SAY SELECT_COMMON1 @10127
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%HALFEN2.CRE~ ~override~
-     SAY NAME1 @10126
-     SAY NAME2 @10126
-     SAY INITIAL_MEETING @10178
-     SAY DAMAGE @10036
-     SAY DYING @10037
-     SAY SELECT_COMMON1 @10178
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%ENTAR.CRE~ ~override~
-     SAY NAME1 @10129
-     SAY NAME2 @10129
-     SAY INITIAL_MEETING @10130
-     SAY DAMAGE @10131
-     SAY DYING @10132
-     SAY SELECT_COMMON1 @10133
-     SAY 0x198 @10134
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%HERSCH.CRE~ ~override~
-     SAY NAME1 @10135
-     SAY NAME2 @10135
-     SAY INITIAL_MEETING @10136
-     SAY DAMAGE @10137
-     SAY DYING @10138
-     SAY SELECT_COMMON1 @10139
-     SAY SELECT_COMMON2 @10140
-     SAY SELECT_ACTION4 @10141
-     SAY SELECT_ACTION5 @10142
-     SAY 0x198 @10143
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%MERCHA.CRE~ ~override~
-     SAY NAME1 @10144
-     SAY NAME2 @10144
-     SAY INITIAL_MEETING @10145
-     SAY DAMAGE @10146
-     SAY DYING @10147
-     SAY SELECT_COMMON1 @10148
-     SAY SELECT_COMMON2 @10149
-     SAY SELECT_ACTION4 @10150
-     SAY SELECT_ACTION5 @10151
-     SAY 0x198 @10152
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%SERWEN.CRE~ ~override~
-     SAY NAME1 @10153
-     SAY NAME2 @10153
-     SAY INITIAL_MEETING @10154
-     SAY DAMAGE @10155
-     SAY DYING @10156
-     SAY SELECT_COMMON1 @10157
-     SAY 0x198 @10158
-     SAY 0x19c @10159
-     SAY 0x1b8 @10160
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%BART8.CRE~ ~override~
-         ~bg1ub/%tutuorbgt%/CRE/%tutu_var%BART9.CRE~ ~override~
-     SAY NAME1 @10161
-     SAY NAME2 @10161
-     SAY INITIAL_MEETING @10162
-     SAY DAMAGE @10163
-     SAY DYING @10164
-     SAY SELECT_COMMON1 @10162
-     SAY SELECT_COMMON2 @10165
-     SAY SELECT_COMMON3 @10166
-     SAY SELECT_COMMON4 @10167
-
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%GIRLBE.CRE~ ~override~
-     SAY NAME1 @10022
-     SAY NAME2 @10022
-     SAY INITIAL_MEETING @10168
-     SAY DAMAGE @10024
-     SAY DYING @10025
-     SAY SELECT_COMMON1 @10168
-     SAY 0x198 @10026
-     SAY 0x1b8 @10169
-
-    //for EasyTutu and probably Tutu v4 (Tutu v6b already has this)
-    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptt%ASLOISU.CRE~ ~override~
-     SAY NAME1 @10065
-     SAY NAME2 @10065
-     SAY BATTLE_CRY1 @10066
-     SAY BATTLE_CRY2 @10067
-     SAY ATTACK1 @10068
-     SAY ATTACK2 @10069
-     SAY DAMAGE @10070
-     SAY DYING @10071
-     SAY SELECT_COMMON1 @10072
-     SAY SELECT_COMMON2 @10074
-
-    COPY  ~bg1ub/%tutuorbgt%/STO~ ~override~
-          ~bg1ub/%tutuorbgt%/ARE~ ~override~
-          ~bg1ub/%tutuorbgt%/BAM~ ~override~
-          ~bg1ub/%tutuorbgt%/EFF~ ~override~
-
-    //sounds
-	ACTION_IF GAME_IS ~tutu tutu_totsc~ BEGIN // Tutu only
-
-    	ACTION_IF (FILE_EXISTS ~bg1ub/audio/%LANGUAGE%/_MB_E43B.ogg~) BEGIN
-  			LAF HANDLE_AUDIO
-    			STR_VAR
-      				audio_path = EVAL ~bg1ub/audio/%LANGUAGE%~
-      				oggdec_path = ~bg1ub/audio~
-      				sox_path = ~bg1ub/audio~
-  			END
-	   	END ELSE BEGIN
-  			LAF HANDLE_AUDIO
-    			STR_VAR
-      				audio_path = ~bg1ub/audio/english~
-      				oggdec_path = ~bg1ub/audio~
-      				sox_path = ~bg1ub/audio~
-  			END
-  	   	END
-
-		//USING BGII - resources for Tutu (all language versions):
-		COPY_EXISTING ~HALFF01.wav~ ~override/_HALFF01.wav~
-		COPY_EXISTING ~MUSTR08.wav~ ~override/_MUSTR08.wav~
-		COPY_EXISTING ~SWENC01.wav~ ~override/_SWENC01.wav~
-		COPY_EXISTING ~SWENC02.wav~ ~override/_SWENC02.wav~
-		COPY_EXISTING ~TANAR01.wav~ ~override/_TANAR01.wav~
-		COPY_EXISTING ~TANAR02.wav~ ~override/_TANAR02.wav~
-		COPY_EXISTING ~TANAR03.wav~ ~override/_TANAR03.wav~
-		COPY_EXISTING ~TANAR04.wav~ ~override/_TANAR04.wav~
-		COPY_EXISTING ~TANAR05.wav~ ~override/_TANAR05.wav~
-		COPY_EXISTING ~TANAR06.wav~ ~override/_TANAR06.wav~
-	END //sounds for Tutu
-
-    //missing from Tutu only
-    ACTION_IF GAME_IS ~tutu tutu_totsc~ BEGIN //Tutu only
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%AMUL02.ITM~ ~override~
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%B1-2.ITM~ ~override~
-
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%BLUN10.ITM~ ~override~
-        SAY DESC @10170
-
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%BOOK65.ITM~ ~override~
-           ~bg1ub/%tutuorbgt%/ITM/%tutu_var%BOOK80.ITM~ ~override~
-           ~bg1ub/%tutuorbgt%/ITM/%tutu_var%BOOK85.ITM~ ~override~
-        SAY NAME1 @10171
-
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%BRAC05.ITM~ ~override~
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%DAGG08.ITM~ ~override~
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%LEAT06.ITM~ ~override~
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%MISC76.ITM~ ~override~
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%MISC77.ITM~ ~override~
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%MISC79.ITM~ ~override~
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%NEIRED.ITM~ ~override~
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%RING01.ITM~ ~override~
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%SCRL2D.ITM~ ~override~
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%SCRL2F.ITM~ ~override~
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%SCRL2H.ITM~ ~override~
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%SCRL5L.ITM~ ~override~
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%SCRL61.ITM~ ~override~
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%SCRL62.ITM~ ~override~
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%SCRL63.ITM~ ~override~
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%SPER03.ITM~ ~override~
-      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%XBOW02.ITM~ ~override~
-    END
-
-    COMPILE ~bg1ub/%tutuorbgt%/D~
-            ~bg1ub/%tutuorbgt%/BAF~
-
-  END // BGT/Tutu Compatibility
-
+	INCLUDE ~bg1ub/lib/BG1UBBGTTutuCompat.tph~
+  END
+  
   // BGEE Fix Area Scripts for AR2400.BCS and AR2900.BCS
   ACTION_IF GAME_IS ~bgee~ AND 
     !(FILE_EXISTS ~override/AY#BGEEARBCSFIX.000~) THEN BEGIN //do once
@@ -963,328 +506,168 @@ COPY_EXISTING ~%IceIsland%.ARE~ ~override~
       READ_SHORT trigOff + 0x20 type
       PATCH_IF (type == 0x2) BEGIN
         READ_ASCII trigOff + 0x38 destAre
-        PATCH_IF !(("%destAre%" STRING_COMPARE_CASE "%IceIsland%") &&
-                   ("%destAre%" STRING_COMPARE_CASE "%IceIslandMaze_L1%")) BEGIN
+        PATCH_IF (("%destAre%" STR_EQ "%IceIsland%") OR
+                   ("%destAre%" STR_EQ "%IceIslandMaze_L1%")) BEGIN
           READ_BYTE trigOff + 0x60 flag
           WRITE_BYTE trigOff + 0x60 flag | 0x4 // Add party-required flag
         END
       END
-      PATCH_IF !("%SOURCE_RES%" STRING_COMPARE_CASE "%IceIslandMaze_L1%") BEGIN
+      PATCH_IF ("%SOURCE_RES%" STR_EQ "%IceIslandMaze_L1%") BEGIN
         READ_ASCII trigOff name
         SPRINT temp_tutu "1" SPRINT temp_bgt "U" SPRINT temp_bgee "1" SPRINT temp_bg "1" LAUNCH_PATCH_MACRO ~getcpmvarp~
-        PATCH_IF !("%name%" STRING_COMPARE_CASE "DOOR%temp_cpmvar%010") BEGIN
-          WRITE_EVALUATED_ASCII trigOff + 0x38 ~%IceIslandMaze_L2%~ #8 // Set destination area
+        PATCH_IF ("%name%" STR_EQ "DOOR%temp_cpmvar%010") BEGIN
+          WRITE_ASCIIE trigOff + 0x38 ~%IceIslandMaze_L2%~ #8 // Set destination area
         END
       END
       trigOff += 0xc4
     END
-    // Update number of entrances
-    READ_LONG 0x6c numEntr
-    WRITE_LONG 0x6c numEntr + 0x1
-    // Add exit points for travel from AR1008 and AR1009
-    READ_LONG 0x68 entrOff
-    entrOff += numEntr * 0x68 // Added as last entrance in file
-    INSERT_BYTES entrOff 0x68
-    SPRINT temp_tutu "1" SPRINT temp_bgt "U" SPRINT temp_bgee "1" SPRINT temp_bg "1" LAUNCH_PATCH_MACRO ~getcpmvarp~
-    WRITE_EVALUATED_ASCII entrOff ~EXIT%temp_cpmvar%010~ // Entrance name
-    PATCH_IF !("%SOURCE_RES%" STRING_COMPARE_CASE "%IceIsland%") BEGIN
-      WRITE_SHORT entrOff + 0x20 842 // Location X
-      WRITE_SHORT entrOff + 0x22 307 // Location Y
-      WRITE_LONG  entrOff + 0x24 15  // Facing direction
-    END ELSE BEGIN // AR1009 patch
-      WRITE_SHORT entrOff + 0x20 697 // Location X
-      WRITE_SHORT entrOff + 0x22 259 // Location Y
-    END
-    READ_LONG 0x54 actOff
-    PATCH_IF (actOff > entrOff) BEGIN
-      WRITE_LONG 0x54 actOff + 0x68
-    END
-    READ_LONG 0x5c trigOff
-    PATCH_IF (trigOff > entrOff) BEGIN
-      WRITE_LONG 0x5c trigOff + 0x68
-    END
-    READ_LONG 0x60 sptOff
-    PATCH_IF (sptOff > entrOff) BEGIN
-      WRITE_LONG 0x60 sptOff + 0x68
-    END
-    READ_LONG 0x68 entrOff
-    PATCH_IF (entrOff > entrOff) BEGIN
-      WRITE_LONG 0x68 entrOff + 0x68
-    END
-    READ_LONG 0x70 contOff
-    PATCH_IF !(contOff < entrOff) BEGIN
-      WRITE_LONG 0x70 contOff + 0x68
-    END
-    READ_LONG 0x78 itmOff
-    PATCH_IF !(itmOff < entrOff) BEGIN
-      WRITE_LONG 0x78 itmOff + 0x68
-    END
-    READ_LONG 0x7c vertOff
-    PATCH_IF !(vertOff < entrOff) BEGIN
-      WRITE_LONG 0x7c vertOff + 0x68
-    END
-    READ_LONG 0x84 ambOff
-    PATCH_IF !(ambOff < entrOff) BEGIN
-      WRITE_LONG 0x84 ambOff + 0x68
-    END
-    READ_LONG 0x88 varOff
-    PATCH_IF !(varOff < entrOff) BEGIN
-      WRITE_LONG 0x88 varOff + 0x68
-    END
-    READ_LONG 0xa0 explOff
-    PATCH_IF !(explOff < entrOff) BEGIN
-      WRITE_LONG 0xa0 explOff + 0x68
-    END
-    READ_LONG 0xa8 doorOff
-    PATCH_IF !(doorOff < entrOff) BEGIN
-      WRITE_LONG 0xa8 doorOff + 0x68
-    END
-    READ_LONG 0xb0 animOff
-    PATCH_IF !(animOff < entrOff) BEGIN
-      WRITE_LONG 0xb0 animOff + 0x68
-    END
-    READ_LONG 0xb8 tobjOff
-    PATCH_IF !(tobjOff < entrOff) BEGIN
-      WRITE_LONG 0xb8 tobjOff + 0x68
-    END
-    READ_LONG 0xbc musOff
-    PATCH_IF !(musOff < entrOff) BEGIN
-      WRITE_LONG 0xbc musOff + 0x68
-    END
-    READ_LONG 0xc0 rspnOff
-    PATCH_IF !(rspnOff < entrOff) BEGIN
-      WRITE_LONG 0xc0 rspnOff + 0x68
-    END
-    READ_LONG 0xc4 mapnOff
-    READ_LONG 0xc8 numMapn
-    PATCH_IF (!(mapnOff < entrOff) && numMapn) BEGIN
-      WRITE_LONG 0xc4 mapnOff + 0x68
-    END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
+
+// Add entrance to AR1008 from AR1010
+COPY_EXISTING ~%IceIsland%.ARE~ ~override~
+    SPRINT temp_tutu "1" SPRINT temp_bgt "U" SPRINT temp_bgee "1" SPRINT temp_bg "1" LAUNCH_PATCH_MACRO ~getcpmvarp~
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x       = 842  // Location X
+		fj_loc_y       = 307  // Location Y
+		fj_orientation = 15   // Facing direction
+		STR_VAR
+		fj_structure_type = entrance
+		fj_name           = EVALUATE_BUFFER ~EXIT%temp_cpmvar%010~
+	END
+BUT_ONLY
 
 COPY_EXISTING ~%IceIslandMaze_L1%.ARE~ ~override~
-  PATCH_IF (SOURCE_SIZE > 0x11c) BEGIN
-    // Remove Dezkiel from AR1009 (he's now in AR1010)
-    READ_LONG 0x54 actOff
-    deleteCount = 0x0
+	// Remove Dezkiel from AR1009 (he's now in AR1010)
+	READ_LONG 0x54 actOff
+	actIdx = 0
     FOR (READ_SHORT 0x58 numAct; numAct; numAct -= 0x1) BEGIN
-      READ_ASCII actOff + 0x80 char
-      PATCH_IF !("%char%" STRING_COMPARE_CASE "%tutu_var%DEZKIE") BEGIN
-        DELETE_BYTES actOff 0x110 // You have been purged.
-        deleteCount += 0x1        // Have a nice day!
-      END ELSE actOff += 0x110
-    END
-    READ_SHORT 0x58 numAct
-    WRITE_SHORT 0x58 numAct - deleteCount
-    READ_LONG 0x54 actOff
-    PATCH_IF ((actOff > actOff) && deleteCount) BEGIN
-      WRITE_LONG 0x54 actOff - (deleteCount * 0x110)
-    END
-    READ_LONG 0x5c trigOff
-    PATCH_IF (!(trigOff < actOff) && deleteCount) BEGIN
-      WRITE_LONG 0x5c trigOff - (deleteCount * 0x110)
-    END
-    READ_LONG 0x60 sptOff
-    PATCH_IF (!(sptOff < actOff) && deleteCount) BEGIN
-      WRITE_LONG 0x60 sptOff - (deleteCount * 0x110)
-    END
-    READ_LONG 0x68 entrOff
-    PATCH_IF (!(entrOff < actOff) && deleteCount) BEGIN
-      WRITE_LONG 0x68 entrOff - (deleteCount * 0x110)
-    END
-    READ_LONG 0x70 contOff
-    PATCH_IF (!(contOff < actOff) && deleteCount) BEGIN
-      WRITE_LONG 0x70 contOff - (deleteCount * 0x110)
-    END
-    READ_LONG 0x78 itmOff
-    PATCH_IF (!(itmOff < actOff) && deleteCount) BEGIN
-      WRITE_LONG 0x78 itmOff - (deleteCount * 0x110)
-    END
-    READ_LONG 0x7c vertOff
-    PATCH_IF (!(vertOff < actOff) && deleteCount) BEGIN
-      WRITE_LONG 0x7c vertOff - (deleteCount * 0x110)
-    END
-    READ_LONG 0x84 ambOff
-    PATCH_IF (!(ambOff < actOff) && deleteCount) BEGIN
-      WRITE_LONG 0x84 ambOff - (deleteCount * 0x110)
-    END
-    READ_LONG 0x88 varOff
-    PATCH_IF (!(varOff < actOff) && deleteCount) BEGIN
-      WRITE_LONG 0x88 varOff - (deleteCount * 0x110)
-    END
-    READ_LONG 0xa0 explOff
-    PATCH_IF (!(explOff < actOff) && deleteCount) BEGIN
-      WRITE_LONG 0xa0 explOff - (deleteCount * 0x110)
-    END
-    READ_LONG 0xa8 doorOff
-    PATCH_IF (!(doorOff < actOff) && deleteCount) BEGIN
-      WRITE_LONG 0xa8 doorOff - (deleteCount * 0x110)
-    END
-    READ_LONG 0xb0 animOff
-    PATCH_IF (!(animOff < actOff) && deleteCount) BEGIN
-      WRITE_LONG 0xb0 animOff - (deleteCount * 0x110)
-    END
-    READ_LONG 0xb8 tobjOff
-    PATCH_IF (!(tobjOff < actOff) && deleteCount) BEGIN
-      WRITE_LONG 0xb8 tobjOff - (deleteCount * 0x110)
-    END
-    READ_LONG 0xbc musOff
-    PATCH_IF (!(musOff < actOff) && deleteCount) BEGIN
-      WRITE_LONG 0xbc musOff - (deleteCount * 0x110)
-    END
-    READ_LONG 0xc0 rspnOff
-    PATCH_IF (!(rspnOff < actOff) && deleteCount) BEGIN
-      WRITE_LONG 0xc0 rspnOff - (deleteCount * 0x110)
-    END
-    READ_LONG 0xc4 mapnOff
-    READ_LONG 0xc8 numMapn
-    PATCH_IF (!(mapnOff < actOff) && numMapn && deleteCount) BEGIN
-      WRITE_LONG 0xc4 mapnOff - (deleteCount * 0x110)
-    END
-  END
-BUT_ONLY_IF_IT_CHANGES
+    	READ_ASCII actOff + 0x80 char
+    	PATCH_IF ("%char%" STR_EQ "%tutu_var%DEZKIE") BEGIN
+			LPF fj_are_structure
+				INT_VAR
+				fj_delete_mode = actIdx  // Actor to delete
+				STR_VAR
+				fj_structure_type = actor
+			END
+		END
+		actIdx += 1
+		actOff += 0x110
+	END
+	// Add entrance to AR1009 from AR1010
+	PATCH_IF GAME_IS ~totsc tutu_totsc bgt~ THEN BEGIN  /* Not needed for BGEE */
+		SPRINT temp_tutu "1" SPRINT temp_bgt "U" SPRINT temp_bg "1" LAUNCH_PATCH_MACRO ~getcpmvarp~
+		LPF fj_are_structure
+			INT_VAR
+			fj_loc_x       = 697  // Location X
+			fj_loc_y       = 259  // Location Y
+			fj_orientation = 0   // Facing direction
+			STR_VAR
+			fj_structure_type = entrance
+			fj_name           = EVALUATE_BUFFER ~EXIT%temp_cpmvar%010~
+		END
+	END
+BUT_ONLY
 
-ACTION_IF GAME_IS ~totsc tutu_totsc bgt~ THEN BEGIN  /* Not needed for BGEE */
 COPY_EXISTING ~%IceIslandMaze_L2%.ARE~ ~override~
-  PATCH_IF (SOURCE_SIZE > 0x11c) BEGIN
-    // Update number of vertices
-    READ_SHORT 0x80 numVert
-    WRITE_SHORT 0x80 numVert + 0x4
-    // Add vertices for new transition
-    READ_LONG 0x7c vertOff
-    vertOff += numVert * 0x4 // Added as last vertices in file
-    INSERT_BYTES vertOff 0x10
-    WRITE_SHORT vertOff 478        // Location X (Vertex 0)
-    WRITE_SHORT vertOff + 0x2 2719 // Location Y (Vertex 0)
-    WRITE_SHORT vertOff + 0x4 545  // Location X (Vertex 1)
-    WRITE_SHORT vertOff + 0x6 2762 // Location Y (Vertex 1)
-    WRITE_SHORT vertOff + 0x8 497  // Location X (Vertex 2)
-    WRITE_SHORT vertOff + 0xa 2815 // Location Y (Vertex 2)
-    WRITE_SHORT vertOff + 0xc 345  // Location X (Vertex 3)
-    WRITE_SHORT vertOff + 0xe 2815 // Location Y (Vertex 3)
-    // Update number of triggers
-    READ_SHORT 0x5a numTrig
-    WRITE_SHORT 0x5a numTrig + 0x1
-    // Update triggers offset, if required
-    READ_LONG 0x5c trigOff
-    PATCH_IF (trigOff > vertOff) BEGIN
-      WRITE_LONG 0x5c trigOff + 0x10
-      trigOff += trigOff + 0x10
-    END
-    // Make default transitions autosave
-    FOR (i = numTrig; i; i -= 0x1) BEGIN
-      READ_SHORT trigOff + 0x20 type
-      PATCH_IF (type == 0x2) BEGIN
-        READ_ASCII trigOff + 0x38 destAre
-        PATCH_IF !("%destAre%" STRING_COMPARE_CASE "%IceIslandMaze_L1%") BEGIN
-          READ_BYTE trigOff + 0x60 flag
-          WRITE_BYTE trigOff + 0x60 flag | 0x4 // Add party-required flag
-        END
-      END
-      trigOff += 0xc4
-    END
+	PATCH_IF GAME_IS ~totsc tutu_totsc bgt~ THEN BEGIN  /* Not needed for BGEE */
+    	// Make default transitions autosave
+    	READ_LONG 0x5c trigOff
+    	FOR (READ_SHORT 0x5a numTrig; numTrig; numTrig -= 0x1) BEGIN
+    		READ_SHORT trigOff + 0x20 type
+    		PATCH_IF (type == 0x2) BEGIN
+    			READ_ASCII trigOff + 0x38 destAre
+        		PATCH_IF (("%destAre%" STR_EQ "%IceIsland%") OR ("%destAre%" STR_EQ "%IceIslandMaze_L1%")) BEGIN
+	          		READ_BYTE trigOff + 0x60 flag
+					WRITE_BYTE trigOff + 0x60 flag | 0x4 // Add party-required flag
+        		END
+      		END
+      		trigOff += 0xc4
+    	END
+    	//Correct exit point used for transition to AR1009 (BGT)
+    	PATCH_IF ("%tutuorbgt%" STRING_EQUAL "BGT") BEGIN //BGT only
+      		READ_LONG 0x5c trigOff
+      		FOR (READ_SHORT 0x5a numTrig; numTrig; numTrig -= 0x1) BEGIN
+        		READ_ASCII trigOff name
+        		PATCH_IF ("%name%" STR_EQ "DOORU009") BEGIN
+          			WRITE_ASCII trigOff + 0x40 ~EXITU010~ #32 // Set entrance name
+        		END
+      		END
+    	END
+    	// Add usable transition to AR1008
+    	SPRINT temp_tutu "1" SPRINT temp_bgt "U" SPRINT temp_bg "1" LAUNCH_PATCH_MACRO ~getcpmvarp~
+		LPF fj_are_structure
+			INT_VAR
+			fj_type         = 2    // travel
+			fj_flags		= 0x4  // Party required flag
+			fj_box_left     = 345
+			fj_box_top      = 2719
+			fj_box_right    = 545
+			fj_box_bottom   = 2815
+			fj_cursor_idx   = 28   // stairs
+			fj_vertex_0     = 478 + (2719 << 16)
+			fj_vertex_1     = 545 + (2762 << 16)
+			fj_vertex_2     = 497 + (2815 << 16)
+			fj_vertex_3     = 345 + (2815 << 16)
+    		STR_VAR
+    		fj_structure_type   = region
+		    fj_name             = EVALUATE_BUFFER ~DOOR%temp_cpmvar%008~
+    		fj_destination_area = EVALUATE_BUFFER ~%IceIslandMaze_L1%~
+    		fj_destination_name = EVALUATE_BUFFER ~EXIT%temp_cpmvar%010~
+		END
+	END
+	// Add dispelling traps on bridges to Dezkiel's "island"
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_type         = 0    // Proximity
+    	fj_box_left     = 617
+    	fj_box_top      = 1941
+    	fj_box_right    = 667
+    	fj_box_bottom   = 1998
+    	fj_cursor_idx   = 0 
+    	fj_flags		= 0x8 // Trap detectable
+    	fj_vertex_0     = 647 + (1941 << 16)
+    	fj_vertex_1     = 667 + (1947 << 16)
+    	fj_vertex_2     = 637 + (1998 << 16)
+    	fj_vertex_3     = 617 + (1994 << 16)
+    	fj_trap_detect 	= 60 // trap detection difficulty percentage;
+		fj_trap_remove 	= 90 // trap removal difficulty percentage;
+		fj_trap_active 	= 1  // whether the region is trapped (0=no, 1=yes)
+		fj_trap_status 	= 0  // whether the trap is detected (0=no, 1=yes)
+		fj_loc_x 		= 700  // trap launch X coordinate
+		fj_loc_y 		= 2150 // trap launch Y coordinate
+    	STR_VAR
+    	fj_structure_type   = region
+    	fj_name             = UBTrap2
+    	fj_reg_script		= EVALUATE_BUFFER "%tutu_var%GTAR7"
+  	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_type         = 0    // Proximity
+    	fj_box_left     = 2120
+    	fj_box_top      = 2245
+    	fj_box_right    = 2130
+    	fj_box_bottom   = 2285
+    	fj_cursor_idx   = 0 
+    	fj_flags		= 0x8 // Trap detectable
+    	fj_vertex_0     = 2120 + (2245 << 16)
+    	fj_vertex_1     = 2130 + (2245 << 16)
+    	fj_vertex_2     = 2130 + (2285 << 16)
+    	fj_vertex_3     = 2120 + (2285 << 16)
+    	fj_trap_detect 	= 60 // trap detection difficulty percentage;
+		fj_trap_remove 	= 90 // trap removal difficulty percentage;
+		fj_trap_active 	= 1  // whether the region is trapped (0=no, 1=yes)
+		fj_trap_status 	= 0  // whether the trap is detected (0=no, 1=yes)
+		fj_loc_x 		= 1960  // trap launch X coordinate
+		fj_loc_y 		= 2280 // trap launch Y coordinate
+    	STR_VAR
+    	fj_structure_type   = region
+    	fj_name             = UBTrap4
+    	fj_reg_script		= EVALUATE_BUFFER "%tutu_var%GTAR7"
+  	END
+BUT_ONLY
 
-    //Correct exit point used for transition to AR1009 (BGT)
-    PATCH_IF ("%tutuorbgt%" STRING_EQUAL "BGT") BEGIN //BGT only
-      READ_LONG 0x5c trigOff
-      FOR (READ_SHORT 0x5a numTrig; numTrig; numTrig -= 0x1) BEGIN
-        READ_ASCII trigOff name
-        PATCH_IF !("%name%" STRING_COMPARE_CASE "DOORU009") BEGIN
-          WRITE_ASCII trigOff + 0x40 ~EXITU010~ #32 // Set entrance name
-        END
-      END
-    END
-
-    // Add usable transition to AR1008
-    READ_LONG 0x5c trigOff
-    trigOff += numTrig * 0xc4 // Added as last trigger in file
-    INSERT_BYTES trigOff 0xc4
-    SPRINT temp_tutu "1" SPRINT temp_bgt "U" SPRINT temp_bg "1" LAUNCH_PATCH_MACRO ~getcpmvarp~
-    WRITE_EVALUATED_ASCII trigOff ~DOOR%temp_cpmvar%008~ // Trigger name
-    WRITE_EVALUATED_ASCII trigOff + 0x38 ~%IceIsland%~   // Destination area
-    SPRINT temp_tutu "1" SPRINT temp_bgt "U" SPRINT temp_bg "1" LAUNCH_PATCH_MACRO ~getcpmvarp~
-    WRITE_EVALUATED_ASCII trigOff + 0x40 ~EXIT%temp_cpmvar%010~ // Destination exit point
-    WRITE_LONG trigOff + 0x2c numVert   // Vertex index
-    WRITE_LONG trigOff + 0x34 28        // Trigger cursor
-    WRITE_LONG trigOff + 0x60 4         // Flags: party-required
-    WRITE_LONG trigOff + 0x64 BNOT 0x0  // Activation text
-    WRITE_SHORT trigOff + 0x20 2        // Trigger type
-    WRITE_SHORT trigOff + 0x22 345      // Leftmost point
-    WRITE_SHORT trigOff + 0x24 2719     // Topmost point
-    WRITE_SHORT trigOff + 0x26 545      // Rightmost point
-    WRITE_SHORT trigOff + 0x28 2815     // Bottommost point
-    WRITE_SHORT trigOff + 0x2a 4        // Number of vertices
-    WRITE_SHORT trigOff + 0x70 609      // Location X
-    WRITE_SHORT trigOff + 0x72 2643     // Location Y
-    READ_LONG 0x54 actOff
-    PATCH_IF (actOff > trigOff) BEGIN
-      WRITE_LONG 0x54 (actOff > vertOff) ? actOff + 0xd4 : actOff + 0xc4
-    END
-    READ_LONG 0x5c trigOff
-    PATCH_IF (trigOff > trigOff) BEGIN
-      WRITE_LONG 0x5c (trigOff > vertOff) ? trigOff + 0xd4 : trigOff + 0xc4
-    END
-    READ_LONG 0x60 sptOff
-    PATCH_IF (sptOff > trigOff) BEGIN
-      WRITE_LONG 0x60 (sptOff > vertOff) ? sptOff + 0xd4 : sptOff + 0xc4
-    END
-    READ_LONG 0x68 entrOff
-    PATCH_IF (entrOff > trigOff) BEGIN
-      WRITE_LONG 0x68 (entrOff > vertOff) ? entrOff + 0xd4 : entrOff + 0xc4
-    END
-    READ_LONG 0x70 contOff
-    PATCH_IF !(contOff < trigOff) BEGIN
-      WRITE_LONG 0x70 (contOff > vertOff) ? contOff + 0xd4 : contOff + 0xc4
-    END
-    READ_LONG 0x78 itmOff
-    PATCH_IF !(itmOff < trigOff) BEGIN
-      WRITE_LONG 0x78 (itmOff > vertOff) ? itmOff + 0xd4 : itmOff + 0xc4
-    END
-    READ_LONG 0x7c vertOff
-    PATCH_IF !(vertOff < trigOff) BEGIN
-      WRITE_LONG 0x7c (vertOff > vertOff) ? vertOff + 0xd4 : vertOff + 0xc4
-    END
-    READ_LONG 0x84 ambOff
-    PATCH_IF !(ambOff < trigOff) BEGIN
-      WRITE_LONG 0x84 !(ambOff < vertOff) ? ambOff + 0xd4 : ambOff + 0xc4
-    END
-    READ_LONG 0x88 varOff
-    PATCH_IF !(varOff < trigOff) BEGIN
-      WRITE_LONG 0x88 !(varOff < vertOff) ? varOff + 0xd4 : varOff + 0xc4
-    END
-    READ_LONG 0xa0 explOff
-    PATCH_IF !(explOff < trigOff) BEGIN
-      WRITE_LONG 0xa0 !(explOff < vertOff) ? explOff + 0xd4 : explOff + 0xc4
-    END
-    READ_LONG 0xa8 doorOff
-    PATCH_IF !(doorOff < trigOff) BEGIN
-      WRITE_LONG 0xa8 !(doorOff < vertOff) ? doorOff + 0xd4 : doorOff + 0xc4
-    END
-    READ_LONG 0xb0 animOff
-    PATCH_IF !(animOff < trigOff) BEGIN
-      WRITE_LONG 0xb0 !(animOff < vertOff) ? animOff + 0xd4 : animOff + 0xc4
-    END
-    READ_LONG 0xb8 tobjOff
-    PATCH_IF !(tobjOff < trigOff) BEGIN
-      WRITE_LONG 0xb8 !(tobjOff < vertOff) ? tobjOff + 0xd4 : tobjOff + 0xc4
-    END
-    READ_LONG 0xbc musOff
-    PATCH_IF !(musOff < trigOff) BEGIN
-      WRITE_LONG 0xbc !(musOff < vertOff) ? musOff + 0xd4 : musOff + 0xc4
-    END
-    READ_LONG 0xc0 rspnOff
-    PATCH_IF !(rspnOff < trigOff) BEGIN
-      WRITE_LONG 0xc0 !(rspnOff < vertOff) ? rspnOff + 0xd4 : rspnOff + 0xc4
-    END
-    READ_LONG 0xc4 mapnOff
-    READ_LONG 0xc8 numMapn
-    PATCH_IF (!(mapnOff < trigOff) && numMapn) BEGIN
-      WRITE_LONG 0xc4 !(mapnOff < vertOff) ? mapnOff + 0xd4 : mapnOff + 0xc4
-    END
-  END
-BUT_ONLY_IF_IT_CHANGES
-END
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -1317,7 +700,6 @@ USING ~bg1ub/tra/%LANGUAGE%/ubvial.tra~
 END
 
 
-
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -1336,13 +718,9 @@ REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBElminster.UB~
 
 // Elminster encounter outside FAI
-OUTER_SPRINT temp_tutu "_AR2300" OUTER_SPRINT temp_bgt "AR6800" OUTER_SPRINT temp_bg "AR2300" LAUNCH_ACTION_MACRO ~getcpmvara~
-COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_BCS_TO_BAF
-    REPLACE_TEXTUALLY ~SetGlobal("ElminsterSpawn","GLOBAL",1)~ ~SetGlobal("ElminsterSpawn","GLOBAL",2)~
-    REPLACE_TEXTUALLY ~Global("ElminsterSpawn","GLOBAL",0)~ ~Global("ElminsterSpawn","GLOBAL",1)~
-  COMPILE_BAF_TO_BCS
-BUT_ONLY_IF_IT_CHANGES
+LAF replacetext_area_script STR_VAR area="%FriendlyArmInn%" oldtext=~SetGlobal("ElminsterSpawn","GLOBAL",1)~ newtext=~SetGlobal("ElminsterSpawn","GLOBAL",2)~ END
+LAF replacetext_area_script STR_VAR area="%FriendlyArmInn%" oldtext=~Global("ElminsterSpawn","GLOBAL",0)~ newtext=~Global("ElminsterSpawn","GLOBAL",1)~ END
+
 // Potential situation here where player enters FAI area during chapter 4 but doesn't meet Elminster.
 // If he comes back later on, Elminster could be talking about events that have already passed.
 // His dialogues would also be out of order and disjointed. Worth worrying about?
@@ -1367,8 +745,8 @@ REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBSharTeel.UB~
 
 COMPILE EVALUATE_BUFFER ~bg1ub/sharteel/rANGELO.D~
-OUTER_SPRINT temp_tutu "_AR0607" OUTER_SPRINT temp_bgt "AR7607" OUTER_SPRINT temp_bg "AR0607" LAUNCH_ACTION_MACRO ~getcpmvara~
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~bg1ub/sharteel/xAR0607.BAF~
+
+LAF extend_area_script STR_VAR area="%SWBaldursGate_FlamingFistHQ_L1%" bottom="bg1ub/sharteel/xAR0607.BAF" END
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -1388,14 +766,8 @@ FORBID_FILE ~override/X#BG1NPCPhase2.G3~ @90000
 
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBKagain.UB~
 
-OUTER_SPRINT temp_tutu "_AR2800" OUTER_SPRINT temp_bgt "AR6900" OUTER_SPRINT temp_bgee "AR2800" OUTER_SPRINT temp_bg "AR2800" LAUNCH_ACTION_MACRO ~getcpmvara~
-COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_AND_PATCH BEGIN
-  	//once you get to AR2800, you get one day to find the caravan
-  	REPLACE_TEXTUALLY ~ActionOverride("Kagain",Dialog\(ue\)?(\[PC\]))~ ~SetGlobalTimer("Kagain","GLOBAL",ONE_DAY)~
-  END
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~bg1ub/kagain/aAR2800.BAF~ //spawns the lost child
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%CoastWay%" bottom="bg1ub/kagain/aAR2800.BAF" END
+LAF replacetext_area_script STR_VAR area="%CoastWay%" oldtext=~ActionOverride("Kagain",Dialog\(ue\)?(\[PC\]))~ newtext=~SetGlobalTimer("Kagain","GLOBAL",ONE_DAY)~ END
 
 EXTEND_BOTTOM ~%tutu_var%KAGAIN.BCS~ ~bg1ub/kagain/aKAGAIN.BAF~
 
@@ -1445,14 +817,14 @@ ACTION_IF !GAME_IS ~bgt~ THEN BEGIN //BG, BGEE and Tutu
         WRITE_ASCII (%actorsOff% + %i% * 0x110 + 0x80) X#CORWYV (8)
       END
     END
-  BUT_ONLY_IF_IT_CHANGES
+  BUT_ONLY
 
   COPY_EXISTING ~%tutu_var%CORAN.BCS~ ~override~
     DECOMPILE_AND_PATCH BEGIN
     	REPLACE_TEXTUALLY ~!Dead("wyvern")~ ~!Dead("X#CoranWyvern")~
     	REPLACE_TEXTUALLY ~Dead("wyvern")~ ~Dead("X#CoranWyvern")~
     END
-  BUT_ONLY_IF_IT_CHANGES
+  BUT_ONLY
 
   ACTION_IF GAME_IS ~tutu tutu_totsc bgee~ THEN BEGIN //Tutu BGEE
     COMPILE EVALUATE_BUFFER ~bg1ub/coran/cpm/Wyvern.d~
@@ -1591,9 +963,7 @@ THEN
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR0101" OUTER_SPRINT temp_bgt "AR7201" OUTER_SPRINT temp_bgee "AR0101" OUTER_SPRINT temp_bg "AR0101" LAUNCH_ACTION_MACRO ~getcpmvara~
-EXTEND_BOTTOM ~%temp_cpmvar%.bcs~ ~.../bg1ub/et_0101.baf~
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%NWBaldursGate_SilvershieldEstate_L1%" bottom=".../bg1ub/et_0101.baf" END
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -1639,7 +1009,7 @@ PATCH_IF (SOURCE_SIZE > 0xd4) BEGIN
       FOR (READ_LONG contOff + 0x44 itmCnt; itmCnt; itmCnt -= 0x1) BEGIN
         READ_ASCII myItmOff itmRef // Item resource reference
         PATCH_IF !("%itmRef%" STRING_COMPARE_CASE "%tutu_var%MISC80") BEGIN
-          WRITE_EVALUATED_ASCII myItmOff ~%tutu_scriptbg%MISC79~ #8 // Female body
+          WRITE_ASCIIE myItmOff ~%tutu_scriptbg%MISC79~ #8 // Female body
         END
         myItmOff += 0x14
       END
@@ -1647,7 +1017,7 @@ PATCH_IF (SOURCE_SIZE > 0xd4) BEGIN
     contOff += 0xc0
   END
 END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%ESewers%.ARE~ ~override~
 PATCH_IF (SOURCE_SIZE > 0xd4) BEGIN
@@ -1696,7 +1066,7 @@ PATCH_IF (SOURCE_SIZE > 0xd4) BEGIN
           READ_ASCII myItmOff itmRef // Item resource reference
           PATCH_IF !("%itmRef%" STRING_COMPARE_CASE "%tutu_var%MISC80") BEGIN
             PATCH_IF (bodyCount == theBody) BEGIN
-              WRITE_EVALUATED_ASCII myItmOff ~%tutu_scriptbg%MISC79~ #8 // Female body
+              WRITE_ASCIIE myItmOff ~%tutu_scriptbg%MISC79~ #8 // Female body
             END
             bodyCount += 0x1
           END
@@ -1707,7 +1077,7 @@ PATCH_IF (SOURCE_SIZE > 0xd4) BEGIN
     contOff += 0xc0
   END
 END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%ESewers%.ARE~ ~override~
  // PATCH_IF SOURCE_SIZE > 0x28f BEGIN
@@ -1716,7 +1086,7 @@ COPY_EXISTING ~%ESewers%.ARE~ ~override~
       STR_VAR item_to_add = UBSCARIN //custom ring
  //   END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -1745,25 +1115,22 @@ END
 
 ADD_JOURNAL @20176 @20177 USING ~bg1ub/tra/%LANGUAGE%/extra.tra~ // Add journal entries for BGEE
 
-<<<<<<<< .../bg1ub/eb_ar0120.baf
-IF
-Global("UB_QUONIN_SPAWN","GLOBAL",0)
-!Exists("ubquon")
-!Dead("ubquon")
-Global("UB_HELPQUONINGAR","GLOBAL",0)
-THEN
-RESPONSE #100
-CreateCreature("ubquon",[464.157]%FACE_0%)
-SetGlobal("UB_QUONIN_SPAWN","GLOBAL",1)
-END
->>>>>>>>
-
-OUTER_SPRINT temp_tutu "_AR0120" OUTER_SPRINT temp_bgt "AR7220" OUTER_SPRINT temp_bgee "AR0120" OUTER_SPRINT temp_bg "AR0120" LAUNCH_ACTION_MACRO ~getcpmvara~
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/eb_ar0120.baf~
-  EVALUATE_BUFFER
-
-COPY_EXISTING ~%NBaldursGate_ThreeOldKegs_L2%.ARE~ ~override~
-  WRITE_EVALUATED_ASCII 0x94 ~%temp_cpmvar%~ #8 // In case someone removes the previously unnecessary script reference
+// Add Quoningar to Three Old Kegs L2
+COPY_EXISTING ~%NBaldursGate_ThreeOldKegs_L2%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 464
+    	fj_loc_y          = 157
+    	fj_dest_x         = 464
+    	fj_dest_y         = 157
+    	fj_animation      = 0x6002 //cleric male dwarf
+    	fj_orientation    = 0      //S
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Quoningar
+   		fj_cre_resref     = ubquon
+	END
+BUT_ONLY
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -1774,8 +1141,8 @@ COPY_EXISTING ~%NBaldursGate_ThreeOldKegs_L2%.ARE~ ~override~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @18
-FORBID_FILE ~override/NTSHILOC.CRE~ @90003
-FORBID_FILE ~data/NTotSC1.bif~ @90003
+//FORBID_FILE ~override/NTSHILOC.CRE~ @90003
+//FORBID_FILE ~data/NTotSC1.bif~ @90003
 FORBID_FILE ~backup_NTotSC/dialog.tlk~ @90003
 
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBShiloChen.UB~
@@ -1816,19 +1183,22 @@ END
 
 ADD_JOURNAL @20178 @20179 USING ~bg1ub/tra/%LANGUAGE%/extra.tra~ // Add journal entries for BGEE
 
-<<<<<<<< .../bg1ub/ub_ar0705sc.baf
-IF
-Global("CreateUBShiloChen","%EBaldursGate_ElfsongTavern_L1%"%FACE_0%)
-THEN
-RESPONSE #100
-CreateCreature("UBShilo",[606.967]%FACE_10%)
-SetGlobal("CreateUBShiloChen","%EBaldursGate_ElfsongTavern_L1%"%FACE_1%)
-END
->>>>>>>>
-
-OUTER_SPRINT temp_tutu "_AR0705" OUTER_SPRINT temp_bgt "AR7705" OUTER_SPRINT temp_bgee "AR0705" OUTER_SPRINT temp_bg "AR0705" LAUNCH_ACTION_MACRO ~getcpmvara~
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar0705sc.baf~
-  EVALUATE_BUFFER
+// Add Shilo to Elfsong Tavern
+COPY_EXISTING ~%EBaldursGate_ElfsongTavern_L1%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 606
+    	fj_loc_y          = 967
+    	fj_dest_x         = 606
+    	fj_dest_y         = 967
+    	fj_animation      = 0x6100  // Fighter male human
+    	fj_orientation    = 10      // NE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Shilo Chen"
+   		fj_cre_resref     = ubshilo
+	END
+BUT_ONLY
 
 <<<<<<<< .../bg1ub/ub_ar2900.baf
 IF
@@ -1856,9 +1226,7 @@ RESPONSE #100
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR2900" OUTER_SPRINT temp_bgt "AR9000" OUTER_SPRINT temp_bgee "AR2900" OUTER_SPRINT temp_bg "AR2900" LAUNCH_ACTION_MACRO ~getcpmvara~
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar2900.baf~
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%Larswood%" bottom=".../bg1ub/ub_ar2900.baf" END
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -1876,7 +1244,7 @@ COPY_EXISTING ~%tutu_var%EDIE.CRE~ ~override~
   WRITE_LONG 0x1c 50              // Give 50 gold
   WRITE_ASCII 0x2cc ~UBEDIE~ #8   // Assigns edited dialog file
   WRITE_ASCII 0x280 ~Edie~ #32     // Assigns death variable
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/edie/cpm/ubedie.d~
@@ -1886,7 +1254,24 @@ END
 
 ADD_JOURNAL @17 @18 @19 USING ~bg1ub/tra/%LANGUAGE%/ubedie.tra~ // Add journal entries for BGEE
 
-<<<<<<<< .../bg1ub/ub_ar0128.baf
+// Add Edie to Merchant League L2
+COPY_EXISTING ~%SWBaldursGate_MerchantLeague_L2%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 1102
+    	fj_loc_y          = 917
+    	fj_dest_x         = 1102
+    	fj_dest_y         = 917
+    	fj_animation      = 0xB510  // Static peasant woman
+    	fj_orientation    = 4       // W
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Edie
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%EDIE"
+	END
+BUT_ONLY
+
+/* <<<<<<<< .../bg1ub/ub_ar0128.baf
 IF
 Global("UB_EDIE_SPAWN","GLOBAL",0)
 !Exists("Edie")
@@ -1898,9 +1283,8 @@ SetGlobal("UB_EDIE_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR0128" OUTER_SPRINT temp_bgt "AR7228" OUTER_SPRINT temp_bgee "AR0128" OUTER_SPRINT temp_bg "AR0128" LAUNCH_ACTION_MACRO ~getcpmvara~
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar0128.baf~
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%SWBaldursGate_MerchantLeague_L2%" bottom=".../bg1ub/ub_ar0128.baf" END
+*/
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -1932,9 +1316,39 @@ COPY_EXISTING ~%tutu_var%FLAM5.CRE~ ~override~ // Flaming Fist Mercenary
       END
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
-<<<<<<<< .../bg1ub/eb_ar3800.baf
+// Add Reinforcements to South Beregost Road
+COPY_EXISTING ~%SouthBeregostRoad%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 3753
+    	fj_loc_y          = 2954
+    	fj_dest_x         = 3753
+    	fj_dest_y         = 2954
+    	fj_animation      = 0x6000  // Cleric Male Human
+    	fj_orientation    = 9       // ENE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Flaming Fist Merc 5a"
+   		fj_cre_resref     = UBFLAM5
+	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 3869
+    	fj_loc_y          = 2962
+    	fj_dest_x         = 3869
+    	fj_dest_y         = 2962
+    	fj_animation      = 0x6000  // Cleric Male Human
+    	fj_orientation    = 7       // ENE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Flaming Fist Merc 5b"
+   		fj_cre_resref     = UBFLAM5
+	END
+BUT_ONLY
+
+/* <<<<<<<< .../bg1ub/eb_ar3800.baf
 IF
 Global("UB_FLAM5_REINFORCE","GLOBAL",0)
 Exists("FLAM5")
@@ -1947,9 +1361,8 @@ SetGlobal("UB_FLAM5_REINFORCE","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR3800" OUTER_SPRINT temp_bgt "AR9700" OUTER_SPRINT temp_bg "AR3800" LAUNCH_ACTION_MACRO ~getcpmvara~
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/eb_ar3800.baf~
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%SouthBeregostRoad%" bottom=".../bg1ub/eb_ar3800.baf" END
+*/
 
 <<<<<<<< .../bg1ub/ubflam5.baf
 IF
@@ -2009,11 +1422,12 @@ END
 COMPILE ~.../bg1ub/ubflam5.baf~
 
 COPY_EXISTING ~%tutu_var%FLAM5.DLG~ ~override~
-  DECOMPILE_DLG_TO_D
-  REPLACE_TEXTUALLY ~Enemy()~ ~SetGlobal("UB_FLAM5_SHOUT","GLOBAL",1) Enemy()~
-  REPLACE_TEXTUALLY ~EscapeArea()~ ~SetGlobal("UB_FLAM5_SHOUT","GLOBAL",2) EscapeArea()~
-  COMPILE_D_TO_DLG
-BUT_ONLY_IF_IT_CHANGES
+  DECOMPILE_AND_PATCH
+  	BEGIN
+  		REPLACE_TEXTUALLY ~Enemy()~ ~SetGlobal("UB_FLAM5_SHOUT","GLOBAL",1) Enemy()~
+  		REPLACE_TEXTUALLY ~EscapeArea()~ ~SetGlobal("UB_FLAM5_SHOUT","GLOBAL",2) EscapeArea()~
+  	END
+  BUT_ONLY
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -2043,34 +1457,34 @@ APPEND ANIMATE.IDS "0xD400 BIRD_INSIDE"      UNLESS "^0xD400"
 // Change Zekar's alignment to NE.
 COPY_EXISTING ~%tutu_var%ZEKAR.CRE~ ~override~
   WRITE_BYTE 0x27b 35
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 // Give Karoug a script that exists. He doesn't need anything really since his dialog handles transformation.
 COPY_EXISTING ~%tutu_var%KAROUG.CRE~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x258 ~%tutu_scriptw%TASIGHT~ #8
+    WRITE_ASCIIE 0x258 ~%tutu_scriptw%TASIGHT~ #8
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 // Galkin.cre isn't actually used ingame. Galken.cre is the same guy, but the version that's used. However,
 // the former is classified as an "innocent", which seems more correct than the latter's choice of "mage".
 // Thus, correct the classification and fix the invalid dialog reference.
 COPY_EXISTING ~%tutu_var%GALKIN.CRE~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x2cc ~%tutu_var%galken~ #8
+    WRITE_ASCIIE 0x2cc ~%tutu_var%galken~ #8
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%GALKEN.CRE~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     WRITE_BYTE 0x273 155
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%BENTLY.CRE~ ~override~ // Bently Mirrorshade, FAI
-  WRITE_EVALUATED_ASCII 0x248 ~BENTLY~ #8       // Assigns BENTLY.BCS as the OVERRIDE script
-  WRITE_EVALUATED_ASCII 0x250 ~%tutu_var%SHOUT~ #8        // Assigns SHOUT.BCS as the Class script
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x248 ~BENTLY~ #8       // Assigns BENTLY.BCS as the OVERRIDE script
+  WRITE_ASCIIE 0x250 ~%tutu_var%SHOUT~ #8        // Assigns SHOUT.BCS as the Class script
+BUT_ONLY
 
 // assign creatures their correct dialogs
 COPY_EXISTING ~%tutu_var%FTOBE7.CRE~ ~override~ // Female townsperson in AR3335
@@ -2078,8 +1492,8 @@ COPY_EXISTING ~%tutu_var%FTOBE7.CRE~ ~override~ // Female townsperson in AR3335
               ~%tutu_var%MTOB4.CRE~ ~override~  //
               ~%tutu_var%MTOB5.CRE~ ~override~  //
               ~%tutu_var%READ4.CRE~ ~override~  //
-  WRITE_EVALUATED_ASCII 0x2cc ~%SOURCE_RES%~ #8
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x2cc ~%SOURCE_RES%~ #8
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%OGREGR.CRE~ ~override~   // Assigns the Ogrillon creatures the Ogrillon script
               ~%tutu_var%OGREGR1.CRE~ ~override~
@@ -2092,8 +1506,8 @@ COPY_EXISTING ~%tutu_var%OGREGR.CRE~ ~override~   // Assigns the Ogrillon creatu
               ~%tutu_scripto%GREGR_C.CRE~ ~override~
               ~%tutu_scripto%GREGR_D.CRE~ ~override~
               ~%tutu_scripto%GREMIRI.CRE~ ~override~
-  WRITE_EVALUATED_ASCII 0x258 ~%tutu_scripto%GRILLON~ #8
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x258 ~%tutu_scripto%GRILLON~ #8
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%OGREHA.CRE~ ~override~   // Assigns the Halfogres the Halfogre script
               ~%tutu_var%OGREHA1.CRE~ ~override~
@@ -2106,8 +1520,8 @@ COPY_EXISTING ~%tutu_var%OGREHA.CRE~ ~override~   // Assigns the Halfogres the H
               ~%tutu_scripto%GREHA_C.CRE~ ~override~
               ~%tutu_scripto%GREHA_D.CRE~ ~override~
               ~%tutu_scripto%GREHA_E.CRE~ ~override~
-  WRITE_EVALUATED_ASCII 0x258 ~%tutu_scripth%ALFOGRE~ #8
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x258 ~%tutu_scripth%ALFOGRE~ #8
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%ITASLOI.CRE~ ~override~  // Assigns the Taslois the TasloiA script
               ~%tutu_scriptt%ASLGURK.CRE~ ~override~
@@ -2115,343 +1529,308 @@ COPY_EXISTING ~%tutu_var%ITASLOI.CRE~ ~override~  // Assigns the Taslois the Tas
               ~%tutu_scriptt%ASLOI02.CRE~ ~override~
               ~%tutu_scriptt%ASLOI03.CRE~ ~override~
               ~%tutu_scriptt%ASLOISU.CRE~ ~override~
-  WRITE_EVALUATED_ASCII 0x258 ~%tutu_var%TASLOIA~
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x258 ~%tutu_var%TASLOIA~
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%WOLFWE.CRE~ ~override~ // Changes Class from Werewolf to Wolfwere
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     WRITE_BYTE 0x273 158
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%GHOUL.CRE~ ~override~   // Assigns the Ghouls the Ghoul script
               ~%tutu_var%GHOULSU.CRE~ ~override~
-  WRITE_EVALUATED_ASCII 0x258 ~%tutu_var%GHOUL~
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x258 ~%tutu_var%GHOUL~
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%WOLFWI.CRE~ ~override~ // Assigns the Winter Wolf the Winter Wolf script
-  WRITE_EVALUATED_ASCII 0x258 ~%tutu_scriptw%NTRWOLF~
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x258 ~%tutu_scriptw%NTRWOLF~
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%WOLFVA.CRE~ ~override~ // Assigns the Vampiric Wolf the Vampiric Wolf script
-  WRITE_EVALUATED_ASCII 0x258 ~%tutu_scriptv%AMPWOLF~
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x258 ~%tutu_scriptv%AMPWOLF~
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%FEARM.CRE~ ~override~ // Assigns Fear the Revenant script
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x250 ~%tutu_scriptr%EVENANT~
+    WRITE_ASCIIE 0x250 ~%tutu_scriptr%EVENANT~
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%REVENT.CRE~ ~override~ // Assigns the Revenant the Revenant script
-  WRITE_EVALUATED_ASCII 0x258 ~%tutu_scriptr%EVENANT~
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x258 ~%tutu_scriptr%EVENANT~
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%WINSKI2.CRE~ ~override~ // Assigns Winski Perorate the correct script
-  WRITE_EVALUATED_ASCII 0x250 ~%tutu_var%WINSKI~ #8
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x250 ~%tutu_var%WINSKI~ #8
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_scriptw%YVERNBI.CRE~ ~override~ // Assigns the Greater Wyvern the Wyvern script
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x258 ~%tutu_var%WYVERN~ #8
+    WRITE_ASCIIE 0x258 ~%tutu_var%WYVERN~ #8
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%SKELETB.CRE~ ~override~ // Assign death variable
   WRITE_ASCII 0x280 ~SKELETONB~
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%NOBW4.CRE~ ~override~  // Assign death variable
   WRITE_ASCII 0x280 ~Noblewoman4~
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%KRYLA.CRE~ ~override~ // Kryla (AR1500)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x258 ~%tutu_scriptw%EREWOLF~   // Assign the Werewolf script
+    WRITE_ASCIIE 0x258 ~%tutu_scriptw%EREWOLF~   // Assign the Werewolf script
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%MEMNIS.CRE~ ~override~ // Memnis (AR1500)
               ~%tutu_var%PALIN.CRE~ ~override~  // Palin (AR1500)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x258 ~%tutu_scriptw%OLFWERE~    // Assign the Wolfwere script
+    WRITE_ASCIIE 0x258 ~%tutu_scriptw%OLFWERE~    // Assign the Wolfwere script
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%DOPPGR.CRE~ ~override~ // Greater Doppelganger
-  WRITE_EVALUATED_ASCII 0x250 ~%tutu_var%DGANGER~ #8  // Assigns the DGANGER script as Class script
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x250 ~%tutu_var%DGANGER~ #8  // Assigns the DGANGER script as Class script
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%HOUSG5.CRE~ ~override~ // Guard
-  WRITE_EVALUATED_ASCII 0x258 ~%tutu_var%DGUARD~ #8   // Assigns the DGUARD script as Race script
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x258 ~%tutu_var%DGUARD~ #8   // Assigns the DGUARD script as Race script
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%DRYAD.CRE~ ~override~ // Dryad of the Cloudpeaks
-  WRITE_EVALUATED_ASCII 0x258 ~%tutu_var%DRYAD~ #8   // Assigns the DRYAD script as Race script
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x258 ~%tutu_var%DRYAD~ #8   // Assigns the DRYAD script as Race script
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%FLAMEN2.CRE~ ~override~ // Flaming Fist Enforcer
-  WRITE_EVALUATED_ASCII 0x258 ~%tutu_var%FLAMEN2~ #8   // Assigns the FLAMEN2 script as Race script
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x258 ~%tutu_var%FLAMEN2~ #8   // Assigns the FLAMEN2 script as Race script
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%ISLSIR.CRE~ ~override~ // Sirine Queen
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x268 ~%tutu_scripti%SLANDSI~    // Assigns the ISLANDSI script as Default script
+    WRITE_ASCIIE 0x268 ~%tutu_scripti%SLANDSI~    // Assigns the ISLANDSI script as Default script
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%OBERAN.CRE~ ~override~ // Oberan
-  WRITE_EVALUATED_ASCII 0x248 ~%tutu_scripto%BESTATE~    // Assigns the OBESTATE script as OVERRIDE script
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x248 ~%tutu_scripto%BESTATE~    // Assigns the OBESTATE script as OVERRIDE script
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%CHICKER.CRE~ ~override~ // Rabid Chicken
-  WRITE_EVALUATED_ASCII 0x248 ~%tutu_scriptr%CHICKEN~     // Assigns the RCHICKEN script as OVERRIDE script
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x248 ~%tutu_scriptr%CHICKEN~     // Assigns the RCHICKEN script as OVERRIDE script
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%SIL.CRE~ ~override~ // Sil
-  WRITE_EVALUATED_ASCII 0x260 ~%tutu_var%SIL~ #8   // Assigns the SIL script as General script
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x260 ~%tutu_var%SIL~ #8   // Assigns the SIL script as General script
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%VOLOSE.CRE~ ~override~ // Serving Wench
-  WRITE_EVALUATED_ASCII 0x258 ~%tutu_var%VWENCH~ #8   // Assigns the VWENCH script as Race script
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x258 ~%tutu_var%VWENCH~ #8   // Assigns the VWENCH script as Race script
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%MTBE6.CRE~ ~override~ // Galteran (Commoner)
-  WRITE_EVALUATED_ASCII 0x258 ~%tutu_var%MTOWBE6~ #8 // Assigns the MTOWBE6 script as Race script
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x258 ~%tutu_var%MTOWBE6~ #8 // Assigns the MTOWBE6 script as Race script
+BUT_ONLY
 
 // assign creatures their correct script death variable
 COPY_EXISTING ~%tutu_var%ADDY.CRE~ ~override~ // Addy (BG, Ch 7 spawn)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~Addy~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~Addy~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%BRENNA.CRE~ ~override~ // Brennan Risling (the other Brennan Risling)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~Brenna~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~Brenna~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%CAEDMO.CRE~ ~override~ // Caedmon (BG, Ch 5 spawn)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~Caedmo~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~Caedmo~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_scriptbg%CARBOS.CRE~ ~override~ // Carbos (Candlekeep, Tutorial)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~Carbos~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~Carbos~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%ELMIN3.CRE~ ~override~ // Elminster (FAI, Ch 3 spawn)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~Elmin3~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~Elmin3~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%FEARM.CRE~ ~override~ // Durlag: Fear warder (hostile)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~FearM~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~FearM~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%IVANNE.CRE~ ~override~ // Ivanne (BG, Ch 7 spawn)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~Ivanne~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~Ivanne~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%JONAVI.CRE~ ~override~ // Jonavin (BG, Ch 7 spawn)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~Jonavi~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~Jonavi~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%KAELLA.CRE~ ~override~ // Kaella (BG, Ch 7 spawn)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~Kaella~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~Kaella~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%KARAN1.CRE~ ~override~ // Karan (Candlekeep, Tutorial)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~Karan1~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~Karan1~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%PARDA1.CRE~ ~override~ // Parda (Candlekeep, Tutorial)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~Parda1~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~Parda1~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%PRIDEM.CRE~ ~override~ // Durlag: Pride warder (hostile)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~PrideM~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~PrideM~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_scriptbg%SHANK.CRE~ ~override~ // Shank (Candlekeep, Tutorial)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~Shank~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~Shank~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_scripts%LAVFREE.CRE~ ~override~ // Slave (Cloakwood mine, post-flood spawn)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~SlavFree~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~SlavFree~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%SORREL.CRE~ ~override~ // Sorrel (BG, Ch 7 spawn)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~Sorrel~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~Sorrel~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%SUGAR.CRE~ ~override~ // Sugar (BG ho, Ch 7 spawn)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~Sugar~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~Sugar~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%VOLO.CRE~ ~override~ // Volo (AR4809, Nashkel Tavern)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~Volo~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~Volo~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%ZOMBIEB.CRE~ ~override~ // Bassilus' family zombies
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_EVALUATED_ASCII 0x280 ~ZombieB~ #18 // dv = 18 bytes
+    WRITE_ASCIIE 0x280 ~ZombieB~ #18 // dv = 18 bytes
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 // end death variable assignation
 
-OUTER_SPRINT temp_tutu "_AR0114" OUTER_SPRINT temp_bgt "AR7214" OUTER_SPRINT temp_bgee "AR0114" OUTER_SPRINT temp_bg "AR0114" LAUNCH_ACTION_MACRO ~getcpmvara~
-COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_AND_PATCH BEGIN
-  	REPLACE_TEXTUALLY ~Exists(\"DETRAN\")~ ~Exists("DETRANION")~
-  END
-BUT_ONLY_IF_IT_CHANGES
+LAF replacetext_area_script STR_VAR area="%NEBaldursGate_BlushingMermaid_L1%" oldtext=~Exists(\"DETRAN\")~ newtext=~Exists("DETRANION")~ END
 
-OUTER_SPRINT temp_tutu "_AR0502" OUTER_SPRINT temp_bgt "ARD002" OUTER_SPRINT temp_bgee "AR0502" OUTER_SPRINT temp_bg "AR0502" LAUNCH_ACTION_MACRO ~getcpmvara~
-COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_AND_PATCH BEGIN
-  	REPLACE_TEXTUALLY ~(\"Tourist4\",~ ~("TOURIST3",~
-  END
-BUT_ONLY_IF_IT_CHANGES
+LAF replacetext_area_script STR_VAR area="%DurlagsTower_L1%" oldtext=~(\"Tourist4\",~ newtext=~("TOURIST3",~ END
 
-OUTER_SPRINT temp_tutu "_AR0612" OUTER_SPRINT temp_bgt "AR7612" OUTER_SPRINT temp_bgee "AR0612" OUTER_SPRINT temp_bg "AR0612" LAUNCH_ACTION_MACRO ~getcpmvara~
-COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_AND_PATCH BEGIN
-  	REPLACE_TEXTUALLY ~Exists(\"TRALIT\")~ ~Exists("TRALITHAN")~
-  END
-BUT_ONLY_IF_IT_CHANGES
+LAF replacetext_area_script STR_VAR area="%BaldursGateDocks_IronThrone_L2%" oldtext=~Exists(\"TRALIT\")~ newtext=~Exists("TRALITHAN")~ END
 
-OUTER_SPRINT temp_tutu "_AR0613" OUTER_SPRINT temp_bgt "AR7613" OUTER_SPRINT temp_bgee "AR0613" OUTER_SPRINT temp_bg "AR0613" LAUNCH_ACTION_MACRO ~getcpmvara~
-COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_AND_PATCH BEGIN
-	REPLACE_TEXTUALLY ~Exists(\"KALESS\")~ ~Exists("KALESSIA")~
-  END
-BUT_ONLY_IF_IT_CHANGES
+LAF replacetext_area_script STR_VAR area="%BaldursGateDocks_IronThrone_L3%" oldtext=~Exists(\"KALESS\")~ newtext=~Exists("KALESSIA")~ END
 
-OUTER_SPRINT temp_tutu "_AR0614" OUTER_SPRINT temp_bgt "AR7614" OUTER_SPRINT temp_bgee "AR0614" OUTER_SPRINT temp_bg "AR0614" LAUNCH_ACTION_MACRO ~getcpmvara~
-COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_AND_PATCH BEGIN
-  	REPLACE_TEXTUALLY ~Exists(\"WIRTHI\")~ ~Exists("WIRTHING")~
-  END
-BUT_ONLY_IF_IT_CHANGES
+LAF replacetext_area_script STR_VAR area="%BaldursGateDocks_IronThrone_L4%" oldtext=~Exists(\"WIRTHI\")~ newtext=~Exists("WIRTHING")~ END
 
-OUTER_SPRINT temp_tutu "_AR0616" OUTER_SPRINT temp_bgt "AR7616" OUTER_SPRINT temp_bgee "AR0616" OUTER_SPRINT temp_bg "AR0616" LAUNCH_ACTION_MACRO ~getcpmvara~
-COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_AND_PATCH BEGIN
-  	REPLACE_TEXTUALLY ~Exists(\"PANGWA\")~ ~Exists("PANG")~
-  	REPLACE_TEXTUALLY ~Exists(\"DHANIA\")~ ~Exists("DHANIAL")~
-  END
-BUT_ONLY_IF_IT_CHANGES
+LAF replacetext_area_script STR_VAR area="%BaldursGateDocks_IronThrone_L1%" oldtext=~Exists(\"PANGWA\")~ newtext=~Exists("PANG")~ END
+LAF replacetext_area_script STR_VAR area="%BaldursGateDocks_IronThrone_L1%" oldtext=~Exists(\"DHANIA\")~ newtext=~Exists("DHANIAL")~ END
 
-OUTER_SPRINT temp_tutu "_AR1300" OUTER_SPRINT temp_bgt "AR8200" OUTER_SPRINT temp_bgee "AR1300" OUTER_SPRINT temp_bg "AR1300" LAUNCH_ACTION_MACRO ~getcpmvara~
-COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_AND_PATCH BEGIN
-  	REPLACE_TEXTUALLY ~Exists(\"ALANBL\")~ ~Exists("ALAN")~
-  END
-BUT_ONLY_IF_IT_CHANGES
+LAF replacetext_area_script STR_VAR area="%SEBaldursGate%" oldtext=~Exists(\"DHANIA\")~ newtext=~Exists("DHANIAL")~ END
 
 COPY_EXISTING ~%tutu_var%LOVE.BCS~ ~override~
   DECOMPILE_AND_PATCH BEGIN
   	REPLACE_TEXTUALLY ~ActionOverride(\"AVARICEM\"~ ~ActionOverride("AVARICE"~
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 // Bears no longer turn hostile if PC druid or ranger is visible
 COPY_EXISTING ~%tutu_var%BEAR.BCS~ ~override~
   DECOMPILE_AND_PATCH BEGIN
   	REPLACE_TEXTUALLY ~\(\(Range(\[GOODCUTOFF\],7)\|AttackedBy(\[ANYONE\],DEFAULT)\)[ ]+Allegiance(Myself,NEUTRAL)\)~ ~\1 !See([2.0.0.11]) !See([2.0.0.12]) !See([2.0.0.16]) !See([2.0.0.18])~
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%MINSC.DLG~ ~override~
   DECOMPILE_AND_PATCH BEGIN
   	REPLACE_TEXTUALLY ~!Dead(\"Dynahe\"~ ~!Dead("Dynaheir"~
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_scriptb%IRD_INE.CRE~ ~override~
               ~%tutu_scriptb%IRD_INN.CRE~ ~override~
               ~%tutu_scriptb%IRD_INS.CRE~ ~override~
               ~%tutu_scriptb%IRD_INW.CRE~ ~override~
-  WRITE_EVALUATED_ASCII 0x258 ~%tutu_var%RANDFLY~ #8
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x258 ~%tutu_var%RANDFLY~ #8
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%ENNAHE.CRE~ ~override~ // Enna Hendrik (unused for now)
-  WRITE_EVALUATED_ASCII 0x2cc ~%tutu_var%ENNA~ #8       // Fixes dialog file (ENNAHE does not exist)
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x2cc ~%tutu_var%ENNA~ #8       // Fixes dialog file (ENNAHE does not exist)
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%ERLINH.CRE~ ~override~ // Erlin Hendrik (unused for now)
-  WRITE_EVALUATED_ASCII 0x2cc ~%tutu_var%ERLIN~ #8      // Fixes dialog file (ERLINH does not exist)
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x2cc ~%tutu_var%ERLIN~ #8      // Fixes dialog file (ERLINH does not exist)
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%GIRLBAX.CRE~ ~override~ // Girl (unused?)
-  WRITE_EVALUATED_ASCII 0x2cc ~%tutu_var%GIRBA3~ #8      // Fixes dialog file (GIRLBA3 does not exist)
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x2cc ~%tutu_var%GIRBA3~ #8      // Fixes dialog file (GIRLBA3 does not exist)
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%PROSLAY.CRE~ ~override~ // Ho
-  WRITE_EVALUATED_ASCII 0x2cc ~%tutu_var%PROSLA~ #8      // Fixes dialog file (PROSLAY does not exist)
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x2cc ~%tutu_var%PROSLA~ #8      // Fixes dialog file (PROSLAY does not exist)
+BUT_ONLY
 
 ACTION_IF !GAME_IS ~bgee~ THEN BEGIN  // BOOT01 exists in BGEE, so don't do this block for BGEE
-COPY_EXISTING ~%tutu_var%DEAD2.CRE~ ~override~ // Amnish Soldier (various)
+	COPY_EXISTING ~%tutu_var%DEAD2.CRE~ ~override~ // Amnish Soldier (various)
               ~%tutu_scriptd%EADFUCK.CRE~ ~override~ // Amnish Soldier (AR5403, Nashkel Mines)
               ~%tutu_var%DRELIK.CRE~ ~override~ // Drelik         (AR0010, Baldur's Gate)
               ~%tutu_var%JAMIE.CRE~ ~override~ // Jamie          (AR4805, Nashkel manor)
               ~%tutu_var%LOTHAN.CRE~ ~override~ // Lothander      (various, Baldur's Gate)
               ~%tutu_var%SAKUL.CRE~ ~override~ // Sakul          (AR5506, Catacombs)
-PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
-  READ_LONG 0x2bc itemOff
-  FOR (READ_LONG 0x2c0 numItem; numItem; numItem -= 0x1) BEGIN
-    READ_ASCII itemOff resRef
-    PATCH_IF !("%resRef%" STRING_COMPARE_CASE "%tutu_var%SWIH04") BEGIN // Fixes a typo (SWIH04 does not exist)
-      WRITE_EVALUATED_ASCII itemOff "%tutu_var%SW1H04" #8 // Long Sword
-    END ELSE BEGIN
-      PATCH_IF !("%resRef%" STRING_COMPARE_CASE "%tutu_var%SCRL1J") BEGIN // Fixes a typo (SCRL1J does not exist)
-        PATCH_IF !("%SOURCE_RES%" STRING_COMPARE_CASE "%tutu_var%SAKUL") BEGIN
-          WRITE_EVALUATED_ASCII itemOff "%tutu_var%SCRL1I" #8 // Hold Person
-        END ELSE BEGIN
-          WRITE_EVALUATED_ASCII itemOff "%tutu_var%SCRL1L" #8 // Monster Summoning I
-        END
-      END ELSE BEGIN
-        PATCH_IF !("%resRef%" STRING_COMPARE_CASE "%tutu_var%B00T01") BEGIN // Fixes a typo (B00T01 does not exist)
-          WRITE_EVALUATED_ASCII itemOff "%tutu_var%BOOT02" #8 // Boots of Speed
-        END
-      END
-    END
-    itemOff += 0x14
-  END
-END
-BUT_ONLY_IF_IT_CHANGES
+		PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+  			READ_LONG 0x2bc itemOff
+  			FOR (READ_LONG 0x2c0 numItem; numItem; numItem -= 0x1) BEGIN
+    			READ_ASCII itemOff resRef
+    			PATCH_IF ("%resRef%" STR_EQ "%tutu_var%SWIH04") BEGIN // Fixes a typo (SWIH04 does not exist)
+      				WRITE_ASCIIE itemOff "%tutu_var%SW1H04" #8 // Long Sword
+    			END ELSE BEGIN
+      				PATCH_IF ("%resRef%" STR_EQ "%tutu_var%SCRL1J") BEGIN // Fixes a typo (SCRL1J does not exist)
+        				PATCH_IF ("%SOURCE_RES%" STR_EQ "%tutu_var%SAKUL") BEGIN
+          					WRITE_ASCIIE itemOff "%tutu_var%SCRL1I" #8 // Hold Person
+        				END ELSE BEGIN
+          					WRITE_ASCIIE itemOff "%tutu_var%SCRL1L" #8 // Monster Summoning I
+        				END
+      				END ELSE BEGIN
+        				PATCH_IF ("%resRef%" STR_EQ "%tutu_var%B00T01") BEGIN // Fixes a typo (B00T01 does not exist)
+          					WRITE_ASCIIE itemOff "%tutu_var%BOOT02" #8 // Boots of Speed
+        				END
+      				END
+    			END
+    			itemOff += 0x14
+  			END
+		END
+	BUT_ONLY
 END
 
 //////////////////////////////////////
@@ -2469,7 +1848,7 @@ COPY_EXISTING ~%tutu_var%ANDRIS.CRE~ ~override~ // Andris (Mage, AR1009, Ice Isl
       ADD_CRE_ITEM ~%tutu_var%STAF01~ #0 #0 #0 NONE WEAPON1 EQUIP TWOHANDED // Quarterstaff
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%BEYN.CRE~ ~override~ // Beyn (Fighter/Mage, AR1009, Ice Island)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
@@ -2484,7 +1863,7 @@ COPY_EXISTING ~%tutu_var%BEYN.CRE~ ~override~ // Beyn (Fighter/Mage, AR1009, Ice
       ADD_CRE_ITEM ~%tutu_var%DAGG05~ #10 #0 #0 NONE WEAPON2 EQUIP // Throwing Dagger
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_scriptbg%BISHOP.CRE~ ~override~ // Bishop (Cleric, AR0506, Durlag's Tower)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
@@ -2498,7 +1877,7 @@ COPY_EXISTING ~%tutu_scriptbg%BISHOP.CRE~ ~override~ // Bishop (Cleric, AR0506, 
       ADD_CRE_ITEM ~%tutu_var%BLUN03~ #0 #0 #0 NONE WEAPON1 EQUIP // Flail +1
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%BLANE.CRE~ ~override~ // Dawn Priest Blane (Cleric, AR3401, Song of the Morning Temple Vestibule)
               ~%tutu_var%BRAN.CRE~ ~override~ // Dawn Priest Bram (Cleric, AR3401, Song of the Morning Temple Vestibule)
@@ -2514,7 +1893,7 @@ COPY_EXISTING ~%tutu_var%BLANE.CRE~ ~override~ // Dawn Priest Blane (Cleric, AR3
       ADD_CRE_ITEM ~%tutu_var%BLUN04~ #0 #0 #0 NONE WEAPON1 EQUIP // Mace
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%CUCHOL.CRE~ ~override~ // Cuchol (Fighter/Mage, AR1009, Ice Island)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
@@ -2529,7 +1908,7 @@ COPY_EXISTING ~%tutu_var%CUCHOL.CRE~ ~override~ // Cuchol (Fighter/Mage, AR1009,
       ADD_CRE_ITEM ~%tutu_var%DAGG05~ #10 #0 #0 NONE WEAPON2 EQUIP // Throwing Dagger
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%DAITEL.CRE~ ~override~ // Ghost (Fighter/Mage, AR0504, Durlag's Tower)
               ~%tutu_var%DUSHAI.CRE~ ~override~ // Dushai (Cleric/Mage, AR1000, Ulgoth's Beard)
@@ -2544,7 +1923,7 @@ COPY_EXISTING ~%tutu_var%DAITEL.CRE~ ~override~ // Ghost (Fighter/Mage, AR0504, 
       ADD_CRE_ITEM ~%tutu_var%BLUN06~ #0 #0 #0 NONE WEAPON1 EQUIP // Morning Star
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%DEZKIE.CRE~ ~override~ // Dezkiel (Fighter/Mage, AR1010, Ice Island)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
@@ -2559,7 +1938,7 @@ COPY_EXISTING ~%tutu_var%DEZKIE.CRE~ ~override~ // Dezkiel (Fighter/Mage, AR1010
       ADD_CRE_ITEM ~%tutu_var%DART01~ #20 #0 #0 NONE WEAPON2 EQUIP // Dart
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_scriptd%OGBLINK.CRE~ ~override~ //Blink Dog (created by Jacil, AR0307, NEBaldursGate CountingHouse L1)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
@@ -2573,14 +1952,14 @@ COPY_EXISTING ~%tutu_scriptd%OGBLINK.CRE~ ~override~ //Blink Dog (created by Jac
       END
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%DRADEE.CRE~ ~override~ // Dradeel (Mage, AR1505, Werewolf Island)
               ~%tutu_var%DRADEE2.CRE~ ~override~ // Dradeel (Mage, AR1505, Werewolf Island)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     READ_ASCII 0x268 script
     PATCH_IF !("%script%" STRING_COMPARE_CASE "%tutu_scriptw%TASIGHT") BEGIN
-      WRITE_EVALUATED_ASCII 0x268 ~%tutu_var%WTARSGT~ #8 // Needs EquipMostDamagingMelee()
+      WRITE_ASCIIE 0x268 ~%tutu_var%WTARSGT~ #8 // Needs EquipMostDamagingMelee()
     END
     READ_LONG 0x2b8 slotOff
     READ_SHORT slotOff + 0x12 weap1
@@ -2592,7 +1971,7 @@ COPY_EXISTING ~%tutu_var%DRADEE.CRE~ ~override~ // Dradeel (Mage, AR1505, Werewo
       ADD_CRE_ITEM ~%tutu_var%STAF01~ #0 #0 #0 NONE WEAPON2 // Quarterstaff
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%FLAMWIZ.CRE~ ~override~ // Flaming Fist Battle Wizard (Flaming Fist)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
@@ -2606,7 +1985,7 @@ COPY_EXISTING ~%tutu_var%FLAMWIZ.CRE~ ~override~ // Flaming Fist Battle Wizard (
       ADD_CRE_ITEM ~%tutu_var%BLUN02~ #0 #0 #0 NONE WEAPON1 EQUIP // Flail
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%GARAN.CRE~ ~override~ // Garan (Mage/Thief, AR1009, Ice Island)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
@@ -2620,7 +1999,7 @@ COPY_EXISTING ~%tutu_var%GARAN.CRE~ ~override~ // Garan (Mage/Thief, AR1009, Ice
       ADD_CRE_ITEM ~%tutu_var%DAGG02~ #0 #0 #0 NONE WEAPON1 EQUIP // Dagger +1
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%GIBBER2.CRE~ ~override~ // Diseased Gibberling (Gibberling)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
@@ -2634,7 +2013,7 @@ COPY_EXISTING ~%tutu_var%GIBBER2.CRE~ ~override~ // Diseased Gibberling (Gibberl
       ADD_CRE_ITEM ~%tutu_var%S1-2~ #0 #0 #0 NONE WEAPON1 EQUIP // Attack: one-handed, +1d2 slashing
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%IMOEN.CRE~ ~override~ // Imoen (Thief, AR2600, Candlekeep)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
@@ -2654,19 +2033,19 @@ COPY_EXISTING ~%tutu_var%IMOEN.CRE~ ~override~ // Imoen (Thief, AR2600, Candleke
       TEXT_SPRINT medium ~L~
     END
     PATCH_IF (("%ports%" STRING_EQUAL_CASE ~~) OR ("%ports%" STRING_EQUAL_CASE ~None~)) BEGIN
-      WRITE_EVALUATED_ASCII 0x34 ~%tutu_scripti%MOENS~ #8     // Corrects Imoen's small portrait
+      WRITE_ASCIIE 0x34 ~%tutu_scripti%MOENS~ #8     // Corrects Imoen's small portrait
     END
     PATCH_IF (("%portm%" STRING_EQUAL_CASE ~~) OR ("%portm%" STRING_EQUAL_CASE ~None~)) BEGIN
-      WRITE_EVALUATED_ASCII 0x3c ~%tutu_scripti%MOEN%medium%~ #8     // Corrects Imoen's medium portrait
+      WRITE_ASCIIE 0x3c ~%tutu_scripti%MOEN%medium%~ #8     // Corrects Imoen's medium portrait
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%JHASSO.CRE~ ~override~ // Jhasso (Fighter, AR0603, Seven Suns Basement)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     READ_ASCII 0x268 script
     PATCH_IF !("%script%" STRING_COMPARE_CASE "%tutu_scriptw%TASIGHT") BEGIN
-      WRITE_EVALUATED_ASCII 0x268 ~%tutu_var%WTARSGT~ #8 // Needs EquipMostDamagingMelee()
+      WRITE_ASCIIE 0x268 ~%tutu_var%WTARSGT~ #8 // Needs EquipMostDamagingMelee()
     END
     READ_LONG 0x2b8 slotOff
     READ_SHORT slotOff + 0x12 weap1
@@ -2678,7 +2057,7 @@ COPY_EXISTING ~%tutu_var%JHASSO.CRE~ ~override~ // Jhasso (Fighter, AR0603, Seve
       ADD_CRE_ITEM ~%tutu_var%SW1H01~ #0 #0 #0 NONE WEAPON2 // Quarterstaff
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%JOIA.CRE~ ~override~ // Joia (Fighter/Mage, AR2306, Friendly Arm Inn)
               ~%tutu_var%TRALIT.CRE~ ~override~  // Tralithan (Fighter, AR0612, Iron Throne Level 2)
@@ -2695,7 +2074,7 @@ COPY_EXISTING ~%tutu_var%JOIA.CRE~ ~override~ // Joia (Fighter/Mage, AR2306, Fri
       ADD_CRE_ITEM ~%tutu_var%SW1H04~ #0 #0 #0 NONE WEAPON1 EQUIP // Long Sword
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%LARRIA.CRE~ ~override~ // Larriaz (Fairy: Sirine, AR1209, Baldur's Gate)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
@@ -2709,7 +2088,7 @@ COPY_EXISTING ~%tutu_var%LARRIA.CRE~ ~override~ // Larriaz (Fairy: Sirine, AR120
       ADD_CRE_ITEM ~%tutu_var%SIRINE1~ #0 #0 #0 NONE WEAPON1 EQUIP // Attack: one-handed, +1d2 crushing, confusion (save vs. death)
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%MARL.CRE~ ~override~ // Marl (Fighter, AR3351, Feldepost's Inn)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
@@ -2723,7 +2102,7 @@ COPY_EXISTING ~%tutu_var%MARL.CRE~ ~override~ // Marl (Fighter, AR3351, Feldepos
       ADD_CRE_ITEM ~%tutu_var%B1-2~ #0 #0 #0 NONE WEAPON1 EQUIP // Crushing
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%SHOAL.CRE~ ~override~ // Shoal the Nereid (Fairy: Nereid, AR3100)
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
@@ -2737,7 +2116,7 @@ COPY_EXISTING ~%tutu_var%SHOAL.CRE~ ~override~ // Shoal the Nereid (Fairy: Nerei
       ADD_CRE_ITEM ~%tutu_var%NEIRED~ #0 #0 #0 NONE WEAPON1 EQUIP // Attack: one-handed, +1d2 - 1 crushing, save vs. death (-2) or die
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%TRACEA.CRE~ ~override~ // Tracea Carol (Mage, AR1002, Ritual Chamber)
               ~%tutu_scriptbg%KING.CRE~ ~override~ // King (Mage, AR0506, Durlag's Tower)
@@ -2753,7 +2132,7 @@ COPY_EXISTING ~%tutu_var%TRACEA.CRE~ ~override~ // Tracea Carol (Mage, AR1002, R
       ADD_CRE_ITEM ~%tutu_var%STAF02~ #0 #0 #0 NONE WEAPON1 EQUIP TWOHANDED // Quarterstaff +1
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 /////////////////////////////
 // Gender and Sex Corrections
@@ -2793,7 +2172,7 @@ COPY_EXISTING ~%tutu_var%ANDRIS.CRE~ ~override~ // Andris (MAGE_MALE_HUMAN anima
     WRITE_BYTE 0x237 1                  // Sex: Male
     WRITE_BYTE 0x275 1                  // Gender: Male
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%CLAIRD.CRE~ ~override~ // Clair De'lain (FIGHTER_FEMALE_HUMAN animation, AR0514: Durlag's Tower)
               ~%tutu_var%CULTT3.CRE~ ~override~ // Cult Assassin (FIGHTER_FEMALE_HUMAN animation, AR1003: Ulgoth's Beard)
@@ -2819,7 +2198,7 @@ COPY_EXISTING ~%tutu_var%CLAIRD.CRE~ ~override~ // Clair De'lain (FIGHTER_FEMALE
     WRITE_BYTE 0x237 2                  // Sex: Female
     WRITE_BYTE 0x275 2                  // Gender: Female
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%APPAR.CRE~ ~override~ // Skeleton (SKELETON animation, AR0513: Durlag's Tower)
               ~%tutu_scriptc%RYPTCRA.CRE~ ~override~ // Crypt Crawler (CARRION_CRAWLER animation, AR0514: Durlag's Tower)
@@ -2834,7 +2213,7 @@ COPY_EXISTING ~%tutu_var%APPAR.CRE~ ~override~ // Skeleton (SKELETON animation, 
     WRITE_BYTE 0x237 1                  // Sex: Male
     WRITE_BYTE 0x275 4                  // Gender: Neither
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 //Compatibility with NPC Portraits component
 ACTION_IF NOT FILE_EXISTS ~override/X#NJNPCPortrait.G3~ THEN BEGIN
@@ -2845,7 +2224,7 @@ ACTION_IF NOT FILE_EXISTS ~override/X#NJNPCPortrait.G3~ THEN BEGIN
       WRITE_ASCII 0x34 ~~ #8 // Removes Edwin's, Kivan's, Garrick's, Montaron's, Xzar's, Alora's, and Ajantis' portraits
       WRITE_ASCII 0x3c ~~ #8
     END
-  BUT_ONLY_IF_IT_CHANGES
+  BUT_ONLY
 END
 
 COPY_EXISTING ~%tutu_var%BAYARD.CRE~ ~override~ // Bayard
@@ -2883,7 +2262,7 @@ COPY_EXISTING ~%tutu_var%BAYARD.CRE~ ~override~ // Bayard
     WRITE_ASCII 0x34 ~~ #8 // Removes Edwin's, Kivan's, Garrick's, Montaron's, Xzar's, Alora's, and Ajantis' portraits
     WRITE_ASCII 0x3c ~~ #8
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 //////////////////////////////////////////////////////////
 // Fixes due to the results of CamDawg's Inventory Checker
@@ -2895,12 +2274,12 @@ COPY_EXISTING ~%tutu_var%AASIM.CRE~ ~override~ // Aasim (AR0615, Iron Throne Bui
   FOR (index = 0 ; index < itm_num ; index = index + 1) BEGIN // searches through items
     READ_ASCII ("%itm_off%" + (0x14 * "%index%")) "item"
     PATCH_IF ("%item%" STRING_COMPARE_CASE "%tutu_scripts%HIELD04" = 0) BEGIN // find invalid resref
-      WRITE_EVALUATED_ASCII ("%itm_off%" + (0x14 * "%index%")) "%tutu_var%SHLD04" #8 // corrected resref
+      WRITE_ASCIIE ("%itm_off%" + (0x14 * "%index%")) "%tutu_var%SHLD04" #8 // corrected resref
       SET "index" = "%itm_num%" // kills loop
     END
   END
  END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%RINNIE.CRE~ ~override~ // Rinnie: LEAT01 (Leather Armor)
               ~%tutu_var%ZHURLO.CRE~ ~override~ // Zhurlong: LEAT01 (Leather Armor)
@@ -2925,7 +2304,7 @@ COPY_EXISTING ~%tutu_var%RINNIE.CRE~ ~override~ // Rinnie: LEAT01 (Leather Armor
     END
   END
  END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%ANDRIS.CRE~ ~override~ // Andris: CLCK12 (Knave's Robe)
               ~%tutu_var%MARCEL.CRE~ ~override~ // Marcellus: CLCK13 (Traveller's Robe)
@@ -2949,7 +2328,7 @@ COPY_EXISTING ~%tutu_var%ANDRIS.CRE~ ~override~ // Andris: CLCK12 (Knave's Robe)
     END
   END
  END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%DEZKIE.CRE~ ~override~ // Dezkiel: CLCK22 (Shandalar's Cloak)
               ~%tutu_var%BHEREN.CRE~ ~override~ // Bheren: CLCK01 (Cloak of Protection +1)
@@ -2971,7 +2350,7 @@ COPY_EXISTING ~%tutu_var%DEZKIE.CRE~ ~override~ // Dezkiel: CLCK22 (Shandalar's 
     END
   END
  END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%DRATAN.CRE~ ~override~ // Dra'tan: AROW01 (Arrows)
  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
@@ -2994,7 +2373,7 @@ COPY_EXISTING ~%tutu_var%DRATAN.CRE~ ~override~ // Dra'tan: AROW01 (Arrows)
     END
   END
  END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%NADARI.CRE~ ~override~ // Nadarin: BOOT02 (Boots of Stealth)
  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
@@ -3014,7 +2393,7 @@ COPY_EXISTING ~%tutu_var%NADARI.CRE~ ~override~ // Nadarin: BOOT02 (Boots of Ste
     END
   END
  END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 //devSin 'nixed' this (that ring is there because it's the key to his door, not because he actually needs it or was supposed to be wearing it)
 /*
@@ -3037,7 +2416,7 @@ COPY_EXISTING ~%tutu_var%ALDETH.CRE~ ~override~ // Aldeth Sashenstar: MAGE04 (bl
     END
   END
  END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 */
 END // Fixes due to the results of CamDawg's Inventory Checker
 
@@ -3053,7 +2432,7 @@ COPY_EXISTING ~%tutu_var%CREDUS.CRE~ ~override~ // Credus, AR1900
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     ADD_CRE_ITEM ~%tutu_var%MISC86~ #1 #0 #0 ~IDENTIFIED~ ~INV1 INV2~ // Adds a bandit scalp
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 /////////////////////////////////////////
 //NOBL9.CRE needs 2 gold for his dialogue
@@ -3061,7 +2440,7 @@ COPY_EXISTING ~%tutu_var%NOBL9.CRE~ ~override~ //Nobleman, AR2303
  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
    WRITE_LONG 0x1c 2 //Gold
  END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 /////////////////////////////////
 //Correct cultist death variables
@@ -3071,55 +2450,55 @@ COPY_EXISTING ~%tutu_var%CULT1.CRE~ ~override~ //Cult Guard
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     WRITE_ASCII 0x280 "CultGuard1" #32 //was a duplicate "CultGuard", interferes with CULTSHT.BCS
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%CULT2.CRE~ ~override~ //Cult Wizard
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     WRITE_ASCII 0x280 "CultWizard1" #32
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%CULT3.CRE~ ~override~ //Cult Enforcer
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     WRITE_ASCII 0x280 "CultWizard2" #32
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%CULT4.CRE~ ~override~ //Cult Archer, unused
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     WRITE_ASCII 0x280 "cultfodder" #32
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%CULTASS.CRE~ ~override~ //Cult Assassin, unused
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     WRITE_ASCII 0x280 "CultAssassin" #32
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%CULTT1.CRE~ ~override~ //Cult Enforcer
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     WRITE_ASCII 0x280 "CultWizard" #32
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%CULTT2.CRE~ ~override~ //Cult Guard
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     WRITE_ASCII 0x280 "CultGuard" #32
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%CULTT3.CRE~ ~override~ //Cult Assassin
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     WRITE_ASCII 0x280 "CultAssassin" #32
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%CULTT4.CRE~ ~override~ //Cult Archer
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     WRITE_ASCII 0x280 "CultArcher" #32
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 END
 
@@ -3146,12 +2525,12 @@ COPY_EXISTING ~%Candlekeep_Library_L1%.ARE~ ~override~ // Add READ4 to Candlekee
       READ_ASCII actOff + 0x80 actor
       READ_SHORT actOff + 0x20 xPos
       PATCH_IF ((xPos == actLoc) && !("%actor%" STRING_COMPARE_CASE "%tutu_var%READ3")) BEGIN
-        WRITE_EVALUATED_ASCII actOff + 0x80 ~%tutu_var%READ4~ #8
+        WRITE_ASCIIE actOff + 0x80 ~%tutu_var%READ4~ #8
       END
       actOff += 0x110
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%Candlekeep_Library_L2%.ARE~ ~override~ // Add READ4 to Candlekeep library
   PATCH_IF (SOURCE_SIZE > 0x11c) BEGIN
@@ -3161,12 +2540,12 @@ COPY_EXISTING ~%Candlekeep_Library_L2%.ARE~ ~override~ // Add READ4 to Candlekee
       READ_SHORT actOff + 0x20 xPos
       PATCH_IF (((xPos == 547) || (xPos == 1293)) &&
                 !("%actor%" STRING_COMPARE_CASE "READ3")) BEGIN
-        WRITE_EVALUATED_ASCII actOff + 0x80 ~%tutu_var%READ4~ #8
+        WRITE_ASCIIE actOff + 0x80 ~%tutu_var%READ4~ #8
       END
       actOff += 0x110
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%Candlekeep_Library_L4%.ARE~ ~override~ // Add READ4 to Candlekeep library
   PATCH_IF (SOURCE_SIZE > 0x11c) BEGIN
@@ -3175,65 +2554,55 @@ COPY_EXISTING ~%Candlekeep_Library_L4%.ARE~ ~override~ // Add READ4 to Candlekee
       READ_ASCII actOff + 0x80 actor
       READ_SHORT actOff + 0x20 xPos
       PATCH_IF ((xPos == 1080) && !("%actor%" STRING_COMPARE_CASE "%tutu_var%READ3")) BEGIN
-        WRITE_EVALUATED_ASCII actOff + 0x80 ~%tutu_var%READ4~ #8
+        WRITE_ASCIIE actOff + 0x80 ~%tutu_var%READ4~ #8
       END
       actOff += 0x110
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%HAFFG2.CRE~ ~override~ // Halfling Woman (Mabledale), AR4006
-  WRITE_EVALUATED_ASCII 0x280 "HAFFG2" #18 // Script name
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x280 "HAFFG2" #18 // Script name
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%HALFG2.CRE~ ~override~ // Halfling Man (Bunsen), AR4013
-  WRITE_EVALUATED_ASCII 0x280 "HALFG2" #18 // Script name
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x280 "HALFG2" #18 // Script name
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%MTOB4.CRE~ ~override~  // Commoner, AR0104
-  WRITE_EVALUATED_ASCII 0x280 "MTOB4" #18 // Script name
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x280 "MTOB4" #18 // Script name
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%MTOB5.CRE~ ~override~  // Commoner, AR0705
-  WRITE_EVALUATED_ASCII 0x280 "MTOB5" #18 // Script name
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x280 "MTOB5" #18 // Script name
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%TRAVEL.CRE~ ~override~ // Traveler (Wade), AR2301
-  WRITE_EVALUATED_ASCII 0x280 "WADE" #18 // Script name
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x280 "WADE" #18 // Script name
+BUT_ONLY
 
-COPY_EXISTING ~%NEBaldursGate_SplurgingSturgeon_L2%.ARE~ ~override~
-  PATCH_IF (SOURCE_SIZE > 0x1cc) BEGIN
-    SPRINT temp_tutu "_AR0104" SPRINT temp_bgt "AR7204" SPRINT temp_bgee "AR0104" SPRINT temp_bg "AR0104" LAUNCH_PATCH_MACRO "getcpmvarp"
-    WRITE_EVALUATED_ASCII 0x94 ~%temp_cpmvar%~ #8 // Area script
-  END
-BUT_ONLY_IF_IT_CHANGES
-
-COPY_EXISTING ~%Gullykin_House1_Cellar%.ARE~ ~override~
-  PATCH_IF (SOURCE_SIZE > 0x1cc) BEGIN
-    SPRINT temp_tutu "_AR4006" SPRINT temp_bgt "AR9906" SPRINT temp_bgee "AR4006" SPRINT temp_bg "AR4006" LAUNCH_PATCH_MACRO "getcpmvarp"
-    WRITE_EVALUATED_ASCII 0x94 ~%temp_cpmvar%~ #8 // Area script
-  END
-BUT_ONLY_IF_IT_CHANGES
-
-COPY_EXISTING ~%Gullykin_House2_L1%.ARE~ ~override~
-  PATCH_IF (SOURCE_SIZE > 0x1cc) BEGIN
-    SPRINT temp_tutu "_AR4013" SPRINT temp_bgt "AR9913" SPRINT temp_bgee "AR4013" SPRINT temp_bg "AR4013" LAUNCH_PATCH_MACRO "getcpmvarp"
-    WRITE_EVALUATED_ASCII 0x94 ~%temp_cpmvar%~ #8 // Area script
-  END
-BUT_ONLY_IF_IT_CHANGES
-
-OUTER_SPRINT temp_tutu "_AR0800" OUTER_SPRINT temp_bgt "AR8200" OUTER_SPRINT temp_bgee "AR0800" OUTER_SPRINT temp_bg "AR0800" LAUNCH_ACTION_MACRO "getcpmvara"
-COPY_EXISTING ~%temp_cpmvar%.BCS~ ~override~
-  DECOMPILE_BCS_TO_BAF
-  REPLACE_TEXTUALLY ~Exists(\"BERSCH\")~ ~Exists("HERSCHEL")~
-  REPLACE_TEXTUALLY ~CreateCreature(\"BERSCH\",~ ~CreateCreature("HERSCH",~
-  COMPILE_BAF_TO_BCS
-BUT_ONLY_IF_IT_CHANGES
+LAF replacetext_area_script STR_VAR area="%EBaldursGate%" oldtext=~Exists(\"BERSCH\")~ newtext=~CreateCreature("HERSCH",~ END
+LAF replacetext_area_script STR_VAR area="%EBaldursGate%" oldtext=~CreateCreature(\"BERSCH\",~ newtext=~Exists("HERSCHEL")~ END
 
 //////////////////////////////////////////////////
 // Add patron to Splurging Sturgeon inn (upstairs)
-<<<<<<<< .../bg1ub/ex_ar0104.baf
+COPY_EXISTING ~%NEBaldursGate_SplurgingSturgeon_L2%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 518
+    	fj_loc_y          = 252
+    	fj_dest_x         = 518
+    	fj_dest_y         = 252
+    	fj_animation      = 0xC900 //peasant man
+    	fj_orientation    = 2      //SW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Commoner
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%MTOB4"
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/ex_ar0104.baf
 IF
 Global("UB_MTOB4_SPAWN","GLOBAL",0)
 !Exists("MTOB4")
@@ -3246,13 +2615,28 @@ SetGlobal("UB_MTOB4_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR0104" OUTER_SPRINT temp_bgt "AR7204" OUTER_SPRINT temp_bgee "AR0104" OUTER_SPRINT temp_bg "AR0104" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ex_ar0104.baf~
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%NEBaldursGate_SplurgingSturgeon_L2%" bottom=".../bg1ub/ex_ar0104.baf" END
+*/
 
 ////////////////////////////////////////////
 // Add patron to Elfsong Tavern (main level)
-<<<<<<<< .../bg1ub/eb_0705.baf
+COPY_EXISTING ~%EBaldursGate_ElfsongTavern_L1%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 851
+    	fj_loc_y          = 367
+    	fj_dest_x         = 851
+    	fj_dest_y         = 367
+    	fj_animation      = 0xC900 //peasant man
+    	fj_orientation    = 0      //S
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Commoner
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%MTOB5"
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/eb_0705.baf
 IF
 Global("UB_MTOB5_SPAWN","GLOBAL",0)
 !Exists("MTOB5")
@@ -3264,9 +2648,8 @@ SetGlobal("UB_MTOB5_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR0705" OUTER_SPRINT temp_bgt "AR7705" OUTER_SPRINT temp_bgee "AR0705" OUTER_SPRINT temp_bg "AR0705" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/eb_0705.baf~
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%EBaldursGate_ElfsongTavern_L1%" bottom=".../bg1ub/eb_0705.baf" END
+*/
 
 /////////////////////////////////////////////////////////////
 // Create FAI traveler when bandit subplot starts (Chapter 3)
@@ -3281,13 +2664,27 @@ CreateCreature("%tutu_var%TRAVEL",[691.398]%FACE_0%) // Traveler
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR2301" OUTER_SPRINT temp_bgt "AR6801" OUTER_SPRINT temp_bgee "AR2301" OUTER_SPRINT temp_bg "AR2301" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/eb_2301.baf~
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%FriendlyArmInn_L1%" bottom=".../bg1ub/eb_2301.baf" END
 
 /////////////////////////////////////////////////
 // Add Mabledale to home in Gullykin (downstairs)
-<<<<<<<< .../bg1ub/eb_ar4006.baf
+COPY_EXISTING ~%Gullykin_House1_Cellar%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 357
+    	fj_loc_y          = 257
+    	fj_dest_x         = 357
+    	fj_dest_y         = 257
+    	fj_animation      = 0x6313 //Thief Halfling Woman
+    	fj_orientation    = 9      //ENE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Mabledale
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%HAFFG2"
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/eb_ar4006.baf
 IF
 Global("UB_HAFFG2_SPAWN","GLOBAL",0)
 !Exists("HAFFG2")
@@ -3300,13 +2697,28 @@ SetGlobal("UB_HAFFG2_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR4006" OUTER_SPRINT temp_bgt "AR9906" OUTER_SPRINT temp_bgee "AR4406" OUTER_SPRINT temp_bg "AR4406" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/eb_ar4006.baf~
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%Gullykin_House1_Cellar%" bottom=".../bg1ub/eb_ar4006.baf" END
+*/
 
 //////////////////////////////////////////////
 // Add Bunsen to home in Gullykin (main level)
-<<<<<<<< .../bg1ub/eb_ar4013.baf
+COPY_EXISTING ~%Gullykin_House2_L1%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 311
+    	fj_loc_y          = 179
+    	fj_dest_x         = 311
+    	fj_dest_y         = 179
+    	fj_animation      = 0x6303 //Thief Halfling Man
+    	fj_orientation    = 0      //S
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Bunsen
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%HALFG2"
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/eb_ar4013.baf
 IF
 Global("UB_HALFG2_SPAWN","GLOBAL",0)
 !Exists("HALFG2")
@@ -3318,9 +2730,8 @@ SetGlobal("UB_HALFG2_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR4013" OUTER_SPRINT temp_bgt "AR9913" OUTER_SPRINT temp_bgee "AR4013" OUTER_SPRINT temp_bg "AR4013" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/eb_ar4013.baf~
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%Gullykin_House2_L1%" bottom=".../bg1ub/eb_ar4013.baf" END
+*/
 
 // Fix his dialogue
 <<<<<<<< .../bg1ub/bunsenfix.d
@@ -3341,20 +2752,54 @@ COMPILE EVALUATE_BUFFER ~.../bg1ub/bunsenfix.d~
 /////////////////////////////////////////////
 // Restore the Friendly Arm Inn serving wench
 COPY_EXISTING ~%NEBaldursGate_BlushingMermaid_L1%.ARE~ ~override~ // Blushing Mermaid
-  WRITE_EVALUATED_ASCII 0x2ac ~%tutu_var%SERWEN~ // Changes FRIWEN to SERWEN
-BUT_ONLY_IF_IT_CHANGES
+  PATCH_IF (SOURCE_SIZE > 0x11c) BEGIN
+    READ_LONG 0x54 actOff
+    FOR (READ_SHORT 0x58 numAct; numAct; numAct -= 0x1) BEGIN
+      READ_ASCII actOff + 0x80 actor
+      PATCH_IF !("%actor%" STRING_COMPARE_CASE "%tutu_var%FRIWEN") BEGIN
+        WRITE_ASCIIE actOff + 0x80 ~%tutu_var%SERWEN~ #8
+      END
+      actOff += 0x110
+    END
+  END
+BUT_ONLY
 
 COPY_EXISTING ~%EBaldursGate_ElfsongTavern_L1%.ARE~ ~override~ // Elfsong
-  WRITE_EVALUATED_ASCII 0x2ac ~%tutu_var%SERWEN~ // Changes FRIWEN to SERWEN
-BUT_ONLY_IF_IT_CHANGES
+  PATCH_IF (SOURCE_SIZE > 0x11c) BEGIN
+    READ_LONG 0x54 actOff
+    FOR (READ_SHORT 0x58 numAct; numAct; numAct -= 0x1) BEGIN
+      READ_ASCII actOff + 0x80 actor
+      PATCH_IF !("%actor%" STRING_COMPARE_CASE "%tutu_var%FRIWEN") BEGIN
+        WRITE_ASCIIE actOff + 0x80 ~%tutu_var%SERWEN~ #8
+      END
+      actOff += 0x110
+    END
+  END
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%FRIWEN.CRE~ ~override~ // Serving Wench
-  WRITE_EVALUATED_ASCII 0x2cc ~%tutu_var%FRIWEN~ // Assigns the unused dialog, FRIWEN.DLG
+  WRITE_ASCIIE 0x2cc ~%tutu_var%FRIWEN~ // Assigns the unused dialog, FRIWEN.DLG
   WRITE_ASCII 0x280 ~FRIWEN~ // Assigns a script name
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 // Add the Serving Wench to the Friendly Arm Inn
-<<<<<<<< .../bg1ub/ub_ar2301.baf
+COPY_EXISTING ~%FriendlyArmInn_L1%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 1073
+    	fj_loc_y          = 690
+    	fj_dest_x         = 1073
+    	fj_dest_y         = 690
+    	fj_animation      = 0xC910 //Peasant Woman
+    	fj_orientation    = 4      //W
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Serving Wench"
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%FRIWEN"
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/ub_ar2301.baf
 IF
 Global("UB_FRIWEN_SPAWN","%FriendlyArmInn_L1%",0)
 !Exists("FRIWEN")
@@ -3366,9 +2811,8 @@ SetGlobal("UB_FRIWEN_SPAWN","%FriendlyArmInn_L1%",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR2301" OUTER_SPRINT temp_bgt "AR6801" OUTER_SPRINT temp_bgee "AR2301" OUTER_SPRINT temp_bg "AR2301" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar2301.baf~
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%FriendlyArmInn_L1%" bottom=".../bg1ub/ub_ar2301.baf" END
+*/
 
 //////////////////////////////////////////////
 // Add the Lecturing Farmer to Wyrm's Crossing
@@ -3378,7 +2822,23 @@ COPY_EXISTING ~%tutu_var%FARM4.CRE~ ~override/UBFARM5.CRE~ // Copies FARM4
   WRITE_ASCII 0x280 ~UBFARM5~ #8                 // Sets Death Variable
   WRITE_ASCII 0x2cc ~UBFARM5~ #8                 // Sets Dialogue
 
-<<<<<<<< .../bg1ub/ub_ar0900.baf
+COPY_EXISTING ~%WyrmsCrossing%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4716
+    	fj_loc_y          = 3663
+    	fj_dest_x         = 4716
+    	fj_dest_y         = 3663
+    	fj_animation      = 0xC900 //Peasant Man
+    	fj_orientation    = 2      //SW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Farmer
+   		fj_cre_resref     = UBFARM5
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/ub_ar0900.baf
 IF
 Global("UB_FARMER5_SPAWN","GLOBAL",0)
 THEN
@@ -3388,18 +2848,33 @@ SetGlobal("UB_FARMER5_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR0900" OUTER_SPRINT temp_bgt "AR7900" OUTER_SPRINT temp_bgee "AR0900" OUTER_SPRINT temp_bg "AR0900" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar0900.baf~
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%WyrmsCrossing%" bottom=".../bg1ub/ub_ar0900.baf" END
+*/
 
 /////////////////////////
 // Feldane, an Old Friend
 COPY_EXISTING ~%tutu_var%FELDAN.CRE~ ~override~
   WRITE_ASCII 0x280 ~Feldane~ #8    // Sets Death Variable
   WRITE_ASCII 0x2cc ~UBFELDAN~ #8   // Sets Dialogue
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
-<<<<<<<< .../bg1ub/ub_ar2626.baf
+COPY_EXISTING ~%Candlekeep_Ch6%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 2965
+    	fj_loc_y          = 1824
+    	fj_dest_x         = 2965
+    	fj_dest_y         = 1824
+    	fj_animation      = 0x6402 //Monk
+    	fj_orientation    = 3      //WSW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Feldane
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%FELDAN"
+	END
+BUT_ONLY
+
+/* <<<<<<<< .../bg1ub/ub_ar2626.baf
 IF
 Global("UB_FELDANE_SPAWN","GLOBAL",0)
 THEN
@@ -3409,13 +2884,28 @@ SetGlobal("UB_FELDANE_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR2626" OUTER_SPRINT temp_bgt "AR6526" OUTER_SPRINT temp_bgee "AR2626" OUTER_SPRINT temp_bg "AR2626" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar2626.baf~
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%Candlekeep_Ch6%" bottom=".../bg1ub/ub_ar2626.baf" END
+*/
 
 ///////////////
 // Nashkel Girl
-<<<<<<<< .../bg1ub/ub_ar4806.baf
+COPY_EXISTING ~%Nashkel_JosephsHouse%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 605
+    	fj_loc_y          = 317
+    	fj_dest_x         = 605
+    	fj_dest_y         = 317
+    	fj_animation      = 0xC710 //Girl
+    	fj_orientation    = 1      //SSW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Girl
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%GIRLBE"
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/ub_ar4806.baf
 IF
 Global("UB_GIRLBE_SPAWN","GLOBAL",0)
 THEN
@@ -3425,9 +2915,8 @@ SetGlobal("UB_GIRLBE_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR4806" OUTER_SPRINT temp_bgt "AR3706" OUTER_SPRINT temp_bgee "AR4806" OUTER_SPRINT temp_bg "AR4806" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar4806.baf~
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%Nashkel_JosephsHouse%" bottom=".../bg1ub/ub_ar4806.baf" END
+*/
 
 /////////////////////////
 // Baldur's Gate Merchant
@@ -3435,9 +2924,25 @@ EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar4806.baf~
 COPY_EXISTING ~%tutu_var%FATMAN.CRE~ ~override/UBSHOPGE.CRE~
   SAY NAME1 #9432
   SAY NAME2 #9434
-  WRITE_EVALUATED_ASCII 0x2cc ~%tutu_var%SHOPGE~ #8
+  WRITE_ASCIIE 0x2cc ~%tutu_var%SHOPGE~ #8
 
-<<<<<<<< .../bg1ub/ub_ar1100.baf
+COPY_EXISTING ~%SWBaldursGate%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 3109
+    	fj_loc_y          = 2627
+    	fj_dest_x         = 3109
+    	fj_dest_y         = 2627
+    	fj_animation      = 0xC800 //Fat man
+    	fj_orientation    = 0      //S
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Merchant
+   		fj_cre_resref     = UBSHOPGE
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/ub_ar1100.baf
 IF
 Global("UB_SHOPGE_SPAWN","GLOBAL",0)
 THEN
@@ -3447,9 +2952,8 @@ SetGlobal("UB_SHOPGE_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR1100" OUTER_SPRINT temp_bgt "AR8000" OUTER_SPRINT temp_bgee "AR1100" OUTER_SPRINT temp_bg "AR1100" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar1100.baf~
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%SWBaldursGate%" bottom=".../bg1ub/ub_ar1100.baf" END
+*/
 
 /////////////////////////////////
 // Wilton, Farmer Brun's Neighbor
@@ -3460,9 +2964,25 @@ COPY_EXISTING ~%tutu_var%WILTON.CRE~ ~override~
   WRITE_ASCII 0x280 ~Wilton~                        // Assigns death variable
   WRITE_BYTE 0x23f 0x8                              // Fix his morale setting
   WRITE_BYTE 0x240 0x6                              // Fix his morale break setting
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
-<<<<<<<< .../bg1ub/ub_ar1403.baf
+COPY_EXISTING ~%FishingVillage_House2%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 471
+    	fj_loc_y          = 272
+    	fj_dest_x         = 471
+    	fj_dest_y         = 272
+    	fj_animation      = 0xC900 //Peasant man
+    	fj_orientation    = 6      //NW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Wilton
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%WILTON"
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/ub_ar1403.baf
 IF
 Global("UB_WILTON_SPAWN","GLOBAL",0)
 !Exists("Wilton")
@@ -3474,9 +2994,8 @@ SetGlobal("UB_WILTON_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR1403" OUTER_SPRINT temp_bgt "AR8303" OUTER_SPRINT temp_bgee "AR1403" OUTER_SPRINT temp_bg "AR1403" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar1403.baf~
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%FishingVillage_House2%" bottom=".../bg1ub/ub_ar1403.baf" END
+*/
 
 /////////////////////////////////
 // Corianna, the Petrified Ranger
@@ -3485,7 +3004,23 @@ COPY ~bg1ub/creature/%tutuorbgt%/ubcorian.cre~ ~override~
   SAY NAME1 #15552
   SAY NAME2 #15574
 
-<<<<<<<< .../bg1ub/ub_ar3400.baf
+COPY_EXISTING ~%Temple%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4611
+    	fj_loc_y          = 3449
+    	fj_dest_x         = 4611
+    	fj_dest_y         = 3449
+    	fj_animation      = 0x6110 //Fighter human woman
+    	fj_orientation    = 2      //SW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Corianna
+   		fj_cre_resref     = UBCORIAN
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/ub_ar3400.baf
 IF
 Global("UB_CORIANNA_SPAWN","GLOBAL",0)
 !Exists("UBCORIAN")
@@ -3498,9 +3033,8 @@ SetGlobal("UB_CORIANNA_SPAWN","GLOBAL",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR3400" OUTER_SPRINT temp_bgt "AR9300" OUTER_SPRINT temp_bgee "AR3400" OUTER_SPRINT temp_bg "AR3400" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar3400.baf~
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%Temple%" bottom=".../bg1ub/ub_ar3400.baf" END
+*/
 
 /////////////////////////////////
 // Compile all relevant dialogues
@@ -3528,26 +3062,26 @@ COPY_EXISTING ~%tutu_var%FTOBE2.CRE~ ~override~ // AR3339
   SAY NAME2 @27
   SAY 0x198 #13638
   SAY 0x19c #13637
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%FTOBE3.CRE~ ~override~ // AR3311
   SAY NAME1 @28
   SAY NAME2 @28
   SAY 0x198 #13640
   SAY 0x19c #13639
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%FTOBE4.CRE~ ~override~ // AR3316
   SAY NAME1 @29
   SAY NAME2 @29
   SAY 0x198 #13641
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%FTOBE9.CRE~ ~override~ // AR3323
   SAY NAME1 @30
   SAY NAME2 @30
   SAY 0x198 #13648
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%HAFFG2.CRE~ ~override~ // Currently UNUSED
   SAY NAME1 @31
@@ -3555,7 +3089,7 @@ COPY_EXISTING ~%tutu_var%HAFFG2.CRE~ ~override~ // Currently UNUSED
   SAY 0x198 #13407
   SAY 0x19c #13405
   SAY 0x1a0 #13406
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%HALFG2.CRE~ ~override~ // Currently UNUSED
   SAY NAME1 @32
@@ -3563,7 +3097,7 @@ COPY_EXISTING ~%tutu_var%HALFG2.CRE~ ~override~ // Currently UNUSED
   SAY 0x198 #13410
   SAY 0x19c #13408
   SAY 0x1a0 #13409
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%HALFG3.CRE~ ~override~ // AR4008
   SAY NAME1 @33
@@ -3571,7 +3105,7 @@ COPY_EXISTING ~%tutu_var%HALFG3.CRE~ ~override~ // AR4008
   SAY 0x198 #13413
   SAY 0x19c #13411
   SAY 0x1a0 #13412
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%HALFG4.CRE~ ~override~ // AR4007
   SAY NAME1 @34
@@ -3579,7 +3113,7 @@ COPY_EXISTING ~%tutu_var%HALFG4.CRE~ ~override~ // AR4007
   SAY 0x198 #13416
   SAY 0x19c #13414
   SAY 0x1a0 #13415
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%HALFG5.CRE~ ~override~ // AR4010
   SAY NAME1 @35
@@ -3587,37 +3121,37 @@ COPY_EXISTING ~%tutu_var%HALFG5.CRE~ ~override~ // AR4010
   SAY 0x198 #13419
   SAY 0x19c #13417
   SAY 0x1a0 #13418
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%HOUSG1.CRE~ ~override~ // AR3320
   SAY NAME1 @36
   SAY NAME2 @36
   SAY 0x198 #13441
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%HOUSG2.CRE~ ~override~ // AR3320
   SAY NAME1 @37
   SAY NAME2 @37
   SAY 0x198 #13442
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%MTBE2.CRE~ ~override~ // AR3341
   SAY NAME1 @38
   SAY NAME2 @38
   SAY 0x198 #13656
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%MTBE3.CRE~ ~override~ // AR3309
   SAY NAME1 @39
   SAY NAME2 @39
   SAY 0x198 #13657
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%MTBE4.CRE~ ~override~ // AR3309
   SAY NAME1 @40
   SAY NAME2 @40
   SAY 0x198 #13658
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%MTBE5.CRE~ ~override~ // AR3317
   SAY NAME1 @41
@@ -3625,39 +3159,39 @@ COPY_EXISTING ~%tutu_var%MTBE5.CRE~ ~override~ // AR3317
   SAY 0x198 #13661
   SAY 0x19c #13659
   SAY 0x1a0 #13660
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%MTBE6.CRE~ ~override~ // AR3319
   SAY NAME1 @42
   SAY NAME2 @42
   SAY 0x198 #13665
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%MTBE7.CRE~ ~override~ // AR3323
   SAY NAME1 @43
   SAY NAME2 @43
   SAY 0x198 #13655
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%MTOWF2.CRE~ ~override~ // AR2302
   SAY NAME1 @44
   SAY NAME2 @44
   SAY 0x198 #13502
   SAY 0x19c #13501
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%NARRAT.CRE~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     WRITE_LONG NAME1 BNOT 0x0
     WRITE_LONG NAME2 BNOT 0x0
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%NOBL4.CRE~ ~override~ // AR2616
   SAY NAME1 @45
   SAY NAME2 @45
   SAY 0x198 #13540
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%NOBL5.CRE~ ~override~ // AR2617
   SAY NAME1 @46
@@ -3665,27 +3199,27 @@ COPY_EXISTING ~%tutu_var%NOBL5.CRE~ ~override~ // AR2617
   SAY 0x198 #13543
   SAY 0x19c #13542
   SAY 0x1a0 #13541
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%NOBL6.CRE~ ~override~ // AR2617
   SAY NAME1 @47
   SAY NAME2 @47
   SAY 0x198 #13545
   SAY 0x19c #13544
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%NOBL7.CRE~ ~override~ // AR2302
   SAY NAME1 @48
   SAY NAME2 @48
   SAY 0x198 #13547
   SAY 0x19c #13546
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%NOBW8.CRE~ ~override~ // AR0121
   SAY NAME1 @49
   SAY NAME2 @49
   SAY 0x198 #13558
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%TRAVEL.CRE~ ~override~ // Currently UNUSED
   SAY NAME1 @50
@@ -3693,7 +3227,7 @@ COPY_EXISTING ~%tutu_var%TRAVEL.CRE~ ~override~ // Currently UNUSED
   SAY 0x198 #13673
   SAY 0x19c #13671
   SAY 0x1a0 #13672
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%FARM.CRE~ ~override~
               ~%tutu_var%FARM3.CRE~ ~override~
@@ -3701,22 +3235,22 @@ COPY_EXISTING ~%tutu_var%FARM.CRE~ ~override~
               ~%tutu_var%FARMER.CRE~ ~override~
   SAY NAME1 @25
   SAY NAME2 @25
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%GNOLL5.CRE~ ~override~ // see its dialogue for name
   SAY NAME1 @51
   SAY NAME2 @51
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%HUNTER.CRE~ ~override~ // see his dialogue for name
   SAY NAME1 @52
   SAY NAME2 @52
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%NOBW7.CRE~ ~override~ // see her dialogue for name
   SAY NAME1 @53
   SAY NAME2 @53
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 // Corrections for TOTSC content
 ACTION_IF GAME_IS ~totsc bgt tutu_totsc bgee~ THEN BEGIN
@@ -3728,7 +3262,7 @@ ACTION_IF GAME_IS ~totsc bgt bgee~ THEN BEGIN //BGT, BGEE, BG1-TOTSC
       SAY NAME1 @54 // or could be Mendas
       SAY NAME2 @54 // or could be Mendas
     END
-  BUT_ONLY_IF_IT_CHANGES
+  BUT_ONLY
 END
 
 COPY_EXISTING ~%tutu_var%BARWLF.CRE~ ~override~ // Baresh as loup garou
@@ -3736,21 +3270,21 @@ COPY_EXISTING ~%tutu_var%BARWLF.CRE~ ~override~ // Baresh as loup garou
     SAY NAME1 @55
     SAY NAME2 @55
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_scriptd%AESEWLF.CRE~ ~override~ // Daese as werewolf
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     SAY NAME1 @56
     SAY NAME2 @56
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_scriptk%AISHWLF.CRE~ ~override~ // Kaishas as loup garou
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     SAY NAME1 @57
     SAY NAME2 @57
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 ACTION_IF GAME_IS ~totsc tutu_totsc bgt~ THEN BEGIN  // Fixes already in BGEE
   ACTION_IF GAME_IS ~bgt~ THEN BEGIN //BGT
@@ -3809,26 +3343,26 @@ COPY_EXISTING ~%tutu_var%HALFG6.CRE~ ~override~
 
 COPY_EXISTING ~%tutu_var%MTOB2.CRE~ ~override~
   WRITE_LONG 0x1c 0x1
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%MTOB8.CRE~ ~override~
   WRITE_LONG 0x1c 0x2
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%MTOB9.CRE~ ~override~
   WRITE_LONG 0x1c 0x1
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%NOBL10.CRE~ ~override~
   ADD_CRE_ITEM ~%tutu_var%AMUL07~ #0 #0 #0 NONE AMULET
 
 COPY_EXISTING ~%tutu_var%NOBL11.CRE~ ~override~
   WRITE_LONG 0x1c 0xa
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%NOBL4.CRE~ ~override~
   WRITE_LONG 0x1c 0x14
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%NOBL8.CRE~ ~override~
   ADD_CRE_ITEM ~%tutu_var%RING17~ #0 #0 #0 NONE LRING
@@ -3847,8 +3381,8 @@ COPY_EXISTING ~%tutu_var%HOBGO5.CRE~ ~override~ // Hobgoblin, AR4200
   WRITE_ASCII 0x248 ~UBHOBGO5~ #8 // Allows him to initiate dialog
   WRITE_BYTE 0x270 0x80 // Changes him from Enemy to Neutral
   WRITE_BYTE 0x272 0x6f // Sets his race as Hobgoblin
-  WRITE_EVALUATED_ASCII 0x2cc ~%tutu_var%HOBGO5~ #8 // Sets his dialog file
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x2cc ~%tutu_var%HOBGO5~ #8 // Sets his dialog file
+BUT_ONLY
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -4039,7 +3573,7 @@ PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
   SAY DYING           #12533
   SAY SELECT_COMMON1  #4842
 END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 END //BG
 END //BGT/Tutu check
@@ -4052,12 +3586,12 @@ END //BGT/Tutu check
 /* A few zombies have incorrect soundsets */
 COPY_EXISTING ~%tutu_scriptz%ombie_b.cre~ ~override/macdummy.cre~
   READ_ASCII 0x00A4 "creatureSoundset" (400) // Read creature soundset array in one chunk
- BUT_ONLY_IF_IT_CHANGES
+ BUT_ONLY
 COPY_EXISTING ~%tutu_scriptz%OMBIE_A.CRE~ ~override~
               ~%tutu_var%ZOMBIE.CRE~ ~override~
               ~%tutu_var%ZOMBIEB.CRE~ ~override~
-  WRITE_EVALUATED_ASCII 0x00A4 "%creatureSoundset%" #400
- BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x00A4 "%creatureSoundset%" #400
+ BUT_ONLY
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -4100,12 +3634,12 @@ COPY_EXISTING ~%SEBaldursGate_Inn_L1%.ARE~ ~override~ // Change bartender so tha
     FOR (READ_SHORT 0x58 numAct; numAct; numAct -= 0x1) BEGIN
       READ_ASCII actOff + 0x80 actor
       PATCH_IF !("%actor%" STRING_COMPARE_CASE "%tutu_var%BART16") BEGIN
-        WRITE_EVALUATED_ASCII actOff + 0x80 ~%tutu_var%BART12~ #8
+        WRITE_ASCIIE actOff + 0x80 ~%tutu_var%BART12~ #8
       END
       actOff += 0x110
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%NWBaldursGate_Helm&Cloak_L1%.ARE~ ~override~ // Restore Helm and Cloak bartender
   PATCH_IF (SOURCE_SIZE > 0x11c) BEGIN
@@ -4113,12 +3647,12 @@ COPY_EXISTING ~%NWBaldursGate_Helm&Cloak_L1%.ARE~ ~override~ // Restore Helm and
     FOR (READ_SHORT 0x58 numAct; numAct; numAct -= 0x1) BEGIN
       READ_ASCII actOff + 0x80 actor
       PATCH_IF !("%actor%" STRING_COMPARE_CASE "%tutu_var%BART12") BEGIN
-        WRITE_EVALUATED_ASCII actOff + 0x80 ~%tutu_var%BART9~ #8
+        WRITE_ASCIIE actOff + 0x80 ~%tutu_var%BART9~ #8
       END
       actOff += 0x110
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 ////////////////////////////////////////////////////////////////////////////////////////
 // Keexie Tavern
@@ -4129,12 +3663,12 @@ COPY_EXISTING ~%EBaldursGate_KeexieTavern_L1%.ARE~ ~override~ // Assign correct 
       READ_ASCII actOff + 0x80 actor
       PATCH_IF ("%actor%" STRING_EQUAL_CASE "%tutu_var%BART13") OR // in vanilla BG
                ("%actor%" STRING_EQUAL_CASE "%tutu_var%BART12") BEGIN // in DudleyFix'd games
-        WRITE_EVALUATED_ASCII actOff + 0x80 ~%tutu_var%BART15~ #8
+        WRITE_ASCIIE actOff + 0x80 ~%tutu_var%BART15~ #8
       END
       actOff += 0x110
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%EBaldursGate_KeexieTavern_L2%.ARE~ ~override~ // Assign correct bartender, Keexie Tavern upstairs
   PATCH_IF (SOURCE_SIZE > 0x11c) BEGIN
@@ -4142,16 +3676,16 @@ COPY_EXISTING ~%EBaldursGate_KeexieTavern_L2%.ARE~ ~override~ // Assign correct 
     FOR (READ_SHORT 0x58 numAct; numAct; numAct -= 0x1) BEGIN
       READ_ASCII actOff + 0x80 actor
       PATCH_IF !("%actor%" STRING_COMPARE_CASE "%tutu_var%BART11") BEGIN
-        WRITE_EVALUATED_ASCII actOff + 0x80 ~%tutu_var%BART15~ #8
+        WRITE_ASCIIE actOff + 0x80 ~%tutu_var%BART15~ #8
       END
       actOff += 0x110
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%TAV0154.STO~ ~override~ // Keexie Tavern
   SAY 0x0C #20638
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 ////////////////////////////////////////////////////////////////////////////////////////
 // Elf Song
@@ -4161,16 +3695,16 @@ COPY_EXISTING ~%EBaldursGate_ElfsongTavern_L1%.ARE~ ~override~ // Restore Elfson
     FOR (READ_SHORT 0x58 numAct; numAct; numAct -= 0x1) BEGIN
       READ_ASCII actOff + 0x80 actor
       PATCH_IF !("%actor%" STRING_COMPARE_CASE "%tutu_var%BART11") BEGIN
-        WRITE_EVALUATED_ASCII actOff + 0x80 ~%tutu_var%BART8~ #8
+        WRITE_ASCIIE actOff + 0x80 ~%tutu_var%BART8~ #8
       END
       actOff += 0x110
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%TAV0705.STO~ ~override~ // Elf Song
   SAY 0x0C #11674
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 ////////////////////////////////////////////////////////////////////////////////////////
 // Low Lantern
@@ -4190,11 +3724,11 @@ COPY_EXISTING ~%BaldursGate_DocksLowLantern_D1%.ARE~ ~override~ // Restore Low L
       actOff += 0x110
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%TAV0133.STO~ ~override~ // Low Lantern
   SAY 0x0C #14976
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 END // Bartender fixes
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -4203,7 +3737,7 @@ ACTION_IF !GAME_IS ~bgee~ THEN BEGIN // Already included in BGEE
 
 COPY_EXISTING ~%tutu_var%INN4801.STO~ ~override~ // The Northern Light
   SAY 0x0C #11696
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%Nashkel%.ARE~ ~override~ // Nashkel
 READ_LONG 0x5c trigOff ELSE 0x0
@@ -4219,48 +3753,48 @@ PATCH_IF (trigOff) BEGIN
     trigOff += 0xc4
   END
 END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%STO4906.STO~ ~override~ // Carnival Shop
   SAY 0x0C #11688
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_scripts%TOBLACK.STO~ ~override~
   SAY 0x0C @91
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_scripts%TOCHEAP.STO~ ~override~ // Lucky Aello's Discount Store
   SAY 0x0C #11818
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_scripts%TOSILEN.STO~ ~override~ // Shop of Silence
   SAY 0x0C #20639
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%TAV0721.STO~ ~override~ // Tavern
   SAY 0x0C @92
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%TAV1215.STO~ ~override~ // Jopalin's Tavern
   SAY 0x0C #20640
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%TAV4809.STO~ ~override~ // The Belching Dragon
   SAY 0x0C #11764
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%TEM0002.STO~ ~override~
   SAY 0x0C @93
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 ACTION_IF GAME_IS ~bg1 totsc bgt~ THEN BEGIN
   COPY_EXISTING ~%tutu_var%tav0810.sto~ ~override~ //Maltz' Weapon Shop
   	SAY NAME2 #11782 //Maltz' Weapon Shop
-  BUT_ONLY_IF_IT_CHANGES
+  BUT_ONLY
 
   COPY_EXISTING ~%tutu_var%tav0809.sto~ ~override~ //unused General Store
     SAY NAME2 #11685
-  BUT_ONLY_IF_IT_CHANGES
+  BUT_ONLY
 END
 
 END // Inn, Tavern, Store name restorations
@@ -4269,7 +3803,7 @@ END // Inn, Tavern, Store name restorations
 // Item shop in Jovial Juggler
 COPY_EXISTING ~%tutu_var%INN3304.STO~ ~override~ // Jovial Juggler
   WRITE_SHORT 0x10 0x4d // Allows purchasing items, stealing items, and identifying
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COMPILE EVALUATE_BUFFER ~bg1ub/stores/ubin3304.baf~  // Add stealing script to bartender
 COPY_EXISTING ~%tutu_var%BART4.CRE~ ~override~
@@ -4292,12 +3826,46 @@ COPY_EXISTING ~%tutu_var%ULGOTH.STO~ ~override~ // Ulgoth's Beard Store and Inn
     saleOff += 0x1c
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 END
 
 ////////////////////////////////////////////////////////////////////////////////////////
 // More Nashkel Carnival Merchants
-<<<<<<<< .../bg1ub/ub_ar4900.baf
+COPY_EXISTING ~%tutu_var%MERCH2.CRE~ ~override/UBMERCH.CRE~
+  WRITE_ASCII 0x2cc ~UBMERCH~
+
+COPY_EXISTING ~%tutu_var%merch2.dlg~ ~override/ubmerch.dlg~
+
+COPY_EXISTING ~%NashkelCarnival%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 2825
+    	fj_loc_y          = 3392
+    	fj_dest_x         = 2825
+    	fj_dest_y         = 3392
+    	fj_animation      = 0xC800 // Fat man
+    	fj_orientation    = 3      // WSW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Merchant
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%MERCHA"
+	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 2329
+    	fj_loc_y          = 3584
+    	fj_dest_x         = 2329
+    	fj_dest_y         = 3584
+    	fj_animation      = 0xC800 // Fat man
+    	fj_orientation    = 12      // E
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Merchant
+   		fj_cre_resref     = UBMERCH
+	END
+BUT_ONLY
+
+/* <<<<<<<< .../bg1ub/ub_ar4900.baf
 IF
 Global("UB_NASHKELMERCH1_SPAWN","%NashkelCarnival%",0)
 THEN
@@ -4315,14 +3883,8 @@ SetGlobal("UB_NASHKELMERCH2_SPAWN","%NashkelCarnival%",1)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR4900" OUTER_SPRINT temp_bgt "AR3800" OUTER_SPRINT temp_bgee "AR4900" OUTER_SPRINT temp_bg "AR4900" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar4900.baf~
-  EVALUATE_BUFFER
-
-COPY_EXISTING ~%tutu_var%MERCH2.CRE~ ~override/UBMERCH.CRE~
-  WRITE_ASCII 0x2cc ~UBMERCH~
-
-COPY_EXISTING ~%tutu_var%merch2.dlg~ ~override/ubmerch.dlg~
+LAF extend_area_script STR_VAR area="%NashkelCarnival%" bottom=".../bg1ub/ub_ar4900.baf" END
+*/
 
 // Fixes the overused STO1115.STO file
 ACTION_IF GAME_IS ~tutu tutu_totsc bgt~ THEN BEGIN
@@ -4352,12 +3914,12 @@ COPY_EXISTING ~%SWBaldursGate_WeaponsStore2%.are~ ~override~ //Fix duplicate wea
     FOR (READ_SHORT 0x58 numAct; numAct; numAct -= 1) BEGIN
           READ_ASCII actOff + 0x80 actor
           PATCH_IF (~%actor%~ STRING_EQUAL_CASE ~%tutu_scriptbg%SHOP03~ = 1) BEGIN
-            WRITE_EVALUATED_ASCII actOff + 0x80 ~%tutu_scriptbg%SHOP05~ #8
+            WRITE_ASCIIE actOff + 0x80 ~%tutu_scriptbg%SHOP05~ #8
           END
           actOff += 0x110
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 END
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -4378,11 +3940,11 @@ COPY_EXISTING ~%EBaldursGate_ElfsongTavern_L2%.are~ ~override~ //Correct Elfsong
       actOff += 0x110
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%sto4906.sto~ ~override/ubst0706.sto~ //Merchant
   SAY NAME2 #9432 //Merchant
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%merch4.dlg~ ~override/ubme0706.dlg~
 END // Elfsong
@@ -4419,157 +3981,126 @@ COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBItems.UB~
 
 // Ground, inventory and description icon restorations (NiGHTMARE)
 COPY_EXISTING ~%tutu_var%book68.itm~ ~override~ // History of the Nether Scrolls
-  WRITE_EVALUATED_ASCII 0x3a "%tutu_var%ibook68"
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x3a "%tutu_var%ibook68"
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%boot06.itm~ ~override~ // Worn Out Boots
-  WRITE_EVALUATED_ASCII 0x3a "%tutu_var%iboot06"
-  WRITE_EVALUATED_ASCII 0x58 "%tutu_var%cboot06"
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x3a "%tutu_var%iboot06"
+  WRITE_ASCIIE 0x58 "%tutu_var%cboot06"
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%brac11.itm~ ~override~ // Bracers Of Binding
   PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
-    WRITE_EVALUATED_ASCII 0x3a "%tutu_var%ibrac11"
-    WRITE_EVALUATED_ASCII 0x58 "%tutu_var%cbrac11"
+    WRITE_ASCIIE 0x3a "%tutu_var%ibrac11"
+    WRITE_ASCIIE 0x58 "%tutu_var%cbrac11"
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%clck08.itm~ ~override~ // Algeron's Cloak
-  WRITE_EVALUATED_ASCII 0x58 "%tutu_var%cclck08"
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x58 "%tutu_var%cclck08"
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%misc13.itm~ ~override~ // Samuel's Body
-  WRITE_EVALUATED_ASCII 0x44 "%tutu_var%gmisc13"
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x44 "%tutu_var%gmisc13"
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%misc1a.itm~ ~override~ // Bottle Of Wine
   PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
-    WRITE_EVALUATED_ASCII 0x3a "%tutu_var%imisc1a"
+    WRITE_ASCIIE 0x3a "%tutu_var%imisc1a"
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%misc1b.itm~ ~override~ // Butter Knife Of Balduran
   PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
-    WRITE_EVALUATED_ASCII 0x58 "%tutu_var%cmisc1b"
+    WRITE_ASCIIE 0x58 "%tutu_var%cmisc1b"
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%misc62.itm~ ~override~ // Dead Cat
-  WRITE_EVALUATED_ASCII 0x44 "%tutu_var%gmisc62"
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x44 "%tutu_var%gmisc62"
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%misc65.itm~ ~override~ // Brage's Body
-  WRITE_EVALUATED_ASCII 0x3a "%tutu_var%imisc65"
-  WRITE_EVALUATED_ASCII 0x44 "%tutu_var%gmisc65"
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x3a "%tutu_var%imisc65"
+  WRITE_ASCIIE 0x44 "%tutu_var%gmisc65"
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%misc68.itm~ ~override~ // Abela's Body
-  WRITE_EVALUATED_ASCII 0x3a "%tutu_var%imisc68"
-  WRITE_EVALUATED_ASCII 0x44 "%tutu_var%gmisc68"
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x3a "%tutu_var%imisc68"
+  WRITE_ASCIIE 0x44 "%tutu_var%gmisc68"
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%misc70.itm~ ~override~ // Delorna's Statue
-  WRITE_EVALUATED_ASCII 0x3a "%tutu_var%imisc70"
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x3a "%tutu_var%imisc70"
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%misc71.itm~ ~override~ // Delorna's Spellbook
-  WRITE_EVALUATED_ASCII 0x3a "%tutu_var%imisc71"
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x3a "%tutu_var%imisc71"
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%misc75.itm~ ~override~ // Dagger Of Venom
-  WRITE_EVALUATED_ASCII 0x3a "%tutu_var%imisc75"
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x3a "%tutu_var%imisc75"
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%misc76.itm~ ~override~ // Dream Potion
-  WRITE_EVALUATED_ASCII 0x3a "%tutu_var%imisc76"
-  WRITE_EVALUATED_ASCII 0x58 "%tutu_var%cpotn13"
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x3a "%tutu_var%imisc76"
+  WRITE_ASCIIE 0x58 "%tutu_var%cpotn13"
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%misc77.itm~ ~override~ // Skull Of Kereph
-  WRITE_EVALUATED_ASCII 0x3a "%tutu_var%imisc77"
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x3a "%tutu_var%imisc77"
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%misc92.itm~ ~override~ // Switch For An Engine
   PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
-    WRITE_EVALUATED_ASCII 0x44 "%tutu_var%gmisc92"
+    WRITE_ASCIIE 0x44 "%tutu_var%gmisc92"
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%misc94.itm~ ~override~ // Mallet Head
   PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
-    WRITE_EVALUATED_ASCII 0x44 "%tutu_var%gmisc94"
+    WRITE_ASCIIE 0x44 "%tutu_var%gmisc94"
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%misc95.itm~ ~override~ // Mallet Handle
   PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
-    WRITE_EVALUATED_ASCII 0x44 "%tutu_var%gmisc95"
+    WRITE_ASCIIE 0x44 "%tutu_var%gmisc95"
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 ///////////////////////////////////////////////////////////////////////
 // History of Waterdeep - Age III, The Bloody Reign of the Guildmasters
-<<<<<<<< .../bg1ub/bk_0101.baf
-IF
-  Global("BG1UBBOOK65","%Candlekeep_Library_L1%",0)
-THEN
-  RESPONSE #100
-      ActionOverride("Container10",CreateItem("%tutu_var%BOOK65",0,0,0))
-      SetGlobal("BG1UBBOOK65","%Candlekeep_Library_L1%",1)
-END
->>>>>>>>
+COPY_EXISTING ~%Candlekeep_Library_L1%.are~ override
+	LPF ADD_CONTAINER_ITEM
+		STR_VAR item_to_add = EVALUATE_BUFFER ~%tutu_var%BOOK65~ flags = "IDENTIFIED" container = "Container 10"
+	END
+BUT_ONLY
 
-OUTER_SPRINT temp_tutu "_AR2608" OUTER_SPRINT temp_bgt "AR6508" OUTER_SPRINT temp_bgee "AR2608" OUTER_SPRINT temp_bg "AR2608" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.bcs~ ~.../bg1ub/bk_0101.baf~
-  EVALUATE_BUFFER
 
 ///////////////////////////////////////////////////
 // Additional Durlag's Tower Book ("Seek No Heirs")
-<<<<<<<< .../bg1ub/bk_0102.baf
-IF
-  Global("BG1UBBOOK80","%DurlagsTower_D2%",0)
-THEN
-  RESPONSE #100
-      ActionOverride("Container26",CreateItem("%tutu_var%BOOK80",0,0,0))
-      SetGlobal("BG1UBBOOK80","%DurlagsTower_D2%",1)
-END
->>>>>>>>
-
-OUTER_SPRINT temp_tutu "_AR0512" OUTER_SPRINT temp_bgt "ARD012" OUTER_SPRINT temp_bgee "AR0512" OUTER_SPRINT temp_bg "AR0512" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.bcs~ ~.../bg1ub/bk_0102.baf~
-  EVALUATE_BUFFER
+COPY_EXISTING ~%DurlagsTower_D2%.are~ override
+	LPF ADD_CONTAINER_ITEM
+		STR_VAR item_to_add = EVALUATE_BUFFER ~%tutu_var%BOOK80~ flags = "IDENTIFIED" container = "Container26"
+	END
+BUT_ONLY
 
 //////////////////////////////////////////////////
 // Additional Durlag's Tower Book ("Know My Loss")
-<<<<<<<< .../bg1ub/bk_0103.baf
-IF
-  Global("BG1UBBOOK85","%DurlagsTower_D2%",0)
-THEN
-  RESPONSE #100
-      ActionOverride("Container18",CreateItem("%tutu_var%BOOK85",0,0,0))
-      SetGlobal("BG1UBBOOK85","%DurlagsTower_D2%",1)
-END
->>>>>>>>
-
-OUTER_SPRINT temp_tutu "_AR0512" OUTER_SPRINT temp_bgt "ARD012" OUTER_SPRINT temp_bgee "AR0512" OUTER_SPRINT temp_bg "AR0512" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.bcs~ ~.../bg1ub/bk_0103.baf~
-  EVALUATE_BUFFER
+COPY_EXISTING ~%DurlagsTower_D2%.are~ override
+	LPF ADD_CONTAINER_ITEM
+		STR_VAR item_to_add = EVALUATE_BUFFER ~%tutu_var%BOOK85~ flags = "IDENTIFIED" container = "Container18"
+	END
+BUT_ONLY
 
 //////////////////
 // Generic Bracers
-<<<<<<<< .../bg1ub/br_0101.baf
-IF
-  Global("BG1UBBRAC05","%Beregost%",0)
-THEN
-  RESPONSE #100
-      ActionOverride("Container1",CreateItem("%tutu_var%BRAC05",0,0,0))
-      SetGlobal("BG1UBBRAC05","%Beregost%",1)
-END
->>>>>>>>
-
-OUTER_SPRINT temp_tutu "_AR3300" OUTER_SPRINT temp_bgt "AR6700" OUTER_SPRINT temp_bgee "AR3300" OUTER_SPRINT temp_bg "AR3300" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.bcs~ ~.../bg1ub/br_0101.baf~
-  EVALUATE_BUFFER
+COPY_EXISTING ~%Beregost%.are~ override
+	LPF ADD_CONTAINER_ITEM
+		STR_VAR item_to_add = EVALUATE_BUFFER ~%tutu_var%BRAC05~ flags = "IDENTIFIED" container = "Container 1"
+	END
+BUT_ONLY
 
 ////////////////////////////////
 // Gauntlets of Weapon Expertise
@@ -4589,14 +4120,14 @@ EXTEND_BOTTOM ~%temp_cpmvar%.bcs~ ~.../bg1ub/br_0102.baf~
 
 COPY_EXISTING ~%tutu_var%MISC1H.ITM~ ~override~ // Gong Mallet
   PATCH_IF (SOURCE_SIZE > 0x71) BEGIN
-    WRITE_EVALUATED_ASCII ~0x44~ ~%tutu_var%GBLUN06~ // Assign GBLUN06.BAM as the ground icon
+    WRITE_ASCIIE ~0x44~ ~%tutu_var%GBLUN06~ // Assign GBLUN06.BAM as the ground icon
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%SW2H05.ITM~ ~override~ //
   SAY NAME1 #16477 // Sets name to "Sword of Chaos"
   SAY NAME2 #16477
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 ACTION_IF !GAME_IS ~bgt~ THEN BEGIN //BG, Tutu, BGEE
   COPY_EXISTING ~RNDTREAS.2DA~ ~override~
@@ -4608,7 +4139,7 @@ ACTION_IF !GAME_IS ~bgt~ THEN BEGIN //BG, Tutu, BGEE
         SET_2DA_ENTRY "%row%" 9 20 ~%tutu_var%RING01~ // Adds generic rings to the Random Treasure table
       END
     END
-  BUT_ONLY_IF_IT_CHANGES
+  BUT_ONLY
 
   COPY_EXISTING ~RNDSCROL.2DA~ ~override~
     READ_2DA_ENTRIES_NOW ~_#_#_#rndscrol~ 20
@@ -4618,7 +4149,7 @@ ACTION_IF !GAME_IS ~bgt~ THEN BEGIN //BG, Tutu, BGEE
         SET_2DA_ENTRY "%row%" 10 20 ~%tutu_var%SCRL2F~ // Adds the Cone of Cold scroll to the Random Scroll table
       END
     END
-  BUT_ONLY_IF_IT_CHANGES
+  BUT_ONLY
 END ELSE BEGIN //BGT
   //modified to work with BGT dynamic random treasure patching
   COPY_EXISTING ~RNDEQUIP.2DA~ ~override~
@@ -4642,19 +4173,19 @@ END ELSE BEGIN //BGT
         SET_2DA_ENTRY "%row%" 10 20 ~SCRL2F~ // Adds the Cone of Cold scroll to the Random Scroll table
       END
     END
-  BUT_ONLY_IF_IT_CHANGES
+  BUT_ONLY
 END
 
 COPY_EXISTING ~%tutu_var%SQUIRP.ITM~ ~override~ // Restores the Squirrel Paw icon (devSin)
   PATCH_IF (SOURCE_SIZE > 0x72) BEGIN // see if I can imitate Cam :D
-    WRITE_EVALUATED_ASCII 0x3a ~%tutu_var%ISQUIRL~ #8
+    WRITE_ASCIIE 0x3a ~%tutu_var%ISQUIRL~ #8
     READ_SHORT 0x68 "num_abl"
     PATCH_IF ("%num_abl%" > 0x0) BEGIN
       READ_LONG 0x64 "abl_offset"
-      WRITE_EVALUATED_ASCII "%abl_offset%" + 0x4 ~%tutu_var%ISQUIRL~ #8
+      WRITE_ASCIIE "%abl_offset%" + 0x4 ~%tutu_var%ISQUIRL~ #8
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~SPIN109.SPL~ ~override~ // Restores the unused Lay on Hands spell icon (devSin)
   PATCH_IF (SOURCE_SIZE > 0x72) BEGIN
@@ -4664,31 +4195,31 @@ COPY_EXISTING ~SPIN109.SPL~ ~override~ // Restores the unused Lay on Hands spell
       ablOff += 0x28
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%MAGE02.ITM~ ~override~
   SAY NAME2 @95 // Item originally did not have a name
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 ACTION_IF !GAME_IS ~bgee~ THEN BEGIN // Skip for BGEE
-COPY_EXISTING ~%tutu_var%BOLT03.ITM~ ~override~ // Bolt of Lightning
-  WRITE_EVALUATED_ASCII 0x11e ~%tutu_scripte%FF_M23C~ // Replace invalid wav file reference
-BUT_ONLY_IF_IT_CHANGES
+	COPY_EXISTING ~%tutu_var%BOLT03.ITM~ ~override~ // Bolt of Lightning
+  		WRITE_ASCIIE 0x11e ~%tutu_scripte%FF_M23C~ // Replace invalid wav file reference
+	BUT_ONLY
 END
 
 COPY_EXISTING ~%tutu_var%POTN41.ITM~ ~override~ // Potion of Power
               /*~%tutu_var%PTION41.ITM~ ~override~ - unused*/
-  WRITE_EVALUATED_ASCII 0x44 ~%tutu_var%GPOTN01~ // Corrected ground icon
-BUT_ONLY_IF_IT_CHANGES
+  WRITE_ASCIIE 0x44 ~%tutu_var%GPOTN01~ // Corrected ground icon
+BUT_ONLY
 
 /* unused
 COPY_EXISTING ~%tutu_var%PTION41.ITM~ ~override~ // Potion of Power
-  WRITE_EVALUATED_ASCII 0x58 ~%tutu_var%CPOTN41~ #8      // Assigns a description icon
-BUT_ONLY_IF_IT_CHANGES */
+  WRITE_ASCIIE 0x58 ~%tutu_var%CPOTN41~ #8      // Assigns a description icon
+BUT_ONLY */
 
 COPY_EXISTING ~%tutu_var%BLUN06.ITM~ ~override~ // Morningstar
   WRITE_ASCII 0x22 ~MS~ // Changes Inventory Icon ID from Mace to Morningstar
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 // Weapon colouration now works.  Thanks, CamDawg!
 COPY_EXISTING ~%tutu_var%BLUN06.ITM~ ~override~ // Morningstar
@@ -4702,7 +4233,7 @@ PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
       WRITE_LONG ("%fx_off%" + 0x0e + ("%index%" * 0x30)) 0 // duration
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 // EFF fix for The Root of the Problem
 COPY_EXISTING ~GIANDAM.EFF~ ~override~
@@ -4714,17 +4245,17 @@ COPY_EXISTING ~GIANDAM.EFF~ ~override~
   PATCH_IF (SOURCE_SIZE > 0) THEN BEGIN
     WRITE_SHORT 0x2C 100 //Probability 1
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_scriptbg%BISHOP.CRE~ ~override~ // Durlag's Tower Bishop
   PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
     ADD_CRE_ITEM ~%tutu_var%SCRL62~ #1 #0 #0 ~IDENTIFIED~ ~INV1 INV2~ // Adds scroll of Flamestrike to inventory (Andyr)
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%LAMALH.CRE~ ~override~ // Lamalha
   ADD_CRE_ITEM ~%tutu_var%SCRL62~ #1 #0 #0 ~IDENTIFIED~ ~INV1 INV2~ // Adds scroll of Flamestrike to inventory (Andyr)
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%KIVAN.CRE~ ~override~ // Kivan
               ~%tutu_var%KIVAN4.CRE~ ~override~
@@ -4732,7 +4263,7 @@ COPY_EXISTING ~%tutu_var%KIVAN.CRE~ ~override~ // Kivan
               ~%tutu_var%CORAN.CRE~ ~override~ // Coran
               ~%tutu_var%CORAN5.CRE~ ~override~
   ADD_CRE_ITEM ~%tutu_var%BRAC05~ #1 #0 #0 ~IDENTIFIED~ ~GLOVES~ // Assigns generic bracers
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING /*~%tutu_var%AJANTD.CRE~ ~override~ // Ajantis - unused*/
               ~%tutu_var%AJANTI.CRE~ ~override~ //Ajantis
@@ -4743,82 +4274,41 @@ COPY_EXISTING /*~%tutu_var%AJANTD.CRE~ ~override~ // Ajantis - unused*/
               ~%tutu_var%KAGAIN4.CRE~ ~override~
               ~%tutu_var%KAGAIN6.CRE~ ~override~
   ADD_CRE_ITEM ~%tutu_var%BELT01~ #1 #0 #0 ~IDENTIFIED~ ~BELT~ // Assigns girdle
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%HENTOL.CRE~ ~override~ // Hentold
   ADD_CRE_ITEM ~%tutu_var%DAGG08~ #0 #0 #0 ~IDENTIFIED~ ~INV1 INV5~ // Assign Hentold's Dagger to his inventory
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 ACTION_IF !GAME_IS ~bgee~ THEN BEGIN // BG, BGT, Tutu
   COPY_EXISTING ~%tutu_var%AMARAN.CRE~ ~override~ // Amarande, the Arch Druid
-  	READ_LONG  0x2bc "itm_off" ELSE 0
-  	READ_LONG  0x2c0 "itm_num" ELSE 0
-  	FOR (index = 0 ; index < itm_num ; index = index + 1) BEGIN // searches through items
-    	READ_ASCII ("%itm_off%" + (0x14 * "%index%")) "item"
-    	PATCH_IF ("%item%" STRING_COMPARE_CASE "%tutu_var%STAF01" = 0) BEGIN // Replaces the Quarterstaff
-      		WRITE_EVALUATED_ASCII ("%itm_off%" + (0x14 * "%index%")) "%tutu_var%blun10" #8 // Assigns "The Root of the Problem"
-      		SET "index" = "%itm_num%" // kills loop
-    	END
-  	END
-  BUT_ONLY_IF_IT_CHANGES
+	REPLACE_CRE_ITEM "%tutu_var%blun10" #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP 
+  BUT_ONLY
 END ELSE BEGIN  // BGEE
-  COPY_EXISTING ~CORSONE.CRE~ ~override~  // Amarande already has Might Oak +2 in BGEE, give Corsone "The Root of the Problem" instead
-  	READ_LONG  0x2bc "itm_off" ELSE 0
-  	READ_LONG  0x2c0 "itm_num" ELSE 0
-  	FOR (index = 0 ; index < itm_num ; index = index + 1) BEGIN // searches through items
-    	READ_ASCII ("%itm_off%" + (0x14 * "%index%")) "item"
-    	PATCH_IF ("%item%" STRING_COMPARE_CASE "%tutu_var%STAF01" = 0) BEGIN // Replaces the Quarterstaff
-      		WRITE_EVALUATED_ASCII ("%itm_off%" + (0x14 * "%index%")) "%tutu_var%blun10" #8 // Assigns "The Root of the Problem"
-      		SET "index" = "%itm_num%" // kills loop
-    	END
-  	END
-  BUT_ONLY_IF_IT_CHANGES
+  COPY_EXISTING ~CORSONE.CRE~ ~override~  // Amarande already has Mighty Oak +2 in BGEE, give Corsone "The Root of the Problem" instead
+	REPLACE_CRE_ITEM "%tutu_var%blun10" #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP 
+  BUT_ONLY
 END
 
 COPY_EXISTING ~%tutu_scriptbg%SENDAI.CRE~ ~override~ // Sendai Argrim
-  READ_LONG  0x2bc "itm_off" ELSE 0
-  READ_LONG  0x2c0 "itm_num" ELSE 0
-  FOR (index = 0 ; index < itm_num ; index = index + 1) BEGIN // searches through items
-    READ_ASCII ("%itm_off%" + (0x14 * "%index%")) "item"
-    PATCH_IF ("%item%" STRING_COMPARE_CASE "%tutu_var%SW1H05" = 0) BEGIN   // Replace Long Sword +1
-      WRITE_EVALUATED_ASCII ("%itm_off%" + (0x14 * "%index%")) "%tutu_var%SW1H22" #8 // Assigns Scimitar +1 (Tutu Tweaks: CamDawg)
-      SET "index" = "%itm_num%" // kills loop
-    END
-  END
-  BUT_ONLY_IF_IT_CHANGES
+	REPLACE_CRE_ITEM "%tutu_var%SW1H22" #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP 
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_scriptk%NIGHTSK.CRE~ ~override~ // Undead Knight, AR5201 (Firewine Ruins)
-  READ_LONG  0x2bc "itm_off" ELSE 0
-  READ_LONG  0x2c0 "itm_num" ELSE 0
-  FOR (index = 0 ; index < itm_num ; index = index + 1) BEGIN    // searches through items
-    READ_ASCII ("%itm_off%" + (0x14 * "%index%")) "item"
-    PATCH_IF ("%item%" STRING_COMPARE_CASE "%tutu_var%SPER01" = 0) BEGIN // Replace Spear
-      WRITE_EVALUATED_ASCII ("%itm_off%" + (0x14 * "%index%")) "%tutu_var%SPER03" #8 // Assigns Spear +3, Backbiter
-      SET "index" = "%itm_num%" // kills loop
-    END
-  END
-  BUT_ONLY_IF_IT_CHANGES
+	REPLACE_CRE_ITEM "%tutu_var%SPER03" #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP TWOHANDED
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%KNIGHT6.CRE~ ~override~ // Ghost Knight, AR5201 (Firewine Ruins)
-  READ_LONG  0x2bc "itm_off" ELSE 0
-  READ_LONG  0x2c0 "itm_num" ELSE 0
-  FOR (index = 0 ; index < itm_num ; index = index + 1) BEGIN // searches through items
-    READ_ASCII ("%itm_off%" + (0x14 * "%index%")) "item"
-    PATCH_IF ("%item%" STRING_COMPARE_CASE "%tutu_var%BOW07" = 0) BEGIN // Replace Longbow of Marksmanship
-      WRITE_EVALUATED_ASCII ("%itm_off%" + (0x14 * "%index%")) "%tutu_var%BOW04" #8 // Assigns Long Bow +1
-      SET "index" = "%itm_num%" // kills loop
-    END
-  END
-  WRITE_BYTE 0x430 0x2 // Sets item as unstealable
-  BUT_ONLY_IF_IT_CHANGES
+	REPLACE_CRE_ITEM "%tutu_var%BOW04" #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP TWOHANDED
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%INN3351.STO~ ~override~ // Feldepost's Inn
   ADD_STORE_ITEM ~%tutu_var%HELM06~ AFTER ~%tutu_var%BRAC01~ #0 #0 #0 ~IDENTIFIED~ #1 // Helmet of Charm Protection
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_scripts%TOCHEAP.STO~ ~override~ // Lucky Aello's
   ADD_STORE_ITEM ~%tutu_var%LEAT06~ LAST #0 #0 #0 ~NONE~ #1 // Studded Leather Armor +2 : Missle Attraction
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
 /* In BG1, the raise dead scroll has an incorrect target type. */
@@ -4831,39 +4321,39 @@ COPY_EXISTING ~%tutu_var%TEM0002.STO~ ~override~ // The Watchful Shield (Temple 
   // ADD_STORE_ITEM ~%tutu_var%SCRL63~ AFTER ~%tutu_var%SCRL62~ #1 #0 #0 ~IDENTIFIED~ #3 // Raise Dead scroll, qty 3
   // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #0 #0 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
   // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%TEM0131.STO~ ~override~ // High Hall of Wonders (Temple of Gond, AR0131: BG)
   // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
   ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Raise Dead scroll, qty 1 (was 3)
   // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #0 #0 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
   // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%TEM0132.STO~ ~override~ // Lady's Hall (Temple of Tymora, AR0132: BG)
   // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
   ADD_STORE_ITEM ~%tutu_var%SCRL5F~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Chaotic Commands, qty 1 (was 5)
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%TEM2304.STO~ ~override~ // Temple of Wisdom (Temple of Garl Glittergold, AR2304: FAI)
   ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Cure Critical Wounds, qty 1 (was 5)
   // ADD_STORE_ITEM ~%tutu_var%SCRL63~ AFTER ~%tutu_var%SCRL61~ #1 #0 #0 ~IDENTIFIED~ #3 // Raise Dead scroll, qty 3
   ADD_STORE_ITEM ~%tutu_var%SCRL5F~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Chaotic Commands, qty 1 (was 5)
   // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%TEM2601.STO~ ~override~ // Oghma Temple (Temple of Oghma, AR2600: Candlekeep)
   // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
   ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Raise Dead scroll, qty 1 (was 3)
   // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL63~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%TEM3402.STO~ ~override~ // Song of the Morning (Temple of Lathander, AR3402: West of Beregost)
   ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #2 // Cure Critical Wounds, qty 2 (was 5)
   ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Raise Dead scroll, qty 1 (was 3)
   // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #0 #0 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
   // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%TEM4802.STO~ ~override~ // Temple of Helm (Temple of Helm, AR4802: Nashkel)
   // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
@@ -4871,7 +4361,7 @@ COPY_EXISTING ~%tutu_var%TEM4802.STO~ ~override~ // Temple of Helm (Temple of He
   // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #0 #0 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
   ADD_STORE_ITEM ~%tutu_var%SCRL5E~ LAST #1 #0 #0 ~IDENTIFIED~ #2   // Champion's Strength, qty 2 (was 5)
   ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #0 #0 ~IDENTIFIED~ #3   // Raise Dead scroll, qty 3
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%ULGOTH.STO~ ~override~ // Ulgoth's Beard Store and Inn
   PATCH_IF (SOURCE_SIZE > 0x74) BEGIN
@@ -4886,23 +4376,23 @@ COPY_EXISTING ~%tutu_var%ULGOTH.STO~ ~override~ // Ulgoth's Beard Store and Inn
     // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
     ADD_STORE_ITEM ~%tutu_var%BOLT05~ AFTER ~%tutu_var%BOLT03~ #1 #0 #0 ~IDENTIFIED~ #5 // Bolt of Polymorphing, qty 5 (was 10)
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%ERDANE.STO~ ~override~ // Erdane
   PATCH_IF (SOURCE_SIZE > 0x74) BEGIN
     ADD_STORE_ITEM ~%tutu_var%BOLT05~ AFTER ~%tutu_var%BOLT03~ #1 #0 #0 ~IDENTIFIED~ #7 // Bolt of Polymorphing, qty 7 (was 60)
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 // COPY_EXISTING ~%tutu_scripth%IGHHEDG.STO~ ~override~ // High Hedge
   // ADD_STORE_ITEM ~%tutu_var%BOLT05~ LAST #1 #0 #0 ~IDENTIFIED~ #200 // Bolt of Polymorphing, qty 200
-// BUT_ONLY_IF_IT_CHANGES
+// BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%FRIEND.STO~ ~override~ // Friendly Arm Inn
   ADD_STORE_ITEM ~%tutu_var%XBOW02~ AFTER ~%tutu_var%XBOW01~ #0 #0 #0 ~IDENTIFIED~ #1 // Heavy Crossbow +1, qty 1
   ADD_STORE_ITEM ~%tutu_var%BRAC05~ LAST #0 #0 #0 ~IDENTIFIED~ #1   // Bracers
   ADD_STORE_ITEM ~%tutu_var%BELT01~ AFTER ~%tutu_var%BRAC05~ #0 #0 #0 ~IDENTIFIED~ #1 // Girdle
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%INN2616.STO~ ~override~ // Candlekeep Inn
               ~%tutu_var%INN3304.STO~ ~override~ // Jovial Juggler
@@ -4910,21 +4400,21 @@ COPY_EXISTING ~%tutu_var%INN2616.STO~ ~override~ // Candlekeep Inn
               ~%tutu_var%STO1320.STO~ ~override~ // General Store
   ADD_STORE_ITEM ~%tutu_var%BRAC05~ LAST #0 #0 #0 ~IDENTIFIED~ #1 // Bracers
   ADD_STORE_ITEM ~%tutu_var%BELT01~ AFTER ~%tutu_var%BRAC05~ #0 #0 #0 ~IDENTIFIED~ #1 // Girdle
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%STO4803.STO~ ~override~ // Nashkel Store
   ADD_STORE_ITEM ~%tutu_var%BRAC05~ LAST #0 #0 #0 ~IDENTIFIED~ #1 // Bracers
   ADD_STORE_ITEM ~%tutu_var%BELT01~ AFTER ~%tutu_var%BRAC05~ #0 #0 #0 ~IDENTIFIED~ #1 // Girdle
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%TAERUM.STO~ ~override~ // Thunderhammer Smithy
   ADD_STORE_ITEM ~%tutu_var%BRAC05~ LAST #0 #0 #0 ~IDENTIFIED~ #1 // Bracers
   ADD_STORE_ITEM ~%tutu_var%BELT01~ AFTER ~%tutu_var%BRAC05~ #0 #0 #0 ~IDENTIFIED~ #1 // Girdle
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 COPY_EXISTING ~%tutu_var%STO0703.STO~ ~override~ // Sorcerous Sundries
   ADD_STORE_ITEM ~%tutu_var%BOLT05~ AFTER ~%tutu_var%BOLT06~ #1 #0 #0 ~IDENTIFIED~ #10 // Bolt of Polymorphing, qty 10 (was 100)
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 // Removes the following sentence from the description of Bala's Axe: "The axe gives the owner the ability to dispel magic once a day."
 ACTION_IF !GAME_IS ~bgee~ THEN BEGIN
@@ -4932,13 +4422,13 @@ ACTION_IF !GAME_IS ~bgee~ THEN BEGIN
   		PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
     		SAY 0x54 @96
   		END
-	BUT_ONLY_IF_IT_CHANGES
+	BUT_ONLY
 END ELSE BEGIN
 	COPY_EXISTING ~AX1H07.ITM~ ~override~
   		PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
     		SAY 0x54 @115
   		END
-	BUT_ONLY_IF_IT_CHANGES
+	BUT_ONLY
 END
 
 /////////////////////////////////////////
@@ -4958,39 +4448,15 @@ END
 //Give CLCK11 electricity bonus
 ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN //BG only
   COPY_EXISTING ~%tutu_var%CLCK11.ITM~ ~override~
-    READ_LONG 0x64 abil_off
-    READ_SHORT 0x68 abil_num
-    READ_LONG 0x6a fx_off
-    READ_SHORT 0x70 fx_global_num
-
-    SET fx_total_num = %fx_global_num%
-
-    FOR (i = 0; i < %abil_num%; i += 1) BEGIN
-      READ_SHORT (%abil_off% + %i% * 0x38 + 0x1E) fx_abil_num
-      SET fx_total_num += %fx_abil_num%
+    LPF ADD_ITEM_EQEFFECT
+    	INT_VAR opcode=29 // Opcode: Stat: Electricity Resistance Modifier [29]
+    		target=1 // target: self
+    		timing=2 // Timing: While equipped
+    		parameter1=20 // Parameter 1: Stat modifier
+    		parameter2=0 // Parameter 2: Cumulative
+    		probability1=100 // Probability 1 - max
+    		probability2=0 // Probability 2 - min
     END
-
-    INSERT_BYTES "%fx_off%" 0x30
-
-    WRITE_SHORT (%fx_off% + 0x0) 29 // Opcode: Stat: Electricity Resistance Modifier [29]
-    WRITE_BYTE (%fx_off% + 0x2) 1 // target: self
-    WRITE_LONG (%fx_off% + 0x4) 20 // Parameter 1: Stat modifier
-    WRITE_LONG (%fx_off% + 0x8) 0 // Parameter 2: Cumulative
-    WRITE_BYTE (%fx_off% + 0xc) 2 // Timing: While equipped
-    WRITE_BYTE (%fx_off% + 0x12) 100 // Probability 1 - max
-    WRITE_BYTE (%fx_off% + 0x13) 0 // Probability 2 - min
-
-    FOR (i = 0; i < %abil_num%; i += 1) BEGIN
-      READ_SHORT (%abil_off% + %i% * 0x38 + 0x20) fx_abil_idx
-      WRITE_SHORT (%abil_off% + %i% * 0x38 + 0x20) ("%fx_abil_idx%" + 1)
-    END
-
-    PATCH_IF (%abil_off% >= %fx_off%) BEGIN
-     WRITE_LONG 0x64 (%abil_off% + 48)
-    END
-
-    SET fx_global_num += 1
-    WRITE_SHORT 0x70 fx_global_num
 END
 
 //Change "Immunity to Charm creature" effect to "Immunity to Hold creature" like Free Action spell
@@ -5010,7 +4476,7 @@ COPY_EXISTING ~%tutu_var%POTN45.ITM~ ~override~
       END
     END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -5037,8 +4503,8 @@ END
 
   // Assign the Halfling Enforcers the INITDLG script
 COPY_EXISTING ~%tutu_var%HALFEN.CRE~ ~override~
-  	WRITE_EVALUATED_ASCII 0x258 ~%tutu_var%INITDLG~
-BUT_ONLY_IF_IT_CHANGES
+  	WRITE_ASCIIE 0x258 ~%tutu_var%INITDLG~
+BUT_ONLY
 
   // Script to spawn Halfling Enforcers if caught stealing
 COPY_EXISTING ~%Gullykin_JenkalsHouse_Cellar%.ARE~ ~override~ // Gullykin house
@@ -5049,7 +4515,7 @@ COPY_EXISTING ~%Gullykin_JenkalsHouse_Cellar%.ARE~ ~override~ // Gullykin house
   	  	FOR (READ_SHORT 0x74 numCont; numCont; numCont -= 0x1) BEGIN
     		READ_ASCII contOff name // Container name
     		PATCH_IF !("%name%" STRING_COMPARE_CASE "LCHEST") BEGIN // LChest container
-      			WRITE_EVALUATED_ASCII contOff + 0x48 ~%tutu_var%ACT13~ #8 // Summon halfling enforcers
+      			WRITE_ASCIIE contOff + 0x48 ~%tutu_var%ACT13~ #8 // Summon halfling enforcers
       			WRITE_SHORT contOff + 0x2c 0x64     // Trap undetectable
       			WRITE_SHORT contOff + 0x2e 0x64     // Trap unremovable
       			WRITE_SHORT contOff + 0x30 0x1      // Enable trap
@@ -5057,7 +4523,7 @@ COPY_EXISTING ~%Gullykin_JenkalsHouse_Cellar%.ARE~ ~override~ // Gullykin house
     		contOff += 0xc0
   		END
 	END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 ////////////////////////////////
 // Firedrake Script Restorations
@@ -5068,27 +4534,27 @@ PATCH_IF (trigOff) BEGIN
    READ_ASCII trigOff name (10)   // Trigger name
    READ_SHORT trigOff + 0x20 type // Trigger type
    PATCH_IF !("%name%" STRING_COMPARE_CASE "FIREDRAKE1" || type) BEGIN
-     WRITE_EVALUATED_ASCII trigOff + 0x7c ~%tutu_scriptf%DRAKET1~ // Firedrake Trap 1, sets new script
+     WRITE_ASCIIE trigOff + 0x7c ~%tutu_scriptf%DRAKET1~ // Firedrake Trap 1, sets new script
    END ELSE
    PATCH_IF !("%name%" STRING_COMPARE_CASE "FIREDRAKE2" || type) BEGIN
-     WRITE_EVALUATED_ASCII trigOff + 0x7c ~%tutu_scriptf%DRAKET2~ // Firedrake Trap 2, sets new script
+     WRITE_ASCIIE trigOff + 0x7c ~%tutu_scriptf%DRAKET2~ // Firedrake Trap 2, sets new script
    END ELSE
    PATCH_IF !("%name%" STRING_COMPARE_CASE "FIREDRAKE3" || type) BEGIN
-     WRITE_EVALUATED_ASCII trigOff + 0x7c ~%tutu_scriptf%DRAKET3~ // Firedrake Trap 3, sets new script
+     WRITE_ASCIIE trigOff + 0x7c ~%tutu_scriptf%DRAKET3~ // Firedrake Trap 3, sets new script
    END ELSE
    PATCH_IF !("%name%" STRING_COMPARE_CASE "FIREDRAKE4" || type) BEGIN
-     WRITE_EVALUATED_ASCII trigOff + 0x7c ~%tutu_scriptf%DRAKET4~ // Firedrake Trap 4, sets new script
+     WRITE_ASCIIE trigOff + 0x7c ~%tutu_scriptf%DRAKET4~ // Firedrake Trap 4, sets new script
    END ELSE
    PATCH_IF !("%name%" STRING_COMPARE_CASE "FIREDRAKE5" || type) BEGIN
-     WRITE_EVALUATED_ASCII trigOff + 0x7c ~%tutu_scriptf%DRAKET5~ // Firedrake Trap 5, sets new script
+     WRITE_ASCIIE trigOff + 0x7c ~%tutu_scriptf%DRAKET5~ // Firedrake Trap 5, sets new script
    END ELSE
    PATCH_IF !("%name%" STRING_COMPARE_CASE "FIREDRAKE6" || type) BEGIN
-     WRITE_EVALUATED_ASCII trigOff + 0x7c ~%tutu_scriptf%DRAKET6~ // Firedrake Trap 6, sets new script
+     WRITE_ASCIIE trigOff + 0x7c ~%tutu_scriptf%DRAKET6~ // Firedrake Trap 6, sets new script
    END
    trigOff += 0xc4
  END
 END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 // Game Crash When Entering Area AR0717 Fix
 // Author: Idobek
@@ -5105,14 +4571,14 @@ COPY_EXISTING ~%CentralBaldursGate_House6_L1%.are~ ~override~
     READ_LONG ("%actor%" + 0x84) "actorresref2"
     WHILE (("%actorresref1%" = 0x4c524947) AND ("%actorresref2%" = 0x00314142)) OR //BG
           (("%actorresref1%" = 0x454b3031) AND ("%actorresref2%" = 0x00000047)) BEGIN //BGT or Tutu
-      WRITE_EVALUATED_ASCII ("%actor%" + 0x80) ~%tutu_var%GIRBA1~
+      WRITE_ASCIIE ("%actor%" + 0x80) ~%tutu_var%GIRBA1~
       WRITE_SHORT ("%actor%" + 0x86) 0x0000
       READ_LONG ("%actor%" + 0x80) "actorresref1"
       READ_LONG ("%actor%" + 0x84) "actorresref2"
     END
   SET "#actors" = ("%#actors%" - 1)
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 ////////////////////////
 // Change Location Flags
@@ -5120,7 +4586,7 @@ COPY_EXISTING ~%CentralBaldursGate_GamblingTent1%.ARE~ ~override~
               ~%CentralBaldursGate_GamblingTent2%.ARE~ ~override~
               ~%CentralBaldursGate_DivinersTent%.ARE~ ~override~
   WRITE_SHORT 0x48 0x06 // Removes Outdoors flag
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -5154,7 +4620,7 @@ COPY_EXISTING ~%tutu_var%CATDEAD.CRE~ ~override~
     READ_BYTE 0x10 flag
     WRITE_BYTE 0x10 flag | 0x4          // Makes the corpses permanent
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -5261,7 +4727,7 @@ COPY_EXISTING ~%tutu_var%clck07.itm~  ~override~ // nymph cloak
       WRITE_SHORT  ("%abil_off%" + 0x1e + ("%abil_length%" * "%index%")) "%abil_fx_num%"
     END
   END
-  BUT_ONLY_IF_IT_CHANGES
+  BUT_ONLY
 
 COPY ~bg1ub/elfcharm~ ~override~
 
@@ -5479,12 +4945,12 @@ BUT_ONLY
 COPY_EXISTING ~%tutu_var%misc43.itm~ ~override/abgfEyeL.itm~
  SAY UNIDENTIFIED_DESC @117
  SAY IDENTIFIED_DESC @117
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 //create right eye emerald
 COPY_EXISTING ~%tutu_var%misc43.itm~ ~override/abgfEyeR.itm~
  SAY UNIDENTIFIED_DESC @118
  SAY IDENTIFIED_DESC @118
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 //change the emeralds that prism carries
 COPY_EXISTING ~%tutu_var%prism.cre~ ~override~
  REMOVE_CRE_ITEM ~%tutu_var%misc43~
@@ -5496,14 +4962,14 @@ COPY_EXISTING ~%tutu_var%prism.cre~ ~override~
    EXTEND_BOTTOM ~%overridescript%.bcs~ ~bg1ub/abPrismEmeralds/abgfprsm.baf~ //add our stuff -- creates new if doesn't exist
   END
  END ELSE BEGIN
-  WRITE_EVALUATED_ASCII 0x0248 ~abgfprsm~
+  WRITE_ASCIIE 0x0248 ~abgfprsm~
   READ_ASCII 0x0248 ~overridescript~
   INNER_ACTION BEGIN
    EXTEND_BOTTOM ~%overridescript%.bcs~ ~bg1ub/abPrismEmeralds/abgfprsm.baf~ //add our stuff -- creates new if doesn't exist
   END
  END
 
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 //compile the script for the eye container traps
 COMPILE EVALUATE_BUFFER ~bg1ub/abPrismEmeralds/abitrp.baf~ 
 
@@ -5514,7 +4980,7 @@ COMPILE EVALUATE_BUFFER ~bg1ub/abPrismEmeralds/oublek.d~
 /* hacking attempt to make the mod compatible with mods I_C_T into Prism state 7 and Oublek state 4: (BG1NPC Project and Gavin), if installed before bg1ub */
 
 
-/* IF BG1NPC Projekt "interjections" is installed: */
+/* IF BG1NPC Project "interjections" is installed: */
 
 ACTION_IF FILE_EXISTS_IN_GAME ~override/X#BG1NPCPhase2.G3~ THEN BEGIN
 
@@ -5661,8 +5127,134 @@ COPY_EXISTING ~%tutu_var%wolfdi.cre~ ~override/ubnimwlf.cre~
 /* Items */
 COPY ~bg1ub/nimfur/ubscp402.itm~ ~override~
 
-/* Scripts */
-<<<<<<<< .../bg1ub/ub_ar2900.baf
+/* Add CREs to Larswood */
+COPY_EXISTING ~%Larswood%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4500
+    	fj_loc_y          = 2740
+    	fj_dest_x         = 4500
+    	fj_dest_y         = 2740
+    	fj_animation      = 0x6111 // Fighter Female Elf
+    	fj_orientation    = 9      // NNE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Nim Furlwing"
+   		fj_cre_resref     = UBNIMFUR
+	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4535
+    	fj_loc_y          = 2790
+    	fj_dest_x         = 4535
+    	fj_dest_y         = 2790
+    	fj_animation      = 0x7401 // War Dog
+    	fj_orientation    = 9      // NNE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Hunting Dog"
+   		fj_cre_resref     = UBNIMDOG
+	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4563
+    	fj_loc_y          = 2765
+    	fj_dest_x         = 4563
+    	fj_dest_y         = 2765
+    	fj_animation      = 0x7401 // War Dog
+    	fj_orientation    = 9      // NNE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Hunting Dog"
+   		fj_cre_resref     = UBNIMDOG
+	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4460
+    	fj_loc_y          = 2735
+    	fj_dest_x         = 4460
+    	fj_dest_y         = 2735
+    	fj_animation      = 0x7401 // War Dog
+    	fj_orientation    = 9      // NNE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Hunting Dog"
+   		fj_cre_resref     = UBNIMDOG
+	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4525
+    	fj_loc_y          = 2600
+    	fj_dest_x         = 4525
+    	fj_dest_y         = 2600
+    	fj_animation      = 0x7B02 // Dire Wolf
+    	fj_orientation    = 1      // SSW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Wolf
+   		fj_cre_resref     = UBNIMWLF
+   	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4560
+    	fj_loc_y          = 2570
+    	fj_dest_x         = 4560
+    	fj_dest_y         = 2570
+    	fj_animation      = 0x7B02 // Dire Wolf
+    	fj_orientation    = 1      // SSW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Wolf
+   		fj_cre_resref     = UBNIMWLF
+	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4570
+    	fj_loc_y          = 2500
+    	fj_dest_x         = 4570
+    	fj_dest_y         = 2500
+    	fj_animation      = 0x7B02 // Dire Wolf
+    	fj_orientation    = 1      // SSW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Wolf
+   		fj_cre_resref     = UBNIMWLF
+   	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4625
+    	fj_loc_y          = 2575
+    	fj_dest_x         = 4625
+    	fj_dest_y         = 2575
+    	fj_animation      = 0x7B02 // Dire Wolf
+    	fj_orientation    = 1      // SSW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Wolf
+   		fj_cre_resref     = UBNIMWLF
+   	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4670
+    	fj_loc_y          = 2580
+    	fj_dest_x         = 4670
+    	fj_dest_y         = 2580
+    	fj_animation      = 0x7B02 // Dire Wolf
+    	fj_orientation    = 1      // SSW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Wolf
+   		fj_cre_resref     = UBNIMWLF
+   	END
+BUT_ONLY
+
+/* Scripts and Dialogues */
+COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimfur.d~
+COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimfur.baf~
+COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimdog.baf~
+COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimwlf.baf~
+
+/*<<<<<<<< .../bg1ub/ub_ar2900nf.baf
 IF %BGT_VAR%
 !Exists("UBNIMFUR")
 Global("UBNimFurlwingSpawn","%Larswood%",0)
@@ -5681,15 +5273,8 @@ CreateCreature("UBNIMWLF",[4670.2580]%FACE_1%)
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR2900" OUTER_SPRINT temp_bgt "AR9000" OUTER_SPRINT temp_bgee "AR2900" OUTER_SPRINT temp_bg "AR2900" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_BOTTOM ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar2900.baf~
-  EVALUATE_BUFFER
-  
-COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimfur.d~
-COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimfur.baf~
-COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimdog.baf~
-COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimwlf.baf~
-
+LAF extend_area_script STR_VAR area="%Larswood%" bottom=".../bg1ub/ub_ar2900nf.baf" END
+*/  
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -5706,20 +5291,18 @@ FORBID_FILE ~data/JA#TAVER.MVE~ @90004
 COPY ~bg1ub/tavern/ubtavern.mve~ ~override~
 
 /* Edit Elfsong area script */
-<<<<<<<< .../bg1ub/ub_ar0705.baf
+<<<<<<<< .../bg1ub/ub_ar0705tv.baf
 IF
-	Global("UBEnteredElfSong","GLOBAL",0)
+	Global("UBEnteredElfSong","%EBaldursGate_ElfsongTavern_L1%",0)
 THEN
 	RESPONSE #100
 		StartMovie("UBTAVERN")
-		SetGlobal("UBEnteredElfSong","GLOBAL",1)
+		SetGlobal("UBEnteredElfSong","%EBaldursGate_ElfsongTavern_L1%",1)
 		Continue()
 END
 >>>>>>>>
 
-OUTER_SPRINT temp_tutu "_AR0705" OUTER_SPRINT temp_bgt "AR7705" OUTER_SPRINT temp_bgee "AR0705" OUTER_SPRINT temp_bg "AR0705" LAUNCH_ACTION_MACRO "getcpmvara"
-EXTEND_TOP ~%temp_cpmvar%.BCS~ ~.../bg1ub/ub_ar0705.baf~
-  EVALUATE_BUFFER
+LAF extend_area_script STR_VAR area="%EBaldursGate_ElfsongTavern_L1%" bottom=".../bg1ub/ub_ar0705tv.BAF" END
 
 
 
