@@ -32,7 +32,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("UBSNOWGOLEMBREATH","LOCALS",60)
-		ForceSpellRES("UBSNOBRW",LastSeenBy(Myself))
+		ForceSpellRES("UBSNOBR",LastSeenBy(Myself))
 		Wait(2)
 END
 
