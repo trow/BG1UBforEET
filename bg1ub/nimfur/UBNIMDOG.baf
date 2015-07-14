@@ -26,7 +26,7 @@ IF
 	Global("UBNimFight","%Larswood%",2)
 THEN
 	RESPONSE #100
-		ChangeEnemyAlly(Myself,GOODBUTBLUE)
+		ChangeEnemyAlly(Myself,GOODCUTOFF)
 END
 
 IF
