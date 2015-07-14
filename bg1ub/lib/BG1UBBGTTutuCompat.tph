@@ -1,0 +1,439 @@
+  ACTION_IF GAME_IS ~tutu tutu_totsc bgt~ THEN BEGIN //BGT or Tutu only
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%EDIE.CRE~ ~override~
+     SAY NAME1 @10000
+     SAY NAME2 @10000
+     SAY INITIAL_MEETING @10001
+     SAY DAMAGE @10002
+     SAY DYING @10003
+     SAY SELECT_COMMON1 @10001
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%ENNAHE.CRE~ ~override~
+     SAY NAME1 @10004
+     SAY NAME2 @10004
+     SAY INITIAL_MEETING @10005
+     SAY DAMAGE @10002
+     SAY DYING @10002
+     SAY SELECT_COMMON1 @10005
+     SAY 0x198 @10006
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%ERLINH.CRE~ ~override~
+     SAY NAME1 @10007
+     SAY NAME2 @10007
+     SAY INITIAL_MEETING @10008
+     SAY DAMAGE @10009
+     SAY DYING @10010
+     SAY SELECT_COMMON1 @10008
+     SAY 0x198 @10011
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%FELDAN.CRE~ ~override~
+     SAY NAME1 @10012
+     SAY NAME2 @10012
+     SAY INITIAL_MEETING @10013
+     SAY DAMAGE @10014
+     SAY DYING @10015
+     SAY SELECT_COMMON1 @10013
+     SAY SELECT_COMMON2 @10016
+     SAY SELECT_RARE1 @10016
+     SAY SELECT_RARE2 @10016
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%GALKIN.CRE~ ~override~
+     SAY NAME1 @10017
+     SAY NAME2 @10017
+     SAY INITIAL_MEETING @10018
+     SAY DAMAGE @10019
+     SAY DYING @10020
+     SAY SELECT_COMMON1 @10021
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%GIRLBAX.CRE~ ~override~
+     SAY NAME1 @10022
+     SAY NAME2 @10022
+     SAY INITIAL_MEETING @10023
+     SAY DAMAGE @10024
+     SAY DYING @10025
+     SAY SELECT_COMMON1 @10023
+     SAY 0x198 @10026
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%HAFFG2.CRE~ ~override~
+     SAY NAME1 @10027
+     SAY NAME2 @10027
+     SAY INITIAL_MEETING @10028
+     SAY DAMAGE @10029
+     SAY DYING @10030
+     SAY SELECT_COMMON1 @10028
+     SAY 0x198 @10031
+     SAY 0x19c @10032
+     SAY 0x1a0 @10033
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%HALFG2.CRE~ ~override~
+     SAY NAME1 @10034
+     SAY NAME2 @10034
+     SAY INITIAL_MEETING @10035
+     SAY DAMAGE @10036
+     SAY DYING @10037
+     SAY SELECT_COMMON1 @10035
+     SAY 0x198 @10038
+     SAY 0x19c @10039
+     SAY 0x1a0 @10040
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%MERLIN.CRE~ ~override~
+     SAY NAME1 @10041
+     SAY NAME2 @10041
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%MTOB4.CRE~ ~override~
+     SAY NAME1 @10042
+     SAY NAME2 @10042
+     SAY INITIAL_MEETING @10043
+     SAY DAMAGE @10044
+     SAY DYING @10045
+     SAY SELECT_COMMON1 @10043
+     SAY 0x198 @10046
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%MTOB5.CRE~ ~override~
+     SAY NAME1 @10042
+     SAY NAME2 @10042
+     SAY INITIAL_MEETING @10047
+     SAY DAMAGE @10044
+     SAY DYING @10045
+     SAY SELECT_COMMON1 @10047
+     SAY 0x198 @10046
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREGR1.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREGR2.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREGR3.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREGR4.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_scripto%GREGR_A.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_scripto%GREGRSU.CRE~ ~override~
+     SAY NAME1 @10048
+     SAY NAME2 @10048
+     SAY BATTLE_CRY1 @10049
+     SAY BATTLE_CRY2 @10050
+     SAY ATTACK1 @10051
+     SAY ATTACK2 @10052
+     SAY DAMAGE @10053
+     SAY DYING @10054
+     SAY SELECT_COMMON1 @10055
+     SAY SELECT_RARE1 @10056
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREHA1.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREHA2.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREHA3.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREHA4.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_var%OGREHA5.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_scripto%GREHA_A.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_scripto%GREHA_C.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_scripto%GREHA_D.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_scripto%GREHA_E.CRE~ ~override~
+     SAY NAME1 @10057
+     SAY NAME2 @10057
+     SAY BATTLE_CRY1 @10058
+     SAY BATTLE_CRY2 @10059
+     SAY DAMAGE @10060
+     SAY DYING @10061
+     SAY SELECT_COMMON1 @10062
+     SAY SELECT_COMMON2 @10063
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%READ4.CRE~ ~override~
+     SAY NAME1 @10064
+     SAY NAME2 @10064
+     SAY INITIAL_MEETING @10016
+     SAY DAMAGE @10014
+     SAY DYING @10015
+     SAY SELECT_COMMON1 @10013
+     SAY SELECT_COMMON2 @10016
+     SAY SELECT_RARE1 @10016
+     SAY SELECT_RARE2 @10016
+     SAY 0x198 @10046
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptt%ASLOI02.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptt%ASLOI03.CRE~ ~override~
+     SAY NAME1 @10065
+     SAY NAME2 @10065
+     SAY BATTLE_CRY1 @10066
+     SAY BATTLE_CRY2 @10067
+     SAY ATTACK1 @10068
+     SAY ATTACK2 @10069
+     SAY DAMAGE @10070
+     SAY DYING @10071
+     SAY SELECT_COMMON1 @10072
+     SAY SELECT_COMMON2 @10073
+     SAY SELECT_COMMON3 @10074
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%TRAVEL.CRE~ ~override~
+     SAY NAME1 @10075
+     SAY NAME2 @10075
+     SAY INITIAL_MEETING @10047
+     SAY DAMAGE @10044
+     SAY DYING @10045
+     SAY SELECT_COMMON1 @10047
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%VOLOSE.CRE~ ~override~
+     SAY NAME1 @10076
+     SAY NAME2 @10076
+     SAY INITIAL_MEETING @10077
+     SAY DAMAGE @10078
+     SAY DYING @10079
+     SAY SELECT_COMMON1 @10080
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%WILTON.CRE~ ~override~
+     SAY NAME1 @10081
+     SAY NAME2 @10081
+     SAY INITIAL_MEETING @10082
+     SAY DAMAGE @10083
+     SAY DYING @10084
+     SAY SELECT_COMMON1 @10085
+     SAY 0x198 @10086
+     SAY 0x19c @10087
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%FTOWUBSC%.CRE~ ~override~
+     SAY NAME1 @10042
+     SAY NAME2 @10042
+     SAY INITIAL_MEETING @10088
+     SAY DAMAGE @10002
+     SAY DYING @10128
+     SAY SELECT_COMMON1 @10088
+     SAY 0x198 @10089
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%FTOWUBSN%.CRE~ ~override~
+     SAY NAME1 @10042
+     SAY NAME2 @10042
+     SAY INITIAL_MEETING @10090
+     SAY DAMAGE @10091
+     SAY DYING @10092
+     SAY SELECT_COMMON1 @10090
+     SAY 0x198 @10089
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%MEMNIS.CRE~ ~override~
+     SAY NAME1 @10093
+     SAY NAME2 @10093
+     SAY INITIAL_MEETING @10094
+     SAY DAMAGE @10095
+     SAY DYING @10096
+     SAY SELECT_COMMON1 @10094
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%MTOWUBSN%.CRE~ ~override~
+     SAY NAME1 @10042
+     SAY NAME2 @10042
+     SAY INITIAL_MEETING @10097
+     SAY DAMAGE @10044
+     SAY DYING @10098
+     SAY SELECT_COMMON1 @10097
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%MTOWUBST%.CRE~ ~override~
+     SAY NAME1 @10042
+     SAY NAME2 @10042
+     SAY INITIAL_MEETING @10099
+     SAY DAMAGE @10044
+     SAY DYING @10098
+     SAY SELECT_COMMON1 @10099
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%PLYOGRE.CRE~ ~override~
+     SAY NAME1 @10100
+     SAY NAME2 @10100
+     SAY BATTLE_CRY1 @10101
+     SAY BATTLE_CRY2 @10102
+     SAY DAMAGE @10103
+     SAY DYING @10104
+     SAY SELECT_COMMON1 @10105
+     SAY SELECT_COMMON2 @10106
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%COWLED.CRE~ ~override~
+     SAY NAME1 @10107
+     SAY NAME2 @10107
+     SAY INITIAL_MEETING @10108
+     SAY DAMAGE @10109
+     SAY DYING @10110
+     SAY SELECT_COMMON1 @10108
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%GHOULSU.CRE~ ~override~
+     SAY NAME1 @10111
+     SAY NAME2 @10111
+     SAY BATTLE_CRY1 @10112
+     SAY BATTLE_CRY2 @10113
+     SAY ATTACK1 @10114
+     SAY ATTACK2 @10115
+     SAY DAMAGE @10116
+     SAY DYING @10117
+     SAY SELECT_COMMON1 @10118
+     SAY SELECT_COMMON2 @10119
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptb%IRD_INE.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptb%IRD_INN.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptb%IRD_INS.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptb%IRD_INW.CRE~ ~override~
+     SAY NAME1 @10120
+     SAY NAME2 @10120
+     SAY 0x1b8 @10121
+     SAY 0x1bc @10122
+     SAY 0x1c0 @10123
+     SAY 0x1c4 @10124
+     SAY 0x1c8 @10125
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%HALFEN.CRE~ ~override~
+     SAY NAME1 @10126
+     SAY NAME2 @10126
+     SAY INITIAL_MEETING @10127
+     SAY DAMAGE @10036
+     SAY DYING @10037
+     SAY SELECT_COMMON1 @10127
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%HALFEN2.CRE~ ~override~
+     SAY NAME1 @10126
+     SAY NAME2 @10126
+     SAY INITIAL_MEETING @10178
+     SAY DAMAGE @10036
+     SAY DYING @10037
+     SAY SELECT_COMMON1 @10178
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%ENTAR.CRE~ ~override~
+     SAY NAME1 @10129
+     SAY NAME2 @10129
+     SAY INITIAL_MEETING @10130
+     SAY DAMAGE @10131
+     SAY DYING @10132
+     SAY SELECT_COMMON1 @10133
+     SAY 0x198 @10134
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%HERSCH.CRE~ ~override~
+     SAY NAME1 @10135
+     SAY NAME2 @10135
+     SAY INITIAL_MEETING @10136
+     SAY DAMAGE @10137
+     SAY DYING @10138
+     SAY SELECT_COMMON1 @10139
+     SAY SELECT_COMMON2 @10140
+     SAY SELECT_ACTION4 @10141
+     SAY SELECT_ACTION5 @10142
+     SAY 0x198 @10143
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%MERCHA.CRE~ ~override~
+     SAY NAME1 @10144
+     SAY NAME2 @10144
+     SAY INITIAL_MEETING @10145
+     SAY DAMAGE @10146
+     SAY DYING @10147
+     SAY SELECT_COMMON1 @10148
+     SAY SELECT_COMMON2 @10149
+     SAY SELECT_ACTION4 @10150
+     SAY SELECT_ACTION5 @10151
+     SAY 0x198 @10152
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%SERWEN.CRE~ ~override~
+     SAY NAME1 @10153
+     SAY NAME2 @10153
+     SAY INITIAL_MEETING @10154
+     SAY DAMAGE @10155
+     SAY DYING @10156
+     SAY SELECT_COMMON1 @10157
+     SAY 0x198 @10158
+     SAY 0x19c @10159
+     SAY 0x1b8 @10160
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%BART8.CRE~ ~override~
+         ~bg1ub/%tutuorbgt%/CRE/%tutu_var%BART9.CRE~ ~override~
+     SAY NAME1 @10161
+     SAY NAME2 @10161
+     SAY INITIAL_MEETING @10162
+     SAY DAMAGE @10163
+     SAY DYING @10164
+     SAY SELECT_COMMON1 @10162
+     SAY SELECT_COMMON2 @10165
+     SAY SELECT_COMMON3 @10166
+     SAY SELECT_COMMON4 @10167
+
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_var%GIRLBE.CRE~ ~override~
+     SAY NAME1 @10022
+     SAY NAME2 @10022
+     SAY INITIAL_MEETING @10168
+     SAY DAMAGE @10024
+     SAY DYING @10025
+     SAY SELECT_COMMON1 @10168
+     SAY 0x198 @10026
+     SAY 0x1b8 @10169
+
+    //for EasyTutu and probably Tutu v4 (Tutu v6b already has this)
+    COPY ~bg1ub/%tutuorbgt%/CRE/%tutu_scriptt%ASLOISU.CRE~ ~override~
+     SAY NAME1 @10065
+     SAY NAME2 @10065
+     SAY BATTLE_CRY1 @10066
+     SAY BATTLE_CRY2 @10067
+     SAY ATTACK1 @10068
+     SAY ATTACK2 @10069
+     SAY DAMAGE @10070
+     SAY DYING @10071
+     SAY SELECT_COMMON1 @10072
+     SAY SELECT_COMMON2 @10074
+
+    COPY  ~bg1ub/%tutuorbgt%/STO~ ~override~
+          ~bg1ub/%tutuorbgt%/ARE~ ~override~
+          ~bg1ub/%tutuorbgt%/BAM~ ~override~
+          ~bg1ub/%tutuorbgt%/EFF~ ~override~
+
+    //sounds
+	ACTION_IF GAME_IS ~tutu tutu_totsc~ BEGIN // Tutu only
+
+    	ACTION_IF (FILE_EXISTS ~bg1ub/audio/%LANGUAGE%/_MB_E43B.ogg~) BEGIN
+  			LAF HANDLE_AUDIO
+    			STR_VAR
+      				audio_path = EVAL ~bg1ub/audio/%LANGUAGE%~
+      				oggdec_path = ~bg1ub/audio~
+      				sox_path = ~bg1ub/audio~
+  			END
+	   	END ELSE BEGIN
+  			LAF HANDLE_AUDIO
+    			STR_VAR
+      				audio_path = ~bg1ub/audio/english~
+      				oggdec_path = ~bg1ub/audio~
+      				sox_path = ~bg1ub/audio~
+  			END
+  	   	END
+
+		//USING BGII - resources for Tutu (all language versions):
+		COPY_EXISTING ~HALFF01.wav~ ~override/_HALFF01.wav~
+		COPY_EXISTING ~MUSTR08.wav~ ~override/_MUSTR08.wav~
+		COPY_EXISTING ~SWENC01.wav~ ~override/_SWENC01.wav~
+		COPY_EXISTING ~SWENC02.wav~ ~override/_SWENC02.wav~
+		COPY_EXISTING ~TANAR01.wav~ ~override/_TANAR01.wav~
+		COPY_EXISTING ~TANAR02.wav~ ~override/_TANAR02.wav~
+		COPY_EXISTING ~TANAR03.wav~ ~override/_TANAR03.wav~
+		COPY_EXISTING ~TANAR04.wav~ ~override/_TANAR04.wav~
+		COPY_EXISTING ~TANAR05.wav~ ~override/_TANAR05.wav~
+		COPY_EXISTING ~TANAR06.wav~ ~override/_TANAR06.wav~
+	END //sounds for Tutu
+
+    //missing from Tutu only
+    ACTION_IF GAME_IS ~tutu tutu_totsc~ BEGIN //Tutu only
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%AMUL02.ITM~ ~override~
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%B1-2.ITM~ ~override~
+
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%BLUN10.ITM~ ~override~
+        SAY DESC @10170
+
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%BOOK65.ITM~ ~override~
+           ~bg1ub/%tutuorbgt%/ITM/%tutu_var%BOOK80.ITM~ ~override~
+           ~bg1ub/%tutuorbgt%/ITM/%tutu_var%BOOK85.ITM~ ~override~
+        SAY NAME1 @10171
+
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%BRAC05.ITM~ ~override~
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%DAGG08.ITM~ ~override~
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%LEAT06.ITM~ ~override~
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%MISC76.ITM~ ~override~
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%MISC77.ITM~ ~override~
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%MISC79.ITM~ ~override~
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%NEIRED.ITM~ ~override~
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%RING01.ITM~ ~override~
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%SCRL2D.ITM~ ~override~
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%SCRL2F.ITM~ ~override~
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%SCRL2H.ITM~ ~override~
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%SCRL5L.ITM~ ~override~
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%SCRL61.ITM~ ~override~
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%SCRL62.ITM~ ~override~
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%SCRL63.ITM~ ~override~
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%SPER03.ITM~ ~override~
+      COPY ~bg1ub/%tutuorbgt%/ITM/%tutu_var%XBOW02.ITM~ ~override~
+    END
+
+    COMPILE ~bg1ub/%tutuorbgt%/D~
+            ~bg1ub/%tutuorbgt%/BAF~
+
+  END // BGT/Tutu Compatibility
