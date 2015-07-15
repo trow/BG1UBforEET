@@ -4,6 +4,7 @@ IF
 THEN
 	RESPONSE #100
 		Enemy()
+		ProtectObject("dezkiel",100)
 END
 
 IF
@@ -14,6 +15,7 @@ THEN
 		SetGlobal("UBFightDezkiel","GLOBAL",1)
 		ActionOverride("dezkiel",Enemy())
 		Enemy()
+		Continue()
 END
 
 IF
@@ -27,36 +29,37 @@ END
 IF
 	See(NearestEnemyOf(Myself))
 	!GlobalTimerNotExpired("UBSNOWGOLEMBREATH","LOCALS")
-	Range([PC],10)
+	Range(NearestEnemyOf(Myself),10)
 	RandomNum(3,1)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("UBSNOWGOLEMBREATH","LOCALS",60)
-		ForceSpellRES("UBSNOBR",LastSeenBy(Myself))
+		SetGlobalTimer("UBSNOWGOLEMBREATH","LOCALS",30)
+		ForceSpellRES("UBSNOBR",LastSeenBy(Myself)) // Snow Golem Breath
 		Wait(2)
 END
 
 IF
+	AttackedBy([ANYONE],DEFAULT)
+	Range(LastAttackerOf(Myself),5)
+THEN
+	RESPONSE #100
+		AttackReevaluate(LastAttackerOf(Myself),30)
+END
+
+IF
 	See(NearestEnemyOf(Myself))
-	InWeaponRange(LastSeenBy(Myself))
+	Range(NearestEnemyOf(Myself),10)
 THEN
 	RESPONSE #100
 		AttackReevaluate(NearestEnemyOf(Myself),30)
 END
 
 IF
-	AttackedBy([ANYONE],DEFAULT)
-	InWeaponRange(LastAttackerOf(Myself))
-THEN
-	RESPONSE #100
-		Attack(LastAttackerOf(Myself))
-END
-
-IF
 	See(NearestEnemyOf(Myself))
+	!Range(LastSeenBy(Myself),5)
 THEN
 	RESPONSE #100
-		MoveToObject(LastSeenBy(Myself))
+		Attack(LastSeenBy(Myself))
 END
 
 IF
@@ -64,12 +67,5 @@ IF
 	!See(NearestEnemyOf(Myself))
 THEN
 	RESPONSE #100
-		MoveToObject(NearestEnemyOf(Myself))
-END
-
-IF
-	True()
-THEN
-	RESPONSE #100
-		NoAction()
+		ProtectObject("dezkiel",100)
 END

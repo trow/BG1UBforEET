@@ -749,16 +749,22 @@ COMPILE EVALUATE_BUFFER ~.../bg1ub/ub_dezkie.d~
 
 // Add Snow Golem
 ACTION_IF GAME_IS ~totsc~ THEN BEGIN
-	COPY ~bg1ub/ar1010/ubsnorng_totsc.itm~ ~override/ubsnorng.itm~
+	COPY ~bg1ub/ar1010/snow_golem/ubsnorng_totsc.itm~ ~override/ubsnorng.itm~
 END ELSE BEGIN
-	COPY ~bg1ub/ar1010/ubsnorng.itm~ override
+	COPY ~bg1ub/ar1010/snow_golem/ubsnorng.itm~ override
 END
-COPY ~bg1ub/ar1010/ubsnofst.itm~ override
-COPY ~bg1ub/ar1010/ubsnobr.spl~ override
+COPY ~bg1ub/ar1010/snow_golem/ubsnofst.itm~ override
+
+ACTION_IF GAME_IS ~totsc~ THEN BEGIN
+	COPY ~bg1ub/ar1010/snow_golem/ubsnobr_totsc.spl~ ~override/ubsnobr.spl~
+END ELSE BEGIN
+	COPY ~bg1ub/ar1010/snow_golem/ubsnobr.spl~ override
+END
+COPY_EXISTING ~ubsnobr.spl~ override
 	SAY NAME1 @1002
 	WRITE_ASCIIE 0x10 ~%tutu_var%REVEN01~ #8
 
-COPY ~bg1ub/ar1010/ubsnogol.cre~ override
+COPY ~bg1ub/ar1010/snow_golem/ubsnogol.cre~ override
     LAUNCH_PATCH_MACRO ~source_cre_sound_cleanup~
     LAUNCH_PATCH_MACRO ~source_cre_script_cleanup~
     LAUNCH_PATCH_MACRO ~cre_source_res~
@@ -773,7 +779,7 @@ COPY ~bg1ub/ar1010/ubsnogol.cre~ override
 	ADD_CRE_ITEM ~ubsnorng~ #0 #0 #0 ~UNDROPPABLE~ ~RRING LRING~
 	ADD_CRE_ITEM ~ubsnofst~ #0 #0 #0 ~UNDROPPABLE~ ~WEAPON1~ EQUIP
 	
-COMPILE EVALUATE_BUFFER ~bg1ub/ar1010/ubsnogol.baf~
+COMPILE EVALUATE_BUFFER ~bg1ub/ar1010/snow_golem/ubsnogol.baf~
 
 COPY_EXISTING ~%tutu_var%DEZKIE.cre~ override
 	// Correcting errors in Dezkiel's CRE
