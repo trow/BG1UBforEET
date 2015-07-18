@@ -1,0 +1,29 @@
+IF
+	NumTimesTalkedTo(0)
+	See([PC])
+THEN
+	RESPONSE #100
+		StartDialogueNoSet([PC])
+END
+
+IF
+	Global("UBFightDezkiel","GLOBAL",0)
+	AttackedBy([ANYONE],DEFAULT)
+THEN
+	RESPONSE #100
+		SetGlobal("UBFightDezkiel","GLOBAL",1)
+		SetGlobalTimer("CalledForHelp","LOCALS",6)
+		Enemy()
+		Help()
+END
+
+IF
+	AttackedBy([ANYONE],DEFAULT)
+	Global("UBFightDezkiel","GLOBAL",1)
+	!GlobalTimerNotExpired("CalledForHelp","LOCALS")
+	HPPercentLT(Myself,50)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("CalledForHelp","LOCALS",6)
+		Help()
+END
