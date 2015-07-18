@@ -276,7 +276,7 @@ MONSTHIT.EFF
 UNDEDHIT.EFF
 
 
-VERSION ~v14.0_beta_150715~
+VERSION ~v14.0_beta_150716~
 README ~bg1ub/BG1UB-Readme.html~
 
 ALWAYS
@@ -742,7 +742,7 @@ BUT_ONLY
 <<<<<<<< .../bg1ub/ub_dezkie.d
 REPLACE_ACTION_TEXT ~%tutu_var%DEZKIEL~
 ~Enemy()~
-~SetGlobal("UBFightDezkiel","GLOBAL",1) Enemy()~
+~SetGlobal("UBFightDezkiel","GLOBAL",1) Enemy() Shout(314)~
 >>>>>>>>
 
 COMPILE EVALUATE_BUFFER ~.../bg1ub/ub_dezkie.d~
@@ -780,8 +780,11 @@ COPY ~bg1ub/ar1010/snow_golem/ubsnogol.cre~ override
 	ADD_CRE_ITEM ~ubsnofst~ #0 #0 #0 ~UNDROPPABLE~ ~WEAPON1~ EQUIP
 	
 COMPILE EVALUATE_BUFFER ~bg1ub/ar1010/snow_golem/ubsnogol.baf~
+COMPILE EVALUATE_BUFFER ~bg1ub/ar1010/snow_golem/ubdezovr.baf~
 
 COPY_EXISTING ~%tutu_var%DEZKIE.cre~ override
+	// Give Dezkiel new override script
+	WRITE_ASCIIE SCRIPT_OVERRIDE ~UBDEZOVR~ #8
 	// Correcting errors in Dezkiel's CRE
 	WRITE_BYTE 0x0235 9  // Dezkiel has 5th level spells, should be 9th level mage
 	WRITE_BYTE 0x0052 13 // THAC0 for 8th level fighter is 13
@@ -5116,10 +5119,8 @@ ACTION_IF FILE_EXISTS_IN_GAME ~override/X#BG1NPCPhase2.G3~ THEN BEGIN
 /* this assumes that there is no other "TakePartyItem("%tutu_var%MISC43")" in the Oublek.d */
 
 <<<<<<<< ...inlined/oublek_compatibility.d
-REPLACE_ACTION_TEXT %tutu_var%oublek ~TakePartyItem("%tutu_var%MISC43")~ ~~
-REPLACE_ACTION_TEXT %tutu_var%oublek ~TakePartyItemNum("misc43",2)~ ~~
-REPLACE_ACTION_TEXT %tutu_var%oublek ~GivePartyGold(300)~ ~GivePartyGold(300) TakePartyItem("abgfEyeL") TakePartyItem("abgfEyeR") %ERASEJOURNALENTRY_PRISM_0% %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5%~
-REPLACE_ACTION_TEXT %tutu_var%oublek ~GiveGoldForce(300)~ ~GiveGoldForce(300) TakePartyItem("abgfEyeL") TakePartyItem("abgfEyeR") %ERASEJOURNALENTRY_PRISM_0% %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5%~
+REPLACE_ACTION_TEXT %tutu_var%oublek ~TakePartyItem("%tutu_var%MISC43")~ ~TakePartyItem("abgfEyeL") TakePartyItem("abgfEyeR") %ERASEJOURNALENTRY_PRISM_0% %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5%~
+REPLACE_ACTION_TEXT %tutu_var%oublek ~TakePartyItemNum("misc43",2)~ ~TakePartyItem("abgfEyeL") TakePartyItem("abgfEyeR") %ERASEJOURNALENTRY_PRISM_0% %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5% %ERASEJOURNALBGEE%~
 >>>>>>>>
 COMPILE EVALUATE_BUFFER ~...inlined/oublek_compatibility.d~
 END
@@ -5146,6 +5147,7 @@ COPY_EXISTING ~%tutu_var%oublek.dlg~ override
    REPLACE 99999210 @210
    REPLACE 99999211 @211
    REPLACE 99999212 @212
+   REPLACE 99999214 @214
    REPLACE 99999217 @217
    REPLACE 99999218 @218
    REPLACE 99999216 @216
@@ -5154,6 +5156,7 @@ COPY_EXISTING ~%tutu_var%oublek.dlg~ override
    REPLACE 99999210 @127
    REPLACE 99999211 @128
    REPLACE 99999212 @129
+   REPLACE 99999214 @131
    REPLACE 99999217 @133
    REPLACE 99999218 @134
    REPLACE 99999216 @132
