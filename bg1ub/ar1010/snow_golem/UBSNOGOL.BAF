@@ -45,10 +45,10 @@ IF
 	See(NearestEnemyOf(Myself))
 	!GlobalTimerNotExpired("UBSNOWGOLEMBREATH","LOCALS")
 	Range(NearestEnemyOf(Myself),10)
-	RandomNum(3,1)
+	RandomNum(4,1)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("UBSNOWGOLEMBREATH","LOCALS",SIX_MINUTES)
+		SetGlobalTimer("UBSNOWGOLEMBREATH","LOCALS",30)
 		ForceSpellRES("UBSNOBR",LastSeenBy(Myself)) // Snow Golem Breath
 		Wait(2)
 END
