@@ -98,6 +98,8 @@ Seulement la moitié d'une récompense réduite pour avoir rendu une des émeraudes 
 @1002 = ~Une des émeraudes ! C'est bien de vous voir essayer de gagner honnêtement de l'or, même si c'est au travers de la tâche peu ragoûtante de chasse à la prime. Je vais vous payer, mais moins que le montant annoncé. Pensez à rapporter l'autre si jamais vous la trouvez.~
 @1003 = ~La dernière des émeraudes ! Bon, c'est bien de vous voir essayer de gagner honnêtement de l'or, même si c'est au travers de la tâche peu ragoûtante de chasse à la prime. Je vais vous payer, mais moins que le montant annoncé. Nous allons conserver le reste au cas où vous décidiez de... d'altérer la vérité lors de futurs échanges.~
 @1004 = ~Je viens vous rapporter ce qui fait l'objet d'une prime et récupérer la récompense qui m'est due.~
+//#665 + #664
+@1005 = ~Nashkel n'a pas beaucoup de patience pour ceux qui volent ce que les autres ont gagné à la sueur de leur front. Je n'ai ni le temps ni l'envie de m'occuper de vous aujourd'hui.~
 
 //prism dialog
 @1100 = ~Comment osez-vous ! Comment osez-vous prendre l'éclat de ses yeux !~

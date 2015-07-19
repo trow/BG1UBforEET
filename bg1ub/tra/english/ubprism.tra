@@ -82,7 +82,9 @@ Only half of a reduced reward for turning in one of Prism's emeralds. A measly 7
 @1001 = ~The last of the emeralds! That will be another 150 gold bounty for you. Well, you'll make quite a name for yourself among the bounty hunters if you keep this up.  Whether it is for better or worse, I do not know.~
 @1002 = ~One of the emeralds! It is good to see you attempting to earn honest gold, even if it is through the unsavory task of bounty hunting. I shall pay you, though less than the posted amount. Be sure to bring the other if you should find it.~
 @1003 = ~The last of the emeralds! Well, it is good to see you attempting to earn honest gold, even if it is through the unsavory task of bounty hunting.  I shall pay you, though less than the posted amount.  We shall store the extra in case you decide to...alter the facts in any further dealings.~
-@1004 = ~I've come to turn in a bounty, and collect the reward that is duly mine.~
+@1004 = ~I've come to turn in a bounty and collect the reward that is duly mine.~
+// #665 + #664
+@1005 = ~Nashkel has precious little patience for those who would cheat others of their hard-earned livelihood. I have neither time nor will to deal with you today.~ 
 
 //prism dialog
 @1100 = ~How dare you! How dare you take the sparkle from her eyes!~

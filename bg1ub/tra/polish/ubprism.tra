@@ -109,6 +109,8 @@ Zwróci³am jeden ze szmaragdów Prisma, dostaj¹c za niego jedynie po³owê kwoty. Nê
 @1002 = ~Jeden ze szmaragdów! Dobrze widzieæ, ¿e próbujesz zarobiæ uczciwe pieni¹dze, nawet jeœli mia³oby to siê odbywaæ poprzez podejrzane zlecenia dla ³owców nagród. Zap³acê ci, choæ nie tyle, ile widnieje na og³oszeniu. Jeœli uda ci siê odnaleŸæ drugi, nie zapomnij go przynieœæ.~
 @1003 = ~Ostatni ze szmaragdów! Dobrze widzieæ, ¿e próbujesz zarobiæ uczciwe pieni¹dze, nawet jeœli mia³oby to siê odbywaæ poprzez podejrzane zlecenia dla ³owców nagród. Zap³acê ci, choæ nie tyle, ile widnieje na og³oszeniu. Dorzucimy coœ ponadto, jeœli zdecydujesz siê...nagi¹æ fakty podczas naszych przysz³ych kontaktów.~
 @1004 = ~Przyszed³em oddaæ zgubê i odebraæ nagrodê, która mi siê nale¿y.~ ~Przysz³am oddaæ zgubê i odebraæ nagrodê, która mi siê nale¿y.~
+//#665 + #664
+@1005 = ~Nashkel ma ju¿ doœæ takich, co oszukuj¹ innych i okradaj¹ ich z ciê¿ko zarobionych pieniêdzy. Nie mam ani czasu, ani nastroju, ¿eby siê wami zajmowaæ.~
 
 //prism dialog
 @1100 = ~Jak œmiesz! Jak œmiesz odbieraæ oczom jej tê iskrê!~

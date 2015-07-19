@@ -5138,6 +5138,27 @@ COMPILE EVALUATE_BUFFER ~...inlined/prism_compatibility.d~
 
 END
 
+// If you tricked Oublek into giving you Greywolf's gold and your reputation is low, he will refuse to deal with you.
+<<<<<<<< ...inlined/fix_oublek_denial.d
+ADD_TRANS_TRIGGER ~%tutu_var%oublek~ 10 ~ReactionLT(LastTalkedToBy(),NEUTRAL_LOWER)~ DO 0 UNLESS ~ReactionLT(LastTalkedToBy(),NEUTRAL_LOWER)~
+ADD_TRANS_ACTION ~%tutu_var%oublek~ BEGIN 5 END BEGIN 0 END ~EscapeArea()~ UNLESS ~EscapeArea()~
+ADD_TRANS_ACTION ~%tutu_var%oublek~ BEGIN 2 END BEGIN 0 END ~ReputationInc(-1)~ UNLESS ~ReputationInc(-1)~
+
+APPEND ~%tutu_var%oublek~
+IF ~~ THEN BEGIN AYOublekPatience
+  SAY @1005 //~Nashkel has precious little patience for those who would cheat others of their hard-earned livelihood. I have neither time nor will to deal with you today.~//#665 + #664
+  IF ~~ THEN DO ~SetGlobal("BroughtBounty","GLOBAL",1)~
+  EXIT
+END
+END // End the append
+
+EXTEND_BOTTOM ~%tutu_var%oublek~ 10
+IF ~Global("BroughtBounty","GLOBAL",0) ReactionGT(LastTalkedToBy(),HOSTILE_UPPER)~
+THEN REPLY @1004 GOTO AYOublekPatience
+END //end the extend bottom
+>>>>>>>>
+COMPILE EVALUATE_BUFFER ~...inlined/fix_oublek_denial.d~
+
 
 /*weidu isn't replacing the @# with a TRA ref after its been evaluted from a variable
 so we have to use a high number and replace again.  only affects BGT, Tutu, & BGEE*/

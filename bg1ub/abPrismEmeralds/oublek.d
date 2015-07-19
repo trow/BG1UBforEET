@@ -7,10 +7,6 @@ ADD_TRANS_TRIGGER ~%tutu_var%oublek~ 9 ~Global("OublekBounty1","GLOBAL",0) Globa
 ADD_TRANS_TRIGGER ~%tutu_var%oublek~ 10 ~Global("OublekBounty1","GLOBAL",0)~ DO 1 5 UNLESS ~Global("OublekBounty1","GLOBAL",0)~
 ADD_TRANS_TRIGGER ~%tutu_var%oublek~ 10 ~Global("OublekBounty2","GLOBAL",0)~ DO 9 5 UNLESS ~Global("OublekBounty2","GLOBAL",0)~
 
-//blocking Oublek's denial of payment dialog, since he will then talk to you again
-REPLACE_TRANS_TRIGGER ~%tutu_var%oublek~ BEGIN 10 END BEGIN 0 END ~Global("BroughtBounty","GLOBAL",0)~ ~False()~
-REPLACE_TRANS_TRIGGER ~%tutu_var%oublek~ BEGIN 10 END BEGIN END ~Global("BroughtBounty","GLOBAL",1)~ ~~
-
 //changing from one item to two ensures that players can not take advantage of dropping one item and trying to get the full reward twice
 // BG, BGT, Tutu
 REPLACE_TRANS_TRIGGER ~%tutu_var%oublek~ BEGIN 9 END BEGIN 1 END ~PartyHasItem("%tutu_var%MISC43")~ ~PartyHasItem("abgfEyeL") PartyHasItem("abgfEyeR")~
@@ -32,6 +28,7 @@ REPLACE_TRANS_ACTION ~%tutu_var%oublek~ BEGIN %BGT_DiffState% END BEGIN 0 END ~T
 %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5%~
 // BGEE
 REPLACE_TRANS_ACTION ~%tutu_var%oublek~ BEGIN %BGT_DiffState% END BEGIN 0 END ~TakePartyItemNum("misc43",2)~ ~TakePartyItem("abgfEyeL") TakePartyItem("abgfEyeR") AddJournalEntry(99999214%QUEST_DONE%) %ERASEJOURNALENTRY_PRISM_0% %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5% %ERASEJOURNALBGEE%~
+REPLACE_TRANS_ACTION ~%tutu_var%oublek~ BEGIN %BGT_DiffState% END BEGIN 0 END ~GivePartyGold(250)~ ~GivePartyGold(150)~
 
 // BG, BGT, Tutu
 REPLACE_TRANS_ACTION ~%tutu_var%oublek~ BEGIN 4 END BEGIN 0 END ~TakePartyItem("%tutu_var%MISC43")~ ~TakePartyItem("abgfEyeL") TakePartyItem("abgfEyeR") %ERASEJOURNALENTRY_PRISM_0% %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5%~
@@ -70,25 +67,25 @@ END
 //half reward states for those pretending to be greywolf
 IF ~~ THEN BEGIN abBBLeftEye
   SAY @1002 //~One of the Emeralds! It is good to see you attempting to earn honest gold, even if it is through the unsavory task of bounty hunting. I shall pay you, though less than the posted amount. Be sure to bring the other if you should find it.~//this is custom text
-  IF ~~ THEN DO ~AddexperienceParty(250) GivePartyGold(75) TakePartyItem("abgfEyeL") SetGlobal("abgf_LeftEyeBounty","GLOBAL",1)~
+  IF ~~ THEN DO ~AddexperienceParty(100) GivePartyGold(75) TakePartyItem("abgfEyeL") SetGlobal("abgf_LeftEyeBounty","GLOBAL",1)~
   %UNSOLVED_JOURNAL_1%
   EXIT
 END
 IF ~~ THEN BEGIN abBBRightEye
   SAY @1002 //~One of the Emeralds! It is good to see you attempting to earn honest gold, even if it is through the unsavory task of bounty hunting. I shall pay you, though less than the posted amount. Be sure to bring the other if you should find it.~//this is custom text
-  IF ~~ THEN DO ~AddexperienceParty(250) GivePartyGold(75) TakePartyItem("abgfEyeR") SetGlobal("abgf_RightEyeBounty","GLOBAL",1)~
+  IF ~~ THEN DO ~AddexperienceParty(100) GivePartyGold(75) TakePartyItem("abgfEyeR") SetGlobal("abgf_RightEyeBounty","GLOBAL",1)~
   %UNSOLVED_JOURNAL_1%
   EXIT
 END
 IF ~~ THEN BEGIN abBBLeftEyeLast
   SAY @1003 //~The last of the Emeralds! Well, it is good to see you attempting to earn honest gold, even if it is through the unsavory task of bounty hunting.  I shall pay you, though less than the posted amount.  We shall store the extra in case you decide to...alter the facts in any further dealings.~//this is custom text
-  IF ~~ THEN DO ~AddexperienceParty(250) GivePartyGold(75) TakePartyItem("abgfEyeL") SetGlobal("abgf_LeftEyeBounty","GLOBAL",1) SetGlobal("OublekBounty2","GLOBAL",1) %ERASEJOURNALENTRY_PRISM_0% %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5% %ERASEJOURNALBGEE%~
+  IF ~~ THEN DO ~AddexperienceParty(100) GivePartyGold(75) TakePartyItem("abgfEyeL") SetGlobal("abgf_LeftEyeBounty","GLOBAL",1) SetGlobal("OublekBounty2","GLOBAL",1) %ERASEJOURNALENTRY_PRISM_0% %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5% %ERASEJOURNALBGEE%~
   %SOLVED_JOURNAL_1%
   EXIT
 END
 IF ~~ THEN BEGIN abBBRightEyeLast
   SAY @1003 //~The last of the Emeralds! Well, it is good to see you attempting to earn honest gold, even if it is through the unsavory task of bounty hunting.  I shall pay you, though less than the posted amount.  We shall store the extra in case you decide to...alter the facts in any further dealings.~//this is custom text
-  IF ~~ THEN DO ~AddexperienceParty(250) GivePartyGold(75) TakePartyItem("abgfEyeR") SetGlobal("abgf_RightEyeBounty","GLOBAL",1) SetGlobal("OublekBounty2","GLOBAL",1) %ERASEJOURNALENTRY_PRISM_0% %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5% %ERASEJOURNALBGEE%~
+  IF ~~ THEN DO ~AddexperienceParty(100) GivePartyGold(75) TakePartyItem("abgfEyeR") SetGlobal("abgf_RightEyeBounty","GLOBAL",1) SetGlobal("OublekBounty2","GLOBAL",1) %ERASEJOURNALENTRY_PRISM_0% %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5% %ERASEJOURNALBGEE%~
   %SOLVED_JOURNAL_1%
   EXIT
 END

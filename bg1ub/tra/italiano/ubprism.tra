@@ -85,6 +85,8 @@ Solo metà di una ricompensa già ridotta per aver consegnato uno degli smeraldi d
 @1002 = ~Uno degli smeraldi! E' bello vedere che stai cercando di guardagnare soldi onestamente, anche se cacciare taglie è un lavoro riprovevole. Sarai pagato, ma meno di quanto stabilito. Se dovessi trovare anche l'altro portalo qui da me, mi raccomando.~
 @1003 = ~L'ultimo degli smeraldi! The last of the Emeralds! E' bello vedere che stai cercando di guardagnare soldi onestamente, anche se cacciare taglie è un lavoro riprovevole. Sarai pagato, ma meno di quanto stabilito.  Il resto sarà trattenuto come cauzione nel caso un giorno ti venga voglia di... "colorare" i fatti in qualche altro affare.~
 @1004 = ~Sono qui per una taglia, e collezionare la ricompensa che mi spetta.~
+//#665 + #664
+@1005 = ~Nashkel ha poca pazienza per coloro che fregano agli altri il necessario per vivere guadagnato con fatica. Oggi non ho né il tempo né la voglia di occuparmi di te.~
 
 //prism dialog
 @1100 = ~Come osi! Come osi privare i suoi occhi della luce!~

@@ -83,6 +83,8 @@ Das Zurückbringen eines von Prisms gestohlenen Smaragden brachte mir nur einen T
 @1002 = ~Einer der Smaragde! Es ist schön, zu sehen, dass Ihr auf ehrliche Weise versucht, Euer Gold zu verdienen, auch wenn es durch die Betätigung als unsäglicher Kopfgeldjäger ist. Ich bezahle Euch, doch weniger als der angekündigte Betrag. Bringt den anderen Smaragd auf alle Fälle ebenfalls her, wenn Ihr ihn findet.~
 @1003 = ~Der letzte fehlende Smaragd! Es ist schön, zu sehen, dass Ihr auf ehrliche Weise versucht, Euer Gold zu verdienen, auch wenn es durch die Betätigung als unsäglicher Kopfgeldjäger ist. Ich bezahle Euch, doch weniger als der angekündigte Betrag. Den Rest behalten wir ein, für den Fall, dass Ihr bei zukünftigen Geschäften den... Ausgang zu beeinflussen versucht.~
 @1004 = ~Ich bin gekommen, um meine Beute abzuliefern und die Belohnung abzuholen, die mir zusteht.~
+// #665 + #664
+@1005 = ~Wer andere um ihr sauer verdientes tägliches Brot betrügt, wird in Nashkell nicht auf sonderlich viel Nachsicht stoßen. Ich habe heute weder Zeit noch Lust, mich mit Euch zu beschäftigen.~
 
 //prism dialog
 @1100 = ~Wie könnt Ihr es wagen! Wie könnt Ihr es wagen, ihr das Funkeln der Augen zu entfernen!~
