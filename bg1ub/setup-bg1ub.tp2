@@ -276,7 +276,7 @@ MONSTHIT.EFF
 UNDEDHIT.EFF
 
 
-VERSION ~v14.0_beta_150718~
+VERSION ~v14.0_beta_150720~
 README ~bg1ub/BG1UB-Readme.html~
 
 ALWAYS
@@ -5458,4 +5458,71 @@ END
 LAF extend_area_script STR_VAR area="%EBaldursGate_ElfsongTavern_L1%" bottom=".../bg1ub/ub_ar0705tv.baf" END
 
 
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////
+/////Svlast, the fallen paladin
+/////by AstroBryGuy
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+BEGIN @4200 /* ~Svlast, the fallen paladin~ */
+FORBID_FILE ~override/JA#SVLST.CRE~ @90004
+
+LOAD_TRA "bg1ub/tra/%LANGUAGE%/ubsvlast.tra"
+
+COPY_EXISTING ~%FirewineBridge%.ARE~ ~override~
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 2350
+    	fj_loc_y          = 2225
+    	fj_dest_x         = 2350
+    	fj_dest_y         = 2225
+    	fj_animation      = 0x6100 // Fighter male human
+    	fj_orientation    = 2      // SE
+    	fj_schedule       = BIT23 | BIT22 | BIT21 | BIT5 | BIT4 | BIT3 | BIT2 | BIT1 | BIT0 // Appear only at night
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Svlast"
+    	fj_cre_resref     = UBSVLAST
+  	END
+BUT_ONLY
+
+COPY ~bg1ub/svlast/UBSVLAST.CRE~ override
+	LPM source_cre_sound_cleanup
+	LPM source_cre_script_cleanup
+	LPM cre_source_res
+	SAY NAME1 @4201 // ~Svlast~
+	SAY NAME2 @4201 // ~Svlast~
+	SAY INITIAL_MEETING @4202 // ~[LOTHANDER 2] My life is in shambles.~ [LOTHR02]
+	SAY DAMAGE @4203 // ~[LOTHANDER 3]~ [LOTHR03]
+	SAY DYING @4204 // ~[LOTHANDER 4]~ [LOTHR04]
+	SAY SELECT_COMMON1 @4202 // ~[LOTHANDER 2] My life is in shambles.~ [LOTHR02]
+	REMOVE_CRE_ITEMS
+	ADD_CRE_ITEM ~%tutu_var%PLAT01~ #0 #0 #0 ~IDENTIFIED~ ~armor~
+	ADD_CRE_ITEM ~%tutu_var%SHLD03~ #0 #0 #0 ~IDENTIFIED~ ~shield~
+	ADD_CRE_ITEM ~%tutu_var%SW1H02~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~ EQUIP
+
+COPY ~bg1ub/svlast/UBSVLREV.CRE~ override
+	LPM source_cre_sound_cleanup
+	LPM source_cre_script_cleanup
+	LPM cre_source_res
+	SAY NAME1 @4210 // ~Revenant~
+	SAY NAME2 @4210 // ~Revenant~
+	SAY BATTLE_CRY1 @4214 // ~[REVENANT 04] You... shall... pay...~ [%tutu_var%REVEN04]
+	SAY ATTACK1 @4215 // ~[REVENANT 05] ~ [%tutu_var%REVEN05]
+	SAY ATTACK2 @4216 // ~[REVENANT 06] ~ [%tutu_var%REVEN06]
+	SAY DAMAGE @4218 // ~[REVENANT 08] ~ [%tutu_var%REVEN08]
+	SAY DYING @4219 // ~[REVENANT 09] ~ [%tutu_var%REVEN09]
+	SAY SELECT_COMMON1 @4212 // ~[REVENANT 02] Must... revenge...~ [%tutu_var%REVEN02]
+	SAY EXISTANCE1 @4211 // ~[REVENANT 01] ~ [%tutu_var%REVEN01]
+	REMOVE_CRE_ITEMS
+	ADD_CRE_ITEM ~%tutu_var%IMMUNE1~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+	ADD_CRE_ITEM ~%tutu_var%RING95~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+	ADD_CRE_ITEM ~%tutu_var%REVENT2~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~ EQUIP
+
+COMPILE EVALUATE_BUFFER ~bg1ub/svlast/UBSVLAST.BAF~
+COMPILE EVALUATE_BUFFER ~bg1ub/svlast/UBSVLREV.BAF~
+LAF extend_area_script STR_VAR area="%FirewineBridge%" bottom="bg1ub/svlast/UB4500_SVL.BAF" END
+
+COMPILE EVALUATE_BUFFER ~bg1ub/svlast/UBSVLAST.D~
 

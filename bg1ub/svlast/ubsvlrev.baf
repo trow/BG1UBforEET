@@ -1,0 +1,73 @@
+IF
+	Global("UBSVLAST_ENC","GLOBAL",2)
+	See("ubsvlast")
+	Range([PC],30)
+THEN
+	RESPONSE #100
+		SetGlobal("UBSVLAST_ENC","GLOBAL",3)
+		StartDialogueNoSet("ubsvlast")
+END
+
+IF
+	AttackedBy([GOODCUTOFF],DEFAULT)
+	!Allegiance(Myself,ENEMY)
+THEN
+	RESPONSE #100
+		Enemy()
+		Continue()
+END
+
+IF
+	AttackedBy([ANYONE],DEFAULT)
+	Range(LastAttackerOf(Myself),5)
+THEN
+	RESPONSE #100
+		AttackReevaluate(LastAttackerOf(Myself),30)
+END
+
+IF
+	Global("UBSVLAST_ENC","GLOBAL",2)
+	!See("ubsvlast")
+THEN
+	RESPONSE #100
+		MoveToObject("ubsvlast")
+END
+
+IF
+	GlobalGT("UBSVLAST_ENC","GLOBAL",2)
+	See("ubsvlast")
+	Range("ubsvlast",5)
+THEN
+	RESPONSE #100
+		AttackReevaluate("ubsvlast",30)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	Range(LastSeenBy(Myself),5)
+THEN
+	RESPONSE #100
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	GlobalGT("UBSVLAST_ENC","GLOBAL",2)
+	See("ubsvlast")
+THEN
+	RESPONSE #100
+		MoveToObject("UBSVLAST")
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		MoveToObject(LastSeenBy(Myself))
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		MoveToObject("UBSVLAST")
+END

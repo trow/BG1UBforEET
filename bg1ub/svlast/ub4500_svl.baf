@@ -1,0 +1,32 @@
+IF
+	Global("UBSVLAST_ENC","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("UBSVLAST_ENC","GLOBAL",2)
+		CreateCreature("ubsvlrev",[2690.2140]%FACE_2%)
+END
+
+IF
+	GlobalGT("UBSVLAST_ENC","GLOBAL",2)
+	GlobalLT("UBSVLAST_ENC","GLOBAL",5)
+	Dead("ubsvlrev")
+	!Dead("ubsvlast")
+	!Allegiance("ubsvlast",ENEMY)
+THEN
+	RESPONSE #100
+		SetGlobal("UBSVLAST_ENC","GLOBAL",5)
+		ActionOverride("ubsvlast",MoveToObject(Player1))
+		Wait(2)
+		ActionOverride("ubsvlast",Dialog(Player1))
+END
+
+IF
+	GlobalGT("UBSVLAST_ENC","GLOBAL",2)
+	GlobalLT("UBSVLAST_ENC","GLOBAL",5)
+	!Dead("ubsvlrev")
+	Dead("ubsvlast")
+THEN
+	RESPONSE #100
+		SetGlobal("UBSVLAST_ENC","GLOBAL",6)
+		ActionOverride("ubsvlrev",StartDialogueNoSet(Player1))
+END
