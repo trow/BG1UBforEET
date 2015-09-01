@@ -5530,3 +5530,69 @@ COMPILE EVALUATE_BUFFER ~bg1ub/svlast/UBSVLREV.BAF~
 LAF extend_area_script STR_VAR area="%FirewineBridge%" bottom="bg1ub/svlast/UB4500_SVL.BAF" END
 
 COMPILE EVALUATE_BUFFER ~bg1ub/svlast/UBSVLAST.D~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////
+/////Mal-Kalen, the Ulcaster Ghost
+/////by AstroBryGuy
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+BEGIN ~Mal-Kalen, the Ulcaster Ghost~
+FORBID_FILE ~override/JA#MALKA.CRE~ @90004
+
+LOAD_TRA "bg1ub/malkal/ubmalkal.tra"
+
+COPY_EXISTING ~%UlcasterRuins%.ARE~ ~override~
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 2000
+    	fj_loc_y          = 950
+    	fj_dest_x         = 2000
+    	fj_dest_y         = 950
+    	fj_animation      = 0x6200 // Mage male human
+    	fj_orientation    = 6      // NW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Mal-Kalen"
+    	fj_cre_resref     = UBMALKAL
+  	END
+BUT_ONLY
+
+COPY ~bg1ub/malkal/UBMALKAL.CRE~ ~override/UBMALKAL.CRE~
+		~bg1ub/malkal/UBMALKAL.CRE~ ~override/UBMALKA2.CRE~
+	LPM source_cre_sound_cleanup
+	LPM source_cre_script_cleanup
+	LPM cre_dest_res
+	SAY NAME1 @4301 // ~Mal-Kalen~
+	SAY NAME2 @4301 // ~Mal-Kalen~
+	SAY DIALOG_DEFAULT @4303 // ~[MAL-KALEN 2] Release the body! Live again, I!~ [MALKL02]
+	SAY DAMAGE @4304 // ~[MAL-KALEN 3]~ [MALKL03]
+	SAY DYING @4305 // ~[MAL-KALEN 4]~ [MALKL04]
+	SAY EXISTANCE1 @4306 // ~[REVENANT 01] ~ [%tutu_var%REVEN01]
+	SAY BATTLE_CRY1 @4307 // ~[REVENANT 02] Must... revenge...~ [%tutu_var%REVEN02]
+	SAY BATTLE_CRY2 @4303 // ~[MAL-KALEN 2] Release the body! Live again, I!~ [MALKL02]
+	SAY ATTACK1 @4308 // ~[REVENANT 05] ~ [%tutu_var%REVEN05]
+	SAY ATTACK2 @4309 // ~[REVENANT 06] ~ [%tutu_var%REVEN06]
+	WRITE_ASCIIE DIALOG ~UBMALKAL~ #8 // dialogue
+    WRITE_ASCIIE SCRIPT_DEFAULT ~%tutu_scriptw%dasight~ #8 //  default script
+	REMOVE_CRE_ITEMS
+	ADD_CRE_ITEM ~%tutu_var%IMMUNE1~ #0 #0 #0 ~UNDROPPABLE~ ~lring~
+	ADD_CRE_ITEM ~%tutu_var%RING95~ #0 #0 #0 ~UNDROPPABLE~ ~rring~
+	ADD_CRE_ITEM ~%tutu_var%CLCK13~ #0 #0 #0 ~UNDROPPABLE~ ~armor~
+	ADD_CRE_ITEM ~UBMKHLM~ #0 #0 #0 ~UNDROPPABLE~ ~helmet~
+	ADD_CRE_ITEM ~UBMKATK~ #0 #0 #0 ~UNDROPPABLE~ ~weapon1~ EQUIP
+
+COPY_EXISTING ~UBMALKA2.CRE~ override
+	ADD_CRE_ITEM ~%tutu_var%mage01~ #0 #0 #0 ~UNDROPPABLE~ ~amulet~
+
+COPY ~bg1ub/malkal/UBMKHLM.ITM~ override
+COPY ~bg1ub/malkal/UBMKATK.ITM~ override
+COPY ~bg1ub/malkal/UBMKLIV.SPL~ override
+COPY ~bg1ub/malkal/UBMKDTH.SPL~ override
+
+COMPILE EVALUATE_BUFFER ~bg1ub/malkal/UBMALKAL.BAF~
+COMPILE EVALUATE_BUFFER ~bg1ub/malkal/UBMALKA2.BAF~
+
+COMPILE EVALUATE_BUFFER ~bg1ub/malkal/UBMALKAL.D~
