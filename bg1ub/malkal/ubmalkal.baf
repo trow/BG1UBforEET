@@ -1,0 +1,59 @@
+IF
+	Global("UBMALKAL_ENC","GLOBAL",1)
+	Die()
+THEN
+	RESPONSE #100
+		SetGlobal("UBMALKAL_ENC","GLOBAL",2)
+		ReallyForceSpellRES("UBMKDTH",Myself)
+END
+
+IF
+	NumTimesTalkedTo(0)
+	See([PC])
+THEN
+	RESPONSE #100
+		StartDialogueNoSet(LastSeenBy(Myself))
+END
+
+IF
+	Global("UBMALKAL_ENC","GLOBAL",1)
+	!GlobalTimerNotExpired("prep","LOCALS")
+	See(NearestEnemyOf(Myself))
+	Allegiance(Myself,ENEMY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("prep","LOCALS",2400)
+		SetGlobalTimer("UBMALKAL_FEAR","LOCALS",60)
+		ReallyForceSpell(Myself,WIZARD_ANIMATE_DEAD) // SPWI501.SPL (Animate Dead)
+		ReallyForceSpell(LastSeenBy(Myself),WIZARD_HORROR) // SPWI205.SPL (Horror)
+		Wait(1)
+END
+
+IF
+	Global("UBMALKAL_ENC","GLOBAL",1)
+	!GlobalTimerNotExpired("UBMALKAL_FEAR","LOCALS")
+	See(NearestEnemyOf(Myself))
+	!StateCheck(LastSeenBy(Myself),STATE_PANIC)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("UBMALKAL_FEAR","LOCALS",60)
+		ReallyForceSpell(LastSeenBy(Myself),WIZARD_HORROR) // SPWI205.SPL (Horror)
+		Wait(1)
+END
+
+IF
+	Global("UBMALKAL_ENC","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("UBMALKAL_ENC","GLOBAL",6)
+		ReallyForceSpellRES("UBMKLIV",Myself)
+END
+
+IF
+	Global("UBMALKAL_ENC","GLOBAL",6)
+	Detect([PC])
+THEN
+	RESPONSE #100
+		SetGlobal("UBMALKAL_ENC","GLOBAL",7)
+		StartDialogNoSet(LastSeenBy(Myself))
+END
