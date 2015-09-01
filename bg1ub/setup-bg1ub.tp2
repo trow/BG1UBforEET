@@ -5442,8 +5442,8 @@ BEGIN @4100 /* ~Restored Elfsong Tavern Movie~ */
 REQUIRE_PREDICATE (!GAME_IS ~bgee~) @4101 // Unavailable for BGEE
 FORBID_FILE ~data/JA#TAVER.MVE~ @90004
 
-/* Copy movie file */
-COPY ~bg1ub/tavern/ubtavern.mve~ ~override~
+/* Copy movie file - SKIP - MAKE_BIFF INSTEAD */
+//COPY ~bg1ub/tavern/ubtavern.mve~ ~override~
 
 /* Edit Elfsong area script */
 <<<<<<<< .../bg1ub/ub_ar0705tv.baf
@@ -5459,6 +5459,8 @@ END
 
 LAF extend_area_script STR_VAR area="%EBaldursGate_ElfsongTavern_L1%" bottom=".../bg1ub/ub_ar0705tv.baf" END
 
+/* Install movie file (must be added as .bif) */
+MAKE_BIFF UBTAVERN BEGIN ~bg1ub/tavern/ubtavern.mve~ END
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
