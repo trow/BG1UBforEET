@@ -15,7 +15,7 @@ END
 IF ~~ THEN BEGIN 2 // from:
   SAY @4222 // ~I was a paladin, once. I fought on the side of good but it all comes to naught... I murdered him in cold blood, my brother in the faith... When he comes, let him be.~ #14891 - MODIFIED
   IF ~~ THEN REPLY @4242 // ~Are you mad? I will not simply stand by and let this creature kill you!~ 
-  	DO ~SetGlobal("UBSVLAST_ENC","GLOBAL",1)~ JOURNAL @4290 EXIT
+  	DO ~SetGlobal("UBSVLAST_ENC","GLOBAL",1) SetGlobal("UBSVLAST_ASSIST","GLOBAL",1)~ JOURNAL @4290 EXIT
   IF ~~ THEN REPLY @4243 // ~As you wish. I do not agree with your decision, but if it is your choice to die by this creature's hand, I will not stand in the way.~ 
   	DO ~SetGlobal("UBSVLAST_ENC","GLOBAL",1)~ JOURNAL @4290 EXIT
   IF ~~ THEN REPLY @4244 // ~No problem. This is between you and him. I want no part of it!~ 

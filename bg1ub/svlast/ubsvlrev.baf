@@ -9,6 +9,17 @@ THEN
 END
 
 IF
+	Global("UBSVLAST_ENC","GLOBAL",4)
+	Global("UBSVLAST_ASSIST","GLOBAL",1)
+	!Allegiance(Myself,ENEMY)
+THEN
+	RESPONSE #100
+		SetGlobal("UBSVLAST_ASSIST","GLOBAL",2)
+		Enemy()
+		Continue()
+END
+
+IF
 	AttackedBy([GOODCUTOFF],DEFAULT)
 	!Allegiance(Myself,ENEMY)
 THEN
