@@ -3517,6 +3517,10 @@ COPY_EXISTING ~%tutu_var%HOBGO5.CRE~ ~override~ // Hobgoblin, AR4200
   WRITE_ASCIIE 0x2cc ~%tutu_var%HOBGO5~ #8 // Sets his dialog file
 BUT_ONLY
 
+// Corrections to Lahl's dialog on Isle of Balduran
+ACTION_IF (GAME_IS ~totsc tutu_totsc bgt~) THEN BEGIN
+	COMPILE EVALUATE_BUFFER ~/bg1ub/dialogues/ublahl.d~
+END // Lahl correction
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
