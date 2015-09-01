@@ -2634,6 +2634,7 @@ BUT_ONLY
 
 END
 
+
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -3515,6 +3516,7 @@ COPY_EXISTING ~%tutu_var%HOBGO5.CRE~ ~override~ // Hobgoblin, AR4200
   WRITE_BYTE 0x272 0x6f // Sets his race as Hobgoblin
   WRITE_ASCIIE 0x2cc ~%tutu_var%HOBGO5~ #8 // Sets his dialog file
 BUT_ONLY
+
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -5516,13 +5518,15 @@ COPY ~bg1ub/svlast/UBSVLREV.CRE~ override
 	SAY SELECT_COMMON1 @4212 // ~[REVENANT 02] Must... revenge...~ [%tutu_var%REVEN02]
 	SAY EXISTANCE1 @4211 // ~[REVENANT 01] ~ [%tutu_var%REVEN01]
 	REMOVE_CRE_ITEMS
-	ADD_CRE_ITEM ~%tutu_var%IMMUNE1~ #0 #0 #0 ~IDENTIFIED~ ~lring~
-	ADD_CRE_ITEM ~%tutu_var%RING95~ #0 #0 #0 ~IDENTIFIED~ ~rring~
-	ADD_CRE_ITEM ~%tutu_var%REVENT2~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~ EQUIP
+	ADD_CRE_ITEM ~%tutu_var%IMMUNE1~ #0 #0 #0 ~UNDROPPABLE~ ~lring~
+	ADD_CRE_ITEM ~%tutu_var%RING95~ #0 #0 #0 ~UNDROPPABLE~ ~rring~
+	ADD_CRE_ITEM ~%tutu_var%REVENT2~ #0 #0 #0 ~UNDROPPABLE~ ~weapon1~ EQUIP
+	ADD_CRE_ITEM ~UBSVLHLM~ #0 #0 #0 ~UNDROPPABLE~ ~helmet~
+
+COPY ~bg1ub/svlast/UBSVLHLM.ITM~ override
 
 COMPILE EVALUATE_BUFFER ~bg1ub/svlast/UBSVLAST.BAF~
 COMPILE EVALUATE_BUFFER ~bg1ub/svlast/UBSVLREV.BAF~
 LAF extend_area_script STR_VAR area="%FirewineBridge%" bottom="bg1ub/svlast/UB4500_SVL.BAF" END
 
 COMPILE EVALUATE_BUFFER ~bg1ub/svlast/UBSVLAST.D~
-
