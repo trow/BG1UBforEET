@@ -88,7 +88,7 @@ Sólo conseguí una recompensa reducida por llevar una de las esmeraldas de Prism.
 @1003 = ~¡La última esmeralda! Qué bueno veros intentar ganar dinero limpiamente, aunque sea haciendo de cazarrecompensas.  Os pagaré menos de lo anunciado.  Nos quedaremos con el resto en caso de que decidáis... alterar los hechos en otros negocios.~
 @1004 = ~He venido a cobrar una recompensa.~
 //#665 + #664
-@1005 - ~Nashkel tiene muy poca paciencia para los que engañan a otros contándoles su difícil sustento. No tengo tiempo ni ganas de tratar con vos hoy.~
+@1005 = ~Nashkel tiene muy poca paciencia para los que engañan a otros contándoles su difícil sustento. No tengo tiempo ni ganas de tratar con vos hoy.~
 
 //prism dialog
 @1100 = ~¡Cómo os atrevéis! ¡Cómo os atrevéis a quitar el brillo de sus ojos!~
