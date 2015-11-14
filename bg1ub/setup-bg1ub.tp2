@@ -5465,7 +5465,7 @@ END
 LAF extend_area_script STR_VAR area="%EBaldursGate_ElfsongTavern_L1%" bottom=".../bg1ub/ub_ar0705tv.baf" END
 
 /* Install movie file (must be added as .bif) */
-MAKE_BIFF UBTAVERN BEGIN ~bg1ub/tavern/ubtavern.mve~ END
+MAKE_BIFF UBTAVERN BEGIN ~bg1ub/tavern/~ ~ubtavern.mve~ END
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -5549,7 +5549,7 @@ COMPILE EVALUATE_BUFFER ~bg1ub/svlast/UBSVLAST.D~
 BEGIN ~Mal-Kalen, the Ulcaster Ghost~
 FORBID_FILE ~override/JA#MALKA.CRE~ @90004
 
-LOAD_TRA "bg1ub/malkal/ubmalkal.tra"
+LOAD_TRA "bg1ub/tra/%LANGUAGE%/ubmalkal.tra"
 
 COPY_EXISTING ~%UlcasterRuins%.ARE~ ~override~
 	LPF fj_are_structure
