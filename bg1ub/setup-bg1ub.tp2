@@ -1220,6 +1220,12 @@ COPY_EXISTING ~%ESewers%.ARE~ ~override~
   END
 BUT_ONLY
 
+/* BGEE Only: Remove RING19MA from SewerOgre since we replace it with UBSCARIN for the quest */
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+	COPY_EXISTING ~OGRMBA.CRE~ ~override~
+		REMOVE_CRE_ITEM ~RING19MA~
+	BUT_ONLY
+END
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\

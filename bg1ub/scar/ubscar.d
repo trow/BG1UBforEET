@@ -116,6 +116,8 @@ Combined with the existing (v12) "bring the dead girl's body" quest extention.
 New custom ring: UBSCARIN.itm in AR0226 ESewers */
 
 REPLACE_TRANS_TRIGGER %tutu_var%Scar BEGIN 32 END BEGIN 1 END ~PartyHasItem("%tutu_var%RING19")~ ~False()~ 
+/* For BGEE, which made the Sashenstar ring unique */
+REPLACE_TRANS_TRIGGER %tutu_var%Scar BEGIN 32 END BEGIN 1 END ~PartyHasItem("RING19MA")~ ~False()~ 
 
 
 EXTEND_BOTTOM %tutu_var%Scar 32
@@ -204,6 +206,12 @@ REPLACE_TRANS_ACTION %tutu_var%SCAR
 BEGIN AlreadyHaveBody END
 BEGIN 0 END
 ~TakePartyItem("%tutu_var%RING19")~ ~TakePartyItem("UBFEBODY") SetGlobal("ScarBodyFetch","GLOBAL",3)~
+
+/* For BGEE, which made the Sashenstar ring unique */
+REPLACE_TRANS_ACTION %tutu_var%SCAR
+BEGIN AlreadyHaveBody END
+BEGIN 0 END
+~TakePartyItem("RING19MA")~ ~TakePartyItem("UBFEBODY") SetGlobal("ScarBodyFetch","GLOBAL",3)~
 
 REPLACE_TRANS_ACTION %tutu_var%SCAR
 BEGIN NoWay END
