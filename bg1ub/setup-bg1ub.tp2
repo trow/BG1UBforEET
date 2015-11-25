@@ -276,7 +276,7 @@ MONSTHIT.EFF
 UNDEDHIT.EFF
 
 
-VERSION ~v14.0_beta_151114~
+VERSION ~v14.0_beta_151125~
 README ~bg1ub/BG1UB-Readme.html~
 
 ALWAYS
@@ -434,12 +434,12 @@ LANGUAGE ~Deutsch~ // Timothy
 	 ~bg1ub/tra/deutsch/setup.tra~
      ~bg1ub/tra/deutsch/setup.tra~
 
-LANGUAGE ~EspaÒol~ // Immortality (clandlan.net)
+LANGUAGE ~Espanol~ // Immortality (clandlan.net)
 	 ~espanol~
 	 ~bg1ub/tra/espanol/setup.tra~
      ~bg1ub/tra/espanol/bg1ub.tra~
 
-LANGUAGE ~FranÁais~ // IronFistedGiant, Isaya
+LANGUAGE ~Francais~ // IronFistedGiant, Isaya
 	 ~francais~
 	 ~bg1ub/tra/francais/setup.tra~
      ~bg1ub/tra/francais/bg1ub.tra~
@@ -449,7 +449,7 @@ LANGUAGE ~Italiano~ // Andrea Colombo, Stone Angel, ilot, Salk
 	 ~bg1ub/tra/italiano/setup.tra~
      ~bg1ub/tra/italiano/bg1ub.tra~
 
-LANGUAGE ~ê„··™®© (Russian)~ // by aerie.ru & Darktech (now maintained by arcanecoast.ru team)
+LANGUAGE ~Russian~ // by aerie.ru & Darktech (now maintained by arcanecoast.ru team)
      ~russian~
      ~bg1ub/tra/russian/setup.tra~
      ~bg1ub/tra/russian/bg1ub.tra~
