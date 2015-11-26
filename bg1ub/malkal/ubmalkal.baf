@@ -4,7 +4,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("UBMALKAL_ENC","GLOBAL",2)
-		ReallyForceSpellRES("UBMKDTH",Myself)
+		ForceSpellRES("UBMKDTH",Myself)
 END
 
 IF
@@ -46,7 +46,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("UBMALKAL_ENC","GLOBAL",6)
-		ReallyForceSpellRES("UBMKLIV",Myself)
+		ForceSpellRES("UBMKLIV",Myself)
 END
 
 IF

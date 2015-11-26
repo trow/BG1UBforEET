@@ -285,6 +285,14 @@ ALWAYS
   INCLUDE ~bg1ub/lib/are_project_functions.tpa~
   APPEND ~state.ids~ ~0x00000FC0 STATE_REALLY_DEAD~ UNLESS ~STATE_REALLY_DEAD~
 
+  ACTION_IF GAME_IS ~bg1 totsc~ BEGIN
+	OUTER_SPRINT UBFaceObject ~ForceSpellRES("UBFACE",~
+	COPY ~bg1ub/lib/UBFACE.SPL~ ~override~
+  END ELSE BEGIN
+	OUTER_SPRINT UBFaceObject ~FaceObject(~
+  END	
+
+
 // @@@ Support for polish translation @@@
     //set the proper values of string variables
   OUTER_SPRINT "Z!PL_TRA_Patch" "bg1ub/tra/polish"
@@ -340,7 +348,7 @@ ALWAYS
 		/* Extra stuff needed for cross platform code: BG1 with TotSC installed */
 		ACTION_IF GAME_IS ~totsc~ THEN BEGIN
      		INCLUDE ~bg1ub/lib/rr_totsc_addvars.tpa~
-     		APPEND ~action.ids~ ~181 ForceSpellRES(S:RES*, O:Target)~ UNLESS ~ForceSpellRES~
+     		APPEND ~action.ids~ ~113 ForceSpellRES(S:RES*, O:Target)~ UNLESS ~ForceSpellRES~
 		END ELSE BEGIN
 			/* BG1 without TotSC installed */
      		INCLUDE ~bg1ub/lib/rr_bg1_addvars.tpa~
@@ -3526,7 +3534,7 @@ BUT_ONLY
 
 // Corrections to Lahl's dialog on Isle of Balduran
 ACTION_IF (GAME_IS ~totsc tutu_totsc bgt~) THEN BEGIN
-	COMPILE EVALUATE_BUFFER ~/bg1ub/dialogues/ublahl.d~
+	COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/ublahl.d~
 END // Lahl correction
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\

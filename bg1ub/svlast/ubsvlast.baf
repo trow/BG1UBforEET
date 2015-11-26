@@ -43,7 +43,9 @@ IF
 	See("ubsvlrev")
 THEN
 	RESPONSE #100
-		FaceObject("ubsvlrev")
+		%UBFaceObject%"ubsvlrev")
+		Wait(1)
+		NoAction()
 END
 
 IF
