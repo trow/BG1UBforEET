@@ -17,7 +17,7 @@ THEN
 		SetGlobal("UBSVLAST_ENC","GLOBAL",5)
 		ActionOverride("ubsvlast",MoveToObject(Player1))
 		Wait(2)
-		ActionOverride("ubsvlast",Dialog(Player1))
+		ActionOverride("ubsvlast",Dialogue(Player1))
 END
 
 IF

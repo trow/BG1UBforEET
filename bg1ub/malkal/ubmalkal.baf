@@ -55,5 +55,5 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("UBMALKAL_ENC","GLOBAL",7)
-		StartDialogNoSet(LastSeenBy(Myself))
+		StartDialogueNoSet(LastSeenBy(Myself))
 END
