@@ -276,7 +276,7 @@ MONSTHIT.EFF
 UNDEDHIT.EFF
 
 
-VERSION ~v14.0_beta_151125~
+VERSION ~v14.0_beta_151127~
 README ~bg1ub/BG1UB-Readme.html~
 
 ALWAYS
@@ -287,7 +287,9 @@ ALWAYS
 
   ACTION_IF GAME_IS ~bg1 totsc~ BEGIN
 	OUTER_SPRINT UBFaceObject ~ForceSpellRES("UBFACE",~
-	COPY ~bg1ub/lib/UBFACE.SPL~ ~override~
+	ACTION_IF !(FILE_EXISTS_IN_GAME ~ubface.spl~) BEGIN
+		COPY ~bg1ub/lib/UBFACE.SPL~ ~override~
+	END
   END ELSE BEGIN
 	OUTER_SPRINT UBFaceObject ~FaceObject(~
   END	
