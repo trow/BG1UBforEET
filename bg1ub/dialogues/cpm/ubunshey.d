@@ -6,7 +6,7 @@ ADD_STATE_TRIGGER ~%tutu_var%unshey~ 5 ~Global("UBHelpUnshey","GLOBAL",1)~
 
 REPLACE_STATE_TRIGGER ~%tutu_var%unshey~ 0 ~Global("UBHelpUnshey","GLOBAL",0) ReactionLT(LastTalkedToBy,NEUTRAL_LOWER)~
 REPLACE_STATE_TRIGGER ~%tutu_var%unshey~ 1 ~Global("UBHelpUnshey","GLOBAL",0) ReactionGT(LastTalkedToBy,HOSTILE_UPPER)~
-REPLACE_STATE_TRIGGER ~%tutu_var%unshey~ 2 ~Global("UBHelpUnshey","GLOBAL",1) !PartyHasItem("BELT04") !PartyHasItem("BELT05")~
+REPLACE_STATE_TRIGGER ~%tutu_var%unshey~ 2 ~Global("UBHelpUnshey","GLOBAL",1) !PartyHasItem("BELT04")~
 REPLACE_STATE_TRIGGER ~%tutu_var%unshey~ 3 ~Global("UBHelpUnshey","GLOBAL",1) !PartyHasItem("BELT04") PartyHasItem("BELT05") !HasItemEquiped("%tutu_var%BELT05",Player1) !HasItemEquiped("%tutu_var%BELT05",Player2)
 !HasItemEquiped("%tutu_var%BELT05",Player3)
 !HasItemEquiped("%tutu_var%BELT05",Player4)
