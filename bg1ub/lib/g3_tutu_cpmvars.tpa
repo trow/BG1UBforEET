@@ -69,6 +69,7 @@
     OUTER_SPRINT "BGTViconiaState583" "8"
     OUTER_SPRINT "BGTViconiaState584" "9"
     OUTER_SPRINT "BGTViconiaState585" "10"
+    OUTER_SPRINT "HentoldState12" "12"
 
     /* Set Post Dialogue Files */
     OUTER_SPRINT "AJANTIS_POST" "_AJANTP"

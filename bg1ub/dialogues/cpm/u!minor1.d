@@ -68,9 +68,10 @@ HasItem("%tutu_var%POTN40",Myself)~ //8
 ADD_STATE_TRIGGER %tutu_var%HALFG6 9 ~HasItem("%tutu_var%SLNG02",Myself)~ UNLESS ~HasItem("SLNG02",Myself)~
 ADD_TRANS_ACTION %tutu_var%HALFG6 BEGIN 9 END BEGIN 0 END ~GiveItem("%tutu_var%SLNG02",LastTalkedToBy)~ UNLESS ~GiveItem("SLNG02",LastTalkedToBy)~
 
-//considers BGT compatibility 
-ADD_STATE_TRIGGER %tutu_var%HENTOL 12 ~HasItem("%tutu_var%DAGG03",Myself)~ UNLESS ~HasItem("DAGG03",Myself)~
-ADD_TRANS_ACTION %tutu_var%HENTOL BEGIN 12 END BEGIN 0 END ~SetGlobal("HELPHENTOLD","GLOBAL",1)
+//considers BGT and BGEE compatibility 
+ADD_STATE_TRIGGER %tutu_var%HENTOL %HentoldState12% ~HasItem("%tutu_var%DAGG03",Myself)~ UNLESS ~HasItem("DAGG03",Myself)~
+REPLACE_TRANS_ACTION %tutu_var%HENTOL BEGIN %HentoldState12% END BEGIN 0 END ~GiveItem("%tutu_var%DAGG03",LastTalkedToBy)~ ~SetGlobal("HelpHentold","GLOBAL",1) GiveItem("DAGG03",LastTalkedToBy) EscapeArea()~ UNLESS ~SetGlobal("HelpHentold","GLOBAL",1)~
+ADD_TRANS_ACTION %tutu_var%HENTOL BEGIN %HentoldState12% END BEGIN 0 END ~SetGlobal("HELPHENTOLD","GLOBAL",1)
 GiveItem("%tutu_var%DAGG03",LastTalkedToBy)
 EscapeArea()~ UNLESS ~GiveItem("DAGG03",LastTalkedToBy)~
 
