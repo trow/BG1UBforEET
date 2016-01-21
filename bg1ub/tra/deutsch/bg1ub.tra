@@ -180,6 +180,12 @@ Mindeststärke: 10
 Fertigkeit: Axt
 Typ: 1-händig~
 
+// Unshey Dialog Restoration
+@120 = ~Oberkleriker Unsheys praktischer Leitfaden der Körperhygiene~
+@121 = ~Ein typisches Handbuch der Gesundheit enthält wertvolle Informationen zu vorbeugender Medizin, grundlegenden Erste-Hilfe-Maßnahmen und Wegen zur Stärkung der Muskulatur.
+
+Gewicht: 2~
+
 // Ice Island Level 2 Restoration
 @1001 = ~Snow Golem~
 @1002 = ~Snow Golem Breath~

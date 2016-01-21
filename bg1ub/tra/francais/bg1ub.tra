@@ -160,6 +160,12 @@ Facteur de vitesse : 7
 Type de compétence : hache
 Type : à une main~
 
+// Unshey Dialog Restoration
+@120 = ~Guide Pratique de Santé Corporelle du Grand Clerc Unshey~
+@121 = ~Un manuel de santé corporelle traditionnel fournit au lecteur des informations précieuses sur la médecine préventive, les premiers soins d'urgence et la tonicité musculaire.
+
+Poids: 2~
+
 // Ice Island Level 2 Restoration
 @1001 = ~Snow Golem~
 @1002 = ~Snow Golem Breath~

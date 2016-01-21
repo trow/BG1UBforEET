@@ -3467,7 +3467,6 @@ ACTION_IF !GAME_IS ~bg1 totsc~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/u!minor1.d~
   COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/u!ch7.d~
   COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/ubhobgo5.baf~
-  COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/ubunshey.d~
 END ELSE BEGIN
   COMPILE ~bg1ub/dialogues/u!minor1.d~
   COMPILE ~bg1ub/dialogues/u!ch7.d~
@@ -3538,6 +3537,16 @@ BUT_ONLY
 ACTION_IF (GAME_IS ~totsc tutu_totsc bgt~) THEN BEGIN
 	COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/ublahl.d~
 END // Lahl correction
+
+// Restoration of Unshey Dialogs on Girdle of Gender Bender
+ACTION_IF !GAME_IS ~bg1 totsc~ THEN BEGIN
+  COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/ubunshey.d~
+  COPY_EXISTING ~%tutu_var%BOOK09.ITM~ ~override/ubunbook.itm~
+  	SAY NAME2 @120
+  	SAY UNIDENTIFIED_DESC @121
+  	WRITE_LONG 0x4c 2  // Weight
+  	WRITE_LONG 0x34 50 // Price 
+END
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
