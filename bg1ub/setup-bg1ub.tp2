@@ -5581,6 +5581,13 @@ COPY_EXISTING ~%UlcasterRuins%.ARE~ ~override~
     	fj_name           = "Mal-Kalen"
     	fj_cre_resref     = UBMALKAL
   	END
+  	LPF ADD_AREA_ITEM
+  		INT_VAR
+  		container_to_add_to = 4
+  		STR_VAR
+  		item_to_add         = EVAL ~%tutu_var%misc80~
+  		flags               = ~IDENTIFIED~
+  	END
 BUT_ONLY
 
 COPY ~bg1ub/malkal/UBMALKAL.CRE~ ~override/UBMALKAL.CRE~

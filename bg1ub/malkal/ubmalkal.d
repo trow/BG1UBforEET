@@ -60,8 +60,8 @@ IF ~~ THEN BEGIN 5 // from: 4.0
   	DO ~TakePartyItem("%tutu_var%misc65") DestroyItem("%tutu_var%misc65") SetGlobal("UBMalKal_Enc","GLOBAL",5)~ EXIT 
   IF ~PartyHasItem("%tutu_var%misc66")~ THEN REPLY @4326 // ~Wait! You can take the body of Nathan. Just leave me be!~ 
   	DO ~TakePartyItem("%tutu_var%misc66") DestroyItem("%tutu_var%misc66") SetGlobal("UBMalKal_Enc","GLOBAL",5)~ EXIT 
-  IF ~PartyHasItem("%tutu_var%misc67")~ THEN REPLY @4327 // ~Wait! You can take the body of Farmer Brun's son. Just leave me be!~ 
-  	DO ~TakePartyItem("%tutu_var%misc67") DestroyItem("%tutu_var%misc67") SetGlobal("UBMalKal_Enc","GLOBAL",5)~ EXIT 
+  IF ~PartyHasItem("%tutu_var%misc90")~ THEN REPLY @4327 // ~Wait! You can take the body of Chelak. Just leave me be!~ 
+  	DO ~TakePartyItem("%tutu_var%misc90") DestroyItem("%tutu_var%misc90") SetGlobal("UBMalKal_Enc","GLOBAL",5)~ EXIT 
   IF ~PartyHasItem("%tutu_var%misc79")~ THEN REPLY @4328 // ~Wait! You can take the body of this woman. Just leave me be!~ 
   	DO ~TakePartyItem("%tutu_var%misc79") DestroyItem("%tutu_var%misc79") SetGlobal("UBMalKal_Enc","GLOBAL",5)~ EXIT 
   IF ~PartyHasItem("%tutu_var%misc80")~ THEN REPLY @4329 // ~Wait! You can take the body of this man. Just leave me be!~ 
