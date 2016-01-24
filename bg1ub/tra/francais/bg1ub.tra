@@ -6,7 +6,7 @@
 @16   = ~Ceci est le corps d'une femme noble.~
 @19   = ~Gants de Pickpocket~
 @20   = ~Gants de Pickpocket
-Il y a quelques années, Fong Moo, un fameux pickpocket connu à la Porte de Baldur et à Athkatla, fut retrouvé mort sur la route entre la Porte et Berégost. Il semble qu'il avait volé un artefact d'un mage puissant et avait essayé de s'échapper, sans succès. Ses biens furent remis à un neveu, qui fit le même choix de carrière que son oncle, et qui devint particulièrement excellent en vol à la tire. Nul ne sait si les gants étaient magiques avant de tomber entre les mains de Fong ou s'ils se sont imprégnés d'une façon ou d'une autre de l'essence du maître.
+Il y a quelques années, Fong Moo, un fameux pickpocket connu à la Porte de Baldur et à Athkatla, fut retrouvé mort sur la route entre la Porte et Bérégost. Il semble qu'il avait volé un artefact d'un mage puissant et avait essayé de s'échapper, sans succès. Ses biens furent remis à un neveu, qui fit le même choix de carrière que son oncle, et qui devint particulièrement excellent en vol à la tire. Nul ne sait si les gants étaient magiques avant de tomber entre les mains de Fong ou s'ils se sont imprégnés d'une façon ou d'une autre de l'essence du maître.
 
 PARAMÈTRES
 
@@ -58,7 +58,7 @@ Dégâts : 1D8
 Type de dégâts : tranchant
 
 Spécial : le fourvoiement magique affecte la victime à chaque coup réussi.
-Fourvoiement magique : toute créature capable de jeter des sorts et affectée par ce sort voit son pouvoir d'incantation sérieusement diminué. Lorsqu'elle essaie de jeter un sort, ce dernier échoue huit fois sur dix. Les créatures peuvent effectuer des jets de sauvegarde contre les sorts pour se prémunir contre cet effet, mais moyennant une pénalité de - 2.
+Fourvoiement magique : toute créature capable de jeter des sorts et affectée par ce sort voit son pouvoir d'incantation sérieusement diminué. Lorsqu'elle essaie de jeter un sort, ce dernier échoue huit fois sur dix. Les créatures peuvent effectuer des jets de sauvegarde contre les sorts pour se prémunir contre cet effet, mais moyennant une pénalité de -2.
 
 Poids : 6
 Facteur de vitesse : 7
@@ -74,12 +74,12 @@ Non utilisable par :
 PARAMETRES :
 
 Poids : 30~
-@98   = ~D'un blanc immaculé, la peau du loup des glaces est aussi douce que son pelage est abondant. Elle sert à la fabrication de vêtements aussi dissemblables que les pelisses des barbares uthgardt et les délicates étoles prisées par les femmes nobles de toute la région de la Côte des Epées.
+@98   = ~D'un blanc immaculé, la peau du loup des glaces est aussi douce que son pelage est abondant. Elle sert à la fabrication de vêtements aussi dissemblables que les pelisses des barbares uthgardts et les délicates étoles prisées par les femmes nobles de toute la région de la Côte des Epées.
 
 PARAMETRES :
 
 Poids : 10~
-@99   = ~L'ankheg est un insecte fouisseur qui mesure de 3 à 6 mètres de long et que l'on croise surtout dans les forêts ou sur les meilleures terres cultivées. Il est couvert de plaques ou d'écailles de chitine, un matériau  extrèmement dur et léger. Taille, poids et résistance de ces écailles en font un matériau de choix pour les utilisations les plus variées, y compris en armurerie.
+@99   = ~L'ankheg est un insecte fouisseur qui mesure de 3 à 6 mètres de long et que l'on croise surtout dans les forêts ou sur les meilleures terres cultivées. Il est couvert de plaques ou d'écailles de chitine, un matériau extrêmement dur et léger. Taille, poids et résistance de ces écailles en font un matériau de choix pour les utilisations les plus variées, y compris en armurerie.
 
 PARAMETRES :
 
@@ -125,9 +125,9 @@ Le 6 Martel 1368 : Le Poing Enflammé a finalement commencé à remarquer notre pet
 
 Le 9 Martel 1368 : J'ai décidé de prendre du temps pour effectuer ma visite à Château-Suif. J'ai attendu longtemps avant de me mettre à la recherche des prophéties d'Alaundo et je veux savoir si les rêves disent la vérité. Je ne croirai pas les paroles de fantômes sans preuves et le prêtre de Bhaal que j'ai interrogé ne m'a rien appris. Il était vieux et est mort rapidement sous mon étreinte. Si les paroles sont vraies, je devrai certainement m'attirer des acolytes plus forts que lui.
 
-Le 14 Alturiak 1368 : A Château-Suif enfin, et les moines se montrent vraiment serviables. D'après ce que j'ai pu lire, il n'y aucun doute que le sang de Bhaal coule vraiment dans mes veines. Les prophéties d'Alaundo sont, naturellement, tout sauf explicites, mais je pense être en mesure de les interpréter. Bhaal avait prévu sa mort prochaine et a semé son essence partout sur terre. Cette progéniture porte les traces du chaos, a un pouvoir sans contrôle, sentira en elle le sang d'un dieu et sera poussée à semer la mort et la destruction. « Les morts qu'ils causeront éveilleront le père, et à travers elles il se relèvera. » Les termes sont quelque peu ambiguës, mais manifestement cela signifie que la mort semée par les enfants provoquera leur ascension. Approprié, et étant donné que mon père était le Dieu du Meurtre, pour prouver sa valeur, il faut impérativement commettre un acte en rapport avec sa charge. Je commence à voir ce que je dois faire. La mort à l'échelle d'un dieu.
+Le 14 Alturiak 1368 : A Château-Suif enfin, et les moines se montrent vraiment serviables. D'après ce que j'ai pu lire, il n'y a aucun doute que le sang de Bhaal coule vraiment dans mes veines. Les prophéties d'Alaundo sont, naturellement, tout sauf explicites, mais je pense être en mesure de les interpréter. Bhaal avait prévu sa mort prochaine et a semé son essence partout sur terre. Cette progéniture porte les traces du chaos, a un pouvoir sans contrôle, sentira en elle le sang d'un dieu et sera poussée à semer la mort et la destruction. « Les morts qu'elle causera éveilleront le père, et à travers elles il se relèvera. » Les termes sont quelque peu ambiguës, mais manifestement cela signifie que la mort semée par les enfants provoquera leur ascension. Approprié, et étant donné que mon père était le Dieu du Meurtre, pour prouver sa valeur, il faut impérativement commettre un acte en rapport avec sa charge. Je commence à voir ce que je dois faire. La mort à l'échelle d'un dieu.
 
-Le 15 Alturiak 1368 : Encore des recherches. Il semble que Bhaal ait engendré des centaines, si ce n'est des milliers, d'enfants bâtards, même si seuls vingt d'entre eux devraient acquérir un vrai pouvoir... et parmi ceux-là, cinq feront trembler de peur les dieux eux-même. Mais le moine Gorion m'inquiète. Les écrits d'Alaundo comprennent quelques passages plus obscurs qui mentionnent un "pupille de Gorion", et le moine est en effet suivi par une jeune personne nommée <CHARNAME> qui, bien qu'elle paraisse n'être qu'un bienheureux chiot ignorant, me semble vaguement familier. Gorion s'est apparemment intéressé à mes lectures. Je dois impérativement veiller à mieux protéger le secret de mes recherches.
+Le 15 Alturiak 1368 : Encore des recherches. Il semble que Bhaal ait engendré des centaines, si ce n'est des milliers, d'enfants bâtards, même si seuls vingt d'entre eux devraient acquérir un vrai pouvoir... et parmi ceux-là, cinq feront trembler de peur les dieux eux-mêmes. Mais le moine Gorion m'inquiète. Les écrits d'Alaundo comprennent quelques passages plus obscurs qui mentionnent un "pupille de Gorion", et le moine est en effet suivi par une jeune personne nommée <CHARNAME> qui, bien qu'elle paraisse n'être qu'un bienheureux chiot ignorant, me semble vaguement familier. Gorion s'est apparemment intéressé à mes lectures. Je dois impérativement veiller à mieux protéger le secret de mes recherches.
 
 Le 16 Alturiak 1368 : Je quitte à présent Château-Suif, et il est plus que temps, car je suis sûr que Gorion connaît à présent mes origines. J'aimerais pouvoir m'en débarrasser, mais je ne crois pas qu'il soit possible de l'assassiner dans cette damnée bibliothèque. Une chose est certaine : <CHARNAME> descend en fait aussi de Bhaal. Tous les stigmates sont présents et cela pourrait expliquer la curiosité que Gorion manifeste pour mes études, ainsi que la mention de <CHARNAME> dans la prophétie. Je ne peux rien faire maintenant, mais il faudra absolument que je retourne là-bas pour tuer ce gamin. Ce serait de la folie de laisser la vie sauve à l'un de mes frères et soeurs, surtout quelqu'un élevé par les Ménestrels (et je suis sûr que Gorion en est un).
 
@@ -153,7 +153,7 @@ Dégâts : 1D8
 Type de dégâts : tranchant
 
 Spécial : le fourvoiement magique affecte la victime à chaque coup réussi.
-Fourvoiement magique : toute créature capable de jeter des sorts et affectée par ce sort voit son pouvoir d'incantation sérieusement diminué. Lorsqu'elle essaie de jeter un sort, ce dernier échoue huit fois sur dix. Les créatures peuvent effectuer des jets de sauvegarde contre les sorts pour se prémunir contre cet effet, mais moyennant une pénalité de - 2.
+Fourvoiement magique : toute créature capable de jeter des sorts et affectée par ce sort voit son pouvoir d'incantation sérieusement diminué. Lorsqu'elle essaie de jeter un sort, ce dernier échoue huit fois sur dix. Les créatures peuvent effectuer des jets de sauvegarde contre les sorts pour se prémunir contre cet effet, mais moyennant une pénalité de -2.
 
 Poids : 6
 Facteur de vitesse : 7
@@ -167,8 +167,8 @@ Type : à une main~
 Poids: 2~
 
 // Ice Island Level 2 Restoration
-@1001 = ~Snow Golem~
-@1002 = ~Snow Golem Breath~
+@1001 = ~Golem de neige~
+@1002 = ~Souffle de Golem de neige~
 
 // Nim Furlwing Encounter
 @4001 = ~Nim Furlwing~
