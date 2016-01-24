@@ -1,17 +1,17 @@
-@90000 = ~Le composant "The BG1 NPC Project: Phase II (Quests and Interjections)" de BG1 NPC Project est en conflit avec ce composant.~
-@90001 = ~Le composant "The BG1 NPC Project: Core Install" de BG1 NPC Project est en conflit avec ce composant.~
-@90002 = ~Le composant "The BG1 NPC Project: Phase I (Banters)" de BG1 NPC Project est en conflit avec ce composant.~
+@90000 = ~Le composant "The BG1 NPC Project: Phase II (bavardages, quetes et interjections)" de BG1 NPC Project est en conflit avec ce composant.~
+@90001 = ~Le composant "The BG1 NPC Project: modifications necessaires" de BG1 NPC Project est en conflit avec ce composant.~
+@90002 = ~Le composant "The BG1 NPC Project: Phase I (bavardages)" de BG1 NPC Project est en conflit avec ce composant.~
 @90003 = ~Northern Tales of the Sword Coast est en conflit avec ce composant.~
 @90004 = ~Ce composant est incompatible avec Jarls Adventure Pack.~
 
 @90010 = ~Installation de Tutu detectee.~
 @90011 = ~Installation de BGT detectee.~
 @90012 = ~Installation de BG detectee.~
-@90013 = ~Veuillez installer sur un jeu BG, BGT, ou Tutu.~
+@90013 = ~Veuillez installer sur un jeu BG, BGT ou Tutu.~
 @90014 = ~Veuillez installer sur un jeu BGT ou Tutu.~
 
 @90015 = ~Les fonctionnalites de ce composant sont deja incluses ou supplantees par un des mods que vous avez deja installes.~
-@90016 = ~Les fonctionnalites de ce composant sont deja incluses de BGEE.~
+@90016 = ~Les fonctionnalites de ce composant sont deja incluses dans BGEE.~
 @90017 = ~Installation de BGEE detectee.~
 
 
@@ -23,7 +23,7 @@
 @3    = ~Rencontre supplementaire avec Elminster~
 @4    = ~Angelo remarque Shar-Teel~
 @5    = ~Quete de la caravane de Kagain finissable~
-@7    = ~Coran et les wyvernes~
+@7    = ~Coran et les wivernes~
 @8    = ~Kivan et Tazok~
 @9    = ~Branwen et Tranzig~
 @10   = ~Safana la flirteuse~
@@ -51,14 +51,14 @@
 /* new v13.1 */
 // tp2 strings
 @116 = ~Alteration de Prisme et ses emeraudes~
-@219   = ~Le Duc Eltan dans la batisse du Maitre du Port~
+@219 = ~Le Duc Eltan dans la batisse du Maitre du Port~
 
 /* new v14 */
 @4000 = ~Rencontre de Nim Furlwing~
 @4100 = ~Restitution du film de la taverne du Chant de l'Elfe~
 @4101 = ~Ce composant n'est pas compatible avec BGEE. Une version compatible BGEE de ce film est incluse dans le mod BG:EE Classic Movies.~
-@4200 = ~Svlast, the Fallen Paladin Encounter~
-@4300 = ~Mal-Kalen, the Ulcaster Ghost~
+@4200 = ~Svlast, la rencontre du Paladin dechu~
+@4300 = ~Mal-Kalen, le fantome d'Ulcaster~
 
 ////////////////////////////////////////////////////////////////////////////////
 // WeiDU prompts
@@ -125,3 +125,32 @@ choisir un parmi :"
 
 @-1038= "dem[A]nder pour chaque composant, tout [S]auter, ou choisir une selection pre-definie :"
 @-1039= "dem[A]nder pour chaque composant, [R]einstaller la configuration courante, tout s[U]pprimer, tout [S]auter, ou choisir une selection pre-definie :"
+
+@-1040= "
+Veuillez choisir la langue dans laquelle vous souhaitez jouer au jeu.
+Si par la suite vous desirez jouer au jeu dans une langue differente, il vous
+faudra editer le fichier weidu.conf et reinstaller vos mods.
+"
+@-1041= "Tcheque"
+@-1042= "Allemand"
+@-1043= "Anglais"
+@-1044= "Espagnol"
+@-1045= "Francais"
+@-1046= "Italien"
+@-1047= "Polonais"
+@-1048= "Portugais"
+@-1049= "Turc"
+@-1050= "Japonais"
+@-1051= "Coreen"
+@-1052= "Chinois simplifie"
+@-1053= "Russe"
+@-1054= "Ukrainien"
+
+@-1060= "
+Ce jeu est disponible en plusieurs langues mais WeiDU ne sait pas laquelle a ete choisie quand ce mod a ete installe.
+
+Veuillez indiquer quelle langue du jeu a ete utilisee quand vous avez installe ce mod. Votre choix servira jusqu'a ce que WeiDU s'arrete mais ne sera pas memorise.
+"
+@-1061= "
+Utilisation de"
+@-1062= " et "
