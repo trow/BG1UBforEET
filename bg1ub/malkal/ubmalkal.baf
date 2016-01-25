@@ -1,5 +1,4 @@
 IF
-	Global("UBMALKAL_ENC","GLOBAL",1)
 	Die()
 THEN
 	RESPONSE #100
