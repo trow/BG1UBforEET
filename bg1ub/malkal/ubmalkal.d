@@ -105,10 +105,10 @@ END
 
 IF ~Global("UBMalKal_Enc","GLOBAL",7)~ THEN BEGIN 11 // from:
   SAY @4337 // ~I live again... revenge the destroyers!~ /* #2499 */
-  IF ~~ THEN DO ~EscapeArea()~ JOURNAL @4351 EXIT
+  IF ~~ THEN DO ~SetGlobal("UBMalKal_Enc","GLOBAL",8) EscapeArea()~ JOURNAL @4351 EXIT
 END
 
 IF ~Global("UBMalKal_Enc","GLOBAL",3)~ THEN BEGIN 12 // from:
   SAY @4338 // ~Noooo... revenge the destroyers.... revenge....~ /* #2500 */
-  IF ~~ THEN DO ~SetGlobal("UBMalKal_Enc","GLOBAL",3) DestroySelf()~ JOURNAL @4350 EXIT
+  IF ~~ THEN DO ~SetGlobal("UBMalKal_Enc","GLOBAL",10) DestroySelf()~ JOURNAL @4350 EXIT
 END

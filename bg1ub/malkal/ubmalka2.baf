@@ -5,3 +5,11 @@ THEN
 		SetGlobal("UBMALKAL_ENC","GLOBAL",3)
 		StartDialogueNoSet(Player1)
 END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		SetGlobal("UBMALKAL_ENC","GLOBAL",9)
+		DestroySelf()
+END

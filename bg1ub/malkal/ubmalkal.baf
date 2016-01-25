@@ -4,7 +4,8 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("UBMALKAL_ENC","GLOBAL",2)
-		ForceSpellRES("UBMKDTH",Myself)
+		CreateCreature("UBMALKA2",[-1.-1]%FACE_0%)
+		DestroySelf()
 END
 
 IF
