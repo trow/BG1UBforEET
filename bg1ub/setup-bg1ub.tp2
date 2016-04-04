@@ -937,6 +937,7 @@ COPY ~bg1ub/kagain/DLOSTKAG.CRE~ ~override~
 
 BEGIN @7
 FORBID_FILE ~override/X#BG1NPCCore.G3~ @90001
+FORBID_FILE ~corwyvrn.cre~ @90016 // Check for BGEEv2
 
 // Author: Idobek
 // Email: idobek@gibberlings3.net
@@ -968,14 +969,14 @@ ACTION_IF !GAME_IS ~bgt~ THEN BEGIN //BG, BGEE and Tutu
     END
   BUT_ONLY
 
-  ACTION_IF GAME_IS ~tutu tutu_totsc bgee~ THEN BEGIN //Tutu BGEE
+  ACTION_IF GAME_IS ~tutu tutu_totsc bgee~ THEN BEGIN //Tutu BGEEv1
     COMPILE EVALUATE_BUFFER ~bg1ub/coran/cpm/Wyvern.d~
   END ELSE BEGIN //BG
     COMPILE ~bg1ub/coran/Wyvern.d~
   END
 END
 
-// IKCoranWyvernFix for BG1, Tutu, BGT (already included in BGEE as DXCoran)
+// IKCoranWyvernFix for BG1, Tutu, BGT (already included in BGEEv1 as DXCoran)
 ACTION_IF GAME_IS ~tutu tutu_totsc bgt~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/coran/cpm/Coran.d~
 END ELSE BEGIN
