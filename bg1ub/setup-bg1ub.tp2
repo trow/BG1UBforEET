@@ -276,7 +276,7 @@ MONSTHIT.EFF
 UNDEDHIT.EFF
 
 
-VERSION ~v14.0_beta_160404~
+VERSION ~v14.0_beta_160412~
 README ~bg1ub/BG1UB-Readme.html~
 
 ALWAYS
@@ -936,8 +936,8 @@ COPY ~bg1ub/kagain/DLOSTKAG.CRE~ ~override~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @7
+REQUIRE_PREDICATE NOT (FILE_EXISTS_IN_GAME ~corwyvrn.cre~) @90016 // Check for BGEEv2
 FORBID_FILE ~override/X#BG1NPCCore.G3~ @90001
-FORBID_FILE ~corwyvrn.cre~ @90016 // Check for BGEEv2
 
 // Author: Idobek
 // Email: idobek@gibberlings3.net
