@@ -3,7 +3,7 @@
 @10000 = ~Edie~
 
 //#11166
-@10001 = ~Assaggerete i mie scarponi se non la smettete immediatamente.~ [%tutu_var%WOMLC02]
+@10001 = ~Assaggerai la suola dei miei stivali se mi infastidisci ancora!~ [%tutu_var%WOMLC02]
 @10002 = ~~ [%tutu_var%FTOWN05]
 @10003 = ~~ [%tutu_var%WOMLC03]
 
@@ -14,25 +14,25 @@
 @10005 = ~Il mio maritino non vuole che parli agli sconosciuti.~ [%tutu_var%FTOWN02]
 
 //#13309
-@10006 = ~Non siete benvenuti qui!~
+@10006 = ~Non sei il benvenuto qui!~ ~Non sei la benvenuta qui!~
 
 //#19706
 @10007 = ~Erlin Hendrik~
 
 //#4908
-@10008 = ~Non ho tempo per parlare a voi ora.~ [%tutu_var%FARME01]
+@10008 = ~Ora non ho tempo per parlare con te.~ [%tutu_var%FARME01]
 @10009 = ~~ [%tutu_var%FARME05]
 @10010 = ~~ [%tutu_var%FARME06]
 
 
 //#8959
-@10011 = ~Sparite dalla mia vista! Non farò niente per voi!~
+@10011 = ~Sparisci dalla mia vista! Non farò niente per te!~
 
 //#20245
 @10012 = ~Feldane~
 
 //#4983
-@10013 = ~La nostra biblioteca è l'Harem della conoscenza umana.~ [%tutu_var%READR01]
+@10013 = ~La nostra biblioteca è l'harem della conoscenza umana.~ [%tutu_var%READR01]
 @10014 = ~~ [%tutu_var%READR05]
 @10015 = ~~ [%tutu_var%READR06]
 
@@ -978,7 +978,7 @@ Mago~
 //#6537 (add 'Afoul of the law')
 @20175 = ~In collisione con la legge
 
-Per qualche strana ragione il Duca Eltan non è più al comando del Pugno Fiammante. Adesso c'è un uomo di nome Angelo che rivendica quella posizione.~
+Per qualche strana ragione, il Duca Eltan non è più al comando del Pugno Fiammante. Adesso c'è un uomo di nome Angelo che rivendica quella posizione.~
 
 
 //BGT/Tutu SOLVED/UNSOLVED + Headers - DiaryEntries for Quoningar, added by Jarl
@@ -986,11 +986,11 @@ Per qualche strana ragione il Duca Eltan non è più al comando del Pugno Fiammant
 //@20011 with header:
 @20176 = ~Quiete in una città attiva
 
-Il sacerdote Quoningar, come me non abituato agli infiniti trambusti della città, sta cercando una poziona per la focalizzazione dei pensieri. Senza di essa, dubito che riuscirà mai a terminare le sue meditazioni...~
+Il sacerdote Quoningar, come me non abituato agli infiniti trambusti della città, sta cercando una pozione per la focalizzazione dei pensieri. Senza di essa, dubito che riuscirà mai a terminare le sue meditazioni...~
 
 @20177 = ~Quiete in una città attiva
 
-Dopo aver consegnato a Quoningar la pozione di cui aveva bisogno per le sue meditazioni, siamo stati generosamente ricompensati.  Almeno qualcuno in questa frenetica città può trovare un pò di quiete e di pace interiore.~
+Dopo avere consegnato a Quoningar la pozione di cui aveva bisogno per le sue meditazioni, siamo stati generosamente ricompensati.  Almeno qualcuno in questa frenetica città può trovare un po' di quiete e di pace interiore.~
 
 
 //BGT/Tutu SOLVED/UNSOLVED + Headers - DiaryEntries for Shilo Chen, added by Jarl
@@ -1001,7 +1001,7 @@ Shilo Chen, un ranger del Bosco dei Denti Aguzzi, è in cerca di aiuto a Baldur's
 
 @20179 = ~Shilo Chen e l'orco magi
 
-L'aver sconfitto quegli ogre magi nel Bosco dei Denti Aguzzi ci ha procurato una munifica ricompensa da parte di Shilo Chen.~
+L'avere sconfitto quegli ogre magi nel Bosco dei Denti Aguzzi ci ha procurato una munifica ricompensa da parte di Shilo Chen.~
 
 
 
@@ -1446,64 +1446,64 @@ dovrei restare ancora un po': il cielo è chiaro, ma la mia testa è annebbiata.~
 
 
 //#5096
-@40140 = ~Ehi voi! Ho bisogno di denaro e di cure; se sapete cosa fa bene a voi, datelo a me!~
+@40140 = ~Ehi, tu! Ho bisogno di denaro e di cure; se sai cosa è bene per te, dammele!~
 
 //#5097
-@40141 = ~State scherzando?! Siete un hobgoblin, perché non dovremmo uccidervi?~
+@40141 = ~Stai scherzando?! Sei un hobgoblin, perché non dovrei ucciderti?~
 
 //#5098
-@40142 = ~Ecco, prendete 25 monete d'oro.~
+@40142 = ~Ecco, prendi 25 monete d'oro.~
 
 //#5099 
-@40143 = ~Perché dovremmo aiutarvi?~
+@40143 = ~Perché dovremmo aiutarti?~
 
 //#5100
-@40144 = ~Ottimo lavoro, sono deboli giustificazioni in cambio della vita.~
+@40144 = ~Ottimo lavoro. Sono deboli giustificazioni in cambio della vita.~
 
 //#5101
-@40145 = ~Faccio parte del Gelo, la banda di mercenari. Se volete avere il fiato dei miei compagni sul collo, continuate pure a infastidirmi.~
+@40145 = ~Faccio parte dei Gelo, la banda di mercenari. Se vuoi avere il fiato dei miei compagni sul collo, continua pure a infastidirmi.~
 
 //#5102
-@40146 = ~D'accordo! D'accordo. Ecco 25 monete d'oro, adesso lasciateci in pace.~
+@40146 = ~D'accordo! D'accordo. Ecco 25 monete d'oro, adesso lasciaci in pace.~
 
 //#5103
-@40147 = ~Bene... ora, siete rimasto solo, per cui credo che rischieremo.~
+@40147 = ~Bene... Ora sei rimasto solo, per cui credo che rischieremo.~
 
 //#5104
-@40148 = ~Ci minacciate!? Penso che voi siate un po' confuso, bestia degenerata e sudicia. Prima che mettiamo fine alla vostra vita miserabile, dovreste implorare un po' e magari darci qualche informazione su questi Artigli Neri.~
+@40148 = ~Mi minacci?! Penso che tu sia un po' confuso, bestia degenerata e sudicia. Prima di mettere fine alla tua miserabile vita, dovresti implorare un po' e magari darmi qualche informazione su questi Artigli Neri.~
 
 //#5105
-@40149 = ~Vi pentirete della vostra decisione.~
+@40149 = ~Ti pentirai della tua decisione.~
 
 //#5106
-@40150 = ~Un momento! Mi dispiace, non uccidetemi... vi prego. Vi dirò tutto degli Artigli Neri.~
+@40150 = ~Un momento! Mi dispiace, non uccidermi... Ti prego. Ti dirò tutto degli Artigli Neri.~
 
 //#5107
 @40151 = ~Forza.~
 
 //#5108
-@40152 = ~Tacete e andatevene.~
+@40152 = ~Taci e vattene.~
 
 //#5109
-@40153 = ~Gli Artigli Neri sono un gruppo di mercenari che partecipano agli assalti alle carovane dei mercanti. Un paio di giorni fa, durante uno di questi assalti, io mi sono perso e quelli del Pugno Fiammante sono sulle mie tracce. Ecco, vi ho detto quello che volevate sapere.~
+@40153 = ~Gli Artigli Neri sono un gruppo di mercenari che partecipano agli assalti alle carovane dei mercanti. Un paio di giorni fa, durante uno di questi assalti, mi sono perso e quelli del Pugno Fiammante sono sulle mie tracce. Ecco, ti ho detto quello che volevi sapere.~
 
 //#7013
-@40154 = ~Un hobgoblin ci ha raccontato di aver lavorato per una banda di mercenari nota come il Gelo. Il Gelo ha compiuto delle scorrerie lungo la Strada della Costa.~
+@40154 = ~Un hobgoblin ci ha raccontato di avere lavorato per una banda di mercenari nota come I Gelo. I Gelo hanno compiuto delle scorrerie lungo la Strada della Costa.~
 
 //#6259
-@40155 = ~Sono solo uno degli ultimi seguaci del Gelo, un gruppo di mercenari ingaggiati da Zhentarim per guastare il ferro che viene trasportato nella regione.~
+@40155 = ~Sono solo uno degli ultimi seguaci dei Gelo, un gruppo di mercenari ingaggiati dagli Zhentarim per contaminare il ferro che viene trasportato nella regione.~
 
 //#7012
-@40156 = ~Un hobgoblin che abbiamo charmato ci ha raccontato di aver lavorato per una banda di mercenari nota come il Gelo. Secondo lui il Gelo lavora per gli Zhent.~
+@40156 = ~Un hobgoblin che abbiamo charmato ci ha raccontato di avere lavorato per una banda di mercenari nota come I Gelo. Secondo lui, I Gelo lavorano per gli Zhent.~
 
 //#6260
-@40157 = ~Lasciatemi in pace!~
+@40157 = ~Lasciami in pace!~
 
 
 /* Store fixes */
 
 //#15383
-@40158 = ~Benvenuto nel mio negozio. Sei libero di guardare in giro a tuo piacimento, ma cerca di non rompere nulla.~
+@40158 = ~Benvenuto nel mio negozio. Sei libero di guardare in giro a tuo piacimento, ma cerca di non rompere nulla.~ ~Benvenuta nel mio negozio. Sei libera di guardare in giro a tuo piacimento, ma cerca di non rompere nulla.~
 
 //#15384
 @40159 = ~Mi muoverò con cura e con attenzione. Cos'hai da mostrarmi?~

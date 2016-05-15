@@ -1,59 +1,59 @@
 /* ITALIAN */
-@90000 = ~La componente "Fase II (Quest e Interiezioni)" del mod BG1 NPC Project è incompatibile con questo componente.~
-@90001 = ~La componente "Installazione di base" del mod BG1 NPC Project è incompatibile con questo componente.~
-@90002 = ~La componente "Fase I (Dialoghi)" del mod BG1 NPC Project è incompatibile con questo componente.~
-@90003 = ~Northern Tales of the Sword Coast è incompatibile con questo componente.~
+@90000 = ~La componente "Fase II (Missioni e Interazioni)" del mod BG1 NPC Project non è compatibile con questa componente.~
+@90001 = ~La componente "Installazione di base" del mod BG1 NPC Project non è compatibile con questa componente.~
+@90002 = ~La componente "Fase I (Dialoghi)" del mod BG1 NPC Project non è compatibile con questa componente.~
+@90003 = ~Northern Tales of the Sword Coast non è compatibile con questa componente.~
 @90004 = ~Questa componente non è compatibile con Jarl's Adventure Pack.~
 
 @90010 = ~Rilevato Tutu.~
 @90011 = ~Rilevato BGT.~
 @90012 = ~Rilevato BG.~
-@90013 = ~Per favore installa su BG, BGT, Tutu, o BGEE.~
-@90014 = ~Per favore installa su BGT o Tutu.~
-@90015 = ~Questo componente o la funzione che svolge è già presente tra le modifiche precedentemente installate.~
-@90016 = ~Questo componente o la funzione che svolge è già presente nel BGEE.~
+@90013 = ~Per favore, installa su BG, BGT, Tutu o BGEE.~
+@90014 = ~Per favore, installa su BGT o Tutu.~
+@90015 = ~Questa componente o la funzione che svolge è già presente tra le modifiche precedentemente installate.~
+@90016 = ~Questa componente o la funzione che svolge è già presente in BGEE.~
 @90017 = ~Rilevato BGEE.~
 
 
-@0    = ~Ripristina il secondo livello dell'Isola Ghiacciata~
+@0    = ~Ripristina il Secondo Livello dell'Isola di Ghiaccio~
 @1    = ~L'espansione Tales of the Sword Coast è richiesta per installare questa componente.~
-@2    = ~La fiala misteriosa~
-@3    = ~Incontro aggiuntivo con Elminster~
-@4    = ~Angelo riconosce Shar-teel~
-@5    = ~Finale della quest della carovana di Kagain~
-@7    = ~Coran e le viverne~
+@2    = ~La Fiala Misteriosa~
+@3    = ~Incontro Aggiuntivo con Elminster~
+@4    = ~Angelo Riconosce Shar-teel~
+@5    = ~Missione della Carovana di Kagain Completabile~
+@7    = ~Coran e le Viverne~
 @8    = ~Kivan e Tazok~
 @9    = ~Branwen e Tranzig~
-@10   = ~Il flirt di Safana~
-@12   = ~Ricompensa adeguata per la quest di Albert e Rufie~
-@13   = ~Posiziona Entar Silvershield dentro casa sua~
-@14   = ~Scar e la figlia di Sashenstar~
+@10   = ~La Seducente Safana~
+@12   = ~Ricompensa Adeguata per la Missione di Albert e Rufie~
+@13   = ~Posiziona Entar Silvershield Dentro Casa Sua~
+@14   = ~Scar e la Figlia dei Sashenstar~
 @17   = ~Quoningar, il Chierico~
-@18   = ~Shilo Chen e l'Ogre-Magi~
-@21   = ~Edie, candidato membro della Lega dei Mercanti~
-@22   = ~Rinforzi mercenari del Pugno Fiammante~
-@23   = ~Correzioni alle creature~
-@24   = ~Ripristina creature~
-@26   = ~Ripristina i nomi di alcune creature~
-@58   = ~Correzioni minori ai dialoghi~
-@59   = ~Ripristina alcuni file audio~
+@18   = ~Shilo Chen e l'Ogre magi~
+@21   = ~Edie, Candidato Membro della Lega dei Mercanti~
+@22   = ~Rinforzi Mercenari del Pugno Fiammante~
+@23   = ~Correzioni alle Creature~
+@24   = ~Ripristina Creature~
+@26   = ~Ripristina i Nomi di Alcune Creature~
+@58   = ~Correzioni Minori ai Dialoghi~
+@59   = ~Ripristina File Audio~
 //@60-@88 moved to sound_tmp.tra
-@89   = ~Correzioni varie e ripristino di negozi, taverne e locande~
-@94   = ~Correzioni e ripristino di alcuni oggetti~
-@100  = ~Correzioni alle aree e ripristino di aree aggiuntive~
-@101  = ~Cadaveri permanenti~
-@102  = ~Immunità razziali degli elfi agli effetti di Sonno e Charme~
-@103  = ~Correzioni alla playlist della musica originale della saga~
-@104  = ~Correzioni al diario di Sarevok~
+@89   = ~Correzioni Varie e Ripristino di Negozi, Taverne e Locande~
+@94   = ~Correzioni e Ripristino di Oggetti~
+@100  = ~Correzioni alle Aree e Ripristino di Aree Aggiuntive~
+@101  = ~Cadaveri Permanenti~
+@102  = ~Immunità Razziali degli Elfi agli Effetti di Sonno e Charme~
+@103  = ~Correzioni alla Playlist delle Tracce Musicali della Saga~
+@104  = ~Correzioni al Diario di Sarevok~
 
 /* new v13.1 */
 // tp2 strings
-@116 = ~Modifica di Prism e gli Smeraldi~
-@219   = ~Il Duca Eltan dal Comandante della Capitaneria di Porto~
+@116 = ~Aggiustamento di Prism e gli Smeraldi~
+@219   = ~Il Duca Eltan nel Palazzo del Capitano del Porto~
 
 /* new v14 */
 @4000 = ~Incontro con Nim Furlwing~
 @4100 = ~Ripristina il Filmato della Taverna del Canto Elfico~
 @4101 = ~Questa componente non è compatibile con BGEE. Una versione compatibile con BGEE di questo filmato è inclusa nel mod BG:EE Classic Movies.~
-@4200 = ~Svlast, the Fallen Paladin Encounter~
-@4300 = ~Mal-Kalen, the Ulcaster Ghost~
+@4200 = ~Svlast, il Paladino Decaduto~
+@4300 = ~Mal-Kalen, un Fantasma nelle Rovine di Ulcaster~

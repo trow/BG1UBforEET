@@ -1,39 +1,39 @@
-@0    = ~Siete tornato!  Avevo ragione a fidarmi di voi. Cosa potete dirmi di ciò che è accaduto nelle miniere?~
-@1    = ~Preferirei non svelare i trucchi del mestiere, se per voi fa lo stesso.~
-@2    = ~Non c'è molto da dire, in realtà. Alcuni coboldi hanno trovato il modo di accedere alle miniere e provocare quanti più danni fosse loro possibile. Non dovrete più preoccuparvene, ora.~
-@3    = ~Un mezzorco di nome Mulahey stava in qualche modo alterando il minerale di ferro, ma adesso è morto.~
-@4    = ~Un mezzorco di nome Mulahey stava alterando il minerale di ferro con un veleno specifico. Ne ho un campione con me.~
-@5    = ~Un mezzorco di nome Mulahey stava alterando il minerale di ferro con un veleno specifico. Ho un campione di minerale corrotto con me.~
-@6    = ~Un mezzorco di nome Mulahey stava alterando il minerale di ferro con un veleno specifico. Sto ancora raccogliendo indizi a riguardo.~
-@7    = ~Come desiderate. La città vi ringrazia di cuore ed è felice di premiarvi con un'adeguata ricompensa. Prendete queste 900 monete d'oro in cambio delle vostre fatiche. Sarebbe una piccola fortuna per chiunque. Grazie ancora.~
-@8    = ~Capisco. È curioso che una banda così ben organizzata sia potuta emergere dal nulla senza preavviso. Comunque sia, la città vi ringrazia di cuore ed è felice di premiarvi con un'adeguata ricompensa. Prendete queste 900 monete d'oro in cambio delle vostre fatiche. Sarebbe una piccola fortuna per chiunque. Grazie ancora.~
-@9    = ~Mi chiedo quali potessero essere i suoi scopi, e come abbia fatto a compromettere il ferro così efficacemente. Comunque sia, la città vi ringrazia di cuore ed è felice di premiarvi con un'adeguata ricompensa. Prendete queste 900 monete d'oro in cambio delle vostre fatiche. Sarebbe una piccola fortuna per chiunque. Grazie ancora.~
-@10   = ~Come dite? Siete stato saggio a prenderne un campione. Purtroppo , a causa della nostra sfiducia nei confronti dei mezzi magici, manchiamo dell'equipaggiamento necessario ad analizzare il veleno e il nostro isolamento non fa che acuire il problema. Sarebbe molto più rapido portare la fiala a Thalantyr di Beregost piuttosto che avventurarsi a sud alla ricerca di un arcimago di Amn.~
+@0    = ~Sei tornato! Avevo ragione a fidarmi di te. Cosa puoi dirmi di ciò che è accaduto nelle miniere?~ ~Sei tornata! Avevo ragione a fidarmi di te. Cosa puoi dirmi di ciò che è accaduto nelle miniere?~
+@1    = ~Preferirei non svelare i trucchi del mestiere, se per te fa lo stesso.~
+@2    = ~In realtà non c'è molto da dire. Alcuni coboldi hanno trovato il modo di accedere alle miniere e provocare quanti più danni possibile. Non dovrai più preoccupartene ora.~
+@3    = ~Un mezzorco di nome Mulahey stava in qualche modo alterando il ferro, ma adesso è morto.~
+@4    = ~Un mezzorco di nome Mulahey stava alterando il ferro con un veleno specifico. Ne ho un campione con me.~
+@5    = ~Un mezzorco di nome Mulahey stava alterando il ferro con un veleno specifico. Ho un campione di minerale corrotto con me.~
+@6    = ~Un mezzorco di nome Mulahey stava alterando il ferro con un veleno specifico. Sto ancora raccogliendo indizi a riguardo.~
+@7    = ~Come desideri. La città ti ringrazia di cuore ed è felice di premiarti con un'adeguata ricompensa. Prendi queste 900 monete d'oro in cambio delle tue fatiche. Sarebbe una piccola fortuna per chiunque. Grazie ancora.~
+@8    = ~Capisco. È curioso che una banda così ben organizzata sia potuta emergere dal nulla senza preavviso. Comunque sia, la città ti ringrazia di cuore ed è felice di premiarti con un'adeguata ricompensa. Prendi queste 900 monete d'oro in cambio delle tue fatiche. Sarebbe una piccola fortuna per chiunque. Grazie ancora.~
+@9    = ~Mi chiedo quali potessero essere i suoi scopi e come abbia fatto a compromettere il ferro così efficacemente. Comunque sia, la città ti ringrazia di cuore ed è felice di premiarti con un'adeguata ricompensa. Prendi queste 900 monete d'oro in cambio delle tue fatiche. Sarebbe una piccola fortuna per chiunque. Grazie ancora.~
+@10   = ~Come dici? Sei stato saggio a prenderne un campione. Purtroppo, a causa della nostra sfiducia verso i mezzi magici, manchiamo dell'equipaggiamento necessario ad analizzare il veleno e il nostro isolamento non fa che acuire il problema. Sarebbe molto più rapido portare la fiala a Thalantyr di Beregost piuttosto che avventurarsi a sud alla ricerca di un arcimago dell'Amn.~ ~Come dici? Sei stata saggia a prenderne un campione. Purtroppo, a causa della nostra sfiducia verso i mezzi magici, manchiamo dell'equipaggiamento necessario ad analizzare il veleno e il nostro isolamento non fa che acuire il problema. Sarebbe molto più rapido portare la fiala a Thalantyr di Beregost piuttosto che avventurarsi a sud alla ricerca di un arcimago dell'Amn.~
 @11   = ~Se avete del minerale corrotto, potreste considerare l'ipotesi di portarlo a Taerom Fuiruim. Sono certo che riuscirebbe ad escogitare una maniera di aggirarne la fragilità.~
 @12   = ~Sarebbe opportuno che non faceste parola con nessuno di questa faccenda, tuttavia. I rapporti tra Baldur's Gate ed Amn sono piuttosto tesi e probabilmente non dovrei lasciare in giro indizi così preziosi anziché consegnarli ad Amn.~
 @13   = ~Ad ogni modo, la città vi ringrazia di cuore ed è felice di premiarvi con un'adeguata ricompensa. Prendete queste 900 monete d'oro in cambio delle vostre fatiche. Sarebbe una piccola fortuna per chiunque. Grazie ancora.~
-@14   = ~Come dite? Siete stato saggio a prenderne un campione. Potreste volerlo portare a Taerom Fuiruim a Beregost. Sono certo che riuscirebbe ad escogitare una maniera di aggirarne la fragilità, ed è molto più vicino di qualunque fabbro di Amn.~
-@15   = ~Sono lieto di sentirlo. Mi chiedo quali potessero essere i suoi scopi. Comunque sia, la città vi ringrazia di cuore ed è felice di premiarvi con un'adeguata ricompensa. Prendete queste 900 monete d'oro in cambio delle vostre fatiche. Sarebbe una piccola fortuna per chiunque. Grazie ancora.~
-@16   = ~Non preoccupatevi di questo, adesso. Ho con me questo pezzo di minerale di ferro che ritengo sia corrotto. Dev'essere la causa della crisi del ferro che affligge la Costa della Spada.~
+@14   = ~Come dici? Sei stato saggio a prenderne un campione. Potresti volerlo portare a Taerom Fuiruim a Beregost. Sono certo che riuscirebbe ad escogitare un modo per aggirarne la fragilità ed è molto più vicino di qualunque fabbro dell'Amn.~ ~Come dici? Sei stata saggia a prenderne un campione. Potresti volerlo portare a Taerom Fuiruim a Beregost. Sono certo che riuscirebbe ad escogitare un modo per aggirarne la fragilità ed è molto più vicino di qualunque fabbro dell'Amn.~
+@15   = ~Mi fa piacere sentirlo. Mi chiedo quali potessero essere i suoi scopi. Comunque sia, la città ti ringrazia di cuore ed è felice di premiarti con un'adeguata ricompensa. Prendi queste 900 monete d'oro in cambio delle tue fatiche. Sarebbe una piccola fortuna per chiunque. Grazie ancora.~
+@16   = ~Non preoccuparti di questo adesso. Ho con me questo pezzo di minerale di ferro che ritengo sia corrotto. Dev'essere la causa della crisi del ferro che affligge la Costa della Spada.~
 @17   = ~Ho con me questo pezzo di minerale di ferro che ritengo sia corrotto. Dev'essere la causa della crisi del ferro che affligge la Costa della Spada.~
 @18   = ~Attendo i risultati con impazienza.~
-@19   = ~Date qua. Hmm. Davvero strano. Questo ferro è stato certamente alterato da qualche composto. Suppongo che voi non abbiate idea di cosa possa trattarsi, vero?~
-@20   = ~In realtà, ce l'ho. Ho qui questa fiala che ho trovato nelle miniere insieme al minerale.~
+@19   = ~Da' qua. Hmm. Davvero strano. Questo ferro è stato certamente alterato da qualche composto. Suppongo che tu non abbia idea di cosa possa trattarsi, vero?~
+@20   = ~In realtà ce l'ho. Ho qui questa fiala che ho trovato nelle miniere insieme al minerale.~
 @21   = ~No, ma potrei cercare di scoprirlo, se ciò fosse d'aiuto.~
-@22   = ~Sfortunatamente, no. Non c'è nulla che possiate fare con il solo minerale?~
-@23   = ~Ah, eccellente! Purtroppo, però, esaminarlo va oltre le mie capacità. Portatelo a Thalantyr: lui non dovrebbe avere problemi a discernerne le proprietà. Nel frattempo, vedrò cosa posso fare per constrastare gli effetti che ha avuto sul minerale. Dovrei riuscire se non altro ad attenuarli.~
+@22   = ~Sfortunatamente no. Non c'è nulla che tu possa fare con il solo minerale?~
+@23   = ~Ah, eccellente! Purtroppo però, esaminarlo va oltre le mie capacità. Portalo a Thalantyr: lui non dovrebbe avere problemi a comprenderne le proprietà. Nel frattempo, vedrò cosa posso fare per constrastare gli effetti che ha avuto sul minerale. Dovrei riuscire se non altro ad attenuarli.~
 @24   = ~Ne ho già portato un campione a Thalantyr: in questo momento lo sta esaminando.~
 @25   = ~Taerom Fuiruim sta esaminando il minerale corrotto che ho recuperato dalle miniere di Nashkel. Crede di poterne ridurre la fragilità, in qualche modo.~
-@26   = ~C'è un limite a ciò che posso fare. Se riusciste a procurarvi un campione del veleno, portatelo a Thalantyr: lui non dovrebbe avere problemi a discernerne le proprietà. Nel frattempo, Nel frattempo, vedrò cosa posso fare per constrastare gli effetti che ha avuto sul minerale. Dovrei riuscire se non altro ad attenuarli. ~
-@27   = ~Allora lo contatterò e sentirò cosa ha scoperto. Vi ringrazio per avermi resa nota la questione.~
-@28   = ~Berrun Ghastkill ha detto che il contenuto di questa fiala potrebbe interessarvi. Si tratta di un veleno utilizzato per corrompere il minerale nelle miniere di Nashkel, causando diversi problemi legati alla fragilità del ferro lungo la Costa della Spada.~
-@29   = ~Taerom Fuiruim ha detto che il contenuto di questa fiala potrebbe interessarvi. Si tratta di un veleno utilizzato per corrompere il minerale nelle miniere di Nashkel, causando diversi problemi legati alla fragilità del ferro lungo la Costa della Spada.~
-@30   = ~Un composto notevole. Ci dev'essere voluto un alchimista esperto per mescerlo. Potrei essere in grado di produrre un antidoto per salvare le attuali scorte di ferro, ma dubito che ciò possa bastare a risolvere la crisi. Lasciatemi lavorare, provvederò io stesso a contattare Taerom, se avrò successo.~
-@31   = ~Ho mostrato a Thalantyr la fiala di veleno per ferro che ho trovato nelle miniere di Nashkel. Ha accettato di esaminarla e cercare di produrre un antidoto. Con un pò di fortuna, ciò rallenterà la crisi, anche se non possiamo alimentare troppe false speranze.~
+@26   = ~C'è un limite a ciò che posso fare. Se riuscissi a procurarti un campione del veleno, portalo a Thalantyr: lui non dovrebbe avere problemi a comprenderne le proprietà. Nel frattempo, vedrò cosa posso fare per constrastare gli effetti che ha avuto sul minerale. Dovrei riuscire se non altro ad attenuarli. ~
+@27   = ~Allora lo contatterò e sentirò cosa ha scoperto. Ti ringrazio per avermi resa nota la questione.~
+@28   = ~Berrun Ghastkill ha detto che il contenuto di questa fiala potrebbe interessarti. Si tratta di un veleno utilizzato per corrompere il minerale nelle miniere di Nashkel, causando diversi problemi legati alla fragilità del ferro lungo la Costa della Spada.~
+@29   = ~Taerom Fuiruim ha detto che il contenuto di questa fiala potrebbe interessarti. Si tratta di un veleno utilizzato per corrompere il minerale nelle miniere di Nashkel, causando diversi problemi legati alla fragilità del ferro lungo la Costa della Spada.~
+@30   = ~Un composto notevole. Ci dev'essere voluto un alchimista esperto per mescerlo. Potrei essere in grado di produrre un antidoto per salvare le attuali scorte di ferro, ma dubito che ciò possa bastare a risolvere la crisi. Lasciami lavorare; provvederò io stesso a contattare Taerom se avrò successo.~
+@31   = ~Ho mostrato a Thalantyr la fiala di veleno per ferro che ho trovato nelle miniere di Nashkel. Ha accettato di esaminarla e di cercare di produrre un antidoto. Con un pò di fortuna, ciò rallenterà la crisi, anche se non possiamo alimentare troppe false speranze.~
 
 @32 = ~Il minerale contaminato
 
-Berrun Ghastkill vuole che io vada ad Alta Siepe e che consegni a Thalantyr la fiala contenente il misterioso veleno minerale che ho recuperato dalle miniere di Nashkel. Il potente mago potrebbe essere in grado di analizzarla. E se in futuro troverò un altro pezzo di minerale contaminato dovrò portarlo a  Taerom Fuiruim.~
+Berrun Ghastkill vuole che io vada ad Alta Siepe e che consegni a Thalantyr la fiala contenente il misterioso veleno minerale che ho recuperato dalle miniere di Nashkel. Il potente mago potrebbe essere in grado di analizzarla. Se in futuro troverò un altro pezzo di minerale contaminato, dovrò portarlo a Taerom Fuiruim.~
 
 @33 = ~Il minerale contaminato
 
@@ -47,4 +47,4 @@ Taerom Fuiruim sta esaminando il minerale corrotto che ho recuperato dalle minie
 //@31 with header:
 @35 = ~Il minerale contaminato
 
-Ho mostrato a Thalantyr la fiala di veleno per ferro che ho trovato nelle miniere di Nashkel. Ha accettato di esaminarla e cercare di produrre un antidoto. Con un pò di fortuna, ciò rallenterà la crisi, anche se non possiamo alimentare troppe false speranze.~
+Ho mostrato a Thalantyr la fiala di veleno per ferro che ho trovato nelle miniere di Nashkel. Ha accettato di esaminarla e di cercare di produrre un antidoto. Con un pò di fortuna, ciò rallenterà la crisi, anche se non possiamo alimentare troppe false speranze.~
