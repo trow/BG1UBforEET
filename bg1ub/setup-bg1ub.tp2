@@ -276,7 +276,7 @@ MONSTHIT.EFF
 UNDEDHIT.EFF
 
 
-VERSION ~v14.0_beta_160412~
+VERSION ~v14.0_beta_160515~
 README ~bg1ub/BG1UB-Readme.html~
 
 ALWAYS
@@ -330,9 +330,14 @@ ALWAYS
       reload_array = ub#reload
   END
 
-  COPY ~bg1ub/tra/%LANGUAGE%/extra_tmp.tra~ ~bg1ub/tra/%LANGUAGE%/extra.tra~
-	EVALUATE_BUFFER
-  LOAD_TRA ~bg1ub/tra/%LANGUAGE%/extra.tra~
+	ACTION_IF ((GAME_IS ~bgee~) AND (FILE_EXISTS ~bg1ub/tra/%LANGUAGE%/extra_tmp_ee.tra~)) THEN BEGIN
+		COPY ~bg1ub/tra/%LANGUAGE%/extra_tmp_ee.tra~ ~bg1ub/tra/%LANGUAGE%/extra.tra~
+			EVALUATE_BUFFER
+  	END ELSE BEGIN
+		COPY ~bg1ub/tra/%LANGUAGE%/extra_tmp.tra~ ~bg1ub/tra/%LANGUAGE%/extra.tra~
+			EVALUATE_BUFFER
+	END  	
+	LOAD_TRA ~bg1ub/tra/%LANGUAGE%/extra.tra~
 
 	ACTION_IF GAME_IS ~tutu tutu_totsc~ THEN BEGIN //Tutu
 		PRINT @90010
