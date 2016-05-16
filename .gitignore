@@ -1,0 +1,15 @@
+*.bak
+*.7z
+*.rar
+*.zip
+*.tar.gz
+*.exe
+!iconv.exe
+!oggdec.exe
+!tisunpack.exe
+!TobExLoader.exe
+setup-bg1ub
+setup-bg1ub.command
+bg1ub/ch6/*
+bg1ub/backup/*
+.gitignore~
