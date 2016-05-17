@@ -1,4 +1,4 @@
-#BG1 Unfinished Business
+# BG1 Unfinished Business
 A mod for BG1Tutu and Baldur's Gate Trilogy
 
 **Version 14.0**
