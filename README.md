@@ -433,5 +433,9 @@ Below are links to community-related sites:
     * Restoring cut dialog for Unshey regarding Girdle of Gender Bending (Minor Dialogs Component).
     * Fixes for Lahl's dialog: TotSC, BGT, Tutu ONLY: Lahl's dialogs are random, rework the dialogs into a tree (already fixed in BGEE) - added to Minor Dialogs Component.
     * Updates to Ice Island Level 2: Give Dezkiel some additional defenses, including Snow Golems.
+    * Fix for duplicated actions in OUBLEK.D - Prism and the Emeralds component
+    * Prevent Coran Wyvern Quest component from installing on BGEEv2/SoD.
+    * Updated Italian Translation - thanks Aedan!
+    * Added extra_tmp_ee.tra with BGEE Dialog.tlk strings
     
 Please see bg1ub.txt for release notes pertaining to your specific platform.
