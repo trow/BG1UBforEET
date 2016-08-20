@@ -47,7 +47,7 @@
     OUTER_SPRINT "tutu_fwdslash_sign" ""
     OUTER_SPRINT "tutu_star_sign" ""
 
-    /* BGT-only shutdown of D and BAF after BG1 content */
+    /* Shutdown of D and BAF after BG1 content for BGT and BGEE-SoD */
     OUTER_SPRINT ~BGT_VAR~ ~!Global("endofbg1","GLOBAL",2)~
 
     /* DVs are the same for Tutu/BGT, except for Imoen */
