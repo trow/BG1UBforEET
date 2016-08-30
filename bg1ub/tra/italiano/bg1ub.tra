@@ -173,6 +173,12 @@ Forza 10
 
 Peso: 6~
 
+// Unshey Dialog Restoration
+@120 = ~Guida Pratica per la Salute Fisica dell'Alto Chierico Unshey~
+@121 = ~Tipico manuale sulla salute fisica che fornisce al lettore preziose informazioni sulla medicina preventiva, nozioni base sul pronto soccorso e appropriate indicazioni sulla tonificazione muscolare.
+
+Peso: 2~
+
 // Ice Island Level 2 Restoration
 @1001 = ~Golem di Neve~
 @1002 = ~Soffio del Golem di Neve~

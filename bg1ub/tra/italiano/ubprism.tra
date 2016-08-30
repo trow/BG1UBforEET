@@ -7,7 +7,7 @@
 //journal entries ##
 @119 = ~Che babbeo quel Prism. Ha abboccato subito quando ho detto di non sapere nulla degli smeraldi scomparsi. Va beh... Più povero lui. Più ricco io.~
 @120 = ~Forse è stato uno sbaglio, ma dopo aver permesso a Prism di completare il suo 'ultimo capolavoro' ho preso uno degli smeraldi incastonati nella statua. Nel posto giusto dovrebbe garantire una bella sommetta, o al limite mi prendo una bella ricompensa...~
-@121 = ~Dopo un pò di fatica, sono riuscito a togliere anche il secondo smeraldo rubato da Prism per farne un occhio nel suo 'ultimo capolavoro'.~
+@121 = ~Dopo un po' di fatica, sono riuscito a togliere anche il secondo smeraldo rubato da Prism per farne un occhio nel suo 'ultimo capolavoro'.~
 @122 = ~La storia di Prism era davvero triste.  Un peccato che non ci sia stata lieta fine.  E va beh, alla fine io ci guadagno.  Una taglia di 300 pezzi d'oro per gli smeraldi rubati.~
 @123 = ~Meglio ricordarsi di non far finta di essere qualcun altro per fare soldi facili la prossima volta. Anche se Oublek s'è tenuto una parte, ho comunque ricevuto la ricompensa per aver riconsegnato gli smeraldi rubati.~
 /* Unused line for Captain Brage Journal entry
@@ -26,7 +26,7 @@ Che babbeo quel Prism. Ha abboccato subito quando ho detto di non sapere nulla d
 Forse è stato uno sbaglio, ma dopo aver permesso a Prism di completare il suo 'ultimo capolavoro' ho preso uno degli smeraldi incastonati nella statua. Nel posto giusto dovrebbe garantire una bella sommetta, o al limite mi prendo una bella ricompensa...~
 @129 = ~Prism lo scultore
 
-Dopo un pò di fatica, sono riuscito a togliere anche il secondo smeraldo rubato da Prism per farne un occhio nel suo 'ultimo capolavoro'.~
+Dopo un po' di fatica, sono riuscito a togliere anche il secondo smeraldo rubato da Prism per farne un occhio nel suo 'ultimo capolavoro'.~
 @130 = ~Prism lo scultore
 
 La storia di Prism era davvero triste.  Un peccato che non ci sia stata lieta fine.  E va beh, alla fine io ci guadagno.  Una taglia di 300 pezzi d'oro per gli smeraldi rubati.~
@@ -56,7 +56,7 @@ Che babbeo quel Prism. Ha abboccato subito quando ho detto di non sapere nulla d
 Forse è stato uno sbaglio, ma dopo aver permesso a Prism di completare il suo 'ultimo capolavoro' ho preso uno degli smeraldi incastonati nella statua. Nel posto giusto dovrebbe garantire una bella sommetta, o al limite mi prendo una bella ricompensa...~
 @212 = ~Prism, il ladro di smeraldi.
 
-Dopo un pò di fatica, sono riuscito a togliere anche il secondo smeraldo rubato da Prism per farne un occhio nel suo 'ultimo capolavoro'.~
+Dopo un po' di fatica, sono riuscito a togliere anche il secondo smeraldo rubato da Prism per farne un occhio nel suo 'ultimo capolavoro'.~
 @213 = ~Prism, il ladro di smeraldi.
 
 La storia di Prism era davvero triste.  Un peccato che non ci sia stata lieta fine.  E va beh, alla fine io ci guadagno.  Una taglia di 300 pezzi d'oro per gli smeraldi rubati.~
@@ -82,15 +82,15 @@ Solo metà di una ricompensa già ridotta per aver consegnato uno degli smeraldi d
 //oublek dialog
 @1000 = ~Uno degli smeraldi! Ci sono 150 pezzi d'oro di ricompensa per te.  Se dovessi trovare anche l'altro portalo qui da me, mi raccomando.~
 @1001 = ~L'ultimo degli smeraldi! Eccoti altri 150 pezzi d'oro di ricompensa. Caspita, se continui così ti farei certo un nome tra i cacciatori di taglie. Se sia un bene o un male, questo non lo so.~
-@1002 = ~Uno degli smeraldi! E' bello vedere che stai cercando di guardagnare soldi onestamente, anche se cacciare taglie è un lavoro riprovevole. Sarai pagato, ma meno di quanto stabilito. Se dovessi trovare anche l'altro portalo qui da me, mi raccomando.~
-@1003 = ~L'ultimo degli smeraldi! The last of the Emeralds! E' bello vedere che stai cercando di guardagnare soldi onestamente, anche se cacciare taglie è un lavoro riprovevole. Sarai pagato, ma meno di quanto stabilito.  Il resto sarà trattenuto come cauzione nel caso un giorno ti venga voglia di... "colorare" i fatti in qualche altro affare.~
+@1002 = ~Uno degli smeraldi! E' bello vedere che stai cercando di guadagnare soldi onestamente, anche se cacciare taglie è un lavoro riprovevole. Sarai pagato, ma meno di quanto stabilito. Se dovessi trovare anche l'altro portalo qui da me, mi raccomando.~
+@1003 = ~L'ultimo degli smeraldi! The last of the Emeralds! E' bello vedere che stai cercando di guadagnare soldi onestamente, anche se cacciare taglie è un lavoro riprovevole. Sarai pagato, ma meno di quanto stabilito.  Il resto sarà trattenuto come cauzione nel caso un giorno ti venga voglia di... "colorare" i fatti in qualche altro affare.~
 @1004 = ~Sono qui per una taglia, e collezionare la ricompensa che mi spetta.~
 //#665 + #664
 @1005 = ~Nashkel ha poca pazienza per coloro che fregano agli altri il necessario per vivere guadagnato con fatica. Oggi non ho né il tempo né la voglia di occuparmi di te.~
 
 //prism dialog
 @1100 = ~Come osi! Come osi privare i suoi occhi della luce!~
-@1101 = ~Ho ancora tanto lavoro da fare. Ma forse accetteresti di aiutare un folle scultore a completare la sua ultima opera adesso?  Ti prego, stai qui di guardia perchè sicuramente verrà Greywolf.  Ti pagherò con i miei ultimi denari!~
+@1101 = ~Ho ancora tanto lavoro da fare. Ma forse accetteresti di aiutare un folle scultore a completare la sua ultima opera adesso?  Ti prego, stai qui di guardia perché sicuramente verrà Greywolf.  Ti pagherò con i miei ultimi denari!~
 @1102 = ~Fermo lì! Hai preso gli smeraldi. Li devo riavere. Ne ho bisogno per finire quest'opera. Per favore, ti prego di restituirli. Ti darò ogni altra cosa in mio possesso.~
 @1103 = ~Non ci sono più. Restituiti alle autorità. Non finirai mai quel pezzo di roccia ora.~
 @1104 = ~Non ci sono più. Venduti. A quest'ora saranno già al collo di qualche cicciona.~
