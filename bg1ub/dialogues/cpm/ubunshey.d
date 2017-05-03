@@ -5,11 +5,13 @@ ADD_STATE_TRIGGER ~%tutu_var%unshey~ 2 ~GlobalLT("UBHelpUnshey","GLOBAL",2)~
 ADD_STATE_TRIGGER ~%tutu_var%unshey~ 4 ~GlobalLT("UBHelpUnshey","GLOBAL",2)~
 ADD_STATE_TRIGGER ~%tutu_var%unshey~ 5 ~GlobalLT("UBHelpUnshey","GLOBAL",2)~
 
+// State 3 previously unused - trigger blank
 REPLACE_STATE_TRIGGER ~%tutu_var%unshey~ 3 ~GlobalLT("UBHelpUnshey","GLOBAL",2) !PartyHasItem("%tutu_var%BELT04") PartyHasItem("%tutu_var%BELT05") !HasItemEquiped("%tutu_var%BELT05",Player1) !HasItemEquiped("%tutu_var%BELT05",Player2)
 !HasItemEquiped("%tutu_var%BELT05",Player3)
 !HasItemEquiped("%tutu_var%BELT05",Player4)
 !HasItemEquiped("%tutu_var%BELT05",Player5)
 !HasItemEquiped("%tutu_var%BELT05",Player6)~ 
+// State 7 trigger previously False()
 REPLACE_STATE_TRIGGER ~%tutu_var%unshey~ 7 ~Global("UBHelpUnshey","GLOBAL",3)~
 
 ADD_TRANS_ACTION ~%tutu_var%unshey~ BEGIN 4 5 END BEGIN 0 END ~SetGlobal("UBHelpUnshey","GLOBAL",2)~ 
