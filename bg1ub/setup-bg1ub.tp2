@@ -5539,9 +5539,9 @@ COPY ~bg1ub/svlast/UBSVLAST.CRE~ override
 	SAY DYING @4204 // ~[LOTHANDER 4]~ [LOTHR04]
 	SAY SELECT_COMMON1 @4202 // ~[LOTHANDER 2] My life is in shambles.~ [LOTHR02]
 	REMOVE_CRE_ITEMS
-	ADD_CRE_ITEM ~%tutu_var%PLAT01~ #0 #0 #0 ~~ ~armor~
-	ADD_CRE_ITEM ~%tutu_var%SHLD03~ #0 #0 #0 ~~ ~shield~
-	ADD_CRE_ITEM ~%tutu_var%SW1H02~ #0 #0 #0 ~~ ~weapon1~ EQUIP
+	ADD_CRE_ITEM ~%tutu_var%PLAT01~ #0 #0 #0 ~none~ ~armor~
+	ADD_CRE_ITEM ~%tutu_var%SHLD03~ #0 #0 #0 ~none~ ~shield~
+	ADD_CRE_ITEM ~%tutu_var%SW1H02~ #0 #0 #0 ~none~ ~weapon1~ EQUIP
 
 COPY ~bg1ub/svlast/UBSVLREV.CRE~ override
 	LPM source_cre_sound_cleanup
