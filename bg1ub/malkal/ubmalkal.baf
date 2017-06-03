@@ -17,15 +17,15 @@ END
 
 IF
 	Global("UBMALKAL_ENC","GLOBAL",1)
-	!GlobalTimerNotExpired("prep","LOCALS")
+	!GlobalTimerNotExpired("UBMALKAL_PREP","LOCALS")
 	See(NearestEnemyOf(Myself))
 	Allegiance(Myself,ENEMY)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("prep","LOCALS",2400)
+		SetGlobalTimer("UBMALKAL_PREP","LOCALS",2400)
 		SetGlobalTimer("UBMALKAL_FEAR","LOCALS",60)
 		ReallyForceSpell(Myself,WIZARD_ANIMATE_DEAD) // SPWI501.SPL (Animate Dead)
-		ReallyForceSpell(LastSeenBy(Myself),WIZARD_HORROR) // SPWI205.SPL (Horror)
+		ReallyForceSpell(Myself,WIZARD_HORROR) // SPWI205.SPL (Horror)
 		Wait(1)
 END
 
@@ -37,7 +37,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("UBMALKAL_FEAR","LOCALS",60)
-		ReallyForceSpell(LastSeenBy(Myself),WIZARD_HORROR) // SPWI205.SPL (Horror)
+		ReallyForceSpell(Myself,WIZARD_HORROR) // SPWI205.SPL (Horror)
 		Wait(1)
 END
 
