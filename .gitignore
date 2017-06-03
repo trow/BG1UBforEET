@@ -9,8 +9,9 @@
 !tisunpack.exe
 !TobExLoader.exe
 .DS_Store
-package_mod.bat
+package_mod.sh
 setup-bg1ub
 setup-bg1ub.command
 bg1ub/backup/*
+bg1ub/waste
 .gitignore~
