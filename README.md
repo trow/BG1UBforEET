@@ -121,6 +121,7 @@ A: The mod was started by myself, Erik Manning (a.k.a. icelus). After I publicly
 
 Q: What items have been restored with this mod?  
 A: There were actually less than we initially believed, but as of the current release, the restored items are as follows:
+
 * BOLT OF POLYMORPHING
 * BRACERS
 * CLUB +1, +3 VS. UNNATURAL CREATURES ("THE ROOT OF THE PROBLEM")
@@ -151,6 +152,7 @@ A: Of course!
 
 Q: Where can I find the Restored Items?  
 A: We tried to place the items in places that made at least a little sense. None of them should be too difficult to find. Nevertheless, here is the list:
+
 * BOLT OF POLYMORPHING - Ulgoth's Beard Store and Inn, Erdane, Sorcerous Sundries
 * BRACERS - AR3300 "Beregost": Container 1, Kivan, Coran, Friendly Arm Inn, Candlekeep Inn, Jovial Juggler, General Store, Nashkel Store, Thunderhammer Smithy
 * CLUB +1, +3 VS. UNNATURAL CREATURES ("The Root of the Problem") - AR1602 "Druid Tree": Amarande, the Arch Druid (BGEE: Corsone in Larswood AR2900)
@@ -193,7 +195,7 @@ First and foremost, we'd like to thank BioWare and Black Isle for supplying us w
 
 On a more personal level, we would like to thank the following individuals for their assistance with this mod:
 
-The conversion of the mod from BG1 to Tutu and BGT was performed by Ascension64.
+* The conversion of the mod from BG1 to Tutu and BGT was performed by Ascension64.
 * A huge thanks goes out to devSin, SimDing0, and SixOfSpades for helping with much of the coding and content for the mod. Without you guys, the mod would likely still be vaporware.
 * Special thanks goes out to Ascension64, Dudley, Idobek, CamDawg, and Macready for their lending us the use of their various components.
 * SixOfSpades, Echon, Idobek, Andyr, Salk, NiGHTMARE, Bex, Hendryk, Caedwyr, Ghreyfain, Marauder, Finellach, Demonious, Drew, amazinggameguru, and many others for providing invaluable input
@@ -299,7 +301,7 @@ Below are links to community-related sites:
     * Corrected Cultist death variables
     * Fixed Hobgoblin (HOBGO5) with no set dialogue
     * Hobgoblin (HOBGO5) doesn't escape area if you provoke a fight, and no longer uses INITDLG to start dialogue
-    * Fixed REPLACE_ACTION_TEXT in stores (ubstores.d)
+    * Fixed REPLACE\_ACTION\_TEXT in stores (ubstores.d)
     * Recoded Finishable Kagain Caravan quest component
     * Fixed WEIGHTs for ubscar.
     * Fixed bug where Arkion would not take a body after it was delivered
@@ -335,7 +337,7 @@ Below are links to community-related sites:
     * Fixed a problem with the party not being transferred to jail in Angelo notices Shar-Teel component
     * Fixed a stutter bug for Coran in the specific scenario that: (i) the player has killed the specific wyverns for the quest, (ii) Coran's timer runs out , and (iii) the player has not yet killed any standard non-specific wyverns yet
   * CHANGES
-    * Placeholder file is now 1 byte to allow detection by FILE_EXISTS_*
+    * Placeholder file is now 1 byte to allow detection by FILE\_EXISTS\_*
     * Updated compatibility checks for BG1NPC components to be in line with v18
 * Version 12
     * Added Polish translation (Barek)
@@ -359,11 +361,11 @@ Below are links to community-related sites:
     * Journal entry corrections (by Jarl): sorting to SOLVED / UNSOLVED and adding title headers. For the components "Edie, the Merchant League Applicant", "Quoningar, the Cleric", "Shilo Chen and the Ogre-Magi", "The Mysterious Vial" (BGT and Tutu versions). New lines translated by: Salk (Italian), Isaya (French), Ancalagon el Negro (Spanish), Promilus (Polish), arcanecoast.ru team (Russian), jastey (German).
     * Changes to the audio restorations of the core changes: Inclusion of audio files into the main mod (no separate download for other languages). For BGT, they will not be installed (all files already imported to BGT). For Tutu they were reduced to the audio files not present in BGII.
     * "Corianna, the Petrified Ranger": Reward unified to 100 XP and a potion of mirrored eyes (Creature restorations)
-    * Revised Russian translation (arcanecoast.ru team). Sound references in "extra_tmp.tra" are unified (formerly missing the Tutu-recognition)
+    * Revised Russian translation (arcanecoast.ru team). Sound references in "extra\_tmp.tra" are unified (formerly missing the Tutu-recognition)
     * Updated to WeiDU v231
 * Version 13.1
   * BUGFIXES
-    * "Scar and the Sashenstar's Daughter": corrected the OUTER_SPRINT to %tutu_scriptbg%MISC79.ITM. Now the correct file BGMISC79 for the body is used instead of a replica of "Raissa's skin" (MISC79) (BGT).
+    * "Scar and the Sashenstar's Daughter": corrected the OUTER\_SPRINT to %tutu\_scriptbg%MISC79.ITM. Now the correct file BGMISC79 for the body is used instead of a replica of "Raissa's skin" (MISC79) (BGT).
     * Made the expanded Winter Wolf Pelt's description visible (by Hurricane).
     * Fix of Store fixes, provided by Miloch
     * Fixes to Fix of Store fixes for BGT and Tutu, provided by Hurricane. New lines provided by Hurricane (English, German), Cahir (Polish), Silent (Russian), jastey (Italian, French, Spanish, extracted from BG:EE)
@@ -384,18 +386,18 @@ Below are links to community-related sites:
     * BG/BGT/Tutu: "Appropriate Albert and Rufie Reward" Albert now will give a horn coral gem as a reward. Also tweaked the component so that Albert only gives one reward for BGT and BG with Baldurdash.
     * BG: corrected lib entry, to enable correct journal entries in Prologue
     * BG: overwrites in-game scroll Raise Dead (SCRL63.itm), so now it works (Please note: works only at the place of the NPC's death. The NPC will be created next to the PC (also, if the PC is further away. I did not test what happens if the PC is in a different area, but I guess this will lead to problems. Important: The scroll is only applicable for the same game. You cannot save and reload! Inside the same game, leavng and re-entering the area of the death site seems to be no problem.)
-    * BGT/Tutu: "Prism": Journal entried of Prism quest should now be correctly erased after turning the gems in. (Changed the custom tphs for the Prism component: giving the OUTER_SPRINT variables unique names to prevent mixup with the ones from the lib, although that was not necessary, and changed the REPLACE method to replacing high numbers with string references in the tp2 because REPLACE_TRANS_ACTIOn does not evaluate tra-references, which did the trick. Also, the folder structure and the place of INCLUDE for the Prism tpas was changed slightly.
+    * BGT/Tutu: "Prism": Journal entried of Prism quest should now be correctly erased after turning the gems in. (Changed the custom tphs for the Prism component: giving the OUTER\_SPRINT variables unique names to prevent mixup with the ones from the lib, although that was not necessary, and changed the REPLACE method to replacing high numbers with string references in the tp2 because REPLACE\_TRANS\_ACTION does not evaluate tra-references, which did the trick. Also, the folder structure and the place of INCLUDE for the Prism tpas was changed slightly.
     * Polish: for BG1, the correct text format is applied - by Zed Nocear
-    * Prism and the Emeralds Tweak: Added fix to make install order for bg1ub and BG1NPC Project / Gavin no longer a problem (Added a REPLACE_ACTION_TEXT for the whole Oublek.dlg and Prism.dlg to account for new states introduced by NPC mods doing I_C_T with passback line (namely BG1NPC Project and Gavin))
+    * Prism and the Emeralds Tweak: Added fix to make install order for bg1ub and BG1NPC Project / Gavin no longer a problem (Added a REPLACE\_ACTION\_TEXT for the whole Oublek.dlg and Prism.dlg to account for new states introduced by NPC mods doing I\_C\_T with passback line (namely BG1NPC Project and Gavin))
 * Version 14 (BGEE Compatibility)
   * CHANGES
-    * General Updates for BGEE Compatibility: Replace FILE_EXISTS checks to GAME_IS checks where appropriate. Add BGEE variables to getcpmvara/getcpmvarp calls.
+    * General Updates for BGEE Compatibility: Replace FILE\_EXISTS checks to GAME\_IS checks where appropriate. Add BGEE variables to getcpmvara/getcpmvarp calls.
     * Update to WeiDU v237, Windows and OS X binaries
-    * Added UTF-8 support for BGEE via HANDLE_CHARSETS - Add iconv Windows binary for character set conversion. Redefine %LANGUAGE% variables to NOT include the tra directory, e.g., "english" instead of "tra/english". Changing %LANGUAGE% variables to lowercase to allow character set to be inferred.
+    * Added UTF-8 support for BGEE via HANDLE\_CHARSETS - Add iconv Windows binary for character set conversion. Redefine %LANGUAGE% variables to NOT include the tra directory, e.g., "english" instead of "tra/english". Changing %LANGUAGE% variables to lowercase to allow character set to be inferred.
     * Updating OSX sox binary to v14.4.0 (Intel CPU).
-    * Updating lib files for BGEE compatibility - Adding g3_bgee_cpmvars.tpa. Updating rr_tutubgt_addvars.tpa for BGEE, rename rr_tutubgtbgee_addvars.tpa
-    * TRA File Updates: Moving game content that uses Windows encoding to a separate file, bg1ub.tra. Setup.tra now only contains install text. This is done so that setup.tra can be excluded from UTF-8 conversion by HANDLE_CHARSETS.
-    * Ice Island - Moving "tis" subdirectory to "tiz" to work with WeiDU function HANDLE_TILESETS. Moving tisunpack binaries to win32 and osx subdirectories of tiz. Also, renaming ar1010.tiz to ub1010.tiz for unpacking, since it will now unpack to the override directory. Changes to .tp2 file will rename ub1010.tis to the appropriate name after unpacking. BGEE has copies of AR1010 .wed and .bmp files, don't copy these files for BGEE.
+    * Updating lib files for BGEE compatibility - Adding g3\_bgee\_cpmvars.tpa. Updating rr\_tutubgt\_addvars.tpa for BGEE, rename rr\_tutubgtbgee\_addvars.tpa
+    * TRA File Updates: Moving game content that uses Windows encoding to a separate file, bg1ub.tra. Setup.tra now only contains install text. This is done so that setup.tra can be excluded from UTF-8 conversion by HANDLE\_CHARSETS.
+    * Ice Island - Moving "tis" subdirectory to "tiz" to work with WeiDU function HANDLE\_TILESETS. Moving tisunpack binaries to win32 and osx subdirectories of tiz. Also, renaming ar1010.tiz to ub1010.tiz for unpacking, since it will now unpack to the override directory. Changes to .tp2 file will rename ub1010.tis to the appropriate name after unpacking. BGEE has copies of AR1010 .wed and .bmp files, don't copy these files for BGEE.
     * Blocking the following components from installing on BGEE:
       * Additional Elminster Encounter
       * Angelo Notices Shar-teel
@@ -408,21 +410,21 @@ Below are links to community-related sites:
       * Elven Charm & Sleep Racial Resistance
       * The Original Saga Music Playlist Corrections
       * Sarevok's Diary Corrections
-    * Kivan & Tazok - Change KIVANJ reference in ubkivan.d to %KIVAN_JOINED% for compatibility.
+    * Kivan & Tazok - Change KIVANJ reference in ubkivan.d to %KIVAN\_JOINED% for compatibility.
     * BGEE: Creature Restorations - Created BGEE version of ubcorian.cre.
-    * Kagain's Caravan - Update DECOMPILE_BCS_TO_BAF to DECOMPILE_AND_PATCH. BGEE compatibility updates. Kagain's quest journal entry was not being removed in BGEE. Copied file bgKAGAIJ.d to bgeeKAGAIJ.d and added a block to remove journal entry.
+    * Kagain's Caravan - Update DECOMPILE\_BCS\_TO\_BAF to DECOMPILE\_AND\_PATCH. BGEE compatibility updates. Kagain's quest journal entry was not being removed in BGEE. Copied file bgKAGAIJ.d to bgeeKAGAIJ.d and added a block to remove journal entry.
     * BGEE: Coran & Wyverns - Skip IKCoranWyvernFix for BGEE (already included as DXCoran)
     * BGEE: Place Entar Silvershield in His Home - Add BGEE variable for AR0101 to getcpmvara call
-    * BGEE: Scar and the Sashenstar's Daughter - Skip ubscar_fixes.d - not needed for BGEE
-    * BGEE: Quoningar, the Cleric - ADD_JOURNAL command to add quest journal entries for BGEE. Created BGEE version ubquon.cre.
-    * Shilo Chen and the Ogre Magi - Shilo Chen says the Ogre Magi are in the southwest corner of the Wood of Sharp Teeth. However, the Ogre Magi are found on the Bandit Camp map, which is at the north end of the Wood. Moving them to Larswood, which is the southwest part of the Wood. (BGEE) ADD_JOURNAL to add quest journal entries for BGEE. Created BGEE version of ubglove1.itm.
-    * BGEE: Edie, the Merchant League Applicant - ADD_JOURNAL for quest journal entries in BGEE.
-    * BGEE: Creature Corrections - Replace DECOMPILE_BCS_TO_BAF and DECOMPILE_DLG_TO_D blocks with DECOMPILE_AND_PATCH blocks. Skip fixes due to CamDawg's Inventory Checker - already included in BGEE.
+    * BGEE: Scar and the Sashenstar's Daughter - Skip ubscar\_fixes.d - not needed for BGEE
+    * BGEE: Quoningar, the Cleric - ADD\_JOURNAL command to add quest journal entries for BGEE. Created BGEE version ubquon.cre.
+    * Shilo Chen and the Ogre Magi - Shilo Chen says the Ogre Magi are in the southwest corner of the Wood of Sharp Teeth. However, the Ogre Magi are found on the Bandit Camp map, which is at the north end of the Wood. Moving them to Larswood, which is the southwest part of the Wood. (BGEE) ADD\_JOURNAL to add quest journal entries for BGEE. Created BGEE version of ubglove1.itm.
+    * BGEE: Edie, the Merchant League Applicant - ADD\_JOURNAL for quest journal entries in BGEE.
+    * BGEE: Creature Corrections - Replace DECOMPILE\_BCS\_TO\_BAF and DECOMPILE\_DLG\_TO\_D blocks with DECOMPILE\_AND\_PATCH blocks. Skip fixes due to CamDawg's Inventory Checker - already included in BGEE.
     * BGEE: Creature Name Corrections - Skip Beresh fixes - already in BGEE.
     * Store, Tavern and Inn Fixes and Restorations - Add comments to indicate sections of component. Move ubba0133.dlg creation into Bartender Fixes section. Move Maltz' Weapon Shop and Unused General Store fixes into "Inn, Tavern, Store name restorations" section. (BGEE only) Block sections already implemented in BGEE. Add BGEE version of ubstores.d.
-    * Item Corrections and Restorations - Add BUT_ONLY_IF_IT_CHANGES to item edit blocks. Updating item charges for ADD_STORE_ITEM: #1 #0 #0 for scrolls and bolts of polymorph, #0 #0 #0 for armor, helms, belts, bracers, etc.. (BGEE Only) Give Corsone "The Root of the Problem" since Amarande already has Mighty Oak +2 in BGEE. Updated Bala's Axe description for BGEE.
-    * Audio Restorations: Moving .ogg files out of "tra" directory and into new "audio" directory. Update audio handling to built-in WeiDU function HANDLE_AUDIO.
-    * Prism and the Emeralds - Add BGEE variable declaration: rr_bgee_addvars.tpa. ADD_JOURNAL for quest journal entries on BGEE. Move dialog to UBPRISM.D.
+    * Item Corrections and Restorations - Add BUT\_ONLY\_IF\_IT\_CHANGES to item edit blocks. Updating item charges for ADD\_STORE\_ITEM: #1 #0 #0 for scrolls and bolts of polymorph, #0 #0 #0 for armor, helms, belts, bracers, etc.. (BGEE Only) Give Corsone "The Root of the Problem" since Amarande already has Mighty Oak +2 in BGEE. Updated Bala's Axe description for BGEE.
+    * Audio Restorations: Moving .ogg files out of "tra" directory and into new "audio" directory. Update audio handling to built-in WeiDU function HANDLE\_AUDIO.
+    * Prism and the Emeralds - Add BGEE variable declaration: rr\_bgee\_addvars.tpa. ADD\_JOURNAL for quest journal entries on BGEE. Move dialog to UBPRISM.D.
     * Duke Eltan in the Harbor Master's Building - BGEE compatibility updates.
     * Fix for TazokSays script blocks in AR2400.BCS and AR2900.BCS in BGEE.
     * Incorporating %FACE% variables to all CreateCreature strings for compatibility with BG1 (without TotSC).
@@ -436,14 +438,14 @@ Below are links to community-related sites:
     * Fix for duplicated actions in OUBLEK.D - Prism and the Emeralds component
     * Prevent Coran Wyvern Quest component from installing on BGEEv2/SoD.
     * Updated Italian Translation - thanks Aedan!
-    * Added extra_tmp_ee.tra with BGEE Dialog.tlk strings
+    * Added extra\_tmp\_ee.tra with BGEE Dialog.tlk strings
 * Version 14.1
   * BUGFIXES
   	* Fixed bug on Tutu with Unshey's restored dialog
   * CHANGES
     * Updated Italian Translation - thanks Aedan!
     * Svlast, the Fallen Paladin: Made Svlast's items unidentified
-    * Updating BGT_VAR for EET Support
+    * Updating BGT\_VAR for EET Support
 
     
 Please see bg1ub.txt for release notes pertaining to your specific platform.
