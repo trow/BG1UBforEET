@@ -1,0 +1,6 @@
+IF 
+	Dead("Rieltar") 
+THEN 
+	RESPONSE #100
+		CreateCreature("%tutu_var%watch6",[1120.900]%FACE_6%)
+END

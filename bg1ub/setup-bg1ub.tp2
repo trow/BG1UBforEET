@@ -276,8 +276,8 @@ MONSTHIT.EFF
 UNDEDHIT.EFF
 
 
-VERSION ~v14.1~
-README ~bg1ub/README.md~
+VERSION ~v14.2~
+README ~bg1ub/readme.html~
 
 ALWAYS
 
@@ -5651,3 +5651,55 @@ COMPILE EVALUATE_BUFFER ~bg1ub/malkal/UBMALKAL.BAF~
 COMPILE EVALUATE_BUFFER ~bg1ub/malkal/UBMALKA2.BAF~
 
 COMPILE EVALUATE_BUFFER ~bg1ub/malkal/UBMALKAL.D~
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////
+/////Chapter 6 Dialogue Restorations
+/////by AstroBryGuy
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+BEGIN @4400 /* ~Chapter 6 Dialogue Restorations~ */
+
+/* Area script changes */
+LAF extend_area_script STR_VAR area="%Candlekeep_Library_L1%" bottom="bg1ub/ch6/ubmurder.baf" END
+LAF extend_area_script STR_VAR area="%Candlekeep_Library_L5%" bottom="bg1ub/ch6/ubmurder.baf" END
+LAF extend_area_script STR_VAR area="%Candlekeep_Library_L3%" bottom="bg1ub/ch6/ub2610.baf" END
+LAF extend_area_script STR_VAR area="%Candlekeep_Library_L6%" bottom="bg1ub/ch6/ub2614.baf" END
+
+/* Add unused dialogue states from TETHTO.DLG to TETHTO2.DLG */
+/* Gatewarden only arrests CHARNAME if he killed Iron Throne Leaders */
+COMPILE EVALUATE_BUFFER ~bg1ub/ch6/ubch6.d~
+
+/* Dead versions of the Iron Throne leaders */
+COPY_EXISTING ~%tutu_var%rielta.cre~ ~override/ubriel.cre~
+    READ_LONG 0x10 creflags
+	WRITE_LONG 0x10 (creflags BOR BIT2)
+	WRITE_LONG 0x20 BIT11 // Set STATE_DEAD
+	WRITE_SHORT 0x24 0 // Set HP = 0
+	WRITE_ASCIIE DEATHVAR	~UBRieltar~ #32
+	WRITE_ASCIIE DIALOG	~~ #8
+
+COPY_EXISTING ~%tutu_var%tuth.cre~ ~override/ubtuth.cre~
+    READ_LONG 0x10 creflags
+	WRITE_LONG 0x10 (creflags BOR BIT2)
+	WRITE_LONG 0x20 BIT11 // Set STATE_DEAD
+	WRITE_SHORT 0x24 0 // Set HP = 0
+	WRITE_ASCIIE DEATHVAR	~UBTuth~ #32
+	WRITE_ASCIIE DIALOG	~~ #8
+
+COPY_EXISTING ~%tutu_var%brunos.cre~ ~override/ubbrun.cre~
+    READ_LONG 0x10 creflags
+	WRITE_LONG 0x10 (creflags BOR BIT2)
+	WRITE_LONG 0x20 BIT11 // Set STATE_DEAD
+	WRITE_SHORT 0x24 0 // Set HP = 0
+	WRITE_ASCIIE DEATHVAR	~UBBrunos~ #32
+	WRITE_ASCIIE DIALOG	~~ #8
+
+COPY_EXISTING ~%tutu_var%kestor.cre~ ~override/ubkest.cre~
+    READ_LONG 0x10 creflags
+	WRITE_LONG 0x10 (creflags BOR BIT2)
+	WRITE_LONG 0x20 BIT11 // Set STATE_DEAD
+	WRITE_SHORT 0x24 0 // Set HP = 0
+	WRITE_ASCIIE DEATHVAR	~UBKestor~ #32
+	WRITE_ASCIIE DIALOG	~~ #8

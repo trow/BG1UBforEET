@@ -1,0 +1,35 @@
+IF 
+	Global("Criminal","GLOBAL",1) 
+	!Dead("Rieltar") 
+	Global("UBIronThroneMurder","GLOBAL",1)
+THEN 
+	RESPONSE #100
+		SetGlobal("UBIronThroneMurder","GLOBAL",2)
+		Deactivate("Rieltar")
+		Deactivate("Bruno")
+		Deactivate("Tuth")
+		Deactivate("Kestor")
+		CreateCreature("UBRiel",[731.540]%FACE_14%)
+		CreateCreature("UBBrun",[810.521]%FACE_2%)
+		CreateCreature("UBTuth",[776.627]%FACE_8%)
+		CreateCreature("UBKest",[731.540]%FACE_12%)
+		CreateCreature("%tutu_var%GATEWA2",[1500.1140]%FACE_6%)
+		CreateCreature("%tutu_var%WATCH6",[1350.1220]%FACE_8%)
+		CreateCreature("%tutu_var%WATCH6",[1500.1250]%FACE_6%)
+		CreateCreature("%tutu_var%WATCH6",[1670.1140]%FACE_4%)
+		CreateCreature("%tutu_var%WATCH6",[1650.1050]%FACE_2%)
+END
+
+IF 
+	Global("Criminal","GLOBAL",1) 
+	Dead("Rieltar") 
+	Global("UBIronThroneMurder","GLOBAL",1)
+THEN 
+	RESPONSE #100
+		SetGlobal("UBIronThroneMurder","GLOBAL",2)
+		CreateCreature("%tutu_var%GATEWA2",[1500.1140]%FACE_6%)
+		CreateCreature("%tutu_var%WATCH6",[1350.1220]%FACE_8%)
+		CreateCreature("%tutu_var%WATCH6",[1500.1250]%FACE_6%)
+		CreateCreature("%tutu_var%WATCH6",[1670.1140]%FACE_4%)
+		CreateCreature("%tutu_var%WATCH6",[1650.1050]%FACE_2%)
+END

@@ -1,0 +1,8 @@
+IF
+	%BGT_VAR%
+	Global("Criminal","GLOBAL",1) 
+	Global("UBIronThroneMurder","GLOBAL",0)
+THEN 
+	RESPONSE #100
+		SetGlobal("UBIronThroneMurder","GLOBAL",1)
+END
