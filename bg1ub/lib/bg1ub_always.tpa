@@ -1,0 +1,120 @@
+// BG1UB ALWAYS
+
+  INCLUDE ~%MOD_FOLDER%/lib/are_project_functions.tpa~
+  INCLUDE ~%MOD_FOLDER%/lib/cre_project_macros.tpa~
+  INCLUDE ~%MOD_FOLDER%/lib/getcpmvar_macros.tpa~
+  
+  APPEND ~state.ids~ ~0x00000FC0 STATE_REALLY_DEAD~ UNLESS ~STATE_REALLY_DEAD~
+
+  ACTION_IF GAME_IS ~bg1 totsc~ BEGIN
+	OUTER_SPRINT UBFaceObject ~ForceSpellRES("UBFACE",~
+	ACTION_IF !(FILE_EXISTS_IN_GAME ~ubface.spl~) BEGIN
+		COPY ~bg1ub/lib/UBFACE.SPL~ ~override~
+	END
+  END ELSE BEGIN
+	OUTER_SPRINT UBFaceObject ~FaceObject(~
+  END	
+
+
+// @@@ Support for polish translation @@@
+    //set the proper values of string variables
+  OUTER_SPRINT "Z!PL_TRA_Patch" "bg1ub/tra/polish"
+  OUTER_SPRINT "Z!Polish_Choosen" "polish"
+    //main conversion code
+  INCLUDE ~%Z!PL_TRA_Patch%/BG1&BG2UniversalPolishFont.tpa~
+    //all TRAs declared in LANGUAGE must be reloaded
+  LOAD_TRA "bg1ub/tra/%LANGUAGE%/setup.tra"
+  LOAD_TRA "bg1ub/tra/%LANGUAGE%/bg1ub.tra"
+
+  // INCLUDE ~%MOD_FOLDER%/handle_charsets.tpa~
+  ACTION_DEFINE_ARRAY ub#noconvert BEGIN setup END
+  ACTION_DEFINE_ARRAY ub#reload BEGIN bg1ub END
+
+/*  ACTION_DEFINE_ASSOCIATIVE_ARRAY ub#charsets BEGIN
+    deutsch => cp1252
+    english => cp1252
+    espanol => cp1252
+    francias => cp1252
+    italiano => cp1252
+    polish => cp1250
+    russian => cp1251
+  END
+*/
+
+  LAF HANDLE_CHARSETS
+    INT_VAR
+      infer_charset = 1
+    STR_VAR
+      tra_path = EVAL ~%MOD_FOLDER%/tra~
+      charset_table = ub#charsets
+      noconvert_array = ub#noconvert
+      reload_array = ub#reload
+  END
+
+	ACTION_IF ((GAME_IS ~bgee~) AND (FILE_EXISTS ~bg1ub/tra/%LANGUAGE%/extra_tmp_ee.tra~)) THEN BEGIN
+		COPY ~bg1ub/tra/%LANGUAGE%/extra_tmp_ee.tra~ ~bg1ub/tra/%LANGUAGE%/extra.tra~
+			EVALUATE_BUFFER
+  	END ELSE BEGIN
+		COPY ~bg1ub/tra/%LANGUAGE%/extra_tmp.tra~ ~bg1ub/tra/%LANGUAGE%/extra.tra~
+			EVALUATE_BUFFER
+	END  	
+	LOAD_TRA ~bg1ub/tra/%LANGUAGE%/extra.tra~
+
+	ACTION_IF GAME_IS ~tutu tutu_totsc~ THEN BEGIN //Tutu
+		PRINT @90010
+      	INCLUDE ~bg1ub/lib/g3_tutu_cpmvars.tpa~
+	  	INCLUDE ~bg1ub/lib/rr_tutubgtbgee_addvars.tpa~
+    END
+    ACTION_IF GAME_IS ~bgt~ THEN BEGIN //BGT
+        PRINT @90011
+        INCLUDE ~bg1ub/lib/g3_bgt_cpmvars.tpa~
+		INCLUDE ~bg1ub/lib/rr_tutubgtbgee_addvars.tpa~
+    END
+    ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN //BG
+        PRINT @90012
+        INCLUDE ~bg1ub/lib/g3_bg_cpmvars.tpa~
+		/* Extra stuff needed for cross platform code: BG1 with TotSC installed */
+		ACTION_IF GAME_IS ~totsc~ THEN BEGIN
+     		INCLUDE ~bg1ub/lib/rr_totsc_addvars.tpa~
+     		APPEND ~action.ids~ ~113 ForceSpellRES(S:RES*, O:Target)~ UNLESS ~ForceSpellRES~
+		END ELSE BEGIN
+			/* BG1 without TotSC installed */
+     		INCLUDE ~bg1ub/lib/rr_bg1_addvars.tpa~
+		END //still bg1+totsc
+    END
+    ACTION_IF GAME_IS ~bgee~ THEN BEGIN //bgee
+      	PRINT @90017
+      	INCLUDE ~bg1ub/lib/g3_bgee_cpmvars.tpa~
+		INCLUDE ~bg1ub/lib/rr_tutubgtbgee_addvars.tpa~
+    END
+    ACTION_IF !(GAME_IS ~bg1 totsc bgt bgee tutu tutu_totsc~) THEN BEGIN //Not a supported game
+         FAIL @90013
+    END
+
+  // BGT/Tutu compatibility
+  ACTION_IF GAME_IS ~tutu tutu_totsc bgt~ AND //BGT or Tutu only
+    !(FILE_EXISTS ~override/BG1UBBGTTutuCompat.UB~) THEN BEGIN //do once
+
+	COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBBGTTutuCompat.UB~
+	INCLUDE ~bg1ub/lib/BG1UBBGTTutuCompat.tph~
+  END
+  
+  // BGEE Fix Area Scripts for AR2400.BCS and AR2900.BCS
+  ACTION_IF GAME_IS ~bgee~ AND 
+    !(FILE_EXISTS ~override/AY#BGEEARBCSFIX.000~) THEN BEGIN //do once
+
+	COPY ~bg1ub/bg1ubplaceholder~ ~override/AY#BGEEARBCSFIX.000~
+	
+	COPY_EXISTING ~AR2400.bcs~ ~override~
+		DECOMPILE_AND_PATCH BEGIN
+  			//Add Exists(Raiken) check to TazokSays script block
+  			REPLACE_TEXTUALLY ~Global("TazokSays","GLOBAL",1)~ ~Global("TazokSays","GLOBAL",1) Exists("Raiken")~
+  		END
+
+	COPY_EXISTING ~AR2900.bcs~ ~override~
+		DECOMPILE_AND_PATCH BEGIN
+  			//Add Exists(Teven) check to TazokSays script block
+  			REPLACE_TEXTUALLY ~Global("TazokSays","GLOBAL",1)~ ~Global("TazokSays","GLOBAL",1) Exists("Teven")~
+  		END  	
+  	
+  END // BGEE Area Script Fix

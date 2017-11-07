@@ -1,0 +1,325 @@
+// Ice Island Level Two Restoration
+// Author: devSin
+
+ACTION_IF GAME_IS ~tutu_totsc~ THEN BEGIN
+  LAF HANDLE_TILESETS END
+  MOVE ~override/ub1010.tis~ ~override/_AR1010.tis~
+END ELSE BEGIN
+  ACTION_IF GAME_IS ~bgt~ THEN BEGIN
+    LAF HANDLE_TILESETS END
+    MOVE ~override/ub1010.tis~ ~override/ARU010.tis~
+//  END ELSE BEGIN
+//    ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+//      LAF HANDLE_TILESETS END
+//      MOVE ~override/ub1010.tis~ ~override/AR1010.tis~
+//    END
+  END
+END 
+// AR1010.TIS and AR1010.MOS already included with TotSC
+
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN
+	COPY ~bg1ub/AR1010/%tutuorbgt%~ ~override~
+END
+
+COPY_EXISTING ~%IceIsland%.ARE~ ~override~
+              ~%IceIslandMaze_L1%.ARE~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11c) BEGIN
+    // Make default transitions autosave; enable travel to AR1010
+    READ_LONG 0x5c trigOff
+    FOR (READ_SHORT 0x5a numTrig; numTrig; numTrig -= 0x1) BEGIN
+      READ_SHORT trigOff + 0x20 type
+      PATCH_IF (type == 0x2) BEGIN
+        READ_ASCII trigOff + 0x38 destAre
+        PATCH_IF (("%destAre%" STR_EQ "%IceIsland%") OR
+                   ("%destAre%" STR_EQ "%IceIslandMaze_L1%")) BEGIN
+          READ_BYTE trigOff + 0x60 flag
+          WRITE_BYTE trigOff + 0x60 flag | 0x4 // Add party-required flag
+        END
+      END
+      PATCH_IF ("%SOURCE_RES%" STR_EQ "%IceIslandMaze_L1%") BEGIN
+        READ_ASCII trigOff name
+        SPRINT temp_tutu "1" SPRINT temp_bgt "U" SPRINT temp_bgee "1" SPRINT temp_bg "1" LAUNCH_PATCH_MACRO ~getcpmvarp~
+        PATCH_IF ("%name%" STR_EQ "DOOR%temp_cpmvar%010") BEGIN
+          WRITE_ASCIIE trigOff + 0x38 ~%IceIslandMaze_L2%~ #8 // Set destination area
+        END
+      END
+      trigOff += 0xc4
+    END
+  END
+BUT_ONLY
+
+// Add entrance to AR1008 from AR1010
+COPY_EXISTING ~%IceIsland%.ARE~ ~override~
+    SPRINT temp_tutu "1" SPRINT temp_bgt "U" SPRINT temp_bgee "1" SPRINT temp_bg "1" LAUNCH_PATCH_MACRO ~getcpmvarp~
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x       = 842  // Location X
+		fj_loc_y       = 307  // Location Y
+		fj_orientation = 15   // Facing direction
+		STR_VAR
+		fj_structure_type = entrance
+		fj_name           = EVALUATE_BUFFER ~EXIT%temp_cpmvar%010~
+	END
+BUT_ONLY
+
+COPY_EXISTING ~%IceIslandMaze_L1%.ARE~ ~override~
+	// Remove Dezkiel from AR1009 (he's now in AR1010)
+	READ_LONG 0x54 actOff
+	actIdx = 0
+    FOR (READ_SHORT 0x58 numAct; numAct; numAct -= 0x1) BEGIN
+    	READ_ASCII actOff + 0x80 char
+    	PATCH_IF ("%char%" STR_EQ "%tutu_var%DEZKIE") BEGIN
+			LPF fj_are_structure
+				INT_VAR
+				fj_delete_mode = actIdx  // Actor to delete
+				STR_VAR
+				fj_structure_type = actor
+			END
+		END
+		actIdx += 1
+		actOff += 0x110
+	END
+	// Add entrance to AR1009 from AR1010
+	PATCH_IF GAME_IS ~totsc tutu_totsc bgt~ THEN BEGIN  /* Not needed for BGEE */
+		SPRINT temp_tutu "1" SPRINT temp_bgt "U" SPRINT temp_bg "1" LAUNCH_PATCH_MACRO ~getcpmvarp~
+		LPF fj_are_structure
+			INT_VAR
+			fj_loc_x       = 697  // Location X
+			fj_loc_y       = 259  // Location Y
+			fj_orientation = 0   // Facing direction
+			STR_VAR
+			fj_structure_type = entrance
+			fj_name           = EVALUATE_BUFFER ~EXIT%temp_cpmvar%010~
+		END
+	END
+BUT_ONLY
+
+COPY_EXISTING ~%IceIslandMaze_L2%.ARE~ ~override~
+	PATCH_IF GAME_IS ~totsc tutu_totsc bgt~ THEN BEGIN  /* Not needed for BGEE */
+    	// Make default transitions autosave
+    	READ_LONG 0x5c trigOff
+    	FOR (READ_SHORT 0x5a numTrig; numTrig; numTrig -= 0x1) BEGIN
+    		READ_SHORT trigOff + 0x20 type
+    		PATCH_IF (type == 0x2) BEGIN
+    			READ_ASCII trigOff + 0x38 destAre
+        		PATCH_IF (("%destAre%" STR_EQ "%IceIsland%") OR ("%destAre%" STR_EQ "%IceIslandMaze_L1%")) BEGIN
+	          		READ_BYTE trigOff + 0x60 flag
+					WRITE_BYTE trigOff + 0x60 flag | 0x4 // Add party-required flag
+        		END
+      		END
+      		trigOff += 0xc4
+    	END
+    	//Correct exit point used for transition to AR1009 (BGT)
+    	PATCH_IF ("%tutuorbgt%" STRING_EQUAL "BGT") BEGIN //BGT only
+      		READ_LONG 0x5c trigOff
+      		FOR (READ_SHORT 0x5a numTrig; numTrig; numTrig -= 0x1) BEGIN
+        		READ_ASCII trigOff name
+        		PATCH_IF ("%name%" STR_EQ "DOORU009") BEGIN
+          			WRITE_ASCII trigOff + 0x40 ~EXITU010~ #32 // Set entrance name
+        		END
+      		END
+    	END
+    	// Add usable transition to AR1008
+    	SPRINT temp_tutu "1" SPRINT temp_bgt "U" SPRINT temp_bg "1" LAUNCH_PATCH_MACRO ~getcpmvarp~
+		LPF fj_are_structure
+			INT_VAR
+			fj_type         = 2    // travel
+			fj_flags		= 0x4  // Party required flag
+			fj_box_left     = 345
+			fj_box_top      = 2719
+			fj_box_right    = 545
+			fj_box_bottom   = 2815
+			fj_cursor_idx   = 28   // stairs
+			fj_vertex_0     = 478 + (2719 << 16)
+			fj_vertex_1     = 545 + (2762 << 16)
+			fj_vertex_2     = 497 + (2815 << 16)
+			fj_vertex_3     = 345 + (2815 << 16)
+    		STR_VAR
+    		fj_structure_type   = region
+		    fj_name             = EVALUATE_BUFFER ~DOOR%temp_cpmvar%008~
+    		fj_destination_area = EVALUATE_BUFFER ~%IceIslandMaze_L1%~
+    		fj_destination_name = EVALUATE_BUFFER ~EXIT%temp_cpmvar%010~
+		END
+	END
+	// Add dispelling traps on bridges to Dezkiel's "island"
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_type         = 0    // Proximity
+    	fj_box_left     = 617
+    	fj_box_top      = 1941
+    	fj_box_right    = 667
+    	fj_box_bottom   = 1998
+    	fj_cursor_idx   = 0 
+    	fj_flags		= 0x8 // Trap detectable
+    	fj_vertex_0     = 647 + (1941 << 16)
+    	fj_vertex_1     = 667 + (1947 << 16)
+    	fj_vertex_2     = 637 + (1998 << 16)
+    	fj_vertex_3     = 617 + (1994 << 16)
+    	fj_trap_detect 	= 60 // trap detection difficulty percentage;
+		fj_trap_remove 	= 90 // trap removal difficulty percentage;
+		fj_trap_active 	= 1  // whether the region is trapped (0=no, 1=yes)
+		fj_trap_status 	= 0  // whether the trap is detected (0=no, 1=yes)
+		fj_loc_x 		= 700  // trap launch X coordinate
+		fj_loc_y 		= 2150 // trap launch Y coordinate
+    	STR_VAR
+    	fj_structure_type   = region
+    	fj_name             = UBTrap2
+    	fj_reg_script		= EVALUATE_BUFFER "%tutu_var%GTAR7"
+  	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_type         = 0    // Proximity
+    	fj_box_left     = 2120
+    	fj_box_top      = 2245
+    	fj_box_right    = 2130
+    	fj_box_bottom   = 2285
+    	fj_cursor_idx   = 0 
+    	fj_flags		= 0x8 // Trap detectable
+    	fj_vertex_0     = 2120 + (2245 << 16)
+    	fj_vertex_1     = 2130 + (2245 << 16)
+    	fj_vertex_2     = 2130 + (2285 << 16)
+    	fj_vertex_3     = 2120 + (2285 << 16)
+    	fj_trap_detect 	= 60 // trap detection difficulty percentage;
+		fj_trap_remove 	= 90 // trap removal difficulty percentage;
+		fj_trap_active 	= 1  // whether the region is trapped (0=no, 1=yes)
+		fj_trap_status 	= 0  // whether the trap is detected (0=no, 1=yes)
+		fj_loc_x 		= 1960  // trap launch X coordinate
+		fj_loc_y 		= 2280 // trap launch Y coordinate
+    	STR_VAR
+    	fj_structure_type   = region
+    	fj_name             = UBTrap4
+    	fj_reg_script		= EVALUATE_BUFFER "%tutu_var%GTAR7"
+  	END
+	// Move Polar bears to a side cave and replace with snow golems
+	READ_LONG 0x54 actOff
+	actIdx = 0
+    FOR (READ_SHORT 0x58 numAct; numAct; numAct -= 0x1) BEGIN
+    	READ_ASCII actOff + 0x80 char
+    	PATCH_IF ("%char%" STR_EQ "%tutu_var%BEARPO") BEGIN
+			LPF fj_are_structure
+				INT_VAR
+				fj_delete_mode = actIdx  // Actor to delete
+				STR_VAR
+				fj_structure_type = actor
+			END
+		END ELSE BEGIN
+			actIdx += 1
+			actOff += 0x110
+		END
+	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 200
+    	fj_loc_y          = 2000
+    	fj_dest_x         = 200
+    	fj_dest_y         = 2000
+    	fj_animation      = 0x7203 // Polar bear
+    	fj_orientation    = 6      // NW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Polar Bear 1"
+    	fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%BEARPO"
+  	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 300
+    	fj_loc_y          = 2050
+    	fj_dest_x         = 300
+    	fj_dest_y         = 2050
+    	fj_animation      = 0x7203 // Polar bear
+    	fj_orientation    = 6      // NW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Polar Bear 2"
+    	fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%BEARPO"
+  	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 1550
+    	fj_loc_y          = 2410
+    	fj_dest_x         = 1550
+    	fj_dest_y         = 2410
+    	fj_animation      = 0x7001 // Ogrillon
+    	fj_orientation    = 6      // NW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Snow Golem 1"
+    	fj_cre_resref     = ubsnogol
+  	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 1050
+    	fj_loc_y          = 2330
+    	fj_dest_x         = 1050
+    	fj_dest_y         = 2330
+    	fj_animation      = 0x7001  // Ogrillon
+    	fj_orientation    = 10      // NE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Snow Golem 2"
+    	fj_cre_resref     = ubsnogol
+  	END
+BUT_ONLY
+
+// Add variable to Dezkiel's Enemy() actions
+<<<<<<<< .../bg1ub/ub_dezkie.d
+REPLACE_ACTION_TEXT ~%tutu_var%DEZKIEL~
+~Enemy()~
+~SetGlobal("UBFightDezkiel","GLOBAL",1) Enemy() Shout(314)~
+>>>>>>>>
+
+COMPILE EVALUATE_BUFFER ~.../bg1ub/ub_dezkie.d~
+
+// Add Snow Golem
+ACTION_IF GAME_IS ~totsc~ THEN BEGIN
+	COPY ~bg1ub/ar1010/snow_golem/ubsnorng_totsc.itm~ ~override/ubsnorng.itm~
+END ELSE BEGIN
+	COPY ~bg1ub/ar1010/snow_golem/ubsnorng.itm~ override
+END
+COPY ~bg1ub/ar1010/snow_golem/ubsnofst.itm~ override
+
+ACTION_IF GAME_IS ~totsc~ THEN BEGIN
+	COPY ~bg1ub/ar1010/snow_golem/ubsnobr_totsc.spl~ ~override/ubsnobr.spl~
+END ELSE BEGIN
+	COPY ~bg1ub/ar1010/snow_golem/ubsnobr.spl~ override
+END
+COPY_EXISTING ~ubsnobr.spl~ override
+	SAY NAME1 @1002
+	WRITE_ASCIIE 0x10 ~%tutu_var%REVEN01~ #8
+
+COPY ~bg1ub/ar1010/snow_golem/ubsnogol.cre~ override
+    LAUNCH_PATCH_MACRO ~source_cre_sound_cleanup~
+    LAUNCH_PATCH_MACRO ~source_cre_script_cleanup~
+    LAUNCH_PATCH_MACRO ~cre_source_res~
+	SAY NAME1 			@1001 // Snow golem
+	SAY NAME2 			@1001 // Snow golem
+    SAY BATTLE_CRY1 	~[ZOMBIE 03]~ [%tutu_var%ZOMBI03]
+    SAY BATTLE_CRY2 	~[ZOMBIE 01] ~ [%tutu_var%ZOMBI01]
+    SAY ATTACK1 		~[REVENANT 05] ~ [%tutu_var%REVEN05]
+    SAY ATTACK1 		~[REVENANT 06] ~ [%tutu_var%REVEN06] 
+    SAY DAMAGE 			~[REVENANT 08] ~ [%tutu_var%REVEN08]
+    SAY DYING 			~[REVENANT 09] ~ [%tutu_var%REVEN09]
+	ADD_CRE_ITEM ~ubsnorng~ #0 #0 #0 ~UNDROPPABLE~ ~RRING LRING~
+	ADD_CRE_ITEM ~ubsnofst~ #0 #0 #0 ~UNDROPPABLE~ ~WEAPON1~ EQUIP
+	
+COMPILE EVALUATE_BUFFER ~bg1ub/ar1010/snow_golem/ubsnogol.baf~
+COMPILE EVALUATE_BUFFER ~bg1ub/ar1010/snow_golem/ubdezovr.baf~
+
+COPY_EXISTING ~%tutu_var%DEZKIE.cre~ override
+	// Give Dezkiel new override script
+	WRITE_ASCIIE SCRIPT_OVERRIDE ~UBDEZOVR~ #8
+	// Correcting errors in Dezkiel's CRE
+	WRITE_BYTE 0x0235 9  // Dezkiel has 5th level spells, should be 9th level mage
+	WRITE_BYTE 0x0052 13 // THAC0 for 8th level fighter is 13
+	WRITE_BYTE 0x006f 2  // Small Swords
+	WRITE_BYTE 0x0072 2  // Missile
+	WRITE_BYTE 0x0075 2  // Blunt	
+	// Give Dezkiel some weapons!
+	ADD_CRE_ITEM ~%tutu_var%STAF01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP
+	ADD_CRE_ITEM ~%tutu_var%DAGG05~ #10 #0 #0 ~IDENTIFIED~ ~WEAPON2~
+	// Replace fire-area of effect spells that might harm golems
+	REMOVE_MEMORIZED_SPELL ~SPWI304~  // Remove Fireball
+	REMOVE_MEMORIZED_SPELL ~SPWI217~  // Remove Aganazzar's Scorcher
+	ADD_MEMORIZED_SPELL ~SPWI303~ #2 ~wizard~ ( 2 ) // Add Flame Arrow
+	ADD_MEMORIZED_SPELL ~SPWI211~ #1 ~wizard~ ( 1 ) // Add Melf's Acid Arrow
+BUT_ONLY
