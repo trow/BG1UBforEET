@@ -1,15 +1,15 @@
 // Svlast CRE
 @4201 = ~Svlast~
-@4202 = ~[LOTHANDER 2] My life is in shambles.~ [%tutu_var%LOTHR02]
+@4202 = ~[LOTHANDER 2] Ich stehe vor einem Scherbenhaufen.~ [%tutu_var%LOTHR02]
 @4203 = ~[LOTHANDER 3]~ [%tutu_var%LOTHR03]
 @4204 = ~[LOTHANDER 4]~ [%tutu_var%LOTHR04]
 
 // Revenant
 @4210 = ~Revenant~
 @4211 = ~[REVENANT 01] ~ [%tutu_var%REVEN01]
-@4212 = ~[REVENANT 02] Must... revenge...~ [%tutu_var%REVEN02]
-@4213 = ~[REVENANT 03] I've come for you.~ [%tutu_var%REVEN03]
-@4214 = ~[REVENANT 04] You... shall... pay...~ [%tutu_var%REVEN04]
+@4212 = ~[REVENANT 02] Muss ... mich rächen...~ [%tutu_var%REVEN02]
+@4213 = ~[REVENANT 03] Jetzt schnappe ich Euch.~ [%tutu_var%REVEN03]
+@4214 = ~[REVENANT 04] Ihr ... werdet ... zahlen...~ [%tutu_var%REVEN04]
 @4215 = ~[REVENANT 05] ~ [%tutu_var%REVEN05]
 @4216 = ~[REVENANT 06] ~ [%tutu_var%REVEN06]
 @4217 = ~Revenge...~
@@ -19,49 +19,49 @@
 
 // UBSVLAST.D
 /* #14889 */
-@4220 = ~He's out there. He's coming. I can feel his footsteps, following me. The scent of rotting flesh. He's coming for us all.~ 
+@4220 = ~Er ist irgendwo da draußen. Er kommt. Mir folgend, hallen seine Schritte nach - begleitet vom Gestank faulendem Fleisches. Er wird uns alle holen.~ 
 /* #14890 */
-@4221 = ~I-- I killed him. But he's out there, he's coming this way, I can f-- feel it.~ 
+@4221 = ~Ich ... tötete ihn. Allerdings ist er da draußen und kommt aus dieser Richtung. Ich kann es fü ... fühlen.~ 
 /* #14891 - MODIFIED */
-@4222 = ~I was a paladin, once. I fought on the side of good but it all comes to naught... I murdered him in cold blood, my brother in the faith... When he comes, let him be.~ 
+@4222 = ~Ich war einst ein Paladin. Ich stand auf der guten Seite, doch das ist jetzt alles Geschichte... Kaltblütig mordete ich meinen Glaubensbruder... Lasst ihn gewähren, wenn er kommt.~ 
 /* #14893 - MODIFIED */
-@4223 = ~What have you done? Now I am twice as wretched! Kill me in this tortured place! At least there will be some justice then.~ 
+@4223 = ~Was habt Ihr bloß getan? Jetzt bin ich noch verzweifelter als zuvor! Tötet mich an diesem verfluchten Ort um der Gerechtigkeit willen!~ 
 /* #14894 */
-@4224 = ~What could you ever hope to learn from a wretched fool like me? Learn from my example, at least, and seek not to kill that which is good in the world.~ 
+@4224 = ~Was könntet Ihr von einem zerbrochenem Idioten, wie ich es bin, lernen wollen? Nehmt mich am Ende als abschreckendes Beispiel und wendet Euch nicht gegen das Gute in der Welt.~ 
 /* #14895 */
-@4225 = ~Please, just leave me to my misery.~ 
+@4225 = ~Bitte, überlasst mich meiner Trübsal.~ 
 /* #14896 */
-@4226 = ~Much as I may welcome death, I will not face it without a fight.~ 
-@4227 = ~I am sorry, my brother... I was jealous, I was... a fool. My life is yours.~ 
+@4226 = ~So sehr ich auch den Tod begrüße, kann ich die Welt aber nicht ohne Kampf verlassen.~ 
+@4227 = ~Ich bin zutiefst betrübt, mein Bruder... Ich war eifersüchtig, ich war ... ein Idiot. Mein Leben gehört Euch.~ 
 
 // Replies
-@4240 = ~What are you talking about? Who is coming for us?~
-@4241 = ~Who was this person? Why does he hunt you from beyond the grave?~
-@4242 = ~Are you mad? I will not simply stand by and let this creature kill you!~
-@4243 = ~As you wish. I do not agree with your decision, but if it is your choice to die by this creature's hand, I will not stand in the way.~ 
-@4244 = ~No problem. This is between you and him. I want no part of it!~
-@4245 = ~An undead creature seeks *your* death? Perhaps we should just give it what it wants!~
-@4246 = ~As you wish. Let justice be done.~
-@4247 = ~I refuse. I will not be your executioner. You will have to atone for your crimes. Perhaps then others may learn from your mistakes.~ 
-@4248 = ~That's a fine way to show show gratitude! I just saved your miserable life!~
-@4249 = ~If that's what you desire, it will be my pleasure.~
+@4240 = ~Wovon sprecht Ihr? Wer verfolgt uns?~
+@4241 = ~Wer war diese Person? Warum verfolgt er Euch über den Tod hinaus?~
+@4242 = ~Seid Ihr von Sinnen? Ich werde nicht tatenlos zusehen, wie diese Abnormität Euch den Garaus macht!~
+@4243 = ~Wie Ihr wollt. Ich verstehe Euren Wunsch nicht, aber wenn es Euer Wille ist, durch dieses Wesen getötet zu werden, dann soll es so sein.~ 
+@4244 = ~Kein Problem. Macht die Sache unter Euch aus. Das geht mich nichts an!~
+@4245 = ~Ein Untoter will Euch töten? Vielleicht sollten wir dem Biest geben, was es verlangt!~
+@4246 = ~Wie Ihr wünscht. Möge Gerechtigkeit walten.~
+@4247 = ~Da mache ich nicht mit. Ich werde nicht Euren Henker spielen. Ihr werdet für Eure Verbrechen büßen müssen. Vielleicht werden andere die richtigen Schlüsse aus Euren Verfehlungen ziehen.~ 
+@4248 = ~Das ist aber eine feine Art seiner Dankbarkeit Ausdruck zu verleihen! Eben noch bewahrte ich Euer lausiges Leben!~
+@4249 = ~Wenn es das ist, wonach Ihr verlangt, komme ich dem mit Freuden nach.~
 
 // Journal Entries
 //  (Strref: 15713)
-@4290 = ~Svlast's Torment
-I have been witness to sad events within the Firewine ruins. An ex-paladin by the name of Svlast is being hunted by the spirit of his brother in the faith, whom he wrongfully killed. Never have I seen a more dejected and repentant soul than poor Svlast. He has begged us not to interfere but my heart does not rest easy with such a choice...~
-@4291 = ~Svlast's Torment
-An ex-paladin by the name of Svlast is being hunted by the spirit of his brother in the faith, whom he wrongfully killed. He begged us not to interfere.~
-@4292 = ~Svlast's Torment
-An ex-paladin by the name of Svlast was being hunted by the spirit of his brother in the faith, whom he wrongfully killed. I gave the creature what it wanted by killing the fallen paladin myself.~
-@4293 = ~Svlast's Torment
-Svlast's torment has ended. The creature took its revenge.~
+@4290 = ~Svlasts Pein
+Ich wurde Zeuge trauriger Ereignisse in den Feuerweinruinen. Svlast, ein gefallener Paladin, wird vom Geist eines ehemaligen Glaubensbruders gejagt, den er einst aus niederen Gründen tötete. Nie zuvor begegnete ich einer bußfertigeren und gebrocheneren Seele als dem bemitleidenswerten Svlast. Er flehte uns an, nichts zu unternehmen. Allerdings fühle ich mich in meiner Haut dabei äußerst unwohl...~
+@4291 = ~Svlasts Pein
+Svlast, ein gefallener Paladin, wird vom Geist eines ehemaligen Glaubensbruders gejagt, den er einst aus niederen Gründen tötete. Er flehte uns an, sich nicht einzumischen.~
+@4292 = ~Svlasts Pein
+Svlast, ein gefallener Paladin, wurde von dem Geist eines ehemaligen Glaubensbruders gejagt, den er einst aus niederen Gründen tötete. Ich gab dem Geist seinen Seelenfrieden, indem ich den Mörder eigenhändig richtete.~
+@4293 = ~Svlasts Pein
+Svlasts ist von seiner Pein erlöst. Der Geist rächte sich.~
 // (Strref: 15703)
-@4295 = ~Svlast's Torment
-Having survived the revenant's assault with our assistance, poor and wretched Svlast begged us to complete its task... The day is dark within these ruins, and I fear it's growing ever darker.~
-@4296 = ~Svlast's Torment
-Having survived the revenant's assault with our assistance, poor and wretched Svlast begged us to complete its task... I flatly refused. He will have to atone for his crimes.~
-@4297 = ~Svlast's Torment
-Having survived the revenant's assault with our assistance, poor and wretched Svlast begged us to complete its task... You'd think he would show some gratitude!~
-@4298 = ~Svlast's Torment
-Having survived the revenant's assault with our assistance, poor and wretched Svlast begged us to complete its task... Who was I to refuse?~
+@4295 = ~Svlasts Pein
+Er überlebte den Angriff des Widergängers mit unserer Hilfe. Der gebrochene und bemitleidenswerte Svlast flehte um den Gnadenstoß... Dies ist ein trüber Tag in diesen Ruinen und ich fürchte, dass er noch betrüblicher werden wird.~
+@4296 = ~Svlasts Pein
+Er überlebte den Angriff des Widergängers mit unserer Hilfe. Der gebrochene und bemitleidenswerte Svlast flehte um den Gnadenstoß... was für mich überhaupt nicht in Frage kam. Er wird seine Verbrechen büßen müssen.~
+@4297 = ~Svlasts Pein
+Er überlebte den Angriff des Widergängers mit unserer Hilfe. Der gebrochene und bemitleidenswerte Svlast flehte um den Gnadenstoß... Da erwartet man doch wohl so etwas wie Dankbarkeit!~
+@4298 = ~Svlasts Pein
+Er überlebte den Angriff des Widergängers mit unserer Hilfe. Der gebrochene und bemitleidenswerte Svlast flehte um den Gnadenstoß... Wer kann da schon Nein sagen?~

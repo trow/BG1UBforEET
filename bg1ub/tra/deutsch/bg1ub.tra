@@ -187,8 +187,8 @@ Typ: 1-händig~
 Gewicht: 2~
 
 // Ice Island Level 2 Restoration
-@1001 = ~Snow Golem~
-@1002 = ~Snow Golem Breath~
+@1001 = ~Schneegolem~
+@1002 = ~Steife Briese~
 
 // Nim Furlwing Encounter
 @4001 = ~Nim Furlwing~
