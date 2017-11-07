@@ -85,7 +85,7 @@ Listed below is an explanation of some of the mod's components:
 
 **33. Mal-Kalen, the Ulcaster Ghost:** This new component was provided by AstroBryGuy. The spirit of Mal-Kalen haunts the depths of the Ulcaster Ruins.
 
-**34. Chapter 6 Dialogue Restorations:** This new component was provided by AstroBryGuy. Did you ever want to have a little chat with Tethtoril in Candlekeep Library? Did it ever bug you that the Gatewarden seemed to warp to the 6th floor, no matter how fast you go there after talking to Koveras? This component changes that. Now, you can visit Tethtoril, have a little chat, and then stumble into Koveras' clever scheme.
+**34. Chapter 6 Dialogue Restorations:** This new component was provided by AstroBryGuy. Did you ever want to have a little chat with Tethtoril in Candlekeep Library? Did it ever bug you that the Gatewarden was waiting for you on the 6th floor, no matter how fast you go there after talking to Koveras? This component changes that. Now, you can visit Tethtoril, have a little chat, and then stumble into Koveras' clever scheme. Many thanks to Salk for suggestions for this component.
 
 ## INSTALLATION
 
