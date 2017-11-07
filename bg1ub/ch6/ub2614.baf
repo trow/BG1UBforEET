@@ -1,4 +1,5 @@
 IF 
+	%BGT_VAR%
 	Dead("Rieltar") 
 THEN 
 	RESPONSE #100

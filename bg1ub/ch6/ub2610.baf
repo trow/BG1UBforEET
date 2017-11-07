@@ -1,4 +1,5 @@
 IF 
+	%BGT_VAR%
 	Global("Criminal","GLOBAL",1) 
 	!Dead("Rieltar") 
 	Global("UBIronThroneMurder","GLOBAL",1)
@@ -21,6 +22,7 @@ THEN
 END
 
 IF 
+	%BGT_VAR%
 	Global("Criminal","GLOBAL",1) 
 	Dead("Rieltar") 
 	Global("UBIronThroneMurder","GLOBAL",1)
