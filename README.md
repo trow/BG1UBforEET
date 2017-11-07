@@ -1,7 +1,7 @@
 # BG1 Unfinished Business
 A mod for BG1Tutu and Baldur's Gate Trilogy
 
-**Version 14.1**
+**Version 15**
 
 **Developed by:** icelus, devSin, SimDing0, Idobek, Ascension64, CamDawg, SixOfSpades, and Dudley
 
@@ -84,6 +84,8 @@ Listed below is an explanation of some of the mod's components:
 **32. Svlast, the Fallen Paladin Encounter:** This new component was provided by AstroBryGuy. An ex-paladin by the name of Svlast is being hunted in the night near the Firewine Ruins. Can you help him?
 
 **33. Mal-Kalen, the Ulcaster Ghost:** This new component was provided by AstroBryGuy. The spirit of Mal-Kalen haunts the depths of the Ulcaster Ruins.
+
+**34. Chapter 6 Dialogue Restorations:** This new component was provided by AstroBryGuy. Did you ever want to have a little chat with Tethtoril in Candlekeep Library? Did it ever bug you that the Gatewarden seemed to warp to the 6th floor, no matter how fast you go there after talking to Koveras? This component changes that. Now, you can visit Tethtoril, have a little chat, and then stumble into Koveras' clever scheme.
 
 ## INSTALLATION
 
@@ -446,6 +448,17 @@ Below are links to community-related sites:
     * Updated Italian Translation - thanks Aedan!
     * Svlast, the Fallen Paladin: Made Svlast's items unidentified
     * Updating BGT\_VAR for EET Support
-
+* Version 15
+  * NEW COMPONENT: Chapter 6 Dialog Restorations
+  * Mal-Kalen updates:
+    * Fear effect centered on caster
+    * Reduce spell damage resistance to 50%
+  * CHANGES
+    * Updated German translations - thanks Clubboth!
+    * Moving ALWAYS section to .tpa file
+    * Moving Ice Island code block to .tpa file
+    * Adding NTotSC check for Svlast component
+    * Updating DV changes to write 32 bytes
+    * Removing change of DV for %tutu_var%NOBW4.cre
     
 Please see bg1ub.txt for release notes pertaining to your specific platform.
