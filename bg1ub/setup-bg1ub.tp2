@@ -5032,7 +5032,7 @@ MAKE_BIFF UBTAVERN BEGIN ~bg1ub/tavern/~ ~ubtavern.mve~ END
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 BEGIN @4200 /* ~Svlast, the fallen paladin~ */
-FORBID_FILE ~override/ntsvlst.cre~ @90003
+FORBID_FILE ~override/ntsvlast.cre~ @90003
 FORBID_FILE ~override/ja#svslt.cre~ @90004
 
 LOAD_TRA "bg1ub/tra/%LANGUAGE%/ubsvlast.tra"
