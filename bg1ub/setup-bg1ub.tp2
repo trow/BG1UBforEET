@@ -829,10 +829,14 @@ COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBShiloChen.UB~
 COPY ~bg1ub/shilochen/IBRACUB.BAM~ ~override~
 
 COPY ~bg1ub/shilochen/%tutuorbgt%/UBGLOVE1.ITM~ ~override~
-  SAY NAME1 #6341
-  SAY NAME2 @19
-  SAY UNIDENTIFIED_DESC #6791
-  SAY IDENTIFIED_DESC @20
+  	SAY NAME1 #6341
+  	SAY NAME2 @19
+  	SAY UNIDENTIFIED_DESC #6791
+  	PATCH_IF (GAME_IS ~bgee eet~) BEGIN
+    	SAY IDENTIFIED_DESC @123
+  	END ELSE BEGIN
+    	SAY IDENTIFIED_DESC @20
+	END
 
 COPY_EXISTING ~BEARBL.CRE~ ~override/UBDBEAR.CRE~
   WRITE_LONG 0x010 5 // Permanent corpse
@@ -4112,19 +4116,13 @@ COPY_EXISTING ~%tutu_var%STO0703.STO~ ~override~ // Sorcerous Sundries
 BUT_ONLY
 
 // Removes the following sentence from the description of Bala's Axe: "The axe gives the owner the ability to dispel magic once a day."
-ACTION_IF !GAME_IS ~bgee~ THEN BEGIN
-	COPY_EXISTING ~%tutu_var%AX1H07.ITM~ ~override~
-  		PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
-    		SAY 0x54 @96
-  		END
-	BUT_ONLY
-END ELSE BEGIN
-	COPY_EXISTING ~AX1H07.ITM~ ~override~
-  		PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
-    		SAY 0x54 @115
-  		END
-	BUT_ONLY
-END
+COPY_EXISTING ~AX1H07.ITM~ ~override~
+  	PATCH_IF (GAME_IS ~bgee eet~) BEGIN
+    	SAY 0x54 @115
+  	END ELSE BEGIN
+    	SAY 0x54 @96
+	END
+BUT_ONLY
 
 /////////////////////////////////////////
 // Adds weight to the items' descriptions
@@ -5189,12 +5187,15 @@ BEGIN @4400 /* ~Chapter 6 Dialogue Restorations~ */
 
 /* Area script changes */
 LAF extend_area_script STR_VAR area="%Candlekeep_Library_L1%" bottom="bg1ub/ch6/ubmurder.baf" END
-LAF extend_area_script STR_VAR area="%Candlekeep_Library_L5%" bottom="bg1ub/ch6/ubmurder.baf" END
+LAF extend_area_script STR_VAR area="%Candlekeep_Library_L2%" bottom="bg1ub/ch6/ub2609.baf" END
 LAF extend_area_script STR_VAR area="%Candlekeep_Library_L3%" bottom="bg1ub/ch6/ub2610.baf" END
+LAF extend_area_script STR_VAR area="%Candlekeep_Library_L4%" bottom="bg1ub/ch6/ub2611.baf" END
+LAF extend_area_script STR_VAR area="%Candlekeep_Library_L5%" bottom="bg1ub/ch6/ubmurder.baf" END
 LAF extend_area_script STR_VAR area="%Candlekeep_Library_L6%" bottom="bg1ub/ch6/ub2614.baf" END
 
 /* Add unused dialogue states from TETHTO.DLG to TETHTO2.DLG */
-/* Gatewarden only arrests CHARNAME if he killed Iron Throne Leaders */
+/* Gatewarden shouldn't accuse CHARNAME of killing Thaldorn */
+/* Replies to WATCH6.CRE won't include reference to Ulraunt and Tethtoril if CHARNAME is on the 6th floor */
 COMPILE EVALUATE_BUFFER ~bg1ub/ch6/ubch6.d~
 
 /* Dead versions of the Iron Throne leaders */
@@ -5229,3 +5230,13 @@ COPY_EXISTING ~%tutu_var%kestor.cre~ ~override/ubkest.cre~
 	WRITE_SHORT 0x24 0 // Set HP = 0
 	WRITE_ASCIIE DEATHVAR	~UBKestor~ #32
 	WRITE_ASCIIE DIALOG	~~ #8
+
+/* Give Gatewarden and Watcher6 script names */
+COPY_EXISTING ~%tutu_var%gatewa2.cre~ ~override~
+	WRITE_ASCIIE DEATHVAR	~%tutu_var%GATEWA2~ #32
+	BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%watch6.cre~ ~override~
+	WRITE_ASCIIE DEATHVAR	~%tutu_var%WATCH6~ #32
+	BUT_ONLY
+

@@ -15,18 +15,12 @@ APPEND ~%tutu_var%tethto2~
   END
   IF ~~ THEN BEGIN UBTethtorilNoSurrender
   SAY @6
-    IF ~~ THEN DO ~EscapeArea()~ EXIT
+    IF ~~ THEN DO ~CreateCreature("%tutu_var%WATCH6",[1050.850]%FACE_0%) ActionOverride("%tutu_var%WATCH6",MoveToObject(Player1)) ActionOverride("%tutu_var%WATCH6",Dialog(Player1)) EscapeArea()~ EXIT
   END
 END
 
-/* Add Dead(Rieltar) trigger to GATEWA2.DLG State 2 */
-ADD_STATE_TRIGGER ~%tutu_var%gatewa2~ 2 ~Dead("Rieltar")~
-
 /* Gatewarden shouldn't accuse CHARNAME of killing Thaldorn */
 REPLACE_SAY ~%tutu_var%gatewa2~ 2 @7
-
-/* Gatewarden leaves after talking to CHARNAME */
-ADD_TRANS_ACTION ~%tutu_var%gatewa2~ BEGIN 6 END BEGIN 0 END ~EscapeArea()~
 
 /* Replies to WATCH6.CRE won't include reference to Ulraunt and Tethtoril if CHARNAME is on the 6th floor */
 ADD_TRANS_TRIGGER ~%tutu_var%watch6~ 0 ~!AreaCheck("%Candlekeep_Library_L6%")~ DO 1
