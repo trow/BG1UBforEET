@@ -276,7 +276,7 @@ MONSTHIT.EFF
 UNDEDHIT.EFF
 
 
-VERSION ~v15~
+VERSION ~v15.1~
 README ~bg1ub/readme.html~
 
 ALWAYS
@@ -820,8 +820,6 @@ BUT_ONLY
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @18
-//FORBID_FILE ~override/NTSHILOC.CRE~ @90003
-//FORBID_FILE ~data/NTotSC1.bif~ @90003
 FORBID_FILE ~backup_NTotSC/dialog.tlk~ @90003
 
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBShiloChen.UB~

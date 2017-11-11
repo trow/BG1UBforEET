@@ -13,7 +13,9 @@ Hace unos años, Fong Moo un famoso ladrón conocido tanto en Puerta de Baldur com
 
 ESTADÍSTICAS
 
-Robar:  +20% ~
+Robar:  +20%
+
+Peso: 2~
 
 @25  = ~Granjero~
 
@@ -304,6 +306,14 @@ Tipo: Una mano~
 @121 = ~Un manual de salud corporal típico le proporciona al lector valiosa información sobre medicina preventiva, primeros auxilios y tonificación de músculos adecuada.
 
 Peso: 2 lbs~
+@123 = ~Guantes de robar
+Hace unos años, Fong Moo un famoso ladrón conocido tanto en Puerta de Baldur como en Athkatla, fue encontrado muerto en el camino desde la Puerta a Beregost. Parece que robó un artefacto a un gran mago e intentó escapar sin mucho éxito. Sus posesiones recayeron en un sobrino con la misma vocación que su tío, y se hizo muy bueno robando carteras. Si estos guantes eran mágicos antes de caer en manos de Fong o si la esencia de su maestro ha quedado impregnada en ellos, es algo que no se sabe. 
+
+ESTADÍSTICAS
+
+Robar:  +20% 
+
+Peso: 2 lb~
 
 // Ice Island Level 2 Restoration
 @1001 = ~Snow Golem~

@@ -186,6 +186,19 @@ Typ: 1-händig~
 
 Gewicht: 2~
 
+// Handschuhe des Taschendiebstahls - BGEE Description
+@123 = ~Handschuhe des Taschendiebstahls
+
+Vor ein paar Jahren fand man die Leiche von Fong Moo, eines berühmten Taschendiebs, der sowohl in Baldurs Tor als auch in Athkatla bekannt war, auf der Straße zwischen Baldurs Tor und Beregost. Offenbar hatte er von einem mächtigen Magier ein Artefakt gestohlen und war dann bei dem Versuch gescheitert, vor dem Magier zu fliehen. Seine Besitztümer gingen an seinen Neffen, der sich dem gleichen "Beruf" wie sein Onkel verschrieb und zu einem außergewöhnlich fähigen Taschendieb wurde. Ob die Handschuhe schon früher magisch waren oder ob sie von der Essenz des Meisterdiebes Fong Moo erfüllt sind, lässt sich nicht sagen.
+
+EIGENSCHAFTEN:
+
+Taschendiebstahl: +20%
+
+Gewicht: 2~
+
+
+
 // Ice Island Level 2 Restoration
 @1001 = ~Schneegolem~
 @1002 = ~Steife Briese~

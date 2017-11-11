@@ -10,7 +10,9 @@ Il y a quelques années, Fong Moo, un fameux pickpocket connu à la Porte de Baldu
 
 PARAMÈTRES
 
-Vol à la Tire : bonus de +20%~
+Vol à la Tire : bonus de +20%
+
+PoidsÊ: 2~
 @25   = ~Fermier~
 @27   = ~Kaitlin~
 @28   = ~Malicia~
@@ -165,6 +167,16 @@ Type : à une main~
 @121 = ~Un manuel de santé corporelle traditionnel fournit au lecteur des informations précieuses sur la médecine préventive, les premiers soins d'urgence et la tonicité musculaire.
 
 Poids: 2~
+
+@123   = ~Gants de Pickpocket
+Il y a quelques années, Fong Moo, un fameux pickpocket connu à la Porte de Baldur et à Athkatla, fut retrouvé mort sur la route entre la Porte et Bérégost. Il semble qu'il avait volé un artefact d'un mage puissant et avait essayé de s'échapper, sans succès. Ses biens furent remis à un neveu, qui fit le même choix de carrière que son oncle, et qui devint particulièrement excellent en vol à la tire. Nul ne sait si les gants étaient magiques avant de tomber entre les mains de Fong ou s'ils se sont imprégnés d'une façon ou d'une autre de l'essence du maître.
+
+PARAMÈTRES
+
+Capacités d'équipementÊ:
+- Vol à la Tire : bonus de +20%
+
+PoidsÊ: 2~
 
 // Ice Island Level 2 Restoration
 @1001 = ~Golem de neige~
