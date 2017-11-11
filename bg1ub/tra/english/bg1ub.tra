@@ -11,9 +11,11 @@
 @20   = ~Gloves of Pick Pocketing
 A few years back Fong Moo a famous cutpurse, known in both Baldur's Gate and Athkatla, was found dead on the road between the Gate and Beregost.  Seems he'd stolen an artifact from a powerful mage and tried escaping, with little success.  His possessions went to a nephew, who took up the same trade as his uncle, and became especially good at pick pocketing.  Whether these gloves were magical before falling into Fong's hands or if they are somehow imbued with the master's essence is not known.
 
-STATISTICS
+STATISTICS:
 
-Pick Pocketing:  +20% Bonus~
+Pick Pockets: +20% bonus
+
+Weight: 2~
 
 
 @25   = ~Farmer~
@@ -173,6 +175,18 @@ Weight: 6~
 @121 = ~A typical manual of bodily health provides the reader with valuable information regarding preventative medicine, basic first aid, and proper muscle toning.
 
 Weight: 2~
+
+// Gloves of Pick Pocketing - BGEE Description
+@123 = ~Gloves of Pick Pocketing
+A few years back Fong Moo a famous cutpurse, known in both Baldur's Gate and Athkatla, was found dead on the road between the Gate and Beregost.  Seems he'd stolen an artifact from a powerful mage and tried escaping, with little success.  His possessions went to a nephew, who took up the same trade as his uncle, and became especially good at pick pocketing.  Whether these gloves were magical before falling into Fong's hands or if they are somehow imbued with the master's essence is not known.
+
+STATISTICS:
+
+Equipped abilities:
+– Pick Pockets: +20%
+
+Weight: 2~
+
 
 // Ice Island Level 2 Restoration
 @1001 = ~Snow Golem~
