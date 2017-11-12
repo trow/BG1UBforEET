@@ -460,5 +460,9 @@ Below are links to community-related sites:
     * Adding NTotSC check for Svlast component
     * Updating DV changes to write 32 bytes
     * Removing change of DV for %tutu_var%NOBW4.cre
-    
+* Version 15.1
+  * Ch 6 Restorations: Updates to improve scripting and dialog options
+  * Shilo Chen: Updated item description for Gloves of Pick Pocketing in BGEE
+  * Updated Polish translations - Thanks Cahir!
+  
 Please see bg1ub.txt for release notes pertaining to your specific platform.
