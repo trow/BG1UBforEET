@@ -1,36 +1,34 @@
-/*BG2engine*/
-
-@0  = ~Mam do zaliczenia wa¿ny test, bo chcê ¿eby mnie przyjêli do Ligi Kupieckiej. Nie powiem, ¿ebym nie siedzia³a nad ksi¹¿kami i nie zakuwa³a, ale zanosi siê na to, ¿e pop³ynê na tym egzaminie. Nie s¹dzê, aby istota kupiectwa dotyczy³a uczciwoœci i szczeroœci. Ale gdybyœ tak zdoby³ miksturkê, która podwy¿szy³aby moj¹ inteligencjê czy m¹droœæ, by³abym niezmiernie wdziêczna.~ 
+@0  = ~Aby zostaæ cz³onkiem Ligi Kupieckiej, trzeba zdaæ wczeœniej wielki egzamin, tak wiêc siedzê tu i uczê siê, uczê i uczê. Chocia¿ kupcy nie przejmuj¹ siê raczej zbytnio szczeroœci¹ i uczciwoœci¹. Jeœli mielibyœcie pergamin lub miksturê, która mog³aby podnieœæ moj¹ inteligencjê lub m¹droœæ, to by³oby po prostu wspaniale.~ 
 @1  = ~Pewnie, czemu nie? Mi³oœnikiem egzaminów to ja nie jestem. Zobaczê, co da siê zrobiæ.~
-@2  = ~M³oda Edie obawiaj¹c siê wstêpnych egzaminów do Ligii Kupieckiej we Wrotach Baldura poprosi³a mnie, abym pomóg³ jej w przekrêcie. Przyznajê, ¿e nie jest to najuczciwsze, ale mo¿liwe, ¿e mikstura wp³ywaj¹ca na inteligencjê, czy m¹droœæ zrobi na szaro...~ 
-@3  = ~Nie zamiarzam ci pomagaæ w kantowaniu na teœcie!~
-@4  = ~Mam tu miksturê geniuszu. Czy to pomo¿e?~ 
-@5  = ~Mam tu miksturê skupienia. Czy to pomo¿e?~
-@6  = ~Mam tu miksturê intuicji. Czy to pomo¿e?~
+@2  = ~M³oda Edie poprosi³a nas, byœmy pomogli jej oszukaæ na egzaminie wstêpnym do Ligi Kupieckiej Wrót Baldura. Nie bêdzie to nazbyt uczciwe, ale byæ mo¿e odrobina magii wp³ywaj¹cej na inteligencjê lub m¹droœæ mog³aby tu pomóc...~ 
+@3  = ~Nie zamierzam pomagaæ ci w oszukiwaniu podczas testu!~
+@4  = ~Pewnie, mam tu Miksturê geniuszu. Czy to pomo¿e?~ 
+@5  = ~Pewnie, mam tu Miksturê skupienia. Czy to pomo¿e?~
+@6  = ~Pewnie, mam tu Miksturê intuicji. Czy to pomo¿e?~
 @7  = ~Nie, nie pomogê ci. Mam nadziejê, ¿e oblejesz test.~ 
-@8  = ~Witaj ponownie. Mam nadziejê, ¿e wróci³eœ z czymœ extra...~
-@9  = ~W zasadzie to, czu³bym siê nieswojo, pomagaj¹c ci w oszukiwaniu na teœcie. Wybacz.~ 
+@8  = ~Witaj ponownie. Mam nadziejê, ¿e wróci³eœ z czymœ ekstra...~~Witaj ponownie. Mam nadziejê, ¿e wróci³aœ z czymœ ekstra...~
+@9  = ~W zasadzie to czu³bym siê nieswojo, pomagaj¹c ci w oszukiwaniu na teœcie. Wybacz.~~W zasadzie to czu³abym siê nieswojo, pomagaj¹c ci w oszukiwaniu na teœcie. Wybacz.~  
 @10 = ~Zapomij. Nie pomogê ci i mam nadziejê, ¿e oblejesz.~
 @11 = ~Nie, jeszcze nie. Nadal szukam.~
-@12 = ~Tak, s¹dzê ¿e to pomo¿e! Dziêki ci wielkie! Oto 50 sztuk z³ota. Dam ci znaæ, jak posz³o.~ 
-@13 = ~Tak, s¹dzê ¿e pomo¿e! Dziêki ci wielkie! Oto 50 sztuk z³ota. Dam ci znaæ, jak posz³o. Test jest ju¿ jutro.~
-@14 = ~Co za przedziwny test... Ca³y pic polega³ na tym, aby okantowaæ ludzi. Po wszystkim wyk³adowcy powiedzieli "Wykorzystuj ka¿d¹ nada¿aj¹c¹ siê sytuacjê". Gdy powiedzia³am im, ¿e da³eœ mi miksturkê za marne 50 sztuk z³ota, zda³am w mig! Kapitalizm wci¹¿ jest mi obcy. No, ale powinnam ju¿ zmykaæ do domu. Jeszcze raz dziêki ci za pomoc.~ 
-@15 = ~Mam gdzieœ te twoje uprzejmoœci. Pójdê uczyæ siê gdzie indziej.~
+@12 = ~Tak, s¹dzê, ¿e to pomo¿e! Dziêki ci wielkie! Oto piêædziesi¹t sztuk z³ota. Dam ci znaæ, jak posz³o.~ 
+@13 = ~Tak, s¹dzê, ¿e pomo¿e! Dziêki ci wielkie! Oto piêædziesi¹t sztuk z³ota. Dam ci znaæ, jak posz³o. Test jest ju¿ jutro.~
+@14 = ~Jaki niezwyk³y egzamin. Ca³a sztuka tkwi w tym, ¿eby umieæ oszukiwaæ ludzi. „Wykorzystaj ka¿d¹ mo¿liw¹ przewagê” – mówi¹ instruktorzy. Kiedy powiem im, ¿e daliœcie mi to za jedyne piêædziesi¹t sztuk z³ota, to zdam egzamin œpiewaj¹co! Kapitalizm jest taki dziwny. No, ale powinnam ju¿ zmykaæ do domu. Jeszcze raz dziêki ci za pomoc.~ 
+@15 = ~Mam gdzieœ te twoje uprzejmoœci. Pójdê uczyæ siê gdzieœ indziej.~
 @16 = ~Dziêki za nic. Wybacz, ale przez ciebie mam mniej czasu, który mog³abym spo¿ytkowaæ na naukê.~
 
 // @2 with header:
 @17 = ~Oszukiwanie na egzaminie wstêpnym
 
-M³oda Edie obawiaj¹c siê wstêpnych egzaminów do Ligii Kupieckiej we Wrotach Baldura poprosi³a mnie, abym pomóg³ jej w przekrêcie. Przyznajê, ¿e nie jest to najuczciwsze, ale mo¿liwe, ¿e mikstura wp³ywaj¹ca na inteligencjê, czy m¹droœæ zrobi na szaro...~
+M³oda Edie poprosi³a nas, byœmy pomogli jej oszukaæ na egzaminie wstêpnym do Ligi Kupieckiej Wrót Baldura. Nie bêdzie to nazbyt uczciwe, ale byæ mo¿e odrobina magii wp³ywaj¹cej na inteligencjê lub m¹droœæ mog³aby tu pomóc...~
 
 @18 = ~Oszukiwanie na egzaminie wstêpnym
 
-Zmieni³em zdanie i nie pomogê Edie oszukiwaæ na jej egzaminie wstêpnym do Ligi Kupieckiej Wrót Baldura~ ~Oszukiwanie na egzaminie wstêpnym
+Zmieni³em zdanie i nie pomogê Edie oszukiwaæ na jej egzaminie wstêpnym do Ligi Kupieckiej Wrót Baldura.~ ~Oszukiwanie na egzaminie wstêpnym
 
 Zmieni³am zdanie i nie pomogê Edie oszukiwaæ na jej egzaminie wstêpnym do Ligi Kupieckiej Wrót Baldura.~
 
 @19 = ~Oszukiwanie na egzaminie wstêpnym
 
-Pomog³em m³odej Edie przy pomocy magicznego napoju. Mo¿e to wygl¹daæ na oszustwo, ale uwzglêdniaj¹c i¿ przy³¹czy³a siê do Ligi Kupieckiej mo¿na powiedzieæ, ¿e to czêœæ jej pracy.~ ~Oszukiwanie na egzaminie wstêpnym
+Pomog³em m³odej Edie przy pomocy magicznego napoju. Mo¿e to wygl¹daæ na oszustwo, ale uwzglêdniaj¹c, fakt i¿ przy³¹czy³a siê do Ligi Kupieckiej, mo¿na powiedzieæ, ¿e to czêœæ jej pracy.~ ~Oszukiwanie na egzaminie wstêpnym
 
-Pomog³am m³odej Edie przy pomocy magicznego napoju. Mo¿e to wygl¹daæ na oszustwo, ale uwzglêdniaj¹c i¿ przy³¹czy³a siê do Ligi Kupieckiej mo¿na powiedzieæ, ¿e to czêœæ jej pracy.~
+Pomog³am m³odej Edie przy pomocy magicznego napoju. Mo¿e to wygl¹daæ na oszustwo, ale uwzglêdniaj¹c fakt, i¿ przy³¹czy³a siê do Ligi Kupieckiej, mo¿na powiedzieæ, ¿e to czêœæ jej pracy.~

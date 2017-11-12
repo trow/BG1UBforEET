@@ -1,67 +1,79 @@
 // Svlast CRE
 @4201 = ~Svlast~
-@4202 = ~[LOTHANDER 2] My life is in shambles.~ [%tutu_var%LOTHR02]
-@4203 = ~[LOTHANDER 3]~ [%tutu_var%LOTHR03]
-@4204 = ~[LOTHANDER 4]~ [%tutu_var%LOTHR04]
+@4202 = ~Moje ¿ycie to jedno pasmo niepowodzeñ.~ [%tutu_var%LOTHR02]
+@4203 = ~~ [%tutu_var%LOTHR03]
+@4204 = ~~ [%tutu_var%LOTHR04]
 
 // Revenant
-@4210 = ~Revenant~
-@4211 = ~[REVENANT 01] ~ [%tutu_var%REVEN01]
-@4212 = ~[REVENANT 02] Must... revenge...~ [%tutu_var%REVEN02]
-@4213 = ~[REVENANT 03] I've come for you.~ [%tutu_var%REVEN03]
-@4214 = ~[REVENANT 04] You... shall... pay...~ [%tutu_var%REVEN04]
-@4215 = ~[REVENANT 05] ~ [%tutu_var%REVEN05]
-@4216 = ~[REVENANT 06] ~ [%tutu_var%REVEN06]
-@4217 = ~Revenge...~
-@4218 = ~[REVENANT 08] ~ [%tutu_var%REVEN08]
-@4219 = ~[REVENANT 09] ~ [%tutu_var%REVEN09]
+@4210 = ~Upiór~
+@4211 = ~~ [%tutu_var%REVEN01]
+@4212 = ~Wyduszê z ciebie ¿ycie...~ [%tutu_var%REVEN02]
+@4213 = ~Przyby³em po ciebie...~ [%tutu_var%REVEN03]
+@4214 = ~Zap³acisz...~ [%tutu_var%REVEN04]
+@4215 = ~~ [%tutu_var%REVEN05]
+@4216 = ~~ [%tutu_var%REVEN06]
+@4217 = ~Zemsta...~
+@4218 = ~~ [%tutu_var%REVEN08]
+@4219 = ~~ [%tutu_var%REVEN09]
 
 
 // UBSVLAST.D
 /* #14889 */
-@4220 = ~He's out there. He's coming. I can feel his footsteps, following me. The scent of rotting flesh. He's coming for us all.~ 
+@4220 = ~On tam jest. Idzie. Czujê jego kroki pod¹¿aj¹ce moim œladem. Odór rozk³adaj¹cego siê cia³a. On przychodzi po nas wszystkich.~ 
 /* #14890 */
-@4221 = ~I-- I killed him. But he's out there, he's coming this way, I can f-- feel it.~ 
+@4221 = ~Za... zabi³em go. Ale jest tam ca³y czas, idzie t¹ drog¹. Ja t-to czujê.~ 
 /* #14891 - MODIFIED */
-@4222 = ~I was a paladin, once. I fought on the side of good but it all comes to naught... I murdered him in cold blood, my brother in the faith... When he comes, let him be.~ 
+@4222 = ~Kiedyœ by³em paladynem. Walczy³em po stronie dobra, ale ta walka nie prowadzi³a do niczego... Zamordowa³em go z zimn¹ krwi¹. Mego brata w wierze... Kiedy przyjdzie, pozwólcie mu na to.~ 
 /* #14893 - MODIFIED */
-@4223 = ~What have you done? Now I am twice as wretched! Kill me in this tortured place! At least there will be some justice then.~ 
+@4223 = ~Có¿eœ uczyni³? Teraz jestem po dwakroæ przeklêty! Zabij mnie na tej udrêczonej ziemi! Czas, aby sprawiedliwoœci sta³o siê zadoœæ.~~Có¿eœ uczyni³a? Teraz jestem po dwakroæ przeklêty! Zabij mnie na tej udrêczonej ziemi! Czas, aby sprawiedliwoœci sta³o siê zadoœæ.~ 
 /* #14894 */
-@4224 = ~What could you ever hope to learn from a wretched fool like me? Learn from my example, at least, and seek not to kill that which is good in the world.~ 
+@4224 = ~Czy moglibyœcie mieæ nadziejê, by nauczyæ siê czegokolwiek od takiego g³upca jak ja? Uczcie siê na moim przyk³adzie i nie zabijajcie tego, co jest dobre na tym œwiecie.~ 
 /* #14895 */
-@4225 = ~Please, just leave me to my misery.~ 
+@4225 = ~Proszê, pozostawcie mnie mojemu nieszczêœciu.~ 
 /* #14896 */
-@4226 = ~Much as I may welcome death, I will not face it without a fight.~ 
-@4227 = ~I am sorry, my brother... I was jealous, I was... a fool. My life is yours.~ 
+@4226 = ~Choæ radoœnie przyjmê œmieræ, nie poddam siê jej bez walki.~ 
+@4227 = ~Przykro mi, bracie... By³em zazdrosny, by³em g³upi... Moje ¿ycie nale¿y do ciebie.~ 
 
 // Replies
-@4240 = ~What are you talking about? Who is coming for us?~
-@4241 = ~Who was this person? Why does he hunt you from beyond the grave?~
-@4242 = ~Are you mad? I will not simply stand by and let this creature kill you!~
-@4243 = ~As you wish. I do not agree with your decision, but if it is your choice to die by this creature's hand, I will not stand in the way.~ 
-@4244 = ~No problem. This is between you and him. I want no part of it!~
-@4245 = ~An undead creature seeks *your* death? Perhaps we should just give it what it wants!~
-@4246 = ~As you wish. Let justice be done.~
-@4247 = ~I refuse. I will not be your executioner. You will have to atone for your crimes. Perhaps then others may learn from your mistakes.~ 
-@4248 = ~That's a fine way to show show gratitude! I just saved your miserable life!~
-@4249 = ~If that's what you desire, it will be my pleasure.~
+@4240 = ~O czym tym mówisz? Kto po nas idzie?~
+@4241 = ~Kim by³ ten cz³owiek? Dlaczego œciga ciê zza grobu?~
+@4242 = ~Oszala³eœ? Nie bêdê patrzy³ bezczynnie, jak ta istota ciê zabija!~~Oszala³eœ? Nie bêdê patrzy³a bezczynnie, jak ta istota ciê zabija!~
+@4243 = ~Jak sobie ¿yczysz. Nie pochwalam twojej decyzji, ale skoro twoim pragnieniem jest zgin¹æ z rêki tego stworzenia, nie bêdê ci sta³ na drodze.~~Jak sobie ¿yczysz. Nie pochwalam twojej decyzji, ale skoro twoim pragnieniem jest zgin¹æ z rêki tego stworzenia, nie bêdê ci sta³a na drodze.~ 
+@4244 = ~Nie ma problemu. To s¹ sprawy pomiêdzy tob¹ a nim. Nie chcê mieæ z tym nic do czynienia!~
+@4245 = ~Nieumar³e stworzenie chce *twojej* œmierci? Mo¿e powinniœmy mu daæ to, czego chce?!~
+@4246 = ~Jak sobie ¿yczysz. Niech sprawiedliwoœci stanie siê zadoœæ.~
+@4247 = ~Odmawiam. Nie bêdê twoim katem. Bêdziesz musia³ odpokutowaæ za swoje grzechy. Byæ mo¿e inni wynios¹ nauki z twoich b³êdów.~ 
+@4248 = ~Có¿ za doskona³y sposób na okazanie wdziêcznoœci! W³aœnie uratowa³em twoje ¿a³osne ¿ycie!~~Có¿ za doskona³y sposób na okazanie wdziêcznoœci! W³aœnie uratowa³am twoje ¿a³osne ¿ycie!~
+@4249 = ~Jeœli tego w³aœnie pragniesz, uczyniê to z przyjemnoœci¹.~
 
 // Journal Entries
 //  (Strref: 15713)
-@4290 = ~Svlast's Torment
-I have been witness to sad events within the Firewine ruins. An ex-paladin by the name of Svlast is being hunted by the spirit of his brother in the faith, whom he wrongfully killed. Never have I seen a more dejected and repentant soul than poor Svlast. He has begged us not to interfere but my heart does not rest easy with such a choice...~
-@4291 = ~Svlast's Torment
-An ex-paladin by the name of Svlast is being hunted by the spirit of his brother in the faith, whom he wrongfully killed. He begged us not to interfere.~
-@4292 = ~Svlast's Torment
-An ex-paladin by the name of Svlast was being hunted by the spirit of his brother in the faith, whom he wrongfully killed. I gave the creature what it wanted by killing the fallen paladin myself.~
-@4293 = ~Svlast's Torment
-Svlast's torment has ended. The creature took its revenge.~
+@4290 = ~Mêki Svlasta
+
+Byliœmy œwiadkami smutnych wydarzeñ w ruinach Firewine. By³y paladyn o imieniu Svlast jest przeœladowany przez ducha, jego brata w wierze, którego niesprawiedliwie zabi³. Nigdy przedtem nie dane mi by³o widzieæ kogoœ bardziej przygnêbionego i skruszonego ni¿ biedny Svlast. B³aga³ nas, abyœmy siê nie wtr¹cali, ale trudno by³o mi siê z tym pogodziæ...~
+@4291 = ~Mêki Svlasta
+
+By³y paladyn o imieniu Svlast jest przeœladowany przez ducha, jego brata w wierze, którego niesprawiedliwie zabi³. B³aga³ nas, abyœmy siê nie wtr¹cali.~
+@4292 = ~Mêki Svlasta
+
+By³y paladyn o imieniu Svlast jest przeœladowany przez ducha, jego brata w wierze, którego niesprawiedliwie zabi³. Da³em istocie to, czego chcia³a, i w³asnorêcznie zabi³em upad³ego paladyna.~~Mêki Svlasta
+
+By³y paladyn o imieniu Svlast jest przeœladowany przez ducha, jego brata w wierze, którego niesprawiedliwie zabi³. Da³am istocie to, czego chcia³a, i w³asnorêcznie zabi³am upad³ego paladyna.~
+@4293 = ~Mêki Svlasta
+
+Mêki Svlasta dobieg³y koñca. Istota dope³ni³a swej zemsty.~
 // (Strref: 15703)
-@4295 = ~Svlast's Torment
-Having survived the revenant's assault with our assistance, poor and wretched Svlast begged us to complete its task... The day is dark within these ruins, and I fear it's growing ever darker.~
-@4296 = ~Svlast's Torment
-Having survived the revenant's assault with our assistance, poor and wretched Svlast begged us to complete its task... I flatly refused. He will have to atone for his crimes.~
-@4297 = ~Svlast's Torment
-Having survived the revenant's assault with our assistance, poor and wretched Svlast begged us to complete its task... You'd think he would show some gratitude!~
-@4298 = ~Svlast's Torment
-Having survived the revenant's assault with our assistance, poor and wretched Svlast begged us to complete its task... Who was I to refuse?~
+@4295 = ~Mêki Svlasta
+
+Prze¿ywszy dziêki naszej pomocy atak upiora, nieszczêœliwy Svlast b³aga³, abyœmy dokoñczyli jego zadanie... Dzieñ wydaje siê byæ posêpny wewn¹trz tych ruin i bojê siê, ¿e bêdzie jeszcze posêpniejszy.~
+@4296 = ~Mêki Svlasta
+
+Prze¿ywszy dziêki naszej pomocy atak upiora, nieszczêœliwy Svlast b³aga³, abyœmy dokoñczyli jego zadanie... Kategorycznie odmówi³em. Bêdzie musia³ odpokutowaæ za swoje zbrodnie.~~Svlast's Torment
+
+Prze¿ywszy dziêki naszej pomocy atak upiora, nieszczêœliwy Svlast b³aga³, abyœmy dokoñczyli jego zadanie... Kategorycznie odmówi³am. Bêdzie musia³ odpokutowaæ za swoje zbrodnie.~
+@4297 = ~Mêki Svlasta
+
+Prze¿ywszy dziêki naszej pomocy atak upiora, nieszczêœliwy Svlast b³aga³, abyœmy dokoñczyli jego zadanie... I gdzie tu wdziêcznoœæ!~
+@4298 = ~Mêki Svlasta
+
+Prze¿ywszy dziêki naszej pomocy atak upiora, nieszczêœliwy Svlast b³aga³, abyœmy dokoñczyli jego zadanie... Kim¿e jestem, by cz³owiekowi odmówiæ?~

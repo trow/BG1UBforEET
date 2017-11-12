@@ -1,9 +1,7 @@
-/*BG2engine*/
-
-@0 = ~Pobieg³em do starego Feldana jednego z mnichów, który odk¹d siêgam pamiêci¹ mieszka³ w Candlekeep. Powiedzia³, ¿e w twierdzy s¹ jacyœ podejrzani goœcie, którzy korzystaj¹ z pokojów dziennych. Podejrzewa, ¿e kilku z nich, to wys³annicy ¯elaznego Tronu, jednak pozostali to Rycerze Tarczy. NajwyraŸniej s¹ tutaj, bo usi³uj¹ zachowaæ pokój na Wybrze¿u Mieczy. Z jego opinii wynika, ¿e choæ ¿adna z tej grupy nic z³ego nie uczyni³a, to nie jest godna zaufania.~ 
-@1 = ~Powinnaœ ju¿ byæ bezpieczna. Dziêkujê ci za radê.~
-@2 = ~No dziêki. To ja ratujê ciê od niedoli ptaszka w klatce, a ty wszystko co mi dajesz to nêdzna rada i buteleczka ciemnej cieczy. OdejdŸ, zanim zamieniê ciê spowrotem w kamieñ!~ 
-@3 = ~Dziêkujê ci za radê, ale wola³bym, abyœ przy³¹czy³a siê do mnie. Razem wytropimy te bestie.~
-@4 = ~Najemnicy, co. Có¿, nie wiem co robicie w tych stronach, ale lepiej gdybyœcie nie mieli nic wspólnego z zanieczyszczeniem tego obszaru. Ktoœ naprawdê spaskudzi³ piêkno natury, lecz drogo za to zap³aci!~ 
-@5 = ~Nigdy wczeœniej nie spotka³em poszukiwaczy przygód. Jeœli z was taka banda herosów, to mo¿e dowiedzielibyœcie siê, kto wyrzuca te wszystkie odpadki do jeziora i w jego pobli¿e. ZnajdŸcie tych, którzy ponosz¹ za to winê i po³ó¿cie temu kres.~
-@6 = ~Przykro mi m³odzieniaszku, ale pole samo siê nie zaora.~
+@0 = ~Stary Feldane, jeden z mnichów mieszkaj¹cych w Candlekeep odk¹d pamiêtam, powiedzia³, ¿e w twierdzy zatrzymali siê podejrzani goœcie, którzy korzystaj¹ z komnat spotkañ. Podejrzewa, ¿e kilku z nich jest z ¯elaznego Tronu, a reszta od Rycerzy Tarczy. NajwyraŸniej przybyli tutaj, by zaprowadziæ pokój na Wybrze¿u Mieczy. Jego zdaniem ¿adna z tych grup nie jest godna szacunku, choæ tu nie uczynili nic z³ego.~ 
+@1 = ~Powinnaœ byæ ju¿ bezpieczna. Dziêkujê ci za radê.~
+@2 = ~No dziêki. To ja ratujê ciê od niedoli pozostania ptaszkiem w klatce, a ty wszystko, co mi dajesz, to nêdzna rada i buteleczka ciemnej cieczy. OdejdŸ, zanim zamieniê ciê z powrotem w kamieñ!~
+@3 = ~Dziêkujê za radê, ale wolê, abyœ przy³¹czy³a siê do mnie. Razem wytropimy te bestie.~
+@4 = ~Najemnicy, hmm. Nie wiem, co tutaj robicie, ale lepiej nie niszczcie okolicy. Zbezczeszczono ju¿ niezwyk³e piêkno natury i ktoœ w koñcu bêdzie musia³ za to zap³aciæ!~
+@5 = ~Nigdy w ¿yciu nie spotka³em poszukiwaczy przygód. Je¿eli jesteœcie takimi bohaterami, to mo¿e uda siê wam odkryæ, kto wrzuca te œmieci do jezior. Moglibyœcie siê tego dowiedzieæ? A mo¿e uda siê wam raz na zawsze po³o¿yæ temu kres?~
+@6 = ~Przepraszam, ale mam mnóstwo pracy do zrobienia.~

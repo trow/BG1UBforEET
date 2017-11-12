@@ -1,20 +1,17 @@
-/*BG2engine*/
-
-
 //Imported dialogue text for BGT/Tutu
 //#17578
 @10000 = ~Edie~ 
 
 //#11166
-@10001 = ~Jak siê nie odczepisz, mój but wyl¹duje na twoim zadku!~ [%tutu_var%WOMLC02]
-@10002 = ~~ [%tutu_var%FTOWN05] 
-@10003 = ~~ [%tutu_var%WOMLC03]
+@10001 = ~Jak siê nie odczepisz, mój but wyl¹duje na twoim zadku!~ [WOMLC02]
+@10002 = ~~ [FTOWN05]
+@10003 = ~~ [WOMLC03]
 
 //#19704
 @10004 = ~Enna Hendrik~ 
 
 //#4902
-@10005 = ~Mój kochaœ nie lubi, jak gadam z obcymi.~ [%tutu_var%FTOWN02]
+@10005 = ~Mój kochaœ nie lubi, jak gadam z obcymi.~ [FTOWN02]
 
 //#13309
 @10006 = ~Nie jesteœcie tu mile widziani!~
@@ -23,9 +20,9 @@
 @10007 = ~Erlin Hendrik~ 
 
 //#4908
-@10008 = ~Ino ni mom czasu, by z tobom gadoæ.~ [%tutu_var%FARME01]
-@10009 = ~~ [%tutu_var%FARME05] 
-@10010 = ~~ [%tutu_var%FARME06]
+@10008 = ~Ino ni mom czasu, by z tobom gadoæ.~ [FARME01]
+@10009 = ~~ [FARME05]
+@10010 = ~~ [FARME06]
 
 //#8959
 @10011 = ~Precz mi z oczu! Nie macie tu czego szukaæ!~
@@ -34,32 +31,32 @@
 @10012 = ~Feldane~ 
 
 //#4983
-@10013 = ~Nasz ksiêgozbiór to dla mêdrca ocean wiedzy.~ [%tutu_var%READR01]
-@10014 = ~~ [%tutu_var%READR05] 
-@10015 = ~~ [%tutu_var%READR06]
+@10013 = ~Nasz ksiêgozbiór to dla mêdrca ocean wiedzy.~ [READR01]
+@10014 = ~~ [READR05] 
+@10015 = ~~ [READR06]
 
 
 //#4984
-@10016 = ~Zechciejcie wybaczyæ, ale spóŸniê siê na zajêcia.~ [%tutu_var%READR02]
+@10016 = ~Zechciejcie wybaczyæ, ale spóŸniê siê na zajêcia.~ [READR02]
 
 //#12238
 @10017 = ~Galkin~
 
 //#4762
-@10018 = ~Czy nikt nie przyjmie mojej oferty? Ba! Co z was za mê¿czyŸni?~ [%tutu_var%GALKN01] 
-@10019 = ~~ [%tutu_var%GALKN03]
-@10020 = ~~ [%tutu_var%GALKN04]
+@10018 = ~Czy nikt nie przyjmie mojej oferty? Ba! Co z was za mê¿czyŸni?~ [GALKN01] 
+@10019 = ~~ [GALKN03]
+@10020 = ~~ [GALKN04]
 
 //#4763 
-@10021 = ~Uch... Czyrak na lewej nodze okropnie mi dolega... i... muszê zap³aciæ ober¿yœcie, bo z miejsca mnie skwituje!~ [%tutu_var%GALKN02]
+@10021 = ~Uch... Czyrak na lewej nodze okropnie mi dolega... i... muszê zap³aciæ ober¿yœcie, bo z miejsca mnie skwituje!~ [GALKN02]
 
 //#9406 
 @10022 = ~Dziewczynka~
 
 //#4861
-@10023 = ~Zgubi³am lalkê.~ [%tutu_var%FCHIL01] 
-@10024 = ~~ [%tutu_var%FCHIL05]
-@10025 = ~~ [%tutu_var%FCHIL06]
+@10023 = ~Zgubi³am lalkê.~ [FCHIL01] 
+@10024 = ~~ [FCHIL05]
+@10025 = ~~ [FCHIL06]
 
 //#8944
 @10026 = ~Zostawcie mnie sam¹! Jesteœcie podli!~
@@ -68,9 +65,9 @@
 @10027 = ~Nizio³ek kobieta~
 
 //#11238
-@10028 = ~Ooo, piêkny to dzionek na poznanie nowych przyjació³.~ [%tutu_var%HALFF01]
-@10029 = ~~ [%tutu_var%HALFF05]
-@10030 = ~~ [%tutu_var%HALFF06]
+@10028 = ~Ooo, piêkny to dzionek na poznanie nowych przyjació³.~ [HALFF01]
+@10029 = ~~ [HALFF05]
+@10030 = ~~ [HALFF06]
 
 //#13343
 @10031 = ~Nadu¿y³eœ naszej goœcinnoœci!~
@@ -85,9 +82,9 @@
 @10034 = ~Nizio³ek mê¿czyzna~
 
 //#4926
-@10035 = ~Pokazuj¹ siê tu ró¿niste niesamowitoœci.~ [%tutu_var%HALFL03]
-@10036 = ~~ [%tutu_var%HALFL05]
-@10037 = ~~ [%tutu_var%HALFL06]
+@10035 = ~Pokazuj¹ siê tu ró¿niste niesamowitoœci.~ [HALFL03]
+@10036 = ~~ [HALFL05]
+@10037 = ~~ [HALFL06]
 
 //#8954
 @10038 = ~Nie chcia³bym byæ nieuprzejmy, ale wola³bym, byœcie natychmiast sobie poszli.~
@@ -105,66 +102,66 @@
 @10042 = ~Napotkana osoba~
 
 //#11093
-@10043 = ~Ej, stary!~ [%tutu_var%GENMG13]
-@10044 = ~~ [%tutu_var%VILLM05]
-@10045 = ~~ [%tutu_var%MTOWN06]
+@10043 = ~Ej, stary!~ [GENMG13]
+@10044 = ~~ [VILLM05]
+@10045 = ~~ [MTOWN06]
 
 //#8950
 @10046 = ~Po tym, co zrobiliœcie, nie powiem ani s³owa!~
 
 //#20602
-@10047 = ~Czo³em.~ [%tutu_var%GENMG15]
+@10047 = ~Czo³em.~ [GENMG15]
 
 //#9359
 @10048 = ~Ogrillon~
 
 //#5163
-@10049 = ~Czas na ma³¹ rzeŸ!~ [%tutu_var%OGRIL03]
+@10049 = ~Czas na ma³¹ rzeŸ!~ [OGRIL03]
 
 //#5164
-@10050 = ~Zdychajcie, kwiczo³ki!~ [%tutu_var%OGRIL04]
-@10051 = ~~ [%tutu_var%OGRIL05]
-@10052 = ~~ [%tutu_var%OGRIL06]
-@10053 = ~~ [%tutu_var%OGRIL08]
-@10054 = ~~ [%tutu_var%OGRIL09]
+@10050 = ~Zdychajcie, kwiczo³ki!~ [OGRIL04]
+@10051 = ~~  //non-existent
+@10052 = ~~  //non-existent
+@10053 = ~~ [OGRIL08]
+@10054 = ~~ [OGRIL09]
 
 //#5161
-@10055 = ~Przeszkadzacie mnie, przeszkadzacie sobie!~ [%tutu_var%OGRIL01]
+@10055 = ~Przeszkadzacie mnie, przeszkadzacie sobie!~ [OGRIL01]
 
 //#5162
-@10056 = ~Wszystkie chopy wyœmiewaj¹ mnie... bo mam tylko dwa metry wzrostu.~ [%tutu_var%OGRIL02]
+@10056 = ~Wszystkie chopy wyœmiewaj¹ mnie... bo mam tylko dwa metry wzrostu.~ [OGRIL02]
 
 //#9356
 @10057 = ~Pó³ogr~
 
 //#5158
-@10058 = ~Ja wœciek³y!~ [%tutu_var%HOGRE03]
+@10058 = ~Ja wœciek³y!~ [HOGRE03]
 
 //#5159
-@10059 = ~Ja zabiæ tych, co mnie wœciekaæ!~ [%tutu_var%HOGRE04]
-@10060 = ~~ [%tutu_var%HOGRE08]
-@10061 = ~~ [%tutu_var%HOGRE09]
+@10059 = ~Ja zabiæ tych, co mnie wœciekaæ!~ [HOGRE04]
+@10060 = ~~ [HOGRE08]
+@10061 = ~~ [HOGRE09]
 
 //#5155
-@10062 = ~Ja g³odny.~ [%tutu_var%HOGRE01]
+@10062 = ~Ja g³odny.~ [HOGRE01]
 
 //#5156
-@10063 = ~(beka donoœnie). Ha, ha...~ [%tutu_var%HOGRE02]
+@10063 = ~*beka donoœnie* Ha, ha, ha...~ [HOGRE02]
 
 //#9412
 @10064 = ~Czytacz~
 
 //#8753
 @10065 = ~Tasloi~
-@10066 = ~~ [%tutu_var%TASLO03]
-@10067 = ~~ [%tutu_var%TASLO04]
-@10068 = ~~ [%tutu_var%TASLO05]
-@10069 = ~~ [%tutu_var%TASLO06]
-@10070 = ~~ [%tutu_var%TASLO08]
-@10071 = ~~ [%tutu_var%TASLO09]
-@10072 = ~~ [%tutu_var%TASLO00] //non-existent
-@10073 = ~~ [%tutu_var%TASLO01]
-@10074 = ~~ [%tutu_var%TASLO02]
+@10066 = ~~ [TASLO03]
+@10067 = ~~ [TASLO04]
+@10068 = ~~ [TASLO05]
+@10069 = ~~ [TASLO06]
+@10070 = ~~ [TASLO08]
+@10071 = ~~ [TASLO09]
+@10072 = ~~ [TASLO01]
+@10073 = ~~ [TASLO01]
+@10074 = ~~ [TASLO02]
 
 //#9495
 @10075 = ~Podró¿ny~
@@ -173,23 +170,23 @@
 @10076 = ~Dziewka s³u¿ebna~
 
 //#4786
-@10077 = ~Czy coœ podaæ? Imæ Volo by³ tu niedawno.~ [%tutu_var%WENCH01]
-@10078 = ~~ [%tutu_var%WENCH03]
-@10079 = ~~ [%tutu_var%WENCH04]
+@10077 = ~Czy coœ podaæ? Imæ Volo by³ tu niedawno.~ [WENCH01]
+@10078 = ~~ [WENCH03]
+@10079 = ~~ [WENCH04]
 
 //#4787
-@10080 = ~W³aœciwie jestem pisark¹. Obs³ugujê goœci, by op³aciæ rachunki.~ [%tutu_var%WENCH02]
+@10080 = ~W³aœciwie jestem pisark¹. Obs³ugujê goœci, by op³aciæ rachunki.~ [WENCH02]
 
 //#12761
 @10081 = ~Wilton~
 
 //#4821
-@10082 = ~Zatrzymajcie siê chwilkê, paniczu, bom s³ysza³, coœcie zrobili dla starego Bruna.~ [%tutu_var%WILTN01]
-@10083 = ~~ [%tutu_var%WILTN03]
-@10084 = ~~ [%tutu_var%WILTN04]
+@10082 = ~Zatrzymajcie siê chwilkê, paniczu, bom s³ysza³, coœcie zrobili dla starego Bruna.~ [WILTN01]
+@10083 = ~~ [WILTN03]
+@10084 = ~~ [WILTN04]
 
 //#4822
-@10085 = ~Nie³atwo dziœ o przyzwoitych ludzi...~ [%tutu_var%WILTN02]
+@10085 = ~Nie³atwo dziœ o przyzwoitych ludzi...~ [WILTN02]
 
 //#9036
 @10086 = ~Zostaw mnie. Nie mam nic dla was.~
@@ -198,66 +195,66 @@
 @10087 = ~Przepraszam, ale mam mnóstwo pracy do zrobienia.~
 
 //#23935
-@10088 = ~Ooo, nowe twarze w mieœcie, co?~ [%tutu_var%TSCFT01]
+@10088 = ~Ooo, nowe twarze w mieœcie, co?~ [TSCFT01]
 
 //#13649
 @10089 = ~Nic ode mnie nie dostaniesz!~
 
 //#23936
-@10090 = ~Chcesz porozmawiaæ? A wiêc zaczynaj.~ [%tutu_var%TSCFT02]
-@10091 = ~~ [%tutu_var%WOMCO03]
-@10092 = ~~ [%tutu_var%WOMCO04]
+@10090 = ~Chcesz porozmawiaæ? A wiêc zaczynaj.~ [TSCFT02]
+@10091 = ~~ [WOMCO03]
+@10092 = ~~ [WOMCO04]
 
 //#21974
 @10093 = ~Meym~
 
 //#11081
-@10094 = ~Chcesz czegoœ, przybyszu?~ [%tutu_var%GENMG04]
-@10095 = ~~ [%tutu_var%MINER05]
-@10096 = ~~ [%tutu_var%MINER06]
+@10094 = ~Chcesz czegoœ, przybyszu?~ [GENMG04]
+@10095 = ~~ [MINER05]
+@10096 = ~~ [MINER06]
 
 //#23929
-@10097 = ~Hej, witaj, m³oda osobo.~ [%tutu_var%TSCMT02]
-@10098 = ~~ [%tutu_var%VILLM06]
+@10097 = ~Hej, witaj, m³oda osobo.~ [TSCMT02]
+@10098 = ~~ [VILLM06]
 
 //#23930
-@10099 = ~Nie wygl¹dacie mi na miejscowych.~ [%tutu_var%TSCMT03]
+@10099 = ~Nie wygl¹dacie mi na miejscowych.~ [TSCMT03]
 
 //#15975
 @10100 = ~Ogr~
 
 //#5148
-@10101 = ~Ja zgnieœæ, zgnieœæ na miazga!~ [%tutu_var%OGREE03]
+@10101 = ~Ja zgnieœæ, zgnieœæ na miazga!~ [OGREE03]
 
 //#5149
-@10102 = ~Ja zmia¿d¿yæ twoja pysk.~ [%tutu_var%OGREE04]
-@10103 = ~~ [%tutu_var%OGREE08]
-@10104 = ~~ [%tutu_var%OGREE09]
+@10102 = ~Ja zmia¿d¿yæ twoja pysk.~ [OGREE04]
+@10103 = ~~ [OGREE08]
+@10104 = ~~ [OGREE09]
 
 //#5147
-@10105 = ~Ja zgnieœæ!~ [%tutu_var%OGREE01]
-@10106 = ~~ [%tutu_var%OGREE02]
+@10105 = ~Ja zgnieœæ!~ [OGREE01]
+@10106 = ~~ [OGREE02]
 
 //#10006
 @10107 = ~Zakapturzony Czarodziej~
 
 //#11079
-@10108 = ~Hmm?~ [%tutu_var%GENMG03]
-@10109 = ~~ [%tutu_var%RAMAZ03]
-@10110 = ~~ [%tutu_var%RAMAZ04]
+@10108 = ~Hmm?~ [GENMG03]
+@10109 = ~~ [RAMAZ03]
+@10110 = ~~ [RAMAZ04]
 
 //#6315
 @10111 = ~Ghul~
-@10112 = ~~ [%tutu_var%GHOUL03]
-@10113 = ~~ [%tutu_var%GHOUL04]
-@10114 = ~~ [%tutu_var%GHOUL05]
-@10115 = ~~ [%tutu_var%GHOUL06]
-@10116 = ~~ [%tutu_var%GHOUL08]
-@10117 = ~~ [%tutu_var%GHOUL09]
-@10118 = ~~ [%tutu_var%GHOUL01]
+@10112 = ~~ [GHOUL03]
+@10113 = ~~ [GHOUL04]
+@10114 = ~~ [GHOUL05]
+@10115 = ~~ [GHOUL06]
+@10116 = ~~ [GHOUL08]
+@10117 = ~~ [GHOUL09]
+@10118 = ~~ [GHOUL01]
 
 //#5142
-@10119 = ~Mmmmm, moja lubi cia³ko, hi hi.~ [%tutu_var%GHOUL02]
+@10119 = ~Mmmmm, moja lubi cia³ko, hi hi.~ [GHOUL02]
 
 //#13712
 @10120 = ~Ptak~
@@ -271,21 +268,21 @@
 @10126 = ~Przywódca nizio³ków~
 
 //#4925
-@10127 = ~Obcy jesteœ, nie powinieneœ ³aziæ, gdzie ciê nie prosz¹.~ [%tutu_var%HALFL02]
-@10128 = ~~ [%tutu_var%FTOWN06]
+@10127 = ~Obcy jesteœ, nie powinieneœ ³aziæ, gdzie ciê nie prosz¹.~ [HALFL02]
+@10128 = ~~ [FTOWN06]
 
 //#12245
 @10129 = ~Entar Srebrna Tarcza~
 
 //#4705
-@10130 = ~Kim¿e s¹ intruzi w moim domu?~ [%tutu_var%ENTAR01]
+@10130 = ~Kim¿e s¹ intruzi w moim domu?~ [ENTAR01]
 
 //#12421
-@10131 = ~Mon Dieu!~ [%tutu_var%ENTAR03]
-@10132 = ~~ [%tutu_var%ENTAR04]
+@10131 = ~Mon Dieu!~ [ENTAR03]
+@10132 = ~~ [ENTAR04]
 
 //#4706
-@10133 = ~Mam nadziejê, ¿e mojej córce, Skie, nic siê nie sta³o.~ [%tutu_var%ENTAR02]
+@10133 = ~Mam nadziejê, ¿e mojej córce, Skie, nic siê nie sta³o.~ [ENTAR02]
 
 //#8983
 @10134 = ~Moje drzwi nie stoj¹ ju¿ otworem dla takich jak wy!~
@@ -294,21 +291,21 @@
 @10135 = ~Herschel~
 
 //#4874
-@10136 = ~Nie mam czasu na pogaduszki.~ [%tutu_var%NOBLE02]
-@10137 = ~~ [%tutu_var%NOBLE05]
-@10138 = ~~ [%tutu_var%NOBLE06]
+@10136 = ~Nie mam czasu na pogaduszki.~ [NOBLE02]
+@10137 = ~~ [NOBLE05]
+@10138 = ~~ [NOBLE06]
 
 //#4875
-@10139 = ~Precz st¹d, ¿ebraku.~ [%tutu_var%NOBLE03]
+@10139 = ~Precz st¹d, ¿ebraku.~ [NOBLE03]
 
 //#4874
-@10140 = ~Nie mam czasu na pogaduszki.~ [%tutu_var%NOBLE02]
+@10140 = ~Nie mam czasu na pogaduszki.~ [NOBLE02]
 
 //#4873
-@10141 = ~W obecnoœci lepszych od siebie trzeba milczeæ i odpowiadaæ jedynie wtedy, gdy poprosz¹.~ [%tutu_var%NOBLE01]
+@10141 = ~W obecnoœci lepszych od siebie trzeba milczeæ i odpowiadaæ jedynie wtedy, gdy poprosz¹.~ [NOBLE01]
 
 //#4876
-@10142 = ~Nie dotykaj mnie! Jeszcze siê czymœ zara¿ê!~ [%tutu_var%NOBLE04]
+@10142 = ~Nie dotykaj mnie! Jeszcze siê czymœ zara¿ê!~ [NOBLE04]
 
 //#8909
 @10143 = ~Nie zbli¿ajcie siê! Za³atwiê was, s³owo dajê!~
@@ -317,21 +314,21 @@
 @10144 = ~Kupiec~
 
 //#4959
-@10145 = ~Mam najlepsze ceny po tej stronie Cormyru.~ [%tutu_var%MERCH01]
-@10146 = ~~ [%tutu_var%MERCH05]
-@10147 = ~~ [%tutu_var%MERCH06]
+@10145 = ~Mam najlepsze ceny po tej stronie Cormyru.~ [MERCH01]
+@10146 = ~~ [MERCH05]
+@10147 = ~~ [MERCH06]
 
 //#4959
-@10148 = ~Mam najlepsze ceny po tej stronie Cormyru.~ [%tutu_var%MERCH01]
+@10148 = ~Mam najlepsze ceny po tej stronie Cormyru.~ [MERCH01]
 
 //#4960
-@10149 = ~Wszystko, co mam jest autentyczne. Naprawdê autentyczne.~ [%tutu_var%MERCH02]
+@10149 = ~Wszystko, co mam jest autentyczne. Naprawdê autentyczne.~ [MERCH02]
 
 //#4961
-@10150 = ~Ci przeklêci bandyci paskudnie wp³ywaj¹ na interes.~ [%tutu_var%MERCH03]
+@10150 = ~Ci przeklêci bandyci paskudnie wp³ywaj¹ na interes.~ [MERCH03]
 
 //#4962
-@10151 = ~Kocham pieni¹¿ki, o tak, kocham!~ [%tutu_var%MERCH04]
+@10151 = ~Kocham pieni¹¿ki, o tak, kocham!~ [MERCH04]
 
 //#8930
 @10152 = ~Nie mam do was ani krzty zaufania!~
@@ -340,57 +337,57 @@
 @10153 = ~Dziewka s³u¿ebna~
 
 //#4866
-@10154 = ~No... taki ROS£Y z ciebie ch³op.~ [%tutu_var%SWENC02]
-@10155 = ~~ [%tutu_var%SWENC05]
-@10156 = ~~ [%tutu_var%SWENC06]
+@10154 = ~No... taki ROS£Y z ciebie ch³op.~ [SWENC02]
+@10155 = ~~ [SWENC05]
+@10156 = ~~ [SWENC06]
 
 //#4865
-@10157 = ~Ma³y napiwek zawsze jest mile widziany.~ [%tutu_var%SWENC01]
+@10157 = ~Ma³y napiwek zawsze jest mile widziany.~ [SWENC01]
 
 //#9086
 @10158 = ~Wynoœcie siê st¹d! Szlacheckie nasienie!~
 
 //#13607
 @10159 = ~Dotknij mnie tylko swoj¹ ³ap¹, a przysiêgam, ¿e j¹ stracisz! Zamawia siê przy barze.~
-@10160 = ~~ [%tutu_var%SWENC04]
+@10160 = ~~ [SWENC04]
 
 //#12894
 @10161 = ~Szynkarz~
 
 //#4944
-@10162 = ~Chcecie whisky?~ [%tutu_var%BARTN01]
-@10163 = ~~ [%tutu_var%BARTN05]
-@10164 = ~~ [%tutu_var%BARTN06]
+@10162 = ~Chcecie whisky?~ [BARTN01]
+@10163 = ~~ [BARTN05]
+@10164 = ~~ [BARTN06]
 
 //#4945
-@10165 = ~Mam tanie piwo.~ [%tutu_var%BARTN02]
+@10165 = ~Mam tanie piwo.~ [BARTN02]
 
 //#4946
-@10166 = ~Muszê przestaæ ¿³opaæ w³asne trunki.~ [%tutu_var%BARTN03]
+@10166 = ~Muszê przestaæ ¿³opaæ w³asne trunki.~ [BARTN03]
 
 //#4947
-@10167 = ~Wiecie, mam kilka mi³ych dziewek s³u¿ebnych...~ [%tutu_var%BARTN04]
+@10167 = ~Wiecie, mam kilka mi³ych dziewek s³u¿ebnych...~ [BARTN04]
 
 //#4862
-@10168 = ~(szlocha)~ [%tutu_var%FCHIL02]
-@10169 = ~~ [%tutu_scripta%MB_M34A]
+@10168 = ~*szlocha*~ [FCHIL02]
+@10169 = ~~ [AMB_M34A]
 
 //#22786
-@10170 = ~„Korzeñ cierpienia”
-Wieœæ niesie, i¿ ta magiczna maczuga istnieje od czasów upadku Netherilu i narodzin wielkiej Pustyni Anauroch. Jakkolwiek cywilizacja zap³aci³a wtedy wielk¹ cenê, prawdziwymi ofiarami kataklizmu by³y istoty, ¿yj¹ce w zgodzie z natur¹, skazane na bezsilne przygl¹danie siê jak ich domy niszcza³y i umiera³y. Te z nich, które pozosta³y, czepiaj¹c siê resztek swego naturalnego œrodowiska, pada³y ofiar¹ hord innych, pozbawionych domu stworów, z których najbardziej okrutne wkracza³y na nieska¿one jeszcze obszary, zabieraj¹c wszystko, co im wpad³o w ³apy. Powiada siê, ¿e ta broñ zosta³a wykonana z drzewa driady i by³a ostatnim podarunkiem dla sprawy natury od leœnej tancerki, która nie potrafi³a powstrzymaæ najeŸdŸców na swój dom. Cierpia³a i radowa³a siê jednoczeœnie, gdy¿ jej las nie cierpia³ by tak bardzo, gdyby nie by³ silny i bujny. W póŸniejszych czasach jacyœ niezbyt delikatni badacze nadali tej broñ nieco dwuznaczn¹ nazwê, jednak zawarta w niej ironia nie jest doceniana przez zaprzysiêg³ych wyznawców praw natury.
+@10170 = ~Wieœæ niesie, i¿ ta magiczna maczuga istnieje od czasów upadku Netherilu i narodzin wielkiej Pustyni Anauroch. Jakkolwiek cywilizacja zap³aci³a wtedy wielk¹ cenê, prawdziwymi ofiarami kataklizmu by³y istoty, ¿yj¹ce w zgodzie z natur¹, skazane na bezsilne przygl¹danie siê jak ich domy niszcza³y i umiera³y. Te z nich, które pozosta³y, czepiaj¹c siê resztek swego naturalnego œrodowiska, pada³y ofiar¹ hord innych, pozbawionych domu stworów, z których najbardziej okrutne wkracza³y na nieska¿one jeszcze obszary, zabieraj¹c wszystko, co im wpad³o w ³apy. Powiada siê, ¿e ta broñ zosta³a wykonana z drzewa driady i by³a ostatnim podarunkiem dla sprawy natury od leœnej tancerki, która nie potrafi³a powstrzymaæ najeŸdŸców na swój dom. Cierpia³a i radowa³a siê jednoczeœnie, gdy¿ jej las nie cierpia³ by tak bardzo, gdyby nie by³ silny i bujny. W póŸniejszych czasach jacyœ niezbyt delikatni badacze nadali tej broñ nieco dwuznaczn¹ nazwê, jednak zawarta w niej ironia nie jest doceniana przez zaprzysiêg³ych wyznawców praw natury.
 
 PARAMETRY:
 
-Obra¿enia: 1K6 +1, +3 przeciw istotom nienaturalnym
-TraK0: +1, +3 przeciw istotom nienaturalnym
+Obra¿enia: 1k6 +1, +3 przeciw nienaturalnym istotom
+TraK0: +1, +3 przeciw nienaturalnym istotom
 Typ obra¿eñ: obuchowe
-Waga: 3
 OpóŸnienie: 3
 Rodzaj bieg³oœci: maczuga
 Typ broni: 1-rêczna
-Wymagana si³a: 5
-Nie mo¿e u¿ywaæ:
- Mag~
+
+Wymagania:
+– Si³a: 3
+
+Waga: 3~
 
 //#7149
 @10171 = ~Ksiêga~
@@ -414,28 +411,28 @@ Nie mo¿e u¿ywaæ:
 @10177 = ~Szukacie przygód, wiêc na pewno zainteresujecie siê ruinami mostu Firewine. Mówi¹, ¿e ukryto tam skarb, ale teraz strze¿e go plemiê koboldów. By³oby dobrze, gdyby ruiny da³o siê oczyœciæ z tych stworów. Ostatnio zaczê³y sprawiaæ masê k³opotów.~
 
 //#4924
-@10178 = ~Paskudne czasy id¹.~ [%tutu_var%HALFL01]
+@10178 = ~Paskudne czasy id¹.~ [HALFL01]
 
 //#9408
 @10179 = ~Sklepikarz~
 
 //#4881 
-@10180 = ~Witajcie w moim sklepiku~ [%tutu_var%STORE01]
+@10180 = ~Witajcie w moim sklepiku~ [STORE01]
 
 //#12558
-@10181 = ~~ [%tutu_var%STORE05]
+@10181 = ~~ [STORE05]
 
 //#12559
-@10182 = ~~ [%tutu_var%STORE06]
+@10182 = ~~ [STORE06]
 
 //#4882
-@10183 = ~Sprawy id¹ doœæ kiepsko, a jeszcze te problemy z ¿elazem, i w ogóle.~ [%tutu_var%STORE02]
+@10183 = ~Sprawy id¹ doœæ kiepsko, a jeszcze te problemy z ¿elazem, i w ogóle.~ [STORE02]
 
 //#4883
-@10184 = ~Klient ma zawsze racjê.~ [%tutu_var%STORE03]
+@10184 = ~Klient ma zawsze racjê.~ [STORE03]
 
 //#4884
-@10185 = ~Moje ceny s¹ najni¿sze na po³udnie od Waterdeep.~ [%tutu_var%STORE04]
+@10185 = ~Moje ceny s¹ najni¿sze na po³udnie od Waterdeep.~ [STORE04]
 
 //vial/ubvial.d
 //#19438
@@ -448,7 +445,7 @@ Nie mo¿e u¿ywaæ:
 @20165 = ~Jeszcze nie skoñczy³em. Mo¿e za dzieñ lub dwa. B¹dŸcie cierpliwi. Jakoœæ nie cierpi poœpiechu.~
 
 //#15267
-@20166 = ~Móg³byœ pokazaæ nam, co masz na sprzeda¿??~
+@20166 = ~Móg³byœ pokazaæ nam, co masz na sprzeda¿?~
 
 //kagain/rKAGAIJ.d
 //#16782
@@ -488,7 +485,7 @@ Nie mo¿e u¿ywaæ:
 @20012 = ~Dopóki nie macie mikstury skupienia, muszê wracaæ do mych rozmyœlañ.~
 
 //#15539
-@20013 = ~Cieszê siê, ¿e znaj¹c brutalne oblicze tego miasta, mogê znaleŸæ ludzi takich jak wy, którzy przywracaj¹ mi wiarê w dobro. Mo¿ecie mówiæ do mnie Quoningar, jeœli tylko chcecie. WeŸcie ten m³ot i pamiêtajcie o mnie w czasie nastêpnej bitwy.~
+@20013 = ~Cieszê siê, ¿e znaj¹c brutalne oblicze tego miasta, mogê znaleŸæ ludzi takich jak wy, którzy przywracaj¹ mi wiarê w dobro. Mo¿ecie mówiæ do mnie Quoningar, je¿li tylko chcecie. WeŸcie ten m³ot i pamiêtajcie o mnie w czasie nastêpnej bitwy.~
 
 //#15540
 @20014 = ~Cieszê siê, ¿e znaj¹c brutalne oblicze tego miasta, mogê znaleŸæ ludzi takich jak wy, którzy przywracaj¹ mi wiarê w dobro. Mo¿ecie mówiæ do mnie Quoningar, jeœli tylko chcecie. Proszê, weŸcie miksturê t³umienia magii. Wyczuwam, ¿e przyda ci siê na ulicach tego miasta.~
@@ -608,7 +605,7 @@ Nie mo¿e u¿ywaæ:
 @20051 = ~Jesteœmy zwyk³ymi podró¿nymi.~
 
 //#6601
-@20052 = ~Farmer, którego spotkaliœmy w Lesie Ostrych K³ów powiedzia³ nam, ¿e ktoœ wyrzuca w tym lesie swoje œmiecie.~
+@20052 = ~Rolnik, którego spotkaliœmy w Lesie Ostrych K³ów powiedzia³ nam, ¿e ktoœ wyrzuca w tym lesie swoje œmiecie.~
 
 //#4004
 @20053 = ~Jeœli wy jesteœcie zwyk³ymi podró¿nymi, to ja jestem samym Elminsterem. Parszywe dranie.~
@@ -847,7 +844,7 @@ Nie mo¿e u¿ywaæ:
 @20130 = ~O szanowni zgromadzeni, WYS£UCHAJCIE opowieœci o straszliwym miejscu, do którego mo¿ecie siê udaæ. Przy³¹czcie siê do mnie, poszukiwacza przygód wielkiej s³awy, Ike'a Cascadiona Vendara, a poprowadzê kolejn¹ grupê œmia³ków do SIEDZIBY z³a wszelkiego w Krainach. Udamy siê do Wie¿y Durlaga, by stawiæ czo³o niebezpieczeñstwom, w których ¿ycie straci³y setki dzielnych kobiet i mê¿czyzn. NATKNIECIE SIÊ na okrutne pu³apki, POCZUJECIE obecnoœæ zmar³ych, którzy nie chc¹ odejœæ z tego œwiata; ZADZIWI¥ was nieprzebrane bogactwa, pogrzebane pod ziemi¹. Wyprawa NIE jest dla miêczaków, albowiem nie odpowiadam za ewentualny atak serca podczas jej trwania, B¥D po jej zakoñczeniu! Odwa¿ni, wyst¹pcie! POJEDYNCZO!~
 
 //#21709
-@20131 = ~Ach, dobrzy ludzie szlachetnej krwi, którzy nie wahacie siê rzuciæ wyzwania losowi! ChodŸcie ze mn¹, a zobaczycie, przez co musi przejœæ cz³owiek broni¹cy swej w³asnoœci. Mam dla was specjaln¹ ofertê, choæ wiem, ¿e nie potrzebujecie rabatu: szeœædziesi¹t sztuk z³ota za ca³¹ grupê.~
+@20131 = ~Ach, dobrzy ludzie szlachetnej krwi, którzy nie wahacie siê rzuciæ wyzwania losowi! ChodŸcie ze mn¹, a zobaczycie, przez co musi przejœæ cz³owiek broni¹cy swej w³asnoœci. Mam dla was specjaln¹ ofertê - choæ wiem, ¿e nie potrzebujecie rabatu: szeœædziesi¹t sztuk z³ota za ca³¹ grupê.~
 
 //#21715
 @20132 = ~Umowa stoi! Kiedy wyruszamy?~
@@ -856,7 +853,7 @@ Nie mo¿e u¿ywaæ:
 @20133 = ~To dla nas za drogo.~
 
 //#21717
-@20134 = ~Nie interesuj¹ nas twoje „przygody”, kupczyku.~
+@20134 = ~Nie interesuj¹ nas twoje "przygody", kupczyku.~
 
 //#21710
 @20135 = ~Witajcie, przyjaciele! Przekonajcie siê sami, co musi zrobiæ bogacz, by obroniæ sw¹ fortunê! Nikomu nie ¿yczê takiego ¿ycia. Osiemdziesi¹t sztuk z³ota za was wszystkich, a nie dla ka¿dego mam tak niskie ceny.~
@@ -871,7 +868,7 @@ Nie mo¿e u¿ywaæ:
 @20138 = ~W porz¹dku, ty lichwiarzu! Ud³aw siê t¹ twoj¹ wypraw¹!~
 
 //#21713
-@20139 = ~Brakuje wam kasy czy mo¿e raczej odwagi? Jestem tu codziennie, wiêc jeœli znajdziecie jedno albo drugie. A na razie precz, muszê siê zaj¹æ tymi, którzy mi p³ac¹.~
+@20139 = ~Brakuje wam kasy czy mo¿e raczej odwagi? Jestem tu codziennie, wiêc jeœli znajdziecie jedno albo drugie... A na razie precz, muszê siê zaj¹æ tymi, którzy mi p³ac¹.~
 
 //#23531
 @20140 = ~Natknêliœmy siê na zarozumia³ego cwaniaczka, oferuj¹cego wycieczki do Wie¿y Durlaga. Wydaje siê, ¿e chce on zmieniæ œmierteln¹ pu³apkê w atrakcjê turystyczn¹. Na razie nie przyjmiemy jego oferty, ale wiem, gdzie go znaleŸæ, jeœli zmienimy zdanie.~
@@ -918,7 +915,7 @@ Nie mo¿e u¿ywaæ:
 //#21519
 @20154 = ~Co siê wydarzy³o na tym statku? Co to znaczy „nie nale¿eli”?~
 
-//stores/ubstores.d
+//stores/ubstores.d -> not used anymore. do not translate @20155 to @20163
 //#15365
 @20155 = ~Nie wygoniê obcych, skoro interesy id¹ ostatnio tak kiepsko. Jeœli czegoœ potrzebujecie, nie wahajcie siê pytaæ.~
 
@@ -977,8 +974,8 @@ Nie mo¿e u¿ywaæ:
 //#2144
 @20174 = ~Nie jesteœ dowódc¹ P³omiennej Piêœci – ten tytu³ nale¿y siê ksiêciu Eltanowi, komuœ kto nañ w pe³ni zas³uguje. Jesteœ tylko pretendentem, do tego œmierdz¹cym i obleœnym. Bezmózgi gibberling by³by lepszym dowódc¹, ni¿ ty.~
 
-//#6537 (add 'Afoul of the law')
-@20175 = ~ Konflikt z prawem
+//#6537 (#26841 BGEE)
+@20175 = ~Konflikt z prawem
 
 Z jakiegoœ powodu ksi¹¿ê Eltan ju¿ nie dowodzi P³omienn¹ Piêœci¹. Teraz za dowódcê podaje siê cz³owiek o imieniu Angelo.~
 
@@ -997,16 +994,14 @@ Po przyniesieniu Quoningarowi mikstury, której to potrzebowa³ do swych medytacji
 
 //BGT/Tutu SOLVED/UNSOLVED + Headers - DiaryEntries for Shilo Chen, added by Jarl
 
+//@20018 with header:
 @20178 = ~Shilo Chen i ogrzy mag
 
 Shilo Chen, ³owca z Lasu Ostrych K³ów, przyby³ do Wrót Baldura szukaæ pomocy. Banda ogrzych magów trzebi zwierzynê w po³udniowo-zachodniej czêœci lasu. Poprosi³ nas, byœmy tam poszli i postarali siê jakoœ temu zaradziæ. Doda³, ¿e jeœli uda mu siê znaleŸæ jakichœ innych œmia³ków, przyœle ich, aby nam pomogli.~
 
 @20179 = ~Shilo Chen i ogrzy mag
 
-Po klêsce ogrzych magów w Lesie Ostrych K³ów, Shilo Chen sowicie nas wynagrodzi³.~
-
-
-
+Po klêsce ogrzych-magów w Lesie Ostrych K³ów, Shilo Chen sowicie nas wynagrodzi³.~
 
 
 
@@ -1068,7 +1063,7 @@ Po klêsce ogrzych magów w Lesie Ostrych K³ów, Shilo Chen sowicie nas wynagrodzi³
 @40013 = ~Ile za te kurczaki?~
 
 //#14226
-@40014 = ~Kto jest w³aœcicielem farmy le¿¹cej na wschodzie?~
+@40014 = ~Kto jest w³aœcicielem gospodarstwa le¿¹cego na wschodzie?~
 
 //#14227
 @40015 = ~Nigdy tam nie by³am.~
@@ -1086,7 +1081,7 @@ Po klêsce ogrzych magów w Lesie Ostrych K³ów, Shilo Chen sowicie nas wynagrodzi³
 @40019 = ~Nie wiem, co mo¿e ciê interesowaæ. Najlepiej porozmawiaj z Erlinem.~
 
 //#14376
-@40020 = ~Wynocha z mojej farmy, przyb³êdy!~
+@40020 = ~Wynocha z mojego gospodarstwa, przyb³êdy!~
 
 //#1517
 @40021 = ~Kim jesteœcie? Co robicie w moim maj¹tku? Stra¿e! Intruzi!~
@@ -1101,7 +1096,7 @@ Po klêsce ogrzych magów w Lesie Ostrych K³ów, Shilo Chen sowicie nas wynagrodzi³
 @40024 = ~Moje drzwi nie stoj¹ ju¿ otworem dla takich jak wy!~
 
 //#14221
-@40025 = ~Zostaw ich, Enna. Oni wiedz¹, czego szukaj¹. Na tej farmie i tak nie ma miejsca na sekrety.~
+@40025 = ~Zostaw ich, Enna. Oni wiedz¹, czego szukaj¹. Na tym gospodarstwie i tak nie ma miejsca na sekrety.~
 
 //#14222
 @40026 = ~Niech Beshaba was przeklnie! Co zrobiliœcie mojej Ennie?!~
@@ -1302,7 +1297,7 @@ Po klêsce ogrzych magów w Lesie Ostrych K³ów, Shilo Chen sowicie nas wynagrodzi³
 @40091 = ~Mówi³em o dzia³aniach Tronu od czasu, kiedy kontrolê nad nimi przej¹³ Sarevok. W ogóle straci³ do nich serce i wydaje siê, ¿e gotów jest poœwiêciæ organizacjê na dozbrojenie Wrót, a co za tym idzie, poprawê swoich szans na tytu³ Wielkiego Ksiêcia. Ale os³abienie pozycji Tronu wzmaga napiêcie w mieœcie i o to w³aœnie obwiniaj¹ ich inni kupcy. Byli g³ównymi pracodawcami w mieœcie i bez ich pomocy nie³atwo bêdzie przekonaæ gmin, ¿e wszystko idzie ku lepszemu. Wszystkie ich poczynania z kupieckiego punktu widzenia s¹ bez sensu i myœlê, ¿e w ich siedzibie dzieje siê coœ z³ego.~
 
 //#10104
-@40092 = ~Z ¿elazem jest coraz lepiej, ale kupcy wci¹¿ nie maj¹ towarów. To niestabilnoœæ ¯elaznego Tronu przed³u¿a konflikt w mieœcie. O to w³aœnie kupcy oskar¿aj¹ organizacjê. Byli g³ównymi importerami i bez ich pomocy, przekonanie mieszkañców, ¿e wszystko jest w porz¹dku zajmie du¿o czasu. Od czasu przejêcia kontroli przez Sarevoka wstrzymali wiêkszoœæ transakcji i zamrozili znaczn¹ czêœæ aktywów. Doprowadzenie do ruiny wielkiego domu kupieckiego wydaje siê im bez sensu. A Sarevoka niemal nic nie interesuje – najwyraŸniej zamierza poœwiêciæ organizacjê byle tylko uzbroiæ Wrota Baldura i dziêki temu zostaæ Wielkim Ksiêciem. Nie potrafiê sobie wyobraziæ osoby przy zdrowych zmys³ach, która kierowa³aby siê takimi motywami. Doprawdy dziwne rzeczy musz¹ dziaæ siê w budynku ¯elaznego Tronu.~
+@40092 = ~Z ¿elazem jest coraz lepiej, ale kupcy wci¹¿ nie maj¹ towarów. To niestabilnoœæ ¯elaznego Tronu przed³u¿a konflikt w mieœcie. O to w³aœnie kupcy oskar¿aj¹ organizacjê. Byli g³ównymi importerami i bez ich pomocy, przekonanie mieszkañców, ¿e wszystko jest w porz¹dku zajmie du¿o czasu. Od czasu przejêcia kontroli przez Sarevoka wstrzymali wiêkszoœæ transakcji i zamrozili znaczn¹ czêœæ aktywów. Doprowadzenie do ruiny wielkiego domu kupieckiego wydaje siê im bez sensu. A Sarevoka niemal nic nie interesuje - najwyraŸniej zamierza poœwiêciæ organizacjê byle tylko uzbroiæ Wrota Baldura i dziêki temu zostaæ Wielkim Ksiêciem. Nie potrafiê sobie wyobraziæ osoby przy zdrowych zmys³ach, która kierowa³aby siê takimi motywami. Doprawdy dziwne rzeczy musz¹ dziaæ siê w budynku ¯elaznego Tronu.~
 
 //#9779
 @40093 = ~Nic bezpoœredniego, jak myœlê, choæ wstrz¹s wci¹¿ jest odczuwalny. Od czasu, jak Sarevok przej¹³ kontrolê, zamrozili wiêkszoœæ gotówki i zamknêli niemal wszystkie operacje. Byli du¿ymi importerami i bez ich pomocy nie³atwo bêdzie przekonaæ gmin, ¿e kryzys siê skoñczy³. Wygl¹da na to, ¿e Sarevok zamierza wykorzystaæ Tron, by wzmocniæ swoj¹ politykê wrogoœci wobec Amn, a co za tym idzie, swoje pretensje do pozycji Wielkiego Ksiêcia. Fakt, ¿e niszczy przez to wielkie konsorcjum kupieckie, nie ma chyba dlañ znaczenia. Nie umiem sobie wyobraziæ zwyk³ego, zdrowego na umyœle cz³owieka interesów, który zdecydowa³by siê na coœ takiego. W siedzibie Tronu dziej¹ siê doprawdy osobliwe sprawy.~
@@ -1371,7 +1366,7 @@ Po klêsce ogrzych magów w Lesie Ostrych K³ów, Shilo Chen sowicie nas wynagrodzi³
 @40114 = ~Oooo, spryciarze! Podgl¹danie jest zabawne, prawda kochanie?~
 
 //#9105
-@40115 = ~On nalega, aby nazywaæ mnie „Britannia”. Krêci go byle co, no nie?~
+@40115 = ~On nalega, aby nazywaæ mnie "Britannia". Krêci go byle co, no nie?~
 
 //#3520
 @40116 = ~Witam. Przykro mi, ale nie mogê wam teraz pomóc, muszê skoñczyæ moj¹ pracê.~
@@ -1476,7 +1471,7 @@ Po klêsce ogrzych magów w Lesie Ostrych K³ów, Shilo Chen sowicie nas wynagrodzi³
 @40149 = ~Po¿a³ujecie tej decyzji.~
 
 //#5106
-@40150 = ~Czekajcie! Strasznie mi przykro, tylko mnie nie zabijajcie, b³agam. Opowiem wam o Ch³odzie.~
+@40150 = ~CCzekajcie! Strasznie mi przykro, tylko mnie nie zabijajcie, b³agam. Opowiem wam o Ch³odzie.~
 
 //#5107
 @40151 = ~Dalej.~

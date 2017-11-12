@@ -1,43 +1,43 @@
-/*BG2engine*/
-
-@0  = ~Ach, nasz œmia³ek. Œwietnie siê spisa³eœ. Oto 250 sztuk z³ota za to, ¿e pozby³eœ siê tego gówna z... Ach, Nemphre, wreszcie mam ten pierœcieñ!~ 
-@1  = ~Poznajê ten pierœcieñ. Nale¿a³ do córki Sashenstarów; j¹ równie¿ uznano za zaginion¹. Pewien jestem, ¿e rodzina bêdzie chcia³a wyprawiæ jej odpowiedni pochówek. By³byœ sk³onny powróciæ do kana³ów i odzyskaæ jej cia³o. Zwróæ mi je, a ja poinformujê o wszystkim Sashenstarów. ~
-@2  = ~W zasadzie, to mam ju¿ to cia³o. By³a ubrana tak wykwintnie, ¿e odnios³em wra¿enie, iz musi byæ kimœ wa¿nym.~ 
-@3  = ~Nie ma mowy, abym wróci³ do tych œmierdz¹cych kana³ów. Jestem pewien, ¿e ktoœ od ciebie mo¿e tam zejœæ i odzyskaæ cia³o.~
-@4  = ~Jeœli ukoi to cierpienia tej rodziny, zrobiê co tylko mogê. Powrócê z cia³em.~ 
-@5  = ~A co ja jestem "przynieœæ, pozamiataj", mam lepsze rzeczy do roboty. Sam sobie idŸ po cia³o.~
-@6  = ~Dobrze siê spisa³eœ i mo¿liwe, ¿e teraz Sashenstarowie zaznaj¹ odrobinê spokoju. Proszê przyjmij te 3,000 sztuk z³ota, jako premiê za zwrot cia³a. Przy okazji, bêdê potrzebowa³ ludzi, aby przeprowadzili dochodzenie w ¯elaznym Tronie. A teraz idê dokoñczyæ papierkow¹ robotê, potem bêdê przy frontowych drzwiach koszarów P³omiennej Piêœci. Jeœli zechesz przedyskutowaæ sprawê ¯elaznego Tronu, przyjdŸ w³aœnie tam.~
-@7  = ~Zawiod³eœ mnie, ale dziêki ci za oczyszczenie kana³ów z tej plagi robactwa i zwrot pierœcienia. Prosze, przyjmij te 500 sztuk z³ota jako premiê za zwrot b³yskotki. Przy okazji, bêdê potrzebowa³ ludzi, aby przeprowadzili dochodzenie w ¯elaznym Tronie. A teraz idê dokoñczyæ papierkow¹ robotê, potem bêdê przy frontowych drzwiach koszarów P³omiennej Piêœci. Jeœli zechesz przedyskutowaæ sprawê ¯elaznego Tronu, przyjdŸ w³aœnie tam.~ 
+@0  = ~Dojrza³y, co? Dobra robota. Macie tu dwieœcie piêædziesi¹t sztuk z³ota, mo¿e pomo¿e wam zapomnieæ o smrodzie. Ha, Nemphre, jeszcze zdobêdê ten pierœcieñ!~ 
+@1  = ~Poznajê ten pierœcieñ. Nale¿a³ do córki Sashenstarów, j¹ równie¿ uznano za zaginion¹. Pewien jestem, ¿e rodzina bêdzie chcia³a wyprawiæ jej odpowiedni pochówek. By³byœ sk³onny powróciæ do kana³ów i odzyskaæ jej cia³o. Zwróæ mi je, a ja poinformujê o wszystkim Sashenstarów.~~Poznajê ten pierœcieñ. Nale¿a³ do córki Sashenstarów, j¹ równie¿ uznano za zaginion¹. Pewien jestem, ¿e rodzina bêdzie chcia³a wyprawiæ jej odpowiedni pochówek. By³abyœ sk³onna powróciæ do kana³ów i odzyskaæ jej cia³o. Zwróæ mi je, a ja poinformujê o wszystkim Sashenstarów.~
+@2  = ~W zasadzie to mam ju¿ to cia³o. By³a ubrana tak wykwintnie, ¿e odnios³em wra¿enie, i¿ musi byæ kimœ wa¿nym.~~W zasadzie to mam ju¿ to cia³o. By³a ubrana tak wykwintnie, ¿e odnios³am wra¿enie, i¿ musi byæ kimœ wa¿nym.~  
+@3  = ~Nie ma mowy, abym wróci³ do tych œmierdz¹cych kana³ów. Jestem pewien, ¿e ktoœ od ciebie mo¿e tam zejœæ i odzyskaæ cia³o.~~Nie ma mowy, abym wróci³a do tych œmierdz¹cych kana³ów. Jestem pewna, ¿e ktoœ od ciebie mo¿e tam zejœæ i odzyskaæ cia³o.~
+@4  = ~Jeœli ukoi to cierpienia tej rodziny, zrobiê co w mojej mocy. Powrócê z cia³em.~ 
+@5  = ~A co ja jestem „przynieœæ, pozamiataj”? Mam lepsze rzeczy do roboty. Sam sobie idŸ po cia³o.~
+@6  = ~Dobrze siê spisa³eœ i mo¿liwe, ¿e teraz Sashenstarowie zaznaj¹ odrobiny spokoju. Proszê, przyjmij te trzy tysi¹ce sztuk z³ota, jako premiê za zwrot cia³a. Przy okazji, bêdê potrzebowa³ ludzi, aby przeprowadzili dochodzenie w ¯elaznym Tronie. A teraz idê dokoñczyæ papierkow¹ robotê, potem znajdziesz mnie przy g³ównym wejœciu do koszar P³omiennej Piêœci. PrzyjdŸ tam, jeœli zechcesz przedyskutowaæ sprawê ¯elaznego Tronu.~~Dobrze siê spisa³aœ i mo¿liwe, ¿e teraz Sashenstarowie zaznaj¹ odrobiny spokoju. Proszê, przyjmij te trzy tysi¹ce sztuk z³ota, jako premiê za zwrot cia³a. Przy okazji, bêdê potrzebowa³ ludzi, aby przeprowadzili dochodzenie w ¯elaznym Tronie. A teraz idê dokoñczyæ papierkow¹ robotê, potem znajdziesz mnie przy g³ównym wejœciu do koszar P³omiennej Piêœci. PrzyjdŸ tam, jeœli zechcesz przedyskutowaæ sprawê ¯elaznego Tronu.~
+@7  = ~Zawiod³eœ mnie, ale dziêki ci za oczyszczenie kana³ów z tej plagi robactwa i zwrot pierœcienia. Proszê, przyjmij te piêæset sztuk z³ota jako premiê za zwrot b³yskotki. Przy okazji, bêdê potrzebowa³ ludzi, aby przeprowadzili dochodzenie w ¯elaznym Tronie. A teraz idê dokoñczyæ papierkow¹ robotê, potem znajdziesz mnie przy g³ównym wejœciu do koszar P³omiennej Piêœci. PrzyjdŸ tam, jeœli zechcesz przedyskutowaæ sprawê ¯elaznego Tronu.~ ~Zawiod³aœ mnie, ale dziêki ci za oczyszczenie kana³ów z tej plagi robactwa i zwrot pierœcienia. Proszê, przyjmij te piêæset sztuk z³ota jako premiê za zwrot b³yskotki. Przy okazji, bêdê potrzebowa³ ludzi, aby przeprowadzili dochodzenie w ¯elaznym Tronie. A teraz idê dokoñczyæ papierkow¹ robotê, potem znajdziesz mnie przy g³ównym wejœciu do koszar P³omiennej Piêœci. PrzyjdŸ tam, jeœli zechcesz przedyskutowaæ sprawê ¯elaznego Tronu.~
 @8  = ~Zaiste, dzielna z ciebie osoba. Bêdê czeka³ do twojego powrotu.~
-@9  = ~Ach, powróci³eœ. Czy przynios³eœ cia³o córki Sashenstarów?~ 
-@10 = ~W zasadzie, to tak. Oto one.~
+@9  = ~Ach, powróci³eœ. Czy przynios³eœ cia³o córki Sashenstarów?~~Ach, powróci³aœ. Czy przynios³aœ cia³o córki Sashenstarów?~ 
+@10 = ~W zasadzie tak. Oto ono.~
 @11 = ~Nie, jeszcze nie.~
-@12 = ~Scar, zmieni³em zdanie. Sam sobie idŸ po cia³o.~ 
-@13 = ~Widzê, ¿e przynios³eœ cia³o córki Sashenstarów. Czy¿by ruszy³o ciê sumienie?~
-@14 = ~Coœ w tym rodzaju. By³bym wdziêczny, gdybyœ wzi¹³ ju¿ je ode mnie. Dziêki.~ 
-@15 = ~Rozumiem. Jestem zapracowany, wiêc proszê nie wracaj, póki nie bêdziesz mia³ przy sobie cia³a.~
-@16 = ~To¿ to cia³o jakiejœ parszywej szlachcianki! Nic, tylko k³opoty z nim. Chyba mo¿esz znaleŸæ cia³o jakiegoœ wieœniaka?~
-@17 = ~Ty... Chyba s³ysza³em o tobie. Móg³byœ przys³u¿yæ siê zarówno mi jak i temu miastu. Czy zechcesz mnie wys³uchaæ?~ 
-@18 = ~Przykro mi, ale prowadzê œledztwo dla twojego zastêpcy i chcia³bym je najpierw dokoñczyæ.  ~
-@19 = ~Tak, powiedz mi czego chcesz. Jestem przekonany, ¿e Scar sam upora siê ze swoimi sprawami.~ 
+@12 = ~Zmieni³em zdanie, Scar. Sam sobie idŸ po cia³o.~~Zmieni³am zdanie, Scar. Sam sobie idŸ po cia³o.~
+@13 = ~Widzê, ¿e przynios³eœ cia³o córki Sashenstarów. Czy¿by ruszy³o ciê sumienie?~~Widzê, ¿e przynios³aœ cia³o córki Sashenstarów. Czy¿by ruszy³o ciê sumienie?~
+@14 = ~Coœ w tym rodzaju. By³bym wdziêczny, gdybyœ wzi¹³ je ju¿ ode mnie. Dziêki.~~Coœ w tym rodzaju. By³abym wdziêczna, gdybyœ wzi¹³ je ju¿ ode mnie. Dziêki.~ 
+@15 = ~Rozumiem. Jestem zapracowany, wiêc proszê, nie wracaj, póki nie bêdziesz mia³ przy sobie cia³a.~~Rozumiem. Jestem zapracowany, wiêc proszê, nie wracaj, póki nie bêdziesz mia³a przy sobie cia³a.~
+@16 = ~To¿ to cia³o jakiejœ parszywej szlachcianki! Z tego bêd¹ tylko k³opoty. Chyba jesteœ w stanie znaleŸæ cia³o jakiegoœ wieœniaka?~
+
+/* new in v13 */
+@17 = ~Ty... Chyba o tobie s³ysza³em. Móg³byœ przys³u¿yæ siê zarówno mi, jak i temu miastu. Czy zechcesz mnie wys³uchaæ?~~Ty... Chyba o tobie s³ysza³em. Mag³abyœ przys³u¿yæ siê zarówno mi, jak i temu miastu. Czy zechcesz mnie wys³uchaæ?~  
+@18 = ~Przykro mi, ale prowadzê œledztwo dla twojego zastêpcy i chcia³bym je najpierw zakoñczyæ.~~Przykro mi, ale prowadzê œledztwo dla twojego zastêpcy i chcia³abym je najpierw zakoñczyæ.~
+@19 = ~Tak, powiedz mi, czego chcesz. Jestem pewien, ¿e Scar sam potrafi uporaæ siê ze swoimi problemami.~~Tak, powiedz mi, czego chcesz. Jestem pewna, ¿e Scar sam potrafi uporaæ siê ze swoimi problemami.~ 
 @20 = ~Chwila... Najpierw muszê coœ dokoñczyæ.~
 @21 = ~Tak, mów proszê.~ 
-@22 = ~Nie tak prêdko. Powiem bez ogódek, ¿e tak naprawê to ja jestem odpowiedzialny za oczyszczenie kopalni Nashkel.~
+@22 = ~Nie tak prêdko. Pozwól, ¿e zacznê od tego, i¿ to ja jestem odpowiedzialny za oczyszczenie kopalni Nashkel.~~Nie tak prêdko. Pozwól, ¿e zacznê od tego, i¿ to ja jestem odpowiedzialna za oczyszczenie kopalni Nashkel.~
 @23 = ~Chwileczkê. Mówi³eœ coœ, ¿e przyda³aby ci siê pomoc. Interesuje mnie wspó³praca z tob¹.~
-@24 = ~Jeszcze nie dokoñczy³em œledztwa.~ 
-@25 = ~Wróæ proszê i zniszcz te potwory. Nie usnê, póki nie dowiem siê, ¿e oczyœci³eœ z nich budynek Siedem S³oñc i, ¿e ¿adnemu z mieszkañców nie grozi niebezpieczeñstwo.~
+@24 = ~Jeszcze nie zakoñczy³em œledztwa.~~Jeszcze nie zakoñczy³am œledztwa.~  
+@25 = ~Wróæ tam, proszê, i zniszcz te potwory. Nie bêdê móg³ spaæ spokojnie, dopóki nie dowiem siê, ¿e pozby³eœ siê tych kreatur z budynku Siedmiu S³oñc, a mieszkañcom nie grozi ju¿ ¿adne niebezpieczeñstwo.~~Wróæ tam, proszê, i zniszcz te potwory. Nie bêdê móg³ spaæ spokojnie, dopóki nie dowiem siê, ¿e pozby³aœ siê tych kreatur z budynku Siedmiu S³oñc, a mieszkañcom nie grozi ju¿ ¿adne niebezpieczeñstwo.~
 @26 = ~Rezygnujê.~ 
-@27 = ~Ca³y czas pracujemy nad œledztwem.~
-@28 = ~Na pewno wrócimy i rozprawimy siê z tymi potworami!~
+@27 = ~W dalszym ci¹gu prowadzimy œledztwo.~
+@28 = ~Na pewno tam wrócimy i rozprawimy siê z tymi potworami!~
 //#83:
-@29 = ~Tak, uda³o nam siê. Z radoœci¹ zwrócimy ci go.~ 
-@30 = ~Pójdê jeszcze raz i przygl¹dnê siê temu bli¿ej.~
-@31 = ~S¹dzê, ¿e odnalaz³em te¿ jej cia³o.~ 
-@32 = ~Nie znalaz³em pierœcienia, tylko jej cia³o.~
-@33 = ~Dobrze siê spisa³eœ! Sashenstarowie zaznaj¹ odrobinê spokoju. Pewien jestem te¿, ¿e ten pierœcieñ bêdzie im przypomina³ o ich ukochanej córce.~
+@29 = ~Owszem i chêtnie go zwrócimy.~ 
+@30 = ~Wrócê tam i przyjrzê siê temu bli¿ej.~
+@31 = ~S¹dzê, ¿e odnalaz³em te¿ jej cia³o.~~S¹dzê, ¿e odnalaz³am te¿ jej cia³o.~ 
+@32 = ~Nie znalaz³em pierœcienia, tylko jej cia³o.~~Nie znalaz³am pierœcienia, tylko jej cia³o.~
+@33 = ~Dobrze siê spisa³eœ! Sashenstarowie zaznaj¹ odrobiny spokoju. Jestem pewien, ¿e ten pierœcieñ bêdzie im przypomina³ o ich ukochanej córce.~~Dobrze siê spisa³aœ! Sashenstarowie zaznaj¹ odrobiny spokoju. Jestem pewien, ¿e ten pierœcieñ bêdzie im przypomina³ o ich ukochanej córce.~
 @34 = ~Nie mam teraz na to czasu.~
-@35 = ~Jeœli poœwiêci³byœ temu trochê czasu, to jestem pewien, ¿e rodzina Sashenstarów bêdzie ci dozgonnie wdziêczna.~ 
+@35 = ~Gdybyœ zechcia³ poœwiêciæ temu trochê czasu, jestem pewien, ¿e rodzina Sashenstarów by³aby ci dozgonnie wdziêczna.~~Gdybyœ zechcia³a poœwiêciæ temu trochê czasu, jestem pewien, ¿e rodzina Sashenstarów by³aby ci dozgonnie wdziêczna.~ 
 //#77:
-@36 = ~Dobrze, ¿e ciê widzê. Jak siê maj¹ sprawy?~
-@37 = ~Nadal przeszukujê cia³a. ~ 
-@38 = ~OdnaleŸliœmy ten oto wyj¹tkowy pierœcieñ.~
+@36 = ~Cieszê siê, ¿e znowu was widzê. Jak idzie?~
+@37 = ~Nadal przeszukujê cia³a ofiar.~ 
+@38 = ~ZnaleŸliœmy ten oto wyj¹tkowy pierœcieñ.~
