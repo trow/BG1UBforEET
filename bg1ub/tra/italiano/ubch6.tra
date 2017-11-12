@@ -1,8 +1,8 @@
-@1 = ~I am pleased to see thee again. Hast thou come to collect the inheritance from your father? He left thee several items, all of which are within his old room. Please forgive my abrupt nature, but much requires my attention this day. It is important that we later speak of your foster father, but not now. Meet me in the outer grounds later today.~ // #9
-@2 = ~Surrender to the guard, young one. Thou wouldst only make it worse for thyself.~ // #10
-@3 = ~Why do you ask us to surrender? We have done nothing wrong.~ // #7231 - first part
-@4 = ~Sorry, we can't surrender.~ // #7231 - second part
-@5 = ~I surrender. Take me to your prison.~ // #7232
-@6 = ~You only make things harder on yourself, child.~ // #7233
-@7 = ~You there! Stop and surrender yourself. You are accused of murdering the men Brunos Costak and Rieltar Anchev. If you give yourself up now, you will be assured of a fair trial.~ // #16810 - modified
-@8 = ~We're innocent, so we have nothing to fear. Take us to your prison.~ // #15197
+@1 = ~Mi fa piacere rivederti. Sei venuto a raccogliere l'eredit‡ di tuo padre? Ti ha lasciato molti oggetti. Sono tutti nella sua vecchia stanza. Perdona i miei modi bruschi, ma oggi molte cose richiedono la mia attenzione. » importante che in seguito parliamo del tuo padre adottivo, ma non ora. Incontriamoci pi˘ tardi nei giardini interni.~ ~Mi fa piacere rivederti. Sei venuta a raccogliere l'eredit‡ di tuo padre? Ti ha lasciato molti oggetti. Sono tutti nella sua vecchia stanza. Perdona i miei modi bruschi, ma oggi molte cose richiedono la mia attenzione. » importante che in seguito parliamo del tuo padre adottivo, ma non ora. Incontriamoci pi˘ tardi nei giardini interni.~ // #9
+@2 = ~Arrenditi alle guardie, giovanotto. Peggioreresti soltanto la tua situazione.~ ~Arrenditi alle guardie, giovanotta. Peggioreresti soltanto la tua situazione.~ // #10
+@3 = ~PerchÈ mi chiedi di arrenderci? Non abbiamo fatto niente di male.~ // #7231 - first part
+@4 = ~Spiacente, non possiamo farlo.~ // #7231 - second part
+@5 = ~Mi arrendo. Portami in prigione.~ // #7232
+@6 = ~Stai solo complicando le cose, ragazzo.~ ~Stai solo complicando le cose, ragazza.~ // #7233
+@7 = ~Voi, laggi˘! Fermatevi e arrendetevi. Siete accusati dell'omicidio di Brunos Costak e Rieltar Anchev. Se vi arrenderete subito, vi sar‡ garantito un giusto processo.~ // #16810 - modified
+@8 = ~Siamo innocenti, quindi non abbiamo nulla da temere. Portateci nella vostra prigione.~ // #15197
