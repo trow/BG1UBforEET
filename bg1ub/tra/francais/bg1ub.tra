@@ -12,7 +12,7 @@ PARAMÈTRES
 
 Vol à la Tire : bonus de +20%
 
-PoidsÊ: 2~
+Poids : 2~
 @25   = ~Fermier~
 @27   = ~Kaitlin~
 @28   = ~Malicia~
@@ -173,10 +173,10 @@ Il y a quelques années, Fong Moo, un fameux pickpocket connu à la Porte de Baldu
 
 PARAMÈTRES
 
-Capacités d'équipementÊ:
+Capacités d'équipement :
 - Vol à la Tire : bonus de +20%
 
-PoidsÊ: 2~
+Poids : 2~
 
 // Ice Island Level 2 Restoration
 @1001 = ~Golem de neige~
