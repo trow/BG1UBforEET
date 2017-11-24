@@ -1,8 +1,8 @@
-@1 = ~I am pleased to see thee again. Hast thou come to collect the inheritance from your father? He left thee several items, all of which are within his old room. Please forgive my abrupt nature, but much requires my attention this day. It is important that we later speak of your foster father, but not now. Meet me in the outer grounds later today.~ // #9
-@2 = ~Surrender to the guard, young one. Thou wouldst only make it worse for thyself.~ // #10
-@3 = ~Why do you ask us to surrender? We have done nothing wrong.~ // #7231 - first part
-@4 = ~Sorry, we can't surrender.~ // #7231 - second part
-@5 = ~I surrender. Take me to your prison.~ // #7232
-@6 = ~You only make things harder on yourself, child.~ // #7233
-@7 = ~You there! Stop and surrender yourself. You are accused of murdering the men Brunos Costak and Rieltar Anchev. If you give yourself up now, you will be assured of a fair trial.~ // #16810 - modified
-@8 = ~We're innocent, so we have nothing to fear. Take us to your prison.~ // #15197
+@1 = ~Quelle joie de vous revoir. Venez-vous pour recueillir l'héritage de votre père ? Il vous a laissé plusieurs objets... tous se trouvent dans son ancienne chambre. Pardonnez-moi si je manque un peu de tact, mais j'ai tant à faire aujourd'hui. Il est important que nous nous entretenions à propos de votre père adoptif, mais pas pour l'heure. Retrouvez-moi plus tard à l'extérieur.~ // #9
+@2 = ~Rendez-vous à la garde, jeune homme. Ou vous ne feriez qu'aggraver la situation.~ ~Rendez-vous à la garde, jeune fille. Ou vous ne feriez qu'aggraver la situation.~ // #10
+@3 = ~Pourquoi nous demandez-vous de nous rendre ? Nous n'avons rien fait de mal.~ // #7231 - first part
+@4 = ~Désolé, mais nous ne pouvons pas nous rendre.~ ~Désolée, mais nous ne pouvons pas nous rendre.~ // #7231 - second part
+@5 = ~Je me rends. Emmenez-moi dans votre prison.~ // #7232
+@6 = ~Vous ne faites que vous rendre les choses plus difficiles, mon enfant.~ // #7233
+@7 = ~Vous là ! Ne bougez plus et rendez-vous ! On vous accuse d'avoir tué les dénommés Brunos Costak et Rieltar Anchev. Si vous vous rendez maintenant, vous aurez un procès équitable.~ // #16810 - modified
+@8 = ~Nous ne craignons rien, car nous sommes innocents. Emmenez-nous dans votre prison.~ // #15197
