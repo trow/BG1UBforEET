@@ -1,7 +1,7 @@
 # BG1 Unfinished Business
 A mod for BG1Tutu and Baldur's Gate Trilogy
 
-**Version 15**
+**Version 15.2**
 
 **Developed by:** icelus, devSin, SimDing0, Idobek, Ascension64, CamDawg, SixOfSpades, and Dudley
 
@@ -464,5 +464,8 @@ Below are links to community-related sites:
   * Ch 6 Restorations: Updates to improve scripting and dialog options
   * Shilo Chen: Updated item description for Gloves of Pick Pocketing in BGEE
   * Updated Polish translations - Thanks Cahir!
-  
+* Version 15.2
+  * Updated French translations - Thanks Isaya!
+  * Updated Italian translations - Thanks Aedan!
+
 Please see bg1ub.txt for release notes pertaining to your specific platform.
