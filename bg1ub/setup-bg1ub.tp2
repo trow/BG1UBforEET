@@ -350,6 +350,7 @@ INCLUDE ~%MOD_FOLDER%/ar1010/bg1ub_ar1010.tpa~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @2
+REQUIRE_PREDICATE NOT (FILE_EXISTS_IN_GAME ~bdentboy.cre~) @90016 // Check for BGEEv2.5
 
 // Author: SimDing0
 // Email: SimDing0@hotmail.com
@@ -429,6 +430,7 @@ LAF extend_area_script STR_VAR area="%SWBaldursGate_FlamingFistHQ_L1%" bottom="b
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @5
+REQUIRE_PREDICATE NOT (FILE_EXISTS_IN_GAME ~bdentboy.cre~) @90016 // Check for BGEEv2.5
 FORBID_FILE ~override/X#BG1NPCPhase2.G3~ @90000
 
 // Author: Ascension64
@@ -525,6 +527,7 @@ END
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @8
+REQUIRE_PREDICATE NOT (FILE_EXISTS_IN_GAME ~bdentboy.cre~) @90016 // Check for BGEEv2.5
 FORBID_FILE ~override/X#BG1NPCPhase2.G3~ @90000
 
 // Author: SimDing0
@@ -546,6 +549,7 @@ EXTEND_BOTTOM ~%tutu_var%kivan.bcs~ ~bg1ub/kivan/ubkivan.baf~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @9
+REQUIRE_PREDICATE NOT (FILE_EXISTS_IN_GAME ~bdentboy.cre~) @90016 // Check for BGEEv2.5
 FORBID_FILE ~override/X#BG1NPCPhase2.G3~ @90000
 
 // Author: SimDing0
@@ -606,6 +610,7 @@ COMPILE EVALUATE_BUFFER ~bg1ub/albert/albert.d~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @13
+REQUIRE_PREDICATE NOT (FILE_EXISTS_IN_GAME ~bdentboy.cre~) @90016 // Check for BGEEv2.5
 
 // Author: SimDing0
 // Email: SimDing0@hotmail.com
