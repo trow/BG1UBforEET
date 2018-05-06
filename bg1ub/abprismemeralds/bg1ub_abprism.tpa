@@ -1,0 +1,245 @@
+// ----------------------------------------------------------------------------
+// Name:    Prism and the Emeralds Tweak
+// Author:  Sasha al'Therin (aka plainab) (aka you ain't getting my real name LOL)
+// Date:    Ongoing
+// Version: 0.10
+// ----------------------------------------------------------------------------
+
+LOAD_TRA "bg1ub/tra/%LANGUAGE%/ubprism.tra"
+
+ACTION_IF GAME_IS ~bg1~ THEN BEGIN
+ INCLUDE ~bg1ub/abPrismEmeralds/tph/prism_bg1_addvars.tpa~
+END
+
+ACTION_IF GAME_IS ~totsc~ THEN BEGIN
+ INCLUDE ~bg1ub/abPrismEmeralds/tph/prism_totsc_addvars.tpa~
+END
+
+ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
+  //BG Method specific variables
+  OUTER_SET fj_flags = 0b00000001
+  OUTER_SPRINT abContainerEnable ~DestroyItem("abgfEyeL")
+  DestroyItem("abgfEyeR")
+  SetGlobal("abgf_GemInEye","GLOBAL",1)~
+END
+
+ACTION_IF GAME_IS ~tutu tutu_totsc~ THEN BEGIN
+ INCLUDE ~bg1ub/abPrismEmeralds/tph/prism_tutu_addvars.tpa~
+END
+
+ACTION_IF GAME_IS ~bgt~ THEN BEGIN
+ INCLUDE ~bg1ub/abPrismEmeralds/tph/prism_bgt_addvars.tpa~
+END
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+ INCLUDE ~bg1ub/abPrismEmeralds/tph/prism_bgee_addvars.tpa~
+ ADD_JOURNAL EXISTING TITLE (#31383) @127 @128 @129 @130 @131 @132 @133 @134 USING ~bg1ub/tra/%LANGUAGE%/ubprism.tra~
+END
+
+ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee~ THEN BEGIN
+  //BG2 Method specific variables
+  OUTER_SET fj_flags = 0b00100001
+  OUTER_SPRINT abContainerEnable ~DestroyItem("abgfEyeL")
+  DestroyItem("abgfEyeR")
+  SetGlobal("abgf_GemInEye","GLOBAL",1)
+  ContainerEnable("A6StatueRightEye",TRUE)
+  ContainerEnable("A6StatueLeftEye",TRUE)~
+END
+
+//first container
+COPY_EXISTING ~%NashkelMines%.are~ override
+LAUNCH_PATCH_FUNCTION ~fj_are_structure~
+INT_VAR fj_loc_x = 641
+        fj_loc_y = 2713
+        fj_type = 6
+        fj_lock_diff = 30
+//        fj_flags to the bitwise container flags (bit0=locked, bit3=trap resets, bit5=disabled);
+        fj_flags = %fj_flags%
+//        fj_flags = 0b00100001  //for tutu & bgt (i hope)
+        fj_trap_detect = 100
+        fj_trap_remove_diff = 100
+        fj_trap_active = 1 //to whether the container is trapped (0=no, 1=yes);
+        fj_trap_status = 0 // to whether the trap is detected (0=no, 1=yes);
+        fj_trap_loc_x = 641
+        fj_trap_loc_y = 2713
+        fj_box_left = 564
+        fj_box_top = 2552
+        fj_box_right = 590
+        fj_box_bottom = 2563
+        fj_vertex_0 = (564 + (2559 << 16))
+        fj_vertex_1 = (578 + (2552 << 16))
+        fj_vertex_2 = (590 + (2556 << 16))
+        fj_vertex_3 = (586 + (2561 << 16))
+        fj_vertex_4 = (580 + (2563 << 16))
+        fj_vertex_5 = (570 + (2562 << 16))
+//        fj_lockpick_strref to the lockpick string reference (default -1);
+STR_VAR fj_structure_type = ~container~
+        fj_name = ~A6StatueRightEye~
+        fj_trap_script = ~abitrp~
+//        fj_trap_script to the trap's script;
+//        fj_key_resref to the filename of the container's key;
+END
+
+ LAUNCH_PATCH_FUNCTION ~fj_are_structure~
+    INT_VAR fj_charge0 = 1
+            fj_con_itm_idx    = SHORT_AT 0x74 - 1
+    STR_VAR fj_name = ~abgfEyeR~
+            fj_structure_type = ~itm~
+ END
+
+BUT_ONLY
+//second container
+COPY_EXISTING ~%NashkelMines%.are~ override
+LAUNCH_PATCH_FUNCTION ~fj_are_structure~
+INT_VAR fj_loc_x = 641
+        fj_loc_y = 2713
+        fj_type = 6
+        fj_lock_diff = 70
+//        fj_flags to the bitwise container flags (bit0=locked, bit3=trap resets, bit5=disabled);
+        fj_flags = %fj_flags%
+//        fj_flags = 0b00100001  //for tutu & bgt (i hope)
+        fj_trap_detect = 100
+        fj_trap_remove_diff = 100
+        fj_trap_active = 1 //to whether the container is trapped (0=no, 1=yes);
+        fj_trap_status = 0 // to whether the trap is detected (0=no, 1=yes);
+        fj_trap_loc_x = 641
+        fj_trap_loc_y = 2713
+        fj_box_left = 614
+        fj_box_top = 2541
+        fj_box_right = 638
+        fj_box_bottom = 2555
+        fj_vertex_0 = (638 + (2544 << 16))
+        fj_vertex_1 = (635 + (2550 << 16))
+        fj_vertex_2 = (627 + (2554 << 16))
+        fj_vertex_3 = (614 + (2555 << 16))
+        fj_vertex_4 = (626 + (2543 << 16))
+        fj_vertex_5 = (635 + (2541 << 16))
+//        fj_lockpick_strref to the lockpick string reference (default -1);
+STR_VAR fj_structure_type = ~container~
+        fj_name = ~A6StatueLeftEye~
+        fj_trap_script = ~abitrp~
+//        fj_trap_script to the trap's script;
+//        fj_key_resref to the filename of the container's key;
+END
+
+ LAUNCH_PATCH_FUNCTION ~fj_are_structure~
+    INT_VAR fj_charge0 = 1
+            fj_con_itm_idx    = SHORT_AT 0x74 - 1
+    STR_VAR fj_name = ~abgfEyeL~
+            fj_structure_type = ~itm~
+ END
+
+BUT_ONLY
+
+//create left eye emerald
+COPY_EXISTING ~%tutu_var%misc43.itm~ ~override/abgfEyeL.itm~
+ SAY UNIDENTIFIED_DESC @117
+ SAY IDENTIFIED_DESC @117
+BUT_ONLY
+//create right eye emerald
+COPY_EXISTING ~%tutu_var%misc43.itm~ ~override/abgfEyeR.itm~
+ SAY UNIDENTIFIED_DESC @118
+ SAY IDENTIFIED_DESC @118
+BUT_ONLY
+//change the emeralds that prism carries
+COPY_EXISTING ~%tutu_var%prism.cre~ ~override~
+ REMOVE_CRE_ITEM ~%tutu_var%misc43~
+ REPLACE_CRE_ITEM ~abgfEyeL~ #1 #0 #0 ~identified~ ~qitem1~
+ REPLACE_CRE_ITEM ~abgfEyeR~ #1 #0 #0 ~identified~ ~qitem2~
+ READ_ASCII 0x0248 ~overridescript~
+ PATCH_IF (FILE_EXISTS_IN_GAME ~%overridescript%~) BEGIN
+  INNER_ACTION BEGIN
+   EXTEND_BOTTOM ~%overridescript%.bcs~ ~bg1ub/abPrismEmeralds/abgfprsm.baf~ //add our stuff -- creates new if doesn't exist
+  END
+ END ELSE BEGIN
+  WRITE_ASCIIE 0x0248 ~abgfprsm~
+  READ_ASCII 0x0248 ~overridescript~
+  INNER_ACTION BEGIN
+   EXTEND_BOTTOM ~%overridescript%.bcs~ ~bg1ub/abPrismEmeralds/abgfprsm.baf~ //add our stuff -- creates new if doesn't exist
+  END
+ END
+
+BUT_ONLY
+//compile the script for the eye container traps
+COMPILE EVALUATE_BUFFER ~bg1ub/abPrismEmeralds/abitrp.baf~
+
+//compile the dialog changes to oublek and prism
+COMPILE EVALUATE_BUFFER ~bg1ub/abPrismEmeralds/oublek.d~
+
+
+/* hacking attempt to make the mod compatible with mods I_C_T into Prism state 7 and Oublek state 4: (BG1NPC Project and Gavin), if installed before bg1ub */
+
+
+/* IF BG1NPC Project "interjections" is installed: */
+
+ACTION_IF FILE_EXISTS_IN_GAME ~override/X#BG1NPCPhase2.G3~ THEN BEGIN
+
+/* this assumes that there is no other "TakePartyItem("%tutu_var%MISC43")" in the Oublek.d */
+
+<<<<<<<< ...inlined/oublek_compatibility.d
+REPLACE_ACTION_TEXT %tutu_var%oublek ~TakePartyItem("%tutu_var%MISC43") TakePartyItem("%tutu_var%MISC43")~ ~TakePartyItem("abgfEyeL") TakePartyItem("abgfEyeR") %ERASEJOURNALENTRY_PRISM_0% %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5%~
+REPLACE_ACTION_TEXT %tutu_var%oublek ~TakePartyItem("%tutu_var%MISC43")~ ~TakePartyItem("abgfEyeL") TakePartyItem("abgfEyeR") %ERASEJOURNALENTRY_PRISM_0% %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5%~
+REPLACE_ACTION_TEXT %tutu_var%oublek ~TakePartyItemNum("misc43",2)~ ~TakePartyItem("abgfEyeL") TakePartyItem("abgfEyeR") %ERASEJOURNALENTRY_PRISM_0% %ERASEJOURNALENTRY_PRISM_1% %ERASEJOURNALENTRY_PRISM_2% %ERASEJOURNALENTRY_PRISM_3% %ERASEJOURNALENTRY_PRISM_4% %ERASEJOURNALENTRY_PRISM_5% %ERASEJOURNALBGEE%~
+>>>>>>>>
+COMPILE EVALUATE_BUFFER ~...inlined/oublek_compatibility.d~
+END
+
+
+/* IF Gavin OR BG1NPC interjections is installed: */
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~override/X#BG1NPCPhase2.G3~) OR
+	(FILE_EXISTS_IN_GAME ~override/GavinNPC.B~) THEN BEGIN
+
+<<<<<<<< ...inlined/prism_compatibility.d
+REPLACE_ACTION_TEXT %tutu_var%prism ~DropInventory()~ ~%abContainerEnable%~
+>>>>>>>>
+COMPILE EVALUATE_BUFFER ~...inlined/prism_compatibility.d~
+
+END
+
+// If you tricked Oublek into giving you Greywolf's gold and your reputation is low, he will refuse to deal with you.
+<<<<<<<< ...inlined/fix_oublek_denial.d
+ADD_TRANS_TRIGGER ~%tutu_var%oublek~ 10 ~ReactionLT(LastTalkedToBy(),NEUTRAL_LOWER)~ DO 0 UNLESS ~ReactionLT(LastTalkedToBy(),NEUTRAL_LOWER)~
+ADD_TRANS_ACTION ~%tutu_var%oublek~ BEGIN 5 END BEGIN 0 END ~EscapeArea()~ UNLESS ~EscapeArea()~
+ADD_TRANS_ACTION ~%tutu_var%oublek~ BEGIN 2 END BEGIN 0 END ~ReputationInc(-1)~ UNLESS ~ReputationInc(-1)~
+
+APPEND ~%tutu_var%oublek~
+IF ~~ THEN BEGIN AYOublekPatience
+  SAY @1005 //~Nashkel has precious little patience for those who would cheat others of their hard-earned livelihood. I have neither time nor will to deal with you today.~//#665 + #664
+  IF ~~ THEN DO ~SetGlobal("BroughtBounty","GLOBAL",1)~
+  EXIT
+END
+END // End the append
+
+EXTEND_BOTTOM ~%tutu_var%oublek~ 10
+IF ~Global("BroughtBounty","GLOBAL",0) ReactionGT(LastTalkedToBy(),HOSTILE_UPPER)~
+THEN REPLY @1004 GOTO AYOublekPatience
+END //end the extend bottom
+>>>>>>>>
+COMPILE EVALUATE_BUFFER ~...inlined/fix_oublek_denial.d~
+
+
+/*weidu isn't replacing the @# with a TRA ref after its been evaluted from a variable
+so we have to use a high number and replace again.  only affects BGT, Tutu, & BGEE*/
+COPY_EXISTING ~%tutu_var%oublek.dlg~ override
+ DECOMPILE_DLG_TO_D
+  PATCH_IF (GAME_IS ~bgt~) BEGIN
+   REPLACE 99999210 @210
+   REPLACE 99999211 @211
+   REPLACE 99999212 @212
+   REPLACE 99999214 @214
+   REPLACE 99999217 @217
+   REPLACE 99999218 @218
+   REPLACE 99999216 @216
+  END
+  PATCH_IF (GAME_IS ~tutu tutu_totsc bgee~) BEGIN
+   REPLACE 99999210 @127
+   REPLACE 99999211 @128
+   REPLACE 99999212 @129
+   REPLACE 99999214 @131
+   REPLACE 99999217 @133
+   REPLACE 99999218 @134
+   REPLACE 99999216 @132
+  END
+ COMPILE_D_TO_DLG
+BUT_ONLY

@@ -1,0 +1,494 @@
+///// Item Corrections and Restorations                \\\\\
+
+// Ground, inventory and description icon restorations (NiGHTMARE)
+COPY_EXISTING ~%tutu_var%book68.itm~ ~override~ // History of the Nether Scrolls
+  WRITE_ASCIIE 0x3a "%tutu_var%ibook68"
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%boot06.itm~ ~override~ // Worn Out Boots
+  WRITE_ASCIIE 0x3a "%tutu_var%iboot06"
+  WRITE_ASCIIE 0x58 "%tutu_var%cboot06"
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%brac11.itm~ ~override~ // Bracers Of Binding
+  PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
+    WRITE_ASCIIE 0x3a "%tutu_var%ibrac11"
+    WRITE_ASCIIE 0x58 "%tutu_var%cbrac11"
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%clck08.itm~ ~override~ // Algeron's Cloak
+  WRITE_ASCIIE 0x58 "%tutu_var%cclck08"
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%misc13.itm~ ~override~ // Samuel's Body
+  WRITE_ASCIIE 0x44 "%tutu_var%gmisc13"
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%misc1a.itm~ ~override~ // Bottle Of Wine
+  PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
+    WRITE_ASCIIE 0x3a "%tutu_var%imisc1a"
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%misc1b.itm~ ~override~ // Butter Knife Of Balduran
+  PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
+    WRITE_ASCIIE 0x58 "%tutu_var%cmisc1b"
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%misc62.itm~ ~override~ // Dead Cat
+  WRITE_ASCIIE 0x44 "%tutu_var%gmisc62"
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%misc65.itm~ ~override~ // Brage's Body
+  WRITE_ASCIIE 0x3a "%tutu_var%imisc65"
+  WRITE_ASCIIE 0x44 "%tutu_var%gmisc65"
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%misc68.itm~ ~override~ // Abela's Body
+  WRITE_ASCIIE 0x3a "%tutu_var%imisc68"
+  WRITE_ASCIIE 0x44 "%tutu_var%gmisc68"
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%misc70.itm~ ~override~ // Delorna's Statue
+  WRITE_ASCIIE 0x3a "%tutu_var%imisc70"
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%misc71.itm~ ~override~ // Delorna's Spellbook
+  WRITE_ASCIIE 0x3a "%tutu_var%imisc71"
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%misc75.itm~ ~override~ // Dagger Of Venom
+  WRITE_ASCIIE 0x3a "%tutu_var%imisc75"
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%misc76.itm~ ~override~ // Dream Potion
+  WRITE_ASCIIE 0x3a "%tutu_var%imisc76"
+  WRITE_ASCIIE 0x58 "%tutu_var%cpotn13"
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%misc77.itm~ ~override~ // Skull Of Kereph
+  WRITE_ASCIIE 0x3a "%tutu_var%imisc77"
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%misc92.itm~ ~override~ // Switch For An Engine
+  PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
+    WRITE_ASCIIE 0x44 "%tutu_var%gmisc92"
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%misc94.itm~ ~override~ // Mallet Head
+  PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
+    WRITE_ASCIIE 0x44 "%tutu_var%gmisc94"
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%misc95.itm~ ~override~ // Mallet Handle
+  PATCH_IF (%SOURCE_SIZE% > 0) BEGIN
+    WRITE_ASCIIE 0x44 "%tutu_var%gmisc95"
+  END
+BUT_ONLY
+
+///////////////////////////////////////////////////////////////////////
+// History of Waterdeep - Age III, The Bloody Reign of the Guildmasters
+COPY_EXISTING ~%Candlekeep_Library_L1%.are~ override
+	LPF ADD_CONTAINER_ITEM
+		STR_VAR item_to_add = EVALUATE_BUFFER ~%tutu_var%BOOK65~ flags = "IDENTIFIED" container = "Container 10"
+	END
+BUT_ONLY
+
+
+///////////////////////////////////////////////////
+// Additional Durlag's Tower Book ("Seek No Heirs")
+COPY_EXISTING ~%DurlagsTower_D2%.are~ override
+	LPF ADD_CONTAINER_ITEM
+		STR_VAR item_to_add = EVALUATE_BUFFER ~%tutu_var%BOOK80~ flags = "IDENTIFIED" container = "Container26"
+	END
+BUT_ONLY
+
+//////////////////////////////////////////////////
+// Additional Durlag's Tower Book ("Know My Loss")
+COPY_EXISTING ~%DurlagsTower_D2%.are~ override
+	LPF ADD_CONTAINER_ITEM
+		STR_VAR item_to_add = EVALUATE_BUFFER ~%tutu_var%BOOK85~ flags = "IDENTIFIED" container = "Container18"
+	END
+BUT_ONLY
+
+//////////////////
+// Generic Bracers
+COPY_EXISTING ~%Beregost%.are~ override
+	LPF ADD_CONTAINER_ITEM
+		STR_VAR item_to_add = EVALUATE_BUFFER ~%tutu_var%BRAC05~ flags = "IDENTIFIED" container = "Container 1"
+	END
+BUT_ONLY
+
+////////////////////////////////
+// Gauntlets of Weapon Expertise
+/* <<<<<<<< .../bg1ub/br_0102.baf
+IF
+  Global("BG1UBBRAC10","%BanditCamp_RaemonsTent%",0)
+THEN
+  RESPONSE #100
+      ActionOverride("Container1",CreateItem("%tutu_var%BRAC10",0,0,0))
+      SetGlobal("BG1UBBRAC10","%BanditCamp_RaemonsTent%",1)
+END
+>>>>>>>>
+
+OUTER_SPRINT temp_tutu "_AR1901" OUTER_SPRINT temp_bgt "AR8701" OUTER_SPRINT temp_bg "AR1901" LAUNCH_ACTION_MACRO "getcpmvara"
+EXTEND_BOTTOM ~%temp_cpmvar%.bcs~ ~.../bg1ub/br_0102.baf~
+  EVALUATE_BUFFER*/
+
+COPY_EXISTING ~%tutu_var%MISC1H.ITM~ ~override~ // Gong Mallet
+  PATCH_IF (SOURCE_SIZE > 0x71) BEGIN
+    WRITE_ASCIIE ~0x44~ ~%tutu_var%GBLUN06~ // Assign GBLUN06.BAM as the ground icon
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%SW2H05.ITM~ ~override~ //
+  SAY NAME1 #16477 // Sets name to "Sword of Chaos"
+  SAY NAME2 #16477
+BUT_ONLY
+
+ACTION_IF !GAME_IS ~bgt~ THEN BEGIN //BG, Tutu, BGEE
+  COPY_EXISTING ~RNDTREAS.2DA~ ~override~
+    READ_2DA_ENTRIES_NOW ~_#_#_#rndtreas~ 20
+    FOR (row = 0; row < "%_#_#_#rndtreas%"; row += 1) BEGIN
+      READ_2DA_ENTRY_FORMER ~_#_#_#rndtreas~ row 0 col_name
+      PATCH_IF !("%col_name%" STRING_COMPARE_CASE "POOR") BEGIN //find the first RNDTREAS.2DA entry
+        SET_2DA_ENTRY "%row%" 8 20 ~%tutu_var%AMUL02~ // Adds generic amulets to the Random Treasure table
+        SET_2DA_ENTRY "%row%" 9 20 ~%tutu_var%RING01~ // Adds generic rings to the Random Treasure table
+      END
+    END
+  BUT_ONLY
+
+  COPY_EXISTING ~RNDSCROL.2DA~ ~override~
+    READ_2DA_ENTRIES_NOW ~_#_#_#rndscrol~ 20
+    FOR (row = 0; row < "%_#_#_#rndscrol%"; row += 1) BEGIN
+      READ_2DA_ENTRY_FORMER ~_#_#_#rndscrol~ row 0 col_name
+      PATCH_IF !("%col_name%" STRING_COMPARE_CASE "4th") BEGIN //find the fourth RNDSCRL.2DA entry
+        SET_2DA_ENTRY "%row%" 10 20 ~%tutu_var%SCRL2F~ // Adds the Cone of Cold scroll to the Random Scroll table
+      END
+    END
+  BUT_ONLY
+END ELSE BEGIN //BGT
+  //modified to work with BGT dynamic random treasure patching
+  COPY_EXISTING ~RNDEQUIP.2DA~ ~override~
+                ~RNDMAGIC.2DA~ ~override~
+                ~RNDSCROL.2DA~ ~override~
+                ~RNDTREAS.2DA~ ~override~
+                ~RNDWEP.2DA~ ~override~
+    READ_2DA_ENTRIES_NOW ~_#_#_#rndtreas~ 20
+    FOR (row = 0; row < "%_#_#_#rndtreas%"; row += 1) BEGIN
+      READ_2DA_ENTRY_FORMER ~_#_#_#rndtreas~ row 0 col_name
+      PATCH_IF !("%col_name%" STRING_COMPARE_CASE "POOR_BG1") BEGIN //find the first RNDTREAS.2DA entry
+        PATCH_IF !("%SOURCE_RES%" STRING_CONTAINS_REGEXP "RND[EWS].*") BEGIN //if 2DA rolls 1D20
+          SET_2DA_ENTRY "%row%" 9 20 ~AMUL02~ // Adds generic amulets to the Random Treasure table
+          SET_2DA_ENTRY "%row%" 10 20 ~RING01~ // Adds generic rings to the Random Treasure table
+        END ELSE BEGIN //if 2DA rolls 2D10
+          SET_2DA_ENTRY "%row%" 8 20 ~AMUL02~ // Adds generic amulets to the Random Treasure table
+          SET_2DA_ENTRY "%row%" 9 20 ~RING01~ // Adds generic rings to the Random Treasure table
+        END
+      END
+      PATCH_IF !("%col_name%" STRING_COMPARE_CASE "4thBG") BEGIN //find the fourth RNDSCRL.2DA entry
+        SET_2DA_ENTRY "%row%" 10 20 ~SCRL2F~ // Adds the Cone of Cold scroll to the Random Scroll table
+      END
+    END
+  BUT_ONLY
+END
+
+COPY_EXISTING ~%tutu_var%SQUIRP.ITM~ ~override~ // Restores the Squirrel Paw icon (devSin)
+  PATCH_IF (SOURCE_SIZE > 0x72) BEGIN // see if I can imitate Cam :D
+    WRITE_ASCIIE 0x3a ~%tutu_var%ISQUIRL~ #8
+    READ_SHORT 0x68 "num_abl"
+    PATCH_IF ("%num_abl%" > 0x0) BEGIN
+      READ_LONG 0x64 "abl_offset"
+      WRITE_ASCIIE "%abl_offset%" + 0x4 ~%tutu_var%ISQUIRL~ #8
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~SPIN109.SPL~ ~override~ // Restores the unused Lay on Hands spell icon (devSin)
+  PATCH_IF (SOURCE_SIZE > 0x72) BEGIN
+    READ_LONG 0x64 ablOff
+    FOR (READ_SHORT 0x68 numAbl; numAbl > 0x0; numAbl -= 0x1) BEGIN
+      WRITE_ASCII ablOff + 0x4 ~SPIN109~ #8
+      ablOff += 0x28
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%MAGE02.ITM~ ~override~
+  SAY NAME2 @95 // Item originally did not have a name
+BUT_ONLY
+
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN // Skip for BGEE
+	COPY_EXISTING ~%tutu_var%BOLT03.ITM~ ~override~ // Bolt of Lightning
+  		WRITE_ASCIIE 0x11e ~%tutu_scripte%FF_M23C~ // Replace invalid wav file reference
+	BUT_ONLY
+END
+
+COPY_EXISTING ~%tutu_var%POTN41.ITM~ ~override~ // Potion of Power
+              /*~%tutu_var%PTION41.ITM~ ~override~ - unused*/
+  WRITE_ASCIIE 0x44 ~%tutu_var%GPOTN01~ // Corrected ground icon
+BUT_ONLY
+
+/* unused
+COPY_EXISTING ~%tutu_var%PTION41.ITM~ ~override~ // Potion of Power
+  WRITE_ASCIIE 0x58 ~%tutu_var%CPOTN41~ #8      // Assigns a description icon
+BUT_ONLY */
+
+COPY_EXISTING ~%tutu_var%BLUN06.ITM~ ~override~ // Morningstar
+  WRITE_ASCII 0x22 ~MS~ // Changes Inventory Icon ID from Mace to Morningstar
+BUT_ONLY
+
+// Weapon colouration now works.  Thanks, CamDawg!
+COPY_EXISTING ~%tutu_var%BLUN06.ITM~ ~override~ // Morningstar
+              ~%tutu_var%BLUN10.ITM~ ~override~ // The Root of the Problem
+              ~%tutu_var%HELM14.ITM~ ~override~ // Kiel's Helmet
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    READ_LONG  0x6a "fx_off"
+    READ_SHORT 0x70 "fx_num"
+    FOR (index = 0; index < "%fx_num%"; index = index + 1) BEGIN // searches through global effects
+      WRITE_BYTE ("%fx_off%" + 0x0c + ("%index%" * 0x30)) 2 // instant/while equipped
+      WRITE_LONG ("%fx_off%" + 0x0e + ("%index%" * 0x30)) 0 // duration
+    END
+  END
+BUT_ONLY
+
+// EFF fix for The Root of the Problem
+COPY_EXISTING ~GIANDAM.EFF~ ~override~
+              ~MONSTDAM.EFF~ ~override~
+              ~UNDEDDAM.EFF~ ~override~
+              ~GIANHIT.EFF~ ~override~
+              ~MONSTHIT.EFF~ ~override~
+              ~UNDEDHIT.EFF~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0) THEN BEGIN
+    WRITE_SHORT 0x2C 100 //Probability 1
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_scriptbg%BISHOP.CRE~ ~override~ // Durlag's Tower Bishop
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    ADD_CRE_ITEM ~%tutu_var%SCRL62~ #1 #0 #0 ~IDENTIFIED~ ~INV1 INV2~ // Adds scroll of Flamestrike to inventory (Andyr)
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%LAMALH.CRE~ ~override~ // Lamalha
+  ADD_CRE_ITEM ~%tutu_var%SCRL62~ #1 #0 #0 ~IDENTIFIED~ ~INV1 INV2~ // Adds scroll of Flamestrike to inventory (Andyr)
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%KIVAN.CRE~ ~override~ // Kivan
+              ~%tutu_var%KIVAN4.CRE~ ~override~
+              ~%tutu_var%KIVAN6.CRE~ ~override~
+              ~%tutu_var%CORAN.CRE~ ~override~ // Coran
+              ~%tutu_var%CORAN5.CRE~ ~override~
+  ADD_CRE_ITEM ~%tutu_var%BRAC05~ #1 #0 #0 ~IDENTIFIED~ ~GLOVES~ // Assigns generic bracers
+BUT_ONLY
+
+COPY_EXISTING /*~%tutu_var%AJANTD.CRE~ ~override~ // Ajantis - unused*/
+              ~%tutu_var%AJANTI.CRE~ ~override~ //Ajantis
+              ~%tutu_var%AJANTI4.CRE~ ~override~
+              ~%tutu_var%AJANTI6.CRE~ ~override~
+              ~%tutu_var%KAGAIN.CRE~ ~override~ // Kagain
+              ~%tutu_var%KAGAIN2.CRE~ ~override~
+              ~%tutu_var%KAGAIN4.CRE~ ~override~
+              ~%tutu_var%KAGAIN6.CRE~ ~override~
+  ADD_CRE_ITEM ~%tutu_var%BELT01~ #1 #0 #0 ~IDENTIFIED~ ~BELT~ // Assigns girdle
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%HENTOL.CRE~ ~override~ // Hentold
+  ADD_CRE_ITEM ~%tutu_var%DAGG08~ #0 #0 #0 ~IDENTIFIED~ ~INV1 INV5~ // Assign Hentold's Dagger to his inventory
+BUT_ONLY
+
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN // BG, BGT, Tutu
+  COPY_EXISTING ~%tutu_var%AMARAN.CRE~ ~override~ // Amarande, the Arch Druid
+	REPLACE_CRE_ITEM "%tutu_var%blun10" #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+  BUT_ONLY
+END ELSE BEGIN  // BGEE
+  COPY_EXISTING ~CORSONE.CRE~ ~override~  // Amarande already has Mighty Oak +2 in BGEE, give Corsone "The Root of the Problem" instead
+	REPLACE_CRE_ITEM "%tutu_var%blun10" #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+  BUT_ONLY
+END
+
+COPY_EXISTING ~%tutu_scriptbg%SENDAI.CRE~ ~override~ // Sendai Argrim
+	REPLACE_CRE_ITEM "%tutu_var%SW1H22" #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_scriptk%NIGHTSK.CRE~ ~override~ // Undead Knight, AR5201 (Firewine Ruins)
+	REPLACE_CRE_ITEM "%tutu_var%SPER03" #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP TWOHANDED
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%KNIGHT6.CRE~ ~override~ // Ghost Knight, AR5201 (Firewine Ruins)
+	REPLACE_CRE_ITEM "%tutu_var%BOW04" #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP TWOHANDED
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%INN3351.STO~ ~override~ // Feldepost's Inn
+  ADD_STORE_ITEM ~%tutu_var%HELM06~ AFTER ~%tutu_var%BRAC01~ #0 #0 #0 ~IDENTIFIED~ #1 // Helmet of Charm Protection
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_scripts%TOCHEAP.STO~ ~override~ // Lucky Aello's
+  ADD_STORE_ITEM ~%tutu_var%LEAT06~ LAST #0 #0 #0 ~NONE~ #1 // Studded Leather Armor +2 : Missle Attraction
+BUT_ONLY
+
+ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
+/* In BG1, the raise dead scroll has an incorrect target type. */
+	COPY ~bg1ub/ITM/SCRL63.ITM~ ~override~
+END
+
+COPY_EXISTING ~%tutu_var%TEM0002.STO~ ~override~ // The Watchful Shield (Temple of Helm, AR0002: BG)
+  // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
+  ADD_STORE_ITEM ~%tutu_var%SCRL62~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Flame Strike scroll, qty 1 (was 3)
+  // ADD_STORE_ITEM ~%tutu_var%SCRL63~ AFTER ~%tutu_var%SCRL62~ #1 #0 #0 ~IDENTIFIED~ #3 // Raise Dead scroll, qty 3
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #0 #0 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%TEM0131.STO~ ~override~ // High Hall of Wonders (Temple of Gond, AR0131: BG)
+  // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
+  ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Raise Dead scroll, qty 1 (was 3)
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #0 #0 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%TEM0132.STO~ ~override~ // Lady's Hall (Temple of Tymora, AR0132: BG)
+  // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
+  ADD_STORE_ITEM ~%tutu_var%SCRL5F~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Chaotic Commands, qty 1 (was 5)
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%TEM2304.STO~ ~override~ // Temple of Wisdom (Temple of Garl Glittergold, AR2304: FAI)
+  ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Cure Critical Wounds, qty 1 (was 5)
+  // ADD_STORE_ITEM ~%tutu_var%SCRL63~ AFTER ~%tutu_var%SCRL61~ #1 #0 #0 ~IDENTIFIED~ #3 // Raise Dead scroll, qty 3
+  ADD_STORE_ITEM ~%tutu_var%SCRL5F~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Chaotic Commands, qty 1 (was 5)
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%TEM2601.STO~ ~override~ // Oghma Temple (Temple of Oghma, AR2600: Candlekeep)
+  // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
+  ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Raise Dead scroll, qty 1 (was 3)
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL63~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%TEM3402.STO~ ~override~ // Song of the Morning (Temple of Lathander, AR3402: West of Beregost)
+  ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #2 // Cure Critical Wounds, qty 2 (was 5)
+  ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #0 #0 ~IDENTIFIED~ #1 // Raise Dead scroll, qty 1 (was 3)
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #0 #0 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%TEM4802.STO~ ~override~ // Temple of Helm (Temple of Helm, AR4802: Nashkel)
+  // ADD_STORE_ITEM ~%tutu_var%SCRL61~ LAST #1 #0 #0 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
+  // ADD_STORE_ITEM ~%tutu_var%SCRL62~ AFTER ~%tutu_var%SCRL61~ #1 #0 #0 ~IDENTIFIED~ #1 // Flame Strike scroll, qty 1
+  // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #0 #0 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
+  ADD_STORE_ITEM ~%tutu_var%SCRL5E~ LAST #1 #0 #0 ~IDENTIFIED~ #2   // Champion's Strength, qty 2 (was 5)
+  ADD_STORE_ITEM ~%tutu_var%SCRL63~ LAST #1 #0 #0 ~IDENTIFIED~ #3   // Raise Dead scroll, qty 3
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%ULGOTH.STO~ ~override~ // Ulgoth's Beard Store and Inn
+  PATCH_IF (SOURCE_SIZE > 0x74) BEGIN
+    ADD_STORE_ITEM ~%tutu_var%SCRL2D~ AFTER ~%tutu_var%SCRL1Y~ #1 #0 #0 ~IDENTIFIED~ #1 // Animate Dead scroll, qty 1
+    // ADD_STORE_ITEM ~%tutu_var%SCRL2F~ AFTER ~%tutu_var%SCRL2D~ #1 #0 #0 ~IDENTIFIED~ #1 // Cone of Cold scroll, qty 1
+    ADD_STORE_ITEM ~%tutu_var%SCRL2H~ AFTER ~%tutu_var%SCRL2D~ #1 #0 #0 ~IDENTIFIED~ #1 // Shadow Door scroll, qty 1
+    ADD_STORE_ITEM ~%tutu_var%SCRL5L~ AFTER ~%tutu_var%SCRL2H~ #1 #0 #0 ~IDENTIFIED~ #1 // Polymorph Other scroll, qty 1
+    // ADD_STORE_ITEM ~%tutu_var%SCRL61~ AFTER ~%tutu_var%SCRL5L~ #1 #0 #0 ~IDENTIFIED~ #5 // Cure Critical Wounds, qty 5
+    ADD_STORE_ITEM ~%tutu_var%SCRL62~ AFTER ~%tutu_var%SCRL5L~ #1 #0 #0 ~IDENTIFIED~ #1 // Flame Strike scroll, qty 1
+    ADD_STORE_ITEM ~%tutu_var%SCRL63~ AFTER ~%tutu_var%SCRL62~ #1 #0 #0 ~IDENTIFIED~ #3 // Raise Dead scroll, qty 3
+    // ADD_STORE_ITEM ~%tutu_var%SCRL5F~ AFTER ~%tutu_var%SCRL63~ #1 #0 #0 ~IDENTIFIED~ #5 // Chaotic Commands, qty 5
+    // ADD_STORE_ITEM ~%tutu_var%SCRL5E~ AFTER ~%tutu_var%SCRL5F~ #1 #0 #0 ~IDENTIFIED~ #5 // Champion's Strength, qty 5
+    ADD_STORE_ITEM ~%tutu_var%BOLT05~ AFTER ~%tutu_var%BOLT03~ #1 #0 #0 ~IDENTIFIED~ #5 // Bolt of Polymorphing, qty 5 (was 10)
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%ERDANE.STO~ ~override~ // Erdane
+  PATCH_IF (SOURCE_SIZE > 0x74) BEGIN
+    ADD_STORE_ITEM ~%tutu_var%BOLT05~ AFTER ~%tutu_var%BOLT03~ #1 #0 #0 ~IDENTIFIED~ #7 // Bolt of Polymorphing, qty 7 (was 60)
+  END
+BUT_ONLY
+
+// COPY_EXISTING ~%tutu_scripth%IGHHEDG.STO~ ~override~ // High Hedge
+  // ADD_STORE_ITEM ~%tutu_var%BOLT05~ LAST #1 #0 #0 ~IDENTIFIED~ #200 // Bolt of Polymorphing, qty 200
+// BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%FRIEND.STO~ ~override~ // Friendly Arm Inn
+  ADD_STORE_ITEM ~%tutu_var%XBOW02~ AFTER ~%tutu_var%XBOW01~ #0 #0 #0 ~IDENTIFIED~ #1 // Heavy Crossbow +1, qty 1
+  ADD_STORE_ITEM ~%tutu_var%BRAC05~ LAST #0 #0 #0 ~IDENTIFIED~ #1   // Bracers
+  ADD_STORE_ITEM ~%tutu_var%BELT01~ AFTER ~%tutu_var%BRAC05~ #0 #0 #0 ~IDENTIFIED~ #1 // Girdle
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%INN2616.STO~ ~override~ // Candlekeep Inn
+              ~%tutu_var%INN3304.STO~ ~override~ // Jovial Juggler
+              ~%tutu_var%STO1112.STO~ ~override~ // General Store
+              ~%tutu_var%STO1320.STO~ ~override~ // General Store
+  ADD_STORE_ITEM ~%tutu_var%BRAC05~ LAST #0 #0 #0 ~IDENTIFIED~ #1 // Bracers
+  ADD_STORE_ITEM ~%tutu_var%BELT01~ AFTER ~%tutu_var%BRAC05~ #0 #0 #0 ~IDENTIFIED~ #1 // Girdle
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%STO4803.STO~ ~override~ // Nashkel Store
+  ADD_STORE_ITEM ~%tutu_var%BRAC05~ LAST #0 #0 #0 ~IDENTIFIED~ #1 // Bracers
+  ADD_STORE_ITEM ~%tutu_var%BELT01~ AFTER ~%tutu_var%BRAC05~ #0 #0 #0 ~IDENTIFIED~ #1 // Girdle
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%TAERUM.STO~ ~override~ // Thunderhammer Smithy
+  ADD_STORE_ITEM ~%tutu_var%BRAC05~ LAST #0 #0 #0 ~IDENTIFIED~ #1 // Bracers
+  ADD_STORE_ITEM ~%tutu_var%BELT01~ AFTER ~%tutu_var%BRAC05~ #0 #0 #0 ~IDENTIFIED~ #1 // Girdle
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%STO0703.STO~ ~override~ // Sorcerous Sundries
+  ADD_STORE_ITEM ~%tutu_var%BOLT05~ AFTER ~%tutu_var%BOLT06~ #1 #0 #0 ~IDENTIFIED~ #10 // Bolt of Polymorphing, qty 10 (was 100)
+BUT_ONLY
+
+// Removes the following sentence from the description of Bala's Axe: "The axe gives the owner the ability to dispel magic once a day."
+COPY_EXISTING ~AX1H07.ITM~ ~override~
+  	PATCH_IF (GAME_IS ~bgee eet~) BEGIN
+    	SAY 0x54 @115
+  	END ELSE BEGIN
+    	SAY 0x54 @96
+	END
+BUT_ONLY
+
+/////////////////////////////////////////
+// Adds weight to the items' descriptions
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN  // Already included in BGEE
+	COPY_EXISTING ~%tutu_var%MISC52.ITM~ ~override~ // Wyvern Head
+		SAY 0x54 @97
+
+	COPY_EXISTING ~%tutu_var%MISC01.ITM~ ~override~ // Winter Wolf Pelt
+  		SAY 0x50 @98
+		SAY 0x54 @98
+
+	COPY_EXISTING ~%tutu_var%MISC12.ITM~ ~override~ // Ankheg Shell
+		SAY 0x54 @99
+END
+
+//Give CLCK11 electricity bonus
+ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN //BG only
+  COPY_EXISTING ~%tutu_var%CLCK11.ITM~ ~override~
+    LPF ADD_ITEM_EQEFFECT
+    	INT_VAR opcode=29 // Opcode: Stat: Electricity Resistance Modifier [29]
+    		target=1 // target: self
+    		timing=2 // Timing: While equipped
+    		parameter1=20 // Parameter 1: Stat modifier
+    		parameter2=0 // Parameter 2: Cumulative
+    		probability1=100 // Probability 1 - max
+    		probability2=0 // Probability 2 - min
+    END
+END
+
+//Change "Immunity to Charm creature" effect to "Immunity to Hold creature" like Free Action spell
+COPY_EXISTING ~%tutu_var%POTN45.ITM~ ~override~
+  READ_LONG 0x64 abil_off
+  READ_SHORT 0x68 abil_num
+  READ_LONG 0x6a fx_off
+
+  FOR (i = 0; i < "%abil_num%"; i += 1) BEGIN
+    READ_SHORT (%abil_off% + %i% * 0x38 + 0x1E) fx_abil_num
+    READ_SHORT (%abil_off% + %i% * 0x38 + 0x20) fx_abil_idx
+    FOR (j = %fx_abil_idx%; j < %fx_abil_idx% + %fx_abil_num%; j +=1) BEGIN
+      READ_SHORT (%fx_off% + %j% * 0x30) fx_type
+      READ_LONG (%fx_off% + %j% * 0x30 + 0x8) fx_param2
+      PATCH_IF (%fx_type% = 101) AND (%fx_param2% = 5) BEGIN //Immunity to effect [101]: Charm creature [5]
+        WRITE_LONG (%fx_off% + %j% * 0x30 + 0x8) 175 //Hold creature
+      END
+    END
+  END
+BUT_ONLY

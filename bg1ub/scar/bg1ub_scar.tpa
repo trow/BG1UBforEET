@@ -1,0 +1,114 @@
+///// Scar and the Sashenstar's Daughter               \\\\\
+/////        - Scar Quest Extention(s)                 \\\\\
+
+COMPILE EVALUATE_BUFFER ~bg1ub/scar/ubscar.d~
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN
+	COMPILE EVALUATE_BUFFER ~bg1ub/scar/ubscar_fixes.d~
+END
+
+COPY_EXISTING ~%tutu_scriptbg%MISC79.ITM~ ~override/UBFEBODY.ITM~ // Create a unique item for the Sashenstar's daughter
+	SAY NAME1 @15
+	SAY NAME2 @15
+	SAY DESC @16
+
+COPY ~bg1ub/scar/ubscarin.itm~ ~override~ // unique item for the ring
+	SAY NAME1 @113
+	SAY NAME2 @113
+	SAY DESC @114
+
+
+COPY_EXISTING ~%WSewers%.ARE~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0xd4) BEGIN
+  		READ_LONG 0x70 contOff  // Offset to containers
+  		READ_LONG 0x78 itmOff   // Offset to item list
+  		FOR (READ_SHORT 0x74 numCont; numCont; numCont -= 0x1) BEGIN
+    		READ_ASCII contOff contName (11)    // Container name
+    		READ_SHORT contOff + 0x20 contXloc  // Container X location
+    		READ_SHORT contOff + 0x22 contYloc  // Container Y location
+    		// Check by name and location, in case name is modified by FotD
+    		PATCH_IF (!("%contName%" STRING_COMPARE_CASE "CONTAINER 1") || ((contXloc == 1924) && (contYloc == 1888))) BEGIN
+      			READ_LONG contOff + 0x40 itmIdx // Index of first item in list
+      			myItmOff = itmOff + (itmIdx * 0x14)
+      			FOR (READ_LONG contOff + 0x44 itmCnt; itmCnt; itmCnt -= 0x1) BEGIN
+        			READ_ASCII myItmOff itmRef // Item resource reference
+        			PATCH_IF !("%itmRef%" STRING_COMPARE_CASE "%tutu_var%MISC80") BEGIN
+          				WRITE_ASCIIE myItmOff ~%tutu_scriptbg%MISC79~ #8 // Female body
+        			END
+        			myItmOff += 0x14
+      			END
+    		END
+    		contOff += 0xc0
+  		END
+	END
+BUT_ONLY
+
+COPY_EXISTING ~%ESewers%.ARE~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0xd4) BEGIN
+  		READ_LONG 0x70 contOff  // Offset to containers
+  		READ_LONG 0x78 itmOff   // Offset to item list
+  		FOR (READ_SHORT 0x74 numCont; numCont; numCont -= 0x1) BEGIN
+    		READ_ASCII contOff contName (11)   // Container name
+    		READ_SHORT contOff + 0x20 contXloc // Container X location
+    		READ_SHORT contOff + 0x22 contYloc // Container Y location
+    		// Check by name and location, in case name is modified by FotD
+    		PATCH_IF (!("%contName%" STRING_COMPARE_CASE "CONTAINER 1") || ((contXloc == 827) && (contYloc == 1509))) BEGIN
+      			READ_LONG contOff + 0x40 itmIdx // Index of first item in list
+      			myItmOff = itmOff + (itmIdx * 0x14)
+      			FOR (READ_LONG contOff + 0x44 itmCnt; itmCnt; itmCnt -= 0x1) BEGIN
+        			READ_ASCII myItmOff itmRef // Item resource reference
+        			PATCH_IF !("%itmRef%" STRING_COMPARE_CASE "%tutu_var%MISC80") BEGIN
+          				WRITE_ASCII myItmOff ~UBFEBODY~ #8
+        			END
+       				myItmOff += 0x14
+      			END
+    		END ELSE PATCH_IF (!("%contName%" STRING_COMPARE_CASE "CONTAINER 4") || ((contXloc == 398) && (contYloc == 1414))) BEGIN
+      			READ_LONG contOff + 0x40 itmIdx // Index of first item in list
+     			READ_LONG contOff + 0x44 itmCnt // Number of items
+      			READ_SHORT 0x76 numItm  // Total number of items
+      			myItmOff = itmOff + (itmIdx * 0x14)
+      			PATCH_RANDOM_SEED myItmOff << (numItm / itmCnt)
+      			bodyCount = 0x0
+      			// Make sure there's more than one body before deciding which to replace
+      			FOR (i = itmCnt; i; i -= 0x1) BEGIN
+        			READ_ASCII myItmOff itmRef // Item resource reference
+        			PATCH_IF !("%itmRef%" STRING_COMPARE_CASE "%tutu_var%MISC80") BEGIN
+          				bodyCount += 0x1 // Count those bodies!
+        			END
+        			myItmOff += 0x14
+      			END
+      			PATCH_IF (bodyCount) BEGIN
+        			PATCH_IF (bodyCount > 1) BEGIN
+          				theBody = RANDOM(1 bodyCount) // Random body replacement
+        			END ELSE theBody = 0x1
+        			myItmOff = itmOff + (itmIdx * 0x14)
+        			bodyCount = 0x1
+        			FOR (i = itmCnt; i; i -= 0x1) BEGIN
+          				READ_ASCII myItmOff itmRef // Item resource reference
+          				PATCH_IF !("%itmRef%" STRING_COMPARE_CASE "%tutu_var%MISC80") BEGIN
+            				PATCH_IF (bodyCount == theBody) BEGIN
+              					WRITE_ASCIIE myItmOff ~%tutu_scriptbg%MISC79~ #8 // Female body
+            				END
+            				bodyCount += 0x1
+          				END
+          				myItmOff += 0x14
+        			END
+      			END
+    		END
+    		contOff += 0xc0
+  		END
+	END
+BUT_ONLY
+
+COPY_EXISTING ~%ESewers%.ARE~ ~override~
+	LAUNCH_PATCH_FUNCTION ADD_AREA_ITEM
+    	INT_VAR container_to_add_to = 1
+      	STR_VAR item_to_add = UBSCARIN //custom ring
+  	END
+BUT_ONLY
+
+/* BGEE Only: Remove RING19MA from SewerOgre since we replace it with UBSCARIN for the quest */
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+	COPY_EXISTING ~OGRMBA.CRE~ ~override~
+		REMOVE_CRE_ITEM ~RING19MA~
+	BUT_ONLY
+END

@@ -1,0 +1,86 @@
+///// Shilo Chen and the Ogre-Magi                     \\\\\
+
+COPY ~bg1ub/shilochen/IBRACUB.BAM~ ~override~
+
+COPY ~bg1ub/shilochen/%tutuorbgt%/UBGLOVE1.ITM~ ~override~
+  	SAY NAME1 #6341
+  	SAY NAME2 @19
+  	SAY UNIDENTIFIED_DESC #6791
+  	PATCH_IF (GAME_IS ~bgee eet~) BEGIN
+    	SAY IDENTIFIED_DESC @123
+  	END ELSE BEGIN
+    	SAY IDENTIFIED_DESC @20
+	END
+
+COPY_EXISTING ~BEARBL.CRE~ ~override/UBDBEAR.CRE~
+  WRITE_LONG 0x010 5 // Permanent corpse
+  WRITE_LONG 0x014 0 // XP Value
+  WRITE_LONG 0x020 2048 // STATE_DEAD
+  WRITE_ASCII 0x280 ~UBDBEAR~
+
+COPY_EXISTING ~%tutu_scripto%GREMA_A.CRE~ ~override/UBOGMA01.CRE~
+  WRITE_ASCII 0x280 ~UBOGMA01~ #8
+
+COPY_EXISTING ~%tutu_scripto%GREMA_B.CRE~ ~override/UBOGMA02.CRE~
+  WRITE_ASCII 0x280 ~UBOGMA02~ #8
+
+COPY_EXISTING ~%tutu_var%AOLN.CRE~ ~override/UBSHILO.CRE~
+  SAY NAME1 #15640
+  SAY NAME2 #15685
+  WRITE_ASCII 0x250 ~~ #8
+  WRITE_ASCII 0x280 ~UBShilo~ #8
+  WRITE_ASCII 0x2cc ~ubshilo~ #8
+  ADD_CRE_ITEM ~UBGLOVE1~ #0 #0 #0 ~NONE~ ~INV1 INV5~
+
+ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee~ THEN BEGIN
+  COMPILE EVALUATE_BUFFER ~bg1ub/shilochen/cpm/ubshilo.d~
+END ELSE BEGIN
+  COMPILE ~bg1ub/shilochen/ubshilo.d~
+END
+
+ADD_JOURNAL @20178 @20179 USING ~bg1ub/tra/%LANGUAGE%/extra.tra~ // Add journal entries for BGEE
+
+// Add Shilo to Elfsong Tavern
+COPY_EXISTING ~%EBaldursGate_ElfsongTavern_L1%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 606
+    	fj_loc_y          = 967
+    	fj_dest_x         = 606
+    	fj_dest_y         = 967
+    	fj_animation      = 0x6100  // Fighter male human
+    	fj_orientation    = 10      // NE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Shilo Chen"
+   		fj_cre_resref     = ubshilo
+	END
+BUT_ONLY
+
+<<<<<<<< .../bg1ub/ub_ar2900.baf
+IF
+	GlobalGT("Chapter","GLOBAL",4)
+	Global("AcceptedUBShiloQuest","GLOBAL",1)
+	Global("CreateUBOgreMagi","%Larswood%",0)
+THEN
+RESPONSE #100
+	CreateCreature("UBDBEAR",[1025.3145]%FACE_10%)
+	CreateCreature("UBOGMA01",[1075.3200]%FACE_6%)
+	CreateCreature("UBOGMA02",[950.3175]%FACE_12%)
+	CreateCreature("%tutu_var%OGREHA",[910.3025]%FACE_14%)
+	CreateCreature("%tutu_var%OGREHA",[1000.3275]%FACE_8%)
+	CreateCreature("%tutu_var%OGREHA",[1190.3240]%FACE_8%)
+	SetGlobal("CreateUBOgreMagi","%Larswood%",1)
+END
+
+IF
+	Global("AcceptedUBShiloQuest","GLOBAL",2)
+	Dead("UBOGMA01")
+	Dead("UBOGMA02")
+THEN
+RESPONSE #100
+	ActionOverride("UBDBEAR",DestroySelf())
+END
+>>>>>>>>
+
+LAF extend_area_script STR_VAR area="%Larswood%" bottom=".../bg1ub/ub_ar2900.baf" END

@@ -1,0 +1,18 @@
+// Place Entar Silvershield in his home
+
+IF
+	!GlobalGT("Chapter","GLOBAL",%tutu_chapter_6%)
+	Global("D0CreateEntar","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("D0CreateEntar","GLOBAL",1)
+		CreateCreature("%tutu_var%Entar",[649.904]%FACE_12%)
+END
+
+IF
+	GlobalGT("Chapter","GLOBAL",%tutu_chapter_6%)
+	Exists("%tutu_var%Entar")
+THEN
+	RESPONSE #100
+		ActionOverride("Entar",DestroySelf())
+END

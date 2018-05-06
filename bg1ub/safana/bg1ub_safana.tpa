@@ -1,0 +1,13 @@
+///// Safana the Flirt                                 \\\\\
+// Author: Dudley
+// Email:
+// Website: http://www.dudleyville.com
+
+COPY ~BG1UB/SAFANA/D0IN108.SPL~ ~override~
+SAY NAME1 @11
+
+COPY_EXISTING ~%tutu_var%safana.cre~ ~override~
+              ~%tutu_var%safana4.cre~ ~override~
+              ~%tutu_var%safana6.cre~ ~override~
+SPRINT temp_tutu "SPIN108" SPRINT temp_bgt "SPCL311" SPRINT temp_bg "SPIN108" LAUNCH_PATCH_MACRO ~getcpmvarp~
+REPLACE_TEXTUALLY ~%temp_cpmvar%~ ~D0IN108~

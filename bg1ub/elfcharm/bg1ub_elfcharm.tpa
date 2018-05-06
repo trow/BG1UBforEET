@@ -1,0 +1,93 @@
+///// Elven Charm & Sleep Racial Resistance            \\\\\
+
+COPY_EXISTING ~%tutu_var%clck07.itm~  ~override~ // nymph cloak
+              ~%tutu_var%clck08.itm~  ~override~ // algernon's cloak
+              ~%tutu_var%misc2p.itm~  ~override~ // greagan's harp
+              ~spin119.spl~ ~override~ // charm person
+              ~sppr102.spl~ ~override~ // command
+              ~sppr204.spl~ ~override~ // charm person or mammal
+              ~sppr405.spl~ ~override~ // mental domination
+              ~sppr982.spl~ ~override~ // dire charm
+              ~spwi004.spl~ ~override~ // stinking cloud
+              ~spwi104.spl~ ~override~ // charm person
+              ~spwi105.spl~ ~override~ // color spray
+              ~spwi116.spl~ ~override~ // sleep
+              ~spwi213.spl~ ~override~ // stinking cloud
+              ~spwi316.spl~ ~override~ // dire charm
+              ~spwi411.spl~ ~override~ // emotion
+              ~spwi506.spl~ ~override~ // domination
+              ~spwi929.spl~ ~override~ // charm person
+              ~spwi930.spl~ ~override~ // charm person
+              ~spwi939.spl~ ~override~ // ??
+              ~spwi943.spl~ ~override~ // dire charm
+              ~spwi996.spl~ ~override~ // ??
+              ~%tutu_var%wand08.itm~  ~override~ // wand of sleep
+  PATCH_IF (SOURCE_SIZE > 0x71) BEGIN
+    READ_LONG  0x64 "abil_off"
+    READ_SHORT 0x68 "abil_num"
+    READ_LONG  0x6a "fx_off"
+    PATCH_IF ("%SOURCE_FILE%" STRING_COMPARE_REGEXP "^.+\.spl$" = 0) BEGIN
+      SET "abil_length" = 0x28
+    END ELSE BEGIN
+      SET "abil_length" = 0x38
+    END
+    SET "fx_delta" = 0
+    FOR (index = 0 ; index < abil_num ; index = index + 1) BEGIN // start iterating through abilities
+      READ_SHORT  ("%abil_off%" + 0x1e + ("%abil_length%" * "%index%")) "abil_fx_num"
+      READ_SHORT  ("%abil_off%" + 0x20 + ("%abil_length%" * "%index%")) "abil_fx_idx"
+      SET "abil_fx_idx" = ("%abil_fx_idx%" + "%fx_delta%")
+      WRITE_SHORT ("%abil_off%" + 0x20 + ("%abil_length%" * "%index%")) ("%abil_fx_idx%")
+      SET "add_charm" = 0
+      SET "add_sleep" = 0
+      FOR (index2 = 0 ; index2 < abil_fx_num ; index2 = index2 + 1) BEGIN
+        READ_SHORT ("%fx_off%" +        (0x30 * ("%abil_fx_idx%" + "%index2%"))) "opcode"
+        PATCH_IF (("%opcode%" = 39) OR ("%opcode%" = 5)) BEGIN // if there's a sleep or charm opcode
+          READ_BYTE  ("%fx_off%" + 0x12 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "prob1"
+          READ_BYTE  ("%fx_off%" + 0x13 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "prob2"
+          PATCH_IF ("%opcode%" = 5) BEGIN // if charm
+            READ_ASCII ("%fx_off%" +        (0x30 * ("%abil_fx_idx%" + "%index2%"))) "charm_clone" (0x30)
+            SET "add_charm" = 1
+          END ELSE BEGIN
+            READ_ASCII ("%fx_off%" +        (0x30 * ("%abil_fx_idx%" + "%index2%"))) "sleep_clone" (0x30)
+            SET "add_sleep" = 1
+          END
+        END
+      END
+      PATCH_IF ("%add_charm%" = 1) BEGIN
+        SET "fx_delta" = ("%fx_delta%" + 8)
+        SET "abil_fx_num" = ("%abil_fx_num%" + 8)
+        FOR (index4 = 2 ; index4 < 4 ; index4 = index4 + 1) BEGIN
+          FOR (index3 = 0 ; index3 < 4 ; index3 = index3 + 1) BEGIN
+            INSERT_BYTES   ("%fx_off%" +        (0x30 * "%abil_fx_idx%")) 0x30              // insert new effect
+              WRITE_ASCIIE ("%fx_off%" +        (0x30 * "%abil_fx_idx%")) "%charm_clone%"   // preserve target
+              WRITE_SHORT  ("%fx_off%" +        (0x30 * "%abil_fx_idx%")) 177               // use eff file
+              WRITE_LONG   ("%fx_off%" + 0x04 + (0x30 * "%abil_fx_idx%")) "%index4%"        // elf or half elf
+              WRITE_LONG   ("%fx_off%" + 0x08 + (0x30 * "%abil_fx_idx%")) 4                 // race.ids
+              WRITE_BYTE   ("%fx_off%" + 0x12 + (0x30 * "%abil_fx_idx%")) ("%prob2%" + ((21 - ("%index4%" * 6)) * ("%prob1%" - "%prob2%") / 10)) // 90%
+              WRITE_BYTE   ("%fx_off%" + 0x13 + (0x30 * "%abil_fx_idx%")) "%prob2%"         // base prob
+              WRITE_ASCIIE ("%fx_off%" + 0x14 + (0x30 * "%abil_fx_idx%")) ~cdelfcm%index3%~ // eff file
+          END
+        END
+      END
+      PATCH_IF ("%add_sleep%" = 1) BEGIN
+        SET "fx_delta" = ("%fx_delta%" + 6)
+        SET "abil_fx_num" = ("%abil_fx_num%" + 6)
+        FOR (index4 = 2 ; index4 < 4 ; index4 = index4 + 1) BEGIN
+          FOR (index3 = 0 ; index3 < 3 ; index3 = index3 + 1) BEGIN
+            INSERT_BYTES   ("%fx_off%" +        (0x30 * "%abil_fx_idx%")) 0x30              // insert new effect
+              WRITE_ASCIIE ("%fx_off%" +        (0x30 * "%abil_fx_idx%")) "%sleep_clone%"         // preserve target
+              WRITE_SHORT  ("%fx_off%" +        (0x30 * "%abil_fx_idx%")) 177               // use eff file
+              WRITE_LONG   ("%fx_off%" + 0x04 + (0x30 * "%abil_fx_idx%")) "%index4%"        // elf or half elf
+              WRITE_LONG   ("%fx_off%" + 0x08 + (0x30 * "%abil_fx_idx%")) 4                 // race.ids
+              WRITE_BYTE   ("%fx_off%" + 0x12 + (0x30 * "%abil_fx_idx%")) ("%prob2%" + ((21 - ("%index4%" * 6)) * ("%prob1%" - "%prob2%") / 10)) // 90%
+              WRITE_BYTE   ("%fx_off%" + 0x13 + (0x30 * "%abil_fx_idx%")) "%prob2%"         // base prob
+              WRITE_ASCIIE ("%fx_off%" + 0x14 + (0x30 * "%abil_fx_idx%")) ~cdelfsl%index3%~ // eff file
+          END
+        END
+      END
+      WRITE_SHORT  ("%abil_off%" + 0x1e + ("%abil_length%" * "%index%")) "%abil_fx_num%"
+    END
+  END
+  BUT_ONLY
+
+COPY ~bg1ub/elfcharm/eff~ ~override~

@@ -1,0 +1,24 @@
+///// Finishable Kagain Caravan Quest                  \\\\\
+// Author: Ascension64
+// Email: ascension6400@yahoo.com.au
+// Website: http://forums.spellholdstudios.net/index.php?showforum=261
+// Originally part of the BGT Tweak Pack
+
+LAF extend_area_script STR_VAR area="%CoastWay%" bottom="bg1ub/kagain/aAR2800.BAF" END
+LAF replacetext_area_script STR_VAR area="%CoastWay%" oldtext=~ActionOverride("Kagain",Dialog\(ue\)?(\[PC\]))~ newtext=~SetGlobalTimer("Kagain","GLOBAL",ONE_DAY)~ END
+
+EXTEND_BOTTOM ~%tutu_var%KAGAIN.BCS~ ~bg1ub/kagain/aKAGAIN.BAF~
+
+ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
+  COMPILE EVALUATE_BUFFER ~bg1ub/kagain/bgKAGAIJ.D~
+END
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+  COMPILE EVALUATE_BUFFER ~bg1ub/kagain/bgeeKAGAIJ.D~
+END
+
+COMPILE EVALUATE_BUFFER ~bg1ub/kagain/KAGAIJ.D~
+
+COPY ~bg1ub/kagain/DLOSTKAG.CRE~ ~override~
+  SAY NAME1 @6
+  SAY NAME2 @6

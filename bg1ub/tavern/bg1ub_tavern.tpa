@@ -1,0 +1,22 @@
+/////Restored Elfsong Tavern Movie
+/////movie by Sams, code by AstroBryGuy
+
+/* Copy movie file - SKIP - MAKE_BIFF INSTEAD */
+//COPY ~bg1ub/tavern/ubtavern.mve~ ~override~
+
+/* Edit Elfsong area script */
+<<<<<<<< .../bg1ub/ub_ar0705tv.baf
+IF
+	Global("UBEnteredElfSong","%EBaldursGate_ElfsongTavern_L1%",0)
+THEN
+	RESPONSE #100
+		StartMovie("UBTAVERN")
+		SetGlobal("UBEnteredElfSong","%EBaldursGate_ElfsongTavern_L1%",1)
+		Continue()
+END
+>>>>>>>>
+
+LAF extend_area_script STR_VAR area="%EBaldursGate_ElfsongTavern_L1%" bottom=".../bg1ub/ub_ar0705tv.baf" END
+
+/* Install movie file (must be added as .bif) */
+MAKE_BIFF UBTAVERN BEGIN ~bg1ub/tavern/~ ~ubtavern.mve~ END

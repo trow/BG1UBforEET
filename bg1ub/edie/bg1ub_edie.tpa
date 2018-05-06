@@ -1,0 +1,47 @@
+///// Edie, the Merchant League Applicant              \\\\\
+
+COPY_EXISTING ~%tutu_var%EDIE.CRE~ ~override~
+  WRITE_LONG 0x1c 50              // Give 50 gold
+  WRITE_ASCII 0x2cc ~UBEDIE~ #8   // Assigns edited dialog file
+  WRITE_ASCII 0x280 ~Edie~ #32     // Assigns death variable
+BUT_ONLY
+
+ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee~ THEN BEGIN
+  COMPILE EVALUATE_BUFFER ~bg1ub/edie/cpm/ubedie.d~
+END ELSE BEGIN
+  COMPILE ~bg1ub/edie/ubedie.d~
+END
+
+ADD_JOURNAL @17 @18 @19 USING ~bg1ub/tra/%LANGUAGE%/ubedie.tra~ // Add journal entries for BGEE
+
+// Add Edie to Merchant League L2
+COPY_EXISTING ~%SWBaldursGate_MerchantLeague_L2%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 1102
+    	fj_loc_y          = 917
+    	fj_dest_x         = 1102
+    	fj_dest_y         = 917
+    	fj_animation      = 0xB510  // Static peasant woman
+    	fj_orientation    = 4       // W
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Edie
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%EDIE"
+	END
+BUT_ONLY
+
+/* <<<<<<<< .../bg1ub/ub_ar0128.baf
+IF
+Global("UB_EDIE_SPAWN","GLOBAL",0)
+!Exists("Edie")
+!Dead("Edie")
+THEN
+RESPONSE #100
+CreateCreature("%tutu_var%EDIE",[1102.917]%FACE_4%)
+SetGlobal("UB_EDIE_SPAWN","GLOBAL",1)
+END
+>>>>>>>>
+
+LAF extend_area_script STR_VAR area="%SWBaldursGate_MerchantLeague_L2%" bottom=".../bg1ub/ub_ar0128.baf" END
+*/

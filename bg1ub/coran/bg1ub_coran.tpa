@@ -1,0 +1,44 @@
+///// Coran and the Wyverns                            \\\\\
+// Author: Idobek
+// Email: idobek@gibberlings3.net
+// Website: http://www.gibberlings3.net
+
+//Ascension64: makes Coran's wyverns unique
+ACTION_IF !GAME_IS ~bgt~ THEN BEGIN //BG, BGEE and Tutu
+  COPY_EXISTING ~%tutu_var%WYVERN.CRE~ ~override/X#CORWYV.CRE~
+    WRITE_ASCII 0x280 ~X#CoranWyvern~ #32 //script name
+
+
+  COPY_EXISTING ~%CloakwoodWyverns_WyvernCave%.ARE~ ~override~
+    READ_LONG 0x54 actorsOff
+    READ_SHORT 0x58 actorsNum
+    FOR (i = 0; i < %actorsNum%; i += 1) BEGIN
+      READ_ASCII (%actorsOff% + %i% * 0x110 + 0x80) actorResref
+      PATCH_IF !("%actorResref%" STRING_COMPARE_CASE "%tutu_var%WYVERN") BEGIN
+        WRITE_ASCII (%actorsOff% + %i% * 0x110 + 0x80) X#CORWYV (8)
+      END
+    END
+  BUT_ONLY
+
+  COPY_EXISTING ~%tutu_var%CORAN.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+    	REPLACE_TEXTUALLY ~!Dead("wyvern")~ ~!Dead("X#CoranWyvern")~
+    	REPLACE_TEXTUALLY ~Dead("wyvern")~ ~Dead("X#CoranWyvern")~
+    END
+  BUT_ONLY
+
+  ACTION_IF GAME_IS ~tutu tutu_totsc bgee~ THEN BEGIN //Tutu BGEEv1
+    COMPILE EVALUATE_BUFFER ~bg1ub/coran/cpm/Wyvern.d~
+  END ELSE BEGIN //BG
+    COMPILE ~bg1ub/coran/Wyvern.d~
+  END
+END
+
+// IKCoranWyvernFix for BG1, Tutu, BGT (already included in BGEEv1 as DXCoran)
+ACTION_IF GAME_IS ~tutu tutu_totsc bgt~ THEN BEGIN
+  COMPILE EVALUATE_BUFFER ~bg1ub/coran/cpm/Coran.d~
+END ELSE BEGIN
+  ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
+	COMPILE ~bg1ub/coran/Coran.d~
+  END
+END

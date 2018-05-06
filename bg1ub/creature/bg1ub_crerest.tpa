@@ -1,0 +1,532 @@
+///// Creature Restorations                            \\\\\
+
+COPY_EXISTING ~%Candlekeep_Library_L1%.ARE~ ~override~ // Add READ4 to Candlekeep library
+              ~%Candlekeep_Library_L3%.ARE~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11c) BEGIN
+    PATCH_IF !("%SOURCE_RES%" STRING_COMPARE_CASE "%Candlekeep_Library_L1%") BEGIN
+      actLoc = 1108
+    END ELSE actLoc = 1272
+    READ_LONG 0x54 actOff
+    FOR (READ_SHORT 0x58 numAct; numAct; numAct -= 0x1) BEGIN
+      READ_ASCII actOff + 0x80 actor
+      READ_SHORT actOff + 0x20 xPos
+      PATCH_IF ((xPos == actLoc) && !("%actor%" STRING_COMPARE_CASE "%tutu_var%READ3")) BEGIN
+        WRITE_ASCIIE actOff + 0x80 ~%tutu_var%READ4~ #8
+      END
+      actOff += 0x110
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%Candlekeep_Library_L2%.ARE~ ~override~ // Add READ4 to Candlekeep library
+  PATCH_IF (SOURCE_SIZE > 0x11c) BEGIN
+    READ_LONG 0x54 actOff
+    FOR (READ_SHORT 0x58 numAct; numAct; numAct -= 0x1) BEGIN
+      READ_ASCII actOff + 0x80 actor
+      READ_SHORT actOff + 0x20 xPos
+      PATCH_IF (((xPos == 547) || (xPos == 1293)) &&
+                !("%actor%" STRING_COMPARE_CASE "READ3")) BEGIN
+        WRITE_ASCIIE actOff + 0x80 ~%tutu_var%READ4~ #8
+      END
+      actOff += 0x110
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%Candlekeep_Library_L4%.ARE~ ~override~ // Add READ4 to Candlekeep library
+  PATCH_IF (SOURCE_SIZE > 0x11c) BEGIN
+    READ_LONG 0x54 actOff
+    FOR (READ_SHORT 0x58 numAct; numAct; numAct -= 0x1) BEGIN
+      READ_ASCII actOff + 0x80 actor
+      READ_SHORT actOff + 0x20 xPos
+      PATCH_IF ((xPos == 1080) && !("%actor%" STRING_COMPARE_CASE "%tutu_var%READ3")) BEGIN
+        WRITE_ASCIIE actOff + 0x80 ~%tutu_var%READ4~ #8
+      END
+      actOff += 0x110
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%HAFFG2.CRE~ ~override~ // Halfling Woman (Mabledale), AR4006
+  WRITE_ASCIIE 0x280 "HAFFG2" #32 // Script name
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%HALFG2.CRE~ ~override~ // Halfling Man (Bunsen), AR4013
+  WRITE_ASCIIE 0x280 "HALFG2" #32 // Script name
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%MTOB4.CRE~ ~override~  // Commoner, AR0104
+  WRITE_ASCIIE 0x280 "MTOB4" #32 // Script name
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%MTOB5.CRE~ ~override~  // Commoner, AR0705
+  WRITE_ASCIIE 0x280 "MTOB5" #32 // Script name
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%TRAVEL.CRE~ ~override~ // Traveler (Wade), AR2301
+  WRITE_ASCIIE 0x280 "WADE" #32 // Script name
+BUT_ONLY
+
+LAF replacetext_area_script STR_VAR area="%EBaldursGate%" oldtext=~Exists(\"BERSCH\")~ newtext=~Exists("HERSCHEL")~ END
+LAF replacetext_area_script STR_VAR area="%EBaldursGate%" oldtext=~CreateCreature(\"BERSCH\",~ newtext=~CreateCreature("HERSCH",~ END
+
+//////////////////////////////////////////////////
+// Add patron to Splurging Sturgeon inn (upstairs)
+COPY_EXISTING ~%NEBaldursGate_SplurgingSturgeon_L2%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 518
+    	fj_loc_y          = 252
+    	fj_dest_x         = 518
+    	fj_dest_y         = 252
+    	fj_animation      = 0xC900 //peasant man
+    	fj_orientation    = 2      //SW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Commoner
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%MTOB4"
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/ex_ar0104.baf
+IF
+Global("UB_MTOB4_SPAWN","GLOBAL",0)
+!Exists("MTOB4")
+!Dead("MTOB4")
+THEN
+RESPONSE #100
+CreateCreature("%tutu_var%MTOB4",[518.252]%FACE_2%) // Commoner
+ActionOverride("MTOB4",Face(2))
+SetGlobal("UB_MTOB4_SPAWN","GLOBAL",1)
+END
+>>>>>>>>
+
+LAF extend_area_script STR_VAR area="%NEBaldursGate_SplurgingSturgeon_L2%" bottom=".../bg1ub/ex_ar0104.baf" END
+*/
+
+////////////////////////////////////////////
+// Add patron to Elfsong Tavern (main level)
+COPY_EXISTING ~%EBaldursGate_ElfsongTavern_L1%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 851
+    	fj_loc_y          = 367
+    	fj_dest_x         = 851
+    	fj_dest_y         = 367
+    	fj_animation      = 0xC900 //peasant man
+    	fj_orientation    = 0      //S
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Commoner
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%MTOB5"
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/eb_0705.baf
+IF
+Global("UB_MTOB5_SPAWN","GLOBAL",0)
+!Exists("MTOB5")
+!Dead("MTOB5")
+THEN
+RESPONSE #100
+CreateCreature("%tutu_var%MTOB5",[851.367]%FACE_0%) // Commoner
+SetGlobal("UB_MTOB5_SPAWN","GLOBAL",1)
+END
+>>>>>>>>
+
+LAF extend_area_script STR_VAR area="%EBaldursGate_ElfsongTavern_L1%" bottom=".../bg1ub/eb_0705.baf" END
+*/
+
+/////////////////////////////////////////////////////////////
+// Create FAI traveler when bandit subplot starts (Chapter 3)
+<<<<<<<< .../bg1ub/eb_2301.baf
+IF
+Global("CHAPTER","GLOBAL",%tutu_chapter_3%)
+!Exists("WADE")
+!Dead("WADE")
+THEN
+RESPONSE #100
+CreateCreature("%tutu_var%TRAVEL",[691.398]%FACE_0%) // Traveler
+END
+>>>>>>>>
+
+LAF extend_area_script STR_VAR area="%FriendlyArmInn_L1%" bottom=".../bg1ub/eb_2301.baf" END
+
+/////////////////////////////////////////////////
+// Add Mabledale to home in Gullykin (downstairs)
+COPY_EXISTING ~%Gullykin_House1_Cellar%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 357
+    	fj_loc_y          = 257
+    	fj_dest_x         = 357
+    	fj_dest_y         = 257
+    	fj_animation      = 0x6313 //Thief Halfling Woman
+    	fj_orientation    = 9      //ENE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Mabledale
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%HAFFG2"
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/eb_ar4006.baf
+IF
+Global("UB_HAFFG2_SPAWN","GLOBAL",0)
+!Exists("HAFFG2")
+!Dead("HAFFG2")
+THEN
+RESPONSE #100
+CreateCreature("%tutu_var%HAFFG2",[357.257]%FACE_9%) // Halfling Woman
+ActionOverride("HAFFG2",Face(9))
+SetGlobal("UB_HAFFG2_SPAWN","GLOBAL",1)
+END
+>>>>>>>>
+
+LAF extend_area_script STR_VAR area="%Gullykin_House1_Cellar%" bottom=".../bg1ub/eb_ar4006.baf" END
+*/
+
+//////////////////////////////////////////////
+// Add Bunsen to home in Gullykin (main level)
+COPY_EXISTING ~%Gullykin_House2_L1%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 311
+    	fj_loc_y          = 179
+    	fj_dest_x         = 311
+    	fj_dest_y         = 179
+    	fj_animation      = 0x6303 //Thief Halfling Man
+    	fj_orientation    = 0      //S
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Bunsen
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%HALFG2"
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/eb_ar4013.baf
+IF
+Global("UB_HALFG2_SPAWN","GLOBAL",0)
+!Exists("HALFG2")
+!Dead("HALFG2")
+THEN
+RESPONSE #100
+CreateCreature("%tutu_var%HALFG2",[311.179]%FACE_0%) // Halfling Man
+SetGlobal("UB_HALFG2_SPAWN","GLOBAL",1)
+END
+>>>>>>>>
+
+LAF extend_area_script STR_VAR area="%Gullykin_House2_L1%" bottom=".../bg1ub/eb_ar4013.baf" END
+*/
+
+// Fix his dialogue
+<<<<<<<< .../bg1ub/bunsenfix.d
+REPLACE ~%tutu_var%HALFG2~
+IF ~NumTimesTalkedTo(0)~ THEN BEGIN 0
+  SAY @30000 /* ~Hello hello hello.  It's Bunsens home you have entered, and welcome you are!  Please, rest your somewhat less-than-hairy feet by my hearth.  ~ */
+  IF ~Race(LastTalkedToBy(Myself),HALFLING)~ THEN REPLY @30001 /* ~Are you always this courteous to strangers that walk into your home?  It hardly seems safe to me. ~ */ GOTO 1
+  IF ~!Race(LastTalkedToBy(Myself),HALFLING)~ THEN REPLY @30001 /* ~Are you always this courteous to strangers that walk into your home?  It hardly seems safe to me. ~ */ GOTO 4
+  IF ~Race(LastTalkedToBy(Myself),HALFLING)~ THEN REPLY @30002 /* ~Spare me your smiles, shorty.  I merely came in to see if you had anything worth taking.  You are foolish to leave your burrow unlocked.~ */ GOTO 2
+  IF ~!Race(LastTalkedToBy(Myself),HALFLING)~ THEN REPLY @30002 /* ~Spare me your smiles, shorty.  I merely came in to see if you had anything worth taking.  You are foolish to leave your burrow unlocked.~ */ GOTO 5
+  IF ~Race(LastTalkedToBy(Myself),HALFLING)~ THEN REPLY @30003 /* ~My apologies, but the door was unlocked and I thought your burrow deserted.  I did not mean to intrude upon your home.~ */ GOTO 3
+  IF ~!Race(LastTalkedToBy(Myself),HALFLING)~ THEN REPLY @30003 /* ~My apologies, but the door was unlocked and I thought your burrow deserted.  I did not mean to intrude upon your home.~ */ GOTO 6
+END
+END
+>>>>>>>>
+COMPILE EVALUATE_BUFFER ~.../bg1ub/bunsenfix.d~
+
+/////////////////////////////////////////////
+// Restore the Friendly Arm Inn serving wench
+COPY_EXISTING ~%NEBaldursGate_BlushingMermaid_L1%.ARE~ ~override~ // Blushing Mermaid
+  PATCH_IF (SOURCE_SIZE > 0x11c) BEGIN
+    READ_LONG 0x54 actOff
+    FOR (READ_SHORT 0x58 numAct; numAct; numAct -= 0x1) BEGIN
+      READ_ASCII actOff + 0x80 actor
+      PATCH_IF !("%actor%" STRING_COMPARE_CASE "%tutu_var%FRIWEN") BEGIN
+        WRITE_ASCIIE actOff + 0x80 ~%tutu_var%SERWEN~ #8
+      END
+      actOff += 0x110
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%EBaldursGate_ElfsongTavern_L1%.ARE~ ~override~ // Elfsong
+  PATCH_IF (SOURCE_SIZE > 0x11c) BEGIN
+    READ_LONG 0x54 actOff
+    FOR (READ_SHORT 0x58 numAct; numAct; numAct -= 0x1) BEGIN
+      READ_ASCII actOff + 0x80 actor
+      PATCH_IF !("%actor%" STRING_COMPARE_CASE "%tutu_var%FRIWEN") BEGIN
+        WRITE_ASCIIE actOff + 0x80 ~%tutu_var%SERWEN~ #8
+      END
+      actOff += 0x110
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%FRIWEN.CRE~ ~override~ // Serving Wench
+  WRITE_ASCIIE 0x2cc ~%tutu_var%FRIWEN~ // Assigns the unused dialog, FRIWEN.DLG
+  WRITE_ASCII 0x280 ~FRIWEN~ // Assigns a script name
+BUT_ONLY
+
+// Add the Serving Wench to the Friendly Arm Inn
+COPY_EXISTING ~%FriendlyArmInn_L1%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 1073
+    	fj_loc_y          = 690
+    	fj_dest_x         = 1073
+    	fj_dest_y         = 690
+    	fj_animation      = 0xC910 //Peasant Woman
+    	fj_orientation    = 4      //W
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Serving Wench"
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%FRIWEN"
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/ub_ar2301.baf
+IF
+Global("UB_FRIWEN_SPAWN","%FriendlyArmInn_L1%",0)
+!Exists("FRIWEN")
+!Dead("FRIWEN")
+THEN
+RESPONSE #100
+CreateCreature("%tutu_var%FRIWEN",[1073.690]%FACE_4%) //
+SetGlobal("UB_FRIWEN_SPAWN","%FriendlyArmInn_L1%",1)
+END
+>>>>>>>>
+
+LAF extend_area_script STR_VAR area="%FriendlyArmInn_L1%" bottom=".../bg1ub/ub_ar2301.baf" END
+*/
+
+//////////////////////////////////////////////
+// Add the Lecturing Farmer to Wyrm's Crossing
+COPY_EXISTING ~%tutu_var%FARM4.CRE~ ~override/UBFARM5.CRE~ // Copies FARM4
+  SAY NAME1 @25
+  SAY NAME2 @25
+  WRITE_ASCII 0x280 ~UBFARM5~ #8                 // Sets Death Variable
+  WRITE_ASCII 0x2cc ~UBFARM5~ #8                 // Sets Dialogue
+
+COPY_EXISTING ~%WyrmsCrossing%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4716
+    	fj_loc_y          = 3663
+    	fj_dest_x         = 4716
+    	fj_dest_y         = 3663
+    	fj_animation      = 0xC900 //Peasant Man
+    	fj_orientation    = 2      //SW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Farmer
+   		fj_cre_resref     = UBFARM5
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/ub_ar0900.baf
+IF
+Global("UB_FARMER5_SPAWN","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("UBFARM5",[4716.3663]%FACE_2%)
+SetGlobal("UB_FARMER5_SPAWN","GLOBAL",1)
+END
+>>>>>>>>
+
+LAF extend_area_script STR_VAR area="%WyrmsCrossing%" bottom=".../bg1ub/ub_ar0900.baf" END
+*/
+
+/////////////////////////
+// Feldane, an Old Friend
+COPY_EXISTING ~%tutu_var%FELDAN.CRE~ ~override~
+  WRITE_ASCII 0x280 ~Feldane~ #8    // Sets Death Variable
+  WRITE_ASCII 0x2cc ~UBFELDAN~ #8   // Sets Dialogue
+BUT_ONLY
+
+COPY_EXISTING ~%Candlekeep_Ch6%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 2965
+    	fj_loc_y          = 1824
+    	fj_dest_x         = 2965
+    	fj_dest_y         = 1824
+    	fj_animation      = 0x6402 //Monk
+    	fj_orientation    = 3      //WSW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Feldane
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%FELDAN"
+	END
+BUT_ONLY
+
+/* <<<<<<<< .../bg1ub/ub_ar2626.baf
+IF
+Global("UB_FELDANE_SPAWN","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("%tutu_var%FELDAN",[2965.1824]%FACE_3%)
+SetGlobal("UB_FELDANE_SPAWN","GLOBAL",1)
+END
+>>>>>>>>
+
+LAF extend_area_script STR_VAR area="%Candlekeep_Ch6%" bottom=".../bg1ub/ub_ar2626.baf" END
+*/
+
+///////////////
+// Nashkel Girl
+COPY_EXISTING ~%Nashkel_JosephsHouse%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 605
+    	fj_loc_y          = 317
+    	fj_dest_x         = 605
+    	fj_dest_y         = 317
+    	fj_animation      = 0xC710 //Girl
+    	fj_orientation    = 1      //SSW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Girl
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%GIRLBE"
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/ub_ar4806.baf
+IF
+Global("UB_GIRLBE_SPAWN","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("%tutu_var%GIRLBE",[605.317]%FACE_1%)
+SetGlobal("UB_GIRLBE_SPAWN","GLOBAL",1)
+END
+>>>>>>>>
+
+LAF extend_area_script STR_VAR area="%Nashkel_JosephsHouse%" bottom=".../bg1ub/ub_ar4806.baf" END
+*/
+
+/////////////////////////
+// Baldur's Gate Merchant
+
+COPY_EXISTING ~%tutu_var%FATMAN.CRE~ ~override/UBSHOPGE.CRE~
+  SAY NAME1 #9432
+  SAY NAME2 #9434
+  WRITE_ASCIIE 0x2cc ~%tutu_var%SHOPGE~ #8
+
+COPY_EXISTING ~%SWBaldursGate%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 3109
+    	fj_loc_y          = 2627
+    	fj_dest_x         = 3109
+    	fj_dest_y         = 2627
+    	fj_animation      = 0xC800 //Fat man
+    	fj_orientation    = 0      //S
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Merchant
+   		fj_cre_resref     = UBSHOPGE
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/ub_ar1100.baf
+IF
+Global("UB_SHOPGE_SPAWN","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("UBSHOPGE",[3109.2627]%FACE_0%)
+SetGlobal("UB_SHOPGE_SPAWN","GLOBAL",1)
+END
+>>>>>>>>
+
+LAF extend_area_script STR_VAR area="%SWBaldursGate%" bottom=".../bg1ub/ub_ar1100.baf" END
+*/
+
+/////////////////////////////////
+// Wilton, Farmer Brun's Neighbor
+
+COPY_EXISTING ~%tutu_var%WILTON.CRE~ ~override~
+  ADD_CRE_ITEM ~%tutu_var%CLCK01~ #1 #0 #0 ~NONE~ ~INV1 INV2~ // Adds Cloak of Protection +1
+  WRITE_ASCII 0x2cc ~UBWILTON~                      // Assigns edited dialog file
+  WRITE_ASCII 0x280 ~Wilton~                        // Assigns death variable
+  WRITE_BYTE 0x23f 0x8                              // Fix his morale setting
+  WRITE_BYTE 0x240 0x6                              // Fix his morale break setting
+BUT_ONLY
+
+COPY_EXISTING ~%FishingVillage_House2%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 471
+    	fj_loc_y          = 272
+    	fj_dest_x         = 471
+    	fj_dest_y         = 272
+    	fj_animation      = 0xC900 //Peasant man
+    	fj_orientation    = 6      //NW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Wilton
+   		fj_cre_resref     = EVALUATE_BUFFER "%tutu_var%WILTON"
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/ub_ar1403.baf
+IF
+Global("UB_WILTON_SPAWN","GLOBAL",0)
+!Exists("Wilton")
+!Dead("Wilton")
+THEN
+RESPONSE #100
+CreateCreature("%tutu_var%WILTON",[471.272]%FACE_6%)
+SetGlobal("UB_WILTON_SPAWN","GLOBAL",1)
+END
+>>>>>>>>
+
+LAF extend_area_script STR_VAR area="%FishingVillage_House2%" bottom=".../bg1ub/ub_ar1403.baf" END
+*/
+
+/////////////////////////////////
+// Corianna, the Petrified Ranger
+
+COPY ~bg1ub/creature/%tutuorbgt%/ubcorian.cre~ ~override~
+  SAY NAME1 #15552
+  SAY NAME2 #15574
+
+COPY_EXISTING ~%Temple%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4611
+    	fj_loc_y          = 3449
+    	fj_dest_x         = 4611
+    	fj_dest_y         = 3449
+    	fj_animation      = 0x6110 //Fighter human woman
+    	fj_orientation    = 2      //SW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Corianna
+   		fj_cre_resref     = UBCORIAN
+	END
+BUT_ONLY
+
+/*<<<<<<<< .../bg1ub/ub_ar3400.baf
+IF
+Global("UB_CORIANNA_SPAWN","GLOBAL",0)
+!Exists("UBCORIAN")
+!Dead("UBCORIAN")
+Global("UB_HELPCORIANNA","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("UBCORIAN",[4611.3449]%FACE_2%)
+SetGlobal("UB_CORIANNA_SPAWN","GLOBAL",1)
+END
+>>>>>>>>
+
+LAF extend_area_script STR_VAR area="%Temple%" bottom=".../bg1ub/ub_ar3400.baf" END
+*/
+
+/////////////////////////////////
+// Compile all relevant dialogues
+
+ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee~ THEN BEGIN
+  COMPILE EVALUATE_BUFFER ~bg1ub/creature/cpm/ubcre.d~
+END ELSE BEGIN
+  COMPILE ~bg1ub/creature/ubcre.d~
+END

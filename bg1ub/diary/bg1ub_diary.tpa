@@ -1,0 +1,29 @@
+///// Sarevok's Diary Corrections                      \\\\\
+// Author: SixOfSpades
+// Email: sixospades@yahoo.com
+// Website: http://www.geocities.com/sixospades/bg/bgguide.htm
+
+ACTION_IF GAME_IS ~bgt tutu tutu_totsc~ THEN BEGIN //BGT or Tutu
+  COMPILE ~bg1ub/diary/%tutuorbgt%/divine.d~
+END ELSE BEGIN
+  ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN //BG
+  	STRING_SET 1355 @105
+  	STRING_SET 1359 @106
+  	STRING_SET 7238 @107
+  	STRING_SET 7243 @108
+  END
+END
+
+COPY_EXISTING ~%tutu_var%SCRL2S.ITM~ ~override~ // Note for Davaeorn #1
+  SAY 0x50 @109
+
+COPY_EXISTING ~%tutu_var%SCRL2T.ITM~ ~override~ // Note for Davaeorn #2
+  SAY 0x50 @110
+
+COPY_EXISTING ~%tutu_var%SCRL2U.ITM~ ~override~ // Note for Davaeorn #3
+  SAY 0x50 @111
+
+COPY_EXISTING ~%tutu_var%SCRL3F.ITM~ ~override~ // Sarevok's Diary
+  WRITE_SHORT 0x1c 0x25 // Sets item category from Scrolls to Books
+  WRITE_BYTE 0x4c 0x08 // Sets weight to 8 lbs
+  SAY 0x50 @112

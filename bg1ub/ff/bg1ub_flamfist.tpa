@@ -1,0 +1,130 @@
+///// Flaming Fist Mercenary Reinforcements            \\\\\
+// Author: devSin
+// Email:
+// Website:
+
+COPY ~bg1ub/ff/%tutuorbgt%/UBFLAM5.CRE~ ~override~
+
+COPY_EXISTING ~%tutu_var%FLAM5.CRE~ ~override~ // Flaming Fist Mercenary
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCII 0x280 ~FLAM5~ #32
+    FOR (loc = 0x248; loc < 0x270; loc += 0x8) BEGIN
+      READ_ASCII loc script
+      PATCH_IF !("%script%" STRING_COMPARE_CASE "%tutu_scripts%EEENEMY") BEGIN
+        // Remove SeeEnemy script, otherwise they just attack each other :D
+        WRITE_ASCII loc "" #8
+      END
+    END
+  END
+BUT_ONLY
+
+// Add Reinforcements to South Beregost Road
+COPY_EXISTING ~%SouthBeregostRoad%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 3753
+    	fj_loc_y          = 2954
+    	fj_dest_x         = 3753
+    	fj_dest_y         = 2954
+    	fj_animation      = 0x6000  // Cleric Male Human
+    	fj_orientation    = 9       // ENE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Flaming Fist Merc 5a"
+   		fj_cre_resref     = UBFLAM5
+	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 3869
+    	fj_loc_y          = 2962
+    	fj_dest_x         = 3869
+    	fj_dest_y         = 2962
+    	fj_animation      = 0x6000  // Cleric Male Human
+    	fj_orientation    = 7       // ENE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Flaming Fist Merc 5b"
+   		fj_cre_resref     = UBFLAM5
+	END
+BUT_ONLY
+
+/* <<<<<<<< .../bg1ub/eb_ar3800.baf
+IF
+Global("UB_FLAM5_REINFORCE","GLOBAL",0)
+Exists("FLAM5")
+!Dead("FLAM5")
+THEN
+RESPONSE #100
+CreateCreature("UBFLAM5",[3753.2954]%FACE_9%) // Flaming Fist Mercenary
+CreateCreature("UBFLAM5",[3869.2962]%FACE_7%) // Flaming Fist Mercenary
+SetGlobal("UB_FLAM5_REINFORCE","GLOBAL",1)
+END
+>>>>>>>>
+
+LAF extend_area_script STR_VAR area="%SouthBeregostRoad%" bottom=".../bg1ub/eb_ar3800.baf" END
+*/
+
+<<<<<<<< .../bg1ub/ubflam5.baf
+IF
+Global("UB_FLAM5_SHOUT","GLOBAL",1)
+Allegiance(Myself,128)
+THEN
+RESPONSE #100
+Enemy()
+END
+
+IF
+Global("UB_FLAM5_SHOUT","GLOBAL",2)
+Allegiance(Myself,128)
+THEN
+RESPONSE #100
+EscapeArea()
+END
+
+IF
+Allegiance("FLAM5",255)
+Allegiance(Myself,128)
+THEN
+RESPONSE #100
+SetGlobal("UB_FLAM5_SHOUT","GLOBAL",1)
+Enemy()
+END
+
+IF
+AttackedBy([30],0)
+Allegiance(Myself,128)
+THEN
+RESPONSE #100
+SetGlobal("UB_FLAM5_SHOUT","GLOBAL",1)
+Enemy()
+END
+
+IF
+!Exists("FLAM5")
+!Dead("FLAM5")
+Allegiance(Myself,128)
+THEN
+RESPONSE #100
+SetGlobal("UB_FLAM5_SHOUT","GLOBAL",2)
+EscapeArea()
+END
+
+IF
+!Range("FLAM5",12)
+!Dead("FLAM5")
+Global("UB_FLAM5_SHOUT","GLOBAL",0)
+Allegiance(Myself,128)
+THEN
+RESPONSE #100
+MoveToObject("FLAM5")
+END
+>>>>>>>>
+COMPILE ~.../bg1ub/ubflam5.baf~
+
+COPY_EXISTING ~%tutu_var%FLAM5.DLG~ ~override~
+  DECOMPILE_AND_PATCH
+  	BEGIN
+  		REPLACE_TEXTUALLY ~Enemy()~ ~SetGlobal("UB_FLAM5_SHOUT","GLOBAL",1) Enemy()~
+  		REPLACE_TEXTUALLY ~EscapeArea()~ ~SetGlobal("UB_FLAM5_SHOUT","GLOBAL",2) EscapeArea()~
+  	END
+  BUT_ONLY

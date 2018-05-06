@@ -1,0 +1,57 @@
+/////Chapter 6 Dialogue Restorations
+/////by AstroBryGuy
+
+/* Area script changes */
+LAF extend_area_script STR_VAR area="%Candlekeep_Library_L1%" bottom="bg1ub/ch6/ubmurder.baf" END
+LAF extend_area_script STR_VAR area="%Candlekeep_Library_L2%" bottom="bg1ub/ch6/ub2609.baf" END
+LAF extend_area_script STR_VAR area="%Candlekeep_Library_L3%" bottom="bg1ub/ch6/ub2610.baf" END
+LAF extend_area_script STR_VAR area="%Candlekeep_Library_L4%" bottom="bg1ub/ch6/ub2611.baf" END
+LAF extend_area_script STR_VAR area="%Candlekeep_Library_L5%" bottom="bg1ub/ch6/ubmurder.baf" END
+LAF extend_area_script STR_VAR area="%Candlekeep_Library_L6%" bottom="bg1ub/ch6/ub2614.baf" END
+
+/* Add unused dialogue states from TETHTO.DLG to TETHTO2.DLG */
+/* Gatewarden shouldn't accuse CHARNAME of killing Thaldorn */
+/* Replies to WATCH6.CRE won't include reference to Ulraunt and Tethtoril if CHARNAME is on the 6th floor */
+COMPILE EVALUATE_BUFFER ~bg1ub/ch6/ubch6.d~
+
+/* Dead versions of the Iron Throne leaders */
+COPY_EXISTING ~%tutu_var%rielta.cre~ ~override/ubriel.cre~
+    READ_LONG 0x10 creflags
+	WRITE_LONG 0x10 (creflags BOR BIT2)
+	WRITE_LONG 0x20 BIT11 // Set STATE_DEAD
+	WRITE_SHORT 0x24 0 // Set HP = 0
+	WRITE_ASCIIE DEATHVAR	~UBRieltar~ #32
+	WRITE_ASCIIE DIALOG	~~ #8
+
+COPY_EXISTING ~%tutu_var%tuth.cre~ ~override/ubtuth.cre~
+    READ_LONG 0x10 creflags
+	WRITE_LONG 0x10 (creflags BOR BIT2)
+	WRITE_LONG 0x20 BIT11 // Set STATE_DEAD
+	WRITE_SHORT 0x24 0 // Set HP = 0
+	WRITE_ASCIIE DEATHVAR	~UBTuth~ #32
+	WRITE_ASCIIE DIALOG	~~ #8
+
+COPY_EXISTING ~%tutu_var%brunos.cre~ ~override/ubbrun.cre~
+    READ_LONG 0x10 creflags
+	WRITE_LONG 0x10 (creflags BOR BIT2)
+	WRITE_LONG 0x20 BIT11 // Set STATE_DEAD
+	WRITE_SHORT 0x24 0 // Set HP = 0
+	WRITE_ASCIIE DEATHVAR	~UBBrunos~ #32
+	WRITE_ASCIIE DIALOG	~~ #8
+
+COPY_EXISTING ~%tutu_var%kestor.cre~ ~override/ubkest.cre~
+    READ_LONG 0x10 creflags
+	WRITE_LONG 0x10 (creflags BOR BIT2)
+	WRITE_LONG 0x20 BIT11 // Set STATE_DEAD
+	WRITE_SHORT 0x24 0 // Set HP = 0
+	WRITE_ASCIIE DEATHVAR	~UBKestor~ #32
+	WRITE_ASCIIE DIALOG	~~ #8
+
+/* Give Gatewarden and Watcher6 script names */
+COPY_EXISTING ~%tutu_var%gatewa2.cre~ ~override~
+	WRITE_ASCIIE DEATHVAR	~%tutu_var%GATEWA2~ #32
+	BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%watch6.cre~ ~override~
+	WRITE_ASCIIE DEATHVAR	~%tutu_var%WATCH6~ #32
+	BUT_ONLY

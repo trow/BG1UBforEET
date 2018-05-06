@@ -1,0 +1,42 @@
+/////Duke Eltan in the Harbor Master's Building
+/////by Balquo and jastey
+
+ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee~ THEN BEGIN
+
+<<<<<<<< ...inlined/harbor.d
+REPLACE_ACTION_TEXT %tutu_var%harbor ~EscapeArea[^)]+)~ ~MoveToPoint([431.171])
+CreateCreatureImpassable("%tutu_var%DELTAN2",[449.121],14)
+Wait(1)
+MoveToPoint([461.197])
+Face(0)
+DialogInterrupt(TRUE)~
+REPLACE_ACTION_TEXT %tutu_var%harbor ~ActionOverride("Eltan2",SetNumTimesTalkedTo(100))~ ~DestroyItem("%tutu_var%MISC55")~
+ADD_TRANS_ACTION %tutu_var%harbor BEGIN 9 END BEGIN END ~DialogInterrupt(FALSE)~
+REPLACE_TRIGGER_TEXT %tutu_var%deltan2 ~True()~ ~Global("EltanMove","GLOBAL",0)~
+ADD_STATE_TRIGGER %tutu_var%deltan2 1 ~Global("EltanMove","GLOBAL",1)~
+ADD_TRANS_ACTION %tutu_var%deltan2 BEGIN 1 END BEGIN END ~SetGlobal("EltanMove","GLOBAL",2)~
+ADD_STATE_TRIGGER %tutu_var%deltan2 2 ~Global("EltanMove","GLOBAL",2)~
+>>>>>>>>
+COMPILE EVALUATE_BUFFER ~...inlined/harbor.d~
+
+END
+
+
+ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
+
+<<<<<<<< ...inlined/harbor.d
+REPLACE_ACTION_TEXT harbor ~EscapeArea()~ ~MoveToPoint([406.206])
+CreateCreature("DELTAN",[426.160]%FACE_0%)
+ActionOverride("Eltan",DestroyItem("PLAT04"))
+ActionOverride("Eltan",DestroyItem("SHLD03"))
+ActionOverride("Eltan",DestroyItem("SW1H05"))
+ActionOverride("Eltan",DestroyItem("BOOK68"))
+Wait(1)
+MoveToPoint([465.193])
+Face(2)
+DialogInterrupt(TRUE)~
+REPLACE_ACTION_TEXT harbor ~ActionOverride("Eltan2",SetNumTimesTalkedTo(100))~ ~DestroyItem("%tutu_var%MISC55")~
+ADD_TRANS_ACTION harbor BEGIN 9 END BEGIN END ~DialogInterrupt(FALSE)~
+>>>>>>>>
+COMPILE EVALUATE_BUFFER ~...inlined/harbor.d~
+END

@@ -1,0 +1,19 @@
+///// Permanent Corpses                                \\\\\
+// Author: devSin
+// Email:
+// Website:
+
+COPY_EXISTING ~%tutu_var%CATDEAD.CRE~ ~override~
+              ~%tutu_var%CORPSE1.CRE~ ~override~
+              ~%tutu_var%CORPSE2.CRE~ ~override~
+              ~%tutu_var%DEAD.CRE~ ~override~
+              ~%tutu_var%DEAD1.CRE~ ~override~
+              ~%tutu_var%DEAD2.CRE~ ~override~
+              ~%tutu_scriptd%EADFUCK.CRE~ ~override~
+              ~%tutu_scripth%ALFMIRI.CRE~ ~override~
+              ~%tutu_var%SKELDED.CRE~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_BYTE 0x10 flag
+    WRITE_BYTE 0x10 flag | 0x4          // Makes the corpses permanent
+  END
+BUT_ONLY

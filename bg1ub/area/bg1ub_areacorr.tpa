@@ -1,0 +1,98 @@
+///// Area Corrections and Restorations                \\\\\
+
+/////////////////////////////////
+// Restore the Halfling Enforcers
+
+// Fixes the HALFEN dialog so that it, you know, works (thanks, idobek!)
+ACTION_IF GAME_IS ~bgt tutu tutu_totsc~ THEN BEGIN //BGT or Tutu
+	COMPILE EVALUATE_BUFFER ~bg1ub/area/cpm/ubarea.d~
+END ELSE BEGIN //BG
+  	COMPILE ~bg1ub/area/ubarea.d~
+END
+
+  // Assign the Halfling Enforcers the INITDLG script
+COPY_EXISTING ~%tutu_var%HALFEN.CRE~ ~override~
+  	WRITE_ASCIIE 0x258 ~%tutu_var%INITDLG~
+BUT_ONLY
+
+  // Script to spawn Halfling Enforcers if caught stealing
+COPY_EXISTING ~%Gullykin_JenkalsHouse_Cellar%.ARE~ ~override~ // Gullykin house
+		~%Gullykin_House3_Cellar%.ARE~ ~override~ // Gullykin house
+        ~%Gullykin_House4_Cellar%.ARE~ ~override~ // Gullykin house
+	READ_LONG 0x70 contOff ELSE 0x0
+	PATCH_IF (contOff) BEGIN
+  	  	FOR (READ_SHORT 0x74 numCont; numCont; numCont -= 0x1) BEGIN
+    		READ_ASCII contOff name // Container name
+    		PATCH_IF !("%name%" STRING_COMPARE_CASE "LCHEST") BEGIN // LChest container
+      			WRITE_ASCIIE contOff + 0x48 ~%tutu_var%ACT13~ #8 // Summon halfling enforcers
+      			WRITE_SHORT contOff + 0x2c 0x64     // Trap undetectable
+      			WRITE_SHORT contOff + 0x2e 0x64     // Trap unremovable
+      			WRITE_SHORT contOff + 0x30 0x1      // Enable trap
+    		END
+    		contOff += 0xc0
+  		END
+	END
+BUT_ONLY
+
+////////////////////////////////
+// Firedrake Script Restorations
+COPY_EXISTING ~%DurlagsTower_D2%.ARE~ ~override~ // Durlag's Tower, Firedrake Statue Room
+READ_LONG 0x5c trigOff ELSE 0x0
+PATCH_IF (trigOff) BEGIN
+ FOR (READ_SHORT 0x5a numTrig; numTrig; numTrig -= 0x1) BEGIN
+   READ_ASCII trigOff name (10)   // Trigger name
+   READ_SHORT trigOff + 0x20 type // Trigger type
+   PATCH_IF !("%name%" STRING_COMPARE_CASE "FIREDRAKE1" || type) BEGIN
+     WRITE_ASCIIE trigOff + 0x7c ~%tutu_scriptf%DRAKET1~ // Firedrake Trap 1, sets new script
+   END ELSE
+   PATCH_IF !("%name%" STRING_COMPARE_CASE "FIREDRAKE2" || type) BEGIN
+     WRITE_ASCIIE trigOff + 0x7c ~%tutu_scriptf%DRAKET2~ // Firedrake Trap 2, sets new script
+   END ELSE
+   PATCH_IF !("%name%" STRING_COMPARE_CASE "FIREDRAKE3" || type) BEGIN
+     WRITE_ASCIIE trigOff + 0x7c ~%tutu_scriptf%DRAKET3~ // Firedrake Trap 3, sets new script
+   END ELSE
+   PATCH_IF !("%name%" STRING_COMPARE_CASE "FIREDRAKE4" || type) BEGIN
+     WRITE_ASCIIE trigOff + 0x7c ~%tutu_scriptf%DRAKET4~ // Firedrake Trap 4, sets new script
+   END ELSE
+   PATCH_IF !("%name%" STRING_COMPARE_CASE "FIREDRAKE5" || type) BEGIN
+     WRITE_ASCIIE trigOff + 0x7c ~%tutu_scriptf%DRAKET5~ // Firedrake Trap 5, sets new script
+   END ELSE
+   PATCH_IF !("%name%" STRING_COMPARE_CASE "FIREDRAKE6" || type) BEGIN
+     WRITE_ASCIIE trigOff + 0x7c ~%tutu_scriptf%DRAKET6~ // Firedrake Trap 6, sets new script
+   END
+   trigOff += 0xc4
+ END
+END
+BUT_ONLY
+
+// Game Crash When Entering Area AR0717 Fix
+// Author: Idobek
+// Email: idobek@gibberlings3.net
+// Website: http://www.gibberlings3.net
+//DEPRECATED ~Ascension64~
+
+COPY_EXISTING ~%CentralBaldursGate_House6_L1%.are~ ~override~
+  READ_LONG 0x54 "actorsoffset"
+  READ_SHORT 0x58 "#actors"
+  WHILE ("%#actors%" > 0) BEGIN
+    SET "actor" = ("%actorsoffset%" + ("%#actors%" - 1) * 0x110)
+    READ_LONG ("%actor%" + 0x80) "actorresref1"
+    READ_LONG ("%actor%" + 0x84) "actorresref2"
+    WHILE (("%actorresref1%" = 0x4c524947) AND ("%actorresref2%" = 0x00314142)) OR //BG
+          (("%actorresref1%" = 0x454b3031) AND ("%actorresref2%" = 0x00000047)) BEGIN //BGT or Tutu
+      WRITE_ASCIIE ("%actor%" + 0x80) ~%tutu_var%GIRBA1~
+      WRITE_SHORT ("%actor%" + 0x86) 0x0000
+      READ_LONG ("%actor%" + 0x80) "actorresref1"
+      READ_LONG ("%actor%" + 0x84) "actorresref2"
+    END
+  SET "#actors" = ("%#actors%" - 1)
+  END
+BUT_ONLY
+
+////////////////////////
+// Change Location Flags
+COPY_EXISTING ~%CentralBaldursGate_GamblingTent1%.ARE~ ~override~
+              ~%CentralBaldursGate_GamblingTent2%.ARE~ ~override~
+              ~%CentralBaldursGate_DivinersTent%.ARE~ ~override~
+  WRITE_SHORT 0x48 0x06 // Removes Outdoors flag
+BUT_ONLY

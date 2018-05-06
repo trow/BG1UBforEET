@@ -1,0 +1,158 @@
+/////Nim Furlwing Encounter
+/////by AstroBryGuy
+
+/* Creatures */
+COPY ~bg1ub/nimfur/ubnimfur.cre~ ~override/ubnimfur.cre~
+    SAY NAME1 #15611
+    SAY NAME2 #15611
+    LAUNCH_PATCH_MACRO ~source_cre_sound_cleanup~
+    SAY INITIAL_MEETING #11112
+    SAY BATTLE_CRY1 #11131
+    SAY DAMAGE #11075
+    SAY DYING #11076
+    SAY SELECT_COMMON1 #11112
+    SAY DIALOG_DEFAULT #11112
+    LAUNCH_PATCH_MACRO ~source_cre_script_cleanup~
+    LAUNCH_PATCH_MACRO ~cre_dest_res~
+	ADD_CRE_ITEM ~UBSCP402~ #1 #0 #0 ~IDENTIFIED~ ~QITEM1 QITEM2 QITEM3~
+
+COPY_EXISTING ~%tutu_var%dogwa.cre~ ~override/ubnimdog.cre~
+    SAY NAME1 @4002
+    SAY NAME2 @4002
+    WRITE_BYTE 0x270 0x80 //  Set Enemy/Ally to neutral
+    LAUNCH_PATCH_MACRO ~source_cre_script_cleanup~
+    LAUNCH_PATCH_MACRO ~cre_dest_res~
+
+COPY_EXISTING ~%tutu_var%wolfdi.cre~ ~override/ubnimwlf.cre~
+    LAUNCH_PATCH_MACRO ~source_cre_script_cleanup~
+    LAUNCH_PATCH_MACRO ~cre_dest_res~
+
+/* Items */
+COPY ~bg1ub/nimfur/ubscp402.itm~ ~override~
+
+/* Add CREs to Larswood */
+COPY_EXISTING ~%Larswood%.are~ override
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4500
+    	fj_loc_y          = 2740
+    	fj_dest_x         = 4500
+    	fj_dest_y         = 2740
+    	fj_animation      = 0x6111 // Fighter Female Elf
+    	fj_orientation    = 9      // NNE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Nim Furlwing"
+   		fj_cre_resref     = UBNIMFUR
+	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4535
+    	fj_loc_y          = 2790
+    	fj_dest_x         = 4535
+    	fj_dest_y         = 2790
+    	fj_animation      = 0x7401 // War Dog
+    	fj_orientation    = 9      // NNE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Hunting Dog"
+   		fj_cre_resref     = UBNIMDOG
+	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4563
+    	fj_loc_y          = 2765
+    	fj_dest_x         = 4563
+    	fj_dest_y         = 2765
+    	fj_animation      = 0x7401 // War Dog
+    	fj_orientation    = 9      // NNE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Hunting Dog"
+   		fj_cre_resref     = UBNIMDOG
+	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4460
+    	fj_loc_y          = 2735
+    	fj_dest_x         = 4460
+    	fj_dest_y         = 2735
+    	fj_animation      = 0x7401 // War Dog
+    	fj_orientation    = 9      // NNE
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = "Hunting Dog"
+   		fj_cre_resref     = UBNIMDOG
+	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4525
+    	fj_loc_y          = 2600
+    	fj_dest_x         = 4525
+    	fj_dest_y         = 2600
+    	fj_animation      = 0x7B02 // Dire Wolf
+    	fj_orientation    = 1      // SSW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Wolf
+   		fj_cre_resref     = UBNIMWLF
+   	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4560
+    	fj_loc_y          = 2570
+    	fj_dest_x         = 4560
+    	fj_dest_y         = 2570
+    	fj_animation      = 0x7B02 // Dire Wolf
+    	fj_orientation    = 1      // SSW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Wolf
+   		fj_cre_resref     = UBNIMWLF
+	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4570
+    	fj_loc_y          = 2500
+    	fj_dest_x         = 4570
+    	fj_dest_y         = 2500
+    	fj_animation      = 0x7B02 // Dire Wolf
+    	fj_orientation    = 1      // SSW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Wolf
+   		fj_cre_resref     = UBNIMWLF
+   	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4625
+    	fj_loc_y          = 2575
+    	fj_dest_x         = 4625
+    	fj_dest_y         = 2575
+    	fj_animation      = 0x7B02 // Dire Wolf
+    	fj_orientation    = 1      // SSW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Wolf
+   		fj_cre_resref     = UBNIMWLF
+   	END
+	LPF fj_are_structure
+    	INT_VAR
+    	fj_loc_x          = 4670
+    	fj_loc_y          = 2580
+    	fj_dest_x         = 4670
+    	fj_dest_y         = 2580
+    	fj_animation      = 0x7B02 // Dire Wolf
+    	fj_orientation    = 1      // SSW
+    	STR_VAR
+    	fj_structure_type = actor
+    	fj_name           = Wolf
+   		fj_cre_resref     = UBNIMWLF
+   	END
+BUT_ONLY
+
+/* Scripts and Dialogues */
+COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimfur.d~
+COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimfur.baf~
+COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimdog.baf~
+COMPILE EVALUATE_BUFFER ~bg1ub/nimfur/ubnimwlf.baf~

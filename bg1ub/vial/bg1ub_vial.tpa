@@ -1,0 +1,17 @@
+///// The Mysterious Vial                              \\\\\
+// Author: SimDing0
+// Email: SimDing0@hotmail.com
+// Website: http://www.pocketplane.net
+
+ACTION_IF GAME_IS ~tutu tutu_totsc bgee~ THEN BEGIN
+COMPILE EVALUATE_BUFFER ~bg1ub/vial/cpm/ubvial.d~
+
+END ELSE BEGIN
+  ACTION_IF GAME_IS ~bgt~ THEN BEGIN
+    COMPILE EVALUATE_BUFFER ~bg1ub/vial/cpm/ubvial.d~
+~bg1ub/vial/cpm/ubvial_addBGT.d~
+USING ~bg1ub/tra/%LANGUAGE%/ubvial.tra~
+  END ELSE BEGIN
+    COMPILE ~bg1ub/vial/ubvial.d~
+  END
+END

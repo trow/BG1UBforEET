@@ -1,0 +1,1061 @@
+///// Creature Corrections                             \\\\\
+
+// Add missing IDS entries.
+APPEND RACE.IDS ~114 SUCCUBUS~ UNLESS ~114~
+APPEND ANIMATE.IDS "0x1000 WYVERN_BIG"       UNLESS "^0x1000"
+APPEND ANIMATE.IDS "0x1100 TANARRI"          UNLESS "^0x1100"
+APPEND ANIMATE.IDS "0x2300 DEATH_KNIGHT"     UNLESS "^0x2300"
+APPEND ANIMATE.IDS "0x6405 DOOM_GUARD"       UNLESS "^0x6405"
+APPEND ANIMATE.IDS "0x7904 SLIME_GRAY"       UNLESS "^0x7904"
+APPEND ANIMATE.IDS "0x7D00 ZOMBIE"           UNLESS "^0x7D00"
+APPEND ANIMATE.IDS "0x7E00 WEREWOLF"         UNLESS "^0x7E00"
+APPEND ANIMATE.IDS "0x7E01 WEREWOLF_GREATER" UNLESS "^0x7E01"
+APPEND ANIMATE.IDS "0xD400 BIRD_INSIDE"      UNLESS "^0xD400"
+
+// Change Zekar's alignment to NE.
+COPY_EXISTING ~%tutu_var%ZEKAR.CRE~ ~override~
+  WRITE_BYTE 0x27b 35
+BUT_ONLY
+
+// Give Karoug a script that exists. He doesn't need anything really since his dialog handles transformation.
+COPY_EXISTING ~%tutu_var%KAROUG.CRE~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x258 ~%tutu_scriptw%TASIGHT~ #8
+  END
+BUT_ONLY
+
+// Galkin.cre isn't actually used ingame. Galken.cre is the same guy, but the version that's used. However,
+// the former is classified as an "innocent", which seems more correct than the latter's choice of "mage".
+// Thus, correct the classification and fix the invalid dialog reference.
+COPY_EXISTING ~%tutu_var%GALKIN.CRE~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x2cc ~%tutu_var%galken~ #8
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%GALKEN.CRE~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_BYTE 0x273 155
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%BENTLY.CRE~ ~override~ // Bently Mirrorshade, FAI
+  WRITE_ASCIIE 0x248 ~BENTLY~ #8       // Assigns BENTLY.BCS as the OVERRIDE script
+  WRITE_ASCIIE 0x250 ~%tutu_var%SHOUT~ #8        // Assigns SHOUT.BCS as the Class script
+BUT_ONLY
+
+// assign creatures their correct dialogs
+COPY_EXISTING ~%tutu_var%FTOBE7.CRE~ ~override~ // Female townsperson in AR3335
+              ~%tutu_var%MTOB9.CRE~ ~override~  //
+              ~%tutu_var%MTOB4.CRE~ ~override~  //
+              ~%tutu_var%MTOB5.CRE~ ~override~  //
+              ~%tutu_var%READ4.CRE~ ~override~  //
+  WRITE_ASCIIE 0x2cc ~%SOURCE_RES%~ #8
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%OGREGR.CRE~ ~override~   // Assigns the Ogrillon creatures the Ogrillon script
+              ~%tutu_var%OGREGR1.CRE~ ~override~
+              ~%tutu_var%OGREGR2.CRE~ ~override~
+              ~%tutu_var%OGREGR3.CRE~ ~override~
+              ~%tutu_var%OGREGR4.CRE~ ~override~
+              ~%tutu_scripto%GREGRSU.CRE~ ~override~
+              ~%tutu_scripto%GREGR_A.CRE~ ~override~
+              ~%tutu_scripto%GREGR_B.CRE~ ~override~
+              ~%tutu_scripto%GREGR_C.CRE~ ~override~
+              ~%tutu_scripto%GREGR_D.CRE~ ~override~
+              ~%tutu_scripto%GREMIRI.CRE~ ~override~
+  WRITE_ASCIIE 0x258 ~%tutu_scripto%GRILLON~ #8
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%OGREHA.CRE~ ~override~   // Assigns the Halfogres the Halfogre script
+              ~%tutu_var%OGREHA1.CRE~ ~override~
+              ~%tutu_var%OGREHA2.CRE~ ~override~
+              ~%tutu_var%OGREHA3.CRE~ ~override~
+              ~%tutu_var%OGREHA4.CRE~ ~override~
+              ~%tutu_var%OGREHA5.CRE~ ~override~
+              ~%tutu_scripto%GREHA_A.CRE~ ~override~
+              ~%tutu_scripto%GREHA_B.CRE~ ~override~
+              ~%tutu_scripto%GREHA_C.CRE~ ~override~
+              ~%tutu_scripto%GREHA_D.CRE~ ~override~
+              ~%tutu_scripto%GREHA_E.CRE~ ~override~
+  WRITE_ASCIIE 0x258 ~%tutu_scripth%ALFOGRE~ #8
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%ITASLOI.CRE~ ~override~  // Assigns the Taslois the TasloiA script
+              ~%tutu_scriptt%ASLGURK.CRE~ ~override~
+              ~%tutu_var%TASLOI.CRE~ ~override~
+              ~%tutu_scriptt%ASLOI02.CRE~ ~override~
+              ~%tutu_scriptt%ASLOI03.CRE~ ~override~
+              ~%tutu_scriptt%ASLOISU.CRE~ ~override~
+  WRITE_ASCIIE 0x258 ~%tutu_var%TASLOIA~
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%WOLFWE.CRE~ ~override~ // Changes Class from Werewolf to Wolfwere
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_BYTE 0x273 158
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%GHOUL.CRE~ ~override~   // Assigns the Ghouls the Ghoul script
+              ~%tutu_var%GHOULSU.CRE~ ~override~
+  WRITE_ASCIIE 0x258 ~%tutu_var%GHOUL~
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%WOLFWI.CRE~ ~override~ // Assigns the Winter Wolf the Winter Wolf script
+  WRITE_ASCIIE 0x258 ~%tutu_scriptw%NTRWOLF~
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%WOLFVA.CRE~ ~override~ // Assigns the Vampiric Wolf the Vampiric Wolf script
+  WRITE_ASCIIE 0x258 ~%tutu_scriptv%AMPWOLF~
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%FEARM.CRE~ ~override~ // Assigns Fear the Revenant script
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x250 ~%tutu_scriptr%EVENANT~
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%REVENT.CRE~ ~override~ // Assigns the Revenant the Revenant script
+  WRITE_ASCIIE 0x258 ~%tutu_scriptr%EVENANT~
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%WINSKI2.CRE~ ~override~ // Assigns Winski Perorate the correct script
+  WRITE_ASCIIE 0x250 ~%tutu_var%WINSKI~ #8
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_scriptw%YVERNBI.CRE~ ~override~ // Assigns the Greater Wyvern the Wyvern script
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x258 ~%tutu_var%WYVERN~ #8
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%SKELETB.CRE~ ~override~ // Assign death variable
+  WRITE_ASCII 0x280 ~SKELETONB~
+BUT_ONLY
+
+//COPY_EXISTING ~%tutu_var%NOBW4.CRE~ ~override~  // Assign death variable
+//  WRITE_ASCII 0x280 ~Noblewoman4~
+//BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%KRYLA.CRE~ ~override~ // Kryla (AR1500)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x258 ~%tutu_scriptw%EREWOLF~   // Assign the Werewolf script
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%MEMNIS.CRE~ ~override~ // Memnis (AR1500)
+              ~%tutu_var%PALIN.CRE~ ~override~  // Palin (AR1500)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x258 ~%tutu_scriptw%OLFWERE~    // Assign the Wolfwere script
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%DOPPGR.CRE~ ~override~ // Greater Doppelganger
+  WRITE_ASCIIE 0x250 ~%tutu_var%DGANGER~ #8  // Assigns the DGANGER script as Class script
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%HOUSG5.CRE~ ~override~ // Guard
+  WRITE_ASCIIE 0x258 ~%tutu_var%DGUARD~ #8   // Assigns the DGUARD script as Race script
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%DRYAD.CRE~ ~override~ // Dryad of the Cloudpeaks
+  WRITE_ASCIIE 0x258 ~%tutu_var%DRYAD~ #8   // Assigns the DRYAD script as Race script
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%FLAMEN2.CRE~ ~override~ // Flaming Fist Enforcer
+  WRITE_ASCIIE 0x258 ~%tutu_var%FLAMEN2~ #8   // Assigns the FLAMEN2 script as Race script
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%ISLSIR.CRE~ ~override~ // Sirine Queen
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x268 ~%tutu_scripti%SLANDSI~    // Assigns the ISLANDSI script as Default script
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%OBERAN.CRE~ ~override~ // Oberan
+  WRITE_ASCIIE 0x248 ~%tutu_scripto%BESTATE~    // Assigns the OBESTATE script as OVERRIDE script
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%CHICKER.CRE~ ~override~ // Rabid Chicken
+  WRITE_ASCIIE 0x248 ~%tutu_scriptr%CHICKEN~     // Assigns the RCHICKEN script as OVERRIDE script
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%SIL.CRE~ ~override~ // Sil
+  WRITE_ASCIIE 0x260 ~%tutu_var%SIL~ #8   // Assigns the SIL script as General script
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%VOLOSE.CRE~ ~override~ // Serving Wench
+  WRITE_ASCIIE 0x258 ~%tutu_var%VWENCH~ #8   // Assigns the VWENCH script as Race script
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%MTBE6.CRE~ ~override~ // Galteran (Commoner)
+  WRITE_ASCIIE 0x258 ~%tutu_var%MTOWBE6~ #8 // Assigns the MTOWBE6 script as Race script
+BUT_ONLY
+
+// assign creatures their correct script death variable
+COPY_EXISTING ~%tutu_var%ADDY.CRE~ ~override~ // Addy (BG, Ch 7 spawn)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~Addy~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%BRENNA.CRE~ ~override~ // Brennan Risling (the other Brennan Risling)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~Brenna~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%CAEDMO.CRE~ ~override~ // Caedmon (BG, Ch 5 spawn)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~Caedmo~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_scriptbg%CARBOS.CRE~ ~override~ // Carbos (Candlekeep, Tutorial)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~Carbos~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%ELMIN3.CRE~ ~override~ // Elminster (FAI, Ch 3 spawn)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~Elmin3~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%FEARM.CRE~ ~override~ // Durlag: Fear warder (hostile)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~FearM~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%IVANNE.CRE~ ~override~ // Ivanne (BG, Ch 7 spawn)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~Ivanne~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%JONAVI.CRE~ ~override~ // Jonavin (BG, Ch 7 spawn)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~Jonavi~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%KAELLA.CRE~ ~override~ // Kaella (BG, Ch 7 spawn)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~Kaella~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%KARAN1.CRE~ ~override~ // Karan (Candlekeep, Tutorial)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~Karan1~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%PARDA1.CRE~ ~override~ // Parda (Candlekeep, Tutorial)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~Parda1~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%PRIDEM.CRE~ ~override~ // Durlag: Pride warder (hostile)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~PrideM~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_scriptbg%SHANK.CRE~ ~override~ // Shank (Candlekeep, Tutorial)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~Shank~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_scripts%LAVFREE.CRE~ ~override~ // Slave (Cloakwood mine, post-flood spawn)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~SlavFree~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%SORREL.CRE~ ~override~ // Sorrel (BG, Ch 7 spawn)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~Sorrel~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%SUGAR.CRE~ ~override~ // Sugar (BG ho, Ch 7 spawn)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~Sugar~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%VOLO.CRE~ ~override~ // Volo (AR4809, Nashkel Tavern)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~Volo~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%ZOMBIEB.CRE~ ~override~ // Bassilus' family zombies
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCIIE 0x280 ~ZombieB~ #32 // dv = 32 bytes
+  END
+BUT_ONLY
+// end death variable assignation
+
+LAF replacetext_area_script STR_VAR area="%NEBaldursGate_BlushingMermaid_L1%" oldtext=~Exists(\"DETRAN\")~ newtext=~Exists("DETRANION")~ END
+
+LAF replacetext_area_script STR_VAR area="%DurlagsTower_L1%" oldtext=~(\"Tourist4\",~ newtext=~("TOURIST3",~ END
+
+LAF replacetext_area_script STR_VAR area="%BaldursGateDocks_IronThrone_L2%" oldtext=~Exists(\"TRALIT\")~ newtext=~Exists("TRALITHAN")~ END
+
+LAF replacetext_area_script STR_VAR area="%BaldursGateDocks_IronThrone_L3%" oldtext=~Exists(\"KALESS\")~ newtext=~Exists("KALESSIA")~ END
+
+LAF replacetext_area_script STR_VAR area="%BaldursGateDocks_IronThrone_L4%" oldtext=~Exists(\"WIRTHI\")~ newtext=~Exists("WIRTHING")~ END
+
+LAF replacetext_area_script STR_VAR area="%BaldursGateDocks_IronThrone_L1%" oldtext=~Exists(\"PANGWA\")~ newtext=~Exists("PANG")~ END
+LAF replacetext_area_script STR_VAR area="%BaldursGateDocks_IronThrone_L1%" oldtext=~Exists(\"DHANIA\")~ newtext=~Exists("DHANIAL")~ END
+
+LAF replacetext_area_script STR_VAR area="%SEBaldursGate%" oldtext=~Exists(\"DHANIA\")~ newtext=~Exists("DHANIAL")~ END
+
+COPY_EXISTING ~%tutu_var%LOVE.BCS~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+  	REPLACE_TEXTUALLY ~ActionOverride(\"AVARICEM\"~ ~ActionOverride("AVARICE"~
+  END
+BUT_ONLY
+
+// Bears no longer turn hostile if PC druid or ranger is visible
+COPY_EXISTING ~%tutu_var%BEAR.BCS~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+  	REPLACE_TEXTUALLY ~\(\(Range(\[GOODCUTOFF\],7)\|AttackedBy(\[ANYONE\],DEFAULT)\)[ ]+Allegiance(Myself,NEUTRAL)\)~ ~\1 !See([2.0.0.11]) !See([2.0.0.12]) !See([2.0.0.16]) !See([2.0.0.18])~
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%MINSC.DLG~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+  	REPLACE_TEXTUALLY ~!Dead(\"Dynahe\"~ ~!Dead("Dynaheir"~
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_scriptb%IRD_INE.CRE~ ~override~
+              ~%tutu_scriptb%IRD_INN.CRE~ ~override~
+              ~%tutu_scriptb%IRD_INS.CRE~ ~override~
+              ~%tutu_scriptb%IRD_INW.CRE~ ~override~
+  WRITE_ASCIIE 0x258 ~%tutu_var%RANDFLY~ #8
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%ENNAHE.CRE~ ~override~ // Enna Hendrik (unused for now)
+  WRITE_ASCIIE 0x2cc ~%tutu_var%ENNA~ #8       // Fixes dialog file (ENNAHE does not exist)
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%ERLINH.CRE~ ~override~ // Erlin Hendrik (unused for now)
+  WRITE_ASCIIE 0x2cc ~%tutu_var%ERLIN~ #8      // Fixes dialog file (ERLINH does not exist)
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%GIRLBAX.CRE~ ~override~ // Girl (unused?)
+  WRITE_ASCIIE 0x2cc ~%tutu_var%GIRBA3~ #8      // Fixes dialog file (GIRLBA3 does not exist)
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%PROSLAY.CRE~ ~override~ // Ho
+  WRITE_ASCIIE 0x2cc ~%tutu_var%PROSLA~ #8      // Fixes dialog file (PROSLAY does not exist)
+BUT_ONLY
+
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN  // BOOT01 exists in BGEE, so don't do this block for BGEE
+	COPY_EXISTING ~%tutu_var%DEAD2.CRE~ ~override~ // Amnish Soldier (various)
+              ~%tutu_scriptd%EADFUCK.CRE~ ~override~ // Amnish Soldier (AR5403, Nashkel Mines)
+              ~%tutu_var%DRELIK.CRE~ ~override~ // Drelik         (AR0010, Baldur's Gate)
+              ~%tutu_var%JAMIE.CRE~ ~override~ // Jamie          (AR4805, Nashkel manor)
+              ~%tutu_var%LOTHAN.CRE~ ~override~ // Lothander      (various, Baldur's Gate)
+              ~%tutu_var%SAKUL.CRE~ ~override~ // Sakul          (AR5506, Catacombs)
+		PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+  			READ_LONG 0x2bc itemOff
+  			FOR (READ_LONG 0x2c0 numItem; numItem; numItem -= 0x1) BEGIN
+    			READ_ASCII itemOff resRef
+    			PATCH_IF ("%resRef%" STR_EQ "%tutu_var%SWIH04") BEGIN // Fixes a typo (SWIH04 does not exist)
+      				WRITE_ASCIIE itemOff "%tutu_var%SW1H04" #8 // Long Sword
+    			END ELSE BEGIN
+      				PATCH_IF ("%resRef%" STR_EQ "%tutu_var%SCRL1J") BEGIN // Fixes a typo (SCRL1J does not exist)
+        				PATCH_IF ("%SOURCE_RES%" STR_EQ "%tutu_var%SAKUL") BEGIN
+          					WRITE_ASCIIE itemOff "%tutu_var%SCRL1I" #8 // Hold Person
+        				END ELSE BEGIN
+          					WRITE_ASCIIE itemOff "%tutu_var%SCRL1L" #8 // Monster Summoning I
+        				END
+      				END ELSE BEGIN
+        				PATCH_IF ("%resRef%" STR_EQ "%tutu_var%B00T01") BEGIN // Fixes a typo (B00T01 does not exist)
+          					WRITE_ASCIIE itemOff "%tutu_var%BOOT02" #8 // Boots of Speed
+        				END
+      				END
+    			END
+    			itemOff += 0x14
+  			END
+		END
+	BUT_ONLY
+END
+
+//////////////////////////////////////
+// Assign weapons to unarmed creatures
+COPY_EXISTING ~%tutu_var%ANDRIS.CRE~ ~override~ // Andris (Mage, AR1009, Ice Island)
+              ~%tutu_var%POGHM9.CRE~ ~override~ // Priest of Oghma (Doppleganger, AR2627, Candlekeep)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%STAF01~ #0 #0 #0 NONE WEAPON1 EQUIP TWOHANDED // Quarterstaff
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%BEYN.CRE~ ~override~ // Beyn (Fighter/Mage, AR1009, Ice Island)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%DAGG01~ #0 #0 #0 NONE WEAPON1 // Dagger
+      ADD_CRE_ITEM ~%tutu_var%DAGG05~ #10 #0 #0 NONE WEAPON2 EQUIP // Throwing Dagger
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_scriptbg%BISHOP.CRE~ ~override~ // Bishop (Cleric, AR0506, Durlag's Tower)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%BLUN03~ #0 #0 #0 NONE WEAPON1 EQUIP // Flail +1
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%BLANE.CRE~ ~override~ // Dawn Priest Blane (Cleric, AR3401, Song of the Morning Temple Vestibule)
+              ~%tutu_var%BRAN.CRE~ ~override~ // Dawn Priest Bram (Cleric, AR3401, Song of the Morning Temple Vestibule)
+              ~%tutu_var%KAISHA.CRE~ ~override~ // Kaishas Gan (Cleric, AR2002, Werewolf Island)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%BLUN04~ #0 #0 #0 NONE WEAPON1 EQUIP // Mace
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%CUCHOL.CRE~ ~override~ // Cuchol (Fighter/Mage, AR1009, Ice Island)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%HAMM01~ #0 #0 #0 NONE WEAPON1 // War Hammer
+      ADD_CRE_ITEM ~%tutu_var%DAGG05~ #10 #0 #0 NONE WEAPON2 EQUIP // Throwing Dagger
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%DAITEL.CRE~ ~override~ // Ghost (Fighter/Mage, AR0504, Durlag's Tower)
+              ~%tutu_var%DUSHAI.CRE~ ~override~ // Dushai (Cleric/Mage, AR1000, Ulgoth's Beard)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%BLUN06~ #0 #0 #0 NONE WEAPON1 EQUIP // Morning Star
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%DEZKIE.CRE~ ~override~ // Dezkiel (Fighter/Mage, AR1010, Ice Island)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%BLUN01~ #0 #0 #0 NONE WEAPON1 // Club
+      ADD_CRE_ITEM ~%tutu_var%DART01~ #20 #0 #0 NONE WEAPON2 EQUIP // Dart
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_scriptd%OGBLINK.CRE~ ~override~ //Blink Dog (created by Jacil, AR0307, NEBaldursGate CountingHouse L1)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_LONG 0x2bc itemOff
+    READ_LONG 0x2c0 itemNum
+    FOR (i = 0; i < itemNum; i+=1) BEGIN
+      READ_ASCII (itemOff + 0x14 * i) itemName
+      PATCH_IF !("%itemName%" STRING_COMPARE_CASE "%tutu_var%P1-4") BEGIN
+        READ_LONG 0x2b8 slotOff
+        WRITE_SHORT (slotOff + 9 * 0x2) i //equip P1-4
+      END
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%DRADEE.CRE~ ~override~ // Dradeel (Mage, AR1505, Werewolf Island)
+              ~%tutu_var%DRADEE2.CRE~ ~override~ // Dradeel (Mage, AR1505, Werewolf Island)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_ASCII 0x268 script
+    PATCH_IF !("%script%" STRING_COMPARE_CASE "%tutu_scriptw%TASIGHT") BEGIN
+      WRITE_ASCIIE 0x268 ~%tutu_var%WTARSGT~ #8 // Needs EquipMostDamagingMelee()
+    END
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%STAF01~ #0 #0 #0 NONE WEAPON2 // Quarterstaff
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%FLAMWIZ.CRE~ ~override~ // Flaming Fist Battle Wizard (Flaming Fist)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%BLUN02~ #0 #0 #0 NONE WEAPON1 EQUIP // Flail
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%GARAN.CRE~ ~override~ // Garan (Mage/Thief, AR1009, Ice Island)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%DAGG02~ #0 #0 #0 NONE WEAPON1 EQUIP // Dagger +1
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%GIBBER2.CRE~ ~override~ // Diseased Gibberling (Gibberling)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%S1-2~ #0 #0 #0 NONE WEAPON1 EQUIP // Attack: one-handed, +1d2 slashing
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%IMOEN.CRE~ ~override~ // Imoen (Thief, AR2600, Candlekeep)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%BOW05~ #0 #0 #0 NONE WEAPON1 EQUIP // Short Bow
+    END
+    READ_ASCII 0x34 ~ports~
+    READ_ASCII 0x3c ~portm~
+    TEXT_SPRINT medium ~M~
+    PATCH_IF GAME_IS ~bg1 totsc~ BEGIN
+      TEXT_SPRINT medium ~L~
+    END
+    PATCH_IF (("%ports%" STRING_EQUAL_CASE ~~) OR ("%ports%" STRING_EQUAL_CASE ~None~)) BEGIN
+      WRITE_ASCIIE 0x34 ~%tutu_scripti%MOENS~ #8     // Corrects Imoen's small portrait
+    END
+    PATCH_IF (("%portm%" STRING_EQUAL_CASE ~~) OR ("%portm%" STRING_EQUAL_CASE ~None~)) BEGIN
+      WRITE_ASCIIE 0x3c ~%tutu_scripti%MOEN%medium%~ #8     // Corrects Imoen's medium portrait
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%JHASSO.CRE~ ~override~ // Jhasso (Fighter, AR0603, Seven Suns Basement)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_ASCII 0x268 script
+    PATCH_IF !("%script%" STRING_COMPARE_CASE "%tutu_scriptw%TASIGHT") BEGIN
+      WRITE_ASCIIE 0x268 ~%tutu_var%WTARSGT~ #8 // Needs EquipMostDamagingMelee()
+    END
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%SW1H01~ #0 #0 #0 NONE WEAPON2 // Quarterstaff
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%JOIA.CRE~ ~override~ // Joia (Fighter/Mage, AR2306, Friendly Arm Inn)
+              ~%tutu_var%TRALIT.CRE~ ~override~  // Tralithan (Fighter, AR0612, Iron Throne Level 2)
+              ~%tutu_var%DELAIN2.CRE~ ~override~ // Delainy (Fighter/Werewolf, AR2000, Balduran's Isle)
+              ~%tutu_var%DURLYL2.CRE~ ~override~ // Durlyle (Fighter/Werewolf, AR2000, Balduran's Isle)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%SW1H04~ #0 #0 #0 NONE WEAPON1 EQUIP // Long Sword
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%LARRIA.CRE~ ~override~ // Larriaz (Fairy: Sirine, AR1209, Baldur's Gate)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%SIRINE1~ #0 #0 #0 NONE WEAPON1 EQUIP // Attack: one-handed, +1d2 crushing, confusion (save vs. death)
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%MARL.CRE~ ~override~ // Marl (Fighter, AR3351, Feldepost's Inn)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%B1-2~ #0 #0 #0 NONE WEAPON1 EQUIP // Crushing
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%SHOAL.CRE~ ~override~ // Shoal the Nereid (Fairy: Nereid, AR3100)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%NEIRED~ #0 #0 #0 NONE WEAPON1 EQUIP // Attack: one-handed, +1d2 - 1 crushing, save vs. death (-2) or die
+    END
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%TRACEA.CRE~ ~override~ // Tracea Carol (Mage, AR1002, Ritual Chamber)
+              ~%tutu_scriptbg%KING.CRE~ ~override~ // King (Mage, AR0506, Durlag's Tower)
+              ~%tutu_scriptbg%QUEEN.CRE~ ~override~ // Queen (Mage, AR0506, Durlag's Tower)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    READ_LONG 0x2b8 slotOff
+    READ_SHORT slotOff + 0x12 weap1
+    READ_SHORT slotOff + 0x14 weap2
+    READ_SHORT slotOff + 0x16 weap3
+    READ_SHORT slotOff + 0x18 weap4
+    // make sure the creature has no weapons
+    PATCH_IF ((weap1 == 0xffff) && (weap2 == 0xffff) && (weap3 == 0xffff) && (weap4 == 0xffff)) BEGIN
+      ADD_CRE_ITEM ~%tutu_var%STAF02~ #0 #0 #0 NONE WEAPON1 EQUIP TWOHANDED // Quarterstaff +1
+    END
+  END
+BUT_ONLY
+
+/////////////////////////////
+// Gender and Sex Corrections
+COPY_EXISTING ~%tutu_var%ANDRIS.CRE~ ~override~ // Andris (MAGE_MALE_HUMAN animation, AR1009: Ice Island)
+              ~%tutu_var%BARESH2.CRE~ ~override~ // Baresh (CLERIC_MALE_HUMAN animation, AR1004: Ulgoth's Beard)
+              ~%tutu_var%BARWLF.CRE~ ~override~ // Baresh
+              ~%tutu_var%BEARPO3.CRE~ ~override~ // Polar Bear (All bears are male, AR1008: Ice Island)
+              ~%tutu_var%BEYN.CRE~ ~override~ // Beyn (FIGHTER_MALE_HUMAN animation, AR1009: Ice Island)
+              ~%tutu_var%CUCHOL.CRE~ ~override~ // Cuchol (CLERIC_MALE_ELF animation, AR1009: Ice Island)
+              ~%tutu_var%CULT2.CRE~ ~override~ // Cult Wizard (MAGE_MALE_HUMAN animation, AR1003: Ulgoth's Beard)
+              ~%tutu_var%DELSVIR.CRE~ ~override~ // Deslvirftanyon (THIEF_MALE_DWARF_LOW animation, AR1000: Ulgoth's Beard)
+              ~%tutu_var%DOOMDUR.CRE~ ~override~ // Dwarven Doom Guard (FIGHTER_MALE_DWARF animation, AR0512: Durlag's Tower)
+              ~%tutu_var%DRADEE.CRE~ ~override~ // Dradeel (MAGE_MALE_ELF animation, AR1505: Werewolf Island)
+              ~%tutu_var%DRADEE2.CRE~ ~override~ // Dradeel (MAGE_MALE_ELF animation, AR2000: Werewolf Island)
+              ~%tutu_var%GARAN.CRE~ ~override~ // Garan (THIEF_MALE_HUMAN_LOW animation, AR1009: Ice Island)
+              ~%tutu_var%IKE.CRE~ ~override~ // Ike (THIEF_MALE_HUMAN animation, AR1000: Ulgoth's Beard)
+              ~%tutu_var%JONDAL.CRE~ ~override~ // Jondalar (FIGHTER_MALE_HUMAN animation, AR2600: Candlekeep)
+              ~%tutu_scriptbg%KING.CRE~ ~override~ // King (CLERIC_MALE_HUMAN animation, AR0506: Durlag's Tower)
+              ~%tutu_var%LEAGGU1.CRE~ ~override~ // Merchant League Guard (FIGHTER_MALE_HUMAN animation, AR0308.BCS: Merchant League)
+              ~%tutu_var%LEAGGU4.CRE~ ~override~ // Merchant League Guard (FIGHTER_MALE_HUMAN animation, AR0308.BCS: Merchant League)
+              ~%tutu_var%LEAGGU5.CRE~ ~override~ // Merchant League Guard (FIGHTER_MALE_HUMAN animation, AR0308.BCS: Merchant League)
+              ~%tutu_var%LEAGGU6.CRE~ ~override~ // Merchant League Guard (FIGHTER_MALE_HUMAN animation, AR0308.BCS: Merchant League)
+              ~%tutu_var%LEAGGU7.CRE~ ~override~ // Merchant League Guard (FIGHTER_MALE_HUMAN animation, AR0308.BCS: Merchant League)
+              ~%tutu_var%MARCEL.CRE~ ~override~ // Marcellus (MAGE_MALE_HUMAN animation, AR1009: Ice Island)
+              ~%tutu_scriptm%TOWUB_A.CRE~ ~override~ // Commoner (PEASANT_MAN animation, AR1000: Ulgoth's Beard)
+              ~%tutu_scriptm%TOWUB_B.CRE~ ~override~ // Commoner (PEASANT_MAN animation, AR1000: Ulgoth's Beard)
+              ~%tutu_scriptm%TOWUB_C.CRE~ ~override~ // Commoner (PEASANT_MAN animation, AR1000: Ulgoth's Beard, AR1001: Ulgoth's Beard)
+              ~%tutu_scriptm%TOWUB_D.CRE~ ~override~ // Commoner (PEASANT_MAN animation, AR1000: Ulgoth's Beard)
+              ~%tutu_scriptm%TOWUB_E.CRE~ ~override~ // Commoner (PEASANT_MAN animation, AR1000: Ulgoth's Beard)
+              ~%tutu_scriptm%TOWUBSC.CRE~ ~override~ // Commoner (STATIC_PEASANT_MAN_CHAIR animation, AR1001: Ulgoth's Beard)
+              ~%MTOWUBSN%.CRE~ ~override~ // Commoner (STATIC_PEASANT_MAN_MATTE animation)
+              ~%MTOWUBST%.CRE~ ~override~ // Commoner (STATIC_PEASANT_MAN_STOOL animation)
+              ~%tutu_var%MTOWUBX.CRE~ ~override~ // Commoner (STATIC_PEASANT_MAN animation, AR1000: Ulgoth's Beard)
+              ~%tutu_scriptbg%TARNOR.CRE~ ~override~ // Tarnor (FIGHTER_MALE_DWARF animation)
+              ~%tutu_var%ULF.CRE~ ~override~ // Ulf (FIGHTER_MALE_ELF animation, AR0307.BCS: Merchant League)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_BYTE 0x237 1                  // Sex: Male
+    WRITE_BYTE 0x275 1                  // Gender: Male
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%CLAIRD.CRE~ ~override~ // Clair De'lain (FIGHTER_FEMALE_HUMAN animation, AR0514: Durlag's Tower)
+              ~%tutu_var%CULTT3.CRE~ ~override~ // Cult Assassin (FIGHTER_FEMALE_HUMAN animation, AR1003: Ulgoth's Beard)
+              ~%tutu_var%CULTT4.CRE~ ~override~ // Cult Archer (THIEF_FEMALE_HUMAN animation, AR1003: Ulgoth's Beard)
+              ~%tutu_var%DAESE.CRE~ ~override~ // Daese (MAGE_FEMALE_HUMAN animation, AR1504: Werewolf Island)
+              ~%tutu_var%DELAIN2.CRE~ ~override~ // Delainy (CLERIC_FEMALE_ELF animation, AR2600: Werewolf Island)
+              ~%FTOWUB_A%.CRE~ ~override~ // Commoner (PEASANT_WOMAN animation, AR1000: Ulgoth's Beard)
+              ~%FTOWUB_B%.CRE~ ~override~ // Commoner (PEASANT_WOMAN animation, AR1000: Ulgoth's Beard)
+              ~%FTOWUB_E%.CRE~ ~override~ // Commoner (PEASANT_WOMAN animation, AR1001: Ulgoth's Beard, AR1006: Ulgoth's Beard)
+              ~%FTOWUBSC%.CRE~ ~override~ // Commoner (STATIC_PEASANT_WOMAN_CHAIR animation)
+              ~%FTOWUBSN%.CRE~ ~override~ // Commoner (STATIC_PEASANT_WOMAN_MATTE animation)
+              ~%tutu_var%FTOWUBX.CRE~ ~override~ // Commoner (STATIC_PEASANT_WOMAN animation, AR1000: Ulgoth's Beard)
+              ~%tutu_var%ISLSIR.CRE~ ~override~ // Sirine Queen (SIRINE animation, AR1500: Werewolf Island)
+              ~%tutu_var%JAHEIR4.CRE~ ~override~ // Jaheira
+              ~%tutu_var%JAHEIR6.CRE~ ~override~ // Jaheira
+              ~%tutu_var%LEAGGU2.CRE~ ~override~ // Merchant League Guard (FIGHTER_FEMALE_HUMAN animation, AR0308.BCS: Merchant League)
+              ~%tutu_var%LEAGGU3.CRE~ ~override~ // Merchant League Guard (FIGHTER_FEMALE_HUMAN animation, AR0308.BCS: Merchant League)
+              ~%tutu_var%LOVEM.CRE~ ~override~ // Love (FIGHTER_FEMALE_DWARF animation)
+              ~%tutu_var%MARALE2.CRE~ ~override~ // Maralee (CLERIC_FEMALE_HUMAN animation, AR2000: Werewolf Island)
+              ~%tutu_scriptp%HEOARCH.CRE~ ~override~ // Phoenix Guard (MAGE_FEMALE_HUMAN animation, AR0508: Ulgoth's Beard)
+              ~%tutu_var%TRACEA.CRE~ ~override~ // Tracea Carol (MAGE_FEMALE_HUMAN_LOW animation, AR1002: Ulgoth's Beard)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_BYTE 0x237 2                  // Sex: Female
+    WRITE_BYTE 0x275 2                  // Gender: Female
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%APPAR.CRE~ ~override~ // Skeleton (SKELETON animation, AR0513: Durlag's Tower)
+              ~%tutu_scriptc%RYPTCRA.CRE~ ~override~ // Crypt Crawler (CARRION_CRAWLER animation, AR0514: Durlag's Tower)
+              ~%tutu_var%GHASTD.CRE~ ~override~ // Ghast (GHAST animation, TRPGHAST.BCS)
+              ~%tutu_var%GRAEL.CRE~ ~override~ // Grael (GHAST animation, AR0514: Durlag's Tower)
+              ~%tutu_var%HACK.CRE~ ~override~ // Hack (OGRE animation, TITACH.BCS)
+              ~%tutu_var%PLYOGRE.CRE~ ~override~ // Ogre (OGRE animation)
+              ~%tutu_var%SKELET.CRE~ ~override~ // Skeleton (SKELETON animation)
+              ~%tutu_scripts%PIDPHAS.CRE~ ~override~ // Astral Phase Spider (SPIDER_PHASE animation, AR0514: Durlag's Tower)
+              ~%tutu_var%STALKE.CRE~ ~override~ // Invisible Stalker (DOOM_GUARD animation, AR0146: Baldur's Gate, AR0161: Baldur's Gate, AR0509: Durlag's Tower)
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_BYTE 0x237 1                  // Sex: Male
+    WRITE_BYTE 0x275 4                  // Gender: Neither
+  END
+BUT_ONLY
+
+//Compatibility with NPC Portraits component
+ACTION_IF NOT FILE_EXISTS ~override/X#NJNPCPortrait.G3~ THEN BEGIN
+  COPY_EXISTING ~%tutu_var%ARKUSH.CRE~ ~override~ // Arkushule
+                ~%tutu_var%NIEMAI.CRE~ ~override~ // Niemain
+                ~%tutu_var%WINSKI.CRE~ ~override~ // Winski Perorate
+    PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+      WRITE_ASCII 0x34 ~~ #8 // Removes Edwin's, Kivan's, Garrick's, Montaron's, Xzar's, Alora's, and Ajantis' portraits
+      WRITE_ASCII 0x3c ~~ #8
+    END
+  BUT_ONLY
+END
+
+COPY_EXISTING ~%tutu_var%BAYARD.CRE~ ~override~ // Bayard
+              ~%tutu_var%BERRUN.CRE~ ~override~ // Berrun Ghastkill
+              ~%tutu_var%BORDA.CRE~ ~override~ // Borda
+              ~%tutu_var%BRENDA.CRE~ ~override~ // Brendan
+              ~%tutu_var%COWLED.CRE~ ~override~ // Cowled Wizard
+              ~%tutu_var%DEGROD.CRE~ ~override~ // Degrodel
+              ~%tutu_var%DENAK.CRE~ ~override~ // Denak
+              ~%tutu_var%DIANA.CRE~ ~override~ // Diana
+              ~%tutu_var%DRELIK.CRE~ ~override~ // Drelik
+              ~%tutu_var%FAIZAH.CRE~ ~override~ // Statue
+              ~%tutu_var%FORTHE.CRE~ ~override~ // Forthel August
+              ~%tutu_var%GAZIB.CRE~ ~override~ // The Great Gazib
+              ~%tutu_var%KAHRK.CRE~ ~override~ // Kahrk
+              ~%tutu_scriptbg%KING.CRE~ ~override~ // King
+              ~%tutu_var%LASALA.CRE~ ~override~ // Lasala
+              ~%tutu_var%MARCEL.CRE~ ~override~ // Marcellus
+              ~%tutu_var%MERLIN.CRE~ ~override~ // Elminster
+              ~%tutu_var%MUTAMI.CRE~ ~override~  // Mutamin
+              ~%tutu_var%NESTOR.CRE~ ~override~ // Nestor
+              ~%tutu_var%OBE.CRE~ ~override~ // Obe
+              ~%tutu_var%OULAM.CRE~ ~override~ // Oulam
+              ~%tutu_scriptbg%QUEEN.CRE~ ~override~ // Queen
+              ~%tutu_var%SEMAJ.CRE~ ~override~ // Semaj
+              ~%tutu_var%SEWERF5.CRE~ ~override~ // Sewerfolk
+              ~%tutu_var%SUNIN.CRE~ ~override~ // Sunin
+//              ~%tutu_var%TESTER.CRE~ ~override~ // "Ajantis" - never used
+              ~%tutu_var%VENKT.CRE~ ~override~ // Venkt
+              ~%tutu_var%WHEBER.CRE~ ~override~ // Wheber Ott
+              ~%WILLIAM%.CRE~ ~override~ // William Garst
+              ~%tutu_var%WIVEN.CRE~ ~override~ // Wiven
+              ~%tutu_var%ZORDRA.CRE~ ~override~ // Zordral
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCII 0x34 ~~ #8 // Removes Edwin's, Kivan's, Garrick's, Montaron's, Xzar's, Alora's, and Ajantis' portraits
+    WRITE_ASCII 0x3c ~~ #8
+  END
+BUT_ONLY
+
+//////////////////////////////////////////////////////////
+// Fixes due to the results of CamDawg's Inventory Checker
+ACTION_IF !GAME_IS ~bgee~ THEN BEGIN  // Already included in BGEE
+COPY_EXISTING ~%tutu_var%AASIM.CRE~ ~override~ // Aasim (AR0615, Iron Throne Building)
+ PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+  READ_LONG  0x2bc "itm_off" ELSE 0
+  READ_LONG  0x2c0 "itm_num" ELSE 0
+  FOR (index = 0 ; index < itm_num ; index = index + 1) BEGIN // searches through items
+    READ_ASCII ("%itm_off%" + (0x14 * "%index%")) "item"
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "%tutu_scripts%HIELD04" = 0) BEGIN // find invalid resref
+      WRITE_ASCIIE ("%itm_off%" + (0x14 * "%index%")) "%tutu_var%SHLD04" #8 // corrected resref
+      SET "index" = "%itm_num%" // kills loop
+    END
+  END
+ END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%RINNIE.CRE~ ~override~ // Rinnie: LEAT01 (Leather Armor)
+              ~%tutu_var%ZHURLO.CRE~ ~override~ // Zhurlong: LEAT01 (Leather Armor)
+ PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+  READ_LONG  0x2b8 "slot_off" ELSE 0
+  READ_LONG  0x2bc "itm_off" ELSE 0
+  READ_LONG  0x2c0 "itm_num" ELSE 0
+  FOR (index = 0 ; index < itm_num ; index = index + 1) BEGIN
+    READ_ASCII ("%itm_off%" + (0x14 * "%index%")) "item"
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "%tutu_var%LEAT01" = 0)
+    BEGIN
+      FOR (index2 = 0 ; index2 < 36 ; index2 = index2 + 1) BEGIN // search through slots and add reference to first null slot
+        READ_SHORT ("%slot_off%" + ("%index2%" + 0x02)) "ref"
+        PATCH_IF ("%ref%" = 0x01) BEGIN // if incorrect reference in armor
+          WRITE_SHORT ("%slot_off%" + ("%index2%" + 0x02)) "%index%" // adds reference to item
+          SET "index2" = 36 // kills loop
+        END
+        PATCH_IF ("%index2%" = 0) BEGIN // if end of armor slots, skip ahead to inventory
+          SET "index2" = 20 // otherwise go to inventory slots
+        END
+      END
+    END
+  END
+ END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%ANDRIS.CRE~ ~override~ // Andris: CLCK12 (Knave's Robe)
+              ~%tutu_var%MARCEL.CRE~ ~override~ // Marcellus: CLCK13 (Traveller's Robe)
+              ~%tutu_scripts%HANDAL2.CRE~ ~override~ // Shandalar: CLCK16 (Cloak of the Neutral Archmagi)
+ PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+  READ_LONG  0x2b8 "slot_off" ELSE 0
+  READ_LONG  0x2bc "itm_off" ELSE 0
+  READ_LONG  0x2c0 "itm_num" ELSE 0
+  FOR (index = 0 ; index < itm_num ; index = index + 1) BEGIN
+    READ_ASCII ("%itm_off%" + (0x14 * "%index%")) "item"
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "%tutu_var%clck12" = 0) OR
+             ("%item%" STRING_COMPARE_CASE "%tutu_var%clck13" = 0) OR
+             ("%item%" STRING_COMPARE_CASE "%tutu_var%clck16" = 0)
+    BEGIN
+      READ_SHORT ("%slot_off%" + 0x02) "curr_idx"
+      //move only if armor slot not already taken
+      PATCH_IF ("%curr_idx%" = 0xffff) BEGIN
+        WRITE_SHORT ("%slot_off%" + 0x02) "%index%" // puts in armor slot
+        WRITE_SHORT ("%slot_off%" + 0x22) 0xffff    // removes entry from cloak slot
+      END
+    END
+  END
+ END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%DEZKIE.CRE~ ~override~ // Dezkiel: CLCK22 (Shandalar's Cloak)
+              ~%tutu_var%BHEREN.CRE~ ~override~ // Bheren: CLCK01 (Cloak of Protection +1)
+ PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+  READ_LONG  0x2b8 "slot_off" ELSE 0
+  READ_LONG  0x2bc "itm_off" ELSE 0
+  READ_LONG  0x2c0 "itm_num" ELSE 0
+  FOR (index = 0 ; index < itm_num ; index = index + 1) BEGIN
+    READ_ASCII ("%itm_off%" + (0x14 * "%index%")) "item"
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "%tutu_var%clck22" = 0) OR
+             ("%item%" STRING_COMPARE_CASE "%tutu_var%clck01" = 0)
+    BEGIN
+      READ_SHORT ("%slot_off%" + 0x22) "curr_idx"
+      //move only if cloak slot not already taken
+      PATCH_IF ("%curr_idx%" = 0xffff) BEGIN
+        WRITE_SHORT ("%slot_off%" + 0x22) "%index%" // puts in cloak slot
+        WRITE_SHORT ("%slot_off%" + 0x24) 0xffff    // removes entry from quick item 1 slot
+      END
+    END
+  END
+ END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%DRATAN.CRE~ ~override~ // Dra'tan: AROW01 (Arrows)
+ PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+  READ_LONG  0x2b8 "slot_off" ELSE 0
+  READ_LONG  0x2bc "itm_off" ELSE 0
+  READ_LONG  0x2c0 "itm_num" ELSE 0
+  FOR (index = 0 ; index < itm_num ; index = index + 1) BEGIN
+    READ_ASCII ("%itm_off%" + (0x14 * "%index%")) "item"
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "%tutu_var%arow01" = 0) BEGIN
+      FOR (index2 = 13 ; index2 < 36 ; index2 = index2 + 1) BEGIN // search through quiver slots and add reference to first null slot
+        READ_SHORT ("%slot_off%" + ("%index2%" * 0x02)) "ref"
+        PATCH_IF ("%ref%" = 0xffff) BEGIN // first null reference in quivers
+          WRITE_SHORT ("%slot_off%" + ("%index2%" * 0x02)) "%index%" // adds reference to item
+          SET "index2" = 36 // kills loop
+        END
+        PATCH_IF ("%index2%" = 16) BEGIN // if end of quiver slots, skip ahead to inventory
+          SET "index2" = 20
+        END
+      END
+    END
+  END
+ END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%NADARI.CRE~ ~override~ // Nadarin: BOOT02 (Boots of Stealth)
+ PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+  READ_LONG  0x2b8 "slot_off" ELSE 0
+  READ_LONG  0x2bc "itm_off" ELSE 0
+  READ_LONG  0x2c0 "itm_num" ELSE 0
+  FOR (index = 0 ; index < itm_num ; index = index + 1) BEGIN
+    READ_ASCII ("%itm_off%" + (0x14 * "%index%")) "item"
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "%tutu_var%boot02" = 0)
+    BEGIN
+      READ_SHORT ("%slot_off%" + 0x10) "curr_idx"
+      //move only if boots slot not already taken
+      PATCH_IF ("%curr_idx%" = 0xffff) BEGIN
+        WRITE_SHORT ("%slot_off%" + 0x10) "%index%" // puts in boots slot
+        WRITE_SHORT ("%slot_off%" + 0x24) 0xffff    // removes entry from quick item 1 slot
+      END
+    END
+  END
+ END
+BUT_ONLY
+
+//devSin 'nixed' this (that ring is there because it's the key to his door, not because he actually needs it or was supposed to be wearing it)
+/*
+COPY_EXISTING ~%tutu_var%ALDETH.CRE~ ~override~ // Aldeth Sashenstar: MAGE04 (blur ring)
+ PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+  READ_LONG  0x2b8 "slot_off" ELSE 0
+  READ_LONG  0x2bc "itm_off" ELSE 0
+  READ_LONG  0x2c0 "itm_num" ELSE 0
+  FOR (index = 0 ; index < itm_num ; index = index + 1) BEGIN
+    READ_ASCII ("%itm_off%" + (0x14 * "%index%")) "item"
+    PATCH_IF ("%item%" STRING_COMPARE_CASE "%tutu_var%mage04" = 0) BEGIN
+      FOR (index2 = 4 ; index2 < 36 ; index2 = index2 + 1) BEGIN // search through ring slots and add reference to first null slot
+        READ_SHORT ("%slot_off%" + ("%index2%" * 0x02)) "ref"
+        PATCH_IF ("%ref%" = 0xffff) BEGIN // first null reference in rings
+          WRITE_SHORT ("%slot_off%" + ("%index2%" * 0x02)) "%index%" // adds reference to item
+          WRITE_SHORT ("%slot_off%" + 0x2a) 0xffff    // removes entry from inventory 1 slot
+          SET "index2" = 36 // kills loop
+        END
+      END
+    END
+  END
+ END
+BUT_ONLY
+*/
+END // Fixes due to the results of CamDawg's Inventory Checker
+
+/////////////////////////
+// Bandits without scalps
+COPY_EXISTING ~%tutu_var%CREDUS.CRE~ ~override~ // Credus, AR1900
+              ~%tutu_var%RAIKEN.CRE~ ~override~ // Raiken, AR2400.BCS
+              ~%tutu_var%TAUGOS.CRE~ ~override~ // Taugos, AR1900
+              ~%tutu_var%TEVEN.CRE~ ~override~ // Teven, AR2900.BCS
+              ~%tutu_var%VAX.CRE~ ~override~ // Vax, AR5300
+              ~%tutu_var%VENKT.CRE~ ~override~ // Venkt, AR1901
+              ~%tutu_var%ZAL.CRE~ ~override~ // Zal, AR5300
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    ADD_CRE_ITEM ~%tutu_var%MISC86~ #1 #0 #0 ~IDENTIFIED~ ~INV1 INV2~ // Adds a bandit scalp
+  END
+BUT_ONLY
+
+/////////////////////////////////////////
+//NOBL9.CRE needs 2 gold for his dialogue
+COPY_EXISTING ~%tutu_var%NOBL9.CRE~ ~override~ //Nobleman, AR2303
+ PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+   WRITE_LONG 0x1c 2 //Gold
+ END
+BUT_ONLY
+
+/////////////////////////////////
+//Correct cultist death variables
+ACTION_IF GAME_IS ~tutu tutu_totsc bg1 totsc~ THEN BEGIN //BG and Tutu only
+
+COPY_EXISTING ~%tutu_var%CULT1.CRE~ ~override~ //Cult Guard
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCII 0x280 "CultGuard1" #32 //was a duplicate "CultGuard", interferes with CULTSHT.BCS
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%CULT2.CRE~ ~override~ //Cult Wizard
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCII 0x280 "CultWizard1" #32
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%CULT3.CRE~ ~override~ //Cult Enforcer
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCII 0x280 "CultWizard2" #32
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%CULT4.CRE~ ~override~ //Cult Archer, unused
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCII 0x280 "cultfodder" #32
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%CULTASS.CRE~ ~override~ //Cult Assassin, unused
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCII 0x280 "CultAssassin" #32
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%CULTT1.CRE~ ~override~ //Cult Enforcer
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCII 0x280 "CultWizard" #32
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%CULTT2.CRE~ ~override~ //Cult Guard
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCII 0x280 "CultGuard" #32
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%CULTT3.CRE~ ~override~ //Cult Assassin
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCII 0x280 "CultAssassin" #32
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%CULTT4.CRE~ ~override~ //Cult Archer
+  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+    WRITE_ASCII 0x280 "CultArcher" #32
+  END
+BUT_ONLY
+
+END
