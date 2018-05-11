@@ -1,0 +1,6 @@
+IF
+	Global("UBAreaCheckAR2614","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("UBAreaCheckAR2614","GLOBAL",1)
+END

@@ -1,6 +1,14 @@
 /////Chapter 6 Dialogue Restorations
 /////by AstroBryGuy
 
+ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
+  OUTER_SPRINT AreaCheckAR2614 ~Global("UBAreaCheckAR2614","GLOBAL",1)~
+  LAF extend_area_script STR_VAR area="%Candlekeep_Library_L5%" bottom="bg1ub/ch6/ub2612_bg1.baf" END
+  LAF extend_area_script STR_VAR area="%Candlekeep_Library_L6%" bottom="bg1ub/ch6/ub2614_bg1.baf" END
+END ELSE BEGIN
+  OUTER_SPRINT AreaCheckAR2614 ~AreaCheck("%Candlekeep_Library_L6%")~
+END
+
 /* Area script changes */
 LAF extend_area_script STR_VAR area="%Candlekeep_Library_L1%" bottom="bg1ub/ch6/ubmurder.baf" END
 LAF extend_area_script STR_VAR area="%Candlekeep_Library_L2%" bottom="bg1ub/ch6/ub2609.baf" END

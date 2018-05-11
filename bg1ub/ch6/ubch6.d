@@ -10,12 +10,12 @@ APPEND ~%tutu_var%tethto2~
       DO ~SetGlobal("UBTethtorilCh6","GLOBAL",2)~ GOTO UBTethtorilNoSurrender
     IF ~~ THEN REPLY @4
       DO ~SetGlobal("UBTethtorilCh6","GLOBAL",2)~ GOTO UBTethtorilNoSurrender
-	IF ~~ THEN REPLY @5 
-      DO ~SetGlobal("UBTethtorilCh6","GLOBAL",2) CreateCreature("%tutu_var%WATCH6",[1050.850]%FACE_0%) ActionOverride("%tutu_var%WATCH6",MoveToObject(Player1)) ActionOverride("%tutu_var%WATCH6",Dialog(Player1))~ EXIT    
+	IF ~~ THEN REPLY @5
+      DO ~SetGlobal("UBTethtorilCh6","GLOBAL",2) CreateCreature("%tutu_var%WATCH6",[1050.850]%FACE_0%) ActionOverride("%tutu_var%WATCH6",MoveToObject(Player1)) ActionOverride("%tutu_var%WATCH6",Dialogue(Player1))~ EXIT
   END
   IF ~~ THEN BEGIN UBTethtorilNoSurrender
   SAY @6
-    IF ~~ THEN DO ~CreateCreature("%tutu_var%WATCH6",[1050.850]%FACE_0%) ActionOverride("%tutu_var%WATCH6",MoveToObject(Player1)) ActionOverride("%tutu_var%WATCH6",Dialog(Player1)) EscapeArea()~ EXIT
+    IF ~~ THEN DO ~CreateCreature("%tutu_var%WATCH6",[1050.850]%FACE_0%) ActionOverride("%tutu_var%WATCH6",MoveToObject(Player1)) ActionOverride("%tutu_var%WATCH6",Dialogue(Player1)) EscapeArea()~ EXIT
   END
 END
 
@@ -23,7 +23,7 @@ END
 REPLACE_SAY ~%tutu_var%gatewa2~ 2 @7
 
 /* Replies to WATCH6.CRE won't include reference to Ulraunt and Tethtoril if CHARNAME is on the 6th floor */
-ADD_TRANS_TRIGGER ~%tutu_var%watch6~ 0 ~!AreaCheck("%Candlekeep_Library_L6%")~ DO 1
+ADD_TRANS_TRIGGER ~%tutu_var%watch6~ 0 ~!%AreaCheckAR2614%~ DO 1
 EXTEND_BOTTOM ~%tutu_var%watch6~ 0
-IF ~AreaCheck("%Candlekeep_Library_L6%")~ THEN REPLY @8 GOTO 2
+IF ~%AreaCheckAR2614%~ THEN REPLY @8 GOTO 2
 END
