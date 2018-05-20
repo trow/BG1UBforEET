@@ -1,0 +1,194 @@
+///// Audio Restorations                               \\\\\
+// Author: devSin
+
+COPY ~bg1ub/tra/%LANGUAGE%/sound_tmp.tra~ ~bg1ub/tra/%LANGUAGE%/sound.tra~
+  EVALUATE_BUFFER
+LOAD_TRA ~bg1ub/tra/%LANGUAGE%/sound.tra~
+
+ACTION_IF GAME_IS ~bgt tutu tutu_totsc~ THEN BEGIN //BGT or Tutu
+
+/////////////////////////////////////////////////////////
+// Ajantis sound fix (duplicate, probably unused strings)
+COPY_EXISTING ~%tutu_var%AJANTI.CRE~ ~override~
+              ~%tutu_var%AJANTI4.CRE~ ~override~
+              ~%tutu_var%AJANTI6.CRE~ ~override~
+ SAY 0x144 @60
+ SAY 0x148 @61
+ SAY 0x14c @62
+ SAY 0x150 @63
+
+/////////////////////
+// Tanar'ri sound fix
+ACTION_IF GAME_IS ~bgt tutu_totsc~ THEN BEGIN
+ COPY_EXISTING ~%tutu_var%TANAR.CRE~ ~override~
+  SAY 0xa4 @68
+  SAY 0xa8 @64
+  SAY 0xc8 @69
+  SAY 0xcc @69
+  SAY 0xd0 @69
+  SAY 0xd4 @69
+  SAY 0xd8 @69
+  SAY 0xec @66
+  SAY 0xf0 @65
+  SAY 0x10c @67
+  SAY 0x110 @68
+  SAY 0x114 @64
+  SAY 0x19c @67
+  SAY 0x1b8 @67
+
+///////////////////////////
+// Delsvirftanyon sound fix
+ COPY_EXISTING ~%tutu_var%DELSVIR.CRE~ ~override~
+  SAY 0xa4 @70
+  SAY 0xec @72
+  SAY 0xf0 @73
+  SAY 0x10c @71
+END
+
+///////////////////////////////
+// Gandolar Luckyfoot sound fix
+COPY_EXISTING ~%tutu_var%GANDOL.CRE~ ~override~
+ SAY 0xa4 @74
+ SAY 0xec @76
+ SAY 0xf0 @77
+ SAY 0x10c @75
+ SAY 0x19c @75
+
+////////////////////////////////
+// Garrick sound fix (not funny)
+COPY_EXISTING ~%tutu_var%GARRIC.CRE~ ~override~
+              ~%tutu_var%GARRIC2.CRE~ ~override~
+              ~%tutu_var%GARRIC4.CRE~ ~override~
+              ~%tutu_var%GARRIC6.CRE~ ~override~
+ SAY 0xfc @78
+
+/////////////////////////////////////////////
+// Xan sound fix (duplicate, probably unused)
+COPY_EXISTING ~%tutu_scriptbg%XAN.CRE~ ~override~
+              ~%tutu_var%XAN4.CRE~ ~override~
+              ~%tutu_var%XAN6.CRE~ ~override~
+ SAY 0x148 @79
+
+///////////////////
+// Misc sound fixes
+/*STRING_SET 2913 @80 Gorion's dialogue, not needed*/
+
+COPY_EXISTING ~%tutu_var%DARRYL2.CRE~ ~override~
+              ~%tutu_var%ITASLOI.CRE~ ~override~
+              ~%tutu_scriptt%ASLGURK.CRE~ ~override~
+              ~%tutu_var%TASLOI.CRE~ ~override~
+              ~%tutu_scriptt%ASLOI02.CRE~ ~override~
+              ~%tutu_scriptt%ASLOI03.CRE~ ~override~
+              ~%tutu_scriptt%ASLOISU.CRE~ ~override~
+ SAY 0x10c @81
+
+COPY_EXISTING ~%tutu_var%JELLMU.CRE~ ~override~
+              ~%tutu_var%JELLMUL.CRE~ ~override~
+              ~%tutu_var%JELLOC.CRE~ ~override~
+              ~%tutu_var%JELLSPA.CRE~ ~override~
+              ~%tutu_var%JELLYMU.CRE~ ~override~
+ SAY 0xec @82
+
+COPY_EXISTING ~%tutu_var%CHANTH.CRE~ ~override~
+ SAY 0xa4 @83
+
+COPY_EXISTING ~%tutu_var%DOOMDUR.CRE~ ~override~
+ SAY 0xd0 @85
+ SAY 0x114 @85
+COPY_EXISTING ~%tutu_var%DOOMGU.CRE~ ~override~
+ SAY 0xd0 @85
+ SAY 0x114 @85
+ SAY 0x1c0 @85
+
+COPY_EXISTING ~%tutu_var%VULTUR.CRE~ ~override~
+ SAY 0x1bc @86
+
+/*STRING_SET 11640 @87 - unused*/
+
+COPY_EXISTING ~%tutu_var%CULT3.CRE~ ~override~
+              ~%tutu_var%KARLAT.CRE~ ~override~
+              ~%tutu_scripts%LEEPFAT.CRE~ ~override~
+ SAY 0xec @88
+
+END ELSE BEGIN //BG
+ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
+
+/////////////////////////////////////////////////////////
+// Ajantis sound fix (duplicate, probably unused strings)
+STRING_SET 14399 @60
+STRING_SET 14400 @61
+STRING_SET 14401 @62
+STRING_SET 14402 @63
+
+/////////////////////
+// Tanar'ri sound fix
+ACTION_IF GAME_IS ~totsc~ THEN BEGIN
+STRING_SET 23827 @64
+STRING_SET 23828 @65
+STRING_SET 23829 @66
+STRING_SET 23830 @67
+STRING_SET 23831 @68
+STRING_SET 23832 @69
+END
+
+///////////////////////////
+// Delsvirftanyon sound fix
+STRING_SET 4839 @70
+STRING_SET 4842 @71
+STRING_SET 12532 @72
+STRING_SET 12533 @73
+
+///////////////////////////////
+// Gandolar Luckyfoot sound fix
+STRING_SET 4843 @74
+STRING_SET 4844 @75
+STRING_SET 12534 @76
+STRING_SET 12535 @77
+
+////////////////////////////////
+// Garrick sound fix (not funny)
+STRING_SET 3668 @78
+
+/////////////////////////////////////////////
+// Xan sound fix (duplicate, probably unused)
+STRING_SET 14388 @79
+
+///////////////////
+// Misc sound fixes
+STRING_SET 2913 @80
+STRING_SET 5482 @81
+STRING_SET 5962 @82
+STRING_SET 11342 @83
+STRING_SET 11402 @85
+STRING_SET 11635 @86
+STRING_SET 11640 @87
+STRING_SET 12355 @88
+
+////////////////////////////////////
+// Restore Delsvirftanyon's soundset
+COPY_EXISTING DELSVIR.CRE ~override~
+PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+  SAY INITIAL_MEETING #4839
+  SAY DAMAGE          #12532
+  SAY DYING           #12533
+  SAY SELECT_COMMON1  #4842
+END
+BUT_ONLY
+
+END //BG
+END //BGT/Tutu check
+
+// Zombie Soundset Fix, by Macready~
+// Author: Macready
+// Email: jman@nycap.rr.com
+// Website: http://www.usoutpost31.com/easytutu
+
+/* A few zombies have incorrect soundsets */
+COPY_EXISTING ~%tutu_scriptz%ombie_b.cre~ ~override/macdummy.cre~
+  READ_ASCII 0x00A4 "creatureSoundset" (400) // Read creature soundset array in one chunk
+ BUT_ONLY
+COPY_EXISTING ~%tutu_scriptz%OMBIE_A.CRE~ ~override~
+              ~%tutu_var%ZOMBIE.CRE~ ~override~
+              ~%tutu_var%ZOMBIEB.CRE~ ~override~
+  WRITE_ASCIIE 0x00A4 "%creatureSoundset%" #400
+ BUT_ONLY

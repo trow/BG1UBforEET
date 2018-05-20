@@ -1,0 +1,86 @@
+///// Minor Dialogue Restorations                      \\\\\
+
+ACTION_IF !GAME_IS ~bg1 totsc~ THEN BEGIN
+  COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/u!minor1.d~
+  COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/u!ch7.d~
+  COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/ubhobgo5.baf~
+END ELSE BEGIN
+  COMPILE ~bg1ub/dialogues/u!minor1.d~
+  COMPILE ~bg1ub/dialogues/u!ch7.d~
+  COMPILE ~bg1ub/dialogues/ubhobgo5.baf~
+END
+
+ACTION_IF GAME_IS ~tutu_totsc bgt bgee~ THEN BEGIN
+  COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/u!totscminor.d~
+END ELSE BEGIN
+  ACTION_IF GAME_IS ~totsc~ THEN BEGIN
+    COMPILE ~bg1ub/dialogues/u!totscminor.d~
+  END
+END
+
+COPY_EXISTING ~%tutu_var%FTOBE5.CRE~ ~override~
+  ADD_CRE_ITEM ~%tutu_var%RING01~ #0 #0 #0 NONE ~LRING RRING~
+
+COPY_EXISTING ~%tutu_var%HALFG4.CRE~ ~override~
+  ADD_CRE_ITEM ~%tutu_var%POTN40~ #1 #0 #0 NONE ~QITEM1 QITEM2 QITEM3~
+
+COPY_EXISTING ~%tutu_var%HALFG6.CRE~ ~override~
+  ADD_CRE_ITEM ~%tutu_var%SLNG02~ #0 #0 #0 NONE ~WEAPON1 WEAPON2~ EQUIP
+
+COPY_EXISTING ~%tutu_var%MTOB2.CRE~ ~override~
+  WRITE_LONG 0x1c 0x1
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%MTOB8.CRE~ ~override~
+  WRITE_LONG 0x1c 0x2
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%MTOB9.CRE~ ~override~
+  WRITE_LONG 0x1c 0x1
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%NOBL10.CRE~ ~override~
+  ADD_CRE_ITEM ~%tutu_var%AMUL07~ #0 #0 #0 NONE AMULET
+
+COPY_EXISTING ~%tutu_var%NOBL11.CRE~ ~override~
+  WRITE_LONG 0x1c 0xa
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%NOBL4.CRE~ ~override~
+  WRITE_LONG 0x1c 0x14
+BUT_ONLY
+
+COPY_EXISTING ~%tutu_var%NOBL8.CRE~ ~override~
+  ADD_CRE_ITEM ~%tutu_var%RING17~ #0 #0 #0 NONE LRING
+
+COPY_EXISTING ~%tutu_var%RAMAZI.CRE~ ~override~
+  ADD_CRE_ITEM ~%tutu_var%BRAC02~ #0 #0 #0 NONE ~INV1 INV5~
+
+COPY_EXISTING ~%tutu_var%SMITH.CRE~ ~override~
+  ADD_CRE_ITEM ~%tutu_var%CHAN01~ #0 #0 #0 NONE ~QITEM1 QITEM2 QITEM3~
+
+// AR4200 Hobgoblin Fix, by Dudley~
+// Author: Dudley, modified by Ascension64 (streamline init dialog script)
+// Email:
+// Website: http://www.dudleyville.com
+COPY_EXISTING ~%tutu_var%HOBGO5.CRE~ ~override~ // Hobgoblin, AR4200
+  WRITE_ASCII 0x248 ~UBHOBGO5~ #8 // Allows him to initiate dialog
+  WRITE_BYTE 0x270 0x80 // Changes him from Enemy to Neutral
+  WRITE_BYTE 0x272 0x6f // Sets his race as Hobgoblin
+  WRITE_ASCIIE 0x2cc ~%tutu_var%HOBGO5~ #8 // Sets his dialog file
+BUT_ONLY
+
+// Corrections to Lahl's dialog on Isle of Balduran
+ACTION_IF (GAME_IS ~totsc tutu_totsc bgt~) THEN BEGIN
+	COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/ublahl.d~
+END // Lahl correction
+
+// Restoration of Unshey Dialogs on Girdle of Gender Bender
+ACTION_IF !GAME_IS ~bg1 totsc~ THEN BEGIN
+  COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/ubunshey.d~
+  COPY_EXISTING ~%tutu_var%BOOK09.ITM~ ~override/ubunbook.itm~
+  	SAY NAME2 @120
+  	SAY UNIDENTIFIED_DESC @121
+  	WRITE_LONG 0x4c 2  // Weight
+  	WRITE_LONG 0x34 50 // Price
+END
