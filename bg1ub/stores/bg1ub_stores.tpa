@@ -320,8 +320,8 @@ ACTION_IF !GAME_IS ~bgee~ THEN BEGIN // Already included in BGEE
   COPY_EXISTING ~%tutu_var%merch4.dlg~ ~override/ubme0706.dlg~
 END // Elfsong
 
-// Red Sheaf Inn Rumor Fix - BG1/BG1-TotSC Only (Fixed in Tutu, BGEE)
-ACTION_IF GAME_IS ~bg1 totsc~ THEN BEGIN
+// Red Sheaf Inn Rumor Fix - BG1/BG1-TotSC/BGT Only (Fixed in Tutu, BGEE)
+ACTION_IF GAME_IS ~bg1 totsc bgt~ THEN BEGIN
   COPY_EXISTING ~INN3357.STO~ ~override~
     WRITE_ASCII 0x44 ~RBEREG~ #8
   BUT_ONLY
