@@ -127,25 +127,28 @@ END // Bartender fixes
 // Inn, Tavern, Store name restorations
 ACTION_IF !GAME_IS ~bgee~ THEN BEGIN // Already included in BGEE
 
-  COPY_EXISTING ~%tutu_var%INN4801.STO~ ~override~ // The Northern Light
-    SAY 0x0C #11696
-  BUT_ONLY
+   // Change "Nashkel Inn" to "The Northern Light"
+  ACTION_IF !(MOD_IS_INSTALLED ~Setup-BGFixPack.tp2~ ~2~) THEN BEGIN // Do not make this change if BGFixPack's Game Text Update is installed
+    COPY_EXISTING ~%tutu_var%INN4801.STO~ ~override~
+      SAY 0x0C #11696
+    BUT_ONLY
 
-  COPY_EXISTING ~%Nashkel%.ARE~ ~override~ // Nashkel
-  READ_LONG 0x5c trigOff ELSE 0x0
-  PATCH_IF (trigOff) BEGIN
-    FOR (READ_SHORT 0x5a numTrig; numTrig; numTrig -= 0x1) BEGIN
-      READ_ASCII trigOff name         // Trigger name
-      READ_SHORT trigOff + 0x20 type  // Trigger type
-      READ_LONG trigOff + 0x64 string // Info point StrRef
-      PATCH_IF ("%name%" STRING_EQUAL_CASE "INFO4801") && (type == 0x1) &&
-               ((string == 16266) OR (string == 11683)) BEGIN
-        SAY trigOff + 0x64 #11696 // Renames the area info trigger for the inn to say "The Northern Light"
+    COPY_EXISTING ~%Nashkel%.ARE~ ~override~ // Nashkel
+      READ_LONG 0x5c trigOff ELSE 0x0
+      PATCH_IF (trigOff) BEGIN
+        FOR (READ_SHORT 0x5a numTrig; numTrig; numTrig -= 0x1) BEGIN
+          READ_ASCII trigOff name         // Trigger name
+          READ_SHORT trigOff + 0x20 type  // Trigger type
+          READ_LONG trigOff + 0x64 string // Info point StrRef
+          PATCH_IF ("%name%" STRING_EQUAL_CASE "INFO4801") && (type == 0x1) &&
+                   ((string == 16266) OR (string == 11683)) BEGIN
+            SAY trigOff + 0x64 #11696 // Renames the area info trigger for the inn to say "The Northern Light"
+          END
+          trigOff += 0xc4
+        END
       END
-      trigOff += 0xc4
-    END
-  END
-  BUT_ONLY
+    BUT_ONLY
+  END // End Naskel Inn to Northern Light
 
   COPY_EXISTING ~%tutu_var%STO4906.STO~ ~override~ // Carnival Shop
     SAY 0x0C #11688
