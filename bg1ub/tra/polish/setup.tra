@@ -14,7 +14,7 @@
 @90015 = ~Funkcjonalnosc tego komponentu juz istnieje lub jest zastapiona, przez ktorys z juz zainstalowanych modow.~
 @90016 = ~Funkcjonalnosc tego komponentu jest juz w BGEE.~
 @90017 = ~Instalacja BGEE wykryta.~
-@90018 = ~Konieczna jest installacja moda DLCMerger, aby mozliwe bylo zainstalowanie dowolnych modow. Sprawdz plik readme, aby uzyskac wiecej informacji oraz link do pobrania DLCMerger.~
+@90018 = ~Konieczna jest installacja moda DLC Merger, aby mozliwe bylo zainstalowanie dowolnych modow. Sprawdz plik readme, aby uzyskac wiecej informacji oraz link do pobrania DLC Merger.~
 
 @0     = ~Przywrocenie drugiego poziomu Lodowej Wyspy~
 @1     = ~Ten komponent wymaga Opowiesci z Wybrzeza Mieczy.~
