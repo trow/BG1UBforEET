@@ -1,9 +1,11 @@
 # BG1 Unfinished Business
 A mod for BG1Tutu and Baldur's Gate Trilogy
 
-**Version 15.2**
+**Version 16.0**
 
 **Developed by:** icelus, devSin, SimDing0, Idobek, Ascension64, CamDawg, SixOfSpades, and Dudley
+
+**Current Maintainer:** AstroBryGuy
 
 **BG1UB Support Forum:** http://forums.pocketplane.net/index.php/board,79.0.html
 
@@ -467,5 +469,23 @@ Below are links to community-related sites:
 * Version 15.2
   * Updated French translations - Thanks Isaya!
   * Updated Italian translations - Thanks Aedan!
-
-Please see bg1ub.txt for release notes pertaining to your specific platform.
+* Version 16.0
+  * Block the following components from being installed on BGEE v2.5:
+    * The Mysterious Vial
+    * Finishable Kagain Caravan Quest
+    * Kivan and Tazok
+    * Branwen and Tranzig
+    * Place Entar Silvershield in His Home
+    * Prism and the Emeralds
+  * Moving code blocks for most components to external .tpa files
+  * Kivan & Tazok: Add dialogue for Kivan-Tazok recognition to more dialog states in TAZOK.DLG
+  * Store, Tavern and Inn Fixes and Restorations:
+    * Adding BGT to Red Sheaf Inn rumor fix.
+    * Fixed Nashkel Inn name conflict with BGFixPack Game Text Update
+    * Update Elfsong Tavern to use TAV0705.STO
+  * Creature Corrections: 
+    * Fix issue with DROTH CreateCreature() command on BG1 w/o TotSC
+    * Give Taurgosz Khosann FR-canon colors in BGEE v2.5
+  * Nim Furlwing Encounter: Fix issue with reward scroll
+  * Chapter 6 Dialogue Restorations: Fixed issue installing on BG1-TotSC
+ 
