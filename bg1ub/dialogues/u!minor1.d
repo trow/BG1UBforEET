@@ -45,7 +45,7 @@ REPLACE_ACTION_TEXT PHEIRK ~True()~ ~~ //6
 REPLACE_ACTION_TEXT PHEIRKAS ~True()~ ~~ //6
 REPLACE_ACTION_TEXT SAFANA ~"Safanap"~ ~"Safanp"~ //16
 REPLACE_ACTION_TEXT SHARTE ~"SHARTEEL,~ ~"SHARTEEL"~ //5
-REPLACE_ACTION_TEXT SHOAL ~CreateCreature("DROTH",\[2500.500\])~ ~CreateCreature("DROTH",[2500.500],0)~ //6, 7 error on no-TotSC
+REPLACE_ACTION_TEXT SHOAL ~CreateCreature("DROTH",\[2500.500\])~ ~CreateCreature("DROTH",[2500.500]%FACE_0%)~ //6, 7 error on no-TotSC
 REPLACE_ACTION_TEXT SONNER ~^Global(HelpJebadoh","GLOBAL",2)~ ~SetGlobal("HelpJebadoh","GLOBAL",2)~ //8
 REPLACE_ACTION_TEXT TAMOKO ~FRIENLY_LOWER~ ~FRIENDLY_LOWER~ //23
 REPLACE_ACTION_TEXT VICONI ~"viconiap"~ ~"viconp"~ //13
@@ -58,12 +58,12 @@ ADD_STATE_TRIGGER FTOBE5 4 ~HasItem("RING01",Myself)~ UNLESS ~Global("DXFtobe5",
 
 //4
 ADD_TRANS_ACTION FTOBE5 BEGIN 4 END BEGIN 0 END ~GiveItem("RING01",LastTalkedToBy)~
-UNLESS ~GiveItemCreate("RING10",LastTalkedToBy(),1,0,0)~  
+UNLESS ~GiveItemCreate("RING10",LastTalkedToBy(),1,0,0)~
 
 REPLACE_TRIGGER_TEXT HALFG4 ~StateCheck(Myself,STATE_CHARMED)~ ~StateCheck(Myself,8192)
 HasItem("POTN40",Myself)~ //8
 
-//considers compatibility with Dudley fixes 
+//considers compatibility with Dudley fixes
 ADD_STATE_TRIGGER HALFG6 9 ~HasItem("SLNG02",Myself)~ UNLESS ~Global("DXHalfg6b","GLOBAL",0)~
 ADD_TRANS_ACTION HALFG6 BEGIN 9 END BEGIN 0 END ~GiveItem("SLNG02",LastTalkedToBy)~ UNLESS ~GiveItemCreate("SLNG02",LastTalkedToBy(),1,0,0)~
 
@@ -73,11 +73,11 @@ ADD_TRANS_ACTION HENTOL BEGIN 12 END BEGIN 0 END ~SetGlobal("HELPHENTOLD","GLOBA
 GiveItem("DAGG03",LastTalkedToBy)
 EscapeArea()~
 
-//considers compatibility with Dudley fixes 
+//considers compatibility with Dudley fixes
 ADD_STATE_TRIGGER IRONM2 3 ~CheckStatGT(Myself,24,45)~ UNLESS ~Global("DXIronm2","GLOBAL",0)~
 ADD_TRANS_ACTION IRONM2 BEGIN 3 END BEGIN 0 END ~GivePartyGold(25)~ UNLESS ~GivePartyGold(25)~
 
-//considers compatibility with Dudley fixes 
+//considers compatibility with Dudley fixes
 ADD_STATE_TRIGGER IRONM3 3 ~CheckStatGT(Myself,24,45)~ UNLESS ~Global("DXIronm3","GLOBAL",0)~
 ADD_TRANS_ACTION IRONM3 BEGIN 3 END BEGIN 0 END ~GivePartyGold(25)~ UNLESS ~GivePartyGold(25)~
 
@@ -86,7 +86,7 @@ CheckStatGT(Myself,19,45)~ //1
 
 REPLACE_ACTION_TEXT MAREK ~DisplayString("Marek",20675)~ ~DisplayString(Player1,20675)~
 
-//considers compatibility with Dudley fixes 
+//considers compatibility with Dudley fixes
 ADD_STATE_TRIGGER MAREK 5 ~Global("PARTYCURED","GLOBAL",0)~ UNLESS ~Global("MarekMove","GLOBAL",1)~
 ADD_TRANS_ACTION MAREK BEGIN 5 END BEGIN 0 END ~GiveItem("POTN47",LastTalkedToBy)
 SetGlobal("PARTYCURED","GLOBAL",1)
@@ -105,7 +105,7 @@ ADD_STATE_TRIGGER NOBL11 2 ~CheckStatGT(Myself,9,45)~ UNLESS ~Global("DXNobl11",
 
 ADD_TRANS_ACTION NOBL11 BEGIN 2 END BEGIN 0 END ~GivePartyGold(10)~ UNLESS ~GiveGoldForce(10)~
 
-//considers compatibility with Dudley fixes 
+//considers compatibility with Dudley fixes
 ADD_STATE_TRIGGER NOBL4 7 ~CheckStatGT(Myself,19,45)~ UNLESS ~Global("DXNobl4","GLOBAL",0)~
 ADD_TRANS_ACTION NOBL4 BEGIN 7 END BEGIN 0 END ~GivePartyGold(20)~ UNLESS ~GiveGoldForce(20)~
 

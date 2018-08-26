@@ -5,7 +5,7 @@ ACTION_IF !GAME_IS ~bg1 totsc~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/u!ch7.d~
   COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/ubhobgo5.baf~
 END ELSE BEGIN
-  COMPILE ~bg1ub/dialogues/u!minor1.d~
+  COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/u!minor1.d~
   COMPILE ~bg1ub/dialogues/u!ch7.d~
   COMPILE ~bg1ub/dialogues/ubhobgo5.baf~
 END
