@@ -14,6 +14,7 @@
 @90015 = ~The functionality of this component is either already included or superseded by one of your already installed mods.~
 @90016 = ~The functionality of this component is already included in BGEE.~
 @90017 = ~BGEE install detected.~
+@90018 = ~DLC Merger is required before mods can be installed on this game. Check the readme for more information and a link to download DLC Merger.~
 
 @0    = ~Ice Island Level Two Restoration~
 @1    = ~The Tales of the Sword Coast expansion is required for this component.~

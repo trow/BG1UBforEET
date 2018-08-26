@@ -13,7 +13,7 @@
 @90015 = ~Les fonctionnalites de ce composant sont deja incluses ou supplantees par un des mods que vous avez deja installes.~
 @90016 = ~Les fonctionnalites de ce composant sont deja incluses dans BGEE.~
 @90017 = ~Installation de BGEE detectee.~
-
+@90018 = ~La fusion DLC est nécessaire avant que des mods puissent être installés sur ce jeu. Consultez le fichier Lisez-moi pour plus d'informations et un lien pour télécharger DLC Merger.~
 
 // Remarques
 // J'ai retiré les accents des textes qui correspondent aux différents composants pour préserver l'affichage dans la fenêtre WeiDU

@@ -1,5 +1,5 @@
 # BG1 Unfinished Business
-A mod for BG1Tutu and Baldur's Gate Trilogy
+A mod for BG1, BG1-TotSC, Tutu, BGT, BGEE, and EET
 
 **Version 16.0**
 
@@ -16,6 +16,25 @@ A mod for BG1Tutu and Baldur's Gate Trilogy
 BG1 Unfinished Business ("BG1UB") is a mod designed to restore many of the cut items, quests, and encounters from the original Baldur's Gate game's final release, as well as try to tie up some of the "loose ends."  As usual, BG1UB should be compatible with most other WeiDU-based mods, and should be installed after either conversion. BG1UB is compatible with Baldur's Gate 1 (with or without Tales of the Sword Coast), Tutu, BGT, and Baldur's Gate: Enhanced Edition.
 
 For version 13+ no additional audio pack is needed. Do not install the separate German, French or Spanish audio packs of earlier releases!
+
+## INSTALLATION
+
+If you encounter any problems installing the mod, please post the contents of the file SETUP-bg1ub.DEBUG at the [BG1UB support forum](http://forums.pocketplane.net/index.php/board,79.0.html).
+
+### Special Note for Siege of Dragonspear from Steam/GOG
+Good Old Games (GOG) and Steam both package the additional content for Siege of Dragonspear in a method that WeiDU, the tool used to install this mod, cannot access. You must install a mod called [DLC Merger](https://github.com/Argent77/A7-DlcMerger/releases/latest) on your SoD installation before you can install this or any other WeiDU-based mod.
+
+###Windows
+If the mod was previously installed, uninstall it before extracting the new version. BG1UB is packaged and installed with WeiDU. To install, extract the mod archive, then copy of the contents of the archive into your game folder (the folder which contains the chitin.key file). If properly extracted, you should have a "bg1ub" folder and setup-bg1ub.exe in your game folder. To install, simply double-click setup-bg1ub.exe and follow the instructions on screen. 
+
+Please run setup-bg1ub.exe in your game folder to reinstall, uninstall or otherwise change components.
+
+###Mac OS X
+If the mod was previously installed, uninstall it before extracting the new version. BG1UB is packaged and installed with WeiDU. To install, extract the mod archive, then copy of the contents of the folder "OSX-bg1ub-v14" into your game folder (the folder which contains the chitin.key file). If properly extracted, you should have a "bg1ub" folder, setup-bg1ub, and setup-bg1ub.command in your game folder. To install, simply double-click setup-bg1ub.command and follow the instructions on screen. 
+
+Please run setup-bg1ub.command in your game folder to reinstall, uninstall or otherwise change components. 
+
+## CONTENTS
 
 Listed below is an explanation of some of the mod's components:
 
@@ -88,22 +107,6 @@ Listed below is an explanation of some of the mod's components:
 **33. Mal-Kalen, the Ulcaster Ghost:** This new component was provided by AstroBryGuy. The spirit of Mal-Kalen haunts the depths of the Ulcaster Ruins.
 
 **34. Chapter 6 Dialogue Restorations:** This new component was provided by AstroBryGuy. Did you ever want to have a little chat with Tethtoril in Candlekeep Library? Did it ever bug you that the Gatewarden was waiting for you on the 6th floor, no matter how fast you go there after talking to Koveras? This component changes that. Now, you can visit Tethtoril, have a little chat, and then stumble into Koveras' clever scheme. Many thanks to Salk for suggestions for this component.
-
-## INSTALLATION
-
-If you encounter any problems installing the mod, please post the contents of the file SETUP-bg1ub.DEBUG at the [BG1UB support forum](http://forums.pocketplane.net/index.php/board,79.0.html).
-
-###Windows
-
-If the mod was previously installed, uninstall it before extracting the new version. BG1UB is packaged and installed with WeiDU. To install, extract the mod archive, then copy of the contents of the archive into your game folder (the folder which contains the chitin.key file). If properly extracted, you should have a "bg1ub" folder and setup-bg1ub.exe in your game folder. To install, simply double-click setup-bg1ub.exe and follow the instructions on screen. 
-
-Please run setup-bg1ub.exe in your game folder to reinstall, uninstall or otherwise change components.
-
-###Mac OS X
-
-If the mod was previously installed, uninstall it before extracting the new version. BG1UB is packaged and installed with WeiDU. To install, extract the mod archive, then copy of the contents of the folder "OSX-bg1ub-v14" into your game folder (the folder which contains the chitin.key file). If properly extracted, you should have a "bg1ub" folder, setup-bg1ub, and setup-bg1ub.command in your game folder. To install, simply double-click setup-bg1ub.command and follow the instructions on screen. 
-
-Please run setup-bg1ub.command in your game folder to reinstall, uninstall or otherwise change components. 
 
 ## COMPATIBILITY
 
@@ -186,10 +189,9 @@ BG1 Unfinished Business is copyright © 2006 by Erik Manning (aka icelus)
 
 BALDUR'S GATE, BALDUR'S GATE: TALES OF THE SWORD COAST, BALDUR'S GATE: THE ORIGINAL SAGA © 1998, 1999 BioWare Corp. All Rights Reserved.
 
-BG1 Unfinished Business is not developed, supported, or endorsed by BioWare or Interplay/Black Isle.
-All images and contents of this mod are copyright BioWare, Interplay/Black Isle or Wizards of the Coast.
-
 REDISTRIBUTION NOTE: BG1 Unfinished Business was created to be freely enjoyed by all Baldur's Gate gamers. BG1 Unfinished Business, however, may not be sold, published, compiled or redistributed in any form without the consent of its authors.
+
+BG1 Unfinished Business is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards of the Coast, Bioware, Interplay/Black Isle, or Beamdog. Portions of the materials used are property of Wizards of the Coast, Bioware, Interplay/Black Isle, or Beamdog. ©Wizards of the Coast LLC, Bioware/EA, Interplay/Black Isle, Beamdog.
 
 ## CREDITS
 

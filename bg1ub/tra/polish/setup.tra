@@ -1,36 +1,36 @@
 //DOS prompts - use DOS encoding
-@90000 = ~Komponent modyfikacji BG1 NPC Project "The BG1 NPC Project: Phase II (Quests and Interjections) stwarza problemy z wybranym komponentem.~ 
+@90000 = ~Komponent modyfikacji BG1 NPC Project "The BG1 NPC Project: Phase II (Quests and Interjections) stwarza problemy z wybranym komponentem.~
 @90001 = ~Komponent modyfikacji BG1 NPC Project "The BG1 NPC Project: Core Install" stwarza problemy z wybranym komponentem.~
-@90002 = ~Komponent modyfikacji BG1 NPC Project "The BG1 NPC Project: Phase I (Banters)" stwarza problemy z wybranym komponentem.~ 
+@90002 = ~Komponent modyfikacji BG1 NPC Project "The BG1 NPC Project: Phase I (Banters)" stwarza problemy z wybranym komponentem.~
 @90003 = ~Polnocne Opowiesci z Wybrzeza Mieczy stwarzaja problemy z wybranym komponentem.~
 @90004 = ~Komponent ten nie jest kompatybilny z modem Jarl's Adventure Pack.~
 
-@90010 = ~Instalacja Tutu wykryta.~ 
+@90010 = ~Instalacja Tutu wykryta.~
 @90011 = ~Instalacja BGT wykryta.~
 @90012 = ~Instalacja BG wykryta.~
-@90013 = ~Prosze zainstalowac BG, BGT, Tutu lub BGEE.~ 
-@90014 = ~Prosze zainstalowa‘ BGT lub Tutu.~
+@90013 = ~Prosze zainstalowac BG, BGT, Tutu lub BGEE.~
+@90014 = ~Prosze zainstalowac BGT lub Tutu.~
 
 @90015 = ~Funkcjonalnosc tego komponentu juz istnieje lub jest zastapiona, przez ktorys z juz zainstalowanych modow.~
 @90016 = ~Funkcjonalnosc tego komponentu jest juz w BGEE.~
 @90017 = ~Instalacja BGEE wykryta.~
+@90018 = ~DLC Konieczne jest polaczenie, aby mozliwe bylo zainstalowanie modow w tej grze. Sprawdz plik readme, aby uzyskac wiecej informacji oraz link do pobrania polaczenia DLC.~
 
-
-@0     = ~Przywrocenie drugiego poziomu Lodowej Wyspy~ 
+@0     = ~Przywrocenie drugiego poziomu Lodowej Wyspy~
 @1     = ~Ten komponent wymaga Opowiesci z Wybrzeza Mieczy.~
 @2     = ~Tajemniczy flakonik~
-@3     = ~Dodatkowe spotkanie z Elminsterem~ 
+@3     = ~Dodatkowe spotkanie z Elminsterem~
 @4     = ~Angelo reaguje na Shar-teel~
-@5     = ~Mozliwosc ukonczenia zadania Kagaina~ 
+@5     = ~Mozliwosc ukonczenia zadania Kagaina~
 
 @7     = ~Coran i wiwerny~
 @8     = ~Kivan i Tazok~
-@9     = ~Branwen i Tranzig~ 
+@9     = ~Branwen i Tranzig~
 @10    = ~Flirt Safany~
 
-@12    = ~Sensowna nagroda Alberta~ 
+@12    = ~Sensowna nagroda Alberta~
 @13    = ~Umieszczenie Entara Srebrnej Tarczy w jego domu~
-@14    = ~Scar i corka Sashenstarow~ 
+@14    = ~Scar i corka Sashenstarow~
 
 @17    = ~Kaplan Quoningar~
 @18    = ~Shilo Chen i Ogrzy-Mag~
