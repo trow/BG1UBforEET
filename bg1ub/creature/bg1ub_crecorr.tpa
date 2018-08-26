@@ -1003,59 +1003,64 @@ BUT_ONLY
 /////////////////////////////////
 //Correct cultist death variables
 ACTION_IF GAME_IS ~tutu tutu_totsc bg1 totsc~ THEN BEGIN //BG and Tutu only
+  COPY_EXISTING ~%tutu_var%CULT1.CRE~ ~override~ //Cult Guard
+    PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+      WRITE_ASCII 0x280 "CultGuard1" #32 //was a duplicate "CultGuard", interferes with CULTSHT.BCS
+    END
+  BUT_ONLY
 
-COPY_EXISTING ~%tutu_var%CULT1.CRE~ ~override~ //Cult Guard
-  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_ASCII 0x280 "CultGuard1" #32 //was a duplicate "CultGuard", interferes with CULTSHT.BCS
-  END
-BUT_ONLY
+  COPY_EXISTING ~%tutu_var%CULT2.CRE~ ~override~ //Cult Wizard
+    PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+      WRITE_ASCII 0x280 "CultWizard1" #32
+    END
+  BUT_ONLY
 
-COPY_EXISTING ~%tutu_var%CULT2.CRE~ ~override~ //Cult Wizard
-  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_ASCII 0x280 "CultWizard1" #32
-  END
-BUT_ONLY
+  COPY_EXISTING ~%tutu_var%CULT3.CRE~ ~override~ //Cult Enforcer
+    PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+      WRITE_ASCII 0x280 "CultWizard2" #32
+    END
+  BUT_ONLY
 
-COPY_EXISTING ~%tutu_var%CULT3.CRE~ ~override~ //Cult Enforcer
-  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_ASCII 0x280 "CultWizard2" #32
-  END
-BUT_ONLY
+  COPY_EXISTING ~%tutu_var%CULT4.CRE~ ~override~ //Cult Archer, unused
+    PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+      WRITE_ASCII 0x280 "cultfodder" #32
+    END
+  BUT_ONLY
 
-COPY_EXISTING ~%tutu_var%CULT4.CRE~ ~override~ //Cult Archer, unused
-  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_ASCII 0x280 "cultfodder" #32
-  END
-BUT_ONLY
+  COPY_EXISTING ~%tutu_var%CULTASS.CRE~ ~override~ //Cult Assassin, unused
+    PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+      WRITE_ASCII 0x280 "CultAssassin" #32
+    END
+  BUT_ONLY
 
-COPY_EXISTING ~%tutu_var%CULTASS.CRE~ ~override~ //Cult Assassin, unused
-  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_ASCII 0x280 "CultAssassin" #32
-  END
-BUT_ONLY
+  COPY_EXISTING ~%tutu_var%CULTT1.CRE~ ~override~ //Cult Enforcer
+    PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+      WRITE_ASCII 0x280 "CultWizard" #32
+    END
+  BUT_ONLY
 
-COPY_EXISTING ~%tutu_var%CULTT1.CRE~ ~override~ //Cult Enforcer
-  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_ASCII 0x280 "CultWizard" #32
-  END
-BUT_ONLY
+  COPY_EXISTING ~%tutu_var%CULTT2.CRE~ ~override~ //Cult Guard
+    PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+      WRITE_ASCII 0x280 "CultGuard" #32
+    END
+  BUT_ONLY
 
-COPY_EXISTING ~%tutu_var%CULTT2.CRE~ ~override~ //Cult Guard
-  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_ASCII 0x280 "CultGuard" #32
-  END
-BUT_ONLY
+  COPY_EXISTING ~%tutu_var%CULTT3.CRE~ ~override~ //Cult Assassin
+    PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+      WRITE_ASCII 0x280 "CultAssassin" #32
+    END
+  BUT_ONLY
 
-COPY_EXISTING ~%tutu_var%CULTT3.CRE~ ~override~ //Cult Assassin
-  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_ASCII 0x280 "CultAssassin" #32
-  END
-BUT_ONLY
+  COPY_EXISTING ~%tutu_var%CULTT4.CRE~ ~override~ //Cult Archer
+    PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
+      WRITE_ASCII 0x280 "CultArcher" #32
+    END
+  BUT_ONLY
+END
 
-COPY_EXISTING ~%tutu_var%CULTT4.CRE~ ~override~ //Cult Archer
-  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
-    WRITE_ASCII 0x280 "CultArcher" #32
-  END
-BUT_ONLY
-
+// Give Taurgosz Khosann FR-canon colors in BGEE v2.5
+ACTION_IF FILE_EXISTS_IN_GAME ~unitalon.itm~ THEN BEGIN
+  COPY_EXISTING ~%tutu_var%taugos.cre~ ~override~
+    ADD_CRE_ITEM ~unitalon.itm~ #0 #0 #0 ~identified&stolen&undroppable~ ~amulet rring lring~
+  BUT_ONLY
 END
