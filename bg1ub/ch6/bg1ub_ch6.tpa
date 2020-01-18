@@ -63,3 +63,10 @@ COPY_EXISTING ~%tutu_var%gatewa2.cre~ ~override~
 COPY_EXISTING ~%tutu_var%watch6.cre~ ~override~
 	WRITE_ASCIIE DEATHVAR	~%tutu_var%WATCH6~ #32
 	BUT_ONLY
+
+/* create copy of friendly watch without the wrong script for level 6 */
+COPY_EXISTING ~%tutu_var%watch2.cre~ ~override/ubwatch2.cre~
+	WRITE_ASCIIE DEATHVAR	~ubwatch2~ #32
+WRITE_EVALUATED_ASCII 0x250 ~~ #8   // Class script: get rid of the watcher.bcs
+	BUT_ONLY
+
