@@ -1,5 +1,5 @@
 # BG1 Unfinished Business
-A mod for BG1, BG1-TotSC, Tutu, BGT, BGEE, and EET
+A mod for BG1, BG1-TotSC, Tutu, BGT, and BGEE
 
 **Version 16.0**
 
