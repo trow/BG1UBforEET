@@ -7,15 +7,16 @@
 
 @16   = ~Este es el cadáver de una mujer noble.~
 
-@19  = ~Guantes de robar~
-@20  = ~Guantes de robar
+@19  = ~Guantes de Robo~
+@20  = ~Guantes de Robo de Fong
 Hace unos años, Fong Moo un famoso ladrón conocido tanto en Puerta de Baldur como en Athkatla, fue encontrado muerto en el camino desde la Puerta a Beregost. Parece que robó un artefacto a un gran mago e intentó escapar sin mucho éxito. Sus posesiones recayeron en un sobrino con la misma vocación que su tío, y se hizo muy bueno robando carteras. Si estos guantes eran mágicos antes de caer en manos de Fong o si la esencia de su maestro ha quedado impregnada en ellos, es algo que no se sabe. 
 
-ESTADÍSTICAS
+CARACTERÍSTICAS:
 
-Robar:  +20%
+Robar: bonificación +20%
 
-Peso: 2~
+Peso: 2 lbs~
+
 
 @25  = ~Granjero~
 
@@ -53,16 +54,15 @@ Peso: 2~
 
 //@60-@88 moved to sound_tmp.tra
 @90  = ~Artículos diversos y de Curación de Alvanhendar~
-@91  = ~Tienda Black Lily~
+@91  = ~Tienda de Black Lily~
 @92  = ~Taberna~
-@93  = ~El Escudo Vigilante~
+@93  = ~El Escudo del Vigilante~
 
-@95  = ~Anillo de Piel robliza~
+@95  = ~Anillo de Piel Robliza~
 @96  = ~Hacha de Bala - Asesino de Magos:
-
 Bala era un príncipe muy temperamental de un clan de enanos gully que fue esclavizado por el mago Thesk. Aunque Bala no tenía las facetas más cobardes de su raza, era mucho más sucio y molesto que los enanos gully normales. Cansado de su esclavitud, Bala subió hasta la guarida del mago elfo y le rompió el cráneo. Aunque los rumores digan que fue el hedor del enano lo que mató al mago, en realidad fue su hacha, que anuló las defensas mágicas del mago. Es obvio que el mismo Bala fue quién creó el hacha. El misterio yace en dónde se origina el poder. Luego de muchos años de asesinar magos, Bala murió, y nunca reveló el secreto a aquellos que tuvieron el valor de acercarse a su tremendo hedor. Algunos dicen que el poder del hacha se originaba en el odio de Bala a los magos.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Aptitud especial: 
   Magia equívoca afecta a la víctima con cada golpe recibido
@@ -70,48 +70,46 @@ Aptitud especial:
 
 Daño: 1D8
 Tipo de daño: Cortante
-Peso: 6
+Peso: 6 lbs
 Factor de Velocidad: 7
-Tipo de talento: Hacha
-Tipo: Una mano
-
-No permitido a:
- Clérigo
- Druida
- Ladrón
- Mago~
+Talento marcial: Hacha
+Tipo: A una mano
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief~
 @97  = ~La cabeza cortada de un dragón es una visión tan terrible como tranquilizadora. Por muy horripilantes que sean sus fauces afiladas y llameantes sus ojos, existe el consuelo de saber que puede ser vencido por simples y humildes mortales.
 
-ESTADÍSTICAS:
-Peso: 30~
+CARACTERÍSTICAS:
+
+Peso: 30 lbs~
 @98  = ~El pelaje blanco y puro del lobo de invierno es suave y lujoso. Con frecuencia se cose en vestimentas tan diversas como las toscas camisas de los bárbaros de Uthgardt del norte y las estolas invernales de moda que llevan todas las damas nobles en la región de la Costa de la Espada.
 
-ESTADÍSTICAS:
-Peso: 10~
+CARACTERÍSTICAS:
+
+Peso: 10 lbs~
 @99  = ~El Ankheg es una criatura con forma de insecto de unos 3 ó 6 metros de largo que se suele encontrar en los bosques o tierras de agricultura.  Están recubiertos de placas o caparazones hechos de una sustancia llamada quitina que es sumamente dura y muy ligera. El tamaño, peso y la fuerza de los caparazones los convierten en un bien muy preciado en muchas situaciones, como por ejemplo en la creación de armaduras.
 
-ESTADÍSTICAS:
-Peso: 100~
+CARACTERÍSTICAS:
 
+Peso: 100 lbs~
 
 @105 = ~Son liderados por Sarevok Anchev.~
 @106 = ~Un hombre llamado Sarevok Anchev es responsable de la incriminación.~
 @107 = ~El vidente nos dijo que el líder del Trono de Hierro era Sarevok Anchev.~
 @108 = ~El vidente nos dijo que Sarevok Anchev fue quien nos incriminó por las muertes en Candelero.~
 @109 = ~[Nota para Davaeorn 1]Davaeorn,
-
 He recibido vuestro pedido para más esclavos. Os serán enviados lo antes posible. Las cosas van bien en Puerta de Baldur. Hemos comprado una de las mansiones nobles del oeste como base de operaciones. Es un edificio antiguo, probablemente construido antes de la erección del muro de piedra. Su construcción hace que sea casi impenetrable para aquellos que quieran robar. Recordad preguntarle a Yeslick si le gusta su nueva habitación.
 
 Rieltar.
 Eleint 14, 1367~
 @110 = ~[Nota para Davaeorn 2]Davaeorn,
-
 Nuestros planes van bien. Sarevok ha llegado desde nuestros cuarteles en Ordulin. Trae noticias de nuestros superiores; están satisfechos con nuestro progreso. Planeo poner a Sarevok como comandante de nuestras fuerzas mercenarias en la región. Él ya ha enviado a su subordinado, Tazok, al Bosque del Diente Afilado para tomar el comando de las fuerzas que se encuentran allí.  Las cosas están tranquilas en Puerta de Baldur. Hemos puesto a nuestro primer agente entre los cargos de los Siete Soles.
 
 Rieltar.
 Uktar 4, 1367~
 @111 = ~[Nota para Davaeorn 3]Davaeorn,
-
 Como habéis podido escuchar, el veneno del hierro ha comenzado a hacer efecto en la costa. Con la mayoría de las importaciones de hierro siendo interceptadas por Tazok, casi todo proviene de la zona infectada de Nashkel. Con el levantamiento sythillisiano en Amn, nos aseguramos de que ninguna fuerza de la nación sea capaz de tomar acción contra nuestras fuerzas mercenarias. Sin embargo, El Puño Llameante ha capturado a varios mercenarios de la Garra Negra. Todos los capturados han dicho ser aliados de los Zhentarim, desviado la atención sobre el Trono de Hierro. Envié a Tranzig a trabajar con los mercenarios transportando el hierro a vuestra base en el Bosque de las Capas. Ha traído varias bolsas de contención para que de esa manera pueda transportar él solo el hierro al Bosque de las Capas, reduciendo la posibilidad de que el Puño Llameante pueda encontrar vuestro escondite.
 
 Rieltar.
@@ -288,7 +286,7 @@ Estoy un poco decepcionado de Rieltar: Su habilidad manipulando este plan del hi
 
 Bala era un príncipe muy temperamental de un clan de enanos gully que fue esclavizado por el mago Thesk. Aunque Bala no tenía las facetas más cobardes de su raza, era mucho más sucio y molesto que los enanos gully normales. Cansado de su esclavitud, Bala subió hasta la guarida del mago elfo y le rompió el cráneo. Aunque los rumores digan que fue el hedor del enano lo que mató al mago, en realidad fue su hacha, que anuló las defensas mágicas del mago. Es obvio que el mismo Bala fue quién creó el hacha. El misterio yace en dónde se origina el poder. Luego de muchos años de asesinar magos, Bala murió, y nunca reveló el secreto a aquellos que tuvieron el valor de acercarse a su tremendo hedor. Algunos dicen que el poder del hacha se originaba en el odio de Bala a los magos.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Aptitud especial: 
   Magia equívoca afecta a la víctima con cada golpe recibido
@@ -296,9 +294,9 @@ Aptitud especial:
 
 Daño: 1D8
 Tipo de daño: Cortante
-Peso: 6
+Peso: 6 lbs
 Factor de Velocidad: 7
-Tipo de talento: Hacha
+Talento marcial: Hacha
 Tipo: Una mano~
 
 // Unshey Dialog Restoration
@@ -306,19 +304,20 @@ Tipo: Una mano~
 @121 = ~Un manual de salud corporal típico le proporciona al lector valiosa información sobre medicina preventiva, primeros auxilios y tonificación de músculos adecuada.
 
 Peso: 2 lbs~
-@123 = ~Guantes de robar
+
+@123 = ~Guantes de robo de Fong
 Hace unos años, Fong Moo un famoso ladrón conocido tanto en Puerta de Baldur como en Athkatla, fue encontrado muerto en el camino desde la Puerta a Beregost. Parece que robó un artefacto a un gran mago e intentó escapar sin mucho éxito. Sus posesiones recayeron en un sobrino con la misma vocación que su tío, y se hizo muy bueno robando carteras. Si estos guantes eran mágicos antes de caer en manos de Fong o si la esencia de su maestro ha quedado impregnada en ellos, es algo que no se sabe. 
 
-ESTADÍSTICAS
+CARACTERÍSTICAS:
 
-Robar:  +20% 
+Robar: bonificación +20%
 
-Peso: 2 lb~
+Peso: 2 lbs~
 
 // Ice Island Level 2 Restoration
-@1001 = ~Snow Golem~
-@1002 = ~Snow Golem Breath~
+@1001 = ~Gólem de Nieve~
+@1002 = ~Aliento de Gólem de Nieve~
 
 // Nim Furlwing Encounter
 @4001 = ~Nim Furlwing~
-@4002 = ~Hunting Dog~
+@4002 = ~Perro de caza~
