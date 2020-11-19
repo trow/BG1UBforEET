@@ -7,9 +7,8 @@
 
 @16   = ~Este es el cadáver de una mujer noble.~
 
-@19  = ~Guantes de Robo~
-@20  = ~Guantes de Robo de Fong
-Hace unos años, Fong Moo un famoso ladrón conocido tanto en Puerta de Baldur como en Athkatla, fue encontrado muerto en el camino desde la Puerta a Beregost. Parece que robó un artefacto a un gran mago e intentó escapar sin mucho éxito. Sus posesiones recayeron en un sobrino con la misma vocación que su tío, y se hizo muy bueno robando carteras. Si estos guantes eran mágicos antes de caer en manos de Fong o si la esencia de su maestro ha quedado impregnada en ellos, es algo que no se sabe. 
+@19  = ~Guantes del Ladrón Fong~
+@20  = ~Hace unos años, Fong Moo un famoso ladrón conocido tanto en Puerta de Baldur como en Athkatla, fue encontrado muerto en el camino desde la Puerta a Beregost. Parece que robó un artefacto a un gran mago e intentó escapar sin mucho éxito. Sus posesiones recayeron en un sobrino con la misma vocación que su tío, y se hizo muy bueno robando carteras. Si estos guantes eran mágicos antes de caer en manos de Fong o si la esencia de su maestro ha quedado impregnada en ellos, es algo que no se sabe. 
 
 CARACTERÍSTICAS:
 
@@ -320,5 +319,5 @@ Peso: 2 lbs~
 @1002 = ~Aliento de Gólem de Nieve~
 
 // Nim Furlwing Encounter
-@4001 = ~Nim Furlwing~
+@4001 = ~Nim Alasplegadas~
 @4002 = ~Perro de caza~
