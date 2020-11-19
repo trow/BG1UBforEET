@@ -54,9 +54,9 @@
 @219 = ~Duque Eltan en el Edificio del capitán del puerto~
 
 /* new v14 */
-@4000 = ~Nim Furlwing Encounter~
-@4100 = ~Restored Elfsong Tavern Movie~
-@4101 = ~This component is not compatible with BGEE. A BGEE-compatible version of this movie is included with the mod BG:EE Classic Movies.~
-@4200 = ~Svlast, the Fallen Paladin Encounter~
-@4300 = ~Mal-Kalen, the Ulcaster Ghost~
-@4400 = ~Chapter 6 Dialogue Restorations~
+@4000 = ~Encuentro de Nim Furlwing~
+@4100 = ~Película de la Taberna Canción Élfica restaurada~
+@4101 = ~Este componente no es compatible con BGEE. Se incluye una versión compatible con BGEE de esta película con el mod BG:EE Classic Movies.~
+@4200 = ~Svlast, el encuentro con el paladín caído~
+@4300 = ~Mal-Kalen, el fantasma de Ulcaster~
+@4400 = ~Restauraciones de diálogo del Capítulo 6~
