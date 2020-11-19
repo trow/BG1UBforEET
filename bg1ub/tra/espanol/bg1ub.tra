@@ -74,11 +74,12 @@ Peso: 6 lbs
 Factor de Velocidad: 7
 Talento marcial: Hacha
 Tipo: A una mano
-Not Usable By:
- Druid
- Cleric
- Mage
- Thief~
+
+No permitido a:
+ Clérigo
+ Druida
+ Ladrón
+ Mago~
 @97  = ~La cabeza cortada de un dragón es una visión tan terrible como tranquilizadora. Por muy horripilantes que sean sus fauces afiladas y llameantes sus ojos, existe el consuelo de saber que puede ser vencido por simples y humildes mortales.
 
 CARACTERÍSTICAS:
