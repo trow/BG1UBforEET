@@ -2,50 +2,50 @@
 
 //CRE Sounds
 /* 4852 */
-@4302 = ~[MAL-KALEN 1] Release! Release! Return to body to finish life! Must revenge!~ [MALKL01]
-@4303 = ~[MAL-KALEN 2] Release the body! Live again, I!~ [MALKL02]
+@4302 = ~[MAL-KALEN 1] ¡Soltadlo! ¡Soltadlo! ¡Soltad vuestro cuerpo para volver a la vida! ¡Debo vengarme!~ [MALKL01]
+@4303 = ~[MAL-KALEN 2] ¡Soltad vuestro cuerpo! ¡Yo,viviré de nuevo!~ [MALKL02]
 @4304 = ~[MAL-KALEN 3] ~ [MALKL03]
 @4305 = ~[MAL-KALEN 4] ~ [MALKL04]
 @4306 = ~[REVENANT 01] ~ [REVEN01]
-@4307 = ~[REVENANT 02] Must... revenge...~ [REVEN02]
+@4307 = ~[REVENANT 02] Debo... vengarme...~ [REVEN02]
 @4308 = ~[REVENANT 05] ~ [REVEN05]
 @4309 = ~[REVENANT 06] ~ [REVEN06]
 
 //Dialog
-@4310 = ~Help to me... body inside... just a shade I... inside body... I live again! Revenge the destroyers!~ /* #2472 */
-@4311 = ~Poor creature, who were you in life?~ /* #2474 */ 
-@4312 = ~Is there no rest for you spirit? What holds you to this place?~ /* #2476 */
-@4313 = ~Back you undead horror! Back, lest you wish to die again!~ /* #2475 */ 
-@4314 = ~Mal-Kalen I... student I... revenge destroyers... release the body!~ /* #2473 */
-@4315 = ~School destroyed by treachery... Ulcaster gone... protect they said... must revenge!~ /* #2477 */
-@4316 = ~Now the body inside... no escape for body... release body so I live! Revenge the destroyers!~ /* #2478 */
-@4317 = ~I beseech you, cease your attack! I am not your enemy!~ /* #2481 */
-@4318 = ~Leave me be! I want no part of your ancient anger!~ /* #2482 */
-@4319 = ~You thought you were dead before? Just wait until I'm through with you!~ /* #2483 */
-@4320 = ~You not enemy... you the body... release body so I live! Revenge the destroyers!~ /* #2479 */
-@4321 = ~The battle has been forgotten by all! Stop your pointless quest!~ /* #2488 */
-@4322 = ~I'm releasing my body right out of this place! See ya!~ /* #2489 */ 
-@4323 = ~Wait! You can take the body of Samuel. Just leave me be!~ 
-@4324 = ~Wait! You can take the body of Evan. Just leave me be!~ 
-@4325 = ~Wait! You can take the body of Brage. Just leave me be!~ 
-@4326 = ~Wait! You can take the body of Nathan. Just leave me be!~ 
-@4327 = ~Wait! You can take the body of Chelak. Just leave me be!~ 
-@4328 = ~Wait! You can take the body of this woman. Just leave me be!~ 
-@4329 = ~Wait! You can take the body of this man. Just leave me be!~ 
-@4330 = ~Has been but a tenday.. must revenge the destroyers! Release body!~ /* #2480 */
-@4331 = ~It has been 300 years! Time has already taken your quarry!~ /* #2487 */ 
-@4332 = ~"Release the body, release the body!" I'll release you back to the Nine Hells!~ /* #2490 */ 
-@4333 = ~Not forgotten by I... but a tenday... release the body!~ /* #2491 */
-@4334 = ~300 years... it cannot be... 300... dead all must be...~ /* #2496 */
-@4335 = ~All dead... I remain... will exact penance from descendants... revenge the destroyers! Release the body!~ /* #2497 */
-@4336 = ~Fight or no... release the body... RELEASE!!!~ /* #2498 */
-@4337 = ~I live again... revenge the destroyers!~ /* #2499 */
-@4338 =  ~Noooo... revenge the destroyers.... revenge....~ /* #2500 */
+@4310 = ~Ayudadme... dentro de tu cuerpo... solo seré una sombra yo... dentro de tu cuerpo... ¡Viviré de nuevo! ¡Venganza a nuestros destructores!~ /* #2472 */
+@4311 = ~Pobre criatura, ¿quién fuisteis en vida?~ /* #2474 */ 
+@4312 = ~¿No hay descanso para tu espíritu? ¿Qué te retiene en este lugar?~ /* #2476 */
+@4313 = ~¡Atrás, horroroso no muerto! ¡Atrás, si no deseas volver a morir!~ /* #2475 */ 
+@4314 = ~Yo ser Mal-Kalen... yo ser estudiante... yo vengarme de nuestros destructores... ¡soltad vuestro cuerpo!~ /* #2473 */
+@4315 = ~La Escuela destruida por la traición... Ulcaster desaparecido... protegerla, dijeron ... ¡debo vengarme!~ /* #2477 */
+@4316 = ~Dentro de vuestro cuerpo... no habrá escape para tu cuerpo... ¡Soltad vuestro cuerpo para que yo viva! ¡Venganza a nuestros destructores!~ /* #2478 */
+@4317 = ~¡Te suplico que detengas tu ataque! ¡No soy tu enemigo!~ /* #2481 */
+@4318 = ~¡Dejadme en paz! ¡No quiero saber nada de tu furia ancestral!~ /* #2482 */
+@4319 = ~¿Pensaste que estabas muerto antes? ¡Espera a que termine contigo!~ /* #2483 */
+@4320 = ~Tu no ser enemigo... tú tener un cuerpo... ¡Soltad vuestro cuerpo para que yo viva! ¡Venganza a nuestros destructores!~ /* #2479 */
+@4321 = ~¡La batalla ha sido olvidada por todos! ¡Detén tu búsqueda sin sentido!~ /* #2488 */
+@4322 = ~¡Voy a "soltar" mi cuerpo fuera de este lugar! ¡Nos vemos!~ /* #2489 */ 
+@4323 = ~¡Espera! Puedes llevarte el cuerpo de Samuel. ¡Dejadme en paz!~ 
+@4324 = ~¡Espera! Puedes llevarte el cuerpo de Evan. ¡Dejadme en paz!~ 
+@4325 = ~¡Espera! Puedes llevarte el cuerpo de Brage. ¡Dejadme en paz!~ 
+@4326 = ~¡Espera! Puedes llevarte el cuerpo de Nathan. ¡Dejadme en paz!~ 
+@4327 = ~¡Espera! Puedes llevarte el cuerpo de Chelak. ¡Dejadme en paz!~ 
+@4328 = ~¡Espera! Puedes llevarte el cuerpo de esta mujer. ¡Dejadme en paz!~ 
+@4329 = ~¡Espera! Puedes llevarte el cuerpo de este hombre. ¡Dejadme en paz!~ 
+@4330 = ~Han pasado sólo diez días... ¡Debo vengarme de nuestros destructores! ¡Soltad vuestro cuerpo!~ /* #2480 */
+@4331 = ~¡Han pasado 300 años! ¡El tiempo ya se habrá vengado por ti!~ /* #2487 */ 
+@4332 = ~"¡Soltad vuestro cuerpo, Soltad vuestro cuerpo!" ¡Te devolveré a los Nueve Infiernos!~ /* #2490 */ 
+@4333 = ~No he olvidado... fue hace diez días ... ¡Soltad vuestro cuerpo!~ /* #2491 */
+@4334 = ~300 años... no puede ser... 300... todos deben estar muertos...~ /* #2496 */
+@4335 = ~Todos están muertos... me quedare... me vengare de sus descendientes... ¡Venganza a nuestros destructores! ¡Soltad vuestro cuerpo!~ /* #2497 */
+@4336 = ~Luchad o no... ¡Soltad vuestro cuerpo!... ¡¡¡SOLTADLO!!!~ /* #2498 */
+@4337 = ~Yo viviré de nuevo... ¡Venganza a nuestros destructores!~ /* #2499 */
+@4338 =  ~Noooo... Venganza a nuestros destructores.... Venganza....~ /* #2500 */
 
 
 // Journal Entries  
-@4350 = ~Mal-Kalen, the Ulcaster Spirit
-  I encountered the spirit of Mal-Kalen, a former student of the Ulcaster school who has been haunting the ruins for centuries. The spirit wanted a body to inhabit and take revenge for the destruction of the school. I declined his request, forcefully.~ 
-@4351 = ~Mal-Kalen, the Ulcaster Spirit
-  I encountered the spirit of Mal-Kalen, a former student of the Ulcaster school who has been haunting the ruins for centuries. The spirit wanted a body to inhabit and take revenge for the destruction of the school. I gave the him what he wanted and escaped with my own body intact.~ 
+@4350 = ~Mal-Kalen, el fantasma de Ulcaster
+  Encontré el espíritu de Mal-Kalen, un antiguo alumno de la Escuela de Ulcaster que ha estado rondando las ruinas durante siglos. El espíritu quería un cuerpo para habitar y vengarse de la destrucción de la escuela. Por lo que rechacé su solicitud con fuerza.~ 
+@4351 = ~Mal-Kalen, el fantasma de Ulcaster
+  Encontré el espíritu de Mal-Kalen, un antiguo alumno de la Escuela de Ulcaster que ha estado rondando las ruinas durante siglos. El espíritu quería un cuerpo para habitar y vengarse de la destrucción de la escuela. Le di lo que quería y escapé con mi propio cuerpo intacto.~ 
 
