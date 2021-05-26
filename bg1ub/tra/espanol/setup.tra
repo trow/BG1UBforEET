@@ -1,23 +1,23 @@
 //DOS prompts - use DOS encoding
 @90000 = ~El componente de BG1 NPC Project "BG1 NPC Project: Parte II (Busquedas e interacciones)" causa un conflicto con este componente.~
-@90001 = ~El componente de BG1 NPC Project "BG1 NPC Project: Instalaci¢n de nucleo" causa un conflicto con este componente.~
+@90001 = ~El componente de BG1 NPC Project "BG1 NPC Project: Instalación de nucleo" causa un conflicto con este componente.~
 @90002 = ~El componente de BG1 NPC Project "BG1 NPC Project: Parte I (conversaciones)" causa un conflicto con este componente.~
 @90003 = ~Northern Tales of the Sword Coast causa un conflicto con este componente.~
-@90004 = ~Jarl's Adventure Pack conflicts with this component.~
+@90004 = ~Jarl's Adventure Pack causa un conflicto con este componente.~
 
-@90010 = ~Instalaci¢n Tutu detectada.~
-@90011 = ~Instalaci¢n BGT detectada.~
-@90012 = ~Instalaci¢n BG detectada.~
+@90010 = ~Instalación Tutu detectada.~
+@90011 = ~Instalación BGT detectada.~
+@90012 = ~Instalación BG detectada.~
 @90013 = ~Por favor, instalar sobre BG, BGT, Tutu o BGEE.~
 @90014 = ~Por favor, instalar sobre BGT o Tutu.~
 
 @90015 = ~La funcionalidad de este componente ya está incluida o reemplazada por uno de los mods que ya tienes instalados.~
 @90016 = ~La funcionalidad de este componente ya está incluida en BGEE.~
-@90017 = ~Instalaci¢n BGEE detectada.~
+@90017 = ~Instalación BGEE detectada.~
 @90018 = ~Se requiere Fusión de DLC antes de que se puedan instalar mods en este juego. Consulte el archivo léame para obtener más información y un enlace para descargar DLC Merger.~
 @90019 = ~La funcionalidad de este componente ya está incluida en BGEE + BGT.~
 
-@0   = ~Restauraci¢n del nivel 2 de la Isla de Hielo~
+@0   = ~Restauración del nivel 2 de la Isla de Hielo~
 @1   = ~Este componente requiere la expansion Tales of the Sword Coast~
 
 @2   = ~El Recipiente Misterioso~
@@ -29,7 +29,7 @@
 @9   = ~Branwen y Tranzig~
 @10  = ~Safana Coquetea~
 @12  = ~Recompensa de Albert y Rufie Apropiada~
-@13  = ~Entar Escudodeplata esta en su Casa~
+@13  = ~Entar Escudo de Plata esta en su Casa~
 @14  = ~Scar y la Hija de Sashenstar~
 @17  = ~Quoningar, el Clerigo~
 @18  = ~Shilo Chen y los Ogro magos~
@@ -54,9 +54,9 @@
 @219 = ~Duque Eltan en el Edificio del capitán del puerto~
 
 /* new v14 */
-@4000 = ~Nim Furlwing Encounter~
-@4100 = ~Restored Elfsong Tavern Movie~
-@4101 = ~This component is not compatible with BGEE. A BGEE-compatible version of this movie is included with the mod BG:EE Classic Movies.~
-@4200 = ~Svlast, the Fallen Paladin Encounter~
-@4300 = ~Mal-Kalen, the Ulcaster Ghost~
-@4400 = ~Chapter 6 Dialogue Restorations~
+@4000 = ~Encuentro de Nim Alasplegadas~
+@4100 = ~Película de la Taberna Canción Élfica restaurada~
+@4101 = ~Este componente no es compatible con BGEE. Se incluye una versión compatible con BGEE de esta película con el mod BG:EE Classic Movies.~
+@4200 = ~Svlast, el encuentro con el paladín caído~
+@4300 = ~Mal-Kalen, el fantasma de Ulcaster~
+@4400 = ~Restauraciones de diálogo del Capítulo 6~
