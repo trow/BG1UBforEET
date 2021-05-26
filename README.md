@@ -1,8 +1,6 @@
 # BG1 Unfinished Business
 A mod for BG1, BG1-TotSC, Tutu, BGT, and BGEE
 
-**Version 16.0**
-
 **Developed by:** icelus, devSin, SimDing0, Idobek, Ascension64, CamDawg, SixOfSpades, and Dudley
 
 **Current Maintainer:** AstroBryGuy, jastey
