@@ -1,63 +1,63 @@
-I_C_T2 ~%tutu_scriptbg%TAZOK~ 1 UBKivanAndTazok
+I_C_T ~%tutu_scriptbg%TAZOK~ 1 UBKivanAndTazok
 == %KIVAN_JOINED% IF ~InParty("kivan") !Dead("kivan") !StateCheck("kivan",STATE_SLEEPING)~ THEN @0
 == %tutu_scriptbg%TAZOK @1
 END
 
-I_C_T2 ~%tutu_scriptbg%TAZOK~ 6 UBKivanAndTazok
+I_C_T ~%tutu_scriptbg%TAZOK~ 6 UBKivanAndTazok
 == %KIVAN_JOINED% IF ~InParty("kivan") !Dead("kivan") !StateCheck("kivan",STATE_SLEEPING)~ THEN @0
 == %tutu_scriptbg%TAZOK @1
 END
 
-I_C_T2 ~%tutu_scriptbg%TAZOK~ 7 UBKivanAndTazok
+I_C_T ~%tutu_scriptbg%TAZOK~ 7 UBKivanAndTazok
 == %KIVAN_JOINED% IF ~InParty("kivan") !Dead("kivan") !StateCheck("kivan",STATE_SLEEPING)~ THEN @0
 == %tutu_scriptbg%TAZOK @1
 END
 
-I_C_T2 ~%tutu_scriptbg%TAZOK~ 10 UBKivanAndTazok
+I_C_T ~%tutu_scriptbg%TAZOK~ 10 UBKivanAndTazok
 == %KIVAN_JOINED% IF ~InParty("kivan") !Dead("kivan") !StateCheck("kivan",STATE_SLEEPING)~ THEN @0
 == %tutu_scriptbg%TAZOK @1
 END
 
-I_C_T2 ~%tutu_scriptbg%TAZOK~ 12 UBKivanAndTazok
+I_C_T ~%tutu_scriptbg%TAZOK~ 12 UBKivanAndTazok
 == %KIVAN_JOINED% IF ~InParty("kivan") !Dead("kivan") !StateCheck("kivan",STATE_SLEEPING)~ THEN @0
 == %tutu_scriptbg%TAZOK @1
 END
 
-I_C_T2 ~%tutu_scriptbg%TAZOK~ 14 UBKivanAndTazok
+I_C_T ~%tutu_scriptbg%TAZOK~ 14 UBKivanAndTazok
 == %KIVAN_JOINED% IF ~InParty("kivan") !Dead("kivan") !StateCheck("kivan",STATE_SLEEPING)~ THEN @0
 == %tutu_scriptbg%TAZOK @1
 END
 
-I_C_T2 ~%tutu_scriptbg%TAZOK~ 15 UBKivanAndTazok
+I_C_T ~%tutu_scriptbg%TAZOK~ 15 UBKivanAndTazok
 == %KIVAN_JOINED% IF ~InParty("kivan") !Dead("kivan") !StateCheck("kivan",STATE_SLEEPING)~ THEN @0
 == %tutu_scriptbg%TAZOK @1
 END
 
-I_C_T2 ~%tutu_scriptbg%TAZOK~ 20 UBKivanAndTazok
+I_C_T ~%tutu_scriptbg%TAZOK~ 20 UBKivanAndTazok
 == %KIVAN_JOINED% IF ~InParty("kivan") !Dead("kivan") !StateCheck("kivan",STATE_SLEEPING)~ THEN @0
 == %tutu_scriptbg%TAZOK @1
 END
 
-I_C_T2 ~%tutu_scriptbg%TAZOK~ 21 UBKivanAndTazok
+I_C_T ~%tutu_scriptbg%TAZOK~ 21 UBKivanAndTazok
 == %KIVAN_JOINED% IF ~InParty("kivan") !Dead("kivan") !StateCheck("kivan",STATE_SLEEPING)~ THEN @0
 == %tutu_scriptbg%TAZOK @1
 END
 
-I_C_T2 ~%tutu_scriptbg%TAZOK~ 24 UBKivanAndTazok
+I_C_T ~%tutu_scriptbg%TAZOK~ 24 UBKivanAndTazok
 == %KIVAN_JOINED% IF ~InParty("kivan") !Dead("kivan") !StateCheck("kivan",STATE_SLEEPING)~ THEN @0
 == %tutu_scriptbg%TAZOK @1
 END
 
-I_C_T2 ~%tutu_scriptbg%TAZOK~ 26 UBKivanAndTazok
+I_C_T ~%tutu_scriptbg%TAZOK~ 26 UBKivanAndTazok
 == %KIVAN_JOINED% IF ~InParty("kivan") !Dead("kivan") !StateCheck("kivan",STATE_SLEEPING)~ THEN @0
 == %tutu_scriptbg%TAZOK @1
 END
 
-I_C_T2 ~%tutu_scriptbg%TAZOK~ 13 UBKivanAndTazokLeave
+I_C_T ~%tutu_scriptbg%TAZOK~ 13 UBKivanAndTazokLeave
 == %KIVAN_JOINED% IF ~InParty("kivan") !Dead("kivan") !StateCheck("kivan",STATE_SLEEPING)~ THEN @2
 END
 
-I_C_T2 ~%tutu_scriptbg%TAZOK~ 27 UBKivanAndTazokLeave
+I_C_T ~%tutu_scriptbg%TAZOK~ 27 UBKivanAndTazokLeave
 == %KIVAN_JOINED% IF ~InParty("kivan") !Dead("kivan") !StateCheck("kivan",STATE_SLEEPING)~ THEN @2
 END
 
