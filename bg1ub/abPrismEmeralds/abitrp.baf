@@ -17,7 +17,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("abgf_BrokeInto","GLOBAL",1)
-    ActionOverride("Prism",Dialogue([PC])
+    ActionOverride("Prism",Dialogue([PC]))
 END
 
 IF
