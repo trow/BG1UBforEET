@@ -7,7 +7,7 @@ DEFINE_ACTION_MACRO ~getcpmvara~ BEGIN
       OUTER_SPRINT temp_cpmvar ~%temp_bgt%~
     END
     ELSE BEGIN
-    	ACTION_IF GAME_IS ~bgee~ THEN BEGIN //BGEE
+    	ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN //BGEE eet
       		OUTER_SPRINT temp_cpmvar ~%temp_bgee%~
     	END
       	ELSE BEGIN // BG
@@ -26,7 +26,7 @@ DEFINE_PATCH_MACRO ~getcpmvarp~ BEGIN
       SPRINT temp_cpmvar ~%temp_bgt%~
     END
   	ELSE BEGIN
-    	PATCH_IF GAME_IS ~bgee~ THEN BEGIN //BGEE
+    	PATCH_IF GAME_IS ~bgee eet~ THEN BEGIN //BGEE eet
       		SPRINT temp_cpmvar ~%temp_bgee%~
     	END
     	ELSE BEGIN //BG

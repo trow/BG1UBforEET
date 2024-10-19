@@ -333,7 +333,7 @@ BEGIN @0
 // Website:
 
 // variables not set yet
-REQUIRE_PREDICATE GAME_IS ~totsc tutu_totsc bgt bgee~ @1
+REQUIRE_PREDICATE GAME_IS ~totsc tutu_totsc bgt bgee eet~ @1
 
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBIceIsland.UB~
 INCLUDE ~bg1ub/ar1010/bg1ub_ar1010.tpa~
@@ -365,7 +365,7 @@ INCLUDE ~bg1ub/vial/bg1ub_vial.tpa~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 BEGIN @3
-REQUIRE_PREDICATE (!GAME_IS ~bgt bgee~) @90019  // Fixed in BGEE + BGT
+REQUIRE_PREDICATE (!GAME_IS ~bgt bgee eet~) @90019  // Fixed in BGEE + BGT
 
 // Author: SimDing0
 // Email: SimDing0@hotmail.com
@@ -390,7 +390,7 @@ LAF replacetext_area_script STR_VAR area="%FriendlyArmInn%" oldtext=~Global("Elm
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 BEGIN @4
-REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
+REQUIRE_PREDICATE (!GAME_IS ~bgee eet~) @90016  // Fixed in BGEE
 //FORBID_FILE ~override/X#BG1NPCPhase2.G3~ @90000
 
 // Author: Ascension64
@@ -496,7 +496,7 @@ COMPILE EVALUATE_BUFFER ~bg1ub/branwen/ubbranwen.d~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 BEGIN @10
-REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
+REQUIRE_PREDICATE (!GAME_IS ~bgee eet~) @90016  // Fixed in BGEE
 
 // Author: Dudley
 // Email:
@@ -514,7 +514,7 @@ INCLUDE ~bg1ub/safana/bg1ub_safana.tpa~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 BEGIN @12
-REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
+REQUIRE_PREDICATE (!GAME_IS ~bgee eet~) @90016  // Fixed in BGEE
 
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBAlbert.UB~
 
@@ -607,7 +607,7 @@ INCLUDE ~bg1ub/edie/bg1ub_edie.tpa~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 BEGIN @22
-REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
+REQUIRE_PREDICATE (!GAME_IS ~bgee eet~) @90016  // Fixed in BGEE
 
 // Author: devSin
 // Email:
@@ -680,7 +680,7 @@ INCLUDE ~bg1ub/dialogues/bg1ub_dialogues.tpa~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @59
-REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
+REQUIRE_PREDICATE (!GAME_IS ~bgee eet~) @90016  // Fixed in BGEE
 
 // Author: devSin
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBAudio.UB~
@@ -723,7 +723,7 @@ INCLUDE ~bg1ub/item/bg1ub_itemcorr.tpa~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 BEGIN @100
-REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
+REQUIRE_PREDICATE (!GAME_IS ~bgee eet~) @90016  // Fixed in BGEE
 
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBAreas.UB~
 INCLUDE ~bg1ub/area/bg1ub_areacorr.tpa~
@@ -737,7 +737,7 @@ INCLUDE ~bg1ub/area/bg1ub_areacorr.tpa~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 BEGIN @101
-REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
+REQUIRE_PREDICATE (!GAME_IS ~bgee eet~) @90016  // Fixed in BGEE
 
 // Author: devSin
 // Email:
@@ -755,7 +755,7 @@ INCLUDE ~bg1ub/creature/bg1ub_crecorpse.tpa~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 BEGIN @102
-REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
+REQUIRE_PREDICATE (!GAME_IS ~bgee eet~) @90016  // Fixed in BGEE
 REQUIRE_PREDICATE (GAME_IS ~totsc tutu_totsc bgt~) @1
 REQUIRE_PREDICATE !FILE_EXISTS_IN_GAME ~cdelfcm0.eff~ @90015
 
@@ -771,7 +771,7 @@ INCLUDE ~bg1ub/elfcharm/bg1ub_elfcharm.tpa~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 BEGIN @103
-REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
+REQUIRE_PREDICATE (!GAME_IS ~bgee eet~) @90016  // Fixed in BGEE
 REQUIRE_PREDICATE !GAME_IS ~bgt~ @90015 //not needed for BGT, already fixed
 
 COPY ~bg1ub/bg1ubplaceholder~ ~override/BG1UBPlaylist.UB~
@@ -791,7 +791,7 @@ COPY ~bg1ub/music~ ~music~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 BEGIN @104
-REQUIRE_PREDICATE (!GAME_IS ~bgee~) @90016  // Fixed in BGEE
+REQUIRE_PREDICATE (!GAME_IS ~bgee eet~) @90016  // Fixed in BGEE
 
 // Author: SixOfSpades
 // Email: sixospades@yahoo.com
@@ -852,7 +852,7 @@ INCLUDE ~bg1ub/nimfur/bg1ub_nimfur.tpa~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 BEGIN @4100 /* ~Restored Elfsong Tavern Movie~ */
-REQUIRE_PREDICATE (!GAME_IS ~bgee~) @4101 // Unavailable for BGEE
+REQUIRE_PREDICATE (!GAME_IS ~bgee eet~) @4101 // Unavailable for BGEE
 FORBID_FILE ~data/JA#TAVER.MVE~ @90004
 
 INCLUDE ~bg1ub/tavern/bg1ub_tavern.tpa~

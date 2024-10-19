@@ -56,7 +56,7 @@
       reload_array = ub#reload
   END
 
-	ACTION_IF ((GAME_IS ~bgee~) AND (FILE_EXISTS ~bg1ub/tra/%LANGUAGE%/extra_tmp_ee.tra~)) THEN BEGIN
+	ACTION_IF ((GAME_IS ~bgee eet~) AND (FILE_EXISTS ~bg1ub/tra/%LANGUAGE%/extra_tmp_ee.tra~)) THEN BEGIN
 		COPY ~bg1ub/tra/%LANGUAGE%/extra_tmp_ee.tra~ ~bg1ub/tra/%LANGUAGE%/extra.tra~
 			EVALUATE_BUFFER
   	END ELSE BEGIN
@@ -92,7 +92,12 @@
       	INCLUDE ~bg1ub/lib/g3_bgee_cpmvars.tpa~
 		INCLUDE ~bg1ub/lib/rr_tutubgtbgee_addvars.tpa~
     END
-    ACTION_IF !(GAME_IS ~bg1 totsc bgt bgee tutu tutu_totsc~) THEN BEGIN //Not a supported game
+	ACTION_IF GAME_IS ~eet~ THEN BEGIN //eet
+      	PRINT @90017
+      	INCLUDE ~eet/other/cpmvars/eet_cpmvars.tpa~
+		INCLUDE ~bg1ub/lib/rr_tutubgtbgee_addvars.tpa~
+    END
+    ACTION_IF !(GAME_IS ~bg1 totsc bgt bgee eet tutu tutu_totsc~) THEN BEGIN //Not a supported game
          FAIL @90013
     END
 
@@ -105,7 +110,7 @@
   END
 
   // BGEE Fix Area Scripts for AR2400.BCS and AR2900.BCS
-  ACTION_IF (GAME_IS ~bgee~ AND
+  ACTION_IF (GAME_IS ~bgee eet~ AND
     !(FILE_EXISTS ~override/AY#BGEEARBCSFIX.000~) AND !(FILE_EXISTS_IN_GAME ~bdentboy.cre~)) THEN BEGIN //do once
 
 	COPY ~bg1ub/bg1ubplaceholder~ ~override/AY#BGEEARBCSFIX.000~
