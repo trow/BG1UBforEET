@@ -32,7 +32,7 @@ COPY_EXISTING ~%tutu_var%AOLN.CRE~ ~override/UBSHILO.CRE~
   WRITE_ASCII 0x2cc ~ubshilo~ #8
   ADD_CRE_ITEM ~UBGLOVE1~ #0 #0 #0 ~NONE~ ~INV1 INV5~
 
-ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee~ THEN BEGIN
+ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee eet~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/shilochen/cpm/ubshilo.d~
 END ELSE BEGIN
   COMPILE ~bg1ub/shilochen/ubshilo.d~

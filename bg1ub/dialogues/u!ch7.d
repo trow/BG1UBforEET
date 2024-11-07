@@ -10,22 +10,24 @@ END
 
 
 //IVANNE, AR0114 - tells player his story, refers to Iron Throne and Eltan. (J)
-ADD_TRANS_ACTION IVANNE
-BEGIN 5 END
-BEGIN 0 END
-~SetGlobal("TalkedToIvanne","GLOBAL",1)~ //told his story
-
-REPLACE_STATE_TRIGGER IVANNE 0 ~Global("TalkedToIvanne","GLOBAL",0)~ //won't tell his story twice
-
-ADD_TRANS_TRIGGER IVANNE 5
+ADD_TRANS_TRIGGER %tutu_var%IVANNE 5
 ~!Dead("Cythan")
 !Dead("Rashad")~
 DO 0
 
-EXTEND_BOTTOM IVANNE 5
-IF ~Dead("Cythan") !Dead("Rashad")~ THEN JOURNAL @1 DO ~SetGlobal("TalkedToIvanne","GLOBAL",1)~ EXIT
-IF ~!Dead("Cythan") Dead("Rashad")~ THEN JOURNAL @2 DO ~SetGlobal("TalkedToIvanne","GLOBAL",1)~ EXIT
-IF ~Dead("Cythan") Dead("Rashad")~ THEN JOURNAL @3 DO ~SetGlobal("TalkedToIvanne","GLOBAL",1)~ EXIT
+EXTEND_BOTTOM %tutu_var%IVANNE 5
+IF ~Dead("Cythan") !Dead("Rashad")~ THEN DO ~SetGlobal("IvanneStoryTold","GLOBAL",1)
+EraseJournalEntry(27178)
+EraseJournalEntry(27177)
+~ SOLVED_JOURNAL @1 EXIT
+IF ~!Dead("Cythan") Dead("Rashad")~ THEN DO ~SetGlobal("IvanneStoryTold","GLOBAL",1)
+EraseJournalEntry(27178)
+EraseJournalEntry(27177)
+~ SOLVED_JOURNAL @2 EXIT
+IF ~Dead("Cythan") Dead("Rashad")~ THEN DO ~SetGlobal("IvanneStoryTold","GLOBAL",1)
+EraseJournalEntry(27178)
+EraseJournalEntry(27177)
+~ SOLVED_JOURNAL @3 EXIT
 END
 
 

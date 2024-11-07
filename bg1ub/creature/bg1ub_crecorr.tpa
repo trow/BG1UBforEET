@@ -361,7 +361,7 @@ COPY_EXISTING ~%tutu_var%PROSLAY.CRE~ ~override~ // Ho
   WRITE_ASCIIE 0x2cc ~%tutu_var%PROSLA~ #8      // Fixes dialog file (PROSLAY does not exist)
 BUT_ONLY
 
-ACTION_IF !GAME_IS ~bgee~ THEN BEGIN  // BOOT01 exists in BGEE, so don't do this block for BGEE
+ACTION_IF !GAME_IS ~bgee eet~ THEN BEGIN  // BOOT01 exists in BGEE, so don't do this block for BGEE
 	COPY_EXISTING ~%tutu_var%DEAD2.CRE~ ~override~ // Amnish Soldier (various)
               ~%tutu_scriptd%EADFUCK.CRE~ ~override~ // Amnish Soldier (AR5403, Nashkel Mines)
               ~%tutu_var%DRELIK.CRE~ ~override~ // Drelik         (AR0010, Baldur's Gate)
@@ -826,7 +826,7 @@ BUT_ONLY
 
 //////////////////////////////////////////////////////////
 // Fixes due to the results of CamDawg's Inventory Checker
-ACTION_IF !GAME_IS ~bgee~ THEN BEGIN  // Already included in BGEE
+ACTION_IF !GAME_IS ~bgee eet~ THEN BEGIN  // Already included in BGEE
 COPY_EXISTING ~%tutu_var%AASIM.CRE~ ~override~ // Aasim (AR0615, Iron Throne Building)
  PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
   READ_LONG  0x2bc "itm_off" ELSE 0

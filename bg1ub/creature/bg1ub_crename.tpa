@@ -196,10 +196,10 @@ COPY_EXISTING ~%tutu_var%NOBW7.CRE~ ~override~ // see her dialogue for name
 BUT_ONLY
 
 // Corrections for TOTSC content
-ACTION_IF GAME_IS ~totsc bgt tutu_totsc bgee~ THEN BEGIN
+ACTION_IF GAME_IS ~totsc bgt tutu_totsc bgee eet~ THEN BEGIN
 
 //EasyTutu modifies Baresh to change into LOUPGAR instead of KAISHWLF
-ACTION_IF GAME_IS ~totsc bgt bgee~ THEN BEGIN //BGT, BGEE, BG1-TOTSC
+ACTION_IF GAME_IS ~totsc bgt bgee eet~ THEN BEGIN //BGT, BGEE, BG1-TOTSC
   COPY_EXISTING ~%tutu_var%LOUPGAR.CRE~ ~override~ // only used from spell cast by Mendas
     PATCH_IF (SOURCE_SIZE > 0x2d4) BEGIN
       SAY NAME1 @54 // or could be Mendas

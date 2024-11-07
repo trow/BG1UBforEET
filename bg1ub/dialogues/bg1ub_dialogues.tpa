@@ -10,7 +10,7 @@ END ELSE BEGIN
   COMPILE ~bg1ub/dialogues/ubhobgo5.baf~
 END
 
-ACTION_IF GAME_IS ~tutu_totsc bgt bgee~ THEN BEGIN
+ACTION_IF GAME_IS ~tutu_totsc bgt bgee eet~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/dialogues/cpm/u!totscminor.d~
 END ELSE BEGIN
   ACTION_IF GAME_IS ~totsc~ THEN BEGIN

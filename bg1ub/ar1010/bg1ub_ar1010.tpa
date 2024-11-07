@@ -9,7 +9,7 @@ END ELSE BEGIN
     LAF HANDLE_TILESETS END
     MOVE ~override/ub1010.tis~ ~override/ARU010.tis~
 //  END ELSE BEGIN
-//    ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+//    ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN
 //      LAF HANDLE_TILESETS END
 //      MOVE ~override/ub1010.tis~ ~override/AR1010.tis~
 //    END
@@ -17,7 +17,7 @@ END ELSE BEGIN
 END 
 // AR1010.TIS and AR1010.MOS already included with TotSC
 
-ACTION_IF !GAME_IS ~bgee~ THEN BEGIN
+ACTION_IF !GAME_IS ~bgee eet~ THEN BEGIN
 	COPY ~bg1ub/AR1010/%tutuorbgt%~ ~override~
 END
 

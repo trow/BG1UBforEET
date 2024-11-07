@@ -525,7 +525,7 @@ LAF extend_area_script STR_VAR area="%Temple%" bottom=".../bg1ub/ub_ar3400.baf" 
 /////////////////////////////////
 // Compile all relevant dialogues
 
-ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee~ THEN BEGIN
+ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee eet~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/creature/cpm/ubcre.d~
 END ELSE BEGIN
   COMPILE ~bg1ub/creature/ubcre.d~

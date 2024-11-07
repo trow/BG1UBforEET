@@ -5,7 +5,7 @@
 
 COPY ~bg1ub/quoningar/%tutuorbgt%/ubquon.cre~ ~override~
 
-ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee~ THEN BEGIN
+ACTION_IF GAME_IS ~tutu tutu_totsc bgt bgee eet~ THEN BEGIN
   COMPILE EVALUATE_BUFFER ~bg1ub/quoningar/cpm/ubquon.d~
 END ELSE BEGIN
   COMPILE ~bg1ub/quoningar/ubquon.d~
